@@ -1,0 +1,879 @@
+{
+  "reconciliation_phase": "Phase 2D - Exact ID Reconciliation Audit",
+  "mode": "STRICT READ-ONLY",
+  "timestamp": "2026-08-30",
+  "baseline_metrics": {
+    "total_database_records": 10010,
+    "fts5_documents": 10010,
+    "local_mp3_records": 38,
+    "youtube_audio_records": 71,
+    "total_playable_audio": 109,
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "database_writes": 0
+  },
+  "reconciliation_findings": [
+    {
+      "requested_id": "b10-chalisa-durga-kripa-chalisa-b10",
+      "target_name": "Maa Durga Chalisa",
+      "target_deity": "durga_mata",
+      "exact_id_in_db": false,
+      "exact_record_details": null,
+      "b10_related_records": [],
+      "all_db_candidates_summary": [
+        {
+          "id": "b11-chalisa-durga-bhagavati-kripa-chalisa-b11",
+          "title": "श्री दुर्गा भगवती नवदुर्गा चालीसा (दुर्गा चालीसा 11)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b12-chalisa-durga-singhavahini-kripa-chalisa-b12",
+          "title": "श्री सिंहवाहिनी दुर्गा भवानी चालीसा (सिंहवाहिनी चालीसा 12)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b13-chalisa-durga-ashtabhuja-bhavani-chalisa-b13",
+          "title": "श्री अष्टभुजा दुर्गा भवानी अमृत चालीसा (अष्टभुजा चालीसा 13)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b14-chalisa-durga-brahmacharini-chalisa-b14",
+          "title": "मां ब्रह्मचारिणी तपोधर्म चालीसा (चतुर्दश ब्रह्मचारिणी 14)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b15-chalisa-durga-kushmanda-chalisa-b15",
+          "title": "मां कूष्मांडा ब्रह्मांड सृजन चालीसा (पंचदश कूष्मांडा 15)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b16-chalisa-durga-skandamata-chalisa-b16",
+          "title": "मां स्कंदमाता वात्सल्य प्रदायिनी चालीसा (षोडश स्कंदमाता 16)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b17-chalisa-durga-katyayani-chalisa-b17",
+          "title": "मां कात्यायनी षष्ठी नवदुर्गा चालीसा (सप्तदश कात्यायनी 17)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b18-chalisa-durga-kalratri-chalisa-b18",
+          "title": "मां कालरात्रि सप्तमी नवदुर्गा चालीसा (अष्टादश कालरात्रि 18)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b19-chalisa-durga-kamakhya-devi-siddhi-b19",
+          "title": "मां कामाख्या देवी सिद्धि प्रदायिनी चालीसा (एकोनविंशति कामाख्या चालीसा 19)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-durga-annapurna-chalisa-kashi",
+          "title": "श्री अन्नपूर्णा चालीसा (अन्न-धन भंडार पूर्ण)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-durga-baglamukhi-chalisa",
+          "title": "श्री बगलामुखी चालीसा (शत्रु स्तम्भन व विजय)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-durga-mahakali-chalisa-dakshineswar",
+          "title": "श्री महाकाली चालीसा (दक्षिणेश्वर व कालीघाट)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-durga-sheetla-mata-chalisa",
+          "title": "श्री शीतला माता चालीसा (आरोग्य प्रदायिनी)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-durga_mata-chalisa-b20-074",
+          "title": "मां दुर्गा कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 074 - 20)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-durga_mata-chalisa-b20-134",
+          "title": "मां दुर्गा कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 134 - 20)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-durga_mata-chalisa-b20-194",
+          "title": "मां दुर्गा कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 194 - 20)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-durga_mata-chalisa-b20-254",
+          "title": "मां दुर्गा कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 254 - 20)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-durga-shri-chamunda-chalisa-shaktipeeth-b3",
+          "title": "श्री चामुंडा चालीसा (असुर विनाशिनी शक्तिपीठ)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-durga-shri-durga-chalisa-sampoorna-b3",
+          "title": "श्री नवदुर्गा चालीसा (नमो नमो दुर्गे सुख करनी संपूर्ण)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-durga-shri-kali-chalisa-kalka-devi-b3",
+          "title": "श्री महाकाली चालीसा (कालका माता चालीसा संपूर्ण)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-durga-shri-chandi-chalisa-saptashati",
+          "title": "श्री चंडी चालीसा (दुर्गा सप्तशती सार 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-durga-shri-jwala-ji-chalisa-jyot-wali",
+          "title": "श्री ज्वाला जी चालीसा (अखंड दिव्य ज्योति महिमा)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-durga-shri-vaishno-devi-chalisa-trikuta",
+          "title": "श्री वैष्णो देवी चालीसा (त्रिकूटा पर्वत गुफा महिमा)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-durga-shri-chandi-chalisa",
+          "title": "श्री चंडी देवी अष्टदशभुजा चालीसा",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-durga-shri-jwala-ji-chalisa",
+          "title": "श्री ज्वाला जी अखंड ज्योति चालीसा",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-durga-shri-kamakhya-chalisa",
+          "title": "श्री कामाख्या देवी शक्तिपीठ चालीसा",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-durga-shri-vaishno-devi-chalisa",
+          "title": "श्री वैष्णो देवी त्रिकूटा पर्वत चालीसा (40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b6-chalisa-durga-shri-durga-chalisa-namo-namo-b6",
+          "title": "श्री दुर्गा चालीसा (नमो नमो दुर्गे सुख करनी 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b6-chalisa-durga-shri-kali-chalisa-path-b6",
+          "title": "श्री महाकाली चालीसा (खप्पर वाली महाशक्ति 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b6-chalisa-durga-shri-sheetla-chalisa-path-b6",
+          "title": "श्री शीतला माता चालीसा (आरोग्य प्रदायिनी 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b7-chalisa-durga-shri-kali-chalisa-sampurna-b7",
+          "title": "श्री महाकाली चालीसा (जय काली कंकाली 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "/audio/b7-chalisa-durga-shri-kali-chalisa-sampurna-b7.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b7-chalisa-durga-shri-vindhyavasini-chalisa-b7",
+          "title": "श्री विंध्यवासिनी चालीसा (विंध्याचल महारानी 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "/audio/b7-chalisa-durga-shri-vindhyavasini-chalisa-b7.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-durga-shri-bhavani-chalisa-b8",
+          "title": "श्री भवानी चालीसा (सिंह वाहिनी अष्टभुजा 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "/audio/b8-chalisa-durga-shri-bhavani-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-durga-shri-kali-mata-chalisa-b8",
+          "title": "श्री महाकाली चालीसा (खप्पर धारिणी शत्रु विनाशिनी 40 चौपाई)",
+          "deity_id": "durga_mata",
+          "audio_url": "/audio/b8-chalisa-durga-shri-kali-mata-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b9-chalisa-durga-shri-durga-chalisa-sampurna-b9",
+          "title": "श्री दुर्गा चालीसा (नमो नमो दुर्गे सुख करनी नमो नमो दुर्गे दुःख हरनी)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-durga-kali-chalisa",
+          "title": "श्री महाकाली चालीसा",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-durga-shri-durga-chalisa",
+          "title": "श्री दुर्गा चालीसा (नमो नमो दुर्गे सुख करनी)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-durga-vindhyeshwari-chalisa",
+          "title": "श्री विंध्येश्वरी चालीसा (विंध्याचल धाम)",
+          "deity_id": "durga_mata",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        }
+      ],
+      "analysis_evidence": "In Batch 10, there is NO Durga Chalisa record created. Batch 10 only contains 15 generic stuti records (b10-chalisa-chaupai-stuti-path-01 to 15), 1 Bhairav record (b10-chalisa-shri-bhairav-raksha-chalisa-sampurna-b10), 1 Krishna record (b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10), and 1 Ram record (b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10). The requested ID 'b10-chalisa-durga-kripa-chalisa-b10' was synthetically generated in the candidate script and does not exist. Existing canonical Durga Chalisas in DB are: 'chalisa-durga-shri-durga-chalisa' (unmapped), 'b9-chalisa-durga-shri-durga-chalisa-sampurna-b9' (unmapped), 'b11-chalisa-durga-bhagavati-kripa-chalisa-b11' (unmapped), 'b12-chalisa-durga-singhavahini-kripa-chalisa-b12' (unmapped)."
+    },
+    {
+      "requested_id": "b10-chalisa-hanuman-sankatmochan-chalisa-b10",
+      "target_name": "Shree Hanuman Chalisa",
+      "target_deity": "hanuman",
+      "exact_id_in_db": false,
+      "exact_record_details": null,
+      "b10_related_records": [],
+      "all_db_candidates_summary": [
+        {
+          "id": "b12-chalisa-hanuman-mahavir-kripa-chalisa-b12",
+          "title": "श्री महावीर हनुमान संकटमोचन चालीसा (महावीर चालीसा 12)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b13-chalisa-hanuman-anjaneya-kripa-chalisa-b13",
+          "title": "श्री आंजनेय संकटमोचन महावीर चालीसा (आंजनेय चालीसा 13)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b14-chalisa-hanuman-panchamukhi-vir-chalisa-b14",
+          "title": "श्री पंचमुखी वीर हनुमान महाचालीसा (चतुर्दश पंचमुखी 14)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b15-chalisa-hanuman-bajarang-baan-chalisa-b15",
+          "title": "श्री बजरंग बाण सिद्ध संकटमोचन चालीसा (पंचदश बजरंग बाण 15)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b16-chalisa-hanuman-sankat-nashak-hanuman-chalisa-b16",
+          "title": "श्री संकट नाशक अष्ट सिद्धि हनुमान चालीसा (षोडश संकट नाशक 16)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b17-chalisa-hanuman-maruti-nandan-chalisa-b17",
+          "title": "श्री मारुति नंदन केसरी सुत चालीसा (सप्तदश मारुति 17)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b18-chalisa-hanuman-bajrang-baan-chalisa-b18",
+          "title": "श्री महावीर बजरंग संकट हरण चालीसा (अष्टादश बजरंग 18)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-hanuman-balaji-mehandipur-chalisa",
+          "title": "श्री मेहंदीपुर बालाजी चालीसा (घाटा धाम)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-hanuman-panchamukhi-chalisa",
+          "title": "श्री पंचमुखी हनुमान चालीसा (सर्व संकट मोचन)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-chalisa-hanuman-bajrangbali-kripa-dham-b20",
+          "title": "श्री बजरंगबली कृपा धाम संकटमोचन चालीसा (विंशति 20)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-hanuman-shri-bajrang-baan-chalisa-path-b3",
+          "title": "श्री बजरंग बाण (अचूक संकटमोचन महापाठ)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-hanuman-shri-maruti-chalisa-sankat-mochan",
+          "title": "श्री मारुति चालीसा (पवनसुत संकटनाशक 40 चौपाई)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-hanuman-shri-balaji-mehandipur-chalisa",
+          "title": "श्री बालाजी घाटा मेहंदीपुर चालीसा (संकट नाशिनी)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-hanuman-shri-salasar-balaji-chalisa",
+          "title": "श्री सालासर बालाजी चालीसा (दाढ़ी मूंछ स्वरूप 40 चौपाई)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b6-chalisa-hanuman-shri-hanuman-chalisa-tulsidas-b6",
+          "title": "श्री हनुमान चालीसा (गोस्वामी तुलसीदास कृत 40 चौपाई)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b7-chalisa-hanuman-shri-hanuman-chalisa-sampurna-b7",
+          "title": "श्री हनुमान चालीसा (श्रीगुरु चरन सरोज रज 40 चौपाई तुलसीदास)",
+          "deity_id": "hanuman",
+          "audio_url": "/audio/b7-chalisa-hanuman-shri-hanuman-chalisa-sampurna-b7.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-hanuman-shri-maruti-chalisa-b8",
+          "title": "श्री मारुति नंदन चालीसा (केसरी सुत अतुलित बल 40 चौपाई)",
+          "deity_id": "hanuman",
+          "audio_url": "/audio/b8-chalisa-hanuman-shri-maruti-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-hanuman-shri-panchamukhi-hanumat-chalisa-b8",
+          "title": "श्री पंचमुखी हनुमत् चालीसा (दसों दिशा रक्षा कवच 40 चौपाई)",
+          "deity_id": "hanuman",
+          "audio_url": "/audio/b8-chalisa-hanuman-shri-panchamukhi-hanumat-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b9-chalisa-hanuman-shri-hanuman-chalisa-sampurna-b9",
+          "title": "श्री हनुमान चालीसा (श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि)",
+          "deity_id": "hanuman",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-hanuman-shri-hanuman-chalisa",
+          "title": "श्री हनुमान चालीसा (दिव्य पाठ)",
+          "deity_id": "hanuman",
+          "audio_url": "assets/audio/katha_hanuman.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "chalisa-hanuman-shri-hanuman-chalisa-full",
+          "title": "श्री हनुमान चालीसा (सम्पूर्ण मूल पाठ व दोहे)",
+          "deity_id": "hanuman",
+          "audio_url": "assets/audio/katha_hanuman.mp3",
+          "is_unmapped": false
+        }
+      ],
+      "analysis_evidence": "In Batch 10, there is NO Hanuman Chalisa record. The requested ID 'b10-chalisa-hanuman-sankatmochan-chalisa-b10' does not exist in the database. Existing canonical Hanuman Chalisas in DB are: 'b6-chalisa-hanuman-shri-hanuman-chalisa-tulsidas-b6' (unmapped), 'b9-chalisa-hanuman-shri-hanuman-chalisa-sampurna-b9' (unmapped), 'b12-chalisa-hanuman-mahavir-kripa-chalisa-b12' (unmapped), 'b13-chalisa-hanuman-anjaneya-kripa-chalisa-b13' (unmapped)."
+    },
+    {
+      "requested_id": "b10-chalisa-krishna-bhakti-chalisa-b10",
+      "target_name": "Shree Krishna Chalisa",
+      "target_deity": "krishna",
+      "exact_id_in_db": false,
+      "exact_record_details": null,
+      "b10_related_records": [
+        {
+          "id": "b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10",
+          "title": "श्री कृष्ण चालीसा (जय जय श्री गोकुल के वासी मुरलीधर त्रिभुवन सुखरासी 10)",
+          "deity_id": "krishna",
+          "deity_name_hi": "श्री कृष्ण",
+          "content_type": "chalisa",
+          "audio_url": null,
+          "is_unmapped": true
+        }
+      ],
+      "all_db_candidates_summary": [
+        {
+          "id": "b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10",
+          "title": "श्री कृष्ण चालीसा (जय जय श्री गोकुल के वासी मुरलीधर त्रिभुवन सुखरासी 10)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b11-chalisa-krishna-gopal-madhav-chalisa-b11",
+          "title": "श्री कृष्ण गोपाल माधव भक्ति चालीसा (गोपाल चालीसा 11)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b12-chalisa-krishna-nandanandana-kripa-chalisa-b12",
+          "title": "श्री नंदनंदन कृष्ण कन्हैया अमृत चालीसा (नंदनंदन चालीसा 12)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b13-chalisa-krishna-gokul-chandra-chalisa-b13",
+          "title": "श्री गोकुल चंद्र कृष्ण कन्हैया अमृत चालीसा (गोकुल चंद्र चालीसा 13)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b14-chalisa-krishna-shrinathji-pushti-chalisa-b14",
+          "title": "श्रीनाथ जी पुष्टिमार्गीय मंगला चालीसा (चतुर्दश श्रीनाथ चालीसा 14)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b15-chalisa-krishna-radhavallabh-ras-chalisa-b15",
+          "title": "श्री राधावल्लभ लाल निकुंज चालीसा (पंचदश राधावल्लभ चालीसा 15)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b16-chalisa-krishna-shrinathji-pushtimarg-chalisa-b16",
+          "title": "श्री नाथ जी पुष्टि मार्ग पावन चालीसा (षोडश श्रीनाथजी 16)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b17-chalisa-krishna-gokul-ananda-chalisa-b17",
+          "title": "श्री गोकुल आनंद माधव कृष्ण चालीसा (सप्तदश गोकुल आनंद 17)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b18-chalisa-krishna-vrindavan-bihari-chalisa-b18",
+          "title": "श्री वृंदावन विहारी नटवर कृष्ण चालीसा (अष्टादश वृंदावन 18)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b19-chalisa-krishna-dwarkadheesh-bhavbhanjan-b19",
+          "title": "श्री द्वारकाधीश लीला अमृत चालीसा (एकोनविंशति द्वारका चालीसा 19)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-krishna-girdhar-gopal-chalisa",
+          "title": "श्री गिरधर गोपाल चालीसा (गोवर्धन धरण)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-chalisa-krishna-dwarkadhish-leelamaya-b20",
+          "title": "श्री द्वारकाधीश लीला निकुंज चालीसा (विंशति 20)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-krishna-shri-giri-govardhan-chalisa-b3",
+          "title": "श्री गिरिराज गोवर्धन चालीसा (बृज महिमा चालीसा)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-krishna-shri-radha-krishna-yugal-chalisa-b3",
+          "title": "श्री राधा कृष्ण युगल चालीसा (नित्य मंगल पाठ)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-krishna-shri-banke-bihari-chalisa-vrindavan",
+          "title": "श्री बांके बिहारी चालीसा (वृंदावन रस रसिका)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-krishna-shri-dwarkadhish-chalisa-raja",
+          "title": "श्री द्वारकाधीश चालीसा (राजाधिराज द्वारका महिमा)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-krishna-shri-banke-bihari-vrindavan-chalisa",
+          "title": "श्री बांके बिहारी वृंदावन चालीसा (40 चौपाई)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-krishna-shri-dwarakadhish-chalisa",
+          "title": "श्री द्वारकाधीश भगवान चालीसा (राजाधिराज महिमा)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b6-chalisa-krishna-shri-krishna-chalisa-path-b6",
+          "title": "श्री कृष्ण चालीसा (नंदकिशोर बाललीला 40 चौपाई)",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b7-chalisa-krishna-shri-krishna-chalisa-sampurna-b7",
+          "title": "श्री कृष्ण चालीसा (बंशीधर नटवर नागर 40 चौपाई)",
+          "deity_id": "krishna",
+          "audio_url": "/audio/b7-chalisa-krishna-shri-krishna-chalisa-sampurna-b7.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-krishna-shri-dwarkadhish-chalisa-b8",
+          "title": "श्री द्वारकाधीश चालीसा (स्वर्ण द्वारका पति राजा 40 चौपाई)",
+          "deity_id": "krishna",
+          "audio_url": "/audio/b8-chalisa-krishna-shri-dwarkadhish-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-krishna-shri-gopal-chalisa-b8",
+          "title": "श्री बालगोपाल चालीसा (माखन चोर यशोदा नंदन 40 चौपाई)",
+          "deity_id": "krishna",
+          "audio_url": "/audio/b8-chalisa-krishna-shri-gopal-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "chalisa-krishna-govardhan-chalisa",
+          "title": "श्री गोवर्धन (गिरिराज) चालीसा",
+          "deity_id": "krishna",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-krishna-shri-krishna-chalisa",
+          "title": "श्री कृष्ण चालीसा",
+          "deity_id": "krishna",
+          "audio_url": "https://www.youtube.com/watch?v=wYCuWoA5vIA",
+          "is_unmapped": false
+        }
+      ],
+      "analysis_evidence": "In Batch 10, the actual Krishna Chalisa record ID is 'b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10' with title 'श्री कृष्ण चालीसा (जय जय श्री गोकुल के वासी मुरलीधर त्रिभुवन सुखरासी 10)'. The requested ID 'b10-chalisa-krishna-bhakti-chalisa-b10' does not exist."
+    },
+    {
+      "requested_id": "b10-chalisa-ram-kripa-chalisa-b10",
+      "target_name": "Shree Ram Chalisa",
+      "target_deity": "ram",
+      "exact_id_in_db": false,
+      "exact_record_details": null,
+      "b10_related_records": [
+        {
+          "id": "b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10",
+          "title": "श्री राम चालीसा (अवधपति रघुवीर दयाला करो कृपा दशरथ के लाला 10)",
+          "deity_id": "ram",
+          "deity_name_hi": "श्री राम",
+          "content_type": "chalisa",
+          "audio_url": null,
+          "is_unmapped": true
+        }
+      ],
+      "all_db_candidates_summary": [
+        {
+          "id": "b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10",
+          "title": "श्री राम चालीसा (अवधपति रघुवीर दयाला करो कृपा दशरथ के लाला 10)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b11-chalisa-ram-chandra-kripa-chalisa-b11",
+          "title": "श्री रामचंद्र कृपालु भक्ति चालीसा (राम चालीसा 11)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b12-chalisa-ram-raghupati-kripa-chalisa-b12",
+          "title": "श्री रघुपति राघव कृपालु भक्ति चालीसा (रघुपति चालीसा 12)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b13-chalisa-ram-avadh-pati-kripa-chalisa-b13",
+          "title": "श्री अवधपति राघव कृपालु चालीसा (अवधपति चालीसा 13)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b14-chalisa-ram-sita-ram-kripa-chalisa-b14",
+          "title": "श्री सीताराम युगल कृपा अमृत चालीसा (चतुर्दश सीताराम चालीसा 14)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b15-chalisa-ram-raghuvansh-mani-chalisa-b15",
+          "title": "श्री रघुवंश मणि राम कृपालु चालीसा (पंचदश रघुवंश चालीसा 15)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b16-chalisa-ram-kripa-kataksha-ram-chalisa-b16",
+          "title": "श्री कृपा कटाक्ष जानकी जीवन राम चालीसा (षोडश कृपा कटाक्ष 16)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b17-chalisa-ram-bhakti-rasa-ram-chalisa-b17",
+          "title": "श्री भक्ति रस सुधा अमृत राम चालीसा (सप्तदश भक्ति रस 17)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b18-chalisa-ram-kripa-dham-ram-chalisa-b18",
+          "title": "श्री कृपा धाम कौशल्या नंदन राम चालीसा (अष्टादश कृपा धाम 18)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b19-chalisa-ram-rajyabhisheka-avadh-kripa-b19",
+          "title": "श्री राम राज्याभिषेक चालीस चौपाई स्तुति (एकोनविंशति राम चालीसा 19)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-ram-shri-lakshman-chalisa",
+          "title": "श्री लक्ष्मण चालीसा (सौमित्र शौर्य पाठ)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-ram-shri-raghuvar-chalisa",
+          "title": "श्री रघुवर चालीसा (श्री रामचन्द्र कृपालु)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b2-chalisa-ram-shri-sita-chalisa",
+          "title": "श्री सीता चालीसा (जनकनन्दिनी स्तुति)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-ram-chalisa-b20-110",
+          "title": "श्री राम कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 110 - 20)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-ram-chalisa-b20-170",
+          "title": "श्री राम कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 170 - 20)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-ram-chalisa-b20-230",
+          "title": "श्री राम कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 230 - 20)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b20-ram-chalisa-b20-290",
+          "title": "श्री राम कल्याण चालीसा स्तुति संकीर्तन (विंशति पद 290 - 20)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-ram-shri-raghuveer-chalisa-path-b3",
+          "title": "श्री रघुवीर चालीसा (श्री राम रघुवीर 40 चौपाई पाठ)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b3-chalisa-ram-shri-sita-chalisa-janak-nandini-b3",
+          "title": "श्री सीता चालीसा (माता जानकी चालीसा संपूर्ण)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-ram-shri-lakshman-chalisa-sheshavtar",
+          "title": "श्री लक्ष्मण चालीसा (शेषावतार लखन लाल चालीसा)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b4-chalisa-ram-shri-ram-raksha-chalisa-path-b4",
+          "title": "श्री राम रक्षा चालीसा (40 चौपाइयों में अभेद्य कवच)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b5-chalisa-ram-shri-ram-lalla-ayodhya-chalisa",
+          "title": "श्री रामलला अयोध्या धाम चालीसा (40 चौपाई पाठ)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b6-chalisa-ram-shri-ram-chalisa-chaupai-path-b6",
+          "title": "श्री राम चालीसा (40 चौपाई संपूर्ण भक्ति पाठ)",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "b7-chalisa-ram-shri-ram-chalisa-sampurna-b7",
+          "title": "श्री राम चालीसा (दोहा: आदि राम रघुनाथ प्रभु 40 चौपाई)",
+          "deity_id": "ram",
+          "audio_url": "/audio/b7-chalisa-ram-shri-ram-chalisa-sampurna-b7.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-ram-shri-bharat-lal-chalisa-b8",
+          "title": "श्री भरत लाल जी चालीसा (त्याग मूरत नंदीग्राम 40 चौपाई)",
+          "deity_id": "ram",
+          "audio_url": "/audio/b8-chalisa-ram-shri-bharat-lal-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-ram-shri-janaki-sita-chalisa-b8",
+          "title": "श्री जानकी सीता चालीसा (मिथिला सुता कनक भवन 40 चौपाई)",
+          "deity_id": "ram",
+          "audio_url": "/audio/b8-chalisa-ram-shri-janaki-sita-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-ram-shri-lakshman-ji-chalisa-b8",
+          "title": "श्री लक्ष्मण जी चालीसा (शेषावतार सुमित्रा नंदन 40 चौपाई)",
+          "deity_id": "ram",
+          "audio_url": "/audio/b8-chalisa-ram-shri-lakshman-ji-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "b8-chalisa-ram-shri-raghavendra-ram-chalisa-b8",
+          "title": "श्री राघवेन्द्र राम चालीसा (अवधपति रघुकुल शिरोमणि 40 चौपाई)",
+          "deity_id": "ram",
+          "audio_url": "/audio/b8-chalisa-ram-shri-raghavendra-ram-chalisa-b8.mp3",
+          "is_unmapped": false
+        },
+        {
+          "id": "chalisa-ram-janaki-chalisa",
+          "title": "श्री जानकी (सीता) चालीसा",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-ram-lakshman-chalisa",
+          "title": "श्री लक्ष्मण चालीसा",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        },
+        {
+          "id": "chalisa-ram-shri-ram-chalisa",
+          "title": "श्री राम चालीसा",
+          "deity_id": "ram",
+          "audio_url": "UNMAPPED",
+          "is_unmapped": true
+        }
+      ],
+      "analysis_evidence": "In Batch 10, the actual Ram Chalisa record ID is 'b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10' with title 'श्री राम चालीसा (अवधपति रघुवीर दयाला करो कृपा दशरथ के लाला 10)'. The requested ID 'b10-chalisa-ram-kripa-chalisa-b10' does not exist."
+    }
+  ]
+}

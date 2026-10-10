@@ -1,0 +1,46 @@
+# Environment & Sensitive configs
+.env
+.env.local
+.env.*.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Large binaries & archives (exceeding GitHub limits)
+*.apk
+*.aab
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Backup files & database dumps
+*.bak
+*.bak*
+*.old
+*.orig
+*~
+db/backups/
+*.db-journal
+*.db-wal
+
+# High-resolution long-form audio (>50MB, exceeding GitHub single-file limits)
+assets/audio/katha_indresh_*.mp3
+assets/audio/katha_rajan_*.mp3
+
+# IDE and Editor directories
+.vscode/
+.idea/
+*.swp

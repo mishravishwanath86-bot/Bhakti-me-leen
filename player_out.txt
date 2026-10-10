@@ -1,0 +1,96 @@
+<div id="glass-full-player-modal" class="classic-player-modal" style="display:none !important;">
+    <div class="classic-player-card">
+      
+      <!-- Top Bar -->
+      <div class="classic-player-topbar">
+        <button class="classic-topbar-btn" onclick="closeGlassPlayer()" title="छोटा करें">
+          <span style="font-size:1.3rem; font-weight:900; line-height:1;">⌄</span>
+        </button>
+        <div class="classic-player-header-title">॥ अब बज रहा है ॥</div>
+        <button class="classic-topbar-btn" onclick="triggerFlowerShower()" title="🌸 पुष्प वर्षा">
+          <span>🌸</span>
+        </button>
+      </div>
+
+      <!-- Deity Artwork Centerpiece -->
+      <div class="classic-artwork-wrapper">
+        <div class="classic-artwork-ring">
+          <img src="assets/gallery/bal_narasimha_little.jpg" id="glass-modal-img" class="classic-artwork-img" alt="Deity Artwork" onerror="this.src='assets/app_logo_circle.png'" />
+        </div>
+      </div>
+
+      <!-- Track Metadata & Favorite -->
+      <div class="classic-track-info-row">
+        <div class="classic-meta-text">
+          <h2 id="glass-modal-title" class="classic-track-title">श्री गणेश आरती (जय गणेश देवा)</h2>
+          <div id="glass-modal-sub" class="classic-track-sub">
+            <span class="classic-live-wave"><span></span><span></span><span></span></span>
+            <span id="glass-modal-deity-badge">श्री गणेश जी • दिव्य आरती</span>
+          </div>
+        </div>
+        <button class="classic-fav-btn" onclick="toggleFavCurrent()" id="glass-modal-fav-btn" title="पसंदीदा">
+          <span>🤍</span>
+        </button>
+      </div>
+
+      <!-- ⏱️ Timeline Scrubber -->
+      <div class="classic-scrub-container">
+        <input type="range" class="classic-seekbar" id="glass-modal-seekbar" min="0" max="100" value="0" step="0.1" oninput="onSeekbarInput(this.value)" onchange="onSeekbarChange(this.value)">
+        <div class="classic-timestamps">
+          <span id="glass-modal-cur-time">00:00</span>
+          <span id="glass-modal-tot-time">05:00</span>
+        </div>
+      </div>
+
+      <!-- 🎮 Main Playback Controls (Perfect Non-Distorted Circular Sizing) -->
+      <div class="classic-controls-primary">
+        <button class="classic-ctrl-btn" onclick="skipAudioSeconds(-10)" title="10s पीछे">
+          <span class="classic-skip-icon">↺</span>
+          <span class="classic-skip-text">10s</span>
+        </button>
+        
+        <button class="classic-ctrl-btn classic-ctrl-skip-step" onclick="prevTrack()" title="पिछला">
+          <span>⏮</span>
+        </button>
+
+        <button class="classic-play-main-btn" onclick="togglePlayKatha()" id="glass-modal-play-btn" title="प्ले / पॉज">
+          <span id="glass-modal-play-icon">▶</span>
+        </button>
+
+        <button class="classic-ctrl-btn classic-ctrl-skip-step" onclick="nextTrack()" title="अगला">
+          <span>⏭</span>
+        </button>
+
+        <button class="classic-ctrl-btn" onclick="skipAudioSeconds(10)" title="10s आगे">
+          <span class="classic-skip-icon">↻</span>
+          <span class="classic-skip-text">10s</span>
+        </button>
+      </div>
+
+      <!-- ⚙️ Secondary Toolbar (Shuffle, Speed, Repeat) -->
+      <div class="classic-controls-secondary">
+        <button class="classic-sec-btn" onclick="toggleShuffle()" id="glass-shuffle-btn" title="शफल">
+          <span>🔀</span>
+        </button>
+        
+        <button class="classic-speed-pill" onclick="cycleAudioSpeed()" id="glass-speed-btn" title="ऑडियो स्पीड">
+          <span id="glass-speed-label">1.0x</span>
+        </button>
+
+        <button class="classic-sec-btn" onclick="toggleRepeat()" id="glass-repeat-btn" title="दोहराएं">
+          <span>🔁</span>
+        </button>
+      </div>
+
+      <!-- 📜 Lyrics & Katha Drawer Button -->
+      <button class="classic-lyrics-toggle-btn" onclick="toggleLyricsDrawer()">
+        <span>📜</span>
+        <span id="glass-lyrics-tab-text">पाठ एवं भावार्थ देखें (Lyrics) ▴</span>
+      </button>
+
+      <!-- Lyrics / Full Text Drawer -->
+      <div id="glass-lyrics-content" class="classic-lyrics-drawer" style="display:none;">
+        <div id="glass-lyrics-body" class="classic-lyrics-text"></div>
+      </div>
+
+    </div>

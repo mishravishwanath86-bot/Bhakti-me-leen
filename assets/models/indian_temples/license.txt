@@ -1,0 +1,11 @@
+Model Information:
+* title:	Indian Temples
+* source:	https://sketchfab.com/3d-models/indian-temples-12b72dbe488f4800a080d352c724247f
+* author:	yanix (https://sketchfab.com/yanix)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Indian Temples" (https://sketchfab.com/3d-models/indian-temples-12b72dbe488f4800a080d352c724247f) by yanix (https://sketchfab.com/yanix) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

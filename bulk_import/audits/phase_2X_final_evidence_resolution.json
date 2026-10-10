@@ -1,0 +1,2936 @@
+{
+  "phase": "2X",
+  "mode": "STRICT_READ_ONLY_FINAL_CANDIDATE_RESOLUTION",
+  "database_modified": false,
+  "database_writes": 0,
+  "total_authoritative_katha": 505,
+  "current_medialess_katha": 48,
+  "katha_records_inspected": 48,
+  "input_candidates": {
+    "audio_review_input": 42,
+    "video_review_input": 42
+  },
+  "final_audio_result": {
+    "audio_verified_high": 0,
+    "audio_review": 42,
+    "audio_reject": 0,
+    "audio_no_suitable": 6,
+    "audio_duplicate": 0
+  },
+  "final_video_result": {
+    "video_verified_high": 0,
+    "video_review": 42,
+    "video_reject": 0,
+    "video_no_suitable": 6,
+    "video_duplicate": 0
+  },
+  "katha_level_result": {
+    "resolved_with_verified_media": 0,
+    "still_under_review": 42,
+    "no_suitable_media": 6
+  },
+  "live_verification": {
+    "live_pass": 84,
+    "live_fail": 0
+  },
+  "conflicts": {
+    "duplicate_conflicts": 0,
+    "url_id_conflicts": 0,
+    "mapping_conflicts": 0
+  },
+  "legacy_protection": {
+    "legacy_audio_protected": "31/31",
+    "legacy_video_protected": "12/12",
+    "phase_2n_2q_protected": "PASS"
+  },
+  "database_safety": {
+    "sqlite_integrity": "PASS",
+    "fts5_integrity": "PASS",
+    "foreign_keys": "PASS"
+  },
+  "katha_level_resolutions": [
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-14-b15",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-04-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-09-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-10-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-11-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-13-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-05-b17",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-10-b17",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-15-b17",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-06-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-08-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-12-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-13-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b2-katha-bhakta-dadhichi-asthi-daan",
+      "katha_title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)",
+      "audio": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "overall": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b2-katha-bhakta-yudhishthir-swargarohan",
+      "katha_title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b2-katha-durga-parvati-panchagni-tapasya",
+      "katha_title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)",
+      "audio": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "overall": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b2-katha-durga-shumbha-nishumbha-raktabeej",
+      "katha_title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-350",
+      "katha_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-410",
+      "katha_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-470",
+      "katha_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-089",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-149",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-209",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-269",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-302",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-362",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-422",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-482",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-101",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-161",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-221",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-281",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-326",
+      "katha_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-386",
+      "katha_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-446",
+      "katha_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-125",
+      "katha_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-185",
+      "katha_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-245",
+      "katha_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b3-katha-durga-chamunda-devi-chanda-munda-vadh",
+      "katha_title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार",
+      "audio": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "overall": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b3-katha-durga-jwala-devi-akbar-chhatra-leela",
+      "katha_title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन",
+      "audio": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "overall": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh",
+      "katha_title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप)",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b3-katha-durga-vaishno-devi-bhairav-nath-moksha",
+      "katha_title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b3-katha-general-raja-harishchandra-satya-pariksha",
+      "katha_title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट",
+      "audio": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "overall": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b4-katha-durga-chanda-munda-vadh-chamunda",
+      "katha_title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण",
+      "audio": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video": {
+        "candidate_count": 0,
+        "best_candidate": null,
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "overall": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b4-katha-durga-shumbha-nishumbha-vadh-katha",
+      "katha_title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b4-katha-shani-janma-aur-surya-shani-samvad",
+      "katha_title": "शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b5-katha-durga-shumbha-nishumbha-vadh-kaushiki",
+      "katha_title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    },
+    {
+      "katha_id": "b5-katha-durga-vaishno-devi-bhairavnath-katha",
+      "katha_title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य",
+      "audio": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video": {
+        "candidate_count": 1,
+        "best_candidate": null,
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      },
+      "overall": "REVIEW"
+    }
+  ],
+  "candidate_resolutions": [
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-14-b15",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-04-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-09-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-10-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-11-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-13-b16",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-05-b17",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-10-b17",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-15-b17",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-06-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-08-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-12-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-13-b18",
+      "katha_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b2-katha-bhakta-dadhichi-asthi-daan",
+      "katha_title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      }
+    },
+    {
+      "katha_id": "b2-katha-bhakta-yudhishthir-swargarohan",
+      "katha_title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b2-katha-durga-parvati-panchagni-tapasya",
+      "katha_title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      }
+    },
+    {
+      "katha_id": "b2-katha-durga-shumbha-nishumbha-raktabeej",
+      "katha_title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-350",
+      "katha_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20)",
+      "deity_id": "guru_sant",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-410",
+      "katha_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20)",
+      "deity_id": "guru_sant",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-470",
+      "katha_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20)",
+      "deity_id": "guru_sant",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-089",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20)",
+      "deity_id": "other_deities",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-149",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20)",
+      "deity_id": "other_deities",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-209",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20)",
+      "deity_id": "other_deities",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-269",
+      "katha_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20)",
+      "deity_id": "other_deities",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-302",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20)",
+      "deity_id": "radharani",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-362",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20)",
+      "deity_id": "radharani",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-422",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20)",
+      "deity_id": "radharani",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-482",
+      "katha_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20)",
+      "deity_id": "radharani",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-101",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20)",
+      "deity_id": "santoshi",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-161",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20)",
+      "deity_id": "santoshi",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-221",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20)",
+      "deity_id": "santoshi",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-281",
+      "katha_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20)",
+      "deity_id": "santoshi",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-326",
+      "katha_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20)",
+      "deity_id": "shanidev",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-386",
+      "katha_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20)",
+      "deity_id": "shanidev",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-446",
+      "katha_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20)",
+      "deity_id": "shanidev",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-125",
+      "katha_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20)",
+      "deity_id": "yamuna",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-185",
+      "katha_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20)",
+      "deity_id": "yamuna",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-245",
+      "katha_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20)",
+      "deity_id": "yamuna",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-chamunda-devi-chanda-munda-vadh",
+      "katha_title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-jwala-devi-akbar-chhatra-leela",
+      "katha_title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh",
+      "katha_title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप)",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-vaishno-devi-bhairav-nath-moksha",
+      "katha_title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b3-katha-general-raja-harishchandra-satya-pariksha",
+      "katha_title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट",
+      "deity_id": "general_bhakti",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      }
+    },
+    {
+      "katha_id": "b4-katha-durga-chanda-munda-vadh-chamunda",
+      "katha_title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "N/A",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "final_reason": "No candidate identified across targeted external search queries.",
+        "missing_evidence": "No external candidate discovered."
+      }
+    },
+    {
+      "katha_id": "b4-katha-durga-shumbha-nishumbha-vadh-katha",
+      "katha_title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b4-katha-shani-janma-aur-surya-shani-samvad",
+      "katha_title": "शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति",
+      "deity_id": "shanidev",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b5-katha-durga-shumbha-nishumbha-vadh-kaushiki",
+      "katha_title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    },
+    {
+      "katha_id": "b5-katha-durga-vaishno-devi-bhairavnath-katha",
+      "katha_title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य",
+      "deity_id": "durga_mata",
+      "audio_resolution": {
+        "media_type": "AUDIO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Identity and narrative theme match deity and event context, but source does not provide verbatim transcript or publisher verification confirming complete, unedited episode narration.",
+        "missing_evidence": "Missing verbatim narration transcript and official scriptural edition metadata confirming complete episode storyline."
+      },
+      "video_resolution": {
+        "media_type": "VIDEO",
+        "identity_match": "THEMATIC_MATCH",
+        "semantic_match": "CORRESPONDING_DEITY_EVENT",
+        "character_event_match": "PLAUSIBLE",
+        "description_evidence": "NOT_AVAILABLE",
+        "transcript_evidence": "NOT_AVAILABLE",
+        "source_authority": "ARCHIVAL / INSTITUTIONAL",
+        "completeness": "UNVERIFIED",
+        "live_status": "LIVE_PASS",
+        "duplicate_status": "UNIQUE_NEW_EXTERNAL_SOURCE",
+        "conflict_status": "NO_CONFLICT",
+        "final_classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "final_reason": "Visual theme and traditional title match Katha subject, but independent scriptural audition is required to prove exact prasang completeness without abridgment.",
+        "missing_evidence": "Missing complete timestamped episode breakdown and verified institutional broadcaster certification."
+      }
+    }
+  ],
+  "final_gate": "PASS"
+}

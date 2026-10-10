@@ -1,0 +1,63 @@
+{
+  "appName": "Bhakti Me Leen",
+  "tagline": "The Path to Divine Sadhana and Inner Peace",
+  "shubhaMantra": "✨ Om Shri Ganeshaya Namah ✨",
+  "nav": {
+    "panchang": "Panchang",
+    "jar": "Amrit Kalash",
+    "home": "Home",
+    "katha": "Audio",
+    "profile": "Profile",
+    "settings": "Settings",
+    "aarti": "Aarti Darshan",
+    "japMala": "Jap Mala"
+  },
+  "home": {
+    "welcome": "Welcome to",
+    "guestLogin": "Guest Entry",
+    "dailyTracker": "Daily Sadhana Tracker",
+    "visitsToday": "Holy visits today",
+    "times": "times",
+    "streak": "Day Streak",
+    "streakShield": "Active Shield",
+    "punyaPoints": "Punya Points",
+    "openSadhanaCenter": "Open Sadhana Center",
+    "liveRadio": "24×7 Live Bhakti Radio",
+    "parikrama": "Divine 3D Temple Parikrama",
+    "amritKalash": "Bhakti Amrit Kalash",
+    "radioNowPlaying": "Now Playing",
+    "categories": "Divine Categories",
+    "dailyPanchang": "Daily Panchang",
+    "shubhMuhurat": "Auspicious Muhurat"
+  },
+  "categories": {
+    "aarti": "Aarti",
+    "chalisa": "Chalisa",
+    "mantra": "Mantra",
+    "stotra": "Stotra",
+    "vrat": "Vrat",
+    "festival": "Festivals",
+    "ramayana": "Ramayana",
+    "katha": "Stories",
+    "desh": "Patriotic",
+    "panchang": "Panchang"
+  },
+  "settings": {
+    "title": "Settings & Sadhana Control",
+    "haptics": "Spiritual Haptics & Sound",
+    "brahmaMuhurta": "Brahma Muhurta Alarm",
+    "bioAura": "Pranic Aura Visualizer",
+    "vault": "Sadhana Cloud Vault",
+    "language": "App Language",
+    "selectLanguage": "Choose Preferred Language",
+    "applyLanguage": "Apply Language",
+    "logout": "Log Out"
+  },
+  "audio": {
+    "title": "Bhakti Audio Library",
+    "pureAudio": "Audio Only",
+    "watchVideo": "Watch Video",
+    "nowPlaying": "Now Playing",
+    "lyrics": "View Lyrics & Meaning"
+  }
+}

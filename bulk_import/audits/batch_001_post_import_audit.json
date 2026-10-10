@@ -1,0 +1,46 @@
+{
+  "batch_id": "001",
+  "batch_name": "bhakti_batch_001",
+  "audit_type": "post_import_read_only",
+  "audit_date": "2026-08-26T23:51:00+05:30",
+  "database": {
+    "path": "db/bhakti.db",
+    "before_count": 4,
+    "processed_count": 500,
+    "inserted_count": 498,
+    "skipped_count": 2,
+    "error_count": 0,
+    "after_count": 502
+  },
+  "integrity": {
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "fts_count": 502,
+    "content_count": 502,
+    "orphan_fts_records": 0,
+    "orphan_content_records": 0,
+    "duplicate_ids": 0,
+    "duplicate_content_hashes": 0,
+    "batch_draft_records": "498/498"
+  },
+  "search_tests": {
+    "hindi_hanuman_chalisa": "PASS",
+    "hinglish_hanuman_chalisa": "PASS",
+    "hindi_ram": "PASS",
+    "hindi_krishna": "PASS",
+    "hindi_radha": "PASS",
+    "hindi_shiv": "PASS",
+    "hindi_durga": "PASS",
+    "hindi_ganesh": "PASS",
+    "english_krishna": "PASS",
+    "english_shiv": "PASS"
+  },
+  "final_verdict": {
+    "database_integrity": "PASS",
+    "fts5_search": "PASS",
+    "hindi_search": "PASS",
+    "hinglish_search": "PASS",
+    "english_search": "PASS",
+    "batch_001": "PASS"
+  }
+}

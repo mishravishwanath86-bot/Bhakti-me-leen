@@ -1,0 +1,63 @@
+{
+  "appName": "भक्ती मध्ये लीन",
+  "tagline": "सनातन धर्म, ध्यान आणि आत्मिक शांततेचे पावन द्वार",
+  "shubhaMantra": "✨ ॐ श्री गणेशाय नमः ✨",
+  "nav": {
+    "panchang": "पंचांग",
+    "jar": "अमृत कलश",
+    "home": "होम",
+    "katha": "ऑडिओ",
+    "profile": "प्रोफाइल",
+    "settings": "सेटिंग्ज",
+    "aarti": "आरती दर्शन",
+    "japMala": "जप माळ"
+  },
+  "home": {
+    "welcome": "स्वागत आहे",
+    "guestLogin": "अतिथी प्रवेश",
+    "dailyTracker": "दैनिक साधना संज्ञान",
+    "visitsToday": "आजचा पावन प्रवेश",
+    "times": "वेळा",
+    "streak": "दिवस सलगता",
+    "streakShield": "सक्रिय कवच",
+    "punyaPoints": "संचित पुण्य",
+    "openSadhanaCenter": "साधना नियंत्रण कक्ष उघडा",
+    "liveRadio": "24×7 लाइव्ह भक्ती रेडिओ",
+    "parikrama": "दिव्य 3D मंदिर परिक्रमा",
+    "amritKalash": "भक्ती अमृत कलश",
+    "radioNowPlaying": "आता वाजत आहे",
+    "categories": "दिव्य विभाग",
+    "dailyPanchang": "दैनिक पंचांग",
+    "shubhMuhurat": "शुभ मुहूर्त"
+  },
+  "categories": {
+    "aarti": "आरती",
+    "chalisa": "चालीसा",
+    "mantra": "मंत्र",
+    "stotra": "स्तोत्र",
+    "vrat": "व्रत",
+    "festival": "सण व उत्सव",
+    "ramayana": "रामायण",
+    "katha": "कथा",
+    "desh": "देशभक्ती",
+    "panchang": "पंचांग"
+  },
+  "settings": {
+    "title": "साधना नियंत्रण आणि सेटिंग्ज",
+    "haptics": "दिव्य अनुभूती व हॅप्टिक्स",
+    "brahmaMuhurta": "ब्राह्म मुहूर्त अलार्म",
+    "bioAura": "प्राणिक ऊर्जा व ऑरा",
+    "vault": "साधना क्लाउड व्हॉल्ट",
+    "language": "भाषा निवड (Language)",
+    "selectLanguage": "तुमची पसंतीची भाषा निवडा",
+    "applyLanguage": "भाषा लागू करा",
+    "logout": "लॉग आउट"
+  },
+  "audio": {
+    "title": "भक्ती ऑडिओ लायब्ररी",
+    "pureAudio": "फक्त ऑडिओ ऐका",
+    "watchVideo": "व्हिडिओ पहा",
+    "nowPlaying": "आता वाजत आहे",
+    "lyrics": "पाठ आणि भावार्थ पहा"
+  }
+}

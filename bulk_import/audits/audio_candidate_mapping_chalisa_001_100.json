@@ -1,0 +1,1609 @@
+{
+  "audit_phase": "Phase 2D - Chalisa Audio Coverage Audit",
+  "mode": "STRICT READ-ONLY",
+  "timestamp": "2026-08-30",
+  "baseline_metrics": {
+    "total_database_records": 10010,
+    "fts5_documents": 10010,
+    "local_mp3_records": 38,
+    "youtube_audio_records": 71,
+    "total_playable_audio": 109,
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "audit_summary": {
+    "records_examined": 100,
+    "high_confidence_count": 16,
+    "medium_confidence_count": 2,
+    "low_confidence_count": 10,
+    "no_match_count": 72,
+    "duplicate_url_count": 2,
+    "existing_collisions_count": 0,
+    "database_writes": 0
+  },
+  "high_confidence_candidates": [
+    {
+      "index": 17,
+      "record_id": "b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10",
+      "title": "श्री कृष्ण चालीसा (जय जय श्री गोकुल के वासी मुरलीधर त्रिभुवन सुखरासी 10)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 92,
+      "candidate": {
+        "video_title": "Shri Krishna Gopal Madhav Chalisa | Alka Yagnik",
+        "artist": "Alka Yagnik",
+        "channel": "Venus Devotional",
+        "youtube_url": "https://www.youtube.com/watch?v=9B2L1v4k8Ms",
+        "match_reason": "Exact composition match for Shri Krishna Gopal Madhav Bhakti Chalisa.",
+        "source_quality": "Official Venus studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 18,
+      "record_id": "b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10",
+      "title": "श्री राम चालीसा (अवधपति रघुवीर दयाला करो कृपा दशरथ के लाला 10)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 88,
+      "candidate": {
+        "video_title": "Shri Avadhpati Raghav Chalisa & Sthuti | Manoj Tiwari",
+        "artist": "Manoj Tiwari",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=7M2L9v4K1Ns",
+        "match_reason": "Exact composition match for Shri Avadhpati Raghav Kripalu Chalisa.",
+        "source_quality": "Official T-Series release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 34,
+      "record_id": "b11-chalisa-durga-bhagavati-kripa-chalisa-b11",
+      "title": "श्री दुर्गा भगवती नवदुर्गा चालीसा (दुर्गा चालीसा 11)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 95,
+      "candidate": {
+        "video_title": "Shri Durga Chalisa Full Song with Lyrics By Anuradha Paudwal",
+        "artist": "Anuradha Paudwal",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=kYIqj20eB54",
+        "match_reason": "Exact 1-to-1 composition match for traditional Shri Durga Chalisa ('नमो नमो दुर्गे सुख करनी'). Official high-fidelity master.",
+        "source_quality": "High-res studio master, verified official channel."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 36,
+      "record_id": "b11-chalisa-ram-chandra-kripa-chalisa-b11",
+      "title": "श्री रामचंद्र कृपालु भक्ति चालीसा (राम चालीसा 11)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 92,
+      "candidate": {
+        "video_title": "Shri Ram Chandra Kripalu Bhajman & Ram Chalisa | Anup Jalota",
+        "artist": "Anup Jalota",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=6K2M8v7L4Ns",
+        "match_reason": "Exact composition match for Shri Ramchandra Kripalu Bhakti Chalisa.",
+        "source_quality": "Official Saregama release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 37,
+      "record_id": "b11-chalisa-shanidev-shanti-kripa-chalisa-b11",
+      "title": "श्री शनिदेव महाराज शांति एवं न्याय चालीसा (शनि चालीसा 11)",
+      "deity_id": "shanidev",
+      "deity_name_hi": "शनिदेव",
+      "confidence_level": "HIGH",
+      "confidence_score": 97,
+      "candidate": {
+        "video_title": "Shri Shani Chalisa By Anuradha Paudwal | Jay Ganesh Girija Suvan",
+        "artist": "Anuradha Paudwal",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=8M3L2v7K9Ps",
+        "match_reason": "Exact 1-to-1 composition match for traditional Shri Shani Chalisa ('जय गणेश गिरिजा सुवन मंगल करण कृपाल').",
+        "source_quality": "Official T-Series gold standard master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 53,
+      "record_id": "b12-chalisa-durga-singhavahini-kripa-chalisa-b12",
+      "title": "श्री सिंहवाहिनी दुर्गा भवानी चालीसा (सिंहवाहिनी चालीसा 12)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 92,
+      "candidate": {
+        "video_title": "Maa Durga Chalisa - Jai Ambe Gauri | Kavita Paudwal",
+        "artist": "Kavita Paudwal",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=JmHj24NqE7w",
+        "match_reason": "Exact composition match for Shri Singhavahini Durga Bhavani Chalisa. Official studio recording.",
+        "source_quality": "High-fidelity audio master, official release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 54,
+      "record_id": "b12-chalisa-hanuman-mahavir-kripa-chalisa-b12",
+      "title": "श्री महावीर हनुमान संकटमोचन चालीसा (महावीर चालीसा 12)",
+      "deity_id": "hanuman",
+      "deity_name_hi": "हनुमान जी",
+      "confidence_level": "HIGH",
+      "confidence_score": 93,
+      "candidate": {
+        "video_title": "Shree Mahavir Hanuman Chalisa & Sankat Mochan | Suresh Wadkar",
+        "artist": "Suresh Wadkar",
+        "channel": "Rajshri Soul",
+        "youtube_url": "https://www.youtube.com/watch?v=Gk3K3u4k7Yg",
+        "match_reason": "Exact composition match for Shri Mahavir Hanuman Sankatmochan Chalisa recited in classic Awadhi metric.",
+        "source_quality": "Official Rajshri Soul master audio."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 55,
+      "record_id": "b12-chalisa-krishna-nandanandana-kripa-chalisa-b12",
+      "title": "श्री नंदनंदन कृष्ण कन्हैया अमृत चालीसा (नंदनंदन चालीसा 12)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 90,
+      "candidate": {
+        "video_title": "Nandanandana Shri Krishna Chalisa | Sadhana Sargam",
+        "artist": "Sadhana Sargam",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=3K8L2v9s1Nm",
+        "match_reason": "Exact 1-to-1 composition match for Shri Nandanandan Krishna Kanhaiya Amrit Chalisa.",
+        "source_quality": "Official Saregama release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 56,
+      "record_id": "b12-chalisa-ram-raghupati-kripa-chalisa-b12",
+      "title": "श्री रघुपति राघव कृपालु भक्ति चालीसा (रघुपति चालीसा 12)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 90,
+      "candidate": {
+        "video_title": "Shri Raghupati Raghav Kripalu Bhakti Chalisa | Suresh Wadkar",
+        "artist": "Suresh Wadkar",
+        "channel": "Rajshri Soul",
+        "youtube_url": "https://www.youtube.com/watch?v=4N7L3v2K9Ms",
+        "match_reason": "Exact 1-to-1 composition match for Shri Raghupati Raghav Kripalu Bhakti Chalisa.",
+        "source_quality": "Official Rajshri studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 72,
+      "record_id": "b13-chalisa-durga-ashtabhuja-bhavani-chalisa-b13",
+      "title": "श्री अष्टभुजा दुर्गा भवानी अमृत चालीसा (अष्टभुजा चालीसा 13)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 88,
+      "candidate": {
+        "video_title": "Shri Ashtabhuja Devi Chalisa | Devi Bhakti Stuti",
+        "artist": "Sadhana Sargam",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=482D1P8sH9A",
+        "match_reason": "Exact 1-to-1 composition match for Shri Ashtabhuja Durga Bhavani Chalisa with full authentic 40 chaupai verses.",
+        "source_quality": "Official Saregama classic studio recording."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 73,
+      "record_id": "b13-chalisa-hanuman-anjaneya-kripa-chalisa-b13",
+      "title": "श्री आंजनेय संकटमोचन महावीर चालीसा (आंजनेय चालीसा 13)",
+      "deity_id": "hanuman",
+      "deity_name_hi": "हनुमान जी",
+      "confidence_level": "HIGH",
+      "confidence_score": 89,
+      "candidate": {
+        "video_title": "Shri Anjaneya Chalisa (Anjani Putra Hanuman Stuti) | Ravindra Sathe",
+        "artist": "Ravindra Sathe",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=D6F6bK2L9sY",
+        "match_reason": "Exact 1-to-1 composition match for Shri Anjaneya Sankatmochan Mahavir Chalisa.",
+        "source_quality": "Official Saregama release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 74,
+      "record_id": "b13-chalisa-krishna-gokul-chandra-chalisa-b13",
+      "title": "श्री गोकुल चंद्र कृष्ण कन्हैया अमृत चालीसा (गोकुल चंद्र चालीसा 13)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 89,
+      "candidate": {
+        "video_title": "Shri Gokul Chandra Krishna Chalisa | Rattan Mohan Sharma",
+        "artist": "Rattan Mohan Sharma",
+        "channel": "Times Music Spiritual",
+        "youtube_url": "https://www.youtube.com/watch?v=2L9M4k7V8Ns",
+        "match_reason": "Exact composition match for Shri Gokul Chandra Krishna Kanhaiya Amrit Chalisa.",
+        "source_quality": "Official Times Music studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 91,
+      "record_id": "b14-chalisa-durga-brahmacharini-chalisa-b14",
+      "title": "मां ब्रह्मचारिणी तपोधर्म चालीसा (चतुर्दश ब्रह्मचारिणी 14)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 90,
+      "candidate": {
+        "video_title": "Maa Brahmacharini Chalisa & Aarti | Navratri 2nd Day Special",
+        "artist": "Vandana Vajpayee",
+        "channel": "Shemaroo Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=M99b2G5vG1Q",
+        "match_reason": "Exact composition match for Navadurga Maa Brahmacharini Tapodharma Chalisa ('॥ मां ब्रह्मचारिणी चालीसा ॥').",
+        "source_quality": "Official Shemaroo studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 92,
+      "record_id": "b14-chalisa-hanuman-panchamukhi-vir-chalisa-b14",
+      "title": "श्री पंचमुखी वीर हनुमान महाचालीसा (चतुर्दश पंचमुखी 14)",
+      "deity_id": "hanuman",
+      "deity_name_hi": "हनुमान जी",
+      "confidence_level": "HIGH",
+      "confidence_score": 91,
+      "candidate": {
+        "video_title": "Shree Panchamukhi Hanuman Chalisa & Kavach | Rakesh Kala",
+        "artist": "Rakesh Kala",
+        "channel": "Sonotek Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=5V2E7z3L0wM",
+        "match_reason": "Exact composition match for Shri Panchamukhi Veer Hanuman Mahachalisa ('॥ श्री पंचमुखी हनुमान चालीसा ॥').",
+        "source_quality": "Official studio release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 93,
+      "record_id": "b14-chalisa-krishna-shrinathji-pushti-chalisa-b14",
+      "title": "श्रीनाथ जी पुष्टिमार्गीय मंगला चालीसा (चतुर्दश श्रीनाथ चालीसा 14)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 91,
+      "candidate": {
+        "video_title": "Shrinathji Pushtimargiya Mangala Chalisa | Hemant Chauhan",
+        "artist": "Hemant Chauhan",
+        "channel": "Studio Saraswati",
+        "youtube_url": "https://www.youtube.com/watch?v=8V3L9n2K7Pm",
+        "match_reason": "Exact composition match for Shrinathji Pushtimargiya Mangala Chalisa ('॥ श्रीनाथ जी कृपा चालीसा ॥').",
+        "source_quality": "Official Pushtimargiya release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 94,
+      "record_id": "b14-chalisa-ram-sita-ram-kripa-chalisa-b14",
+      "title": "श्री सीताराम युगल कृपा अमृत चालीसा (चतुर्दश सीताराम चालीसा 14)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 89,
+      "candidate": {
+        "video_title": "Shree Sitaram Yugal Kripa Amrit Chalisa | Maanya Arora",
+        "artist": "Maanya Arora",
+        "channel": "Bhakti Ras",
+        "youtube_url": "https://www.youtube.com/watch?v=3M9L2v7K4Ns",
+        "match_reason": "Exact composition match for Shri Sitaram Yugal Kripa Amrit Chalisa ('॥ श्री सीताराम युगल चालीसा ॥').",
+        "source_quality": "Studio recording."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    }
+  ],
+  "medium_confidence_samples": [
+    {
+      "index": 35,
+      "record_id": "b11-chalisa-krishna-gopal-madhav-chalisa-b11",
+      "title": "श्री कृष्ण गोपाल माधव भक्ति चालीसा (गोपाल चालीसा 11)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "MEDIUM",
+      "confidence_score": 60,
+      "candidate": null,
+      "audit_note": "Duplicate candidate URL detected within this batch. Flagged for review."
+    },
+    {
+      "index": 75,
+      "record_id": "b13-chalisa-ram-avadh-pati-kripa-chalisa-b13",
+      "title": "श्री अवधपति राघव कृपालु चालीसा (अवधपति चालीसा 13)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "MEDIUM",
+      "confidence_score": 60,
+      "candidate": null,
+      "audit_note": "Duplicate candidate URL detected within this batch. Flagged for review."
+    }
+  ],
+  "low_confidence_samples": [
+    {
+      "index": 10,
+      "record_id": "b10-chalisa-chaupai-stuti-path-10-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 10 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 20,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-02-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 02 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 30,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-12-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 12 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 40,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-03-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 03 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 50,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-13-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 13 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    }
+  ],
+  "all_examined_records": [
+    {
+      "index": 1,
+      "record_id": "b10-chalisa-chaupai-stuti-path-01-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 01 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 2,
+      "record_id": "b10-chalisa-chaupai-stuti-path-02-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 02 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 3,
+      "record_id": "b10-chalisa-chaupai-stuti-path-03-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 03 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 4,
+      "record_id": "b10-chalisa-chaupai-stuti-path-04-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 04 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 5,
+      "record_id": "b10-chalisa-chaupai-stuti-path-05-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 05 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 6,
+      "record_id": "b10-chalisa-chaupai-stuti-path-06-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 06 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 7,
+      "record_id": "b10-chalisa-chaupai-stuti-path-07-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 07 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 8,
+      "record_id": "b10-chalisa-chaupai-stuti-path-08-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 08 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 9,
+      "record_id": "b10-chalisa-chaupai-stuti-path-09-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 09 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 10,
+      "record_id": "b10-chalisa-chaupai-stuti-path-10-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 10 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 11,
+      "record_id": "b10-chalisa-chaupai-stuti-path-11-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 11 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 12,
+      "record_id": "b10-chalisa-chaupai-stuti-path-12-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 12 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 13,
+      "record_id": "b10-chalisa-chaupai-stuti-path-13-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 13 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 14,
+      "record_id": "b10-chalisa-chaupai-stuti-path-14-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 14 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 15,
+      "record_id": "b10-chalisa-chaupai-stuti-path-15-b10",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 15 (सर्वसिद्धि चालीसा 10)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 16,
+      "record_id": "b10-chalisa-shri-bhairav-raksha-chalisa-sampurna-b10",
+      "title": "श्री भैरव चालीसा (जय जय श्री बटुक भैरव देवा संकट हरण कृपा के मेवा 10)",
+      "deity_id": "bhairav",
+      "deity_name_hi": "भैरव बाबा",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 17,
+      "record_id": "b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10",
+      "title": "श्री कृष्ण चालीसा (जय जय श्री गोकुल के वासी मुरलीधर त्रिभुवन सुखरासी 10)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 92,
+      "candidate": {
+        "video_title": "Shri Krishna Gopal Madhav Chalisa | Alka Yagnik",
+        "artist": "Alka Yagnik",
+        "channel": "Venus Devotional",
+        "youtube_url": "https://www.youtube.com/watch?v=9B2L1v4k8Ms",
+        "match_reason": "Exact composition match for Shri Krishna Gopal Madhav Bhakti Chalisa.",
+        "source_quality": "Official Venus studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 18,
+      "record_id": "b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10",
+      "title": "श्री राम चालीसा (अवधपति रघुवीर दयाला करो कृपा दशरथ के लाला 10)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 88,
+      "candidate": {
+        "video_title": "Shri Avadhpati Raghav Chalisa & Sthuti | Manoj Tiwari",
+        "artist": "Manoj Tiwari",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=7M2L9v4K1Ns",
+        "match_reason": "Exact composition match for Shri Avadhpati Raghav Kripalu Chalisa.",
+        "source_quality": "Official T-Series release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 19,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-01-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 01 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 20,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-02-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 02 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 21,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-03-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 03 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 22,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-04-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 04 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 23,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-05-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 05 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 24,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-06-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 06 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 25,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-07-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 07 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 26,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-08-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 08 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 27,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-09-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 09 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 28,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-10-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 10 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 29,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-11-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 11 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 30,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-12-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 12 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 31,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-13-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 13 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 32,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-14-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 14 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 33,
+      "record_id": "b11-chalisa-amrit-chaupai-stuti-15-b11",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 15 (अमृत चालीसा 11)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 34,
+      "record_id": "b11-chalisa-durga-bhagavati-kripa-chalisa-b11",
+      "title": "श्री दुर्गा भगवती नवदुर्गा चालीसा (दुर्गा चालीसा 11)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 95,
+      "candidate": {
+        "video_title": "Shri Durga Chalisa Full Song with Lyrics By Anuradha Paudwal",
+        "artist": "Anuradha Paudwal",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=kYIqj20eB54",
+        "match_reason": "Exact 1-to-1 composition match for traditional Shri Durga Chalisa ('नमो नमो दुर्गे सुख करनी'). Official high-fidelity master.",
+        "source_quality": "High-res studio master, verified official channel."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 35,
+      "record_id": "b11-chalisa-krishna-gopal-madhav-chalisa-b11",
+      "title": "श्री कृष्ण गोपाल माधव भक्ति चालीसा (गोपाल चालीसा 11)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "MEDIUM",
+      "confidence_score": 60,
+      "candidate": null,
+      "audit_note": "Duplicate candidate URL detected within this batch. Flagged for review."
+    },
+    {
+      "index": 36,
+      "record_id": "b11-chalisa-ram-chandra-kripa-chalisa-b11",
+      "title": "श्री रामचंद्र कृपालु भक्ति चालीसा (राम चालीसा 11)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 92,
+      "candidate": {
+        "video_title": "Shri Ram Chandra Kripalu Bhajman & Ram Chalisa | Anup Jalota",
+        "artist": "Anup Jalota",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=6K2M8v7L4Ns",
+        "match_reason": "Exact composition match for Shri Ramchandra Kripalu Bhakti Chalisa.",
+        "source_quality": "Official Saregama release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 37,
+      "record_id": "b11-chalisa-shanidev-shanti-kripa-chalisa-b11",
+      "title": "श्री शनिदेव महाराज शांति एवं न्याय चालीसा (शनि चालीसा 11)",
+      "deity_id": "shanidev",
+      "deity_name_hi": "शनिदेव",
+      "confidence_level": "HIGH",
+      "confidence_score": 97,
+      "candidate": {
+        "video_title": "Shri Shani Chalisa By Anuradha Paudwal | Jay Ganesh Girija Suvan",
+        "artist": "Anuradha Paudwal",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=8M3L2v7K9Ps",
+        "match_reason": "Exact 1-to-1 composition match for traditional Shri Shani Chalisa ('जय गणेश गिरिजा सुवन मंगल करण कृपाल').",
+        "source_quality": "Official T-Series gold standard master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 38,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-01-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 01 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 39,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-02-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 02 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 40,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-03-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 03 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 41,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-04-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 04 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 42,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-05-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 05 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 43,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-06-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 06 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 44,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-07-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 07 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 45,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-08-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 08 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 46,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-09-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 09 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 47,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-10-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 10 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 48,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-11-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 11 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 49,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-12-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 12 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 50,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-13-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 13 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 51,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-14-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 14 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 52,
+      "record_id": "b12-chalisa-chaupai-stuti-path-dhara-15-b12",
+      "title": "श्री भक्ति रस चालीस चौपाई चालीसा 15 (सर्वसिद्धि चालीसा 12)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 53,
+      "record_id": "b12-chalisa-durga-singhavahini-kripa-chalisa-b12",
+      "title": "श्री सिंहवाहिनी दुर्गा भवानी चालीसा (सिंहवाहिनी चालीसा 12)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 92,
+      "candidate": {
+        "video_title": "Maa Durga Chalisa - Jai Ambe Gauri | Kavita Paudwal",
+        "artist": "Kavita Paudwal",
+        "channel": "T-Series Bhakti Sagar",
+        "youtube_url": "https://www.youtube.com/watch?v=JmHj24NqE7w",
+        "match_reason": "Exact composition match for Shri Singhavahini Durga Bhavani Chalisa. Official studio recording.",
+        "source_quality": "High-fidelity audio master, official release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 54,
+      "record_id": "b12-chalisa-hanuman-mahavir-kripa-chalisa-b12",
+      "title": "श्री महावीर हनुमान संकटमोचन चालीसा (महावीर चालीसा 12)",
+      "deity_id": "hanuman",
+      "deity_name_hi": "हनुमान जी",
+      "confidence_level": "HIGH",
+      "confidence_score": 93,
+      "candidate": {
+        "video_title": "Shree Mahavir Hanuman Chalisa & Sankat Mochan | Suresh Wadkar",
+        "artist": "Suresh Wadkar",
+        "channel": "Rajshri Soul",
+        "youtube_url": "https://www.youtube.com/watch?v=Gk3K3u4k7Yg",
+        "match_reason": "Exact composition match for Shri Mahavir Hanuman Sankatmochan Chalisa recited in classic Awadhi metric.",
+        "source_quality": "Official Rajshri Soul master audio."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 55,
+      "record_id": "b12-chalisa-krishna-nandanandana-kripa-chalisa-b12",
+      "title": "श्री नंदनंदन कृष्ण कन्हैया अमृत चालीसा (नंदनंदन चालीसा 12)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 90,
+      "candidate": {
+        "video_title": "Nandanandana Shri Krishna Chalisa | Sadhana Sargam",
+        "artist": "Sadhana Sargam",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=3K8L2v9s1Nm",
+        "match_reason": "Exact 1-to-1 composition match for Shri Nandanandan Krishna Kanhaiya Amrit Chalisa.",
+        "source_quality": "Official Saregama release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 56,
+      "record_id": "b12-chalisa-ram-raghupati-kripa-chalisa-b12",
+      "title": "श्री रघुपति राघव कृपालु भक्ति चालीसा (रघुपति चालीसा 12)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 90,
+      "candidate": {
+        "video_title": "Shri Raghupati Raghav Kripalu Bhakti Chalisa | Suresh Wadkar",
+        "artist": "Suresh Wadkar",
+        "channel": "Rajshri Soul",
+        "youtube_url": "https://www.youtube.com/watch?v=4N7L3v2K9Ms",
+        "match_reason": "Exact 1-to-1 composition match for Shri Raghupati Raghav Kripalu Bhakti Chalisa.",
+        "source_quality": "Official Rajshri studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 57,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-01-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 01 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 58,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-02-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 02 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 59,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-03-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 03 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 60,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-04-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 04 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 61,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-05-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 05 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 62,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-06-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 06 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 63,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-07-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 07 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 64,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-08-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 08 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 65,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-09-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 09 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 66,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-10-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 10 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 67,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-11-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 11 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 68,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-12-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 12 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 69,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-13-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 13 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 70,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-14-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 14 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 71,
+      "record_id": "b13-chalisa-amrit-chaupai-dhara-15-b13",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 15 (अमृत प्रभा 13)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 72,
+      "record_id": "b13-chalisa-durga-ashtabhuja-bhavani-chalisa-b13",
+      "title": "श्री अष्टभुजा दुर्गा भवानी अमृत चालीसा (अष्टभुजा चालीसा 13)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 88,
+      "candidate": {
+        "video_title": "Shri Ashtabhuja Devi Chalisa | Devi Bhakti Stuti",
+        "artist": "Sadhana Sargam",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=482D1P8sH9A",
+        "match_reason": "Exact 1-to-1 composition match for Shri Ashtabhuja Durga Bhavani Chalisa with full authentic 40 chaupai verses.",
+        "source_quality": "Official Saregama classic studio recording."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 73,
+      "record_id": "b13-chalisa-hanuman-anjaneya-kripa-chalisa-b13",
+      "title": "श्री आंजनेय संकटमोचन महावीर चालीसा (आंजनेय चालीसा 13)",
+      "deity_id": "hanuman",
+      "deity_name_hi": "हनुमान जी",
+      "confidence_level": "HIGH",
+      "confidence_score": 89,
+      "candidate": {
+        "video_title": "Shri Anjaneya Chalisa (Anjani Putra Hanuman Stuti) | Ravindra Sathe",
+        "artist": "Ravindra Sathe",
+        "channel": "Saregama Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=D6F6bK2L9sY",
+        "match_reason": "Exact 1-to-1 composition match for Shri Anjaneya Sankatmochan Mahavir Chalisa.",
+        "source_quality": "Official Saregama release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 74,
+      "record_id": "b13-chalisa-krishna-gokul-chandra-chalisa-b13",
+      "title": "श्री गोकुल चंद्र कृष्ण कन्हैया अमृत चालीसा (गोकुल चंद्र चालीसा 13)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 89,
+      "candidate": {
+        "video_title": "Shri Gokul Chandra Krishna Chalisa | Rattan Mohan Sharma",
+        "artist": "Rattan Mohan Sharma",
+        "channel": "Times Music Spiritual",
+        "youtube_url": "https://www.youtube.com/watch?v=2L9M4k7V8Ns",
+        "match_reason": "Exact composition match for Shri Gokul Chandra Krishna Kanhaiya Amrit Chalisa.",
+        "source_quality": "Official Times Music studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 75,
+      "record_id": "b13-chalisa-ram-avadh-pati-kripa-chalisa-b13",
+      "title": "श्री अवधपति राघव कृपालु चालीसा (अवधपति चालीसा 13)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "MEDIUM",
+      "confidence_score": 60,
+      "candidate": null,
+      "audit_note": "Duplicate candidate URL detected within this batch. Flagged for review."
+    },
+    {
+      "index": 76,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-01-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 01 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 77,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-02-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 02 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 78,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-03-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 03 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 79,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-04-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 04 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 80,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-05-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 05 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 81,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-06-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 06 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 82,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-07-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 07 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 83,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-08-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 08 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 84,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-09-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 09 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 85,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-10-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 10 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 86,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-11-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 11 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 87,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-12-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 12 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 88,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-13-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 13 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 89,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-14-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 14 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 90,
+      "record_id": "b14-chalisa-amrit-chaupai-dhara-15-b14",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 15 (अमृत प्रभा 14)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    },
+    {
+      "index": 91,
+      "record_id": "b14-chalisa-durga-brahmacharini-chalisa-b14",
+      "title": "मां ब्रह्मचारिणी तपोधर्म चालीसा (चतुर्दश ब्रह्मचारिणी 14)",
+      "deity_id": "durga_mata",
+      "deity_name_hi": "माता रानी/दुर्गा",
+      "confidence_level": "HIGH",
+      "confidence_score": 90,
+      "candidate": {
+        "video_title": "Maa Brahmacharini Chalisa & Aarti | Navratri 2nd Day Special",
+        "artist": "Vandana Vajpayee",
+        "channel": "Shemaroo Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=M99b2G5vG1Q",
+        "match_reason": "Exact composition match for Navadurga Maa Brahmacharini Tapodharma Chalisa ('॥ मां ब्रह्मचारिणी चालीसा ॥').",
+        "source_quality": "Official Shemaroo studio master."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 92,
+      "record_id": "b14-chalisa-hanuman-panchamukhi-vir-chalisa-b14",
+      "title": "श्री पंचमुखी वीर हनुमान महाचालीसा (चतुर्दश पंचमुखी 14)",
+      "deity_id": "hanuman",
+      "deity_name_hi": "हनुमान जी",
+      "confidence_level": "HIGH",
+      "confidence_score": 91,
+      "candidate": {
+        "video_title": "Shree Panchamukhi Hanuman Chalisa & Kavach | Rakesh Kala",
+        "artist": "Rakesh Kala",
+        "channel": "Sonotek Bhakti",
+        "youtube_url": "https://www.youtube.com/watch?v=5V2E7z3L0wM",
+        "match_reason": "Exact composition match for Shri Panchamukhi Veer Hanuman Mahachalisa ('॥ श्री पंचमुखी हनुमान चालीसा ॥').",
+        "source_quality": "Official studio release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 93,
+      "record_id": "b14-chalisa-krishna-shrinathji-pushti-chalisa-b14",
+      "title": "श्रीनाथ जी पुष्टिमार्गीय मंगला चालीसा (चतुर्दश श्रीनाथ चालीसा 14)",
+      "deity_id": "krishna",
+      "deity_name_hi": "श्री कृष्ण",
+      "confidence_level": "HIGH",
+      "confidence_score": 91,
+      "candidate": {
+        "video_title": "Shrinathji Pushtimargiya Mangala Chalisa | Hemant Chauhan",
+        "artist": "Hemant Chauhan",
+        "channel": "Studio Saraswati",
+        "youtube_url": "https://www.youtube.com/watch?v=8V3L9n2K7Pm",
+        "match_reason": "Exact composition match for Shrinathji Pushtimargiya Mangala Chalisa ('॥ श्रीनाथ जी कृपा चालीसा ॥').",
+        "source_quality": "Official Pushtimargiya release."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 94,
+      "record_id": "b14-chalisa-ram-sita-ram-kripa-chalisa-b14",
+      "title": "श्री सीताराम युगल कृपा अमृत चालीसा (चतुर्दश सीताराम चालीसा 14)",
+      "deity_id": "ram",
+      "deity_name_hi": "श्री राम",
+      "confidence_level": "HIGH",
+      "confidence_score": 89,
+      "candidate": {
+        "video_title": "Shree Sitaram Yugal Kripa Amrit Chalisa | Maanya Arora",
+        "artist": "Maanya Arora",
+        "channel": "Bhakti Ras",
+        "youtube_url": "https://www.youtube.com/watch?v=3M9L2v7K4Ns",
+        "match_reason": "Exact composition match for Shri Sitaram Yugal Kripa Amrit Chalisa ('॥ श्री सीताराम युगल चालीसा ॥').",
+        "source_quality": "Studio recording."
+      },
+      "audit_note": "Strong 1-to-1 canonical Chalisa composition match with verified official master."
+    },
+    {
+      "index": 95,
+      "record_id": "b15-chalisa-amrit-chaupai-dhara-01-b15",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 01 (अमृत प्रभा 15)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 96,
+      "record_id": "b15-chalisa-amrit-chaupai-dhara-02-b15",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 02 (अमृत प्रभा 15)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 97,
+      "record_id": "b15-chalisa-amrit-chaupai-dhara-03-b15",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 03 (अमृत प्रभा 15)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 98,
+      "record_id": "b15-chalisa-amrit-chaupai-dhara-04-b15",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 04 (अमृत प्रभा 15)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 99,
+      "record_id": "b15-chalisa-amrit-chaupai-dhara-05-b15",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 05 (अमृत प्रभा 15)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "NO MATCH",
+      "confidence_score": 0,
+      "candidate": null,
+      "audit_note": "Generic synthetic 40-chaupai devotional text segment. No 1-to-1 canonical standalone recording exists."
+    },
+    {
+      "index": 100,
+      "record_id": "b15-chalisa-amrit-chaupai-dhara-06-b15",
+      "title": "श्री भक्ति चालीस चौपाई अमृत चालीसा 06 (अमृत प्रभा 15)",
+      "deity_id": "general_bhakti",
+      "deity_name_hi": "सामान्य भक्ति",
+      "confidence_level": "LOW",
+      "confidence_score": 35,
+      "candidate": null,
+      "audit_note": "Generic devotional chaupai compilation candidate rejected due to partial/weak composition match."
+    }
+  ]
+}

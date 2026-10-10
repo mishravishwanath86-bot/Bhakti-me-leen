@@ -1,0 +1,101 @@
+{
+  "phase": "2M-F",
+  "mode": "STRICT_READ_ONLY_GLOBAL_AUDIT",
+  "database_modified": false,
+  "database_writes": 0,
+  "database_counts": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio": 284,
+    "local_mp3": 38,
+    "youtube_audio": 246,
+    "video_urls": 148,
+    "total_katha": 505
+  },
+  "katha_reconciliation": {
+    "katha_with_audio": 223,
+    "katha_with_video": 146,
+    "katha_with_both": 135,
+    "katha_with_neither": 271,
+    "audio_only": 88,
+    "video_only": 11,
+    "disjoint_sum": 505,
+    "status": "PASS"
+  },
+  "media_reconciliation": {
+    "playable_audio": 284,
+    "local_mp3": 38,
+    "youtube_audio": 246,
+    "video_urls": 148,
+    "status": "PASS"
+  },
+  "phase_2m_delta": {
+    "audio_added": 44,
+    "video_added": 39,
+    "total_added": 83,
+    "status": "PASS"
+  },
+  "phase_2m_e_mapping_verification": {
+    "applied_match": 83,
+    "mismatch": 0,
+    "missing": 0,
+    "status": "PASS"
+  },
+  "unauthorized_changes": {
+    "unexpected_changes": 0,
+    "status": "PASS"
+  },
+  "youtube_id_duplicates": {
+    "duplicate_audio_ids": 0,
+    "duplicate_video_ids": 0,
+    "total_duplicates": 0
+  },
+  "youtube_url_duplicates": {
+    "duplicate_urls": 0
+  },
+  "cross_field_collisions": {
+    "collisions": 0
+  },
+  "url_id_consistency": {
+    "mismatches": 0,
+    "status": "PASS"
+  },
+  "url_format_audit": {
+    "malformed_urls": 0,
+    "status": "PASS"
+  },
+  "semantic_evidence_audit": {
+    "verified_high_evidence": 83,
+    "total": 83,
+    "status": "PASS"
+  },
+  "live_checks": {
+    "live_pass": 83,
+    "live_fail": 0,
+    "status": "PASS"
+  },
+  "media_integrity": {
+    "status": "PASS"
+  },
+  "fts5": {
+    "fts5_docs": 10010,
+    "search_status": "PASS",
+    "status": "PASS"
+  },
+  "sqlite_integrity": {
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "schema_audit": {
+    "status": "PASS"
+  },
+  "backup_verification": {
+    "backup_path": "bhakti_pre_phase2m_e_apply_backup.db",
+    "status": "PASS"
+  },
+  "final_gate": {
+    "verdict": "PASS",
+    "database_modified": false,
+    "database_writes": 0
+  }
+}

@@ -1,0 +1,1546 @@
+{
+  "phase": "Phase 2J - Katha Media Gap Prioritization & Candidate Discovery",
+  "mode": "STRICT READ-ONLY",
+  "database": "db/bhakti.db",
+  "timestamp": "2026-08-31T09:00:22.194819",
+  "baseline": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "total_katha_records": 505,
+    "katha_with_audio": 90,
+    "katha_with_video": 27,
+    "katha_with_both": 23,
+    "katha_with_neither": 411,
+    "database_writes": 0
+  },
+  "prioritization_summary": {
+    "total_media_less_kathas": 411,
+    "tier_a_count": 78,
+    "tier_b_count": 333,
+    "tier_c_count": 0,
+    "next_batch_50_count": 50,
+    "secondary_batch_50_count": 50,
+    "remaining_backlog_count": 311,
+    "verified_high_count": 0
+  },
+  "scoring_methodology": {
+    "canonical_importance": "0-30 (Canonical root katha-* vs batch synthetic)",
+    "devotional_popularity": "0-20 (Major deities & central scriptures)",
+    "festival_relevance": "0-15 (Vrat & festival calendar association)",
+    "deity_topic_importance": "0-15 (Deity rank & narrative weight)",
+    "search_usefulness": "0-10 (Iconic keyword searchability)",
+    "content_uniqueness": "0-10 (Topic cluster uniqueness score)",
+    "total_scale": "100 points max"
+  },
+  "next_batch_50_candidates": [
+    {
+      "rank": 1,
+      "record_id": "katha-bhakta-narsi-mehta-hundi",
+      "katha_title": "नरसी मेहता की हुंडी: भगवान श्री कृष्ण बने सांवरिया सेठ",
+      "priority_score": 87,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"नरसी मेहता की हुंडी भगवान श्री कृष्ण बने सांवरिया सेठ\" हिंदी कथा",
+        "\"नरसी मेहता की हुंडी भगवान श्री कृष्ण बने सांवरिया सेठ\" कथा प्रवचन",
+        "नरसी मेहता की हुंडी भगवान श्री कृष्ण बने सांवरिया सेठ सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"नरसी मेहता की हुंडी भगवान श्री कृष्ण बने सांवरिया सेठ\" सम्पूर्ण कथा",
+        "\"नरसी मेहता की हुंडी भगवान श्री कृष्ण बने सांवरिया सेठ\" पौराणिक प्रसंग",
+        "नरसी मेहता की हुंडी भगवान श्री कृष्ण बने सांवरिया सेठ श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 2,
+      "record_id": "katha-purana-brahmavaivarta",
+      "katha_title": "ब्रह्मवैवर्त पुराण सार: श्री राधा-कृष्ण गोलोक लीला",
+      "priority_score": 87,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"ब्रह्मवैवर्त पुराण सार श्री राधाकृष्ण गोलोक लीला\" हिंदी कथा",
+        "\"ब्रह्मवैवर्त पुराण सार श्री राधाकृष्ण गोलोक लीला\" कथा प्रवचन",
+        "ब्रह्मवैवर्त पुराण सार श्री राधाकृष्ण गोलोक लीला सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"ब्रह्मवैवर्त पुराण सार श्री राधाकृष्ण गोलोक लीला\" सम्पूर्ण कथा",
+        "\"ब्रह्मवैवर्त पुराण सार श्री राधाकृष्ण गोलोक लीला\" पौराणिक प्रसंग",
+        "ब्रह्मवैवर्त पुराण सार श्री राधाकृष्ण गोलोक लीला श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 3,
+      "record_id": "katha-purana-skanda",
+      "katha_title": "स्कन्द पुराण सार: काशी खंड व सत्यनारायण कथा",
+      "priority_score": 87,
+      "priority_tier": "TIER_A",
+      "deity": "शिव जी",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"स्कन्द पुराण सार काशी खंड व सत्यनारायण कथा\" हिंदी कथा",
+        "\"स्कन्द पुराण सार काशी खंड व सत्यनारायण कथा\" कथा प्रवचन",
+        "स्कन्द पुराण सार काशी खंड व सत्यनारायण कथा सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"स्कन्द पुराण सार काशी खंड व सत्यनारायण कथा\" सम्पूर्ण कथा",
+        "\"स्कन्द पुराण सार काशी खंड व सत्यनारायण कथा\" पौराणिक प्रसंग",
+        "स्कन्द पुराण सार काशी खंड व सत्यनारायण कथा शिव जी कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority शिव जी canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 4,
+      "record_id": "katha-purana-padma",
+      "katha_title": "पद्म पुराण सार: एकादशी, पुष्कर व तुलसी महात्म्य",
+      "priority_score": 86,
+      "priority_tier": "TIER_A",
+      "deity": "भगवान विष्णु",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"पद्म पुराण सार एकादशी पुष्कर व तुलसी महात्म्य\" हिंदी कथा",
+        "\"पद्म पुराण सार एकादशी पुष्कर व तुलसी महात्म्य\" कथा प्रवचन",
+        "पद्म पुराण सार एकादशी पुष्कर व तुलसी महात्म्य सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"पद्म पुराण सार एकादशी पुष्कर व तुलसी महात्म्य\" सम्पूर्ण कथा",
+        "\"पद्म पुराण सार एकादशी पुष्कर व तुलसी महात्म्य\" पौराणिक प्रसंग",
+        "पद्म पुराण सार एकादशी पुष्कर व तुलसी महात्म्य भगवान विष्णु कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority भगवान विष्णु canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 5,
+      "record_id": "katha-purana-vishnu",
+      "katha_title": "विष्णु पुराण सार: ध्रुव, प्रह्लाद व समुद्र मंथन",
+      "priority_score": 85,
+      "priority_tier": "TIER_A",
+      "deity": "भगवान विष्णु",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"विष्णु पुराण सार ध्रुव प्रह्लाद व समुद्र मंथन\" हिंदी कथा",
+        "\"विष्णु पुराण सार ध्रुव प्रह्लाद व समुद्र मंथन\" कथा प्रवचन",
+        "विष्णु पुराण सार ध्रुव प्रह्लाद व समुद्र मंथन सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"विष्णु पुराण सार ध्रुव प्रह्लाद व समुद्र मंथन\" सम्पूर्ण कथा",
+        "\"विष्णु पुराण सार ध्रुव प्रह्लाद व समुद्र मंथन\" पौराणिक प्रसंग",
+        "विष्णु पुराण सार ध्रुव प्रह्लाद व समुद्र मंथन भगवान विष्णु कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority भगवान विष्णु canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 6,
+      "record_id": "b20-katha-krishna-govardhan-dharan-leela-b20",
+      "katha_title": "श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा (विंशति 20)",
+      "priority_score": 84,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा विंशति 20\" हिंदी कथा",
+        "\"श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा विंशति 20\" कथा प्रवचन",
+        "श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा विंशति 20 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा विंशति 20\" सम्पूर्ण कथा",
+        "\"श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा विंशति 20\" पौराणिक प्रसंग",
+        "श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा विंशति 20 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 7,
+      "record_id": "katha-ram-sita-swayamvar-dhanush-bhang",
+      "katha_title": "सीता स्वयंवर एवं शिव धनुष भंग प्रसंग",
+      "priority_score": 83,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"सीता स्वयंवर एवं शिव धनुष भंग प्रसंग\" हिंदी कथा",
+        "\"सीता स्वयंवर एवं शिव धनुष भंग प्रसंग\" कथा प्रवचन",
+        "सीता स्वयंवर एवं शिव धनुष भंग प्रसंग सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"सीता स्वयंवर एवं शिव धनुष भंग प्रसंग\" सम्पूर्ण कथा",
+        "\"सीता स्वयंवर एवं शिव धनुष भंग प्रसंग\" पौराणिक प्रसंग",
+        "सीता स्वयंवर एवं शिव धनुष भंग प्रसंग श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 8,
+      "record_id": "katha-ramayana-kand-aranya",
+      "katha_title": "श्री रामचरितमानस अरण्यकांड सार: शबरी व नवधा भक्ति",
+      "priority_score": 83,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री रामचरितमानस अरण्यकांड सार शबरी व नवधा भक्ति\" हिंदी कथा",
+        "\"श्री रामचरितमानस अरण्यकांड सार शबरी व नवधा भक्ति\" कथा प्रवचन",
+        "श्री रामचरितमानस अरण्यकांड सार शबरी व नवधा भक्ति सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री रामचरितमानस अरण्यकांड सार शबरी व नवधा भक्ति\" सम्पूर्ण कथा",
+        "\"श्री रामचरितमानस अरण्यकांड सार शबरी व नवधा भक्ति\" पौराणिक प्रसंग",
+        "श्री रामचरितमानस अरण्यकांड सार शबरी व नवधा भक्ति श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 9,
+      "record_id": "b17-katha-shrimad-bhagavata-govardhan-lila-amrit-b17",
+      "katha_title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला (सप्तदश गोवर्धन लीला 17)",
+      "priority_score": 82,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला सप्तदश गोवर्धन लीला 17\" हिंदी कथा",
+        "\"श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला सप्तदश गोवर्धन लीला 17\" कथा प्रवचन",
+        "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला सप्तदश गोवर्धन लीला 17 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला सप्तदश गोवर्धन लीला 17\" सम्पूर्ण कथा",
+        "\"श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला सप्तदश गोवर्धन लीला 17\" पौराणिक प्रसंग",
+        "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला सप्तदश गोवर्धन लीला 17 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 10,
+      "record_id": "katha-bhakta-bhaktamal-tulsidas-darshan",
+      "katha_title": "गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना\" हिंदी कथा",
+        "\"गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना\" कथा प्रवचन",
+        "गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना\" सम्पूर्ण कथा",
+        "\"गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना\" पौराणिक प्रसंग",
+        "गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 11,
+      "record_id": "katha-purana-markandeya",
+      "katha_title": "मार्कण्डेय पुराण सार: दुर्गा सप्तशती का उद्भव",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "माता रानी/दुर्गा",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"मार्कण्डेय पुराण सार दुर्गा सप्तशती का उद्भव\" हिंदी कथा",
+        "\"मार्कण्डेय पुराण सार दुर्गा सप्तशती का उद्भव\" कथा प्रवचन",
+        "मार्कण्डेय पुराण सार दुर्गा सप्तशती का उद्भव सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"मार्कण्डेय पुराण सार दुर्गा सप्तशती का उद्भव\" सम्पूर्ण कथा",
+        "\"मार्कण्डेय पुराण सार दुर्गा सप्तशती का उद्भव\" पौराणिक प्रसंग",
+        "मार्कण्डेय पुराण सार दुर्गा सप्तशती का उद्भव माता रानी/दुर्गा कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority माता रानी/दुर्गा canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 12,
+      "record_id": "katha-ram-lanka-vijay-rajyabhishek",
+      "katha_title": "रावण वध, लंका विजय एवं श्री राम राज्याभिषेक",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"रावण वध लंका विजय एवं श्री राम राज्याभिषेक\" हिंदी कथा",
+        "\"रावण वध लंका विजय एवं श्री राम राज्याभिषेक\" कथा प्रवचन",
+        "रावण वध लंका विजय एवं श्री राम राज्याभिषेक सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"रावण वध लंका विजय एवं श्री राम राज्याभिषेक\" सम्पूर्ण कथा",
+        "\"रावण वध लंका विजय एवं श्री राम राज्याभिषेक\" पौराणिक प्रसंग",
+        "रावण वध लंका विजय एवं श्री राम राज्याभिषेक श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 13,
+      "record_id": "katha-ramayana-kand-ayodhya",
+      "katha_title": "श्री रामचरितमानस अयोध्याकांड सार: भ्रातृ प्रेम",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री रामचरितमानस अयोध्याकांड सार भ्रातृ प्रेम\" हिंदी कथा",
+        "\"श्री रामचरितमानस अयोध्याकांड सार भ्रातृ प्रेम\" कथा प्रवचन",
+        "श्री रामचरितमानस अयोध्याकांड सार भ्रातृ प्रेम सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री रामचरितमानस अयोध्याकांड सार भ्रातृ प्रेम\" सम्पूर्ण कथा",
+        "\"श्री रामचरितमानस अयोध्याकांड सार भ्रातृ प्रेम\" पौराणिक प्रसंग",
+        "श्री रामचरितमानस अयोध्याकांड सार भ्रातृ प्रेम श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 14,
+      "record_id": "katha-ramayana-kand-bal",
+      "katha_title": "श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग\" हिंदी कथा",
+        "\"श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग\" कथा प्रवचन",
+        "श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग\" सम्पूर्ण कथा",
+        "\"श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग\" पौराणिक प्रसंग",
+        "श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 15,
+      "record_id": "katha-ramayana-kand-kishkindha",
+      "katha_title": "श्री रामचरितमानस किष्किंधाकांड सार: सुग्रीव मित्रता",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री रामचरितमानस किष्किंधाकांड सार सुग्रीव मित्रता\" हिंदी कथा",
+        "\"श्री रामचरितमानस किष्किंधाकांड सार सुग्रीव मित्रता\" कथा प्रवचन",
+        "श्री रामचरितमानस किष्किंधाकांड सार सुग्रीव मित्रता सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री रामचरितमानस किष्किंधाकांड सार सुग्रीव मित्रता\" सम्पूर्ण कथा",
+        "\"श्री रामचरितमानस किष्किंधाकांड सार सुग्रीव मित्रता\" पौराणिक प्रसंग",
+        "श्री रामचरितमानस किष्किंधाकांड सार सुग्रीव मित्रता श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 16,
+      "record_id": "katha-ramayana-kand-lanka",
+      "katha_title": "श्री रामचरितमानस लंकाकांड सार: रावण वध",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री रामचरितमानस लंकाकांड सार रावण वध\" हिंदी कथा",
+        "\"श्री रामचरितमानस लंकाकांड सार रावण वध\" कथा प्रवचन",
+        "श्री रामचरितमानस लंकाकांड सार रावण वध सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री रामचरितमानस लंकाकांड सार रावण वध\" सम्पूर्ण कथा",
+        "\"श्री रामचरितमानस लंकाकांड सार रावण वध\" पौराणिक प्रसंग",
+        "श्री रामचरितमानस लंकाकांड सार रावण वध श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 17,
+      "record_id": "katha-ramayana-kand-uttar",
+      "katha_title": "श्री रामचरितमानस उत्तरकांड सार: काकभुशुंडि संवाद",
+      "priority_score": 80,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्री रामचरितमानस उत्तरकांड सार काकभुशुंडि संवाद\" हिंदी कथा",
+        "\"श्री रामचरितमानस उत्तरकांड सार काकभुशुंडि संवाद\" कथा प्रवचन",
+        "श्री रामचरितमानस उत्तरकांड सार काकभुशुंडि संवाद सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्री रामचरितमानस उत्तरकांड सार काकभुशुंडि संवाद\" सम्पूर्ण कथा",
+        "\"श्री रामचरितमानस उत्तरकांड सार काकभुशुंडि संवाद\" पौराणिक प्रसंग",
+        "श्री रामचरितमानस उत्तरकांड सार काकभुशुंडि संवाद श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 18,
+      "record_id": "katha-bhakta-dhruva-charitra",
+      "katha_title": "भक्त ध्रुव चरित्र: बाल तपस्या एवं ध्रुव लोक प्राप्ति",
+      "priority_score": 79,
+      "priority_tier": "TIER_A",
+      "deity": "भगवान विष्णु",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"भक्त ध्रुव चरित्र बाल तपस्या एवं ध्रुव लोक प्राप्ति\" हिंदी कथा",
+        "\"भक्त ध्रुव चरित्र बाल तपस्या एवं ध्रुव लोक प्राप्ति\" कथा प्रवचन",
+        "भक्त ध्रुव चरित्र बाल तपस्या एवं ध्रुव लोक प्राप्ति सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"भक्त ध्रुव चरित्र बाल तपस्या एवं ध्रुव लोक प्राप्ति\" सम्पूर्ण कथा",
+        "\"भक्त ध्रुव चरित्र बाल तपस्या एवं ध्रुव लोक प्राप्ति\" पौराणिक प्रसंग",
+        "भक्त ध्रुव चरित्र बाल तपस्या एवं ध्रुव लोक प्राप्ति भगवान विष्णु कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority भगवान विष्णु canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 19,
+      "record_id": "katha-bhakta-meera-vish-paan",
+      "katha_title": "मीरा बाई का विषपान: राणा का भेजा विष बना चरणामृत",
+      "priority_score": 77,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"मीरा बाई का विषपान राणा का भेजा विष बना चरणामृत\" हिंदी कथा",
+        "\"मीरा बाई का विषपान राणा का भेजा विष बना चरणामृत\" कथा प्रवचन",
+        "मीरा बाई का विषपान राणा का भेजा विष बना चरणामृत सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"मीरा बाई का विषपान राणा का भेजा विष बना चरणामृत\" सम्पूर्ण कथा",
+        "\"मीरा बाई का विषपान राणा का भेजा विष बना चरणामृत\" पौराणिक प्रसंग",
+        "मीरा बाई का विषपान राणा का भेजा विष बना चरणामृत श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 20,
+      "record_id": "katha-bhakta-surdas-krishna-sakhi",
+      "katha_title": "महाकवि सूरदास: पारस रूप में प्रभु द्वारा हाथ पकड़ना",
+      "priority_score": 77,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"महाकवि सूरदास पारस रूप में प्रभु द्वारा हाथ पकड़ना\" हिंदी कथा",
+        "\"महाकवि सूरदास पारस रूप में प्रभु द्वारा हाथ पकड़ना\" कथा प्रवचन",
+        "महाकवि सूरदास पारस रूप में प्रभु द्वारा हाथ पकड़ना सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"महाकवि सूरदास पारस रूप में प्रभु द्वारा हाथ पकड़ना\" सम्पूर्ण कथा",
+        "\"महाकवि सूरदास पारस रूप में प्रभु द्वारा हाथ पकड़ना\" पौराणिक प्रसंग",
+        "महाकवि सूरदास पारस रूप में प्रभु द्वारा हाथ पकड़ना श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 21,
+      "record_id": "katha-purana-bhagavata",
+      "katha_title": "श्रीमद्भागवत महापुराण सार: दशम स्कंध रास रस",
+      "priority_score": 77,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्रीमद्भागवत महापुराण सार दशम स्कंध रास रस\" हिंदी कथा",
+        "\"श्रीमद्भागवत महापुराण सार दशम स्कंध रास रस\" कथा प्रवचन",
+        "श्रीमद्भागवत महापुराण सार दशम स्कंध रास रस सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्रीमद्भागवत महापुराण सार दशम स्कंध रास रस\" सम्पूर्ण कथा",
+        "\"श्रीमद्भागवत महापुराण सार दशम स्कंध रास रस\" पौराणिक प्रसंग",
+        "श्रीमद्भागवत महापुराण सार दशम स्कंध रास रस श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 22,
+      "record_id": "katha-shiva-samudra-manthan-neelkanth",
+      "katha_title": "समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा",
+      "priority_score": 77,
+      "priority_tier": "TIER_A",
+      "deity": "शिव जी",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा\" हिंदी कथा",
+        "\"समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा\" कथा प्रवचन",
+        "समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा\" सम्पूर्ण कथा",
+        "\"समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा\" पौराणिक प्रसंग",
+        "समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा शिव जी कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority शिव जी canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 23,
+      "record_id": "katha-bhakta-karmabai-khichdi",
+      "katha_title": "भक्त कर्माबाई की खिचड़ी: भगवान जगन्नाथ का बाल प्रेम",
+      "priority_score": 76,
+      "priority_tier": "TIER_A",
+      "deity": "भगवान विष्णु",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"भक्त कर्माबाई की खिचड़ी भगवान जगन्नाथ का बाल प्रेम\" हिंदी कथा",
+        "\"भक्त कर्माबाई की खिचड़ी भगवान जगन्नाथ का बाल प्रेम\" कथा प्रवचन",
+        "भक्त कर्माबाई की खिचड़ी भगवान जगन्नाथ का बाल प्रेम सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"भक्त कर्माबाई की खिचड़ी भगवान जगन्नाथ का बाल प्रेम\" सम्पूर्ण कथा",
+        "\"भक्त कर्माबाई की खिचड़ी भगवान जगन्नाथ का बाल प्रेम\" पौराणिक प्रसंग",
+        "भक्त कर्माबाई की खिचड़ी भगवान जगन्नाथ का बाल प्रेम भगवान विष्णु कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority भगवान विष्णु canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 24,
+      "record_id": "katha-bhakta-ranti-deva-annadaan",
+      "katha_title": "परम त्यागी राजा रंतिदेव: भूखे को अपना भोजन अर्पण कथा",
+      "priority_score": 76,
+      "priority_tier": "TIER_A",
+      "deity": "भगवान विष्णु",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"परम त्यागी राजा रंतिदेव भूखे को अपना भोजन अर्पण कथा\" हिंदी कथा",
+        "\"परम त्यागी राजा रंतिदेव भूखे को अपना भोजन अर्पण कथा\" कथा प्रवचन",
+        "परम त्यागी राजा रंतिदेव भूखे को अपना भोजन अर्पण कथा सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"परम त्यागी राजा रंतिदेव भूखे को अपना भोजन अर्पण कथा\" सम्पूर्ण कथा",
+        "\"परम त्यागी राजा रंतिदेव भूखे को अपना भोजन अर्पण कथा\" पौराणिक प्रसंग",
+        "परम त्यागी राजा रंतिदेव भूखे को अपना भोजन अर्पण कथा भगवान विष्णु कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority भगवान विष्णु canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 25,
+      "record_id": "b19-corpus19-krishna-katha-055",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 055)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 055\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 055\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 055 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 055\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 055\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 055 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 26,
+      "record_id": "b19-corpus19-krishna-katha-056",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 056)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 056\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 056\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 056 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 056\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 056\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 056 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 27,
+      "record_id": "b19-corpus19-krishna-katha-057",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 057)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 057\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 057\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 057 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 057\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 057\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 057 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 28,
+      "record_id": "b19-corpus19-krishna-katha-058",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 058)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 058\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 058\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 058 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 058\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 058\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 058 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 29,
+      "record_id": "b19-corpus19-krishna-katha-059",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 059)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 059\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 059\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 059 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 059\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 059\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 059 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 30,
+      "record_id": "b19-corpus19-krishna-katha-060",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 060)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 060\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 060\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 060 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 060\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 060\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 060 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 31,
+      "record_id": "b19-corpus19-krishna-katha-061",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 061)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 061\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 061\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 061 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 061\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 061\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 061 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 32,
+      "record_id": "b19-corpus19-krishna-katha-062",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 062)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 062\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 062\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 062 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 062\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 062\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 062 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 33,
+      "record_id": "b19-corpus19-krishna-katha-063",
+      "katha_title": "गोवर्धन लीला अमृत कथा (एकोनविंशति पद 063)",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 063\" हिंदी कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 063\" कथा प्रवचन",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 063 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 063\" सम्पूर्ण कथा",
+        "\"गोवर्धन लीला अमृत कथा एकोनविंशति पद 063\" पौराणिक प्रसंग",
+        "गोवर्धन लीला अमृत कथा एकोनविंशति पद 063 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 34,
+      "record_id": "b2-katha-krishna-govardhan-dharana-indra-manbhang",
+      "katha_title": "गोवर्धन पूजा एवं इंद्र का मानमर्दन",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन पूजा एवं इंद्र का मानमर्दन\" हिंदी कथा",
+        "\"गोवर्धन पूजा एवं इंद्र का मानमर्दन\" कथा प्रवचन",
+        "गोवर्धन पूजा एवं इंद्र का मानमर्दन सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन पूजा एवं इंद्र का मानमर्दन\" सम्पूर्ण कथा",
+        "\"गोवर्धन पूजा एवं इंद्र का मानमर्दन\" पौराणिक प्रसंग",
+        "गोवर्धन पूजा एवं इंद्र का मानमर्दन श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 35,
+      "record_id": "b3-katha-krishna-govardhan-leela-indra-garva-bhang",
+      "katha_title": "गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन\" हिंदी कथा",
+        "\"गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन\" कथा प्रवचन",
+        "गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन\" सम्पूर्ण कथा",
+        "\"गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन\" पौराणिक प्रसंग",
+        "गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 36,
+      "record_id": "b3-katha-krishna-sudama-charitra-tundula-bhent",
+      "katha_title": "सुदामा की तंदुल भेंट एवं कृष्ण-सुदामा परम मित्रता",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"सुदामा की तंदुल भेंट एवं कृष्णसुदामा परम मित्रता\" हिंदी कथा",
+        "\"सुदामा की तंदुल भेंट एवं कृष्णसुदामा परम मित्रता\" कथा प्रवचन",
+        "सुदामा की तंदुल भेंट एवं कृष्णसुदामा परम मित्रता सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"सुदामा की तंदुल भेंट एवं कृष्णसुदामा परम मित्रता\" सम्पूर्ण कथा",
+        "\"सुदामा की तंदुल भेंट एवं कृष्णसुदामा परम मित्रता\" पौराणिक प्रसंग",
+        "सुदामा की तंदुल भेंट एवं कृष्णसुदामा परम मित्रता श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 37,
+      "record_id": "b3-katha-shiva-parvati-tapasya-shiva-vivah",
+      "katha_title": "माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिव-पार्वती विवाह",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "शिव जी",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिवपार्वती विवाह\" हिंदी कथा",
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिवपार्वती विवाह\" कथा प्रवचन",
+        "माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिवपार्वती विवाह सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिवपार्वती विवाह\" सम्पूर्ण कथा",
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिवपार्वती विवाह\" पौराणिक प्रसंग",
+        "माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिवपार्वती विवाह शिव जी कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority शिव जी canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 38,
+      "record_id": "b4-katha-krishna-draupadi-cheer-haran-raksha",
+      "katha_title": "द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान\" हिंदी कथा",
+        "\"द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान\" कथा प्रवचन",
+        "द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान\" सम्पूर्ण कथा",
+        "\"द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान\" पौराणिक प्रसंग",
+        "द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 39,
+      "record_id": "b4-katha-krishna-govardhan-dharan-leela",
+      "katha_title": "गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन\" हिंदी कथा",
+        "\"गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन\" कथा प्रवचन",
+        "गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन\" सम्पूर्ण कथा",
+        "\"गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन\" पौराणिक प्रसंग",
+        "गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 40,
+      "record_id": "b4-katha-shiva-parvati-tapasya-aur-vivah",
+      "katha_title": "माता पार्वती की पंचाग्नि तपस्या एवं शिव-पार्वती महाविवाह",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "शिव जी",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं शिवपार्वती महाविवाह\" हिंदी कथा",
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं शिवपार्वती महाविवाह\" कथा प्रवचन",
+        "माता पार्वती की पंचाग्नि तपस्या एवं शिवपार्वती महाविवाह सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं शिवपार्वती महाविवाह\" सम्पूर्ण कथा",
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं शिवपार्वती महाविवाह\" पौराणिक प्रसंग",
+        "माता पार्वती की पंचाग्नि तपस्या एवं शिवपार्वती महाविवाह शिव जी कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority शिव जी canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 41,
+      "record_id": "b5-katha-krishna-govardhan-dharan-indra-garva",
+      "katha_title": "गोवर्धन पूजा एवं इंद्र का गर्व मर्दन",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गोवर्धन पूजा एवं इंद्र का गर्व मर्दन\" हिंदी कथा",
+        "\"गोवर्धन पूजा एवं इंद्र का गर्व मर्दन\" कथा प्रवचन",
+        "गोवर्धन पूजा एवं इंद्र का गर्व मर्दन सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गोवर्धन पूजा एवं इंद्र का गर्व मर्दन\" सम्पूर्ण कथा",
+        "\"गोवर्धन पूजा एवं इंद्र का गर्व मर्दन\" पौराणिक प्रसंग",
+        "गोवर्धन पूजा एवं इंद्र का गर्व मर्दन श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 42,
+      "record_id": "b5-katha-shiva-parvati-tapasya-shiva-vivaha",
+      "katha_title": "माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह",
+      "priority_score": 74,
+      "priority_tier": "TIER_A",
+      "deity": "शिव जी",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह\" हिंदी कथा",
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह\" कथा प्रवचन",
+        "माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह\" सम्पूर्ण कथा",
+        "\"माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह\" पौराणिक प्रसंग",
+        "माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह शिव जी कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority शिव जी canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 43,
+      "record_id": "katha-bhakta-shabari-prem-lakshan",
+      "katha_title": "माता शबरी के जूठे बेर: निष्कपट प्रेम की पराकाष्ठा",
+      "priority_score": 73,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"माता शबरी के जूठे बेर निष्कपट प्रेम की पराकाष्ठा\" हिंदी कथा",
+        "\"माता शबरी के जूठे बेर निष्कपट प्रेम की पराकाष्ठा\" कथा प्रवचन",
+        "माता शबरी के जूठे बेर निष्कपट प्रेम की पराकाष्ठा सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"माता शबरी के जूठे बेर निष्कपट प्रेम की पराकाष्ठा\" सम्पूर्ण कथा",
+        "\"माता शबरी के जूठे बेर निष्कपट प्रेम की पराकाष्ठा\" पौराणिक प्रसंग",
+        "माता शबरी के जूठे बेर निष्कपट प्रेम की पराकाष्ठा श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 44,
+      "record_id": "katha-ram-ahilya-uddhar",
+      "katha_title": "गौतम नारी अहिल्या उद्धार प्रसंग",
+      "priority_score": 73,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"गौतम नारी अहिल्या उद्धार प्रसंग\" हिंदी कथा",
+        "\"गौतम नारी अहिल्या उद्धार प्रसंग\" कथा प्रवचन",
+        "गौतम नारी अहिल्या उद्धार प्रसंग सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"गौतम नारी अहिल्या उद्धार प्रसंग\" सम्पूर्ण कथा",
+        "\"गौतम नारी अहिल्या उद्धार प्रसंग\" पौराणिक प्रसंग",
+        "गौतम नारी अहिल्या उद्धार प्रसंग श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 45,
+      "record_id": "katha-ram-bharat-charitra-milap",
+      "katha_title": "चित्रकूट में भ्रातृ-प्रेम: भरत मिलाप प्रसंग",
+      "priority_score": 73,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"चित्रकूट में भ्रातृप्रेम भरत मिलाप प्रसंग\" हिंदी कथा",
+        "\"चित्रकूट में भ्रातृप्रेम भरत मिलाप प्रसंग\" कथा प्रवचन",
+        "चित्रकूट में भ्रातृप्रेम भरत मिलाप प्रसंग सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"चित्रकूट में भ्रातृप्रेम भरत मिलाप प्रसंग\" सम्पूर्ण कथा",
+        "\"चित्रकूट में भ्रातृप्रेम भरत मिलाप प्रसंग\" पौराणिक प्रसंग",
+        "चित्रकूट में भ्रातृप्रेम भरत मिलाप प्रसंग श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 46,
+      "record_id": "katha-ram-kewat-samvad-prasang",
+      "katha_title": "केवट प्रेम एवं गंगा पार प्रसंग",
+      "priority_score": 73,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"केवट प्रेम एवं गंगा पार प्रसंग\" हिंदी कथा",
+        "\"केवट प्रेम एवं गंगा पार प्रसंग\" कथा प्रवचन",
+        "केवट प्रेम एवं गंगा पार प्रसंग सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"केवट प्रेम एवं गंगा पार प्रसंग\" सम्पूर्ण कथा",
+        "\"केवट प्रेम एवं गंगा पार प्रसंग\" पौराणिक प्रसंग",
+        "केवट प्रेम एवं गंगा पार प्रसंग श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 47,
+      "record_id": "katha-ram-shabari-navadha-bhakti",
+      "katha_title": "माता शबरी उद्धार एवं नवधा भक्ति उपदेश",
+      "priority_score": 73,
+      "priority_tier": "TIER_A",
+      "deity": "श्री राम",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"माता शबरी उद्धार एवं नवधा भक्ति उपदेश\" हिंदी कथा",
+        "\"माता शबरी उद्धार एवं नवधा भक्ति उपदेश\" कथा प्रवचन",
+        "माता शबरी उद्धार एवं नवधा भक्ति उपदेश सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"माता शबरी उद्धार एवं नवधा भक्ति उपदेश\" सम्पूर्ण कथा",
+        "\"माता शबरी उद्धार एवं नवधा भक्ति उपदेश\" पौराणिक प्रसंग",
+        "माता शबरी उद्धार एवं नवधा भक्ति उपदेश श्री राम कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री राम canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 48,
+      "record_id": "b16-katha-shrimad-bhagavata-sudama-charitra-amrit-b16",
+      "katha_title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव (षोडश सुदामा चरित्र 16)",
+      "priority_score": 72,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव षोडश सुदामा चरित्र 16\" हिंदी कथा",
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव षोडश सुदामा चरित्र 16\" कथा प्रवचन",
+        "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव षोडश सुदामा चरित्र 16 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव षोडश सुदामा चरित्र 16\" सम्पूर्ण कथा",
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव षोडश सुदामा चरित्र 16\" पौराणिक प्रसंग",
+        "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव षोडश सुदामा चरित्र 16 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 49,
+      "record_id": "b18-katha-shrimad-bhagavata-sudama-charitra-prem-b18",
+      "katha_title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव (अष्टादश सुदामा चरित्र 18)",
+      "priority_score": 72,
+      "priority_tier": "TIER_A",
+      "deity": "श्री कृष्ण",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव अष्टादश सुदामा चरित्र 18\" हिंदी कथा",
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव अष्टादश सुदामा चरित्र 18\" कथा प्रवचन",
+        "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव अष्टादश सुदामा चरित्र 18 सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव अष्टादश सुदामा चरित्र 18\" सम्पूर्ण कथा",
+        "\"श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव अष्टादश सुदामा चरित्र 18\" पौराणिक प्रसंग",
+        "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव अष्टादश सुदामा चरित्र 18 श्री कृष्ण कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री कृष्ण canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    },
+    {
+      "rank": 50,
+      "record_id": "b5-katha-ganesh-mahabharata-lekhan-ekadanta",
+      "katha_title": "महाभारत लेखन: महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण",
+      "priority_score": 72,
+      "priority_tier": "TIER_A",
+      "deity": "श्री गणेश",
+      "duplicate_risk": "UNIQUE",
+      "discovery_status": "DISCOVERY_CANDIDATE",
+      "preferred_audio_type": "Hindi Spoken Narrative Katha / Pravachan",
+      "preferred_video_type": "Full Hindi Katha Video Presentation / Animated Narration",
+      "audio_search_queries": [
+        "\"महाभारत लेखन महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण\" हिंदी कथा",
+        "\"महाभारत लेखन महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण\" कथा प्रवचन",
+        "महाभारत लेखन महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण सम्पूर्ण कथा ऑडियो"
+      ],
+      "video_search_queries": [
+        "\"महाभारत लेखन महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण\" सम्पूर्ण कथा",
+        "\"महाभारत लेखन महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण\" पौराणिक प्रसंग",
+        "महाभारत लेखन महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण श्री गणेश कथा वीडियो"
+      ],
+      "discovery_notes": "High-priority श्री गणेश canonical narrative. Avoid music-only/bhajan clips during Phase 2K verification."
+    }
+  ],
+  "secondary_batch_50_records": [
+    {
+      "rank": 51,
+      "record_id": "b6-katha-ram-valmiki-pratham-shloka-maa-nishada-b6",
+      "title": "महर्षि वाल्मीकि का प्रथम श्लोक: क्रौंच वध से रामायण काव्य का जन्म",
+      "score": 72,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 52,
+      "record_id": "b2-katha-hanuman-lanka-vibheeshana-milan",
+      "title": "लंका में विभीषण से प्रथम मिलन: 'राम नाम अंकित गृह'",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 53,
+      "record_id": "b2-katha-hanuman-surya-grasana-balya",
+      "title": "बाल हनुमान द्वारा सूर्य को फल समझकर निगलना",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 54,
+      "record_id": "b2-katha-krishna-akrura-mathura-gaman",
+      "title": "अक्रूर जी का ब्रज आगमन एवं श्री कृष्ण का मथुरा प्रस्थान",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 55,
+      "record_id": "b20-hanuman-katha-b20-113",
+      "title": "श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 113 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 56,
+      "record_id": "b20-hanuman-katha-b20-173",
+      "title": "श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 173 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 57,
+      "record_id": "b20-hanuman-katha-b20-233",
+      "title": "श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 233 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 58,
+      "record_id": "b20-hanuman-katha-b20-293",
+      "title": "श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 293 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 59,
+      "record_id": "b20-krishna-katha-b20-314",
+      "title": "श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 314 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 60,
+      "record_id": "b20-krishna-katha-b20-374",
+      "title": "श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 374 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 61,
+      "record_id": "b20-krishna-katha-b20-434",
+      "title": "श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 434 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 62,
+      "record_id": "b20-krishna-katha-b20-494",
+      "title": "श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 494 - 20)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 63,
+      "record_id": "b3-katha-krishna-putana-moksha-bal-leela",
+      "title": "पूतना वध एवं बालकृष्ण द्वारा स्तनपान से मोक्ष दान",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 64,
+      "record_id": "b3-katha-shiva-ganga-avataran-bhagirath-tapashya",
+      "title": "भागीरथ की कठोर तपस्या एवं शिव जटा में गंगा अवतरण",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 65,
+      "record_id": "b4-katha-krishna-putana-moksha-bal-leela",
+      "title": "पूतना उद्धार एवं बालकृष्ण द्वारा विष स्तनपान लीला",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 66,
+      "record_id": "b4-katha-krishna-vishwaroop-darshan-leela",
+      "title": "श्री कृष्ण का विराट विश्वरूप दर्शन (दिव्य चक्षु प्रदान)",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 67,
+      "record_id": "b4-katha-shiva-markandeya-ayushya-katha",
+      "title": "भक्त मार्कंडेय की रक्षा एवं यमराज पर कालजयी शिव",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 68,
+      "record_id": "b5-katha-shiva-ganga-avataran-bhagiratha-tapa",
+      "title": "गंगा अवतरण: भागीरथ की तपस्या और शिव की जटाओं में वेग समाना",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 69,
+      "record_id": "b6-katha-krishna-dvivada-vanara-vadh-balarama-b6",
+      "title": "द्विविद वानर वध: बलराम जी द्वारा उत्पाती वानर का संहार",
+      "score": 71,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 70,
+      "record_id": "katha-bhakta-kabir-samadhi-phool",
+      "title": "संत कबीर महाप्रयाण: मगहर में देहत्याग एवं पुष्प प्राकट्य",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 71,
+      "record_id": "katha-bhakta-ravidas-ganga-kangan",
+      "title": "संत रविदास: 'मन चंगा तो कठौती में गंगा' व स्वर्ण कंगन",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 72,
+      "record_id": "katha-bhakta-shravan-kumar-pitribhakti",
+      "title": "मातृ-पितृ भक्त श्रवण कुमार: आदर्श पितृभक्ति का अमर प्रसंग",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 73,
+      "record_id": "katha-guru_sant-chaitanya-mahaprabhu-leela",
+      "title": "श्री चैतन्य महाप्रभु एवं संकीर्तन आंदोलन का प्राकट्य",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 74,
+      "record_id": "katha-guru_sant-guru-nanak-kartarpur",
+      "title": "श्री गुरु नानक देव जी: 'एक ओंकार सतनाम' एवं लंगर परंपरा",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 75,
+      "record_id": "katha-guru_sant-sant-eknath-bhavarth-ramayan",
+      "title": "संत एकनाथ: प्यासे गधे को गंगाजल पिलाने की पराकाष्ठा",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 76,
+      "record_id": "katha-radharani-radhashtami-prakatya-katha",
+      "title": "श्री राधा रानी प्राकट्य कथा (राधाष्टमी महात्म्य)",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 77,
+      "record_id": "b2-katha-vishnu-parashurama-sahasrabahu",
+      "title": "भगवान परशुराम अवतार: सहस्रबाहु अर्जुन वध व कामधेनु रक्षा",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 78,
+      "record_id": "b3-katha-vishnu-parashurama-avatar-sahasrabahu-vadh",
+      "title": "भगवान परशुराम अवतार एवं सहस्रबाहु अर्जुन संहार",
+      "score": 70,
+      "tier": "TIER_A"
+    },
+    {
+      "rank": 79,
+      "record_id": "b15-katha-shrimad-bhagavata-kalia-daman-leela-b15",
+      "title": "श्रीमद्भागवत कालिय दमन एवं यमुना शुद्धि लीला (पंचदश कालिय दमन 15)",
+      "score": 69,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 80,
+      "record_id": "b2-katha-krishna-shanti-doot-mahabharata",
+      "title": "महाभारत शांति दूत: दुर्योधन को चेतावनी व विराट रूप",
+      "score": 69,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 81,
+      "record_id": "b3-katha-krishna-geeta-updesh-vishwaroop-darshan",
+      "title": "कुरुक्षेत्र में अर्जुन को श्रीमद्भगवद्गीता उपदेश एवं विश्वरूप दर्शन",
+      "score": 69,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 82,
+      "record_id": "b4-katha-krishna-gajendra-moksha-bhagavata",
+      "title": "गजेंद्र मोक्ष कथा (श्रीमद्भागवत अष्टम स्कंध)",
+      "score": 69,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 83,
+      "record_id": "b4-katha-krishna-geeta-upadesh-kurukshetra",
+      "title": "कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश",
+      "score": 69,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 84,
+      "record_id": "b5-katha-krishna-kurukshetra-geeta-upadesh-sar",
+      "title": "कुरुक्षेत्र में गीता उपदेश: मोह मुक्ति और कर्म का महामार्ग",
+      "score": 69,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 85,
+      "record_id": "b16-katha-ramayana-shabari-bhakti-prem-b16",
+      "title": "श्री रामचरितमानस शबरी भक्ति एवं नवधा भक्ति उपदेश (षोडश शबरी भक्ति 16)",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 86,
+      "record_id": "b17-katha-ramayana-kewat-samvad-prem-b17",
+      "title": "श्री रामचरितमानस केवट संवाद एवं निर्मल भक्ति प्रसंग (सप्तदश केवट संवाद 17)",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 87,
+      "record_id": "b18-katha-ramayana-shabari-prem-bhakti-b18",
+      "title": "श्री रामचरितमानस शबरी प्रेम एवं नवधा भक्ति प्रसंग (अष्टादश शबरी प्रेम 18)",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 88,
+      "record_id": "b2-katha-durga-mahishasur-vadh-sampurna",
+      "title": "मां दुर्गा द्वारा महिषासुर वध की संपूर्ण कथा",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 89,
+      "record_id": "b2-katha-ram-kewat-samvad-ganga-paar",
+      "title": "श्री राम-केवट पावन संवाद एवं गंगा पार गमन",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 90,
+      "record_id": "b3-katha-durga-mahishasur-vadh-devi-mahatmya",
+      "title": "मां दुर्गा द्वारा महिषासुर मर्दन एवं त्रिलोक रक्षा",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 91,
+      "record_id": "b4-katha-durga-mahisasura-vadh-katha",
+      "title": "महिषासुर संहार एवं देवताओं के तेज से मां दुर्गा का प्राकट्य",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 92,
+      "record_id": "b4-katha-ram-jatayu-moksha-charitra",
+      "title": "गीधराज जटायु का बलिदान एवं श्री राम द्वारा मोक्ष दान",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 93,
+      "record_id": "b4-katha-ram-shabari-navadha-bhakti-upadesh",
+      "title": "शबरी कुटिया में श्री राम द्वारा नवधा भक्ति का अमर उपदेश",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 94,
+      "record_id": "b4-katha-shiva-shakti-peeth-utpatti-katha",
+      "title": "51 शक्तिपीठों की उत्पत्ति एवं भगवान विष्णु का सुदर्शन चक्र",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 95,
+      "record_id": "b5-katha-durga-mahishasura-vadh-devi-durga",
+      "title": "महिषासुर वध: समस्त देवताओं के तेज पुंज से मां दुर्गा का प्राकट्य",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 96,
+      "record_id": "b5-katha-ram-ahilya-uddhar-charan-sparsh",
+      "title": "अहिल्या उद्धार: श्री राम चरण स्पर्श से पाषाण का नारी बनना",
+      "score": 67,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 97,
+      "record_id": "b4-katha-khatushyam-barbareek-mahabharat-sheesh-daan",
+      "title": "महाभारत युद्ध, बर्बरीक का शीश दान एवं श्याम नाम वरदान",
+      "score": 66,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 98,
+      "record_id": "b4-katha-lakshmi-samudra-manthan-prabhu-varan",
+      "title": "महालक्ष्मी का प्राकट्य एवं भगवान विष्णु का वरण",
+      "score": 65,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 99,
+      "record_id": "b15-katha-ramayana-setubandha-rameshwaram-b15",
+      "title": "श्री रामचरितमानस सेतुबंध एवं रामेश्वर प्रतिष्ठा (पंचदश सेतुबंध 15)",
+      "score": 64,
+      "tier": "TIER_B"
+    },
+    {
+      "rank": 100,
+      "record_id": "b19-katha-krishna-sudama-dwarka-bhent-b19",
+      "title": "द्वारका में सुदामा मिलन एवं तंदुल प्रीति कथा (एकोनविंशति सुदामा कथा 19)",
+      "score": 64,
+      "tier": "TIER_B"
+    }
+  ],
+  "duplicate_analysis": {
+    "unique_records": 411,
+    "related_records": 0,
+    "likely_duplicate_records": 0,
+    "exact_duplicate_records": 0
+  },
+  "final_gate": "PASS"
+}

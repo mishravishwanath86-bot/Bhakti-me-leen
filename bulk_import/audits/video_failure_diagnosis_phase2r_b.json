@@ -1,0 +1,231 @@
+{
+  "phase": "2R-B",
+  "mode": "STRICT_READ_ONLY_VIDEO_FAILURE_DIAGNOSIS",
+  "database_modified": false,
+  "database_writes": 0,
+  "target_failed_video": 12,
+  "diagnosed_records": [
+    {
+      "index": 1,
+      "record_id": "bhajan-krishna-achyutam-keshavam",
+      "katha_id": "bhajan-krishna-achyutam-keshavam",
+      "title": "अच्युतम केशवम कृष्ण दामोदरम",
+      "media_type": "YouTube Video",
+      "youtube_id": "example1",
+      "youtube_url": "https://www.youtube.com/watch?v=example1",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 400,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "HTTP_400_UNAVAILABLE",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 2,
+      "record_id": "chalisa-hanuman-shri-hanuman-chalisa",
+      "katha_id": "chalisa-hanuman-shri-hanuman-chalisa",
+      "title": "श्री हनुमान चालीसा (दिव्य पाठ)",
+      "media_type": "YouTube Video",
+      "youtube_id": "example2",
+      "youtube_url": "https://www.youtube.com/watch?v=example2",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 400,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "HTTP_400_UNAVAILABLE",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 3,
+      "record_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "katha_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "title": "केवट संवाद कथा: प्रभु श्री राम के चरण पखारना और उतराई में भक्ति दान (10)",
+      "media_type": "YouTube Video",
+      "youtube_id": "9L2M4v7K3Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=9L2M4v7K3Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 4,
+      "record_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "katha_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "title": "गोवर्धन लीला: कनिष्ठिका उंगली पर गिरिराज उठाना और इंद्र का मानमर्दन (10)",
+      "media_type": "YouTube Video",
+      "youtube_id": "3K9L7v2M4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=3K9L7v2M4Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 5,
+      "record_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "katha_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "title": "श्री रामचरितमानस केवट प्रेम एवं नौका प्रसंग कथा (केवट संवाद 11)",
+      "media_type": "YouTube Video",
+      "youtube_id": "7N2L4v9K8Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=7N2L4v9K8Ms",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 6,
+      "record_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "katha_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य मित्रता कथा (सुदामा मिलन 11)",
+      "media_type": "YouTube Video",
+      "youtube_id": "7N4L2v9M3Ks",
+      "youtube_url": "https://www.youtube.com/watch?v=7N4L2v9M3Ks",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 7,
+      "record_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "katha_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "title": "श्री रामचरितमानस शबरी नवधा भक्ति प्रसंग (शबरी भक्ति 12)",
+      "media_type": "YouTube Video",
+      "youtube_id": "5L9M2k7V4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=5L9M2k7V4Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 8,
+      "record_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "katha_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (गोवर्धन कथा 12)",
+      "media_type": "YouTube Video",
+      "youtube_id": "9M3L7v2K4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=9M3L7v2K4Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 9,
+      "record_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "katha_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "title": "श्री रामचरितमानस केवट संवाद एवं चरणामृत प्रसंग (केवट प्रसंग 13)",
+      "media_type": "YouTube Video",
+      "youtube_id": "8N4L2v7K1Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=8N4L2v7K1Ms",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 10,
+      "record_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "katha_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "title": "श्रीमद्भागवत सुदामा चरित्र अनन्य सखा भाव (सुदामा चरित्र 13)",
+      "media_type": "YouTube Video",
+      "youtube_id": "4M2L8v9K7Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=4M2L8v9K7Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 11,
+      "record_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "katha_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "title": "श्री रामचरितमानस भरत मिलाप एवं पादुका प्रसंग (चतुर्दश भरत मिलाप 14)",
+      "media_type": "YouTube Video",
+      "youtube_id": "4L2M9v7K1Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=4L2M9v7K1Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    },
+    {
+      "index": 12,
+      "record_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "katha_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (चतुर्दश गोवर्धन 14)",
+      "media_type": "YouTube Video",
+      "youtube_id": "6M9L2v4K8Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=6M9L2v4K8Ns",
+      "source_phase": "Pre-2N",
+      "is_newly_applied": false,
+      "http_code": 404,
+      "diagnosis_status": "CONFIRMED_FAILURE",
+      "failure_reason": "VIDEO_DELETED_OR_NOT_FOUND",
+      "recommendation": "SOURCE_REPLACEMENT_MAY_BE_NEEDED"
+    }
+  ],
+  "classification_summary": {
+    "HTTP_400_UNAVAILABLE": 2,
+    "VIDEO_DELETED_OR_NOT_FOUND": 10
+  },
+  "source_phase_summary": {
+    "2N": 0,
+    "2O": 0,
+    "2P": 0,
+    "2Q": 0,
+    "Pre-2N": 12
+  },
+  "newly_applied_failures": {
+    "count": 0,
+    "phases_2n_to_2q": "0 newly applied failures"
+  },
+  "metrics": {
+    "confirmed_failures": 12,
+    "recovered": 0,
+    "user_play_required": 0,
+    "player_side_issues": 0,
+    "network_issues": 0,
+    "source_side_issues": 12,
+    "unknown": 0
+  },
+  "duplicates": {
+    "duplicate_youtube_ids": 0,
+    "duplicate_youtube_urls": 0
+  },
+  "consistency": {
+    "cross_field_conflicts": 0,
+    "url_id_mismatches": 0,
+    "malformed_urls": 0
+  },
+  "integrity": {
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "final_gate": {
+    "verdict": "PASS",
+    "database_modified": false,
+    "database_writes": 0
+  }
+}

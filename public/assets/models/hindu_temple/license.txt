@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hindu temple
+* source:	https://sketchfab.com/3d-models/hindu-temple-1b1d870fe82047578ebb5e0267974414
+* author:	Amagi_Arts (https://sketchfab.com/natsuboy304)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hindu temple" (https://sketchfab.com/3d-models/hindu-temple-1b1d870fe82047578ebb5e0267974414) by Amagi_Arts (https://sketchfab.com/natsuboy304) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

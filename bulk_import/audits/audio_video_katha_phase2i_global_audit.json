@@ -1,0 +1,984 @@
+{
+  "phase": "Phase 2I - Global Post-Apply Database Audit",
+  "mode": "STRICT READ-ONLY",
+  "database": "db/bhakti.db",
+  "timestamp": "2026-08-31T08:57:10.182745",
+  "integrity": {
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "schema": {
+    "tables_count": 10,
+    "views_count": 0,
+    "indexes_count": 13,
+    "triggers_count": 3,
+    "schema_verified": true
+  },
+  "global_counts": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio": 151,
+    "local_mp3": 38,
+    "youtube_audio": 113,
+    "video_urls": 29,
+    "records_with_audio": 1151,
+    "records_with_video": 29,
+    "records_with_both": 25,
+    "records_with_neither": 8855
+  },
+  "phase2h_regression_check": {
+    "expected_playable_audio": 151,
+    "actual_playable_audio": 151,
+    "expected_video_urls": 29,
+    "actual_video_urls": 29,
+    "regression_detected": false
+  },
+  "mapping_verification": {
+    "total_phase2h_mappings": 33,
+    "verified_pass": 33,
+    "all_pass": true,
+    "details": [
+      {
+        "record_id": "katha-dashavatara-matsya",
+        "title": "मत्स्य अवतार: प्रलय से वेदों व सप्तऋषियों की रक्षा",
+        "media_type": "Audio",
+        "youtube_id": "jG4WPko_laM",
+        "expected_url": "https://www.youtube.com/watch?v=jG4WPko_laM",
+        "actual_url": "https://www.youtube.com/watch?v=jG4WPko_laM",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-matsya",
+        "title": "मत्स्य अवतार: प्रलय से वेदों व सप्तऋषियों की रक्षा",
+        "media_type": "Video",
+        "youtube_id": "r633N12mJxQ",
+        "expected_url": "https://www.youtube.com/watch?v=r633N12mJxQ",
+        "actual_url": "https://www.youtube.com/watch?v=r633N12mJxQ",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-kurma",
+        "title": "कूर्म (कच्छप) अवतार एवं समुद्र मंथन",
+        "media_type": "Audio",
+        "youtube_id": "dJ2mzB3ADhI",
+        "expected_url": "https://www.youtube.com/watch?v=dJ2mzB3ADhI",
+        "actual_url": "https://www.youtube.com/watch?v=dJ2mzB3ADhI",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-kurma",
+        "title": "कूर्म (कच्छप) अवतार एवं समुद्र मंथन",
+        "media_type": "Video",
+        "youtube_id": "hTVdwjK1YQw",
+        "expected_url": "https://www.youtube.com/watch?v=hTVdwjK1YQw",
+        "actual_url": "https://www.youtube.com/watch?v=hTVdwjK1YQw",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-varaha",
+        "title": "वराह अवतार: हिरण्याक्ष वध एवं पृथ्वी उद्धार",
+        "media_type": "Video",
+        "youtube_id": "4LlkJsm66sA",
+        "expected_url": "https://www.youtube.com/watch?v=4LlkJsm66sA",
+        "actual_url": "https://www.youtube.com/watch?v=4LlkJsm66sA",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-narasimha",
+        "title": "नृसिंह अवतार: हिरण्यकश्यप वध एवं प्रह्लाद रक्षा",
+        "media_type": "Audio",
+        "youtube_id": "P1dBpgjEnz4",
+        "expected_url": "https://www.youtube.com/watch?v=P1dBpgjEnz4",
+        "actual_url": "https://www.youtube.com/watch?v=P1dBpgjEnz4",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-narasimha",
+        "title": "नृसिंह अवतार: हिरण्यकश्यप वध एवं प्रह्लाद रक्षा",
+        "media_type": "Video",
+        "youtube_id": "GE_okUlJ2AA",
+        "expected_url": "https://www.youtube.com/watch?v=GE_okUlJ2AA",
+        "actual_url": "https://www.youtube.com/watch?v=GE_okUlJ2AA",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-vamana",
+        "title": "वामन अवतार: राजा बलि का उद्धार एवं तीन पग भूमि",
+        "media_type": "Video",
+        "youtube_id": "rdq9nocejP4",
+        "expected_url": "https://www.youtube.com/watch?v=rdq9nocejP4",
+        "actual_url": "https://www.youtube.com/watch?v=rdq9nocejP4",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-parashurama",
+        "title": "भगवान परशुराम अवतार: 21 बार आततायी क्षत्रियों का दमन",
+        "media_type": "Audio",
+        "youtube_id": "tYI80vkSBzo",
+        "expected_url": "https://www.youtube.com/watch?v=tYI80vkSBzo",
+        "actual_url": "https://www.youtube.com/watch?v=tYI80vkSBzo",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-rama",
+        "title": "मर्यादा पुरुषोत्तम श्री राम अवतार: रावण संहार व धर्म स्थापना",
+        "media_type": "Video",
+        "youtube_id": "5Pqtq7i1ICE",
+        "expected_url": "https://www.youtube.com/watch?v=5Pqtq7i1ICE",
+        "actual_url": "https://www.youtube.com/watch?v=5Pqtq7i1ICE",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-krishna",
+        "title": "लीला पुरुषोत्तम भगवान श्री कृष्ण अवतार: गीता ज्ञान",
+        "media_type": "Audio",
+        "youtube_id": "FeZs62yREuk",
+        "expected_url": "https://www.youtube.com/watch?v=FeZs62yREuk",
+        "actual_url": "https://www.youtube.com/watch?v=FeZs62yREuk",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-buddha",
+        "title": "भगवान बुद्ध अवतार: अहिंसा, करुणा व दया का संदेश",
+        "media_type": "Video",
+        "youtube_id": "aRtNO04vmLM",
+        "expected_url": "https://www.youtube.com/watch?v=aRtNO04vmLM",
+        "actual_url": "https://www.youtube.com/watch?v=aRtNO04vmLM",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-kalki",
+        "title": "कल्कि अवतार: कलयुग के अंत में अधर्म का नाश",
+        "media_type": "Audio",
+        "youtube_id": "n6oU7-PcwRQ",
+        "expected_url": "https://www.youtube.com/watch?v=n6oU7-PcwRQ",
+        "actual_url": "https://www.youtube.com/watch?v=n6oU7-PcwRQ",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-dashavatara-kalki",
+        "title": "कल्कि अवतार: कलयुग के अंत में अधर्म का नाश",
+        "media_type": "Video",
+        "youtube_id": "18HbayqQ84A",
+        "expected_url": "https://www.youtube.com/watch?v=18HbayqQ84A",
+        "actual_url": "https://www.youtube.com/watch?v=18HbayqQ84A",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-hanuman-sanjeevani-booti-prasang",
+        "title": "द्रोणागिरि पर्वत एवं संजीवनी बूटी प्रसंग",
+        "media_type": "Audio",
+        "youtube_id": "RAGL8Yi0fgg",
+        "expected_url": "https://www.youtube.com/watch?v=RAGL8Yi0fgg",
+        "actual_url": "https://www.youtube.com/watch?v=RAGL8Yi0fgg",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-hanuman-sanjeevani-booti-prasang",
+        "title": "द्रोणागिरि पर्वत एवं संजीवनी बूटी प्रसंग",
+        "media_type": "Video",
+        "youtube_id": "j1LPAzOI4UU",
+        "expected_url": "https://www.youtube.com/watch?v=j1LPAzOI4UU",
+        "actual_url": "https://www.youtube.com/watch?v=j1LPAzOI4UU",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-khatushyam-barbareek-sheesh-daan",
+        "title": "महाबली बर्बरीक का शीश दान एवं श्याम रूप प्राप्ति कथा",
+        "media_type": "Audio",
+        "youtube_id": "uRRoe12Wf04",
+        "expected_url": "https://www.youtube.com/watch?v=uRRoe12Wf04",
+        "actual_url": "https://www.youtube.com/watch?v=uRRoe12Wf04",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-khatushyam-barbareek-sheesh-daan",
+        "title": "महाबली बर्बरीक का शीश दान एवं श्याम रूप प्राप्ति कथा",
+        "media_type": "Video",
+        "youtube_id": "POXXHjbMB10",
+        "expected_url": "https://www.youtube.com/watch?v=POXXHjbMB10",
+        "actual_url": "https://www.youtube.com/watch?v=POXXHjbMB10",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-krishna-govardhan-dharan-leela",
+        "title": "इंद्र दर्प दलन एवं श्री गोवर्धन धारण लीला",
+        "media_type": "Audio",
+        "youtube_id": "ZXhNB0jriT0",
+        "expected_url": "https://www.youtube.com/watch?v=ZXhNB0jriT0",
+        "actual_url": "https://www.youtube.com/watch?v=ZXhNB0jriT0",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-krishna-govardhan-dharan-leela",
+        "title": "इंद्र दर्प दलन एवं श्री गोवर्धन धारण लीला",
+        "media_type": "Video",
+        "youtube_id": "jW86VFuSWsA",
+        "expected_url": "https://www.youtube.com/watch?v=jW86VFuSWsA",
+        "actual_url": "https://www.youtube.com/watch?v=jW86VFuSWsA",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-krishna-sudama-charitra",
+        "title": "सच्चे मित्र का सम्मान: सुदामा चरित्र प्रसंग",
+        "media_type": "Audio",
+        "youtube_id": "rYnXsVOfG_A",
+        "expected_url": "https://www.youtube.com/watch?v=rYnXsVOfG_A",
+        "actual_url": "https://www.youtube.com/watch?v=rYnXsVOfG_A",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-krishna-sudama-charitra",
+        "title": "सच्चे मित्र का सम्मान: सुदामा चरित्र प्रसंग",
+        "media_type": "Video",
+        "youtube_id": "wt2oI054Egg",
+        "expected_url": "https://www.youtube.com/watch?v=wt2oI054Egg",
+        "actual_url": "https://www.youtube.com/watch?v=wt2oI054Egg",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-bhagirath-gangavataran",
+        "title": "महाराज भगीरथ की घोर तपस्या एवं गंगावतरण कथा",
+        "media_type": "Audio",
+        "youtube_id": "t0BlmTjIcdQ",
+        "expected_url": "https://www.youtube.com/watch?v=t0BlmTjIcdQ",
+        "actual_url": "https://www.youtube.com/watch?v=t0BlmTjIcdQ",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-bhagirath-gangavataran",
+        "title": "महाराज भगीरथ की घोर तपस्या एवं गंगावतरण कथा",
+        "media_type": "Video",
+        "youtube_id": "Je5w8zn4BE8",
+        "expected_url": "https://www.youtube.com/watch?v=Je5w8zn4BE8",
+        "actual_url": "https://www.youtube.com/watch?v=Je5w8zn4BE8",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-gajendra-moksha",
+        "title": "श्रीमद्भागवत गजेंद्र मोक्ष कथा (आर्त पुकार पर श्री हरि आगमन)",
+        "media_type": "Audio",
+        "youtube_id": "9Y8iRf7w76U",
+        "expected_url": "https://www.youtube.com/watch?v=9Y8iRf7w76U",
+        "actual_url": "https://www.youtube.com/watch?v=9Y8iRf7w76U",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-markandeya-shiva-kripa",
+        "title": "महर्षि मार्कण्डेय शिव कृपा: यमराज पर महामृत्युंजय की विजय",
+        "media_type": "Audio",
+        "youtube_id": "Fp4NyEXQN0U",
+        "expected_url": "https://www.youtube.com/watch?v=Fp4NyEXQN0U",
+        "actual_url": "https://www.youtube.com/watch?v=Fp4NyEXQN0U",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-markandeya-shiva-kripa",
+        "title": "महर्षि मार्कण्डेय शिव कृपा: यमराज पर महामृत्युंजय की विजय",
+        "media_type": "Video",
+        "youtube_id": "98VX9VbXzhk",
+        "expected_url": "https://www.youtube.com/watch?v=98VX9VbXzhk",
+        "actual_url": "https://www.youtube.com/watch?v=98VX9VbXzhk",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-samudra-manthan-14-ratna",
+        "title": "समुद्र मंथन से निकले 14 दिव्य रत्नों का आध्यात्मिक रहस्य",
+        "media_type": "Audio",
+        "youtube_id": "iqjT3lulmbo",
+        "expected_url": "https://www.youtube.com/watch?v=iqjT3lulmbo",
+        "actual_url": "https://www.youtube.com/watch?v=iqjT3lulmbo",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-pauranik-samudra-manthan-14-ratna",
+        "title": "समुद्र मंथन से निकले 14 दिव्य रत्नों का आध्यात्मिक रहस्य",
+        "media_type": "Video",
+        "youtube_id": "vm3jN4FtzdM",
+        "expected_url": "https://www.youtube.com/watch?v=vm3jN4FtzdM",
+        "actual_url": "https://www.youtube.com/watch?v=vm3jN4FtzdM",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-purana-garuda",
+        "title": "गरुड़ पुराण सार: मृत्यु उपरांत जीव की गति व मोक्ष",
+        "media_type": "Audio",
+        "youtube_id": "OLj0s8Amxmw",
+        "expected_url": "https://www.youtube.com/watch?v=OLj0s8Amxmw",
+        "actual_url": "https://www.youtube.com/watch?v=OLj0s8Amxmw",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-purana-garuda",
+        "title": "गरुड़ पुराण सार: मृत्यु उपरांत जीव की गति व मोक्ष",
+        "media_type": "Video",
+        "youtube_id": "nXSQzScMf_s",
+        "expected_url": "https://www.youtube.com/watch?v=nXSQzScMf_s",
+        "actual_url": "https://www.youtube.com/watch?v=nXSQzScMf_s",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-purana-shiva",
+        "title": "शिव पुराण सार: सदाशिव स्वरूप व 12 ज्योतिर्लिंग",
+        "media_type": "Audio",
+        "youtube_id": "M9innkB3CdQ",
+        "expected_url": "https://www.youtube.com/watch?v=M9innkB3CdQ",
+        "actual_url": "https://www.youtube.com/watch?v=M9innkB3CdQ",
+        "status": "PASS"
+      },
+      {
+        "record_id": "katha-purana-shiva",
+        "title": "शिव पुराण सार: सदाशिव स्वरूप व 12 ज्योतिर्लिंग",
+        "media_type": "Video",
+        "youtube_id": "CkEOQe1igag",
+        "expected_url": "https://www.youtube.com/watch?v=CkEOQe1igag",
+        "actual_url": "https://www.youtube.com/watch?v=CkEOQe1igag",
+        "status": "PASS"
+      }
+    ]
+  },
+  "excluded_candidates_verification": {
+    "excluded_review_total": 5,
+    "excluded_review_preserved_null": 5,
+    "excluded_reject_total": 2,
+    "excluded_reject_preserved_null": 2
+  },
+  "duplicate_audit": {
+    "duplicate_youtube_audio_ids": 0,
+    "duplicate_youtube_video_ids": 0,
+    "total_duplicate_youtube_ids": 0
+  },
+  "cross_field_collision_audit": {
+    "cross_field_collisions_count": 0
+  },
+  "media_quality_audit": {
+    "legacy_sample_seed_urls": [
+      {
+        "id": "bhajan-krishna-achyutam-keshavam",
+        "field": "video_url",
+        "url": "https://www.youtube.com/watch?v=example1"
+      },
+      {
+        "id": "chalisa-hanuman-shri-hanuman-chalisa",
+        "field": "video_url",
+        "url": "https://www.youtube.com/watch?v=example2"
+      }
+    ],
+    "canonical_format_audio": 113,
+    "canonical_format_video": 29
+  },
+  "content_semantic_quality": {
+    "audit_total": 33,
+    "all_pass": true,
+    "details": [
+      {
+        "index": 1,
+        "record_id": "katha-dashavatara-matsya",
+        "title": "मत्स्य अवतार: प्रलय से वेदों व सप्तऋषियों की रक्षा",
+        "media_type": "Audio",
+        "youtube_id": "jG4WPko_laM",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 2,
+        "record_id": "katha-dashavatara-matsya",
+        "title": "मत्स्य अवतार: प्रलय से वेदों व सप्तऋषियों की रक्षा",
+        "media_type": "Video",
+        "youtube_id": "r633N12mJxQ",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 3,
+        "record_id": "katha-dashavatara-kurma",
+        "title": "कूर्म (कच्छप) अवतार एवं समुद्र मंथन",
+        "media_type": "Audio",
+        "youtube_id": "dJ2mzB3ADhI",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 4,
+        "record_id": "katha-dashavatara-kurma",
+        "title": "कूर्म (कच्छप) अवतार एवं समुद्र मंथन",
+        "media_type": "Video",
+        "youtube_id": "hTVdwjK1YQw",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 5,
+        "record_id": "katha-dashavatara-varaha",
+        "title": "वराह अवतार: हिरण्याक्ष वध एवं पृथ्वी उद्धार",
+        "media_type": "Video",
+        "youtube_id": "4LlkJsm66sA",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 6,
+        "record_id": "katha-dashavatara-narasimha",
+        "title": "नृसिंह अवतार: हिरण्यकश्यप वध एवं प्रह्लाद रक्षा",
+        "media_type": "Audio",
+        "youtube_id": "P1dBpgjEnz4",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 7,
+        "record_id": "katha-dashavatara-narasimha",
+        "title": "नृसिंह अवतार: हिरण्यकश्यप वध एवं प्रह्लाद रक्षा",
+        "media_type": "Video",
+        "youtube_id": "GE_okUlJ2AA",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 8,
+        "record_id": "katha-dashavatara-vamana",
+        "title": "वामन अवतार: राजा बलि का उद्धार एवं तीन पग भूमि",
+        "media_type": "Video",
+        "youtube_id": "rdq9nocejP4",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 9,
+        "record_id": "katha-dashavatara-parashurama",
+        "title": "भगवान परशुराम अवतार: 21 बार आततायी क्षत्रियों का दमन",
+        "media_type": "Audio",
+        "youtube_id": "tYI80vkSBzo",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 10,
+        "record_id": "katha-dashavatara-rama",
+        "title": "मर्यादा पुरुषोत्तम श्री राम अवतार: रावण संहार व धर्म स्थापना",
+        "media_type": "Video",
+        "youtube_id": "5Pqtq7i1ICE",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 11,
+        "record_id": "katha-dashavatara-krishna",
+        "title": "लीला पुरुषोत्तम भगवान श्री कृष्ण अवतार: गीता ज्ञान",
+        "media_type": "Audio",
+        "youtube_id": "FeZs62yREuk",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 12,
+        "record_id": "katha-dashavatara-buddha",
+        "title": "भगवान बुद्ध अवतार: अहिंसा, करुणा व दया का संदेश",
+        "media_type": "Video",
+        "youtube_id": "aRtNO04vmLM",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 13,
+        "record_id": "katha-dashavatara-kalki",
+        "title": "कल्कि अवतार: कलयुग के अंत में अधर्म का नाश",
+        "media_type": "Audio",
+        "youtube_id": "n6oU7-PcwRQ",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 14,
+        "record_id": "katha-dashavatara-kalki",
+        "title": "कल्कि अवतार: कलयुग के अंत में अधर्म का नाश",
+        "media_type": "Video",
+        "youtube_id": "18HbayqQ84A",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 15,
+        "record_id": "katha-hanuman-sanjeevani-booti-prasang",
+        "title": "द्रोणागिरि पर्वत एवं संजीवनी बूटी प्रसंग",
+        "media_type": "Audio",
+        "youtube_id": "RAGL8Yi0fgg",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 16,
+        "record_id": "katha-hanuman-sanjeevani-booti-prasang",
+        "title": "द्रोणागिरि पर्वत एवं संजीवनी बूटी प्रसंग",
+        "media_type": "Video",
+        "youtube_id": "j1LPAzOI4UU",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 17,
+        "record_id": "katha-khatushyam-barbareek-sheesh-daan",
+        "title": "महाबली बर्बरीक का शीश दान एवं श्याम रूप प्राप्ति कथा",
+        "media_type": "Audio",
+        "youtube_id": "uRRoe12Wf04",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 18,
+        "record_id": "katha-khatushyam-barbareek-sheesh-daan",
+        "title": "महाबली बर्बरीक का शीश दान एवं श्याम रूप प्राप्ति कथा",
+        "media_type": "Video",
+        "youtube_id": "POXXHjbMB10",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 19,
+        "record_id": "katha-krishna-govardhan-dharan-leela",
+        "title": "इंद्र दर्प दलन एवं श्री गोवर्धन धारण लीला",
+        "media_type": "Audio",
+        "youtube_id": "ZXhNB0jriT0",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 20,
+        "record_id": "katha-krishna-govardhan-dharan-leela",
+        "title": "इंद्र दर्प दलन एवं श्री गोवर्धन धारण लीला",
+        "media_type": "Video",
+        "youtube_id": "jW86VFuSWsA",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 21,
+        "record_id": "katha-krishna-sudama-charitra",
+        "title": "सच्चे मित्र का सम्मान: सुदामा चरित्र प्रसंग",
+        "media_type": "Audio",
+        "youtube_id": "rYnXsVOfG_A",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 22,
+        "record_id": "katha-krishna-sudama-charitra",
+        "title": "सच्चे मित्र का सम्मान: सुदामा चरित्र प्रसंग",
+        "media_type": "Video",
+        "youtube_id": "wt2oI054Egg",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 23,
+        "record_id": "katha-pauranik-bhagirath-gangavataran",
+        "title": "महाराज भगीरथ की घोर तपस्या एवं गंगावतरण कथा",
+        "media_type": "Audio",
+        "youtube_id": "t0BlmTjIcdQ",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 24,
+        "record_id": "katha-pauranik-bhagirath-gangavataran",
+        "title": "महाराज भगीरथ की घोर तपस्या एवं गंगावतरण कथा",
+        "media_type": "Video",
+        "youtube_id": "Je5w8zn4BE8",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 25,
+        "record_id": "katha-pauranik-gajendra-moksha",
+        "title": "श्रीमद्भागवत गजेंद्र मोक्ष कथा (आर्त पुकार पर श्री हरि आगमन)",
+        "media_type": "Audio",
+        "youtube_id": "9Y8iRf7w76U",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 26,
+        "record_id": "katha-pauranik-markandeya-shiva-kripa",
+        "title": "महर्षि मार्कण्डेय शिव कृपा: यमराज पर महामृत्युंजय की विजय",
+        "media_type": "Audio",
+        "youtube_id": "Fp4NyEXQN0U",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 27,
+        "record_id": "katha-pauranik-markandeya-shiva-kripa",
+        "title": "महर्षि मार्कण्डेय शिव कृपा: यमराज पर महामृत्युंजय की विजय",
+        "media_type": "Video",
+        "youtube_id": "98VX9VbXzhk",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 28,
+        "record_id": "katha-pauranik-samudra-manthan-14-ratna",
+        "title": "समुद्र मंथन से निकले 14 दिव्य रत्नों का आध्यात्मिक रहस्य",
+        "media_type": "Audio",
+        "youtube_id": "iqjT3lulmbo",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 29,
+        "record_id": "katha-pauranik-samudra-manthan-14-ratna",
+        "title": "समुद्र मंथन से निकले 14 दिव्य रत्नों का आध्यात्मिक रहस्य",
+        "media_type": "Video",
+        "youtube_id": "vm3jN4FtzdM",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 30,
+        "record_id": "katha-purana-garuda",
+        "title": "गरुड़ पुराण सार: मृत्यु उपरांत जीव की गति व मोक्ष",
+        "media_type": "Audio",
+        "youtube_id": "OLj0s8Amxmw",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 31,
+        "record_id": "katha-purana-garuda",
+        "title": "गरुड़ पुराण सार: मृत्यु उपरांत जीव की गति व मोक्ष",
+        "media_type": "Video",
+        "youtube_id": "nXSQzScMf_s",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 32,
+        "record_id": "katha-purana-shiva",
+        "title": "शिव पुराण सार: सदाशिव स्वरूप व 12 ज्योतिर्लिंग",
+        "media_type": "Audio",
+        "youtube_id": "M9innkB3CdQ",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      },
+      {
+        "index": 33,
+        "record_id": "katha-purana-shiva",
+        "title": "शिव पुराण सार: सदाशिव स्वरूप व 12 ज्योतिर्लिंग",
+        "media_type": "Video",
+        "youtube_id": "CkEOQe1igag",
+        "quality_status": "PASS",
+        "notes": "Genuinely grounded spiritual narration/video presentation verified live."
+      }
+    ]
+  },
+  "audio_video_consistency": {
+    "records_with_both_media": 25,
+    "identical_media_urls_count": 0
+  },
+  "fts5_audit": {
+    "main_records": 10010,
+    "fts5_documents": 10010,
+    "unicode_search_samples": {
+      "राम": 5369,
+      "कृष्ण": 1604,
+      "हनुमान": 757,
+      "शिव": 1965,
+      "विष्णु": 1048,
+      "कथा": 671
+    }
+  },
+  "orphan_audit": {
+    "orphan_deity_references": 0,
+    "orphan_category_references": 0,
+    "foreign_key_violations": 0
+  },
+  "katha_coverage": {
+    "total_katha_records": 505,
+    "katha_with_audio": 90,
+    "katha_with_video": 27,
+    "katha_with_both": 23,
+    "katha_with_neither": 411,
+    "audio_coverage_pct": 17.82,
+    "video_coverage_pct": 5.35,
+    "any_media_coverage_pct": 18.61
+  },
+  "next_phase_candidates": [
+    {
+      "index": 1,
+      "record_id": "katha-bhakta-bhaktamal-tulsidas-darshan",
+      "title": "गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 2,
+      "record_id": "katha-bhakta-dhruva-charitra",
+      "title": "भक्त ध्रुव चरित्र: बाल तपस्या एवं ध्रुव लोक प्राप्ति",
+      "deity_id": "vishnu",
+      "deity_name": "भगवान विष्णु",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 3,
+      "record_id": "katha-bhakta-kabir-samadhi-phool",
+      "title": "संत कबीर महाप्रयाण: मगहर में देहत्याग एवं पुष्प प्राकट्य",
+      "deity_id": "guru_sant",
+      "deity_name": "गुरु/संत",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 4,
+      "record_id": "katha-bhakta-karmabai-khichdi",
+      "title": "भक्त कर्माबाई की खिचड़ी: भगवान जगन्नाथ का बाल प्रेम",
+      "deity_id": "vishnu",
+      "deity_name": "भगवान विष्णु",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 5,
+      "record_id": "katha-bhakta-meera-vish-paan",
+      "title": "मीरा बाई का विषपान: राणा का भेजा विष बना चरणामृत",
+      "deity_id": "krishna",
+      "deity_name": "श्री कृष्ण",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 6,
+      "record_id": "katha-bhakta-narsi-mehta-hundi",
+      "title": "नरसी मेहता की हुंडी: भगवान श्री कृष्ण बने सांवरिया सेठ",
+      "deity_id": "krishna",
+      "deity_name": "श्री कृष्ण",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 7,
+      "record_id": "katha-bhakta-ranti-deva-annadaan",
+      "title": "परम त्यागी राजा रंतिदेव: भूखे को अपना भोजन अर्पण कथा",
+      "deity_id": "vishnu",
+      "deity_name": "भगवान विष्णु",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 8,
+      "record_id": "katha-bhakta-ravidas-ganga-kangan",
+      "title": "संत रविदास: 'मन चंगा तो कठौती में गंगा' व स्वर्ण कंगन",
+      "deity_id": "guru_sant",
+      "deity_name": "गुरु/संत",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 9,
+      "record_id": "katha-bhakta-shabari-prem-lakshan",
+      "title": "माता शबरी के जूठे बेर: निष्कपट प्रेम की पराकाष्ठा",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 10,
+      "record_id": "katha-bhakta-shravan-kumar-pitribhakti",
+      "title": "मातृ-पितृ भक्त श्रवण कुमार: आदर्श पितृभक्ति का अमर प्रसंग",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 11,
+      "record_id": "katha-bhakta-surdas-krishna-sakhi",
+      "title": "महाकवि सूरदास: पारस रूप में प्रभु द्वारा हाथ पकड़ना",
+      "deity_id": "krishna",
+      "deity_name": "श्री कृष्ण",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 12,
+      "record_id": "katha-guru_sant-chaitanya-mahaprabhu-leela",
+      "title": "श्री चैतन्य महाप्रभु एवं संकीर्तन आंदोलन का प्राकट्य",
+      "deity_id": "guru_sant",
+      "deity_name": "गुरु/संत",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 13,
+      "record_id": "katha-guru_sant-guru-nanak-kartarpur",
+      "title": "श्री गुरु नानक देव जी: 'एक ओंकार सतनाम' एवं लंगर परंपरा",
+      "deity_id": "guru_sant",
+      "deity_name": "गुरु/संत",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 14,
+      "record_id": "katha-guru_sant-sant-eknath-bhavarth-ramayan",
+      "title": "संत एकनाथ: प्यासे गधे को गंगाजल पिलाने की पराकाष्ठा",
+      "deity_id": "guru_sant",
+      "deity_name": "गुरु/संत",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 15,
+      "record_id": "katha-purana-bhagavata",
+      "title": "श्रीमद्भागवत महापुराण सार: दशम स्कंध रास रस",
+      "deity_id": "krishna",
+      "deity_name": "श्री कृष्ण",
+      "priority": "HIGH"
+    },
+    {
+      "index": 16,
+      "record_id": "katha-purana-brahmavaivarta",
+      "title": "ब्रह्मवैवर्त पुराण सार: श्री राधा-कृष्ण गोलोक लीला",
+      "deity_id": "krishna",
+      "deity_name": "श्री कृष्ण",
+      "priority": "HIGH"
+    },
+    {
+      "index": 17,
+      "record_id": "katha-purana-markandeya",
+      "title": "मार्कण्डेय पुराण सार: दुर्गा सप्तशती का उद्भव",
+      "deity_id": "durga_mata",
+      "deity_name": "माता रानी/दुर्गा",
+      "priority": "HIGH"
+    },
+    {
+      "index": 18,
+      "record_id": "katha-purana-padma",
+      "title": "पद्म पुराण सार: एकादशी, पुष्कर व तुलसी महात्म्य",
+      "deity_id": "vishnu",
+      "deity_name": "भगवान विष्णु",
+      "priority": "HIGH"
+    },
+    {
+      "index": 19,
+      "record_id": "katha-purana-skanda",
+      "title": "स्कन्द पुराण सार: काशी खंड व सत्यनारायण कथा",
+      "deity_id": "shiva",
+      "deity_name": "शिव जी",
+      "priority": "HIGH"
+    },
+    {
+      "index": 20,
+      "record_id": "katha-purana-vishnu",
+      "title": "विष्णु पुराण सार: ध्रुव, प्रह्लाद व समुद्र मंथन",
+      "deity_id": "vishnu",
+      "deity_name": "भगवान विष्णु",
+      "priority": "HIGH"
+    },
+    {
+      "index": 21,
+      "record_id": "katha-radharani-radhashtami-prakatya-katha",
+      "title": "श्री राधा रानी प्राकट्य कथा (राधाष्टमी महात्म्य)",
+      "deity_id": "radharani",
+      "deity_name": "राधा रानी",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 22,
+      "record_id": "katha-ram-ahilya-uddhar",
+      "title": "गौतम नारी अहिल्या उद्धार प्रसंग",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 23,
+      "record_id": "katha-ram-bharat-charitra-milap",
+      "title": "चित्रकूट में भ्रातृ-प्रेम: भरत मिलाप प्रसंग",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 24,
+      "record_id": "katha-ram-kewat-samvad-prasang",
+      "title": "केवट प्रेम एवं गंगा पार प्रसंग",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 25,
+      "record_id": "katha-ram-lanka-vijay-rajyabhishek",
+      "title": "रावण वध, लंका विजय एवं श्री राम राज्याभिषेक",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 26,
+      "record_id": "katha-ram-shabari-navadha-bhakti",
+      "title": "माता शबरी उद्धार एवं नवधा भक्ति उपदेश",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 27,
+      "record_id": "katha-ram-sita-swayamvar-dhanush-bhang",
+      "title": "सीता स्वयंवर एवं शिव धनुष भंग प्रसंग",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "NORMAL"
+    },
+    {
+      "index": 28,
+      "record_id": "katha-ramayana-kand-aranya",
+      "title": "श्री रामचरितमानस अरण्यकांड सार: शबरी व नवधा भक्ति",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "HIGH"
+    },
+    {
+      "index": 29,
+      "record_id": "katha-ramayana-kand-ayodhya",
+      "title": "श्री रामचरितमानस अयोध्याकांड सार: भ्रातृ प्रेम",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "HIGH"
+    },
+    {
+      "index": 30,
+      "record_id": "katha-ramayana-kand-bal",
+      "title": "श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "HIGH"
+    },
+    {
+      "index": 31,
+      "record_id": "katha-ramayana-kand-kishkindha",
+      "title": "श्री रामचरितमानस किष्किंधाकांड सार: सुग्रीव मित्रता",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "HIGH"
+    },
+    {
+      "index": 32,
+      "record_id": "katha-ramayana-kand-lanka",
+      "title": "श्री रामचरितमानस लंकाकांड सार: रावण वध",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "HIGH"
+    },
+    {
+      "index": 33,
+      "record_id": "katha-ramayana-kand-uttar",
+      "title": "श्री रामचरितमानस उत्तरकांड सार: काकभुशुंडि संवाद",
+      "deity_id": "ram",
+      "deity_name": "श्री राम",
+      "priority": "HIGH"
+    },
+    {
+      "index": 34,
+      "record_id": "katha-shiva-samudra-manthan-neelkanth",
+      "title": "समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा",
+      "deity_id": "shiva",
+      "deity_name": "शिव जी",
+      "priority": "NORMAL"
+    }
+  ],
+  "data_quality": {
+    "null_primary_ids": 0,
+    "null_titles": 0,
+    "null_categories": 0
+  },
+  "final_gate": "PASS"
+}

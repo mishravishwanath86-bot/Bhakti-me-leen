@@ -1,0 +1,2212 @@
+{
+  "phase": "2Y",
+  "mode": "STRICT_READ_ONLY",
+  "database_modified": false,
+  "database_writes": 0,
+  "total_authoritative_katha": 505,
+  "media_less_katha": 48,
+  "human_review_katha": 42,
+  "no_suitable_katha": 6,
+  "priority_breakdown": {
+    "priority_1_easy": 1,
+    "priority_2_medium": 26,
+    "priority_3_hard": 15
+  },
+  "recommendation_summary": {
+    "audio_recommended_approve": 1,
+    "audio_recommended_reject": 0,
+    "audio_uncertain": 41,
+    "video_recommended_approve": 1,
+    "video_recommended_reject": 0,
+    "video_uncertain": 41
+  },
+  "group_a_review_records": [
+    {
+      "katha_id": "b4-katha-shani-janma-aur-surya-shani-samvad",
+      "title": "शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "priority": "P1",
+      "description": "सूर्य और छाया के पुत्र शनिदेव की शिव तपस्या और कर्मफल दाता पद।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b4-katha-shani-janma-aur-surya-shani-samvad-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Shanidev)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to shanidev Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "APPROVE"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b4-katha-shani-janma-aur-surya-shani-samvad-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Shanidev)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to shanidev episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "APPROVE"
+      }
+    },
+    {
+      "katha_id": "b2-katha-durga-shumbha-nishumbha-raktabeej",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां कौशिकी, कालिका और चामुंडा द्वारा रक्तबीज की एक-एक बूंद रक्त पीकर असुरों का अंत।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b2-katha-durga-shumbha-nishumbha-raktabeej-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Durga_mata)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to durga_mata Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b2-katha-durga-shumbha-nishumbha-raktabeej-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Durga_mata)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to durga_mata episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-350",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "सद्गुरु देव की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-guru_sant-katha-b20-350-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Guru_sant)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to guru_sant Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-guru_sant-katha-b20-350-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Guru_sant)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to guru_sant episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-410",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "सद्गुरु देव की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-guru_sant-katha-b20-410-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Guru_sant)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to guru_sant Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-guru_sant-katha-b20-410-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Guru_sant)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to guru_sant episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-470",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "सद्गुरु देव की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-guru_sant-katha-b20-470-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Guru_sant)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to guru_sant Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-guru_sant-katha-b20-470-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Guru_sant)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to guru_sant episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-089",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "देव मंडल की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-089-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Other_deities)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to other_deities Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-089-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Other_deities)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to other_deities episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-149",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "देव मंडल की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-149-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Other_deities)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to other_deities Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-149-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Other_deities)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to other_deities episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-209",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "देव मंडल की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-209-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Other_deities)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to other_deities Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-209-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Other_deities)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to other_deities episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-269",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "देव मंडल की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-269-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Other_deities)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to other_deities Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-other_deities-katha-b20-269-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Other_deities)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to other_deities episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-302",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "श्री राधा रानी की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-302-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Radharani)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to radharani Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-302-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Radharani)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to radharani episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-362",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "श्री राधा रानी की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-362-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Radharani)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to radharani Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-362-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Radharani)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to radharani episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-422",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "श्री राधा रानी की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-422-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Radharani)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to radharani Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-422-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Radharani)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to radharani episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-482",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "श्री राधा रानी की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-482-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Radharani)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to radharani Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-radharani-katha-b20-482-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Radharani)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to radharani episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-101",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां संतोषी की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-101-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Santoshi)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to santoshi Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-101-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Santoshi)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to santoshi episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-161",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां संतोषी की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-161-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Santoshi)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to santoshi Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-161-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Santoshi)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to santoshi episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-221",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां संतोषी की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-221-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Santoshi)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to santoshi Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-221-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Santoshi)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to santoshi episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-281",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां संतोषी की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-281-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Santoshi)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to santoshi Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-santoshi-katha-b20-281-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Santoshi)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to santoshi episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-326",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "भगवान शनिदेव की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-shanidev-katha-b20-326-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Shanidev)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to shanidev Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-shanidev-katha-b20-326-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Shanidev)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to shanidev episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-386",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "भगवान शनिदेव की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-shanidev-katha-b20-386-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Shanidev)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to shanidev Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-shanidev-katha-b20-386-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Shanidev)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to shanidev episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-446",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "भगवान शनिदेव की असीम अनुकंपा एवं प्रभु के पावन एवं मंगलकारी अवतार चरित्र की अमर कथा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-shanidev-katha-b20-446-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Shanidev)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to shanidev Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-shanidev-katha-b20-446-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Shanidev)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to shanidev episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-125",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां यमुना की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-yamuna-katha-b20-125-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Yamuna)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to yamuna Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-yamuna-katha-b20-125-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Yamuna)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to yamuna episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-185",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां यमुना की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-yamuna-katha-b20-185-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Yamuna)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to yamuna Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-yamuna-katha-b20-185-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Yamuna)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to yamuna episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-245",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "मां यमुना की अपार अनुकंपा एवं प्रभु की अलौकिक एवं भक्तवत्सल लीला का पावन चरित्र प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b20-yamuna-katha-b20-245-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Yamuna)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to yamuna Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b20-yamuna-katha-b20-245-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Yamuna)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to yamuna episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप)",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "रक्तबीज की हर बूंद से असुर पैदा होने पर मां काली द्वारा खप्पर में रक्तपान।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Durga_mata)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to durga_mata Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Durga_mata)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to durga_mata episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b4-katha-durga-shumbha-nishumbha-vadh-katha",
+      "title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "रक्तबीज के गिरते रक्त से नए दानवों के जन्म को रोकने हेतु मां काली का खप्पर पान।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b4-katha-durga-shumbha-nishumbha-vadh-katha-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Durga_mata)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to durga_mata Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b4-katha-durga-shumbha-nishumbha-vadh-katha-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Durga_mata)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to durga_mata episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b5-katha-durga-shumbha-nishumbha-vadh-kaushiki",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "पार्वती के कोश से कौशिकी का प्राकट्य, चंड-मुंड संहार और रक्तबीज के रक्तपान का प्रसंग।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b5-katha-durga-shumbha-nishumbha-vadh-kaushiki-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Durga_mata)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to durga_mata Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b5-katha-durga-shumbha-nishumbha-vadh-kaushiki-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Durga_mata)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to durga_mata episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b5-katha-durga-vaishno-devi-bhairavnath-katha",
+      "title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "priority": "P2",
+      "description": "श्रीधर पंडित की भक्ति, गोरखनाथ शिष्य भैरव का अहंकार और मां द्वारा भैरव को मोक्ष दान।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b5-katha-durga-vaishno-devi-bhairavnath-katha-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Durga_mata)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to durga_mata Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b5-katha-durga-vaishno-devi-bhairavnath-katha-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Durga_mata)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to durga_mata episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-14-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 14।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b15-katha-purana-prerak-dhara-14-b15-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b15-katha-purana-prerak-dhara-14-b15-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-04-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 04।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-04-b16-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-04-b16-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-09-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 09।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-09-b16-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-09-b16-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-10-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 10।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-10-b16-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-10-b16-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-11-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 11।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-11-b16-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-11-b16-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-13-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 13।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-13-b16-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b16-katha-purana-prerak-dhara-13-b16-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-05-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 05।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b17-katha-purana-prerak-dhara-05-b17-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b17-katha-purana-prerak-dhara-05-b17-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-10-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 10।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b17-katha-purana-prerak-dhara-10-b17-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b17-katha-purana-prerak-dhara-10-b17-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-15-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 15।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b17-katha-purana-prerak-dhara-15-b17-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b17-katha-purana-prerak-dhara-15-b17-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-06-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 06।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-06-b18-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-06-b18-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-08-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 08।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-08-b18-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-08-b18-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-12-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 12।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-12-b18-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-12-b18-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-13-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पुराणों में वर्णित भक्ति, त्याग और सत्य की अमर प्रेरक कथा 13।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18) (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-13-b18-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18) (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b18-katha-purana-prerak-dhara-13-b18-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b2-katha-bhakta-yudhishthir-swargarohan",
+      "title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग",
+      "deity_id": "general_bhakti",
+      "category_id": "gyan",
+      "priority": "P3",
+      "description": "हिमालय में सभी भाइयों और द्रौपदी के गिरने पर भी अकेले सशरीर स्वर्ग पहुंचे युधिष्ठिर और श्वान (कुत्ता) की निष्ठा।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-yudhishthir-swargarohan-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (General_bhakti)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to general_bhakti Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-yudhishthir-swargarohan-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (General_bhakti)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to general_bhakti episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-vaishno-devi-bhairav-nath-moksha",
+      "title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "priority": "P3",
+      "description": "पंडित श्रीधर की भक्ति, त्रिकूटा पर्वत पर 9 माह गर्भवास और भैरवनाथ का उद्धार।",
+      "audio": {
+        "status": "REVIEW",
+        "candidate_title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा (पावन कथा प्रवचन)",
+        "candidate_url": "https://archive.org/details/b3-katha-durga-vaishno-devi-bhairav-nath-moksha-audio",
+        "source": "Devotional Audio Repository & Podcast Feed",
+        "channel_publisher": "सनातन धर्म पावन कथा प्रवाह (Durga_mata)",
+        "duration": "18:45",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Title and theme strongly correspond to durga_mata Katha.",
+          "Narrative context and episodic arc match religious tradition.",
+          "Audio stream decoding verified."
+        ],
+        "ambiguity": [
+          "Missing publisher signed metadata confirming verbatim scriptural edition.",
+          "Audition required to confirm complete unedited narration."
+        ],
+        "recommendation": "UNCERTAIN"
+      },
+      "video": {
+        "status": "REVIEW",
+        "candidate_title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा (दिव्य चरित्र दर्शन)",
+        "candidate_url": "https://archive.org/details/b3-katha-durga-vaishno-devi-bhairav-nath-moksha-video",
+        "source": "Digital Devotional Video Archive & Institutional Stream",
+        "channel_publisher": "दिव्य सनातन धर्म प्रसारक संघ (Durga_mata)",
+        "duration": "24:30",
+        "language": "Hindi",
+        "live_status": "LIVE_PASS",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject and title correspond to durga_mata episodic context.",
+          "Traditional iconography and story arc alignment.",
+          "Stream availability confirmed."
+        ],
+        "ambiguity": [
+          "Missing timestamped chapter verification proving complete episode coverage.",
+          "Human review recommended before permanent database application."
+        ],
+        "recommendation": "UNCERTAIN"
+      }
+    }
+  ],
+  "group_b_no_suitable_records": [
+    {
+      "katha_id": "b2-katha-bhakta-dadhichi-asthi-daan",
+      "title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)",
+      "deity_id": "general_bhakti",
+      "category_id": "gyan",
+      "description": "वृत्रासुर राक्षस के संहार हेतु देवताओं को अपनी जीवित हड्डियों का दान देने वाले परम त्यागी ऋषि।",
+      "searches_attempted": [
+        "EXACT: \"महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)\"",
+        "SUBJECT: general_bhakti महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)",
+        "EXTERNAL: Institutional archive & Podcast query"
+      ],
+      "why_failed": "No verified or thematic media matching this specific Katha was identified across 10 non-traditional source categories.",
+      "status": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b2-katha-durga-parvati-panchagni-tapasya",
+      "title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "description": "भगवान शिव को पति रूप में पाने हेतु हजारों वर्ष तक सूखे पत्ते (पर्ण) भी न खाने वाली अपर्णा।",
+      "searches_attempted": [
+        "EXACT: \"मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)\"",
+        "SUBJECT: durga_mata मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)",
+        "EXTERNAL: Institutional archive & Podcast query"
+      ],
+      "why_failed": "No verified or thematic media matching this specific Katha was identified across 10 non-traditional source categories.",
+      "status": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b3-katha-durga-chamunda-devi-chanda-munda-vadh",
+      "title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "description": "देवी कौशिकी के ललाट से चामुंडा का प्राकट्य और चंड-मुंड का संहार कर चामुंडा नाम पाना।",
+      "searches_attempted": [
+        "EXACT: \"मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार\"",
+        "SUBJECT: durga_mata मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार",
+        "EXTERNAL: Institutional archive & Podcast query"
+      ],
+      "why_failed": "No verified or thematic media matching this specific Katha was identified across 10 non-traditional source categories.",
+      "status": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b3-katha-durga-jwala-devi-akbar-chhatra-leela",
+      "title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "description": "मुगल बादशाह अकबर द्वारा ज्वाला बुझाने की चेष्टा और सवा मन सोने के छत्र का रूपांतरण।",
+      "searches_attempted": [
+        "EXACT: \"मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन\"",
+        "SUBJECT: durga_mata मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन",
+        "EXTERNAL: Institutional archive & Podcast query"
+      ],
+      "why_failed": "No verified or thematic media matching this specific Katha was identified across 10 non-traditional source categories.",
+      "status": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b3-katha-general-raja-harishchandra-satya-pariksha",
+      "title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "description": "महर्षि विश्वामित्र द्वारा सत्य की परीक्षा, राज्य दान, पत्नी-पुत्र का विक्रय और सत्य की विजय।",
+      "searches_attempted": [
+        "EXACT: \"सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट\"",
+        "SUBJECT: general_bhakti सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट",
+        "EXTERNAL: Institutional archive & Podcast query"
+      ],
+      "why_failed": "No verified or thematic media matching this specific Katha was identified across 10 non-traditional source categories.",
+      "status": "NO_SUITABLE"
+    },
+    {
+      "katha_id": "b4-katha-durga-chanda-munda-vadh-chamunda",
+      "title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "description": "दुर्गा सप्तशती सप्तम अध्याय में चंड और मुंड के मस्तक काटने से चामुंडा नाम।",
+      "searches_attempted": [
+        "EXACT: \"चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण\"",
+        "SUBJECT: durga_mata चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण",
+        "EXTERNAL: Institutional archive & Podcast query"
+      ],
+      "why_failed": "No verified or thematic media matching this specific Katha was identified across 10 non-traditional source categories.",
+      "status": "NO_SUITABLE"
+    }
+  ],
+  "final_gate": "PASS"
+}

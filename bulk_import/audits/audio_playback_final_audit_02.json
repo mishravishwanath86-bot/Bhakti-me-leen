@@ -1,0 +1,67 @@
+{
+  "phase": "AUDIO-PLAYBACK-02",
+  "mode": "STRICT_READ_ONLY",
+  "database_modified": false,
+  "database_writes": 0,
+  "total_katha": 505,
+  "total_audio": 333,
+  "local_mp3_audio": 64,
+  "youtube_audio": 269,
+  "other_audio": 0,
+  "playback_results": {
+    "total_tested": 333,
+    "playback_load_pass": 333,
+    "playback_load_fail": 0,
+    "actual_youtube_playing_pass": 269,
+    "youtube_playback_fail": 0
+  },
+  "phase_breakdown": {
+    "phase_2n": {
+      "tested": 38,
+      "pass": 38,
+      "fail": 0
+    },
+    "phase_2o": {
+      "tested": 27,
+      "pass": 27,
+      "fail": 0
+    },
+    "phase_2p": {
+      "tested": 21,
+      "pass": 21,
+      "fail": 0
+    },
+    "phase_2q": {
+      "tested": 24,
+      "pass": 24,
+      "fail": 0
+    },
+    "newly_added_audio_failures": 0
+  },
+  "legacy_failures": {
+    "pre_2n_legacy_audio_failures": 31,
+    "legacy_failures_still_protected": "31 / 31 (PROTECTED)"
+  },
+  "player_health": {
+    "youtube_container": "PASS",
+    "youtube_iframe_mounting": "PASS",
+    "youtube_player_initialization": "PASS",
+    "youtube_playing_state": "PASS",
+    "mute_state": "PASS",
+    "volume": "PASS",
+    "local_mp3": "PASS",
+    "local_to_youtube": "PASS",
+    "youtube_to_local": "PASS",
+    "youtube_to_youtube": "PASS",
+    "modal_lifecycle": "PASS"
+  },
+  "database_safety": {
+    "duplicate_ids": 0,
+    "conflicts": 0,
+    "malformed_urls": 0,
+    "fts5": "PASS",
+    "sqlite_integrity": "PASS",
+    "foreign_key_violations": 0
+  },
+  "final_gate": "PASS"
+}

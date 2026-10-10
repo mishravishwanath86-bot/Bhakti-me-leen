@@ -1,0 +1,412 @@
+rank,record_id,title,category,priority_score,priority_tier,duplicate_risk,media_status
+1,katha-bhakta-narsi-mehta-hundi,नरसी मेहता की हुंडी: भगवान श्री कृष्ण बने सांवरिया सेठ,bhakti,87,TIER_A,UNIQUE,UNMAPPED
+2,katha-purana-brahmavaivarta,ब्रह्मवैवर्त पुराण सार: श्री राधा-कृष्ण गोलोक लीला,gyan,87,TIER_A,UNIQUE,UNMAPPED
+3,katha-purana-skanda,स्कन्द पुराण सार: काशी खंड व सत्यनारायण कथा,gyan,87,TIER_A,UNIQUE,UNMAPPED
+4,katha-purana-padma,"पद्म पुराण सार: एकादशी, पुष्कर व तुलसी महात्म्य",gyan,86,TIER_A,UNIQUE,UNMAPPED
+5,katha-purana-vishnu,"विष्णु पुराण सार: ध्रुव, प्रह्लाद व समुद्र मंथन",gyan,85,TIER_A,UNIQUE,UNMAPPED
+6,b20-katha-krishna-govardhan-dharan-leela-b20,श्री कृष्ण गोवर्धन धारण एवं इंद्र मानभंग कथा (विंशति 20),leela,84,TIER_A,UNIQUE,UNMAPPED
+7,katha-ram-sita-swayamvar-dhanush-bhang,सीता स्वयंवर एवं शिव धनुष भंग प्रसंग,leela,83,TIER_A,UNIQUE,UNMAPPED
+8,katha-ramayana-kand-aranya,श्री रामचरितमानस अरण्यकांड सार: शबरी व नवधा भक्ति,leela,83,TIER_A,UNIQUE,UNMAPPED
+9,b17-katha-shrimad-bhagavata-govardhan-lila-amrit-b17,श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मान मर्दन लीला (सप्तदश गोवर्धन लीला 17),leela,82,TIER_A,UNIQUE,UNMAPPED
+10,katha-bhakta-bhaktamal-tulsidas-darshan,गोस्वामी तुलसीदास जी को हनुमान जी द्वारा श्री राम दर्शन कराना,bhakti,80,TIER_A,UNIQUE,UNMAPPED
+11,katha-purana-markandeya,मार्कण्डेय पुराण सार: दुर्गा सप्तशती का उद्भव,gyan,80,TIER_A,UNIQUE,UNMAPPED
+12,katha-ram-lanka-vijay-rajyabhishek,"रावण वध, लंका विजय एवं श्री राम राज्याभिषेक",leela,80,TIER_A,UNIQUE,UNMAPPED
+13,katha-ramayana-kand-ayodhya,श्री रामचरितमानस अयोध्याकांड सार: भ्रातृ प्रेम,leela,80,TIER_A,UNIQUE,UNMAPPED
+14,katha-ramayana-kand-bal,श्री रामचरितमानस बालकांड सार एवं कथा प्रसंग,leela,80,TIER_A,UNIQUE,UNMAPPED
+15,katha-ramayana-kand-kishkindha,श्री रामचरितमानस किष्किंधाकांड सार: सुग्रीव मित्रता,leela,80,TIER_A,UNIQUE,UNMAPPED
+16,katha-ramayana-kand-lanka,श्री रामचरितमानस लंकाकांड सार: रावण वध,leela,80,TIER_A,UNIQUE,UNMAPPED
+17,katha-ramayana-kand-uttar,श्री रामचरितमानस उत्तरकांड सार: काकभुशुंडि संवाद,leela,80,TIER_A,UNIQUE,UNMAPPED
+18,katha-bhakta-dhruva-charitra,भक्त ध्रुव चरित्र: बाल तपस्या एवं ध्रुव लोक प्राप्ति,bhakti,79,TIER_A,UNIQUE,UNMAPPED
+19,katha-bhakta-meera-vish-paan,मीरा बाई का विषपान: राणा का भेजा विष बना चरणामृत,bhakti,77,TIER_A,UNIQUE,UNMAPPED
+20,katha-bhakta-surdas-krishna-sakhi,महाकवि सूरदास: पारस रूप में प्रभु द्वारा हाथ पकड़ना,bhakti,77,TIER_A,UNIQUE,UNMAPPED
+21,katha-purana-bhagavata,श्रीमद्भागवत महापुराण सार: दशम स्कंध रास रस,gyan,77,TIER_A,UNIQUE,UNMAPPED
+22,katha-shiva-samudra-manthan-neelkanth,समुद्र मंथन एवं नीलकंठ महादेव विषपान कथा,leela,77,TIER_A,UNIQUE,UNMAPPED
+23,katha-bhakta-karmabai-khichdi,भक्त कर्माबाई की खिचड़ी: भगवान जगन्नाथ का बाल प्रेम,bhakti,76,TIER_A,UNIQUE,UNMAPPED
+24,katha-bhakta-ranti-deva-annadaan,परम त्यागी राजा रंतिदेव: भूखे को अपना भोजन अर्पण कथा,gyan,76,TIER_A,UNIQUE,UNMAPPED
+25,b19-corpus19-krishna-katha-055,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 055),leela,74,TIER_A,UNIQUE,UNMAPPED
+26,b19-corpus19-krishna-katha-056,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 056),leela,74,TIER_A,UNIQUE,UNMAPPED
+27,b19-corpus19-krishna-katha-057,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 057),leela,74,TIER_A,UNIQUE,UNMAPPED
+28,b19-corpus19-krishna-katha-058,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 058),leela,74,TIER_A,UNIQUE,UNMAPPED
+29,b19-corpus19-krishna-katha-059,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 059),leela,74,TIER_A,UNIQUE,UNMAPPED
+30,b19-corpus19-krishna-katha-060,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 060),leela,74,TIER_A,UNIQUE,UNMAPPED
+31,b19-corpus19-krishna-katha-061,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 061),leela,74,TIER_A,UNIQUE,UNMAPPED
+32,b19-corpus19-krishna-katha-062,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 062),leela,74,TIER_A,UNIQUE,UNMAPPED
+33,b19-corpus19-krishna-katha-063,गोवर्धन लीला अमृत कथा (एकोनविंशति पद 063),leela,74,TIER_A,UNIQUE,UNMAPPED
+34,b2-katha-krishna-govardhan-dharana-indra-manbhang,गोवर्धन पूजा एवं इंद्र का मानमर्दन,leela,74,TIER_A,UNIQUE,UNMAPPED
+35,b3-katha-krishna-govardhan-leela-indra-garva-bhang,गिरिराज गोवर्धन धारण एवं देवराज इंद्र का मान मर्दन,leela,74,TIER_A,UNIQUE,UNMAPPED
+36,b3-katha-krishna-sudama-charitra-tundula-bhent,सुदामा की तंदुल भेंट एवं कृष्ण-सुदामा परम मित्रता,leela,74,TIER_A,UNIQUE,UNMAPPED
+37,b3-katha-shiva-parvati-tapasya-shiva-vivah,माता पार्वती की पंचाग्नि तपस्या एवं दिव्य शिव-पार्वती विवाह,leela,74,TIER_A,UNIQUE,UNMAPPED
+38,b4-katha-krishna-draupadi-cheer-haran-raksha,द्रौपदी चीर हरण एवं श्री कृष्ण द्वारा अक्षय चीर दान,leela,74,TIER_A,UNIQUE,UNMAPPED
+39,b4-katha-krishna-govardhan-dharan-leela,गोवर्धन पर्वत धारण एवं देवराज इंद्र का मान मर्दन,leela,74,TIER_A,UNIQUE,UNMAPPED
+40,b4-katha-shiva-parvati-tapasya-aur-vivah,माता पार्वती की पंचाग्नि तपस्या एवं शिव-पार्वती महाविवाह,leela,74,TIER_A,UNIQUE,UNMAPPED
+41,b5-katha-krishna-govardhan-dharan-indra-garva,गोवर्धन पूजा एवं इंद्र का गर्व मर्दन,leela,74,TIER_A,UNIQUE,UNMAPPED
+42,b5-katha-shiva-parvati-tapasya-shiva-vivaha,माता पार्वती की पंचाग्नि तपस्या एवं भव्य शिव विवाह,leela,74,TIER_A,UNIQUE,UNMAPPED
+43,katha-bhakta-shabari-prem-lakshan,माता शबरी के जूठे बेर: निष्कपट प्रेम की पराकाष्ठा,bhakti,73,TIER_A,UNIQUE,UNMAPPED
+44,katha-ram-ahilya-uddhar,गौतम नारी अहिल्या उद्धार प्रसंग,leela,73,TIER_A,UNIQUE,UNMAPPED
+45,katha-ram-bharat-charitra-milap,चित्रकूट में भ्रातृ-प्रेम: भरत मिलाप प्रसंग,leela,73,TIER_A,UNIQUE,UNMAPPED
+46,katha-ram-kewat-samvad-prasang,केवट प्रेम एवं गंगा पार प्रसंग,bhakti,73,TIER_A,UNIQUE,UNMAPPED
+47,katha-ram-shabari-navadha-bhakti,माता शबरी उद्धार एवं नवधा भक्ति उपदेश,gyan,73,TIER_A,UNIQUE,UNMAPPED
+48,b16-katha-shrimad-bhagavata-sudama-charitra-amrit-b16,श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव (षोडश सुदामा चरित्र 16),leela,72,TIER_A,UNIQUE,UNMAPPED
+49,b18-katha-shrimad-bhagavata-sudama-charitra-prem-b18,श्रीमद्भागवत सुदामा चरित्र एवं अनन्य सखा भाव (अष्टादश सुदामा चरित्र 18),leela,72,TIER_A,UNIQUE,UNMAPPED
+50,b5-katha-ganesh-mahabharata-lekhan-ekadanta,महाभारत लेखन: महर्षि वेदव्यास के श्लोक और गणेश जी का दंत समर्पण,leela,72,TIER_A,UNIQUE,UNMAPPED
+51,b6-katha-ram-valmiki-pratham-shloka-maa-nishada-b6,महर्षि वाल्मीकि का प्रथम श्लोक: क्रौंच वध से रामायण काव्य का जन्म,leela,72,TIER_A,UNIQUE,UNMAPPED
+52,b2-katha-hanuman-lanka-vibheeshana-milan,लंका में विभीषण से प्रथम मिलन: 'राम नाम अंकित गृह',bhakti,71,TIER_A,UNIQUE,UNMAPPED
+53,b2-katha-hanuman-surya-grasana-balya,बाल हनुमान द्वारा सूर्य को फल समझकर निगलना,leela,71,TIER_A,UNIQUE,UNMAPPED
+54,b2-katha-krishna-akrura-mathura-gaman,अक्रूर जी का ब्रज आगमन एवं श्री कृष्ण का मथुरा प्रस्थान,leela,71,TIER_A,UNIQUE,UNMAPPED
+55,b20-hanuman-katha-b20-113,श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 113 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+56,b20-hanuman-katha-b20-173,श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 173 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+57,b20-hanuman-katha-b20-233,श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 233 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+58,b20-hanuman-katha-b20-293,श्री हनुमान लीला प्रसंग स्तुति संकीर्तन (विंशति पद 293 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+59,b20-krishna-katha-b20-314,श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 314 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+60,b20-krishna-katha-b20-374,श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 374 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+61,b20-krishna-katha-b20-434,श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 434 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+62,b20-krishna-katha-b20-494,श्री कृष्ण दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 494 - 20),leela,71,TIER_A,UNIQUE,UNMAPPED
+63,b3-katha-krishna-putana-moksha-bal-leela,पूतना वध एवं बालकृष्ण द्वारा स्तनपान से मोक्ष दान,leela,71,TIER_A,UNIQUE,UNMAPPED
+64,b3-katha-shiva-ganga-avataran-bhagirath-tapashya,भागीरथ की कठोर तपस्या एवं शिव जटा में गंगा अवतरण,leela,71,TIER_A,UNIQUE,UNMAPPED
+65,b4-katha-krishna-putana-moksha-bal-leela,पूतना उद्धार एवं बालकृष्ण द्वारा विष स्तनपान लीला,leela,71,TIER_A,UNIQUE,UNMAPPED
+66,b4-katha-krishna-vishwaroop-darshan-leela,श्री कृष्ण का विराट विश्वरूप दर्शन (दिव्य चक्षु प्रदान),gyan,71,TIER_A,UNIQUE,UNMAPPED
+67,b4-katha-shiva-markandeya-ayushya-katha,भक्त मार्कंडेय की रक्षा एवं यमराज पर कालजयी शिव,leela,71,TIER_A,UNIQUE,UNMAPPED
+68,b5-katha-shiva-ganga-avataran-bhagiratha-tapa,गंगा अवतरण: भागीरथ की तपस्या और शिव की जटाओं में वेग समाना,leela,71,TIER_A,UNIQUE,UNMAPPED
+69,b6-katha-krishna-dvivada-vanara-vadh-balarama-b6,द्विविद वानर वध: बलराम जी द्वारा उत्पाती वानर का संहार,leela,71,TIER_A,UNIQUE,UNMAPPED
+70,katha-bhakta-kabir-samadhi-phool,संत कबीर महाप्रयाण: मगहर में देहत्याग एवं पुष्प प्राकट्य,gyan,70,TIER_A,UNIQUE,UNMAPPED
+71,katha-bhakta-ravidas-ganga-kangan,संत रविदास: 'मन चंगा तो कठौती में गंगा' व स्वर्ण कंगन,bhakti,70,TIER_A,UNIQUE,UNMAPPED
+72,katha-bhakta-shravan-kumar-pitribhakti,मातृ-पितृ भक्त श्रवण कुमार: आदर्श पितृभक्ति का अमर प्रसंग,gyan,70,TIER_A,UNIQUE,UNMAPPED
+73,katha-guru_sant-chaitanya-mahaprabhu-leela,श्री चैतन्य महाप्रभु एवं संकीर्तन आंदोलन का प्राकट्य,leela,70,TIER_A,UNIQUE,UNMAPPED
+74,katha-guru_sant-guru-nanak-kartarpur,श्री गुरु नानक देव जी: 'एक ओंकार सतनाम' एवं लंगर परंपरा,gyan,70,TIER_A,UNIQUE,UNMAPPED
+75,katha-guru_sant-sant-eknath-bhavarth-ramayan,संत एकनाथ: प्यासे गधे को गंगाजल पिलाने की पराकाष्ठा,gyan,70,TIER_A,UNIQUE,UNMAPPED
+76,katha-radharani-radhashtami-prakatya-katha,श्री राधा रानी प्राकट्य कथा (राधाष्टमी महात्म्य),leela,70,TIER_A,UNIQUE,UNMAPPED
+77,b2-katha-vishnu-parashurama-sahasrabahu,भगवान परशुराम अवतार: सहस्रबाहु अर्जुन वध व कामधेनु रक्षा,leela,70,TIER_A,UNIQUE,UNMAPPED
+78,b3-katha-vishnu-parashurama-avatar-sahasrabahu-vadh,भगवान परशुराम अवतार एवं सहस्रबाहु अर्जुन संहार,leela,70,TIER_A,UNIQUE,UNMAPPED
+79,b15-katha-shrimad-bhagavata-kalia-daman-leela-b15,श्रीमद्भागवत कालिय दमन एवं यमुना शुद्धि लीला (पंचदश कालिय दमन 15),leela,69,TIER_B,UNIQUE,UNMAPPED
+80,b2-katha-krishna-shanti-doot-mahabharata,महाभारत शांति दूत: दुर्योधन को चेतावनी व विराट रूप,gyan,69,TIER_B,UNIQUE,UNMAPPED
+81,b3-katha-krishna-geeta-updesh-vishwaroop-darshan,कुरुक्षेत्र में अर्जुन को श्रीमद्भगवद्गीता उपदेश एवं विश्वरूप दर्शन,leela,69,TIER_B,UNIQUE,UNMAPPED
+82,b4-katha-krishna-gajendra-moksha-bhagavata,गजेंद्र मोक्ष कथा (श्रीमद्भागवत अष्टम स्कंध),leela,69,TIER_B,UNIQUE,UNMAPPED
+83,b4-katha-krishna-geeta-upadesh-kurukshetra,कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश,gyan,69,TIER_B,UNIQUE,UNMAPPED
+84,b5-katha-krishna-kurukshetra-geeta-upadesh-sar,कुरुक्षेत्र में गीता उपदेश: मोह मुक्ति और कर्म का महामार्ग,leela,69,TIER_B,UNIQUE,UNMAPPED
+85,b16-katha-ramayana-shabari-bhakti-prem-b16,श्री रामचरितमानस शबरी भक्ति एवं नवधा भक्ति उपदेश (षोडश शबरी भक्ति 16),leela,67,TIER_B,UNIQUE,UNMAPPED
+86,b17-katha-ramayana-kewat-samvad-prem-b17,श्री रामचरितमानस केवट संवाद एवं निर्मल भक्ति प्रसंग (सप्तदश केवट संवाद 17),leela,67,TIER_B,UNIQUE,UNMAPPED
+87,b18-katha-ramayana-shabari-prem-bhakti-b18,श्री रामचरितमानस शबरी प्रेम एवं नवधा भक्ति प्रसंग (अष्टादश शबरी प्रेम 18),leela,67,TIER_B,UNIQUE,UNMAPPED
+88,b2-katha-durga-mahishasur-vadh-sampurna,मां दुर्गा द्वारा महिषासुर वध की संपूर्ण कथा,leela,67,TIER_B,UNIQUE,UNMAPPED
+89,b2-katha-ram-kewat-samvad-ganga-paar,श्री राम-केवट पावन संवाद एवं गंगा पार गमन,bhakti,67,TIER_B,UNIQUE,UNMAPPED
+90,b3-katha-durga-mahishasur-vadh-devi-mahatmya,मां दुर्गा द्वारा महिषासुर मर्दन एवं त्रिलोक रक्षा,leela,67,TIER_B,UNIQUE,UNMAPPED
+91,b4-katha-durga-mahisasura-vadh-katha,महिषासुर संहार एवं देवताओं के तेज से मां दुर्गा का प्राकट्य,leela,67,TIER_B,UNIQUE,UNMAPPED
+92,b4-katha-ram-jatayu-moksha-charitra,गीधराज जटायु का बलिदान एवं श्री राम द्वारा मोक्ष दान,leela,67,TIER_B,UNIQUE,UNMAPPED
+93,b4-katha-ram-shabari-navadha-bhakti-upadesh,शबरी कुटिया में श्री राम द्वारा नवधा भक्ति का अमर उपदेश,leela,67,TIER_B,UNIQUE,UNMAPPED
+94,b4-katha-shiva-shakti-peeth-utpatti-katha,51 शक्तिपीठों की उत्पत्ति एवं भगवान विष्णु का सुदर्शन चक्र,leela,67,TIER_B,UNIQUE,UNMAPPED
+95,b5-katha-durga-mahishasura-vadh-devi-durga,महिषासुर वध: समस्त देवताओं के तेज पुंज से मां दुर्गा का प्राकट्य,leela,67,TIER_B,UNIQUE,UNMAPPED
+96,b5-katha-ram-ahilya-uddhar-charan-sparsh,अहिल्या उद्धार: श्री राम चरण स्पर्श से पाषाण का नारी बनना,leela,67,TIER_B,UNIQUE,UNMAPPED
+97,b4-katha-khatushyam-barbareek-mahabharat-sheesh-daan,"महाभारत युद्ध, बर्बरीक का शीश दान एवं श्याम नाम वरदान",leela,66,TIER_B,UNIQUE,UNMAPPED
+98,b4-katha-lakshmi-samudra-manthan-prabhu-varan,महालक्ष्मी का प्राकट्य एवं भगवान विष्णु का वरण,leela,65,TIER_B,UNIQUE,UNMAPPED
+99,b15-katha-ramayana-setubandha-rameshwaram-b15,श्री रामचरितमानस सेतुबंध एवं रामेश्वर प्रतिष्ठा (पंचदश सेतुबंध 15),leela,64,TIER_B,UNIQUE,UNMAPPED
+100,b19-katha-krishna-sudama-dwarka-bhent-b19,द्वारका में सुदामा मिलन एवं तंदुल प्रीति कथा (एकोनविंशति सुदामा कथा 19),leela,64,TIER_B,UNIQUE,UNMAPPED
+101,b19-katha-ram-rajyabhisheka-avadh-mahima-b19,प्रभु श्री राम राज्याभिषेक एवं रामराज्य स्थापना कथा (एकोनविंशति अवध कथा 19),leela,64,TIER_B,UNIQUE,UNMAPPED
+102,b2-katha-bhakta-raja-shivi-kapot-raksha,राजा शिवि की कपोत (कबूतर) रक्षा: अपने मांस का तराजू दान,gyan,64,TIER_B,UNIQUE,UNMAPPED
+103,b2-katha-krishna-sudama-charitra-tandul,सुदामा चरित्र: तीन मुट्ठी चावल पर तीनों लोक अर्पण,bhakti,64,TIER_B,UNIQUE,UNMAPPED
+104,b2-katha-ram-dhanush-bhanga-parashuram,शिव धनुष भंग एवं श्री परशुराम-लक्ष्मण संवाद,leela,64,TIER_B,UNIQUE,UNMAPPED
+105,b2-katha-ram-janakpur-pushpa-vatika,जनकपुर पुष्प वाटिका एवं श्री सीता-राम प्रथम मिलन,leela,64,TIER_B,UNIQUE,UNMAPPED
+106,b2-katha-shiva-gangadhar-neelkantha,गंगाधर एवं नीलकंठ प्राकट्य: समुद्र मंथन हलाहल पान,leela,64,TIER_B,UNIQUE,UNMAPPED
+107,b2-katha-shiva-tripurasur-vadh-devadhidev,त्रिपुरासुर वध एवं महादेव 'त्रिपुरारि' प्राकट्य,leela,64,TIER_B,UNIQUE,UNMAPPED
+108,b20-ganesh-katha-b20-338,भगवान गणेश दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 338 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+109,b20-ganesh-katha-b20-398,भगवान गणेश दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 398 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+110,b20-ganesh-katha-b20-458,भगवान गणेश दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 458 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+111,b20-saraswati-katha-b20-077,मां सरस्वती लीला प्रसंग स्तुति संकीर्तन (विंशति पद 077 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+112,b20-saraswati-katha-b20-137,मां सरस्वती लीला प्रसंग स्तुति संकीर्तन (विंशति पद 137 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+113,b20-saraswati-katha-b20-197,मां सरस्वती लीला प्रसंग स्तुति संकीर्तन (विंशति पद 197 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+114,b20-saraswati-katha-b20-257,मां सरस्वती लीला प्रसंग स्तुति संकीर्तन (विंशति पद 257 - 20),leela,64,TIER_B,UNIQUE,UNMAPPED
+115,b3-katha-krishna-draupadi-cheer-haran-akshay-vastra,कुरु सभा में द्रौपदी चीर हरण एवं प्रभु का अक्षय वस्त्र दान,leela,64,TIER_B,UNIQUE,UNMAPPED
+116,b3-katha-ram-dhanush-yajna-sita-swayamvar,जनकपुर में धनुष भंग एवं श्री सीता-राम विवाह महोत्सव,leela,64,TIER_B,UNIQUE,UNMAPPED
+117,b3-katha-ram-kaikeyi-varadan-vanvaas-prasang,"मंथरा कुटिलता, कैकेयी के दो वरदान एवं राम वनवास",leela,64,TIER_B,UNIQUE,UNMAPPED
+118,b3-katha-ram-putreshti-yajna-ram-janma,राजा दशरथ का पुत्रेष्टि यज्ञ एवं श्री राम प्राकट्य कथा,leela,64,TIER_B,UNIQUE,UNMAPPED
+119,b3-katha-shiva-sati-daha-daksha-yajna-destructive-tandav,"दक्ष प्रजापति का यज्ञ, सती देह त्याग एवं वीरभद्र तांडव",leela,64,TIER_B,UNIQUE,UNMAPPED
+120,b3-katha-shiva-tripurasur-vadh-meru-dhanush,त्रिपुरासुर वध हेतु पृथ्वी को रथ और मेरु को धनुष बनाना,leela,64,TIER_B,UNIQUE,UNMAPPED
+121,b4-katha-ganesh-ekadanta-parashuram-katha,एकदंत स्वरूप की कथा (परशुराम जी के फरसे का सम्मान),leela,64,TIER_B,UNIQUE,UNMAPPED
+122,b4-katha-ganesh-parikrama-katha-pratham-poojya,माता-पिता की परिक्रमा एवं गणेश जी का प्रथम पूज्य बनना,leela,64,TIER_B,UNIQUE,UNMAPPED
+123,b4-katha-guru_sant-kabir-aur-ram-naam-diksha,संत कबीर और स्वामी रामानंद से पंचगंगा घाट पर राम नाम दीक्षा,leela,64,TIER_B,UNIQUE,UNMAPPED
+124,b4-katha-krishna-sudama-prem-bhent-leela,भक्त सुदामा की चावल पोटली एवं द्वारकाधीश का प्रेम,leela,64,TIER_B,UNIQUE,UNMAPPED
+125,b4-katha-ram-dhanush-yagya-aur-parashuram-samvad,जनकपुर धनुष भंग एवं श्री परशुराम-लक्ष्मण संवाद,leela,64,TIER_B,UNIQUE,UNMAPPED
+126,b4-katha-ram-jayant-katha-kripalu-shri-ram,जयंत का अपराध एवं कृपालु श्री राम द्वारा क्षमादान,leela,64,TIER_B,UNIQUE,UNMAPPED
+127,b4-katha-ram-setu-bandhan-nal-neel-leela,नल-नील द्वारा सेतु बंधन एवं राम नाम पत्थरों का तैरना,leela,64,TIER_B,UNIQUE,UNMAPPED
+128,b4-katha-ram-vibheeshana-sharanagati-katha,विभीषण शरणागति एवं प्रभु श्री राम का अभय वरदान,leela,64,TIER_B,UNIQUE,UNMAPPED
+129,b4-katha-shiva-kashi-mahima-aur-manikarnika,"काशी की उत्पत्ति, पंचक्रोशी परिक्रमा एवं मणिकर्णिका घाट",leela,64,TIER_B,UNIQUE,UNMAPPED
+130,b4-katha-shiva-tripurasur-vadh-katha,त्रिपुरासुर वध एवं महादेव का त्रिपुरारी नामकरण,leela,64,TIER_B,UNIQUE,UNMAPPED
+131,b5-katha-ganesh-pratham-pujya-parikrama-katha,गणेश जी की प्रथम पूजा: माता-पिता की परिक्रमा से ब्रह्मांड विजय,leela,64,TIER_B,UNIQUE,UNMAPPED
+132,b5-katha-krishna-draupadi-cheer-haran-raksha,द्रौपदी चीर हरण: कौरव सभा में अक्षय वस्त्र अवतार,leela,64,TIER_B,UNIQUE,UNMAPPED
+133,b5-katha-krishna-sudama-charitra-tundil-bhet,सुदामा चरित्र: दीन सुदामा की चावल भेंट और त्रैलोक्य दान,leela,64,TIER_B,UNIQUE,UNMAPPED
+134,b5-katha-ram-setu-nirman-nal-neel-pathar-tarana,रामेश्वरम सेतु निर्माण: नल-नील द्वारा पत्थरों को तैराना,leela,64,TIER_B,UNIQUE,UNMAPPED
+135,b5-katha-ram-vibhishan-sharanagati-abhay-dan,विभीषण शरणागति: रावण त्याग और श्री राम द्वारा लंकापति पद दान,leela,64,TIER_B,UNIQUE,UNMAPPED
+136,b5-katha-shiva-sati-deha-tyaga-daksha-yagya,दक्ष प्रजापति यज्ञ विध्वंस एवं माता सती का देह त्याग,leela,64,TIER_B,UNIQUE,UNMAPPED
+137,b5-katha-shiva-tripurasura-vadh-prithvi-ratha,त्रिपुरासुर वध: पृथ्वी का रथ और मेरु का धनुष बनाकर संहार,leela,64,TIER_B,UNIQUE,UNMAPPED
+138,b6-katha-ram-agastya-muni-divyastra-dhanush-dan-b6,अगस्त्य मुनि मिलन: श्री राम को वैष्णव धनुष एवं अक्षय तरकश दान,leela,64,TIER_B,UNIQUE,UNMAPPED
+139,b6-katha-ram-ahiravan-patal-prasang-hanuman-b6,अहिरावण पाताल प्रसंग: पाताल लोक में हनुमान जी द्वारा राम-लक्ष्मण मुक्ति,leela,64,TIER_B,UNIQUE,UNMAPPED
+140,b6-katha-ram-bharat-charitra-chitrakoot-b6,श्री भरत चरित्र: चित्रकूट में पादुका ग्रहण एवं नन्दिग्राम तपस्या,leela,64,TIER_B,UNIQUE,UNMAPPED
+141,b6-katha-ram-kakbhusundi-ram-charitra-katha-b6,काकभुशुण्डि जी द्वारा गरुड़ जी को सुनाई गई अमर रामकथा,leela,64,TIER_B,UNIQUE,UNMAPPED
+142,b6-katha-ram-mandodari-ravan-hitopadesh-b6,महारानी मंदोदरी का रावण को हितोपदेश: 'कंत राम बिरोध परिहरहू',leela,64,TIER_B,UNIQUE,UNMAPPED
+143,b9-katha-krishna-draupadi-cheer-haran-raksha-b9,द्रौपदी चीर हरण: 'हे गोविंद राखो लाज हमारी' और चीर का अखंड विस्तार,leela,64,TIER_B,UNIQUE,UNMAPPED
+144,b9-katha-krishna-sudama-charitra-prem-b9,सुदामा चरित्र: चार मुट्ठी तंदुल (चावल) और दो लोकों का ऐश्वर्य दान,leela,64,TIER_B,UNIQUE,UNMAPPED
+145,b2-katha-bhakta-prahlada-holika-dahan,भक्त प्रह्लाद एवं होलिका दहन (अग्नि में भी बाल न बांका),bhakti,63,TIER_B,UNIQUE,UNMAPPED
+146,b2-katha-bhakta-raja-bali-vamana-3-pag,राजा बलि एवं भगवान वामन: 3 पग में तीनों लोक नापना,leela,63,TIER_B,UNIQUE,UNMAPPED
+147,b3-katha-vishnu-narasimha-avatar-khambha-faad,भक्त प्रह्लाद की रक्षा हेतु भगवान नृसिंह का खंभा फाड़कर प्राकट्य,leela,63,TIER_B,UNIQUE,UNMAPPED
+148,b3-katha-vishnu-vamana-avatar-bali-daan,भगवान वामन अवतार एवं राजा बलि से तीन पग भूमि दान,leela,63,TIER_B,UNIQUE,UNMAPPED
+149,b4-katha-vishnu-narasimha-avatar-aur-prahlad,भगवान नृसिंह अवतार एवं भक्त प्रह्लाद की रक्षा,leela,63,TIER_B,UNIQUE,UNMAPPED
+150,b4-katha-vishnu-vamana-avatar-aur-bali,वामन अवतार एवं दानवीर महाराज बलि के तीन पग भूमि,leela,63,TIER_B,UNIQUE,UNMAPPED
+151,b11-katha-purana-prerak-prasang-01-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+152,b11-katha-purana-prerak-prasang-02-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+153,b11-katha-purana-prerak-prasang-03-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+154,b11-katha-purana-prerak-prasang-04-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+155,b11-katha-purana-prerak-prasang-05-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+156,b11-katha-purana-prerak-prasang-06-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+157,b11-katha-purana-prerak-prasang-07-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+158,b11-katha-purana-prerak-prasang-08-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+159,b11-katha-purana-prerak-prasang-09-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+160,b11-katha-purana-prerak-prasang-10-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+161,b11-katha-purana-prerak-prasang-11-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+162,b11-katha-purana-prerak-prasang-12-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+163,b11-katha-purana-prerak-prasang-13-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+164,b11-katha-purana-prerak-prasang-14-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+165,b11-katha-purana-prerak-prasang-15-b11,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत कथा 11),leela,62,TIER_B,UNIQUE,UNMAPPED
+166,b13-katha-purana-prerak-dhara-01-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+167,b13-katha-purana-prerak-dhara-02-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+168,b13-katha-purana-prerak-dhara-03-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+169,b13-katha-purana-prerak-dhara-04-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+170,b13-katha-purana-prerak-dhara-05-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+171,b13-katha-purana-prerak-dhara-06-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+172,b13-katha-purana-prerak-dhara-07-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+173,b13-katha-purana-prerak-dhara-08-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+174,b13-katha-purana-prerak-dhara-09-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+175,b13-katha-purana-prerak-dhara-10-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+176,b13-katha-purana-prerak-dhara-11-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+177,b13-katha-purana-prerak-dhara-12-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+178,b13-katha-purana-prerak-dhara-13-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+179,b13-katha-purana-prerak-dhara-14-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+180,b13-katha-purana-prerak-dhara-15-b13,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 13),leela,62,TIER_B,UNIQUE,UNMAPPED
+181,b14-katha-purana-prerak-dhara-01-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+182,b14-katha-purana-prerak-dhara-02-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+183,b14-katha-purana-prerak-dhara-03-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+184,b14-katha-purana-prerak-dhara-04-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+185,b14-katha-purana-prerak-dhara-05-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+186,b14-katha-purana-prerak-dhara-06-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+187,b14-katha-purana-prerak-dhara-07-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+188,b14-katha-purana-prerak-dhara-08-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+189,b14-katha-purana-prerak-dhara-09-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+190,b14-katha-purana-prerak-dhara-10-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+191,b14-katha-purana-prerak-dhara-11-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+192,b14-katha-purana-prerak-dhara-12-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+193,b14-katha-purana-prerak-dhara-13-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+194,b14-katha-purana-prerak-dhara-14-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+195,b14-katha-purana-prerak-dhara-15-b14,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 14),leela,62,TIER_B,UNIQUE,UNMAPPED
+196,b15-katha-purana-prerak-dhara-01-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+197,b15-katha-purana-prerak-dhara-02-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+198,b15-katha-purana-prerak-dhara-03-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+199,b15-katha-purana-prerak-dhara-04-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+200,b15-katha-purana-prerak-dhara-05-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+201,b15-katha-purana-prerak-dhara-06-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+202,b15-katha-purana-prerak-dhara-07-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+203,b15-katha-purana-prerak-dhara-08-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+204,b15-katha-purana-prerak-dhara-09-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+205,b15-katha-purana-prerak-dhara-10-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+206,b15-katha-purana-prerak-dhara-11-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+207,b15-katha-purana-prerak-dhara-12-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+208,b15-katha-purana-prerak-dhara-13-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+209,b15-katha-purana-prerak-dhara-14-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+210,b15-katha-purana-prerak-dhara-15-b15,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 15),leela,62,TIER_B,UNIQUE,UNMAPPED
+211,b16-katha-purana-prerak-dhara-01-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+212,b16-katha-purana-prerak-dhara-02-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+213,b16-katha-purana-prerak-dhara-03-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+214,b16-katha-purana-prerak-dhara-04-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+215,b16-katha-purana-prerak-dhara-05-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+216,b16-katha-purana-prerak-dhara-06-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+217,b16-katha-purana-prerak-dhara-07-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+218,b16-katha-purana-prerak-dhara-08-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+219,b16-katha-purana-prerak-dhara-09-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+220,b16-katha-purana-prerak-dhara-10-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+221,b16-katha-purana-prerak-dhara-11-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+222,b16-katha-purana-prerak-dhara-12-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+223,b16-katha-purana-prerak-dhara-13-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+224,b16-katha-purana-prerak-dhara-14-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+225,b16-katha-purana-prerak-dhara-15-b16,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 16),leela,62,TIER_B,UNIQUE,UNMAPPED
+226,b17-katha-purana-prerak-dhara-01-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+227,b17-katha-purana-prerak-dhara-02-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+228,b17-katha-purana-prerak-dhara-03-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+229,b17-katha-purana-prerak-dhara-04-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+230,b17-katha-purana-prerak-dhara-05-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+231,b17-katha-purana-prerak-dhara-06-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+232,b17-katha-purana-prerak-dhara-07-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+233,b17-katha-purana-prerak-dhara-08-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+234,b17-katha-purana-prerak-dhara-09-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+235,b17-katha-purana-prerak-dhara-10-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+236,b17-katha-purana-prerak-dhara-11-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+237,b17-katha-purana-prerak-dhara-12-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+238,b17-katha-purana-prerak-dhara-13-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+239,b17-katha-purana-prerak-dhara-14-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+240,b17-katha-purana-prerak-dhara-15-b17,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17),leela,62,TIER_B,UNIQUE,UNMAPPED
+241,b18-katha-purana-prerak-dhara-01-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+242,b18-katha-purana-prerak-dhara-02-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+243,b18-katha-purana-prerak-dhara-03-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+244,b18-katha-purana-prerak-dhara-04-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+245,b18-katha-purana-prerak-dhara-05-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+246,b18-katha-purana-prerak-dhara-06-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+247,b18-katha-purana-prerak-dhara-07-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+248,b18-katha-purana-prerak-dhara-08-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+249,b18-katha-purana-prerak-dhara-09-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+250,b18-katha-purana-prerak-dhara-10-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+251,b18-katha-purana-prerak-dhara-11-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+252,b18-katha-purana-prerak-dhara-12-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+253,b18-katha-purana-prerak-dhara-13-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+254,b18-katha-purana-prerak-dhara-14-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+255,b18-katha-purana-prerak-dhara-15-b18,सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अष्टादश प्रसंग 18),leela,62,TIER_B,UNIQUE,UNMAPPED
+256,b19-corpus19-hanuman-katha-127,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 127),leela,61,TIER_B,UNIQUE,UNMAPPED
+257,b19-corpus19-hanuman-katha-128,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 128),leela,61,TIER_B,UNIQUE,UNMAPPED
+258,b19-corpus19-hanuman-katha-129,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 129),leela,61,TIER_B,UNIQUE,UNMAPPED
+259,b19-corpus19-hanuman-katha-130,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 130),leela,61,TIER_B,UNIQUE,UNMAPPED
+260,b19-corpus19-hanuman-katha-131,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 131),leela,61,TIER_B,UNIQUE,UNMAPPED
+261,b19-corpus19-hanuman-katha-132,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 132),leela,61,TIER_B,UNIQUE,UNMAPPED
+262,b19-corpus19-hanuman-katha-133,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 133),leela,61,TIER_B,UNIQUE,UNMAPPED
+263,b19-corpus19-hanuman-katha-134,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 134),leela,61,TIER_B,UNIQUE,UNMAPPED
+264,b19-corpus19-hanuman-katha-135,हनुमत लंका दहन पावन कथा (एकोनविंशति पद 135),leela,61,TIER_B,UNIQUE,UNMAPPED
+265,b2-katha-hanuman-ahravana-vadh-patala,अहिरावण वध एवं पाताल लोक विजय,leela,61,TIER_B,UNIQUE,UNMAPPED
+266,b2-katha-hanuman-dronagiri-parvat-udaran,द्रोणागिरि पर्वत उखाड़ना एवं कालनेमि संहार,leela,61,TIER_B,UNIQUE,UNMAPPED
+267,b2-katha-krishna-kalia-naag-daman,कालिया नाग दमन लीला (यमुना जल विष मुक्ति),leela,61,TIER_B,UNIQUE,UNMAPPED
+268,b2-katha-krishna-kansa-vadh-ugrasen-raj,कंस वध एवं महाराज उग्रसेन का राज्याभिषेक,leela,61,TIER_B,UNIQUE,UNMAPPED
+269,b2-katha-krishna-makhan-chori-ukhal-bandhan,माखन चोरी एवं यमलार्जुन मोक्ष (ऊखल बंधन लीला),leela,61,TIER_B,UNIQUE,UNMAPPED
+270,b2-katha-krishna-putana-moksha-leela,पूतना मोक्ष लीला: विषपान कराने वाली राक्षसी को मातृगति,leela,61,TIER_B,UNIQUE,UNMAPPED
+271,b2-katha-pauranik-chandra-shapa-somnath,चंद्रमा का क्षय रोग एवं सोमनाथ ज्योतिर्लिंग प्राकट्य,leela,61,TIER_B,UNIQUE,UNMAPPED
+272,b2-katha-shiva-andhakasur-vadh,अंधकासुर वध एवं मातृकाओं का प्राकट्य,leela,61,TIER_B,UNIQUE,UNMAPPED
+273,b2-katha-shiva-bhasmasur-mohini-lila,भस्मासुर मोहिनी प्रसंग: अहंकार का स्वतः विनाश,leela,61,TIER_B,UNIQUE,UNMAPPED
+274,b3-katha-hanuman-ahiravan-vadh-patal-vijay-b3,पाताल लोक में अहिरावण वध एवं मकरध्वज से पावन मिलन,leela,61,TIER_B,UNIQUE,UNMAPPED
+275,b3-katha-hanuman-sanjivani-parvat-drona-uthana,लक्ष्मण शक्ति बाण मूर्छा एवं द्रोणागिरि पर्वत संजीवनी लाना,leela,61,TIER_B,UNIQUE,UNMAPPED
+276,b3-katha-hanuman-surya-gras-balpan-leela,बाल्यकाल में सूर्य को फल समझकर मुख में रखना एवं देव वरदान,leela,61,TIER_B,UNIQUE,UNMAPPED
+277,b3-katha-krishna-dwarka-nagari-samudra-nirman,विश्वकर्मा द्वारा समुद्र मध्य स्वर्णमयी द्वारका निर्माण,leela,61,TIER_B,UNIQUE,UNMAPPED
+278,b3-katha-krishna-kansa-vadh-mathura-vijay,"धनुष यज्ञ, कुवलयापीड-चाणूर वध एवं कंस वध कथा",leela,61,TIER_B,UNIQUE,UNMAPPED
+279,b3-katha-krishna-maha-raas-leela-sharad-purnima,शरद पूर्णिमा महारास लीला एवं जीवात्मा-परमात्मा मिलन,leela,61,TIER_B,UNIQUE,UNMAPPED
+280,b3-katha-krishna-shishupal-vadh-sudarshana-chakra,राजसूय यज्ञ में शिशुपाल के 100 अपराध क्षमा व सुदर्शन चक्र वध,leela,61,TIER_B,UNIQUE,UNMAPPED
+281,b3-katha-krishna-yamalarjuna-bhanjan-damodar,ऊखल बंधन एवं यमलार्जुन वृक्षों का दिव्य उद्धार,leela,61,TIER_B,UNIQUE,UNMAPPED
+282,b3-katha-shiva-samudra-manthan-neelkanth-mahadev,समुद्र मंथन में हलाहल विष पान एवं नीलकंठ महादेव,leela,61,TIER_B,UNIQUE,UNMAPPED
+283,b4-katha-krishna-kalia-mardan-yamuna-tat,कालिया नाग दमन एवं यमुना जी का पावन विष-मुक्ति प्रसंग,leela,61,TIER_B,UNIQUE,UNMAPPED
+284,b4-katha-krishna-kansa-vadh-mathura-leela,"मथुरा आगमन, कुब्जा उद्धार, धनुषभंग एवं कंस वध",leela,61,TIER_B,UNIQUE,UNMAPPED
+285,b4-katha-krishna-rasa-lila-sharad-purnima,शरद पूर्णिमा महारास लीला एवं वंशीवट का दिव्य नृत्य,leela,61,TIER_B,UNIQUE,UNMAPPED
+286,b4-katha-shiva-samudra-manthan-neelkanth-katha,"समुद्र मंथन, कालकूट हलाहल विष एवं नीलकंठ महादेव",leela,61,TIER_B,UNIQUE,UNMAPPED
+287,b5-katha-krishna-bhagavad-gita-virat-roop-darshan,कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन,leela,61,TIER_B,UNIQUE,UNMAPPED
+288,b5-katha-krishna-kalyavan-vadh-muchukunda,कालयवन वध एवं राजा मुचुकुंद की दृष्टि से भस्म होना,leela,61,TIER_B,UNIQUE,UNMAPPED
+289,b5-katha-krishna-kansa-vadh-mathura-vijay,"कंस वध: मथुरा में धनुष यज्ञ, कुवलयापीड़ और चाणूर संहार",leela,61,TIER_B,UNIQUE,UNMAPPED
+290,b5-katha-krishna-putana-vadh-stana-pana,पूतना वध: विषैले स्तनपान से राक्षसी का उद्धार और मातृ पद,leela,61,TIER_B,UNIQUE,UNMAPPED
+291,b5-katha-krishna-rasa-leela-maha-rasa-sharad,शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य,leela,61,TIER_B,UNIQUE,UNMAPPED
+292,b5-katha-krishna-shishupal-vadh-sudarshan-chakra,शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के बाद सुदर्शन प्रहार,leela,61,TIER_B,UNIQUE,UNMAPPED
+293,b5-katha-krishna-yamalarjuna-bhanjan-damodara,दामोदर लीला एवं यमलार्जुन वृक्षों का उद्धार,leela,61,TIER_B,UNIQUE,UNMAPPED
+294,b5-katha-shiva-samudra-manthan-vishpaan-neelkanth,समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव,leela,61,TIER_B,UNIQUE,UNMAPPED
+295,b6-katha-krishna-draupadi-akshaya-patra-durvasa-b6,अक्षय पात्र लीला: दुर्वासा मुनि के कोप से पांडवों की रक्षा,leela,61,TIER_B,UNIQUE,UNMAPPED
+296,b6-katha-krishna-jarasandha-vadh-bhima-malla-yuddha-b6,जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला,leela,61,TIER_B,UNIQUE,UNMAPPED
+297,b6-katha-krishna-kuvalayapida-hathi-vadh-mathura-b6,कुवलयापीड़ हाथी वध: मथुरा रंगशाला के द्वार पर शक्ति प्रदर्शन,leela,61,TIER_B,UNIQUE,UNMAPPED
+298,b6-katha-krishna-narakasura-vadh-16100-kanya-b6,"नरकासुर वध एवं 16,100 राजकुमारियों का कारागार से उद्धार",leela,61,TIER_B,UNIQUE,UNMAPPED
+299,b6-katha-krishna-rukmini-haran-rukmi-parabhava-b6,रुक्मिणी हरण एवं भाई रुक्मी का मुंडन व अहंकार मर्दन,leela,61,TIER_B,UNIQUE,UNMAPPED
+300,b6-katha-krishna-satyabhama-parijata-vriksha-b6,सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण,leela,61,TIER_B,UNIQUE,UNMAPPED
+301,b6-katha-krishna-shishupala-vadh-rajasuya-b6,शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के उपरांत सुदर्शन चक्र प्रहार,leela,61,TIER_B,UNIQUE,UNMAPPED
+302,b6-katha-krishna-sudarshan-chakra-garva-bhanjan-b6,"सुदर्शन चक्र, गरुड़ एवं सत्यभामा का संयुक्त गर्व मर्दन",leela,61,TIER_B,UNIQUE,UNMAPPED
+303,b6-katha-krishna-syamantaka-mani-jambavan-yuddha-b6,स्यमंतक मणि चोरी कलंक एवं जाम्बवान संग 28 दिन युद्ध,leela,61,TIER_B,UNIQUE,UNMAPPED
+304,b6-katha-krishna-uddhava-gopi-samvad-bhramar-geet-b6,उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय,leela,61,TIER_B,UNIQUE,UNMAPPED
+305,b9-katha-shiva-samudra-manthan-neelkanth-b9,समुद्र मंथन और नीलकंठ महादेव: हलाहल विष का पान और जगत रक्षा,leela,61,TIER_B,UNIQUE,UNMAPPED
+306,b2-katha-bhakta-ambarisha-durvasa-sudarshana,राजा अंबरीष एवं दुर्वासा ऋषि: भक्त की रक्षा में सुदर्शन चक्र,bhakti,60,TIER_B,UNIQUE,UNMAPPED
+307,b2-katha-pauranik-samudra-manthan-vish-amrit,समुद्र मंथन की संपूर्ण गाथा: मंदराचल व वासुकि नाग,leela,60,TIER_B,UNIQUE,UNMAPPED
+308,b2-katha-vishnu-kurma-avatar-mandarachal,भगवान कूर्म (कच्छप) अवतार एवं मंदराचल पर्वत पीठ,leela,60,TIER_B,UNIQUE,UNMAPPED
+309,b2-katha-vishnu-matsya-avatar-satyavrata,भगवान मत्स्य अवतार एवं राजा सत्यव्रत (मनु) नौका रक्षा,leela,60,TIER_B,UNIQUE,UNMAPPED
+310,b20-shanidev-katha-b20-326,भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20),leela,60,TIER_B,UNIQUE,UNMAPPED
+311,b20-shanidev-katha-b20-386,भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20),leela,60,TIER_B,UNIQUE,UNMAPPED
+312,b20-shanidev-katha-b20-446,भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20),leela,60,TIER_B,UNIQUE,UNMAPPED
+313,b3-katha-vishnu-kurma-avatar-mandarachal-katha,कूर्म अवतार एवं समुद्र मंथन में मंदराचल पर्वत को पीठ पर धारण,leela,60,TIER_B,UNIQUE,UNMAPPED
+314,b3-katha-vishnu-matsya-avatar-manu-ved-raksha,"भगवान मत्स्य अवतार, सत्यव्रत मनु एवं वेदों की रक्षा",leela,60,TIER_B,UNIQUE,UNMAPPED
+315,b3-katha-vishnu-varaha-avatar-hiranyaksha-vadh,भगवान वराह अवतार एवं रसातल से पृथ्वी का उद्धार,leela,60,TIER_B,UNIQUE,UNMAPPED
+316,b4-katha-shani-janma-aur-surya-shani-samvad,"शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति",leela,60,TIER_B,UNIQUE,UNMAPPED
+317,b4-katha-vishnu-kurma-avatar-mandarachal,कूर्म अवतार एवं मंदराचल पर्वत की पीठ पर धारण कथा,leela,60,TIER_B,UNIQUE,UNMAPPED
+318,b2-katha-durga-parvati-panchagni-tapasya,मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण),leela,57,TIER_B,UNIQUE,UNMAPPED
+319,b2-katha-ram-bharat-paduka-chitrakoot,चित्रकूट में भरत मिलाप एवं चरण पादुका ग्रहण,bhakti,57,TIER_B,UNIQUE,UNMAPPED
+320,b2-katha-ram-shabari-navadha-bhakti,माता शबरी की कुटिया में प्रभु आगमन व नवधा भक्ति उपदेश,bhakti,57,TIER_B,UNIQUE,UNMAPPED
+321,b3-katha-general-raja-harishchandra-satya-pariksha,सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट,leela,57,TIER_B,UNIQUE,UNMAPPED
+322,b3-katha-ram-ahilya-uddhar-charanamrit,गौतम मुनि पत्नी अहिल्या का पावन चरणामृत उद्धार,leela,57,TIER_B,UNIQUE,UNMAPPED
+323,b3-katha-ram-bharat-milap-chitrakoot-prasang,चित्रकूट में भरत मिलाप एवं चरण पादुका दान,leela,57,TIER_B,UNIQUE,UNMAPPED
+324,b3-katha-ram-guha-milan-ganga-par-kevata,निषादराज गुह मिलन एवं केवट की अनन्य भक्ति कथा,leela,57,TIER_B,UNIQUE,UNMAPPED
+325,b4-katha-ram-ahilya-udhar-katha-gautam-shrap,अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग,leela,57,TIER_B,UNIQUE,UNMAPPED
+326,b4-katha-ram-kevat-samvad-saryu-ganga-tat,केवट प्रेम संवाद एवं प्रभु का चरणामृत पान प्रसंग,leela,57,TIER_B,UNIQUE,UNMAPPED
+327,b4-katha-surya-aruna-aur-saptaashva-katha,सूर्य देव के सारथी अरुण एवं सात घोड़ों का रहस्य,leela,57,TIER_B,UNIQUE,UNMAPPED
+328,b5-katha-ram-bharat-milap-chitrakoot-prema,चित्रकूट में भरत मिलाप: पादुका अर्पण और भ्रातृ प्रेम,leela,57,TIER_B,UNIQUE,UNMAPPED
+329,b5-katha-ram-dhanush-yagya-sita-swayamvar,धनुष यज्ञ एवं सीता स्वयंवर: पिनाक भंजन प्रसंग,leela,57,TIER_B,UNIQUE,UNMAPPED
+330,b5-katha-ram-jatayu-moksha-antyeshti-katha,जटायु मोक्ष: माता सीता की रक्षा में बलिदान और प्रभु द्वारा अंत्येष्टि,leela,57,TIER_B,UNIQUE,UNMAPPED
+331,b5-katha-ram-kewat-samvad-ganga-par-leela,केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला,leela,57,TIER_B,UNIQUE,UNMAPPED
+332,b5-katha-ram-kumbhakaran-meghnad-ravan-vadh,"मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय",leela,57,TIER_B,UNIQUE,UNMAPPED
+333,b6-katha-ram-kewat-samvad-charanamrit-b6,केवट संवाद: श्रृंगवेरपुर में चरण धोने की पावन लीला और उतराई,leela,57,TIER_B,UNIQUE,UNMAPPED
+334,b6-katha-ram-kumbhakaran-jagran-yuddha-b6,कुंभकर्ण जागरण एवं भाई रावण को अंतिम उपदेश प्रसंग,leela,57,TIER_B,UNIQUE,UNMAPPED
+335,b6-katha-ram-shabari-milan-aranya-kanda-b6,अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर,leela,57,TIER_B,UNIQUE,UNMAPPED
+336,b6-katha-ram-sulochana-sati-prasang-b6,सती सुलोचना प्रसंग: मेघनाद की पत्नी का पतिव्रत धर्म और शीश प्राप्ति,leela,57,TIER_B,UNIQUE,UNMAPPED
+337,b9-katha-ram-ahilya-uddhar-charanamrit-b9,अहिल्या उद्धार कथा: पाषाण शिला से नारी बनी गौतम पत्नी,leela,57,TIER_B,UNIQUE,UNMAPPED
+338,b9-katha-ram-shabari-ke-ber-bhakti-sar-b9,शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा,leela,57,TIER_B,UNIQUE,UNMAPPED
+339,b10-katha-pauranik-prasang-leela-01-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 01 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+340,b10-katha-pauranik-prasang-leela-02-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 02 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+341,b10-katha-pauranik-prasang-leela-03-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 03 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+342,b10-katha-pauranik-prasang-leela-04-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 04 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+343,b10-katha-pauranik-prasang-leela-05-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 05 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+344,b10-katha-pauranik-prasang-leela-06-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 06 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+345,b10-katha-pauranik-prasang-leela-07-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 07 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+346,b10-katha-pauranik-prasang-leela-08-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 08 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+347,b10-katha-pauranik-prasang-leela-09-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 09 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+348,b10-katha-pauranik-prasang-leela-10-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 10 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+349,b10-katha-pauranik-prasang-leela-11-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 11 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+350,b10-katha-pauranik-prasang-leela-12-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 12 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+351,b10-katha-pauranik-prasang-leela-13-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 13 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+352,b10-katha-pauranik-prasang-leela-14-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 14 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+353,b10-katha-pauranik-prasang-leela-15-b10,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 15 (सत्य प्रसंग 10),leela,54,TIER_B,UNIQUE,UNMAPPED
+354,b12-katha-pauranik-prasang-leela-dhara-01-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 01 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+355,b12-katha-pauranik-prasang-leela-dhara-02-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 02 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+356,b12-katha-pauranik-prasang-leela-dhara-03-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 03 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+357,b12-katha-pauranik-prasang-leela-dhara-04-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 04 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+358,b12-katha-pauranik-prasang-leela-dhara-05-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 05 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+359,b12-katha-pauranik-prasang-leela-dhara-06-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 06 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+360,b12-katha-pauranik-prasang-leela-dhara-07-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 07 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+361,b12-katha-pauranik-prasang-leela-dhara-08-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 08 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+362,b12-katha-pauranik-prasang-leela-dhara-09-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 09 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+363,b12-katha-pauranik-prasang-leela-dhara-10-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 10 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+364,b12-katha-pauranik-prasang-leela-dhara-11-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 11 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+365,b12-katha-pauranik-prasang-leela-dhara-12-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 12 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+366,b12-katha-pauranik-prasang-leela-dhara-13-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 13 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+367,b12-katha-pauranik-prasang-leela-dhara-14-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 14 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+368,b12-katha-pauranik-prasang-leela-dhara-15-b12,सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 15 (सत्य प्रसंग 12),leela,54,TIER_B,UNIQUE,UNMAPPED
+369,b2-katha-bhakta-dadhichi-asthi-daan,महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण),gyan,54,TIER_B,UNIQUE,UNMAPPED
+370,b2-katha-bhakta-yudhishthir-swargarohan,महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग,gyan,54,TIER_B,UNIQUE,UNMAPPED
+371,b2-katha-durga-shumbha-nishumbha-raktabeej,शुंभ-निशुंभ एवं रक्तबीज संहार कथा,leela,54,TIER_B,UNIQUE,UNMAPPED
+372,b2-katha-ram-lakshman-shakti-sanjivani,लक्ष्मण शक्ति प्रसंग एवं संजीवनी बूटी आगमन,leela,54,TIER_B,UNIQUE,UNMAPPED
+373,b2-katha-ram-tadaka-ahilya-uddhar,ताड़का वध एवं अहल्या पाषाण उद्धार प्रसंग,leela,54,TIER_B,UNIQUE,UNMAPPED
+374,b2-katha-ram-vibheeshana-sharanagati,विभीषण शरणागति: 'सकृदेव प्रपन्नाय' अभयदान,bhakti,54,TIER_B,UNIQUE,UNMAPPED
+375,b20-guru_sant-katha-b20-350,सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+376,b20-guru_sant-katha-b20-410,सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+377,b20-guru_sant-katha-b20-470,सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+378,b20-other_deities-katha-b20-089,देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+379,b20-other_deities-katha-b20-149,देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+380,b20-other_deities-katha-b20-209,देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+381,b20-other_deities-katha-b20-269,देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+382,b20-radharani-katha-b20-302,श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+383,b20-radharani-katha-b20-362,श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+384,b20-radharani-katha-b20-422,श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+385,b20-radharani-katha-b20-482,श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+386,b20-santoshi-katha-b20-101,मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+387,b20-santoshi-katha-b20-161,मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+388,b20-santoshi-katha-b20-221,मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+389,b20-santoshi-katha-b20-281,मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+390,b20-yamuna-katha-b20-125,मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+391,b20-yamuna-katha-b20-185,मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+392,b20-yamuna-katha-b20-245,मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20),leela,54,TIER_B,UNIQUE,UNMAPPED
+393,b3-katha-durga-chamunda-devi-chanda-munda-vadh,मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार,leela,54,TIER_B,UNIQUE,UNMAPPED
+394,b3-katha-durga-jwala-devi-akbar-chhatra-leela,मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन,leela,54,TIER_B,UNIQUE,UNMAPPED
+395,b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh,शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप),leela,54,TIER_B,UNIQUE,UNMAPPED
+396,b3-katha-durga-vaishno-devi-bhairav-nath-moksha,मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा,leela,54,TIER_B,UNIQUE,UNMAPPED
+397,b3-katha-ram-golden-deer-maricha-sita-haran,स्वर्ण मृग मारीच एवं लंकापति रावण द्वारा सीता हरण,leela,54,TIER_B,UNIQUE,UNMAPPED
+398,b3-katha-ram-panchavati-jatayu-milan-shurpanakha,"पंचवटी वास, शूर्पणखा प्रसंग एवं खर-दूषण वध",leela,54,TIER_B,UNIQUE,UNMAPPED
+399,b3-katha-ram-ravana-vadh-lanka-vijay-rajyabhishek,"महाबली रावण वध, लंका विजय एवं भव्य राज्याभिषेक",leela,54,TIER_B,UNIQUE,UNMAPPED
+400,b3-katha-ram-tadaka-subahu-vadh-yajna-raksha,विश्वामित्र यज्ञ रक्षा एवं ताड़का-सुबाहु वध कथा,leela,54,TIER_B,UNIQUE,UNMAPPED
+401,b4-katha-durga-chanda-munda-vadh-chamunda,चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण,leela,54,TIER_B,UNIQUE,UNMAPPED
+402,b4-katha-durga-shumbha-nishumbha-vadh-katha,"शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव",leela,54,TIER_B,UNIQUE,UNMAPPED
+403,b4-katha-ram-bharat-charitra-paduka-pujan,भरत जी का त्याग एवं चित्रकूट में पादुका पूजन प्रसंग,leela,54,TIER_B,UNIQUE,UNMAPPED
+404,b4-katha-ram-ganga-avtaran-katha-shri-ram,गंगा अवतरण एवं महाराज भगीरथ की तपस्या कथा,leela,54,TIER_B,UNIQUE,UNMAPPED
+405,b4-katha-ram-tadaka-vadh-aur-vishvamitra-yagya,ताड़का वध एवं महर्षि विश्वामित्र का पावन यज्ञ रक्षा प्रसंग,leela,54,TIER_B,UNIQUE,UNMAPPED
+406,b5-katha-durga-shumbha-nishumbha-vadh-kaushiki,शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप,leela,54,TIER_B,UNIQUE,UNMAPPED
+407,b5-katha-durga-vaishno-devi-bhairavnath-katha,मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य,leela,54,TIER_B,UNIQUE,UNMAPPED
+408,b5-katha-ram-sugreev-mitrata-bali-vadh,"सुग्रीव मित्रता, बालि वध एवं वानर सेना संगठन",leela,54,TIER_B,UNIQUE,UNMAPPED
+409,b5-katha-ram-uttara-kanda-lav-kush-ashwamedha,लव-कुश जन्म एवं अश्वमेध यज्ञ का अश्व रोकना,leela,54,TIER_B,UNIQUE,UNMAPPED
+410,b5-katha-ram-valmiki-ashram-sita-tyaga-katha,वाल्मीकि आश्रम में माता सीता का वास एवं पावन चरित्र,leela,54,TIER_B,UNIQUE,UNMAPPED
+411,b6-katha-ram-rishyasringa-putrakameshti-yagya-b6,ऋष्यशृंग मुनि एवं दशरथ पुत्रकामेष्टि यज्ञ प्रसंग,leela,54,TIER_B,UNIQUE,UNMAPPED

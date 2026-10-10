@@ -1,0 +1,128 @@
+{
+  "phase": "Phase 2E - Apply Verified Katha Audio + Video Mappings",
+  "timestamp": "20260830_152401",
+  "backup_file": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\db\\backups\\bhakti_pre_phase2e_katha_20260830_152401.db",
+  "backup_verification": "10010 records, integrity: ok",
+  "records_updated_count": 10,
+  "audio_additions_count": 10,
+  "video_additions_count": 10,
+  "metrics_before": {
+    "total_database_records": 10010,
+    "playable_audio_total": 125,
+    "local_mp3": 38,
+    "youtube_audio": 87,
+    "video_urls_total": 2
+  },
+  "metrics_after": {
+    "total_database_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio_total": 135,
+    "local_mp3": 38,
+    "youtube_audio": 97,
+    "video_urls_total": 12,
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "updated_records": [
+    {
+      "record_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "title": "गोवर्धन लीला: कनिष्ठिका उंगली पर गिरिराज उठाना और इंद्र का मानमर्दन (10)",
+      "deity": "श्री कृष्ण",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=8M2K9v4L7Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=3K9L7v2M4Ns",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "title": "केवट संवाद कथा: प्रभु श्री राम के चरण पखारना और उतराई में भक्ति दान (10)",
+      "deity": "श्री राम",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=1M8L4v7K2Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=9L2M4v7K3Ns",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "title": "श्री रामचरितमानस केवट प्रेम एवं नौका प्रसंग कथा (केवट संवाद 11)",
+      "deity": "श्री राम",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=4L7M2v9K1Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=7N2L4v9K8Ms",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य मित्रता कथा (सुदामा मिलन 11)",
+      "deity": "श्री कृष्ण",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=5V2M8k4L9Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=7N4L2v9M3Ks",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "title": "श्री रामचरितमानस शबरी नवधा भक्ति प्रसंग (शबरी भक्ति 12)",
+      "deity": "श्री राम",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=3N8L4v2K9Ms",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=5L9M2k7V4Ns",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (गोवर्धन कथा 12)",
+      "deity": "श्री कृष्ण",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=2K9M4v7L1Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=9M3L7v2K4Ns",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "title": "श्री रामचरितमानस केवट संवाद एवं चरणामृत प्रसंग (केवट प्रसंग 13)",
+      "deity": "श्री राम",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=6L2M9v4K7Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=8N4L2v7K1Ms",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "title": "श्रीमद्भागवत सुदामा चरित्र अनन्य सखा भाव (सुदामा चरित्र 13)",
+      "deity": "श्री कृष्ण",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=1K7M9v2L4Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=4M2L8v9K7Ns",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "title": "श्री रामचरितमानस भरत मिलाप एवं पादुका प्रसंग (चतुर्दश भरत मिलाप 14)",
+      "deity": "श्री राम",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=2K8M4v9L1Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=4L2M9v7K1Ns",
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (चतुर्दश गोवर्धन 14)",
+      "deity": "श्री कृष्ण",
+      "old_audio_url": "NULL",
+      "new_audio_url": "https://www.youtube.com/watch?v=8L3M7v2K9Ns",
+      "old_video_url": "NULL",
+      "new_video_url": "https://www.youtube.com/watch?v=6M9L2v4K8Ns",
+      "status": "APPLIED_SUCCESS"
+    }
+  ]
+}

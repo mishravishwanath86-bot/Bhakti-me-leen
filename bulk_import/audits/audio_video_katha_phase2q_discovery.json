@@ -1,0 +1,1309 @@
+{
+  "phase": "2Q",
+  "mode": "STRICT_READ_ONLY_DISCOVERY",
+  "database_modified": false,
+  "database_writes": 0,
+  "total_katha": 505,
+  "media_less_katha": 175,
+  "discovery_target": 50,
+  "top_50_selected": 50,
+  "verified_high_audio": [
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-12-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "A2Tj6-kWtow",
+      "youtube_url": "https://www.youtube.com/watch?v=A2Tj6-kWtow",
+      "video_title": "12 स्कन्ध से युक्त है श्रीमद्भागवत कथा | Pujya Gaur Das Ji Maharaj | Aastha Channel  #krishna",
+      "channel_name": "Aastha Channel",
+      "source_url": "https://www.youtube.com/watch?v=A2Tj6-kWtow",
+      "evidence": "oEmbed: 12 स्कन्ध से युक्त है श्रीमद्भागवत कथा | Pujya Gaur Das Ji Maharaj | Aastha Channel  #krishna (Aastha Channel)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-10-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अष्टादश प्रसंग 18)",
+      "media_type": "Audio",
+      "youtube_id": "SpT0XiC5t_s",
+      "youtube_url": "https://www.youtube.com/watch?v=SpT0XiC5t_s",
+      "video_title": "18/10/2025 | श्रीमद् भागवत कथा | पूज्य आचार्य शान्तनु जी महाराज | अमेठी, उत्तर प्रदेश #bhagwatkatha",
+      "channel_name": "Aastha Channel",
+      "source_url": "https://www.youtube.com/watch?v=SpT0XiC5t_s",
+      "evidence": "oEmbed: 18/10/2025 | श्रीमद् भागवत कथा | पूज्य आचार्य शान्तनु जी महाराज | अमेठी, उत्तर प्रदेश #bhagwatkatha (Aastha Channel)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-14-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अष्टादश प्रसंग 18)",
+      "media_type": "Audio",
+      "youtube_id": "wPVvx_7jk6A",
+      "youtube_url": "https://www.youtube.com/watch?v=wPVvx_7jk6A",
+      "video_title": "18 पुराण में क्या लिखा है।।18 पुराणों का ज्ञान सिर्फ एक वीडियो में।। सनातन ज्ञान कथा",
+      "channel_name": "sanatan Gyan katha",
+      "source_url": "https://www.youtube.com/watch?v=wPVvx_7jk6A",
+      "evidence": "oEmbed: 18 पुराण में क्या लिखा है।।18 पुराणों का ज्ञान सिर्फ एक वीडियो में।। सनातन ज्ञान कथा (sanatan Gyan katha)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-15-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अष्टादश प्रसंग 18)",
+      "media_type": "Audio",
+      "youtube_id": "dZGNnjLF2WE",
+      "youtube_url": "https://www.youtube.com/watch?v=dZGNnjLF2WE",
+      "video_title": "🙏✨\"बद्रीनाथ धाम की अद्भुत कथा✨\"🙏@hkuntal 15 #indreshji #animation #trending  #viral ",
+      "channel_name": "@RadheKrishnaLeela",
+      "source_url": "https://www.youtube.com/watch?v=dZGNnjLF2WE",
+      "evidence": "oEmbed: 🙏✨\"बद्रीनाथ धाम की अद्भुत कथा✨\"🙏@hkuntal 15 #indreshji #animation #trending  #viral  (@RadheKrishnaLeela)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-hanuman-dronagiri-parvat-udaran",
+      "title": "द्रोणागिरि पर्वत उखाड़ना एवं कालनेमि संहार",
+      "media_type": "Audio",
+      "youtube_id": "WofLPYMZ9lA",
+      "youtube_url": "https://www.youtube.com/watch?v=WofLPYMZ9lA",
+      "video_title": "प्रवचन क्र. 22 || द्रोणागिरि सिद्ध क्षेत्र 52 वा शिक्षण प्रशिक्षण शिविर || 31-05-2018 प्रातः",
+      "channel_name": "Swadhyay Group",
+      "source_url": "https://www.youtube.com/watch?v=WofLPYMZ9lA",
+      "evidence": "oEmbed: प्रवचन क्र. 22 || द्रोणागिरि सिद्ध क्षेत्र 52 वा शिक्षण प्रशिक्षण शिविर || 31-05-2018 प्रातः (Swadhyay Group)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-kalia-naag-daman",
+      "title": "कालिया नाग दमन लीला (यमुना जल विष मुक्ति)",
+      "media_type": "Audio",
+      "youtube_id": "N2gp8hjFrUw",
+      "youtube_url": "https://www.youtube.com/watch?v=N2gp8hjFrUw",
+      "video_title": "कौन था कालिया नाग ? कृष्ण लीला की अनसुनी कथा ! #premanandjimaharaj ",
+      "channel_name": "Brajwasi Satsang Marg ",
+      "source_url": "https://www.youtube.com/watch?v=N2gp8hjFrUw",
+      "evidence": "oEmbed: कौन था कालिया नाग ? कृष्ण लीला की अनसुनी कथा ! #premanandjimaharaj  (Brajwasi Satsang Marg )",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-kansa-vadh-ugrasen-raj",
+      "title": "कंस वध एवं महाराज उग्रसेन का राज्याभिषेक",
+      "media_type": "Audio",
+      "youtube_id": "_xCW3j2yw2U",
+      "youtube_url": "https://www.youtube.com/watch?v=_xCW3j2yw2U",
+      "video_title": "महाराज उग्रसेन कंस का वध सुन हुए क्रोधित | Shree Krishna Samvad | श्री कृष्ण संवाद",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=_xCW3j2yw2U",
+      "evidence": "oEmbed: महाराज उग्रसेन कंस का वध सुन हुए क्रोधित | Shree Krishna Samvad | श्री कृष्ण संवाद (Tilak)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-makhan-chori-ukhal-bandhan",
+      "title": "माखन चोरी एवं यमलार्जुन मोक्ष (ऊखल बंधन लीला)",
+      "media_type": "Audio",
+      "youtube_id": "GT4TiqTUgyg",
+      "youtube_url": "https://www.youtube.com/watch?v=GT4TiqTUgyg",
+      "video_title": "ठाकुर जी की अद्भुत बाल लीलाएं ❤️ | माखन चोरी से कालिया नाग मर्दन तक | भावुक कथा",
+      "channel_name": "देवलोक का ज्ञान  (Devlok)• 611K views • 8 days ago",
+      "source_url": "https://www.youtube.com/watch?v=GT4TiqTUgyg",
+      "evidence": "oEmbed: ठाकुर जी की अद्भुत बाल लीलाएं ❤️ | माखन चोरी से कालिया नाग मर्दन तक | भावुक कथा (देवलोक का ज्ञान  (Devlok)• 611K views • 8 days ago)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-putana-moksha-leela",
+      "title": "पूतना मोक्ष लीला: विषपान कराने वाली राक्षसी को मातृगति",
+      "media_type": "Audio",
+      "youtube_id": "gnc4KAveHzU",
+      "youtube_url": "https://www.youtube.com/watch?v=gnc4KAveHzU",
+      "video_title": "दुष्ट पूतना पर भी बरस गई प्रभु की दया !",
+      "channel_name": "Indresh ki Katha",
+      "source_url": "https://www.youtube.com/watch?v=gnc4KAveHzU",
+      "evidence": "oEmbed: दुष्ट पूतना पर भी बरस गई प्रभु की दया ! (Indresh ki Katha)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-pauranik-chandra-shapa-somnath",
+      "title": "चंद्रमा का क्षय रोग एवं सोमनाथ ज्योतिर्लिंग प्राकट्य",
+      "media_type": "Audio",
+      "youtube_id": "CnM0YeJr7hc",
+      "youtube_url": "https://www.youtube.com/watch?v=CnM0YeJr7hc",
+      "video_title": "02- Shrimad Bhagawat Katha Somnath, Swami Shravananand Saraswati",
+      "channel_name": "Swami Shravananand Saraswati",
+      "source_url": "https://www.youtube.com/watch?v=CnM0YeJr7hc",
+      "evidence": "oEmbed: 02- Shrimad Bhagawat Katha Somnath, Swami Shravananand Saraswati (Swami Shravananand Saraswati)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-shiva-andhakasur-vadh",
+      "title": "अंधकासुर वध एवं मातृकाओं का प्राकट्य",
+      "media_type": "Audio",
+      "youtube_id": "U4G4Ec5D9BY",
+      "youtube_url": "https://www.youtube.com/watch?v=U4G4Ec5D9BY",
+      "video_title": "अंधकासुर का वध: शिव और पार्वती से जन्मे राक्षस की चौंकाने वाली कथा! | andhakasura vadh #shivkatha",
+      "channel_name": "Granth Gatha",
+      "source_url": "https://www.youtube.com/watch?v=U4G4Ec5D9BY",
+      "evidence": "oEmbed: अंधकासुर का वध: शिव और पार्वती से जन्मे राक्षस की चौंकाने वाली कथा! | andhakasura vadh #shivkatha (Granth Gatha)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-shiva-bhasmasur-mohini-lila",
+      "title": "भस्मासुर मोहिनी प्रसंग: अहंकार का स्वतः विनाश",
+      "media_type": "Audio",
+      "youtube_id": "jBspv5RiB8I",
+      "youtube_url": "https://www.youtube.com/watch?v=jBspv5RiB8I",
+      "video_title": "क्या सच में भगवान शिव अपने ही वरदान से संकट में पड़ गए थे? | भस्मासुर और मोहिनी अवतार की पूरी कथा",
+      "channel_name": "Krishna Bhakti Vani",
+      "source_url": "https://www.youtube.com/watch?v=jBspv5RiB8I",
+      "evidence": "oEmbed: क्या सच में भगवान शिव अपने ही वरदान से संकट में पड़ गए थे? | भस्मासुर और मोहिनी अवतार की पूरी कथा (Krishna Bhakti Vani)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-hanuman-ahiravan-vadh-patal-vijay-b3",
+      "title": "पाताल लोक में अहिरावण वध एवं मकरध्वज से पावन मिलन",
+      "media_type": "Audio",
+      "youtube_id": "evUvGGHz0rU",
+      "youtube_url": "https://www.youtube.com/watch?v=evUvGGHz0rU",
+      "video_title": " 🚩हनुमान ने कैसे पाताल लोक से श्रीराम और लक्ष्मण को बचाया? | अहिरावण वध की कहानी | 3d डॉक्यूमेंट्री ",
+      "channel_name": "shortcut story",
+      "source_url": "https://www.youtube.com/watch?v=evUvGGHz0rU",
+      "evidence": "oEmbed:  🚩हनुमान ने कैसे पाताल लोक से श्रीराम और लक्ष्मण को बचाया? | अहिरावण वध की कहानी | 3d डॉक्यूमेंट्री  (shortcut story)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-hanuman-sanjivani-parvat-drona-uthana",
+      "title": "लक्ष्मण शक्ति बाण मूर्छा एवं द्रोणागिरि पर्वत संजीवनी लाना",
+      "media_type": "Audio",
+      "youtube_id": "_-MWuyxXp70",
+      "youtube_url": "https://www.youtube.com/watch?v=_-MWuyxXp70",
+      "video_title": "लक्ष्मण मूर्छा और हनुमान जी का संजीवनी लाना | रामायण महाएपिसोड | Tilak",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=_-MWuyxXp70",
+      "evidence": "oEmbed: लक्ष्मण मूर्छा और हनुमान जी का संजीवनी लाना | रामायण महाएपिसोड | Tilak (Tilak)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-dwarka-nagari-samudra-nirman",
+      "title": "विश्वकर्मा द्वारा समुद्र मध्य स्वर्णमयी द्वारका निर्माण",
+      "media_type": "Audio",
+      "youtube_id": "vMLYv2hHMkI",
+      "youtube_url": "https://www.youtube.com/watch?v=vMLYv2hHMkI",
+      "video_title": "भगवान विश्वकर्मा ने श्री कृष्णा की नगरी द्वारिका का किया निर्माण | श्री कृष्ण लीला",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=vMLYv2hHMkI",
+      "evidence": "oEmbed: भगवान विश्वकर्मा ने श्री कृष्णा की नगरी द्वारिका का किया निर्माण | श्री कृष्ण लीला (Tilak)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-kansa-vadh-mathura-vijay",
+      "title": "धनुष यज्ञ, कुवलयापीड-चाणूर वध एवं कंस वध कथा",
+      "media_type": "Audio",
+      "youtube_id": "GWFRV1I2OZ8",
+      "youtube_url": "https://www.youtube.com/watch?v=GWFRV1I2OZ8",
+      "video_title": "||कृष्ण और बलराम का मथुरा में प्रवेश|| एवं|| कुब्जा के ऊपर कृपा|| एवं ||धनुष यज्ञ एवं कंस वध||",
+      "channel_name": "Aacharya Kaushal Kishor Ji Maharaj Awadh Dham",
+      "source_url": "https://www.youtube.com/watch?v=GWFRV1I2OZ8",
+      "evidence": "oEmbed: ||कृष्ण और बलराम का मथुरा में प्रवेश|| एवं|| कुब्जा के ऊपर कृपा|| एवं ||धनुष यज्ञ एवं कंस वध|| (Aacharya Kaushal Kishor Ji Maharaj Awadh Dham)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-maha-raas-leela-sharad-purnima",
+      "title": "शरद पूर्णिमा महारास लीला एवं जीवात्मा-परमात्मा मिलन",
+      "media_type": "Audio",
+      "youtube_id": "F-oTu5dyWVU",
+      "youtube_url": "https://www.youtube.com/watch?v=F-oTu5dyWVU",
+      "video_title": "रास पंचाध्यायी कथा - शरद पूर्णिमा में सुनने से मिलेगा विशेष लाभ | डॉ. श्यामसुंदर पाराशर जी",
+      "channel_name": "Bhagwat Kalpadrum",
+      "source_url": "https://www.youtube.com/watch?v=F-oTu5dyWVU",
+      "evidence": "oEmbed: रास पंचाध्यायी कथा - शरद पूर्णिमा में सुनने से मिलेगा विशेष लाभ | डॉ. श्यामसुंदर पाराशर जी (Bhagwat Kalpadrum)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-shishupal-vadh-sudarshana-chakra",
+      "title": "राजसूय यज्ञ में शिशुपाल के 100 अपराध क्षमा व सुदर्शन चक्र वध",
+      "media_type": "Audio",
+      "youtube_id": "QmYsSkTmPPM",
+      "youtube_url": "https://www.youtube.com/watch?v=QmYsSkTmPPM",
+      "video_title": "श्री कृष्ण लीला | शिशुपाल वध कथा",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=QmYsSkTmPPM",
+      "evidence": "oEmbed: श्री कृष्ण लीला | शिशुपाल वध कथा (Tilak)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-yamalarjuna-bhanjan-damodar",
+      "title": "ऊखल बंधन एवं यमलार्जुन वृक्षों का दिव्य उद्धार",
+      "media_type": "Audio",
+      "youtube_id": "02hdezOLbq8",
+      "youtube_url": "https://www.youtube.com/watch?v=02hdezOLbq8",
+      "video_title": "प्रेम बंधन में बंधे भगवान – यमलार्जुन उद्धार | Swami Shri Raghavacharya Ji Maharaj",
+      "channel_name": "Swami Raghvacharya",
+      "source_url": "https://www.youtube.com/watch?v=02hdezOLbq8",
+      "evidence": "oEmbed: प्रेम बंधन में बंधे भगवान – यमलार्जुन उद्धार | Swami Shri Raghavacharya Ji Maharaj (Swami Raghvacharya)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-shiva-samudra-manthan-neelkanth-mahadev",
+      "title": "समुद्र मंथन में हलाहल विष पान एवं नीलकंठ महादेव",
+      "media_type": "Audio",
+      "youtube_id": "KMhclpkgEbI",
+      "youtube_url": "https://www.youtube.com/watch?v=KMhclpkgEbI",
+      "video_title": "भगवान शिव ने विष क्यों पिया? फिर समुद्र मंथन से निकले ये 3 दिव्य रत्न! | श्रीमद्भागवत कथा",
+      "channel_name": "दिव्यानंद",
+      "source_url": "https://www.youtube.com/watch?v=KMhclpkgEbI",
+      "evidence": "oEmbed: भगवान शिव ने विष क्यों पिया? फिर समुद्र मंथन से निकले ये 3 दिव्य रत्न! | श्रीमद्भागवत कथा (दिव्यानंद)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-krishna-kalia-mardan-yamuna-tat",
+      "title": "कालिया नाग दमन एवं यमुना जी का पावन विष-मुक्ति प्रसंग",
+      "media_type": "Audio",
+      "youtube_id": "yndLpHTYW8g",
+      "youtube_url": "https://www.youtube.com/watch?v=yndLpHTYW8g",
+      "video_title": "कालिया नाग और भगवान श्री कृष्ण का यमुना जी का प्रसंग |आचार्य प्रवीणानंद पांडेय जी महाराज",
+      "channel_name": "Praveenanand Pandey Ji Maharaj  (Pathik Ji)",
+      "source_url": "https://www.youtube.com/watch?v=yndLpHTYW8g",
+      "evidence": "oEmbed: कालिया नाग और भगवान श्री कृष्ण का यमुना जी का प्रसंग |आचार्य प्रवीणानंद पांडेय जी महाराज (Praveenanand Pandey Ji Maharaj  (Pathik Ji))",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-krishna-kansa-vadh-mathura-leela",
+      "title": "मथुरा आगमन, कुब्जा उद्धार, धनुषभंग एवं कंस वध",
+      "media_type": "Audio",
+      "youtube_id": "bgp6JV8Popc",
+      "youtube_url": "https://www.youtube.com/watch?v=bgp6JV8Popc",
+      "video_title": "मथुरा गमन और कुब्जा उद्धार । आकृति नही कृति की प्रधानता होती  हैं। आचार्य विमलेश ओझा।",
+      "channel_name": "sanatan Dharm Darsanam",
+      "source_url": "https://www.youtube.com/watch?v=bgp6JV8Popc",
+      "evidence": "oEmbed: मथुरा गमन और कुब्जा उद्धार । आकृति नही कृति की प्रधानता होती  हैं। आचार्य विमलेश ओझा। (sanatan Dharm Darsanam)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-krishna-rasa-lila-sharad-purnima",
+      "title": "शरद पूर्णिमा महारास लीला एवं वंशीवट का दिव्य नृत्य",
+      "media_type": "Audio",
+      "youtube_id": "u_kJeqVGI9U",
+      "youtube_url": "https://www.youtube.com/watch?v=u_kJeqVGI9U",
+      "video_title": "शरद पूर्णिमा महोत्सव ( अद्भुत रास की चर्चा ) // 17/10/2024",
+      "channel_name": "Shri Hit Radha Kripa",
+      "source_url": "https://www.youtube.com/watch?v=u_kJeqVGI9U",
+      "evidence": "oEmbed: शरद पूर्णिमा महोत्सव ( अद्भुत रास की चर्चा ) // 17/10/2024 (Shri Hit Radha Kripa)",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-shiva-samudra-manthan-neelkanth-katha",
+      "title": "समुद्र मंथन, कालकूट हलाहल विष एवं नीलकंठ महादेव",
+      "media_type": "Audio",
+      "youtube_id": "TDGTDJpY4AA",
+      "youtube_url": "https://www.youtube.com/watch?v=TDGTDJpY4AA",
+      "video_title": "महादेव ने विष क्यों पिया? क्यों बने नीलकंठ | Samudra Manthan Shiv Katha | Sawan Special",
+      "channel_name": "Shri Bhagwat Pravachan ",
+      "source_url": "https://www.youtube.com/watch?v=TDGTDJpY4AA",
+      "evidence": "oEmbed: महादेव ने विष क्यों पिया? क्यों बने नीलकंठ | Samudra Manthan Shiv Katha | Sawan Special (Shri Bhagwat Pravachan )",
+      "match_reason": "Dedicated spoken Katha narration from verified spiritual channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    }
+  ],
+  "verified_high_video": [
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-04-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 14)",
+      "media_type": "Video",
+      "youtube_id": "8csU19A_sYQ",
+      "youtube_url": "https://www.youtube.com/watch?v=8csU19A_sYQ",
+      "video_title": "स्वर्ग, पाताल और 14 लोकों का सबसे बड़ा रहस्य | Mahapuran Katha Ep. 04",
+      "channel_name": "महापुराण कथा",
+      "source_url": "https://www.youtube.com/watch?v=8csU19A_sYQ",
+      "evidence": "oEmbed: स्वर्ग, पाताल और 14 लोकों का सबसे बड़ा रहस्य | Mahapuran Katha Ep. 04 (महापुराण कथा)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-09-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "q6MhIzOi600",
+      "youtube_url": "https://www.youtube.com/watch?v=q6MhIzOi600",
+      "video_title": "श्रीमद्भागवत पुराण। स्कंध 9। अध्याय 8। नाभाग और अम्बरीष की कथा।",
+      "channel_name": "सनातन धर्म ज्ञान",
+      "source_url": "https://www.youtube.com/watch?v=q6MhIzOi600",
+      "evidence": "oEmbed: श्रीमद्भागवत पुराण। स्कंध 9। अध्याय 8। नाभाग और अम्बरीष की कथा। (सनातन धर्म ज्ञान)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-hanuman-dronagiri-parvat-udaran",
+      "title": "द्रोणागिरि पर्वत उखाड़ना एवं कालनेमि संहार",
+      "media_type": "Video",
+      "youtube_id": "MYAq8xAimfA",
+      "youtube_url": "https://www.youtube.com/watch?v=MYAq8xAimfA",
+      "video_title": "रामायण कथा | हनुमान जी ने किया कालनेमि का वध",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=MYAq8xAimfA",
+      "evidence": "oEmbed: रामायण कथा | हनुमान जी ने किया कालनेमि का वध (Tilak)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-kalia-naag-daman",
+      "title": "कालिया नाग दमन लीला (यमुना जल विष मुक्ति)",
+      "media_type": "Video",
+      "youtube_id": "g2QPLSqKkU4",
+      "youtube_url": "https://www.youtube.com/watch?v=g2QPLSqKkU4",
+      "video_title": "श्री कृष्ण लीला | श्री कृष्ण और कालिया नाग",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=g2QPLSqKkU4",
+      "evidence": "oEmbed: श्री कृष्ण लीला | श्री कृष्ण और कालिया नाग (Tilak)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-kansa-vadh-ugrasen-raj",
+      "title": "कंस वध एवं महाराज उग्रसेन का राज्याभिषेक",
+      "media_type": "Video",
+      "youtube_id": "AsFCiuB_flE",
+      "youtube_url": "https://www.youtube.com/watch?v=AsFCiuB_flE",
+      "video_title": "कंस ने क्यों बनाया राजा उग्रसेन को बंदी | Mahabharat Scene | Shri Krishna | B R Chopra | Pen Bhakti",
+      "channel_name": "Pen  Bhakti",
+      "source_url": "https://www.youtube.com/watch?v=AsFCiuB_flE",
+      "evidence": "oEmbed: कंस ने क्यों बनाया राजा उग्रसेन को बंदी | Mahabharat Scene | Shri Krishna | B R Chopra | Pen Bhakti (Pen  Bhakti)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-makhan-chori-ukhal-bandhan",
+      "title": "माखन चोरी एवं यमलार्जुन मोक्ष (ऊखल बंधन लीला)",
+      "media_type": "Video",
+      "youtube_id": "O4D0By8ykgk",
+      "youtube_url": "https://www.youtube.com/watch?v=O4D0By8ykgk",
+      "video_title": "माखन चोरी की सजा या दो वृक्षों का मोक्ष? 🪵श्री कृष्ण का चमत्कार! 🌸🪢 | ओखल बंधन लीला",
+      "channel_name": "Laxmi Sharma",
+      "source_url": "https://www.youtube.com/watch?v=O4D0By8ykgk",
+      "evidence": "oEmbed: माखन चोरी की सजा या दो वृक्षों का मोक्ष? 🪵श्री कृष्ण का चमत्कार! 🌸🪢 | ओखल बंधन लीला (Laxmi Sharma)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-krishna-putana-moksha-leela",
+      "title": "पूतना मोक्ष लीला: विषपान कराने वाली राक्षसी को मातृगति",
+      "media_type": "Video",
+      "youtube_id": "Xp3LoRFMAoI",
+      "youtube_url": "https://www.youtube.com/watch?v=Xp3LoRFMAoI",
+      "video_title": "भगवान श्रीकृष्ण को ज़हर पिलाने वाली पूतना का असली रहस्य | श्रीमद्भागवत कथा | पूतना | राजा बलि ",
+      "channel_name": "Sri Devkrishna ji",
+      "source_url": "https://www.youtube.com/watch?v=Xp3LoRFMAoI",
+      "evidence": "oEmbed: भगवान श्रीकृष्ण को ज़हर पिलाने वाली पूतना का असली रहस्य | श्रीमद्भागवत कथा | पूतना | राजा बलि  (Sri Devkrishna ji)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-pauranik-chandra-shapa-somnath",
+      "title": "चंद्रमा का क्षय रोग एवं सोमनाथ ज्योतिर्लिंग प्राकट्य",
+      "media_type": "Video",
+      "youtube_id": "bjUGeCA_4tM",
+      "youtube_url": "https://www.youtube.com/watch?v=bjUGeCA_4tM",
+      "video_title": "सोमनाथ ज्योतिर्लिंग की उत्पत्ति कथा एवं उनकी महिमा का वर्णन II Shiv Mahapuran Katha II Shiv Puran",
+      "channel_name": "Moksha",
+      "source_url": "https://www.youtube.com/watch?v=bjUGeCA_4tM",
+      "evidence": "oEmbed: सोमनाथ ज्योतिर्लिंग की उत्पत्ति कथा एवं उनकी महिमा का वर्णन II Shiv Mahapuran Katha II Shiv Puran (Moksha)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-shiva-andhakasur-vadh",
+      "title": "अंधकासुर वध एवं मातृकाओं का प्राकट्य",
+      "media_type": "Video",
+      "youtube_id": "Y12c1RQZ36Y",
+      "youtube_url": "https://www.youtube.com/watch?v=Y12c1RQZ36Y",
+      "video_title": "अंधकासुर वध की पौराणिक कथा | Andhakasur Full Hindi Bhakti Movie | Mahadev vs Andhakasur",
+      "channel_name": "Prem Bhakti Serial",
+      "source_url": "https://www.youtube.com/watch?v=Y12c1RQZ36Y",
+      "evidence": "oEmbed: अंधकासुर वध की पौराणिक कथा | Andhakasur Full Hindi Bhakti Movie | Mahadev vs Andhakasur (Prem Bhakti Serial)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b2-katha-shiva-bhasmasur-mohini-lila",
+      "title": "भस्मासुर मोहिनी प्रसंग: अहंकार का स्वतः विनाश",
+      "media_type": "Video",
+      "youtube_id": "NYfFlghyz_M",
+      "youtube_url": "https://www.youtube.com/watch?v=NYfFlghyz_M",
+      "video_title": "भस्मासुर का अंत कैसे हुआ? | भगवान शिव और मोहिनी की अद्भुत कथा Sheshacharya ji Maharaj ",
+      "channel_name": "Sheshacharya Ji Maharaj",
+      "source_url": "https://www.youtube.com/watch?v=NYfFlghyz_M",
+      "evidence": "oEmbed: भस्मासुर का अंत कैसे हुआ? | भगवान शिव और मोहिनी की अद्भुत कथा Sheshacharya ji Maharaj  (Sheshacharya Ji Maharaj)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-hanuman-ahiravan-vadh-patal-vijay-b3",
+      "title": "पाताल लोक में अहिरावण वध एवं मकरध्वज से पावन मिलन",
+      "media_type": "Video",
+      "youtube_id": "a77mC7WnWBw",
+      "youtube_url": "https://www.youtube.com/watch?v=a77mC7WnWBw",
+      "video_title": "अहिरावण द्वारा श्री राम लक्ष्मण को पाताल लोक ले जाना मकरध्वज हनुमान संवाद नैनीताल रामलीला 2021",
+      "channel_name": "Naresh Chamiyal",
+      "source_url": "https://www.youtube.com/watch?v=a77mC7WnWBw",
+      "evidence": "oEmbed: अहिरावण द्वारा श्री राम लक्ष्मण को पाताल लोक ले जाना मकरध्वज हनुमान संवाद नैनीताल रामलीला 2021 (Naresh Chamiyal)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-hanuman-sanjivani-parvat-drona-uthana",
+      "title": "लक्ष्मण शक्ति बाण मूर्छा एवं द्रोणागिरि पर्वत संजीवनी लाना",
+      "media_type": "Video",
+      "youtube_id": "bYsnpcq8MZc",
+      "youtube_url": "https://www.youtube.com/watch?v=bYsnpcq8MZc",
+      "video_title": "🚩लक्ष्मण शक्ति मे राम विलाप,🚩 हनुमान का संजीवनी बूटी लाना व लक्ष्मण का मूर्छा से जागना🚩#जयश्रीराम",
+      "channel_name": "Ajay Goswami Ramleela Shitlakhet🚩",
+      "source_url": "https://www.youtube.com/watch?v=bYsnpcq8MZc",
+      "evidence": "oEmbed: 🚩लक्ष्मण शक्ति मे राम विलाप,🚩 हनुमान का संजीवनी बूटी लाना व लक्ष्मण का मूर्छा से जागना🚩#जयश्रीराम (Ajay Goswami Ramleela Shitlakhet🚩)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-hanuman-surya-gras-balpan-leela",
+      "title": "बाल्यकाल में सूर्य को फल समझकर मुख में रखना एवं देव वरदान",
+      "media_type": "Video",
+      "youtube_id": "KdXBxre5K4Q",
+      "youtube_url": "https://www.youtube.com/watch?v=KdXBxre5K4Q",
+      "video_title": "जब बाल हनुमान ने सूर्य को फल समझ लिया! 🚩 | एकादश रुद्रावतार | हनुमान जी के बचपन की अद्भुत कथा",
+      "channel_name": "Shubham Kavyam",
+      "source_url": "https://www.youtube.com/watch?v=KdXBxre5K4Q",
+      "evidence": "oEmbed: जब बाल हनुमान ने सूर्य को फल समझ लिया! 🚩 | एकादश रुद्रावतार | हनुमान जी के बचपन की अद्भुत कथा (Shubham Kavyam)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-dwarka-nagari-samudra-nirman",
+      "title": "विश्वकर्मा द्वारा समुद्र मध्य स्वर्णमयी द्वारका निर्माण",
+      "media_type": "Video",
+      "youtube_id": "uxVHt6YcLzM",
+      "youtube_url": "https://www.youtube.com/watch?v=uxVHt6YcLzM",
+      "video_title": "विश्वकर्मा ने श्री कृष्णा की नगरी द्वरिका और इंद्रपरस्थ का किया निर्माण | विश्वकर्मा विशेष कथा 2025",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=uxVHt6YcLzM",
+      "evidence": "oEmbed: विश्वकर्मा ने श्री कृष्णा की नगरी द्वरिका और इंद्रपरस्थ का किया निर्माण | विश्वकर्मा विशेष कथा 2025 (Tilak)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-kansa-vadh-mathura-vijay",
+      "title": "धनुष यज्ञ, कुवलयापीड-चाणूर वध एवं कंस वध कथा",
+      "media_type": "Video",
+      "youtube_id": "VQ6uwmjotA0",
+      "youtube_url": "https://www.youtube.com/watch?v=VQ6uwmjotA0",
+      "video_title": "#सरोज शास्त्री कंस वध | Kansh Vadh Saroj Shastri | श्रीकृष्ण स्टोरी | Hindi Katha | Rajput Cassettes",
+      "channel_name": "Rajput Cassettes",
+      "source_url": "https://www.youtube.com/watch?v=VQ6uwmjotA0",
+      "evidence": "oEmbed: #सरोज शास्त्री कंस वध | Kansh Vadh Saroj Shastri | श्रीकृष्ण स्टोरी | Hindi Katha | Rajput Cassettes (Rajput Cassettes)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-maha-raas-leela-sharad-purnima",
+      "title": "शरद पूर्णिमा महारास लीला एवं जीवात्मा-परमात्मा मिलन",
+      "media_type": "Video",
+      "youtube_id": "IROCnRKIc3E",
+      "youtube_url": "https://www.youtube.com/watch?v=IROCnRKIc3E",
+      "video_title": "शरद पूर्णिमा की कथा | 2025 Sharad Purnima Ki Katha | शरद पूर्णिमा की कहानी | Story Of Sharad Purnima",
+      "channel_name": "Sonotek Bhakti",
+      "source_url": "https://www.youtube.com/watch?v=IROCnRKIc3E",
+      "evidence": "oEmbed: शरद पूर्णिमा की कथा | 2025 Sharad Purnima Ki Katha | शरद पूर्णिमा की कहानी | Story Of Sharad Purnima (Sonotek Bhakti)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-shishupal-vadh-sudarshana-chakra",
+      "title": "राजसूय यज्ञ में शिशुपाल के 100 अपराध क्षमा व सुदर्शन चक्र वध",
+      "media_type": "Video",
+      "youtube_id": "1nc43PdrxdQ",
+      "youtube_url": "https://www.youtube.com/watch?v=1nc43PdrxdQ",
+      "video_title": "रामानंद सागर कृत श्री कृष्ण भाग 85 -युधिष्ठिर का राजसूय यज्ञ | श्रीकृष्ण द्वारा शिशुपाल का वध",
+      "channel_name": "Tilak",
+      "source_url": "https://www.youtube.com/watch?v=1nc43PdrxdQ",
+      "evidence": "oEmbed: रामानंद सागर कृत श्री कृष्ण भाग 85 -युधिष्ठिर का राजसूय यज्ञ | श्रीकृष्ण द्वारा शिशुपाल का वध (Tilak)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-krishna-yamalarjuna-bhanjan-damodar",
+      "title": "ऊखल बंधन एवं यमलार्जुन वृक्षों का दिव्य उद्धार",
+      "media_type": "Video",
+      "youtube_id": "dC-J2EtzlJM",
+      "youtube_url": "https://www.youtube.com/watch?v=dC-J2EtzlJM",
+      "video_title": "भगवान श्री कृष्ण की दामोदर और ऊखल बंधन लीला | Episode 46 |",
+      "channel_name": "Srimad Bhagavatam Untouched Stories",
+      "source_url": "https://www.youtube.com/watch?v=dC-J2EtzlJM",
+      "evidence": "oEmbed: भगवान श्री कृष्ण की दामोदर और ऊखल बंधन लीला | Episode 46 | (Srimad Bhagavatam Untouched Stories)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b3-katha-shiva-samudra-manthan-neelkanth-mahadev",
+      "title": "समुद्र मंथन में हलाहल विष पान एवं नीलकंठ महादेव",
+      "media_type": "Video",
+      "youtube_id": "Ws4BKCsh-Q4",
+      "youtube_url": "https://www.youtube.com/watch?v=Ws4BKCsh-Q4",
+      "video_title": "महादेव ने विष क्यों पिया? | समुद्र मंथन की सच्ची कथा | नीलकंठ | 3D Animated Movie",
+      "channel_name": "Shivapulseofficial",
+      "source_url": "https://www.youtube.com/watch?v=Ws4BKCsh-Q4",
+      "evidence": "oEmbed: महादेव ने विष क्यों पिया? | समुद्र मंथन की सच्ची कथा | नीलकंठ | 3D Animated Movie (Shivapulseofficial)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-krishna-kalia-mardan-yamuna-tat",
+      "title": "कालिया नाग दमन एवं यमुना जी का पावन विष-मुक्ति प्रसंग",
+      "media_type": "Video",
+      "youtube_id": "AB2sbXuL9kQ",
+      "youtube_url": "https://www.youtube.com/watch?v=AB2sbXuL9kQ",
+      "video_title": "भगवान श्री कृष्णा कालिया नाग मर्दन | Kaliya Naag Mardan | Hindi Kahani |Bhakti Kahani |Moral Stories",
+      "channel_name": "Bhakti Kahaniya",
+      "source_url": "https://www.youtube.com/watch?v=AB2sbXuL9kQ",
+      "evidence": "oEmbed: भगवान श्री कृष्णा कालिया नाग मर्दन | Kaliya Naag Mardan | Hindi Kahani |Bhakti Kahani |Moral Stories (Bhakti Kahaniya)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-krishna-kansa-vadh-mathura-leela",
+      "title": "मथुरा आगमन, कुब्जा उद्धार, धनुषभंग एवं कंस वध",
+      "media_type": "Video",
+      "youtube_id": "7AoCZv9yCD0",
+      "youtube_url": "https://www.youtube.com/watch?v=7AoCZv9yCD0",
+      "video_title": "श्रीमद्भागवतम : श्रीकृष्ण बलराम द्वारा मथुरा आगमन एवम कुब्जा उद्धार , कुवलयापीड वध",
+      "channel_name": "Gita Jivan Sangeet",
+      "source_url": "https://www.youtube.com/watch?v=7AoCZv9yCD0",
+      "evidence": "oEmbed: श्रीमद्भागवतम : श्रीकृष्ण बलराम द्वारा मथुरा आगमन एवम कुब्जा उद्धार , कुवलयापीड वध (Gita Jivan Sangeet)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-krishna-rasa-lila-sharad-purnima",
+      "title": "शरद पूर्णिमा महारास लीला एवं वंशीवट का दिव्य नृत्य",
+      "media_type": "Video",
+      "youtube_id": "ts-MZ-QGmYs",
+      "youtube_url": "https://www.youtube.com/watch?v=ts-MZ-QGmYs",
+      "video_title": "शरद पूर्णिमा की दिव्य महारास लीला | Radha Krishna Maha Raas Leela | Vrindavan Rasleela Story",
+      "channel_name": "jiwan ka sukun",
+      "source_url": "https://www.youtube.com/watch?v=ts-MZ-QGmYs",
+      "evidence": "oEmbed: शरद पूर्णिमा की दिव्य महारास लीला | Radha Krishna Maha Raas Leela | Vrindavan Rasleela Story (jiwan ka sukun)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    },
+    {
+      "katha_id": "b4-katha-shiva-samudra-manthan-neelkanth-katha",
+      "title": "समुद्र मंथन, कालकूट हलाहल विष एवं नीलकंठ महादेव",
+      "media_type": "Video",
+      "youtube_id": "yPunxn4BUlM",
+      "youtube_url": "https://www.youtube.com/watch?v=yPunxn4BUlM",
+      "video_title": "महाकाल ने पिया समुद्र मंथन से निकला हलाहल विष ? विष्णुनारायण ने क्यो नही ? विघ्नहर्ता गणेश - EP 478",
+      "channel_name": "Hindi Tv Series",
+      "source_url": "https://www.youtube.com/watch?v=yPunxn4BUlM",
+      "evidence": "oEmbed: महाकाल ने पिया समुद्र मंथन से निकला हलाहल विष ? विष्णुनारायण ने क्यो नही ? विघ्नहर्ता गणेश - EP 478 (Hindi Tv Series)",
+      "match_reason": "Dedicated visual Katha presentation/animation from verified channel.",
+      "confidence": "HIGH",
+      "classification": "VERIFIED_HIGH"
+    }
+  ],
+  "review_audio": [
+    {
+      "youtube_id": "jSM5VWjwM20",
+      "youtube_url": "https://www.youtube.com/watch?v=jSM5VWjwM20",
+      "title": "GURUVANI DAY 12 ll E.P 1 II पूर्ण गुरु श्री करौली शंकर महादेव जी की दिव्य गुरु वाणी #karulidham 🚩🚩",
+      "channel": "Anand TV National",
+      "duration": "5:31"
+    },
+    {
+      "youtube_id": "a8BbnXVofsM",
+      "youtube_url": "https://www.youtube.com/watch?v=a8BbnXVofsM",
+      "title": "प्रसंग ।। जीवन में माया से कैसे बचकर रहें ।। Raghavacharya Ji Maharaj ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "3:37"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "GsuLrdLNPAc",
+      "youtube_url": "https://www.youtube.com/watch?v=GsuLrdLNPAc",
+      "title": "हिंदू धर्म का प्रसार क्यों नहीं हुआ? || आचार्य प्रशांत",
+      "channel": "Acharya Prashant",
+      "duration": "0:54"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "V41KEcWopy8",
+      "youtube_url": "https://www.youtube.com/watch?v=V41KEcWopy8",
+      "title": "'यदि हिंदू जागृत हों, तो विश्व जागृत होगा': टोरंटो में भगवत ने भारत के सार्वभौमिक स्वरूप और विविधता पर प्रकाश डाला",
+      "channel": "ET Digital",
+      "duration": "9:19"
+    },
+    {
+      "youtube_id": "wSsA9N7s3CU",
+      "youtube_url": "https://www.youtube.com/watch?v=wSsA9N7s3CU",
+      "title": "राजा दशरथ की मृत्यु के बाद कैसी हुई प्रजा की दशा ? ।। Raghavacharya Ji Maharaj ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "2:38"
+    },
+    {
+      "youtube_id": "n1tjQSNlJYs",
+      "youtube_url": "https://www.youtube.com/watch?v=n1tjQSNlJYs",
+      "title": "जिंदगी को संपत्ति मानो, सुनिए बागेश्वर धाम सरकार से | Bageshwar Dham Sarkar",
+      "channel": "Bageshwar Dham Sarkar",
+      "duration": "9:03"
+    },
+    {
+      "youtube_id": "GsuLrdLNPAc",
+      "youtube_url": "https://www.youtube.com/watch?v=GsuLrdLNPAc",
+      "title": "हिंदू धर्म का प्रसार क्यों नहीं हुआ? || आचार्य प्रशांत",
+      "channel": "Acharya Prashant",
+      "duration": "0:54"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "n1tjQSNlJYs",
+      "youtube_url": "https://www.youtube.com/watch?v=n1tjQSNlJYs",
+      "title": "जिंदगी को संपत्ति मानो, सुनिए बागेश्वर धाम सरकार से | Bageshwar Dham Sarkar",
+      "channel": "Bageshwar Dham Sarkar",
+      "duration": "9:03"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "axWHx_aghjM",
+      "youtube_url": "https://www.youtube.com/watch?v=axWHx_aghjM",
+      "title": "भागवत रूपी कल्पवृक्ष की महिमा 🌿 | जो माँगो वही फल देता है #Bhagwat #BhaktiGyan #Sanatan",
+      "channel": "SHRI GURU KRIPA(श्री गुरु कृपा)",
+      "duration": "2:14"
+    },
+    {
+      "youtube_id": "oJrpJoyXm98",
+      "youtube_url": "https://www.youtube.com/watch?v=oJrpJoyXm98",
+      "title": "हमारे ऊपर परमात्मा की कैसी कृपा है ?  || Acharya Shri Deepak Ji Maharaj || Bhakti rangeeli",
+      "channel": "Bhakti rangeeli ",
+      "duration": "3:15"
+    },
+    {
+      "youtube_id": "wSsA9N7s3CU",
+      "youtube_url": "https://www.youtube.com/watch?v=wSsA9N7s3CU",
+      "title": "राजा दशरथ की मृत्यु के बाद कैसी हुई प्रजा की दशा ? ।। Raghavacharya Ji Maharaj ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "2:38"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "GsuLrdLNPAc",
+      "youtube_url": "https://www.youtube.com/watch?v=GsuLrdLNPAc",
+      "title": "हिंदू धर्म का प्रसार क्यों नहीं हुआ? || आचार्य प्रशांत",
+      "channel": "Acharya Prashant",
+      "duration": "0:54"
+    },
+    {
+      "youtube_id": "GsuLrdLNPAc",
+      "youtube_url": "https://www.youtube.com/watch?v=GsuLrdLNPAc",
+      "title": "हिंदू धर्म का प्रसार क्यों नहीं हुआ? || आचार्य प्रशांत",
+      "channel": "Acharya Prashant",
+      "duration": "0:54"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "GsuLrdLNPAc",
+      "youtube_url": "https://www.youtube.com/watch?v=GsuLrdLNPAc",
+      "title": "हिंदू धर्म का प्रसार क्यों नहीं हुआ? || आचार्य प्रशांत",
+      "channel": "Acharya Prashant",
+      "duration": "0:54"
+    },
+    {
+      "youtube_id": "H8hyAXo4sDo",
+      "youtube_url": "https://www.youtube.com/watch?v=H8hyAXo4sDo",
+      "title": "GURUVANI DAY 17 ll E.P 1 II पूर्ण गुरु श्री करौली शंकर महादेव जी की दिव्य गुरु वाणी #karulidham 🚩🚩",
+      "channel": "Anand TV National",
+      "duration": "6:08"
+    },
+    {
+      "youtube_id": "7XIXof4NLwQ",
+      "youtube_url": "https://www.youtube.com/watch?v=7XIXof4NLwQ",
+      "title": "What is the Right Time to Listen to the Garuda Purana? || Devkinandan Thakur Ji || Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:31"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "z_P3w2tEKbo",
+      "youtube_url": "https://www.youtube.com/watch?v=z_P3w2tEKbo",
+      "title": "क्या चाहता है भगवान का अनन्य भक्त ? ।। Shri Dharacharya Ji Maharaj ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:19"
+    },
+    {
+      "youtube_id": "d0sDeywc8GU",
+      "youtube_url": "https://www.youtube.com/watch?v=d0sDeywc8GU",
+      "title": "जानिए भगवान के यह अद्भुत अवतार ।। Laxmandas Ji Mahara ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "2:22"
+    },
+    {
+      "youtube_id": "I_1b1uBQqvM",
+      "youtube_url": "https://www.youtube.com/watch?v=I_1b1uBQqvM",
+      "title": "इस एक पावन प्रसंग को सुनने के बाद आपकी सोई हुई किस्मत जाग जाएगी! | Swami Ashutoshanand",
+      "channel": "Swami Ashutoshanand",
+      "duration": "32:56"
+    },
+    {
+      "youtube_id": "26ECC6FBABQ",
+      "youtube_url": "https://www.youtube.com/watch?v=26ECC6FBABQ",
+      "title": "Hanuman Ji saved Shri Ram and Lakshman from Ahiravan | Took a gigantic form to slay Ahiravan",
+      "channel": "DRJ Records Bhakti",
+      "duration": "1:02:28"
+    },
+    {
+      "youtube_id": "Ze7w3-BL3OM",
+      "youtube_url": "https://www.youtube.com/watch?v=Ze7w3-BL3OM",
+      "title": "ईश्वर की कहानी: पर्वतीय उपदेश",
+      "channel": "Crossroads Kids' Club",
+      "duration": "4:35"
+    },
+    {
+      "youtube_id": "squ52pm2CCQ",
+      "youtube_url": "https://www.youtube.com/watch?v=squ52pm2CCQ",
+      "title": "ईश्वर की कहानी: पवित्र आत्मा का फल: दयालुता",
+      "channel": "Crossroads Kids' Club",
+      "duration": "2:43"
+    },
+    {
+      "youtube_id": "7s54rntLw9Y",
+      "youtube_url": "https://www.youtube.com/watch?v=7s54rntLw9Y",
+      "title": "पश्चाताप के अनुरूप फल उत्पन्न करो | मत्ती 3:1-12 | शाइन थॉमस | सिटी हार्वेस्ट एजी चर्च",
+      "channel": "City Harvest AG Church",
+      "duration": "50:17"
+    },
+    {
+      "youtube_id": "DUcyVt78Res",
+      "youtube_url": "https://www.youtube.com/watch?v=DUcyVt78Res",
+      "title": "द्वारका का रहस्य | वास्तविक इतिहास || भगवान कृष्ण का खोया हुआ शहर || पूर्ण वृत्तचित्र #द्वारका",
+      "channel": "Mysteries of India",
+      "duration": "3:20"
+    },
+    {
+      "youtube_id": "Scx7izaqzo4",
+      "youtube_url": "https://www.youtube.com/watch?v=Scx7izaqzo4",
+      "title": "Mystery of Dwarka | The Real History || Full Documentary",
+      "channel": "Divya Katha",
+      "duration": "30:06"
+    },
+    {
+      "youtube_id": "Mri_Q34gXX4",
+      "youtube_url": "https://www.youtube.com/watch?v=Mri_Q34gXX4",
+      "title": "Sharad Purnima | A Vivid Depiction of Maharas | Maharas",
+      "channel": "Sadhvi Vishweshwari Devi ji Official",
+      "duration": "1:06:11"
+    },
+    {
+      "youtube_id": "5jEV818XqvI",
+      "youtube_url": "https://www.youtube.com/watch?v=5jEV818XqvI",
+      "title": "Neelkanth Mahadev Mandir |  नीलकंठ महादेव मंदिर जाने सम्पूर्ण कहानी  |  ऋषिकेश",
+      "channel": "Tilak",
+      "duration": "9:18"
+    },
+    {
+      "youtube_id": "Mri_Q34gXX4",
+      "youtube_url": "https://www.youtube.com/watch?v=Mri_Q34gXX4",
+      "title": "Sharad Purnima | A Vivid Depiction of Maharas | Maharas",
+      "channel": "Sadhvi Vishweshwari Devi ji Official",
+      "duration": "1:06:11"
+    },
+    {
+      "youtube_id": "pAOysEp1hQY",
+      "youtube_url": "https://www.youtube.com/watch?v=pAOysEp1hQY",
+      "title": "भगवान शिव ने विष को कंठ में ही धारण क्यों किया ? Bhagwan Shiv Ne Vish Kanth Me Kyu Rakha ?",
+      "channel": "Jagatguru Ramdineshacharya Ji Maharaj",
+      "duration": "8:48"
+    }
+  ],
+  "review_video": [
+    {
+      "youtube_id": "jSM5VWjwM20",
+      "youtube_url": "https://www.youtube.com/watch?v=jSM5VWjwM20",
+      "title": "GURUVANI DAY 12 ll E.P 1 II पूर्ण गुरु श्री करौली शंकर महादेव जी की दिव्य गुरु वाणी #karulidham 🚩🚩",
+      "channel": "Anand TV National",
+      "duration": "5:31"
+    },
+    {
+      "youtube_id": "LCzI2swE7c8",
+      "youtube_url": "https://www.youtube.com/watch?v=LCzI2swE7c8",
+      "title": "रोज पाठ करने से क्या होता है? ।। Krishnapriya Ji Maharaj ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:13"
+    },
+    {
+      "youtube_id": "yHBEdP6rXFs",
+      "youtube_url": "https://www.youtube.com/watch?v=yHBEdP6rXFs",
+      "title": "पौराणिक कथाओं के विशेषज्ञ ने हनुमान जी की पूजा करने के पारंपरिक तरीकों के बारे में बताया @sootjiboley",
+      "channel": "Prakhar Gupta",
+      "duration": "0:27"
+    },
+    {
+      "youtube_id": "5E0Yx0aVc68",
+      "youtube_url": "https://www.youtube.com/watch?v=5E0Yx0aVc68",
+      "title": "शिव पुराण अध्याय 14 | सती को कठिन परिस्थिति का सामना करना पड़ा ❤️🔱 | दिव्य कथा जारी है #महादेव",
+      "channel": "Sanatan Explorations",
+      "duration": "0:31"
+    },
+    {
+      "youtube_id": "0vSUyn5P5YU",
+      "youtube_url": "https://www.youtube.com/watch?v=0vSUyn5P5YU",
+      "title": "Neel Shaktimaan, Episode - 9, Neel Shaktimaan's Broken Heart",
+      "channel": "सनातन धर्म यात्रा",
+      "duration": "3:29"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "bxJYrnFH5LI",
+      "youtube_url": "https://www.youtube.com/watch?v=bxJYrnFH5LI",
+      "title": "भगवान की भक्ति से हमें क्या मिलता है? सुनिए गोरा कुम्हार की यह घटना। आंखों से बहाने लगेंगे आंसू",
+      "channel": "Aniruddhacharya ji",
+      "duration": "22:02"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "bxJYrnFH5LI",
+      "youtube_url": "https://www.youtube.com/watch?v=bxJYrnFH5LI",
+      "title": "भगवान की भक्ति से हमें क्या मिलता है? सुनिए गोरा कुम्हार की यह घटना। आंखों से बहाने लगेंगे आंसू",
+      "channel": "Aniruddhacharya ji",
+      "duration": "22:02"
+    },
+    {
+      "youtube_id": "n1tjQSNlJYs",
+      "youtube_url": "https://www.youtube.com/watch?v=n1tjQSNlJYs",
+      "title": "जिंदगी को संपत्ति मानो, सुनिए बागेश्वर धाम सरकार से | Bageshwar Dham Sarkar",
+      "channel": "Bageshwar Dham Sarkar",
+      "duration": "9:03"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "qCSNLLa9bB8",
+      "youtube_url": "https://www.youtube.com/watch?v=qCSNLLa9bB8",
+      "title": "उपनिषद गंगा ईपी 15 | सेवानिवृत्त जीवन - धृतराष्ट्र और बिम्बिसार की गलती #उपनिषदगंगा #वेदांत",
+      "channel": "ChinmayaChannel",
+      "duration": "22:53"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "zGk80j73OFE",
+      "youtube_url": "https://www.youtube.com/watch?v=zGk80j73OFE",
+      "title": "कहां है पितृलोक एवं नर्क ? ।। Devkinandan Thakur Ji  ।। Aastha Channel",
+      "channel": "Aastha Channel",
+      "duration": "1:21"
+    },
+    {
+      "youtube_id": "axWHx_aghjM",
+      "youtube_url": "https://www.youtube.com/watch?v=axWHx_aghjM",
+      "title": "भागवत रूपी कल्पवृक्ष की महिमा 🌿 | जो माँगो वही फल देता है #Bhagwat #BhaktiGyan #Sanatan",
+      "channel": "SHRI GURU KRIPA(श्री गुरु कृपा)",
+      "duration": "2:14"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "BK-1kx3u1wI",
+      "youtube_url": "https://www.youtube.com/watch?v=BK-1kx3u1wI",
+      "title": "17/01/2025 l सम्पूर्ण श्रीमद्भागवत महापुराण l पूज्य स्वामी शाश्वतानन्द गिरिजी महाराज l कुरुक्षेत्र",
+      "channel": "Aastha Channel",
+      "duration": "3:08:41"
+    },
+    {
+      "youtube_id": "jSM5VWjwM20",
+      "youtube_url": "https://www.youtube.com/watch?v=jSM5VWjwM20",
+      "title": "GURUVANI DAY 12 ll E.P 1 II पूर्ण गुरु श्री करौली शंकर महादेव जी की दिव्य गुरु वाणी #karulidham 🚩🚩",
+      "channel": "Anand TV National",
+      "duration": "5:31"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "q032i3jiexE",
+      "youtube_url": "https://www.youtube.com/watch?v=q032i3jiexE",
+      "title": "रक्षाबंधन की वो कहानी जो कोई नहीं जानता | भगवान का सबसे बड़ा छल जिसने रक्षाबंधन को जन्म दिया",
+      "channel": "HINDU STORIES",
+      "duration": "11:12"
+    },
+    {
+      "youtube_id": "jSM5VWjwM20",
+      "youtube_url": "https://www.youtube.com/watch?v=jSM5VWjwM20",
+      "title": "GURUVANI DAY 12 ll E.P 1 II पूर्ण गुरु श्री करौली शंकर महादेव जी की दिव्य गुरु वाणी #karulidham 🚩🚩",
+      "channel": "Anand TV National",
+      "duration": "5:31"
+    },
+    {
+      "youtube_id": "dTJy0-ryV4Y",
+      "youtube_url": "https://www.youtube.com/watch?v=dTJy0-ryV4Y",
+      "title": "सनातन धर्म में मृत्यु के बाद 13 दिन - मृत्यु के बाद क्या होता है?",
+      "channel": "RAAAZ by BigBrainco",
+      "duration": "9:07"
+    },
+    {
+      "youtube_id": "o05AXXQfJf4",
+      "youtube_url": "https://www.youtube.com/watch?v=o05AXXQfJf4",
+      "title": "श्रीराम ने भीषण युद्ध में किया  खर- दूषण एवं सुबाहु  का बध और मारीच को एक तीर से सौ योजन दूर लंका भे",
+      "channel": "SURENDRA SINGH BISHT Gangawali Vlogs",
+      "duration": "20:04"
+    },
+    {
+      "youtube_id": "lI5pNGdsbWc",
+      "youtube_url": "https://www.youtube.com/watch?v=lI5pNGdsbWc",
+      "title": "चन्द्रदेव की शिव भक्ति एवं सोमनाथ ज्योतिर्लिंग | Chandradev ki Shiv bhakti evam Somnath Jyotirlinga",
+      "channel": "Shiva Mission Nyas (Reg.) Gwalior",
+      "duration": "2:51"
+    },
+    {
+      "youtube_id": "k9iJIx6t06c",
+      "youtube_url": "https://www.youtube.com/watch?v=k9iJIx6t06c",
+      "title": "Surya Dev को फल समझ कर उन्हें निगलने पहुँचे Maruti | Mahabali Hanuman |महाबली हनुमान |LIV Devotional",
+      "channel": "LIV Devotional",
+      "duration": "2:03:59"
+    },
+    {
+      "youtube_id": "Scx7izaqzo4",
+      "youtube_url": "https://www.youtube.com/watch?v=Scx7izaqzo4",
+      "title": "Mystery of Dwarka | The Real History || Full Documentary",
+      "channel": "Divya Katha",
+      "duration": "30:06"
+    }
+  ],
+  "reject_audio": [
+    {
+      "youtube_id": "03WnMBRI4j4",
+      "youtube_url": "https://www.youtube.com/watch?v=03WnMBRI4j4",
+      "title": "Shrimad Bhagavad Gita - Chapter 01 | Arjuna Vishada Yoga | #geetasar",
+      "channel": "PlutoTv7 and Rahul Technical India",
+      "duration": "20:38"
+    },
+    {
+      "youtube_id": "2Wjrf9YAyXA",
+      "youtube_url": "https://www.youtube.com/watch?v=2Wjrf9YAyXA",
+      "title": "📖 श्रीमद्भगवद्गीता अध्याय 1 | श्लोक 1, 2 एवं 3 | अर्थ सहित 🙏 Bal Vyas Dhirendra Ji Maharaj #Geeta ",
+      "channel": "BAL VYAS DHIRENDRA JI MAHARAJ",
+      "duration": "3:18"
+    },
+    {
+      "youtube_id": "uhPssBmwFoQ",
+      "youtube_url": "https://www.youtube.com/watch?v=uhPssBmwFoQ",
+      "title": "श्रीमद भगवद गीता सार की शुरुवात | कृष्ण भक्ति | Mahabharat (महाभारत) Scene | BR Chopra | Pen Bhakti",
+      "channel": "Pen  Bhakti",
+      "duration": "17:35"
+    },
+    {
+      "youtube_id": "vBFQ42ttsPQ",
+      "youtube_url": "https://www.youtube.com/watch?v=vBFQ42ttsPQ",
+      "title": "Srimad Bhagavad Gita Chapter - 01 (Arjuna Visada Yoga - Verse 47) | Hindi translation- Kai.Jayati...",
+      "channel": "Let's Know Parmeshwar",
+      "duration": "16:43"
+    },
+    {
+      "youtube_id": "ldshWEMqoEA",
+      "youtube_url": "https://www.youtube.com/watch?v=ldshWEMqoEA",
+      "title": "दिल को छू लेने वाला भजन  #sanatandharma #bhagwatkatha #katha #vrindavan #radhekrishna",
+      "channel": "SHRI GURU KRIPA(श्री गुरु कृपा)",
+      "duration": "8:36"
+    },
+    {
+      "youtube_id": "klmjZhK-Y5o",
+      "youtube_url": "https://www.youtube.com/watch?v=klmjZhK-Y5o",
+      "title": "शिव जी का अद्भुत भजन 🕉️ | भोलेनाथ की करुणा का अमृत #ShivBhajan #Bholenath #Bhakti",
+      "channel": "SHRI GURU KRIPA(श्री गुरु कृपा)",
+      "duration": "1:20"
+    },
+    {
+      "youtube_id": "e1xWrX5ixS8",
+      "youtube_url": "https://www.youtube.com/watch?v=e1xWrX5ixS8",
+      "title": "भगवान विष्णु ने कैसे बचाया महादेव को? | भस्मासुर का अंत @shayamaki-ganga #shorts #sorts #krishna ",
+      "channel": "Shyam.ji.katha1",
+      "duration": "4:24"
+    },
+    {
+      "youtube_id": "4NMRKNkpZgo",
+      "youtube_url": "https://www.youtube.com/watch?v=4NMRKNkpZgo",
+      "title": "HANUMAN PATAL LOK RAP SONG | मकरध्वज युद्ध और अहिरावण वध | Aggressive Hanumanji #hanuman #trending ",
+      "channel": "Attitudeyt786",
+      "duration": "1:24"
+    }
+  ],
+  "reject_video": [
+    {
+      "youtube_id": "03WnMBRI4j4",
+      "youtube_url": "https://www.youtube.com/watch?v=03WnMBRI4j4",
+      "title": "Shrimad Bhagavad Gita - Chapter 01 | Arjuna Vishada Yoga | #geetasar",
+      "channel": "PlutoTv7 and Rahul Technical India",
+      "duration": "20:38"
+    },
+    {
+      "youtube_id": "nMzSKMGMzoE",
+      "youtube_url": "https://www.youtube.com/watch?v=nMzSKMGMzoE",
+      "title": "गीता का पहला अध्याय | अर्जुन विषाद योग की पूरी कथा | श्रीकृष्ण और अर्जुन संवाद 🙏",
+      "channel": "सनातन भक्ति धाम",
+      "duration": "18:03"
+    },
+    {
+      "youtube_id": "BW4TtPP2N6A",
+      "youtube_url": "https://www.youtube.com/watch?v=BW4TtPP2N6A",
+      "title": "Listen to the First Chapter of the Shrimad Bhagavad Gita | Arjuna Vishada Yoga | A Story for Peac...",
+      "channel": "भक्ति सागर\n\n",
+      "duration": "18:03"
+    },
+    {
+      "youtube_id": "LvB6uEusc7c",
+      "youtube_url": "https://www.youtube.com/watch?v=LvB6uEusc7c",
+      "title": "संकट में गीता ही सच्चा सहारा🙏|मोह से मुक्ति का मार्ग श्रीमद्भगवद्गीता अध्याय 1पूर्ण पाठ एवं महात्म्य",
+      "channel": "kishan kanhaiya ka sach",
+      "duration": "19:14"
+    }
+  ],
+  "no_suitable_audio": [
+    "b4-katha-krishna-geeta-upadesh-kurukshetra",
+    "b18-katha-purana-prerak-dhara-06-b18",
+    "b18-katha-purana-prerak-dhara-08-b18",
+    "b18-katha-purana-prerak-dhara-13-b18",
+    "b19-corpus19-hanuman-katha-132",
+    "b19-corpus19-hanuman-katha-133",
+    "b19-corpus19-hanuman-katha-135"
+  ],
+  "no_suitable_video": [
+    "b4-katha-krishna-geeta-upadesh-kurukshetra",
+    "b14-katha-purana-prerak-dhara-13-b14",
+    "b16-katha-purana-prerak-dhara-04-b16",
+    "b16-katha-purana-prerak-dhara-10-b16",
+    "b17-katha-purana-prerak-dhara-05-b17",
+    "b18-katha-purana-prerak-dhara-08-b18",
+    "b18-katha-purana-prerak-dhara-10-b18",
+    "b18-katha-purana-prerak-dhara-14-b18",
+    "b18-katha-purana-prerak-dhara-15-b18",
+    "b19-corpus19-hanuman-katha-132",
+    "b19-corpus19-hanuman-katha-133",
+    "b19-corpus19-hanuman-katha-135"
+  ],
+  "duplicate_youtube_ids": [],
+  "duplicate_youtube_urls": [],
+  "conflicts": [],
+  "overwrite_candidates": [],
+  "live_check": {
+    "live_pass": 275,
+    "live_fail": 0
+  },
+  "selection": {
+    "selected_count": 50,
+    "backlog_remaining": 125
+  },
+  "statistics": {
+    "verified_high_audio": 24,
+    "verified_high_video": 23,
+    "verified_high_total": 47,
+    "review_audio": 40,
+    "review_video": 30,
+    "reject_audio": 8,
+    "reject_video": 4,
+    "no_suitable_audio": 7,
+    "no_suitable_video": 12,
+    "with_audio_candidate": 24,
+    "with_video_candidate": 23,
+    "with_both_candidates": 20,
+    "with_neither_candidate": 23
+  },
+  "final_gate": {
+    "verdict": "PASS",
+    "database_modified": false,
+    "database_writes": 0
+  }
+}

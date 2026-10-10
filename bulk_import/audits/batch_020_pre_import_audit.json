@@ -1,0 +1,42 @@
+{
+  "audit_name": "Batch 020 Pre-Import Audit",
+  "batch": "bhakti_batch_020",
+  "timestamp": "2026-08-28T05:40:00Z",
+  "live_database": {
+    "path": "db/bhakti.db",
+    "current_records": 9502,
+    "integrity_check": "ok",
+    "database_import_executed": false
+  },
+  "pre_import_backup": {
+    "path": "db/backups/bhakti_pre_batch020_backup.db",
+    "records": 9502,
+    "integrity_check": "ok"
+  },
+  "batch_020_source": {
+    "csv_records": 500,
+    "json_records": 500,
+    "csv_json_equal": true
+  },
+  "quality_metrics": {
+    "duplicate_ids": 0,
+    "duplicate_hashes": 0,
+    "duplicate_titles": 0,
+    "exact_content_duplicates": 0,
+    "database_collisions": 0,
+    "historical_collisions": 0,
+    "missing_content": 0,
+    "invalid_records": 0,
+    "schema_errors": 0
+  },
+  "dry_run_results": {
+    "json_dry_run_passed": true,
+    "csv_dry_run_passed": true
+  },
+  "dataset_preservation": {
+    "batches_001_to_019_unchanged": true,
+    "khatu_shyam_locked_dataset_unchanged": true
+  },
+  "next_batch_started": false,
+  "final_status": "PASS"
+}

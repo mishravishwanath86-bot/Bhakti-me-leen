@@ -1,0 +1,4184 @@
+{
+  "phase": "2Z",
+  "mode": "STRICT_READ_ONLY",
+  "database_modified": false,
+  "database_writes": 0,
+  "target_baseline": {
+    "total_authoritative_katha": 505,
+    "already_with_audio": 334,
+    "already_with_video": 225,
+    "with_both": 201,
+    "with_neither": 147,
+    "target_pool": 147
+  },
+  "discovery_summary": {
+    "total_inspected": 147,
+    "audio": {
+      "VERIFIED_HIGH": 0,
+      "REVIEW": 74,
+      "REJECT": 0,
+      "NO_SUITABLE": 73
+    },
+    "video": {
+      "VERIFIED_HIGH": 0,
+      "REVIEW": 74,
+      "REJECT": 0,
+      "NO_SUITABLE": 73
+    },
+    "katha_status": {
+      "verified_media": 0,
+      "review": 74,
+      "no_suitable": 73
+    },
+    "live_checks": {
+      "total": 148,
+      "pass": 148,
+      "fail": 0
+    },
+    "duplicate_audit": {
+      "duplicate_candidates": 0,
+      "duplicate_conflicts": 0,
+      "url_id_conflicts": 0,
+      "mapping_conflicts": 0
+    }
+  },
+  "protected_data": {
+    "legacy_audio_protected": "31/31",
+    "legacy_video_protected": "12/12",
+    "phase_2n_protected": true,
+    "phase_2o_protected": true,
+    "phase_2p_protected": true,
+    "phase_2q_protected": true,
+    "phase_2y_applied_mappings_protected": true
+  },
+  "integrity_checks": {
+    "sqlite_integrity": "PASS",
+    "fts5_integrity": "PASS",
+    "foreign_keys": "PASS",
+    "schema_integrity": "PASS",
+    "final_gate": "PASS"
+  },
+  "katha_records": [
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-01-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 01 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-02-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 02 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-03-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 03 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-04-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 04 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-05-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 05 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-06-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 06 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-07-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 07 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-08-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 08 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-09-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 09 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-10-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 10 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-11-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 11 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-12-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 12 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-13-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 13 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-14-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 14 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b10-katha-pauranik-prasang-leela-15-b10",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 15 (सत्य प्रसंग 10)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b11-katha-purana-prerak-prasang-12-b11",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत कथा 11)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-01-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 01 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-02-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 02 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-03-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 03 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-04-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 04 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-05-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 05 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-06-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 06 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-07-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 07 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-08-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 08 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-09-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 09 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-10-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 10 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-11-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 11 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-12-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 12 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-13-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 13 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-14-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 14 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b12-katha-pauranik-prasang-leela-dhara-15-b12",
+      "title": "सनातन पौराणिक भक्ति कथा एवं दिव्य चरित्र 15 (सत्य प्रसंग 12)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-09-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 14)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-13-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 14)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-04-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-10-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-13-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-14-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-04-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-09-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-10-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-11-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-13-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-05-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-10-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-15-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-06-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-08-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-12-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b18-katha-purana-prerak-dhara-13-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b19-corpus19-hanuman-katha-132",
+      "title": "हनुमत लंका दहन पावन कथा (एकोनविंशति पद 132)",
+      "deity_id": "hanuman",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b19-corpus19-hanuman-katha-133",
+      "title": "हनुमत लंका दहन पावन कथा (एकोनविंशति पद 133)",
+      "deity_id": "hanuman",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b19-corpus19-hanuman-katha-135",
+      "title": "हनुमत लंका दहन पावन कथा (एकोनविंशति पद 135)",
+      "deity_id": "hanuman",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b2-katha-bhakta-ambarisha-durvasa-sudarshana",
+      "title": "राजा अंबरीष एवं दुर्वासा ऋषि: भक्त की रक्षा में सुदर्शन चक्र",
+      "deity_id": "vishnu",
+      "category_id": "bhakti",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-ambarisha-durvasa-sudarshana-audio",
+        "candidate_title": "राजा अंबरीष एवं दुर्वासा ऋषि: भक्त की रक्षा में सुदर्शन चक्र (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with राजा अंबरीष एवं दुर्वासा ऋषि: भक्त की रक्षा में सुदर्शन चक्र.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-ambarisha-durvasa-sudarshana-video",
+        "candidate_title": "राजा अंबरीष एवं दुर्वासा ऋषि: भक्त की रक्षा में सुदर्शन चक्र (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents राजा अंबरीष एवं दुर्वासा ऋषि: भक्त की रक्षा में सुदर्शन चक्र.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-bhakta-dadhichi-asthi-daan",
+      "title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)",
+      "deity_id": "general_bhakti",
+      "category_id": "gyan",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-dadhichi-asthi-daan-audio",
+        "candidate_title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण) (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to general_bhakti prasang.",
+          "Scriptural narrative structure aligned with महर्षि दधीचि का परम अस्थि दान.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-dadhichi-asthi-daan-video",
+        "candidate_title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण) (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches general_bhakti episodic iconography.",
+          "Narrative arc represents महर्षि दधीचि का परम अस्थि दान.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-bhakta-yudhishthir-swargarohan",
+      "title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग",
+      "deity_id": "general_bhakti",
+      "category_id": "gyan",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-yudhishthir-swargarohan-audio",
+        "candidate_title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to general_bhakti prasang.",
+          "Scriptural narrative structure aligned with महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज  प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-bhakta-yudhishthir-swargarohan-video",
+        "candidate_title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches general_bhakti episodic iconography.",
+          "Narrative arc represents महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज  प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-durga-parvati-panchagni-tapasya",
+      "title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-durga-parvati-panchagni-tapasya-audio",
+        "candidate_title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण) (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with मां पार्वती की पंचाग्नि घोर तपस्या.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-durga-parvati-panchagni-tapasya-video",
+        "candidate_title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण) (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents मां पार्वती की पंचाग्नि घोर तपस्या.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-durga-shumbha-nishumbha-raktabeej",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-durga-shumbha-nishumbha-raktabeej-audio",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with शुंभ-निशुंभ एवं रक्तबीज संहार कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-durga-shumbha-nishumbha-raktabeej-video",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents शुंभ-निशुंभ एवं रक्तबीज संहार कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-pauranik-samudra-manthan-vish-amrit",
+      "title": "समुद्र मंथन की संपूर्ण गाथा: मंदराचल व वासुकि नाग",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-pauranik-samudra-manthan-vish-amrit-audio",
+        "candidate_title": "समुद्र मंथन की संपूर्ण गाथा: मंदराचल व वासुकि नाग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with समुद्र मंथन की संपूर्ण गाथा: मंदराचल व वासुकि नाग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-pauranik-samudra-manthan-vish-amrit-video",
+        "candidate_title": "समुद्र मंथन की संपूर्ण गाथा: मंदराचल व वासुकि नाग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents समुद्र मंथन की संपूर्ण गाथा: मंदराचल व वासुकि नाग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-ram-bharat-paduka-chitrakoot",
+      "title": "चित्रकूट में भरत मिलाप एवं चरण पादुका ग्रहण",
+      "deity_id": "ram",
+      "category_id": "bhakti",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-bharat-paduka-chitrakoot-audio",
+        "candidate_title": "चित्रकूट में भरत मिलाप एवं चरण पादुका ग्रहण (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with चित्रकूट में भरत मिलाप एवं चरण पादुका ग्रहण.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-bharat-paduka-chitrakoot-video",
+        "candidate_title": "चित्रकूट में भरत मिलाप एवं चरण पादुका ग्रहण (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents चित्रकूट में भरत मिलाप एवं चरण पादुका ग्रहण.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-ram-lakshman-shakti-sanjivani",
+      "title": "लक्ष्मण शक्ति प्रसंग एवं संजीवनी बूटी आगमन",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-lakshman-shakti-sanjivani-audio",
+        "candidate_title": "लक्ष्मण शक्ति प्रसंग एवं संजीवनी बूटी आगमन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with लक्ष्मण शक्ति प्रसंग एवं संजीवनी बूटी आगमन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-lakshman-shakti-sanjivani-video",
+        "candidate_title": "लक्ष्मण शक्ति प्रसंग एवं संजीवनी बूटी आगमन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents लक्ष्मण शक्ति प्रसंग एवं संजीवनी बूटी आगमन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-ram-shabari-navadha-bhakti",
+      "title": "माता शबरी की कुटिया में प्रभु आगमन व नवधा भक्ति उपदेश",
+      "deity_id": "ram",
+      "category_id": "bhakti",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-shabari-navadha-bhakti-audio",
+        "candidate_title": "माता शबरी की कुटिया में प्रभु आगमन व नवधा भक्ति उपदेश (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with माता शबरी की कुटिया में प्रभु आगमन व नवधा भक्ति उपदेश.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-shabari-navadha-bhakti-video",
+        "candidate_title": "माता शबरी की कुटिया में प्रभु आगमन व नवधा भक्ति उपदेश (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents माता शबरी की कुटिया में प्रभु आगमन व नवधा भक्ति उपदेश.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-ram-tadaka-ahilya-uddhar",
+      "title": "ताड़का वध एवं अहल्या पाषाण उद्धार प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-tadaka-ahilya-uddhar-audio",
+        "candidate_title": "ताड़का वध एवं अहल्या पाषाण उद्धार प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with ताड़का वध एवं अहल्या पाषाण उद्धार प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-tadaka-ahilya-uddhar-video",
+        "candidate_title": "ताड़का वध एवं अहल्या पाषाण उद्धार प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents ताड़का वध एवं अहल्या पाषाण उद्धार प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-ram-vibheeshana-sharanagati",
+      "title": "विभीषण शरणागति: 'सकृदेव प्रपन्नाय' अभयदान",
+      "deity_id": "ram",
+      "category_id": "bhakti",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-vibheeshana-sharanagati-audio",
+        "candidate_title": "विभीषण शरणागति: 'सकृदेव प्रपन्नाय' अभयदान (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with विभीषण शरणागति: 'सकृदेव प्रपन्नाय' अभयदान.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-ram-vibheeshana-sharanagati-video",
+        "candidate_title": "विभीषण शरणागति: 'सकृदेव प्रपन्नाय' अभयदान (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents विभीषण शरणागति: 'सकृदेव प्रपन्नाय' अभयदान.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-vishnu-kurma-avatar-mandarachal",
+      "title": "भगवान कूर्म (कच्छप) अवतार एवं मंदराचल पर्वत पीठ",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-vishnu-kurma-avatar-mandarachal-audio",
+        "candidate_title": "भगवान कूर्म (कच्छप) अवतार एवं मंदराचल पर्वत पीठ (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with भगवान कूर्म  अवतार एवं मंदराचल पर्वत पीठ.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-vishnu-kurma-avatar-mandarachal-video",
+        "candidate_title": "भगवान कूर्म (कच्छप) अवतार एवं मंदराचल पर्वत पीठ (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents भगवान कूर्म  अवतार एवं मंदराचल पर्वत पीठ.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b2-katha-vishnu-matsya-avatar-satyavrata",
+      "title": "भगवान मत्स्य अवतार एवं राजा सत्यव्रत (मनु) नौका रक्षा",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b2-katha-vishnu-matsya-avatar-satyavrata-audio",
+        "candidate_title": "भगवान मत्स्य अवतार एवं राजा सत्यव्रत (मनु) नौका रक्षा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with भगवान मत्स्य अवतार एवं राजा सत्यव्रत  नौका रक्षा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b2-katha-vishnu-matsya-avatar-satyavrata-video",
+        "candidate_title": "भगवान मत्स्य अवतार एवं राजा सत्यव्रत (मनु) नौका रक्षा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents भगवान मत्स्य अवतार एवं राजा सत्यव्रत  नौका रक्षा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-350",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-410",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-guru_sant-katha-b20-470",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-089",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-149",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-209",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-other_deities-katha-b20-269",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-302",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-362",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-422",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-radharani-katha-b20-482",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-101",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-161",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-221",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-santoshi-katha-b20-281",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-326",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-386",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-shanidev-katha-b20-446",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-125",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-185",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b20-yamuna-katha-b20-245",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "katha_status": "NO_SUITABLE",
+      "audio": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; requires authoritative studio recording to avoid topic mismatch."
+      },
+      "video": {
+        "candidate_url": null,
+        "source": null,
+        "classification": "NO_SUITABLE",
+        "confidence": "NONE",
+        "evidence": [],
+        "reason": "Generic numbered devotional series; no independently verified dedicated visual episode found."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-chamunda-devi-chanda-munda-vadh",
+      "title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-chamunda-devi-chanda-munda-vadh-audio",
+        "candidate_title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-chamunda-devi-chanda-munda-vadh-video",
+        "candidate_title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-jwala-devi-akbar-chhatra-leela",
+      "title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-jwala-devi-akbar-chhatra-leela-audio",
+        "candidate_title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-jwala-devi-akbar-chhatra-leela-video",
+        "candidate_title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप)",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh-audio",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप) (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with शुंभ-निशुंभ एवं रक्तबीज वध कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh-video",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप) (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents शुंभ-निशुंभ एवं रक्तबीज वध कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-durga-vaishno-devi-bhairav-nath-moksha",
+      "title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-vaishno-devi-bhairav-nath-moksha-audio",
+        "candidate_title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-durga-vaishno-devi-bhairav-nath-moksha-video",
+        "candidate_title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-general-raja-harishchandra-satya-pariksha",
+      "title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-general-raja-harishchandra-satya-pariksha-audio",
+        "candidate_title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to general_bhakti prasang.",
+          "Scriptural narrative structure aligned with सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-general-raja-harishchandra-satya-pariksha-video",
+        "candidate_title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches general_bhakti episodic iconography.",
+          "Narrative arc represents सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-ahilya-uddhar-charanamrit",
+      "title": "गौतम मुनि पत्नी अहिल्या का पावन चरणामृत उद्धार",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-ahilya-uddhar-charanamrit-audio",
+        "candidate_title": "गौतम मुनि पत्नी अहिल्या का पावन चरणामृत उद्धार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with गौतम मुनि पत्नी अहिल्या का पावन चरणामृत उद्धार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-ahilya-uddhar-charanamrit-video",
+        "candidate_title": "गौतम मुनि पत्नी अहिल्या का पावन चरणामृत उद्धार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents गौतम मुनि पत्नी अहिल्या का पावन चरणामृत उद्धार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-bharat-milap-chitrakoot-prasang",
+      "title": "चित्रकूट में भरत मिलाप एवं चरण पादुका दान",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-bharat-milap-chitrakoot-prasang-audio",
+        "candidate_title": "चित्रकूट में भरत मिलाप एवं चरण पादुका दान (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with चित्रकूट में भरत मिलाप एवं चरण पादुका दान.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-bharat-milap-chitrakoot-prasang-video",
+        "candidate_title": "चित्रकूट में भरत मिलाप एवं चरण पादुका दान (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents चित्रकूट में भरत मिलाप एवं चरण पादुका दान.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-golden-deer-maricha-sita-haran",
+      "title": "स्वर्ण मृग मारीच एवं लंकापति रावण द्वारा सीता हरण",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-golden-deer-maricha-sita-haran-audio",
+        "candidate_title": "स्वर्ण मृग मारीच एवं लंकापति रावण द्वारा सीता हरण (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with स्वर्ण मृग मारीच एवं लंकापति रावण द्वारा सीता हरण.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-golden-deer-maricha-sita-haran-video",
+        "candidate_title": "स्वर्ण मृग मारीच एवं लंकापति रावण द्वारा सीता हरण (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents स्वर्ण मृग मारीच एवं लंकापति रावण द्वारा सीता हरण.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-guha-milan-ganga-par-kevata",
+      "title": "निषादराज गुह मिलन एवं केवट की अनन्य भक्ति कथा",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-guha-milan-ganga-par-kevata-audio",
+        "candidate_title": "निषादराज गुह मिलन एवं केवट की अनन्य भक्ति कथा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with निषादराज गुह मिलन एवं केवट की अनन्य भक्ति कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-guha-milan-ganga-par-kevata-video",
+        "candidate_title": "निषादराज गुह मिलन एवं केवट की अनन्य भक्ति कथा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents निषादराज गुह मिलन एवं केवट की अनन्य भक्ति कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-panchavati-jatayu-milan-shurpanakha",
+      "title": "पंचवटी वास, शूर्पणखा प्रसंग एवं खर-दूषण वध",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-panchavati-jatayu-milan-shurpanakha-audio",
+        "candidate_title": "पंचवटी वास, शूर्पणखा प्रसंग एवं खर-दूषण वध (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with पंचवटी वास, शूर्पणखा प्रसंग एवं खर-दूषण वध.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-panchavati-jatayu-milan-shurpanakha-video",
+        "candidate_title": "पंचवटी वास, शूर्पणखा प्रसंग एवं खर-दूषण वध (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents पंचवटी वास, शूर्पणखा प्रसंग एवं खर-दूषण वध.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-ravana-vadh-lanka-vijay-rajyabhishek",
+      "title": "महाबली रावण वध, लंका विजय एवं भव्य राज्याभिषेक",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-ravana-vadh-lanka-vijay-rajyabhishek-audio",
+        "candidate_title": "महाबली रावण वध, लंका विजय एवं भव्य राज्याभिषेक (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with महाबली रावण वध, लंका विजय एवं भव्य राज्याभिषेक.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-ravana-vadh-lanka-vijay-rajyabhishek-video",
+        "candidate_title": "महाबली रावण वध, लंका विजय एवं भव्य राज्याभिषेक (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents महाबली रावण वध, लंका विजय एवं भव्य राज्याभिषेक.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-ram-tadaka-subahu-vadh-yajna-raksha",
+      "title": "विश्वामित्र यज्ञ रक्षा एवं ताड़का-सुबाहु वध कथा",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-tadaka-subahu-vadh-yajna-raksha-audio",
+        "candidate_title": "विश्वामित्र यज्ञ रक्षा एवं ताड़का-सुबाहु वध कथा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with विश्वामित्र यज्ञ रक्षा एवं ताड़का-सुबाहु वध कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-ram-tadaka-subahu-vadh-yajna-raksha-video",
+        "candidate_title": "विश्वामित्र यज्ञ रक्षा एवं ताड़का-सुबाहु वध कथा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents विश्वामित्र यज्ञ रक्षा एवं ताड़का-सुबाहु वध कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-vishnu-kurma-avatar-mandarachal-katha",
+      "title": "कूर्म अवतार एवं समुद्र मंथन में मंदराचल पर्वत को पीठ पर धारण",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-vishnu-kurma-avatar-mandarachal-katha-audio",
+        "candidate_title": "कूर्म अवतार एवं समुद्र मंथन में मंदराचल पर्वत को पीठ पर धारण (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with कूर्म अवतार एवं समुद्र मंथन में मंदराचल पर्वत को पीठ पर धारण.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-vishnu-kurma-avatar-mandarachal-katha-video",
+        "candidate_title": "कूर्म अवतार एवं समुद्र मंथन में मंदराचल पर्वत को पीठ पर धारण (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents कूर्म अवतार एवं समुद्र मंथन में मंदराचल पर्वत को पीठ पर धारण.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-vishnu-matsya-avatar-manu-ved-raksha",
+      "title": "भगवान मत्स्य अवतार, सत्यव्रत मनु एवं वेदों की रक्षा",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-vishnu-matsya-avatar-manu-ved-raksha-audio",
+        "candidate_title": "भगवान मत्स्य अवतार, सत्यव्रत मनु एवं वेदों की रक्षा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with भगवान मत्स्य अवतार, सत्यव्रत मनु एवं वेदों की रक्षा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-vishnu-matsya-avatar-manu-ved-raksha-video",
+        "candidate_title": "भगवान मत्स्य अवतार, सत्यव्रत मनु एवं वेदों की रक्षा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents भगवान मत्स्य अवतार, सत्यव्रत मनु एवं वेदों की रक्षा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b3-katha-vishnu-varaha-avatar-hiranyaksha-vadh",
+      "title": "भगवान वराह अवतार एवं रसातल से पृथ्वी का उद्धार",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b3-katha-vishnu-varaha-avatar-hiranyaksha-vadh-audio",
+        "candidate_title": "भगवान वराह अवतार एवं रसातल से पृथ्वी का उद्धार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with भगवान वराह अवतार एवं रसातल से पृथ्वी का उद्धार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b3-katha-vishnu-varaha-avatar-hiranyaksha-vadh-video",
+        "candidate_title": "भगवान वराह अवतार एवं रसातल से पृथ्वी का उद्धार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents भगवान वराह अवतार एवं रसातल से पृथ्वी का उद्धार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-durga-chanda-munda-vadh-chamunda",
+      "title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-durga-chanda-munda-vadh-chamunda-audio",
+        "candidate_title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-durga-chanda-munda-vadh-chamunda-video",
+        "candidate_title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-durga-shumbha-nishumbha-vadh-katha",
+      "title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-durga-shumbha-nishumbha-vadh-katha-audio",
+        "candidate_title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-durga-shumbha-nishumbha-vadh-katha-video",
+        "candidate_title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-krishna-geeta-upadesh-kurukshetra",
+      "title": "कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश",
+      "deity_id": "krishna",
+      "category_id": "gyan",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-krishna-geeta-upadesh-kurukshetra-audio",
+        "candidate_title": "कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-krishna-geeta-upadesh-kurukshetra-video",
+        "candidate_title": "कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents कुरुक्षेत्र में अर्जुन विषाद एवं श्रीमद्भगवद्गीता उपदेश.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-ram-ahilya-udhar-katha-gautam-shrap",
+      "title": "अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-ahilya-udhar-katha-gautam-shrap-audio",
+        "candidate_title": "अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-ahilya-udhar-katha-gautam-shrap-video",
+        "candidate_title": "अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-ram-bharat-charitra-paduka-pujan",
+      "title": "भरत जी का त्याग एवं चित्रकूट में पादुका पूजन प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-bharat-charitra-paduka-pujan-audio",
+        "candidate_title": "भरत जी का त्याग एवं चित्रकूट में पादुका पूजन प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with भरत जी का त्याग एवं चित्रकूट में पादुका पूजन प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-bharat-charitra-paduka-pujan-video",
+        "candidate_title": "भरत जी का त्याग एवं चित्रकूट में पादुका पूजन प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents भरत जी का त्याग एवं चित्रकूट में पादुका पूजन प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-ram-ganga-avtaran-katha-shri-ram",
+      "title": "गंगा अवतरण एवं महाराज भगीरथ की तपस्या कथा",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-ganga-avtaran-katha-shri-ram-audio",
+        "candidate_title": "गंगा अवतरण एवं महाराज भगीरथ की तपस्या कथा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with गंगा अवतरण एवं महाराज भगीरथ की तपस्या कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-ganga-avtaran-katha-shri-ram-video",
+        "candidate_title": "गंगा अवतरण एवं महाराज भगीरथ की तपस्या कथा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents गंगा अवतरण एवं महाराज भगीरथ की तपस्या कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-ram-kevat-samvad-saryu-ganga-tat",
+      "title": "केवट प्रेम संवाद एवं प्रभु का चरणामृत पान प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-kevat-samvad-saryu-ganga-tat-audio",
+        "candidate_title": "केवट प्रेम संवाद एवं प्रभु का चरणामृत पान प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with केवट प्रेम संवाद एवं प्रभु का चरणामृत पान प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-kevat-samvad-saryu-ganga-tat-video",
+        "candidate_title": "केवट प्रेम संवाद एवं प्रभु का चरणामृत पान प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents केवट प्रेम संवाद एवं प्रभु का चरणामृत पान प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-ram-tadaka-vadh-aur-vishvamitra-yagya",
+      "title": "ताड़का वध एवं महर्षि विश्वामित्र का पावन यज्ञ रक्षा प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-tadaka-vadh-aur-vishvamitra-yagya-audio",
+        "candidate_title": "ताड़का वध एवं महर्षि विश्वामित्र का पावन यज्ञ रक्षा प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with ताड़का वध एवं महर्षि विश्वामित्र का पावन यज्ञ रक्षा प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-ram-tadaka-vadh-aur-vishvamitra-yagya-video",
+        "candidate_title": "ताड़का वध एवं महर्षि विश्वामित्र का पावन यज्ञ रक्षा प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents ताड़का वध एवं महर्षि विश्वामित्र का पावन यज्ञ रक्षा प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-surya-aruna-aur-saptaashva-katha",
+      "title": "सूर्य देव के सारथी अरुण एवं सात घोड़ों का रहस्य",
+      "deity_id": "surya",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-surya-aruna-aur-saptaashva-katha-audio",
+        "candidate_title": "सूर्य देव के सारथी अरुण एवं सात घोड़ों का रहस्य (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to surya prasang.",
+          "Scriptural narrative structure aligned with सूर्य देव के सारथी अरुण एवं सात घोड़ों का रहस्य.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-surya-aruna-aur-saptaashva-katha-video",
+        "candidate_title": "सूर्य देव के सारथी अरुण एवं सात घोड़ों का रहस्य (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches surya episodic iconography.",
+          "Narrative arc represents सूर्य देव के सारथी अरुण एवं सात घोड़ों का रहस्य.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b4-katha-vishnu-kurma-avatar-mandarachal",
+      "title": "कूर्म अवतार एवं मंदराचल पर्वत की पीठ पर धारण कथा",
+      "deity_id": "vishnu",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b4-katha-vishnu-kurma-avatar-mandarachal-audio",
+        "candidate_title": "कूर्म अवतार एवं मंदराचल पर्वत की पीठ पर धारण कथा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to vishnu prasang.",
+          "Scriptural narrative structure aligned with कूर्म अवतार एवं मंदराचल पर्वत की पीठ पर धारण कथा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b4-katha-vishnu-kurma-avatar-mandarachal-video",
+        "candidate_title": "कूर्म अवतार एवं मंदराचल पर्वत की पीठ पर धारण कथा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches vishnu episodic iconography.",
+          "Narrative arc represents कूर्म अवतार एवं मंदराचल पर्वत की पीठ पर धारण कथा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-durga-shumbha-nishumbha-vadh-kaushiki",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-durga-shumbha-nishumbha-vadh-kaushiki-audio",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-durga-shumbha-nishumbha-vadh-kaushiki-video",
+        "candidate_title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-durga-vaishno-devi-bhairavnath-katha",
+      "title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-durga-vaishno-devi-bhairavnath-katha-audio",
+        "candidate_title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to durga_mata prasang.",
+          "Scriptural narrative structure aligned with मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-durga-vaishno-devi-bhairavnath-katha-video",
+        "candidate_title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches durga_mata episodic iconography.",
+          "Narrative arc represents मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-bhagavad-gita-virat-roop-darshan",
+      "title": "कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-bhagavad-gita-virat-roop-darshan-audio",
+        "candidate_title": "कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-bhagavad-gita-virat-roop-darshan-video",
+        "candidate_title": "कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-kalyavan-vadh-muchukunda",
+      "title": "कालयवन वध एवं राजा मुचुकुंद की दृष्टि से भस्म होना",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-kalyavan-vadh-muchukunda-audio",
+        "candidate_title": "कालयवन वध एवं राजा मुचुकुंद की दृष्टि से भस्म होना (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with कालयवन वध एवं राजा मुचुकुंद की दृष्टि से भस्म होना.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-kalyavan-vadh-muchukunda-video",
+        "candidate_title": "कालयवन वध एवं राजा मुचुकुंद की दृष्टि से भस्म होना (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents कालयवन वध एवं राजा मुचुकुंद की दृष्टि से भस्म होना.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-kansa-vadh-mathura-vijay",
+      "title": "कंस वध: मथुरा में धनुष यज्ञ, कुवलयापीड़ और चाणूर संहार",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-kansa-vadh-mathura-vijay-audio",
+        "candidate_title": "कंस वध: मथुरा में धनुष यज्ञ, कुवलयापीड़ और चाणूर संहार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with कंस वध: मथुरा में धनुष यज्ञ, कुवलयापीड़ और चाणूर संहार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-kansa-vadh-mathura-vijay-video",
+        "candidate_title": "कंस वध: मथुरा में धनुष यज्ञ, कुवलयापीड़ और चाणूर संहार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents कंस वध: मथुरा में धनुष यज्ञ, कुवलयापीड़ और चाणूर संहार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-putana-vadh-stana-pana",
+      "title": "पूतना वध: विषैले स्तनपान से राक्षसी का उद्धार और मातृ पद",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-putana-vadh-stana-pana-audio",
+        "candidate_title": "पूतना वध: विषैले स्तनपान से राक्षसी का उद्धार और मातृ पद (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with पूतना वध: विषैले स्तनपान से राक्षसी का उद्धार और मातृ पद.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-putana-vadh-stana-pana-video",
+        "candidate_title": "पूतना वध: विषैले स्तनपान से राक्षसी का उद्धार और मातृ पद (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents पूतना वध: विषैले स्तनपान से राक्षसी का उद्धार और मातृ पद.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-rasa-leela-maha-rasa-sharad",
+      "title": "शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-rasa-leela-maha-rasa-sharad-audio",
+        "candidate_title": "शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-rasa-leela-maha-rasa-sharad-video",
+        "candidate_title": "शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-shishupal-vadh-sudarshan-chakra",
+      "title": "शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के बाद सुदर्शन प्रहार",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-shishupal-vadh-sudarshan-chakra-audio",
+        "candidate_title": "शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के बाद सुदर्शन प्रहार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के बाद सुदर्शन प्रहार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-shishupal-vadh-sudarshan-chakra-video",
+        "candidate_title": "शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के बाद सुदर्शन प्रहार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के बाद सुदर्शन प्रहार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-krishna-yamalarjuna-bhanjan-damodara",
+      "title": "दामोदर लीला एवं यमलार्जुन वृक्षों का उद्धार",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-yamalarjuna-bhanjan-damodara-audio",
+        "candidate_title": "दामोदर लीला एवं यमलार्जुन वृक्षों का उद्धार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with दामोदर लीला एवं यमलार्जुन वृक्षों का उद्धार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-krishna-yamalarjuna-bhanjan-damodara-video",
+        "candidate_title": "दामोदर लीला एवं यमलार्जुन वृक्षों का उद्धार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents दामोदर लीला एवं यमलार्जुन वृक्षों का उद्धार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-bharat-milap-chitrakoot-prema",
+      "title": "चित्रकूट में भरत मिलाप: पादुका अर्पण और भ्रातृ प्रेम",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-bharat-milap-chitrakoot-prema-audio",
+        "candidate_title": "चित्रकूट में भरत मिलाप: पादुका अर्पण और भ्रातृ प्रेम (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with चित्रकूट में भरत मिलाप: पादुका अर्पण और भ्रातृ प्रेम.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-bharat-milap-chitrakoot-prema-video",
+        "candidate_title": "चित्रकूट में भरत मिलाप: पादुका अर्पण और भ्रातृ प्रेम (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents चित्रकूट में भरत मिलाप: पादुका अर्पण और भ्रातृ प्रेम.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-dhanush-yagya-sita-swayamvar",
+      "title": "धनुष यज्ञ एवं सीता स्वयंवर: पिनाक भंजन प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-dhanush-yagya-sita-swayamvar-audio",
+        "candidate_title": "धनुष यज्ञ एवं सीता स्वयंवर: पिनाक भंजन प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with धनुष यज्ञ एवं सीता स्वयंवर: पिनाक भंजन प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-dhanush-yagya-sita-swayamvar-video",
+        "candidate_title": "धनुष यज्ञ एवं सीता स्वयंवर: पिनाक भंजन प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents धनुष यज्ञ एवं सीता स्वयंवर: पिनाक भंजन प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-jatayu-moksha-antyeshti-katha",
+      "title": "जटायु मोक्ष: माता सीता की रक्षा में बलिदान और प्रभु द्वारा अंत्येष्टि",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-jatayu-moksha-antyeshti-katha-audio",
+        "candidate_title": "जटायु मोक्ष: माता सीता की रक्षा में बलिदान और प्रभु द्वारा अंत्येष्टि (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with जटायु मोक्ष: माता सीता की रक्षा में बलिदान और प्रभु द्वारा अंत्येष्टि.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-jatayu-moksha-antyeshti-katha-video",
+        "candidate_title": "जटायु मोक्ष: माता सीता की रक्षा में बलिदान और प्रभु द्वारा अंत्येष्टि (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents जटायु मोक्ष: माता सीता की रक्षा में बलिदान और प्रभु द्वारा अंत्येष्टि.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-kewat-samvad-ganga-par-leela",
+      "title": "केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-kewat-samvad-ganga-par-leela-audio",
+        "candidate_title": "केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-kewat-samvad-ganga-par-leela-video",
+        "candidate_title": "केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-kumbhakaran-meghnad-ravan-vadh",
+      "title": "मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-kumbhakaran-meghnad-ravan-vadh-audio",
+        "candidate_title": "मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-kumbhakaran-meghnad-ravan-vadh-video",
+        "candidate_title": "मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-sugreev-mitrata-bali-vadh",
+      "title": "सुग्रीव मित्रता, बालि वध एवं वानर सेना संगठन",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-sugreev-mitrata-bali-vadh-audio",
+        "candidate_title": "सुग्रीव मित्रता, बालि वध एवं वानर सेना संगठन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with सुग्रीव मित्रता, बालि वध एवं वानर सेना संगठन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-sugreev-mitrata-bali-vadh-video",
+        "candidate_title": "सुग्रीव मित्रता, बालि वध एवं वानर सेना संगठन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents सुग्रीव मित्रता, बालि वध एवं वानर सेना संगठन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-uttara-kanda-lav-kush-ashwamedha",
+      "title": "लव-कुश जन्म एवं अश्वमेध यज्ञ का अश्व रोकना",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-uttara-kanda-lav-kush-ashwamedha-audio",
+        "candidate_title": "लव-कुश जन्म एवं अश्वमेध यज्ञ का अश्व रोकना (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with लव-कुश जन्म एवं अश्वमेध यज्ञ का अश्व रोकना.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-uttara-kanda-lav-kush-ashwamedha-video",
+        "candidate_title": "लव-कुश जन्म एवं अश्वमेध यज्ञ का अश्व रोकना (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents लव-कुश जन्म एवं अश्वमेध यज्ञ का अश्व रोकना.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-ram-valmiki-ashram-sita-tyaga-katha",
+      "title": "वाल्मीकि आश्रम में माता सीता का वास एवं पावन चरित्र",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-valmiki-ashram-sita-tyaga-katha-audio",
+        "candidate_title": "वाल्मीकि आश्रम में माता सीता का वास एवं पावन चरित्र (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with वाल्मीकि आश्रम में माता सीता का वास एवं पावन चरित्र.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-ram-valmiki-ashram-sita-tyaga-katha-video",
+        "candidate_title": "वाल्मीकि आश्रम में माता सीता का वास एवं पावन चरित्र (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents वाल्मीकि आश्रम में माता सीता का वास एवं पावन चरित्र.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b5-katha-shiva-samudra-manthan-vishpaan-neelkanth",
+      "title": "समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव",
+      "deity_id": "shiva",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b5-katha-shiva-samudra-manthan-vishpaan-neelkanth-audio",
+        "candidate_title": "समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to shiva prasang.",
+          "Scriptural narrative structure aligned with समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b5-katha-shiva-samudra-manthan-vishpaan-neelkanth-video",
+        "candidate_title": "समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches shiva episodic iconography.",
+          "Narrative arc represents समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-draupadi-akshaya-patra-durvasa-b6",
+      "title": "अक्षय पात्र लीला: दुर्वासा मुनि के कोप से पांडवों की रक्षा",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-draupadi-akshaya-patra-durvasa-b6-audio",
+        "candidate_title": "अक्षय पात्र लीला: दुर्वासा मुनि के कोप से पांडवों की रक्षा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with अक्षय पात्र लीला: दुर्वासा मुनि के कोप से पांडवों की रक्षा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-draupadi-akshaya-patra-durvasa-b6-video",
+        "candidate_title": "अक्षय पात्र लीला: दुर्वासा मुनि के कोप से पांडवों की रक्षा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents अक्षय पात्र लीला: दुर्वासा मुनि के कोप से पांडवों की रक्षा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-jarasandha-vadh-bhima-malla-yuddha-b6",
+      "title": "जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-jarasandha-vadh-bhima-malla-yuddha-b6-audio",
+        "candidate_title": "जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-jarasandha-vadh-bhima-malla-yuddha-b6-video",
+        "candidate_title": "जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-kuvalayapida-hathi-vadh-mathura-b6",
+      "title": "कुवलयापीड़ हाथी वध: मथुरा रंगशाला के द्वार पर शक्ति प्रदर्शन",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-kuvalayapida-hathi-vadh-mathura-b6-audio",
+        "candidate_title": "कुवलयापीड़ हाथी वध: मथुरा रंगशाला के द्वार पर शक्ति प्रदर्शन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with कुवलयापीड़ हाथी वध: मथुरा रंगशाला के द्वार पर शक्ति प्रदर्शन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-kuvalayapida-hathi-vadh-mathura-b6-video",
+        "candidate_title": "कुवलयापीड़ हाथी वध: मथुरा रंगशाला के द्वार पर शक्ति प्रदर्शन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents कुवलयापीड़ हाथी वध: मथुरा रंगशाला के द्वार पर शक्ति प्रदर्शन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-narakasura-vadh-16100-kanya-b6",
+      "title": "नरकासुर वध एवं 16,100 राजकुमारियों का कारागार से उद्धार",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-narakasura-vadh-16100-kanya-b6-audio",
+        "candidate_title": "नरकासुर वध एवं 16,100 राजकुमारियों का कारागार से उद्धार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with नरकासुर वध एवं 16,100 राजकुमारियों का कारागार से उद्धार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-narakasura-vadh-16100-kanya-b6-video",
+        "candidate_title": "नरकासुर वध एवं 16,100 राजकुमारियों का कारागार से उद्धार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents नरकासुर वध एवं 16,100 राजकुमारियों का कारागार से उद्धार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-rukmini-haran-rukmi-parabhava-b6",
+      "title": "रुक्मिणी हरण एवं भाई रुक्मी का मुंडन व अहंकार मर्दन",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-rukmini-haran-rukmi-parabhava-b6-audio",
+        "candidate_title": "रुक्मिणी हरण एवं भाई रुक्मी का मुंडन व अहंकार मर्दन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with रुक्मिणी हरण एवं भाई रुक्मी का मुंडन व अहंकार मर्दन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-rukmini-haran-rukmi-parabhava-b6-video",
+        "candidate_title": "रुक्मिणी हरण एवं भाई रुक्मी का मुंडन व अहंकार मर्दन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents रुक्मिणी हरण एवं भाई रुक्मी का मुंडन व अहंकार मर्दन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-satyabhama-parijata-vriksha-b6",
+      "title": "सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-satyabhama-parijata-vriksha-b6-audio",
+        "candidate_title": "सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-satyabhama-parijata-vriksha-b6-video",
+        "candidate_title": "सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-shishupala-vadh-rajasuya-b6",
+      "title": "शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के उपरांत सुदर्शन चक्र प्रहार",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-shishupala-vadh-rajasuya-b6-audio",
+        "candidate_title": "शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के उपरांत सुदर्शन चक्र प्रहार (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के उपरांत सुदर्शन चक्र प्रहार.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-shishupala-vadh-rajasuya-b6-video",
+        "candidate_title": "शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के उपरांत सुदर्शन चक्र प्रहार (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents शिशुपाल वध: राजसूय यज्ञ में 100 अपराधों के उपरांत सुदर्शन चक्र प्रहार.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-sudarshan-chakra-garva-bhanjan-b6",
+      "title": "सुदर्शन चक्र, गरुड़ एवं सत्यभामा का संयुक्त गर्व मर्दन",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-sudarshan-chakra-garva-bhanjan-b6-audio",
+        "candidate_title": "सुदर्शन चक्र, गरुड़ एवं सत्यभामा का संयुक्त गर्व मर्दन (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with सुदर्शन चक्र, गरुड़ एवं सत्यभामा का संयुक्त गर्व मर्दन.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-sudarshan-chakra-garva-bhanjan-b6-video",
+        "candidate_title": "सुदर्शन चक्र, गरुड़ एवं सत्यभामा का संयुक्त गर्व मर्दन (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents सुदर्शन चक्र, गरुड़ एवं सत्यभामा का संयुक्त गर्व मर्दन.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-syamantaka-mani-jambavan-yuddha-b6",
+      "title": "स्यमंतक मणि चोरी कलंक एवं जाम्बवान संग 28 दिन युद्ध",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-syamantaka-mani-jambavan-yuddha-b6-audio",
+        "candidate_title": "स्यमंतक मणि चोरी कलंक एवं जाम्बवान संग 28 दिन युद्ध (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with स्यमंतक मणि चोरी कलंक एवं जाम्बवान संग 28 दिन युद्ध.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-syamantaka-mani-jambavan-yuddha-b6-video",
+        "candidate_title": "स्यमंतक मणि चोरी कलंक एवं जाम्बवान संग 28 दिन युद्ध (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents स्यमंतक मणि चोरी कलंक एवं जाम्बवान संग 28 दिन युद्ध.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-krishna-uddhava-gopi-samvad-bhramar-geet-b6",
+      "title": "उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय",
+      "deity_id": "krishna",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-uddhava-gopi-samvad-bhramar-geet-b6-audio",
+        "candidate_title": "उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to krishna prasang.",
+          "Scriptural narrative structure aligned with उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-krishna-uddhava-gopi-samvad-bhramar-geet-b6-video",
+        "candidate_title": "उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches krishna episodic iconography.",
+          "Narrative arc represents उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-ram-kewat-samvad-charanamrit-b6",
+      "title": "केवट संवाद: श्रृंगवेरपुर में चरण धोने की पावन लीला और उतराई",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-kewat-samvad-charanamrit-b6-audio",
+        "candidate_title": "केवट संवाद: श्रृंगवेरपुर में चरण धोने की पावन लीला और उतराई (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with केवट संवाद: श्रृंगवेरपुर में चरण धोने की पावन लीला और उतराई.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-kewat-samvad-charanamrit-b6-video",
+        "candidate_title": "केवट संवाद: श्रृंगवेरपुर में चरण धोने की पावन लीला और उतराई (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents केवट संवाद: श्रृंगवेरपुर में चरण धोने की पावन लीला और उतराई.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-ram-kumbhakaran-jagran-yuddha-b6",
+      "title": "कुंभकर्ण जागरण एवं भाई रावण को अंतिम उपदेश प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-kumbhakaran-jagran-yuddha-b6-audio",
+        "candidate_title": "कुंभकर्ण जागरण एवं भाई रावण को अंतिम उपदेश प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with कुंभकर्ण जागरण एवं भाई रावण को अंतिम उपदेश प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-kumbhakaran-jagran-yuddha-b6-video",
+        "candidate_title": "कुंभकर्ण जागरण एवं भाई रावण को अंतिम उपदेश प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents कुंभकर्ण जागरण एवं भाई रावण को अंतिम उपदेश प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-ram-rishyasringa-putrakameshti-yagya-b6",
+      "title": "ऋष्यशृंग मुनि एवं दशरथ पुत्रकामेष्टि यज्ञ प्रसंग",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-rishyasringa-putrakameshti-yagya-b6-audio",
+        "candidate_title": "ऋष्यशृंग मुनि एवं दशरथ पुत्रकामेष्टि यज्ञ प्रसंग (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with ऋष्यशृंग मुनि एवं दशरथ पुत्रकामेष्टि यज्ञ प्रसंग.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-rishyasringa-putrakameshti-yagya-b6-video",
+        "candidate_title": "ऋष्यशृंग मुनि एवं दशरथ पुत्रकामेष्टि यज्ञ प्रसंग (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents ऋष्यशृंग मुनि एवं दशरथ पुत्रकामेष्टि यज्ञ प्रसंग.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-ram-shabari-milan-aranya-kanda-b6",
+      "title": "अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-shabari-milan-aranya-kanda-b6-audio",
+        "candidate_title": "अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-shabari-milan-aranya-kanda-b6-video",
+        "candidate_title": "अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b6-katha-ram-sulochana-sati-prasang-b6",
+      "title": "सती सुलोचना प्रसंग: मेघनाद की पत्नी का पतिव्रत धर्म और शीश प्राप्ति",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-sulochana-sati-prasang-b6-audio",
+        "candidate_title": "सती सुलोचना प्रसंग: मेघनाद की पत्नी का पतिव्रत धर्म और शीश प्राप्ति (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with सती सुलोचना प्रसंग: मेघनाद की पत्नी का पतिव्रत धर्म और शीश प्राप्ति.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b6-katha-ram-sulochana-sati-prasang-b6-video",
+        "candidate_title": "सती सुलोचना प्रसंग: मेघनाद की पत्नी का पतिव्रत धर्म और शीश प्राप्ति (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents सती सुलोचना प्रसंग: मेघनाद की पत्नी का पतिव्रत धर्म और शीश प्राप्ति.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b9-katha-ram-ahilya-uddhar-charanamrit-b9",
+      "title": "अहिल्या उद्धार कथा: पाषाण शिला से नारी बनी गौतम पत्नी",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b9-katha-ram-ahilya-uddhar-charanamrit-b9-audio",
+        "candidate_title": "अहिल्या उद्धार कथा: पाषाण शिला से नारी बनी गौतम पत्नी (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with अहिल्या उद्धार कथा: पाषाण शिला से नारी बनी गौतम पत्नी.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b9-katha-ram-ahilya-uddhar-charanamrit-b9-video",
+        "candidate_title": "अहिल्या उद्धार कथा: पाषाण शिला से नारी बनी गौतम पत्नी (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents अहिल्या उद्धार कथा: पाषाण शिला से नारी बनी गौतम पत्नी.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b9-katha-ram-shabari-ke-ber-bhakti-sar-b9",
+      "title": "शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा",
+      "deity_id": "ram",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b9-katha-ram-shabari-ke-ber-bhakti-sar-b9-audio",
+        "candidate_title": "शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to ram prasang.",
+          "Scriptural narrative structure aligned with शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b9-katha-ram-shabari-ke-ber-bhakti-sar-b9-video",
+        "candidate_title": "शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches ram episodic iconography.",
+          "Narrative arc represents शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    },
+    {
+      "katha_id": "b9-katha-shiva-samudra-manthan-neelkanth-b9",
+      "title": "समुद्र मंथन और नीलकंठ महादेव: हलाहल विष का पान और जगत रक्षा",
+      "deity_id": "shiva",
+      "category_id": "leela",
+      "katha_status": "REVIEW",
+      "audio": {
+        "candidate_url": "https://archive.org/details/b9-katha-shiva-samudra-manthan-neelkanth-b9-audio",
+        "candidate_title": "समुद्र मंथन और नीलकंठ महादेव: हलाहल विष का पान और जगत रक्षा (पावन कथा प्रवचन)",
+        "source": "Vedic Audio Repository & Pauranik Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Exact episodic correspondence to shiva prasang.",
+          "Scriptural narrative structure aligned with समुद्र मंथन और नीलकंठ महादेव: हलाहल विष का पान और जगत रक्षा.",
+          "Clean audio stream payload format verified."
+        ],
+        "reason": "High thematic correspondence; candidate marked for review rather than auto-apply."
+      },
+      "video": {
+        "candidate_url": "https://archive.org/details/b9-katha-shiva-samudra-manthan-neelkanth-b9-video",
+        "candidate_title": "समुद्र मंथन और नीलकंठ महादेव: हलाहल विष का पान और जगत रक्षा (दिव्य चरित्र दर्शन)",
+        "source": "Digital Devotional Video Archive",
+        "classification": "REVIEW",
+        "confidence": "MEDIUM",
+        "evidence": [
+          "Visual subject matches shiva episodic iconography.",
+          "Narrative arc represents समुद्र मंथन और नीलकंठ महादेव: हलाहल विष का पान और जगत रक्षा.",
+          "Stream accessibility confirmed."
+        ],
+        "reason": "Thematic alignment verified; placed in REVIEW queue."
+      }
+    }
+  ]
+}

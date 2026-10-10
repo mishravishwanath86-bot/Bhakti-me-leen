@@ -1,0 +1,69 @@
+{
+  "batch_id": "002",
+  "batch_name": "bhakti_batch_002",
+  "audit_type": "pre_import_dry_run_validation",
+  "audit_date": "2026-08-26T18:46:08.693524+00:00",
+  "locked_integrity": {
+    "db_records_locked_count": 502,
+    "batch_001_locked_count": 500,
+    "batch_001_files_unmodified": true
+  },
+  "batch_002_generation_metrics": {
+    "total_generated": 500,
+    "valid_count": 500,
+    "invalid_count": 0,
+    "internal_duplicates": 0,
+    "db_duplicates": 0,
+    "batch_001_duplicates": 0
+  },
+  "dry_run_result": {
+    "command": "python bulk_import/importer.py --file bulk_import/data/bhakti_batch_002.csv --dry-run",
+    "success": true,
+    "dry_run": true,
+    "total_items": 500,
+    "valid_count": 500,
+    "invalid_count": 0,
+    "validation_errors": []
+  },
+  "content_type_distribution": {
+    "aarti": 50,
+    "chalisa": 20,
+    "mantra": 40,
+    "stotram": 60,
+    "katha": 40,
+    "festival_special": 15,
+    "vrat_katha": 15,
+    "temple_katha": 10,
+    "dharmik_gyan": 30,
+    "satsang": 15,
+    "chetawani_bhajan": 15,
+    "naam_jaap": 10,
+    "bhajan": 180
+  },
+  "deity_distribution": {
+    "ram": 59,
+    "krishna": 58,
+    "radharani": 18,
+    "shiva": 56,
+    "hanuman": 43,
+    "durga_mata": 55,
+    "ganesh": 26,
+    "vishnu": 43,
+    "lakshmi": 12,
+    "saraswati": 10,
+    "surya": 11,
+    "shanidev": 7,
+    "khatushyam": 7,
+    "bhairav": 7,
+    "santoshi": 3,
+    "ganga": 5,
+    "guru_sant": 23,
+    "other_deities": 8,
+    "yamuna": 2,
+    "general_bhakti": 47
+  },
+  "files": {
+    "csv_path": "bulk_import/data/bhakti_batch_002.csv",
+    "json_path": "bulk_import/data/bhakti_batch_002.json"
+  }
+}

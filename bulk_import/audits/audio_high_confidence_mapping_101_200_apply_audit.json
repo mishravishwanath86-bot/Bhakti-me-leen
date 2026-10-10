@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "batch_name": "Applied 21 High-Confidence YouTube Candidates (101–200)",
+    "applied_at": "2026-08-29T10:34:59.809750+00:00",
+    "backup_file": "bhakti_pre_youtube_mapping_101_200_20260829_160458.db",
+    "records_applied": 21,
+    "db_total_count": 10010,
+    "local_mp3_count": 38,
+    "youtube_url_count": 40,
+    "total_working_audio": 78,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "batch_021_started": false
+  },
+  "applied_records": [
+    {
+      "index": 1,
+      "record_id": "aarti-shanidev-om-jai-jai-shri-shanidev",
+      "title": "शनिदेव जी की आरती - ॐ जय जय श्री शनिदेव",
+      "content_type": "aarti",
+      "deity_id": "shanidev",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=J6DkdmLTe7A",
+      "channel": "Ambey Bhakti",
+      "score": 90.0
+    },
+    {
+      "index": 2,
+      "record_id": "bhajan-guru_sant-meera-payo-ji-maine-ram-ratan",
+      "title": "पायो जी मैंने राम रतन धन पायो (मीरा बाई)",
+      "content_type": "bhajan",
+      "deity_id": "guru_sant",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=b9oygxhQrzo",
+      "channel": "RAS Tv bhakti Nation ",
+      "score": 85.0
+    },
+    {
+      "index": 3,
+      "record_id": "vrat_katha-ekadashi-devshayani-ekadashi",
+      "title": "देवशयनी (हरिशयनी) एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=GaoqvLzeQRg",
+      "channel": "Sonotek Bhakti",
+      "score": 85.2
+    },
+    {
+      "index": 4,
+      "record_id": "vrat_katha-ekadashi-utpanna",
+      "title": "उत्पन्ना एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=LeB9XHGUoTs",
+      "channel": "Hare Krsna TV",
+      "score": 85.0
+    },
+    {
+      "index": 5,
+      "record_id": "vrat_katha-ekadashi-mokshada",
+      "title": "मोक्षदा एकादशी व्रत कथा एवं गीता जयंती",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=ASdgxTXGO8s",
+      "channel": "RajlaxmEE 3M views",
+      "score": 85.0
+    },
+    {
+      "index": 6,
+      "record_id": "vrat_katha-ekadashi-saphala",
+      "title": "सफला एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=xcMzxWPzm8E",
+      "channel": "Sonotek Bhakti",
+      "score": 100.0
+    },
+    {
+      "index": 7,
+      "record_id": "vrat_katha-ekadashi-jaya",
+      "title": "जया एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=Q3ig7mAHriY",
+      "channel": "Bhakti Gyan",
+      "score": 100.0
+    },
+    {
+      "index": 8,
+      "record_id": "vrat_katha-ekadashi-vijaya",
+      "title": "विजया एकादशी व्रत एवं श्री राम लंका विजय",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=aNDO0RHVYbU",
+      "channel": "Inspire Story Junction",
+      "score": 81.2
+    },
+    {
+      "index": 9,
+      "record_id": "vrat_katha-ekadashi-amalaki",
+      "title": "आमलकी (आंवला) एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=y497WqG0_A0",
+      "channel": "Bhakti Gyan",
+      "score": 89.0
+    },
+    {
+      "index": 10,
+      "record_id": "vrat_katha-ekadashi-kamada",
+      "title": "कामदा एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=LgiWAI9jCQk",
+      "channel": "Sonotek Bhakti",
+      "score": 92.5
+    },
+    {
+      "index": 11,
+      "record_id": "vrat_katha-ekadashi-varuthini",
+      "title": "वरूथिनी एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=evd7YRLPHKI",
+      "channel": "Jaya Gupta",
+      "score": 85.0
+    },
+    {
+      "index": 12,
+      "record_id": "vrat_katha-ekadashi-mohini",
+      "title": "मोहिनी एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=0BRKea2JHpk",
+      "channel": "Ambey Bhakti",
+      "score": 100.0
+    },
+    {
+      "index": 13,
+      "record_id": "vrat_katha-ekadashi-apara",
+      "title": "अपरा (अचला) एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=5etPUWivqGg",
+      "channel": "Ambey Bhakti",
+      "score": 100.0
+    },
+    {
+      "index": 14,
+      "record_id": "vrat_katha-ekadashi-nirjala",
+      "title": "निर्जला (भीमसेनी) एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=ZcKh9lP5QSE",
+      "channel": "Bhakti Gyan",
+      "score": 85.2
+    },
+    {
+      "index": 15,
+      "record_id": "vrat_katha-ekadashi-yogini",
+      "title": "योगिनी एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=XfuXOZJ-YwM",
+      "channel": "Vrat Parva Tyohar",
+      "score": 85.0
+    },
+    {
+      "index": 16,
+      "record_id": "vrat_katha-ekadashi-kamika",
+      "title": "कामिका एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=bU_adTbVQmw",
+      "channel": "Bhakti Gyan",
+      "score": 96.2
+    },
+    {
+      "index": 17,
+      "record_id": "vrat_katha-ekadashi-parivartini",
+      "title": "परिवर्तिनी (पद्मा / वामन) एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=YJVFdT7iioE",
+      "channel": "Ekagra Bhakti",
+      "score": 85.0
+    },
+    {
+      "index": 18,
+      "record_id": "vrat_katha-ekadashi-papankusha",
+      "title": "पापांकुशा एकादशी व्रत कथा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=vVKBk9gG-Gs",
+      "channel": "Smunni TV Dharmik Stories",
+      "score": 85.0
+    },
+    {
+      "index": 19,
+      "record_id": "vrat_katha-ekadashi-rama",
+      "title": "रमा एकादशी व्रत एवं लक्ष्मी कृपा",
+      "content_type": "vrat_katha",
+      "deity_id": "vishnu",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=v-GKKxha5hE",
+      "channel": "gori shanker",
+      "score": 85.0
+    },
+    {
+      "index": 20,
+      "record_id": "naam_jaap-108-names-ram",
+      "title": "श्री राम अष्टोत्तर शतनामावली (108 पावन नाम)",
+      "content_type": "naam_jaap",
+      "deity_id": "ram",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=Ycl1cknxxaQ",
+      "channel": "Gopalkrishn Bhakti Ganga",
+      "score": 95.0
+    },
+    {
+      "index": 21,
+      "record_id": "naam_jaap-108-names-krishna",
+      "title": "श्री कृष्ण अष्टोत्तर शतनामावली (108 पावन नाम)",
+      "content_type": "naam_jaap",
+      "deity_id": "krishna",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=qqlFuSmQgZA",
+      "channel": "Neelmadhav Bhakti",
+      "score": 95.0
+    }
+  ]
+}

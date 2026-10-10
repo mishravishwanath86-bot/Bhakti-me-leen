@@ -1,0 +1,164 @@
+{
+  "phase": "2A",
+  "operation": "apply_high_confidence_bhajan_audio",
+  "timestamp": "2026-08-29T11:56:22.270308+00:00",
+  "backup_file": "bhakti_pre_phase2a_bhajans_20260829_172621.db",
+  "database_records_before": 10010,
+  "database_records_after": 10010,
+  "playable_audio_before": 78,
+  "playable_audio_after": 92,
+  "local_mp3_count": 38,
+  "youtube_url_count": 54,
+  "requested_mappings": 14,
+  "applied": 14,
+  "skipped": 0,
+  "overwritten": 0,
+  "failed": 0,
+  "database_modified": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "fts5_document_count": 10010,
+  "batch_021_started": false,
+  "applied_records": [
+    {
+      "record_id": "b14-bhajan-guru-sant-kabir-chadariya-jhini-re-jhini-b14",
+      "title": "झीनी झीनी बीनी चदरिया (संत कबीर पद 14)",
+      "content_type": "bhajan",
+      "deity_id": "guru_sant",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=Fj-E_U2x6fE",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b15-bhajan-guru-sant-kabir-ghat-ghat-men-panchi-b15",
+      "title": "घट घट में पंछी बोलता (संत कबीर पद 15)",
+      "content_type": "bhajan",
+      "deity_id": "guru_sant",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=prigdCGocEw",
+      "score": 82.5,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-hanuman-anjani-ka-lala-bada-matwala",
+      "title": "अंजनी का लाला बड़ा मतवाला (बजरंगबली)",
+      "content_type": "bhajan",
+      "deity_id": "hanuman",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=HMxSfNCmX5Q",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-krishna-are-dwarpalon-kanhaiya-se-keh-do",
+      "title": "अरे द्वारपालों कन्हैया से कह दो",
+      "content_type": "bhajan",
+      "deity_id": "krishna",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=NW7-O2fnl1Y",
+      "score": 100.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-meera-hari-tum-haro-jan-ki-bheer",
+      "title": "हरि तुम हरो जन की भीर (द्रौपदी की लाज राखी)",
+      "content_type": "bhajan",
+      "deity_id": "krishna",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=HxTYfCJ1-OY",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-meera-pag-ghunghroo-baandh-meera-naachi",
+      "title": "पग घुंघरू बांध मीरा नाची रे",
+      "content_type": "bhajan",
+      "deity_id": "krishna",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=dcHOt8RBvIk",
+      "score": 82.5,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-ram-ram-naam-ati-meetha-hai",
+      "title": "राम नाम अति मीठा है कोई गा के देख ले",
+      "content_type": "bhajan",
+      "deity_id": "ram",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=lEi1R1UJIQc",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-ravidas-prabhu-ji-tum-chandan-hum-pani",
+      "title": "प्रभु जी तुम चंदन हम पानी",
+      "content_type": "bhajan",
+      "deity_id": "guru_sant",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=K890Du2OmAg",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-shiva-bam-lahiri-shiv-shiv-lahiri",
+      "title": "बम लहरी बम लहरी (शिव शंभू लहरी)",
+      "content_type": "bhajan",
+      "deity_id": "shiva",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=eJwODdl3AHk",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-shiva-kailash-ke-nivasi-namo-baar-baar",
+      "title": "कैलाश के निवासी नमो बार बार हूं",
+      "content_type": "bhajan",
+      "deity_id": "shiva",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=uFQmVS2lgAw",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-shiva-man-mera-mandir-shiv-meri-puja",
+      "title": "मन मेरा मंदिर शिव मेरी पूजा",
+      "content_type": "bhajan",
+      "deity_id": "shiva",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=f466yeznsh8",
+      "score": 100.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "bhajan-surdas-nisidin-barsat-nain-hamare",
+      "title": "निसिदिन बरसत नैन हमारे",
+      "content_type": "bhajan",
+      "deity_id": "krishna",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=AmXOoh3JPWU",
+      "score": 85.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "stotram-ram-raghupati-raghava-rajaram",
+      "title": "रघुपति राघव राजाराम (पावन संकीर्तन)",
+      "content_type": "bhajan",
+      "deity_id": "ram",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=SHqsMCNOpcs",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    },
+    {
+      "record_id": "b10-bhajan-khatushyam-haare-ke-nath-shyam-hamare-b10",
+      "title": "हारे के नाथ श्याम हमारे खाटू धाम विराजे प्यारे (खाटू धाम 10)",
+      "content_type": "bhajan",
+      "deity_id": "khatushyam",
+      "previous_audio_url": "",
+      "new_audio_url": "https://www.youtube.com/watch?v=86um2h46K9I",
+      "score": 90.0,
+      "status": "APPLIED_SUCCESS"
+    }
+  ]
+}

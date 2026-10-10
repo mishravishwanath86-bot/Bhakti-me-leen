@@ -1,0 +1,63 @@
+{
+  "appName": "Bhakti Me Leen",
+  "tagline": "সনাতন ধর্ম, ধ্যান এবং আত্মিক শান্তির পবিত্র দ্বার",
+  "shubhaMantra": "✨ ওঁ শ্রী গণেশায় নমঃ ✨",
+  "nav": {
+    "panchang": "পঞ্জিকা",
+    "jar": "অমৃত কলশ",
+    "home": "হোম",
+    "katha": "অডিও",
+    "profile": "প্রোফাইল",
+    "settings": "সেটিংস",
+    "aarti": "আরতি দর্শন",
+    "japMala": "জপ মালা"
+  },
+  "home": {
+    "welcome": "স্বাগতম",
+    "guestLogin": "অতিথি প্রবেশ",
+    "dailyTracker": "দৈনিক সাধনা ট্র্যাকার",
+    "visitsToday": "আজকের পবিত্র প্রবেশ",
+    "times": "বার",
+    "streak": "দিন স্ট্রিক",
+    "streakShield": "সক্রিয় কবচ",
+    "punyaPoints": "অর্জিত পুণ্য",
+    "openSadhanaCenter": "সাধনা কেন্দ্র খুলুন",
+    "liveRadio": "২৪×৭ লাইভ ভক্তি রেডিও",
+    "parikrama": "দিব্য ৩ডি মন্দির পরিক্রমা",
+    "amritKalash": "ভক্তি অমৃত কলশ",
+    "radioNowPlaying": "এখন বাজছে",
+    "categories": "দিব্য বিভাগ",
+    "dailyPanchang": "দৈনিক পঞ্জিকা",
+    "shubhMuhurat": "শুভ মুহূর্ত"
+  },
+  "categories": {
+    "aarti": "আরতি",
+    "chalisa": "চল্লিশা",
+    "mantra": "মন্ত্র",
+    "stotra": "স্তোত্র",
+    "vrat": "ব্রত",
+    "festival": "উৎসব",
+    "ramayana": "রামায়ণ",
+    "katha": "কথা",
+    "desh": "দেশভক্তি",
+    "panchang": "পঞ্জিকা"
+  },
+  "settings": {
+    "title": "সাধনা নিয়ন্ত্রণ ও সেটিংস",
+    "haptics": "আধ্যাত্মিক হ্যাপটিক্স ও ধ্বনি",
+    "brahmaMuhurta": "ব্রহ্ম মুহূর্ত অ্যালার্ম",
+    "bioAura": "প্রাণিক অরা স্ক্যানার",
+    "vault": "সাধনা ক্লাউড ভল্ট",
+    "language": "ভাষা নির্বাচন (Language)",
+    "selectLanguage": "আপনার পছন্দের ভাষা নির্বাচন করুন",
+    "applyLanguage": "ভাষা প্রয়োগ করুন",
+    "logout": "লগ আউট"
+  },
+  "audio": {
+    "title": "ভক্তি অডিও লাইব্রেরি",
+    "pureAudio": "শুধু অডিও শুনুন",
+    "watchVideo": "ভিডিও দেখুন",
+    "nowPlaying": "এখন বাজছে",
+    "lyrics": "পাঠ ও ভাবার্থ দেখুন"
+  }
+}

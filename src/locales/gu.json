@@ -1,0 +1,63 @@
+{
+  "appName": "ભક્તિ મેં લીન",
+  "tagline": "સનાતન ધર્મ, ધ્યાન અને આત્મિક શાંતિનું પાવન દ્વાર",
+  "shubhaMantra": "✨ ૐ શ્રી ગણેશાય નમઃ ✨",
+  "nav": {
+    "panchang": "પંચાંગ",
+    "jar": "અમૃત કળશ",
+    "home": "હોમ",
+    "katha": "ઓડિયો",
+    "profile": "પ્રોફાઇલ",
+    "settings": "સેટિંગ્સ",
+    "aarti": "આરતી દર્શન",
+    "japMala": "જાપ માળા"
+  },
+  "home": {
+    "welcome": "સ્વાગત છે",
+    "guestLogin": "અતિથિ પ્રવેશ",
+    "dailyTracker": "દૈનિક સાધના સંજ્ઞાન",
+    "visitsToday": "આજનો પાવન પ્રવેશ",
+    "times": "વખત",
+    "streak": "દિવસ સ્ટ્રીક",
+    "streakShield": "સક્રિય કવચ",
+    "punyaPoints": "સંચિત પુણ્ય",
+    "openSadhanaCenter": "સાધના નિયંત્રણ કક્ષ ખોલો",
+    "liveRadio": "24×7 લાઈવ ભક્તિ રેડિયો",
+    "parikrama": "દિવ્ય 3D મંદિર પરિક્રમા",
+    "amritKalash": "ભક્તિ અમૃત કળશ",
+    "radioNowPlaying": "હમણાં વાગી રહ્યું છે",
+    "categories": "દિવ્ય શ્રેણીઓ",
+    "dailyPanchang": "દૈનિક પંચાંગ",
+    "shubhMuhurat": "શુભ મુહૂર્ત"
+  },
+  "categories": {
+    "aarti": "આરતી",
+    "chalisa": "ચાલીસા",
+    "mantra": "મંત્ર",
+    "stotra": "સ્તોત્ર",
+    "vrat": "વ્રત",
+    "festival": "તહેવાર",
+    "ramayana": "રામાયણ",
+    "katha": "કથા",
+    "desh": "દેશભક્તિ",
+    "panchang": "પંચાંગ"
+  },
+  "settings": {
+    "title": "સાધના નિયંત્રણ અને સેટિંગ્સ",
+    "haptics": "દિવ્ય અનુભૂતિ અને હેપ્ટિક્સ",
+    "brahmaMuhurta": "બ્રહ્મ મુહૂર્ત એલાર્મ",
+    "bioAura": "પ્રાણિક ઊર્જા અને ઓરા",
+    "vault": "સાધના વોલ્ટ અને ક્લાઉડ સિંક",
+    "language": "ભાષા પસંદગી (Language)",
+    "selectLanguage": "તમારી મનપસંદ ભાષા પસંદ કરો",
+    "applyLanguage": "ભાષા લાગુ કરો",
+    "logout": "લોગ આઉટ"
+  },
+  "audio": {
+    "title": "ભક્તિ ઓડિયો લાઇબ્રેરી",
+    "pureAudio": "માત્ર ઓડિયો સાંભળો",
+    "watchVideo": "વીડિયો જુઓ",
+    "nowPlaying": "હમણાં વાગી રહ્યું છે",
+    "lyrics": "પાઠ અને ભાવાર્થ જુઓ"
+  }
+}

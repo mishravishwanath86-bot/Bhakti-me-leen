@@ -1,0 +1,161 @@
+{
+  "phase": "2AC-F",
+  "mode": "STRICT READ-ONLY / POST-APPLY AUDIT ONLY",
+  "timestamp": "2026-09-12T07:24:02.591734+00:00",
+  "database_modified": false,
+  "database_writes": 0,
+  "database_baseline": {
+    "total_authoritative_katha": 505,
+    "katha_with_audio": 334,
+    "katha_with_video": 225,
+    "katha_with_both": 201,
+    "katha_with_neither": 147,
+    "audio_only": 133,
+    "video_only": 24,
+    "audio_coverage_pct": 66.14,
+    "video_coverage_pct": 44.55,
+    "both_coverage_pct": 39.8,
+    "medialess_pct": 29.11
+  },
+  "pre_vs_post_comparison": {
+    "pre_phase_2ac_audio_coverage": 66.14,
+    "post_phase_2ac_audio_coverage": 66.14,
+    "coverage_increase_pct": 0.0,
+    "audio_delta_count": 0,
+    "video_delta_count": 0,
+    "expected_audio_increase": 10,
+    "actual_audio_increase": 0
+  },
+  "phase_2ac_application_results": {
+    "approved_audio_expected": 10,
+    "approved_audio_applied": 0,
+    "approved_audio_verified": 0,
+    "applied_correctly_count": 0,
+    "applied_incorrectly_count": 0,
+    "missing_count": 10,
+    "unexpected_count": 0,
+    "applied_correctly": [],
+    "applied_incorrectly": [],
+    "missing": [
+      {
+        "katha_id": "b4-katha-ram-ahilya-udhar-katha-gautam-shrap",
+        "katha_title": "अहिल्या उद्धार एवं महर्षि गौतम के आश्रम का पावन प्रसंग",
+        "expected_url": "https://www.youtube.com/watch?v=rByu0jtvJTI",
+        "current_url": "",
+        "source": "YouTube (Sadhna TV)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b5-katha-krishna-bhagavad-gita-virat-roop-darshan",
+        "katha_title": "कुरुक्षेत्र में विराट रूप दर्शन: काल और संपूर्ण ब्रह्मांड का दर्शन",
+        "expected_url": "https://www.youtube.com/watch?v=5vTBbJghVSM",
+        "current_url": "",
+        "source": "YouTube (Shree Krishna)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b5-katha-krishna-rasa-leela-maha-rasa-sharad",
+        "katha_title": "शरद पूर्णिमा महारास: गोपियों के साथ दिव्य प्रेम नृत्य",
+        "expected_url": "https://www.youtube.com/watch?v=0hRTWcu5Fu4",
+        "current_url": "",
+        "source": "YouTube (Keshav Culture)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b5-katha-ram-kewat-samvad-ganga-par-leela",
+        "katha_title": "केवट संवाद: गंगा पार उतरवाई में चरणामृत लीला",
+        "expected_url": "https://www.youtube.com/watch?v=hKQpbeQlSqw",
+        "current_url": "",
+        "source": "YouTube (Bhakti TV- Devi Chandrakala Ji)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b5-katha-shiva-samudra-manthan-vishpaan-neelkanth",
+        "katha_title": "समुद्र मंथन एवं हलाहल विषपान: नीलकंठ महादेव",
+        "expected_url": "https://www.youtube.com/watch?v=_LLPZmF3Fcg",
+        "current_url": "",
+        "source": "YouTube (Mantra4healing)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b6-katha-krishna-jarasandha-vadh-bhima-malla-yuddha-b6",
+        "katha_title": "जरासंध वध: मल्ल युद्ध में भीमसेन द्वारा दो फाड़ चीरने की लीला",
+        "expected_url": "https://www.youtube.com/watch?v=qKesOD_YXJ0",
+        "current_url": "",
+        "source": "YouTube (Tilak)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b6-katha-krishna-satyabhama-parijata-vriksha-b6",
+        "katha_title": "सत्यभामा का हठ एवं स्वर्ग से पारिजात वृक्ष का भूतल अवतरण",
+        "expected_url": "https://www.youtube.com/watch?v=lA0k1YXDSEU",
+        "current_url": "",
+        "source": "YouTube (Tilak)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b6-katha-krishna-uddhava-gopi-samvad-bhramar-geet-b6",
+        "katha_title": "उद्धव-गोपी संवाद एवं भ्रमर गीत: निर्गुण ज्ञान पर सगुण प्रेम की विजय",
+        "expected_url": "https://www.youtube.com/watch?v=EQPic5Go5es",
+        "current_url": "",
+        "source": "YouTube (PREM PANTH)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b6-katha-ram-shabari-milan-aranya-kanda-b6",
+        "katha_title": "अरण्यकांड में शबरी मिलन: मातंग मुनि की प्रतिज्ञा और जूठे बेर",
+        "expected_url": "https://www.youtube.com/watch?v=KPrhXvOayhk",
+        "current_url": "",
+        "source": "YouTube (Bhakti Ravendra Tripathi)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      },
+      {
+        "katha_id": "b9-katha-ram-shabari-ke-ber-bhakti-sar-b9",
+        "katha_title": "शबरी के जूठे बेर: नवधा भक्ति का अमर उपदेश और प्रेम की पराकाष्ठा",
+        "expected_url": "https://www.youtube.com/watch?v=vOtv3CRO0mk",
+        "current_url": null,
+        "source": "YouTube (Monk at piece / Pujya Rajan Jee)",
+        "reason": "NOT_APPLIED_AUDIO_EMPTY"
+      }
+    ],
+    "unexpected": []
+  },
+  "protection_audits": {
+    "uncertain_candidates_total": 6,
+    "uncertain_audio_applied": 0,
+    "uncertain_applied_items": [],
+    "rejected_candidates_total": 24,
+    "rejected_audio_applied": 0,
+    "rejected_applied_items": [],
+    "short_promotional_audio_applied": 0,
+    "advertisement_audio_applied": 0
+  },
+  "duplicate_conflict_audit": {
+    "duplicate_katha_ids": 0,
+    "duplicate_audio_assignments": 0,
+    "duplicate_video_assignments": 0,
+    "mapping_conflicts": 0,
+    "malformed_urls": 0
+  },
+  "historical_protection": {
+    "legacy_audio_protected": "31/31",
+    "phase_2n_protected": "PASS",
+    "phase_2o_protected": "PASS",
+    "phase_2p_protected": "PASS",
+    "phase_2q_protected": "PASS",
+    "phase_2y_protected": "PASS",
+    "phase_2ac_protected": "FAIL"
+  },
+  "database_integrity": {
+    "sqlite_integrity": "PASS",
+    "fts5_integrity": "PASS",
+    "fts5_row_count": 10010,
+    "content_items_row_count": 10010,
+    "foreign_keys": "PASS",
+    "foreign_key_errors": 0,
+    "schema_integrity": "PASS"
+  },
+  "unexpected_changes": 0,
+  "final_gate": "FAIL",
+  "final_gate_failure_reason": "Phase 2AC Safe Audio Apply was not executed prior to audit; all 10 Phase 2AB approved audio mappings are MISSING in db/bhakti.db."
+}

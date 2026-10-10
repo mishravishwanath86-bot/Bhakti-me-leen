@@ -1,0 +1,27 @@
+id,title,title_en,deity_id,category_id,content_type,language,short_description,content,thumbnail,audio_url,video_url,duration,tags,is_popular,is_featured,is_trending,status
+bhajan-krishna-achyutam-keshavam,अच्युतम केशवम कृष्ण दामोदरम,Achyutam Keshavam Krishna Damodaram,krishna,bhakti,bhajan,hi,भगवान श्रीकृष्ण का अत्यंत मधुर एवं पावन संकीर्तन भजन।,"॥ अच्युतम केशवम कृष्ण दामोदरम ॥
+
+अच्युतं केशवं कृष्ण दामोदरं, रामनारायणं जानकीवल्लभम्।
+कौन कहता है भगवान आते नहीं, तुम मीरा के जैसे बुलाते नहीं॥
+
+अच्युतं केशवं सत्यभामाधवं, माधवं श्रीधरं राधिकेशं भजे।
+हरे राम हरे राम राम राम हरे हरे, हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे॥",assets/deity_krishna.jpg,assets/audio/bhajan_achyutam_keshavam.mp3,https://www.youtube.com/watch?v=example1,285,"श्री कृष्ण,मधुर भजन,संकीर्तन",1,1,0,published
+chalisa-hanuman-shri-hanuman-chalisa,श्री हनुमान चालीसा (दिव्य पाठ),Shri Hanuman Chalisa Divine Path,hanuman,stuti,chalisa,hi,महाकवि गोस्वामी तुलसीदास जी द्वारा रचित सर्वसंकट हरण पावन चालीसा पाठ।,"॥ श्री हनुमान चालीसा ॥
+
+दोहा:
+श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि।
+बरनउँ रघुबर बिमल जसु जो दायकु फल चारि॥
+
+बुद्धिहीन तनु जानिके सुमिरौ पवन-कुमार।
+बल बुधि बिद्या देहु मोहिं हरहु कलेस बिकार॥
+
+चौपाई:
+जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुँ लोक उजागर॥
+राम दूत अतुलित बल धामा। अंजनि-पुत्र पवनसुत नामा॥",assets/deity_hanuman.jpg,assets/audio/katha_hanuman.mp3,https://www.youtube.com/watch?v=example2,581,"हनुमान जी,चालीसा,संकटमोचन",1,1,1,published
+aarti-shiva-om-jai-shiv-omkara,शिव जी की आरती - ॐ जय शिव ओंकारा,Om Jai Shiv Omkara Aarti,shiva,stuti,aarti,hi,देवाधिदेव महादेव भगवान भोलेनाथ की नित्य मंगलकारी महाआरती।,"॥ श्री शिव जी की आरती ॥
+
+जय शिव ओंकारा ॐ जय शिव ओंकारा।
+ब्रह्मा विष्णु सदाशिव अर्द्धांगी धारा॥ ॐ जय शिव ओंकारा...
+
+एकानन चतुरानन पञ्चानन राजे।
+हंसासन गरुड़ासन वृषवाहन साजे॥ ॐ जय शिव ओंकारा...",assets/deity_shiv.jpg,assets/audio/katha_shiva.mp3,,320,"शिव जी,आरती,महादेव",1,0,0,published

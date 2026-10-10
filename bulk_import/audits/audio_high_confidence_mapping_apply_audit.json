@@ -1,0 +1,219 @@
+{
+  "workflow": "APPLY_APPROVED_AUDIO_MAPPINGS_001_100",
+  "timestamp": "2026-08-29T09:05:29.967528+00:00",
+  "backup_file": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\db\\backups\\bhakti_pre_audio_youtube_mapping_20260829_090528.db",
+  "summary": {
+    "BEFORE_DB_COUNT": 10010,
+    "AFTER_DB_COUNT": 10010,
+    "APPROVED_MAPPINGS": 19,
+    "ACTUALLY_APPLIED": 19,
+    "SKIPPED": 0,
+    "NEEDS_REVIEW": 1,
+    "DATABASE_MODIFIED": "YES (19 audio_url fields updated only)",
+    "FILES_MODIFIED": "audio_high_confidence_mapping_apply_audit.json",
+    "BACKUP_VERIFIED": "YES (bhakti_pre_audio_youtube_mapping_20260829_090528.db)",
+    "PRAGMA_INTEGRITY": "ok",
+    "FK_ERRORS": 0,
+    "FTS5_SYNC": "TRUE",
+    "NEEDS_REVIEW_UNTOUCHED": true,
+    "WORKING_LOCAL_MP3_PRESERVED": 38,
+    "BATCH_021_STATUS": "NOT_STARTED",
+    "FINAL_STATUS": "PASS"
+  },
+  "applied_records": [
+    {
+      "record_id": "mantra-ram-taraka-mantra",
+      "title": "श्री राम तारक मंत्र",
+      "content_type": "mantra",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=3FF5z09x2F8",
+      "content_hash": "329cb4c25b72777b6f8923ce97321b869b3c984ac5cb2dae079c208adb154803",
+      "candidate_title": "Ram Tarak Mantra राम तारक मंत्र | Ram Mantra | peaceful chant | relaxing music | vedic notes",
+      "source_channel": "Shiv Darshan Dwivedi"
+    },
+    {
+      "record_id": "mantra-ram-gayatri-mantra",
+      "title": "श्री राम गायत्री मंत्र",
+      "content_type": "mantra",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=EZ-TnO8JOSk",
+      "content_hash": "3d2f772ecad6e9ddf583cde7a4f3f319f7b6bc75198dff188f260402c2d747c8",
+      "candidate_title": "राम गायत्री मंत्र: 11 मिनट में 108 बार: फ़ास्ट",
+      "source_channel": "Bhakti Bhajan Mantra"
+    },
+    {
+      "record_id": "vrat_katha-ram-ram-navami-vrat-katha",
+      "title": "श्री राम नवमी व्रत कथा",
+      "content_type": "vrat_katha",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=Pw1z_fF10Wk",
+      "content_hash": "95521d8727eb8b6ce09b72db2a5028bd0019df4dea9709a1e8809ce9ee65bae5",
+      "candidate_title": "राम नवमी व्रत कथा | Ram Navami Vrat Katha | भगवान राम नवमी की कहानी | Ram Navami 2023 #ramnavami",
+      "source_channel": "Bhakti Bhajan Sangrah"
+    },
+    {
+      "record_id": "aarti-krishna-banke-bihari-teri-aarti",
+      "title": "श्री बांके बिहारी तेरी आरती गाऊं",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=6LO2PRgbutc",
+      "content_hash": "847abff0d887c8b91e018d368dfc0d37d77633bf4059f6170350967f7b8516b2",
+      "candidate_title": "श्री बांके बिहारी तेरी आरती गाऊं Shri Banke Bihari Teri Aarti Gaun | Krishna Aarti | Krishna Bhajan",
+      "source_channel": "Nova Spiritual India"
+    },
+    {
+      "record_id": "chalisa-krishna-shri-krishna-chalisa",
+      "title": "श्री कृष्ण चालीसा",
+      "content_type": "chalisa",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=wYCuWoA5vIA",
+      "content_hash": "5d615810aea40f54f2201dbb18ec60b6123c71649f3987786481e91ba8da1388",
+      "candidate_title": "श्री कृष्ण चालीसा | Shri KRISHNA CHALISA by Kumar Vishu | Krishna Bhajan | Bhakti Songs",
+      "source_channel": "Shemaroo Bhakti"
+    },
+    {
+      "record_id": "stotram-krishna-madhurashtakam",
+      "title": "मधुराष्टकम् (अधरं मधुरं वदनं मधुरम्)",
+      "content_type": "stotram",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=ZmCfrYWdfiM",
+      "content_hash": "628184101b9d0a59d612846e86a873d52301c4abffef702889954860e23e5ab4",
+      "candidate_title": "अधरं मधुरं वदनं मधुरं - मधुराष्टकम् | Adharam Madhuram - MADHURASHTAKAM | Lord Krishna Songs",
+      "source_channel": "Spiritual Mantra"
+    },
+    {
+      "record_id": "bhajan-krishna-yashomati-maiya-se-bole",
+      "title": "यशोमति मैया से बोले नंदलाला",
+      "content_type": "bhajan",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=yWTN6bsDWN4",
+      "content_hash": "beb6a976c242838c40b8602c5d751c5a521ddd3f9ae0ea1ff37a02341ca1017a",
+      "candidate_title": "यशोमती मैया से बोले नंदलाला Yashomati Maiya se Bole Nandalala Full  | Krishna Bhajan | Krishna Songs",
+      "source_channel": "Bhajan India"
+    },
+    {
+      "record_id": "bhajan-krishna-govind-mero-hai-gopal-mero-hai",
+      "title": "गोविन्द मेरो है गोपाल मेरो है",
+      "content_type": "bhajan",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=JpwxV8EUhfU",
+      "content_hash": "95ac5345a6ef6388cad6c5c9e3d47c9927a14fb4dabcae241e59d103cc4cbbee",
+      "candidate_title": "Govind Mero Hai | गोविन्द मेरो है गोपाल मेरो है | Anup Jalota | Famous Krishna Bhajan | New Bhajan",
+      "source_channel": "NAV Bhakti"
+    },
+    {
+      "record_id": "chalisa-radharani-shri-radha-chalisa",
+      "title": "श्री राधा चालीसा",
+      "content_type": "chalisa",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=aPuszfH-i68",
+      "content_hash": "66d9c20e3b7629abfc3a28ff69c2d8e979ad37c0041a2e707ea903e82ac7163b",
+      "candidate_title": "राधा चालीसा Radha Chalisa with Lyrics | Lakhbir Singh Lakha | Radha Rani Song | Shri Radha Chalisa",
+      "source_channel": "Nova Spiritual India"
+    },
+    {
+      "record_id": "mantra-radharani-radha-gayatri-mantra",
+      "title": "श्री राधा गायत्री मंत्र",
+      "content_type": "mantra",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=Nymxfn9x0ng",
+      "content_hash": "037088b40c8c23d70396b7e78378add5dc5841d913b0c96d88b3df739cd9fb41",
+      "candidate_title": "राधा रानी गायत्री मंत्र | आध्यात्मिक ऊर्जा का स्रोत | Powerful Radha Gayatri Mantra Chant #radha",
+      "source_channel": "CGP Bhakti Bhajan Path"
+    },
+    {
+      "record_id": "aarti-hanuman-aarti-kijai-hanuman-lala-ki",
+      "title": "आरती कीजै हनुमान लला की",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=ijxRwMmx8r4",
+      "content_hash": "8e34e6283dbc0a069fae29a004d568b6ad694417529660526c8f77d796fc469b",
+      "candidate_title": "आरती कीजै हनुमान लला की I Aarti Keejei Hanuman Lala Ki I HARI OM SHARAN I Hindi English Lyrics I HD",
+      "source_channel": "T-Series Bhakti Sagar"
+    },
+    {
+      "record_id": "mantra-hanuman-mool-mantra",
+      "title": "श्री हनुमान मूल मंत्र (ॐ हं हनुमते नमः)",
+      "content_type": "mantra",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=ntUuengIr1A",
+      "content_hash": "c688fdb27ae6b307980bdc22098456734bcb620f3150741ffb23502ff983aca8",
+      "candidate_title": "ॐ हं हनुमते नमः | Powerful Hanuman Mantra To Remove Negativity |हनुमान मंत्र | Om Han Hanumate Namah",
+      "source_channel": "Ved Gatha Bhakti Channel"
+    },
+    {
+      "record_id": "aarti-lakshmi-om-jai-lakshmi-mata",
+      "title": "महालक्ष्मी जी की आरती - ॐ जय लक्ष्मी माता",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=_4sTBRQQe9s",
+      "content_hash": "125ab8da9c3b18e6c3a538081dd34b28fbc4aec958d05d2faddaf01500f4d6a1",
+      "candidate_title": "ॐ जय लक्ष्मी माता आरती | Om Jai Laxmi Mata Aarti | Laxmi Ji Ki Aarti | Lakshmi Bhajan | Aarti",
+      "source_channel": "Bhajan India"
+    },
+    {
+      "record_id": "aarti-saraswati-om-jai-saraswati-mata",
+      "title": "सरस्वती माता की आरती - ॐ जय सरस्वती माता",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=OXXnM3T83t4",
+      "content_hash": "8811c25d5666dc3ef1ed16cf6244c375a3dc89bfb6bb65b24fe7e25b939b58d2",
+      "candidate_title": "सरस्वती मां की आरती | ॐ जय सरस्वती माता | Saraswati Mata Aarti | Om Jai Saraswati Mata",
+      "source_channel": "Shemaroo Bhakti"
+    },
+    {
+      "record_id": "aarti-santoshi-jai-santoshi-mata",
+      "title": "संतोषी माता की आरती - जय संतोषी माता",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=wsk1JSwchdc",
+      "content_hash": "874d7eb7aeb62f3cc1fce9bb996b04b3d8834fb7b8e0c83f41fbed6a60fcbb1e",
+      "candidate_title": "संतोषी मा की आरती | संतोषी माता की आरती | जय सन्तोषी माता | Santoshi Mata Ki Aarti With Lyrics",
+      "source_channel": "Shemaroo Bhakti"
+    },
+    {
+      "record_id": "aarti-ganesh-jai-ganesh-jai-ganesh-deva",
+      "title": "जय गणेश जय गणेश जय गणेश देवा",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=GKMSZ8SN0IA",
+      "content_hash": "042550d5de4648886671256d0dca5403d2eb5e3431d552ad5eba02e9cb253caf",
+      "candidate_title": "गणेश जी की आरती Ganesh Ji Ki Aarti - जय गणेश जय गणेश देवा Jai Ganesh Jai Ganesh Deva | Ganpati Aarti",
+      "source_channel": "Nova Spiritual India"
+    },
+    {
+      "record_id": "chalisa-ganesh-shri-ganesh-chalisa",
+      "title": "श्री गणेश चालीसा",
+      "content_type": "chalisa",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=WyHFSjN0miU",
+      "content_hash": "1b2257b2b5b21a9bdb1a24e857f13af35c93bab7f81934eef200ec13b0c4859b",
+      "candidate_title": "गणेश चालीसा गणेश चालीसा आई अनुराधा पौडवाल आई गणेश भजन आई फुल एचडी वीडियो सॉन्ग",
+      "source_channel": "T-Series Bhakti Sagar"
+    },
+    {
+      "record_id": "aarti-vishnu-om-jai-jagdish-hare",
+      "title": "विष्णु जी की आरती - ॐ जय जगदीश हरे",
+      "content_type": "aarti",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=_qm64tMqR38",
+      "content_hash": "61bace34fbe3d48944aaa76b446e4d5b026a0fdfb4ff739d5d678008e048ec5c",
+      "candidate_title": "ॐ जय जगदीश हरे आरती Om Jai Jagdish Hare Aarti | Vishnu Ji Ki Aarti",
+      "source_channel": "Bhajan India"
+    },
+    {
+      "record_id": "bhajan-khatushyam-hare-ka-sahara-baba-shyam",
+      "title": "हारे का सहारा बाबा श्याम हमारा",
+      "content_type": "bhajan",
+      "before_audio_url": "",
+      "after_audio_url": "https://www.youtube.com/watch?v=wwI83kkEZHw",
+      "content_hash": "86bfbabed7f9211af3a2dcbdc54b72a341c9256c339f630f06ec857ee7562636",
+      "candidate_title": "हारे का सहारा बाबा श्याम हमारा || Rakesh Kala || 2020 Special Khatu Shyam Bhajan || Mor Bhakti",
+      "source_channel": "Mor Bhakti Bhajan"
+    }
+  ],
+  "skipped_records": [],
+  "needs_review_records": [
+    "chalisa-ram-shri-ram-chalisa"
+  ]
+}

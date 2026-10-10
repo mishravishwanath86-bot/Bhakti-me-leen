@@ -1,0 +1,558 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   ☀️ SANATAN BHAKTI — COMPREHENSIVE LIGHT MODE CONTRAST ENGINE
+   Guarantees ALL text is ALWAYS dark, crisp, and readable on light backgrounds
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Root & Base Tokens for Light Mode ── */
+body.theme-light,
+body.light-mode,
+[data-theme="light"] {
+  --bg-primary: #FAF7F2 !important;
+  --bg-secondary: #F4EDE2 !important;
+  --card-surface: #FFFFFF !important;
+  --text-main: #111827 !important;
+  --text-sub: #374151 !important;
+  --text-muted: #4B5563 !important;
+  --gold-accent: #B45309 !important;
+  --border-gold: rgba(217, 119, 6, 0.22) !important;
+  --header-bg: rgba(255, 255, 255, 0.96) !important;
+  --nav-bg: rgba(255, 253, 247, 0.96) !important;
+
+  background: #FAF7F2 !important;
+  color: #111827 !important;
+}
+
+body.theme-light .app-main,
+body.theme-light .page,
+body.light-mode .app-main,
+body.light-mode .page,
+[data-theme="light"] .app-main,
+[data-theme="light"] .page {
+  background: #FAF7F2 !important;
+  color: #111827 !important;
+}
+
+/* ── 2. App Header in Light Mode ── */
+body.theme-light .app-header,
+body.light-mode .app-header,
+[data-theme="light"] .app-header {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1.5px solid rgba(217, 119, 6, 0.2) !important;
+  box-shadow: 0 4px 18px rgba(180, 83, 9, 0.06) !important;
+}
+
+body.theme-light .header-title,
+body.light-mode .header-title,
+[data-theme="light"] .header-title {
+  color: #1F1527 !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+}
+
+body.theme-light .app-header button,
+body.theme-light .app-header .header-btn,
+body.theme-light .app-header .header-icon-btn,
+body.light-mode .app-header button,
+body.light-mode .app-header .header-btn,
+body.light-mode .app-header .header-icon-btn,
+[data-theme="light"] .app-header button,
+[data-theme="light"] .app-header .header-btn,
+[data-theme="light"] .app-header .header-icon-btn {
+  color: #1F1527 !important;
+}
+
+body.theme-light #global-theme-toggle-btn,
+body.light-mode #global-theme-toggle-btn,
+[data-theme="light"] #global-theme-toggle-btn {
+  background: rgba(217, 119, 6, 0.12) !important;
+  border: 1.5px solid #D97706 !important;
+  color: #78350F !important;
+  box-shadow: 0 0 10px rgba(217, 119, 6, 0.25) !important;
+}
+
+/* ── 3. Universal Typography: All Headings Must Be Dark ── */
+body.theme-light h1, body.theme-light h2, body.theme-light h3,
+body.theme-light h4, body.theme-light h5, body.theme-light h6,
+body.light-mode h1, body.light-mode h2, body.light-mode h3,
+body.light-mode h4, body.light-mode h5, body.light-mode h6,
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3,
+[data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
+  color: #111827 !important;
+  text-shadow: none !important;
+}
+
+body.theme-light .page-title,
+body.theme-light .section-title,
+body.theme-light .section-heading,
+body.theme-light .card-title,
+body.theme-light .grid-title,
+body.theme-light .fest-title,
+body.theme-light .vrat-title,
+body.theme-light .drawer-title,
+body.theme-light .modal-title,
+body.theme-light .deity-name,
+body.theme-light .bhajan-title,
+body.theme-light .aarti-title,
+body.theme-light .chapter-title,
+body.theme-light .page-header-bar h2,
+body.light-mode .page-title,
+body.light-mode .section-title,
+body.light-mode .section-heading,
+body.light-mode .card-title,
+body.light-mode .grid-title,
+body.light-mode .fest-title,
+body.light-mode .vrat-title,
+body.light-mode .drawer-title,
+body.light-mode .modal-title,
+body.light-mode .deity-name,
+body.light-mode .bhajan-title,
+body.light-mode .aarti-title,
+body.light-mode .chapter-title,
+body.light-mode .page-header-bar h2,
+[data-theme="light"] .page-title,
+[data-theme="light"] .section-title,
+[data-theme="light"] .section-heading,
+[data-theme="light"] .card-title,
+[data-theme="light"] .grid-title,
+[data-theme="light"] .fest-title,
+[data-theme="light"] .vrat-title,
+[data-theme="light"] .drawer-title,
+[data-theme="light"] .modal-title,
+[data-theme="light"] .deity-name,
+[data-theme="light"] .bhajan-title,
+[data-theme="light"] .aarti-title,
+[data-theme="light"] .chapter-title,
+[data-theme="light"] .page-header-bar h2 {
+  color: #111827 !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
+}
+
+/* ── 4. Universal Typography: Body, Paragraphs, Articles, Katha ── */
+body.theme-light p,
+body.theme-light article,
+body.theme-light .page-content,
+body.theme-light .katha-content,
+body.theme-light .katha-text,
+body.theme-light .card-desc,
+body.theme-light .card-subtitle,
+body.theme-light .section-sub,
+body.theme-light .desc,
+body.theme-light .info-text,
+body.theme-light .summary,
+body.light-mode p,
+body.light-mode article,
+body.light-mode .page-content,
+body.light-mode .katha-content,
+body.light-mode .katha-text,
+body.light-mode .card-desc,
+body.light-mode .card-subtitle,
+body.light-mode .section-sub,
+body.light-mode .desc,
+body.light-mode .info-text,
+body.light-mode .summary,
+[data-theme="light"] p,
+[data-theme="light"] article,
+[data-theme="light"] .page-content,
+[data-theme="light"] .katha-content,
+[data-theme="light"] .katha-text,
+[data-theme="light"] .card-desc,
+[data-theme="light"] .card-subtitle,
+[data-theme="light"] .section-sub,
+[data-theme="light"] .desc,
+[data-theme="light"] .info-text,
+[data-theme="light"] .summary {
+  color: #374151 !important;
+  text-shadow: none !important;
+}
+
+/* ── 5. Shlokas, Mantras, Choupai, Stutis, Aarti Lyrics ── */
+body.theme-light .shloka-text,
+body.theme-light .mantra-text,
+body.theme-light .choupai-text,
+body.theme-light .aarti-lyrics,
+body.theme-light .lyrics-line,
+body.theme-light .chalisa-doha,
+body.theme-light .chalisa-choupai,
+body.theme-light .gita-verse,
+body.theme-light .gita-verse-sanskrit,
+body.theme-light .katha-shloka,
+body.light-mode .shloka-text,
+body.light-mode .mantra-text,
+body.light-mode .choupai-text,
+body.light-mode .aarti-lyrics,
+body.light-mode .lyrics-line,
+body.light-mode .chalisa-doha,
+body.light-mode .chalisa-choupai,
+body.light-mode .gita-verse,
+body.light-mode .gita-verse-sanskrit,
+body.light-mode .katha-shloka,
+[data-theme="light"] .shloka-text,
+[data-theme="light"] .mantra-text,
+[data-theme="light"] .choupai-text,
+[data-theme="light"] .aarti-lyrics,
+[data-theme="light"] .lyrics-line,
+[data-theme="light"] .chalisa-doha,
+[data-theme="light"] .chalisa-choupai,
+[data-theme="light"] .gita-verse,
+[data-theme="light"] .gita-verse-sanskrit,
+[data-theme="light"] .katha-shloka {
+  color: #1A0B2E !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* Arth & Translation Text */
+body.theme-light .shloka-arth,
+body.theme-light .choupai-meaning,
+body.theme-light .gita-verse-hindi,
+body.theme-light .mantra-meaning,
+body.theme-light .katha-meaning,
+body.light-mode .shloka-arth,
+body.light-mode .choupai-meaning,
+body.light-mode .gita-verse-hindi,
+body.light-mode .mantra-meaning,
+body.light-mode .katha-meaning,
+[data-theme="light"] .shloka-arth,
+[data-theme="light"] .choupai-meaning,
+[data-theme="light"] .gita-verse-hindi,
+[data-theme="light"] .mantra-meaning,
+[data-theme="light"] .katha-meaning {
+  color: #4A2000 !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+/* ── 6. ALL Card Classes Transformed to Clean White Surfaces with Dark Text ── */
+body.theme-light .aarti-card, body.theme-light .about-card, body.theme-light .ach-card,
+body.theme-light .amrit-mood-card, body.theme-light .auth-card, body.theme-light .bhajan-card,
+body.theme-light .bhajan-upload-card, body.theme-light .cal-event-card, body.theme-light .card,
+body.theme-light .cat-card, body.theme-light .chalisa-card, body.theme-light .classic-player-card,
+body.theme-light .cosmic-audio-card, body.theme-light .cosmic-verse-card, body.theme-light .coverflow-card,
+body.theme-light .deity-card, body.theme-light .devotional-hero-card, body.theme-light .divine-card,
+body.theme-light .dp-calendar-card, body.theme-light .dp-fest-card-block, body.theme-light .dp-fest-timing-card,
+body.theme-light .drik-image1-card, body.theme-light .fest-card, body.theme-light .gallery-card,
+body.theme-light .gallery-card-item, body.theme-light .gallery-card-royal, body.theme-light .grid-card,
+body.theme-light .home-aarti-card, body.theme-light .home-cat-card, body.theme-light .home-promo-banner-card,
+body.theme-light .info-card, body.theme-light .katha-card, body.theme-light .katha-card-luxury,
+body.theme-light .mantra-card, body.theme-light .muh-card, body.theme-light .muhurat-home-card,
+body.theme-light .panch-card, body.theme-light .panchang-card, body.theme-light .profile-hero-card,
+body.theme-light .profile-royal-card, body.theme-light .profile-top-card, body.theme-light .progress-gauge-card,
+body.theme-light .sadhana-card, body.theme-light .sadhana-home-compact-card, body.theme-light .sadhana-timeline-card,
+body.theme-light .setting-card, body.theme-light .sk-date-card, body.theme-light .sk-rel-card,
+body.theme-light .temple-card-royal, body.theme-light .today-panchang-card, body.theme-light .top10-card,
+body.theme-light .tpc-card, body.theme-light .vrat-card,
+body.light-mode .aarti-card, body.light-mode .about-card, body.light-mode .ach-card,
+body.light-mode .amrit-mood-card, body.light-mode .auth-card, body.light-mode .bhajan-card,
+body.light-mode .bhajan-upload-card, body.light-mode .cal-event-card, body.light-mode .card,
+body.light-mode .cat-card, body.light-mode .chalisa-card, body.light-mode .classic-player-card,
+body.light-mode .cosmic-audio-card, body.light-mode .cosmic-verse-card, body.light-mode .coverflow-card,
+body.light-mode .deity-card, body.light-mode .devotional-hero-card, body.light-mode .divine-card,
+body.light-mode .dp-calendar-card, body.light-mode .dp-fest-card-block, body.light-mode .dp-fest-timing-card,
+body.light-mode .drik-image1-card, body.light-mode .fest-card, body.light-mode .gallery-card,
+body.light-mode .gallery-card-item, body.light-mode .gallery-card-royal, body.light-mode .grid-card,
+body.light-mode .home-aarti-card, body.light-mode .home-cat-card, body.light-mode .home-promo-banner-card,
+body.light-mode .info-card, body.light-mode .katha-card, body.light-mode .katha-card-luxury,
+body.light-mode .mantra-card, body.light-mode .muh-card, body.light-mode .muhurat-home-card,
+body.light-mode .panch-card, body.light-mode .panchang-card, body.light-mode .profile-hero-card,
+body.light-mode .profile-royal-card, body.light-mode .profile-top-card, body.light-mode .progress-gauge-card,
+body.light-mode .sadhana-card, body.light-mode .sadhana-home-compact-card, body.light-mode .sadhana-timeline-card,
+body.light-mode .setting-card, body.light-mode .sk-date-card, body.light-mode .sk-rel-card,
+body.light-mode .temple-card-royal, body.light-mode .today-panchang-card, body.light-mode .top10-card,
+body.light-mode .tpc-card, body.light-mode .vrat-card,
+[data-theme="light"] .aarti-card, [data-theme="light"] .about-card, [data-theme="light"] .ach-card,
+[data-theme="light"] .amrit-mood-card, [data-theme="light"] .auth-card, [data-theme="light"] .bhajan-card,
+[data-theme="light"] .bhajan-upload-card, [data-theme="light"] .cal-event-card, [data-theme="light"] .card,
+[data-theme="light"] .cat-card, [data-theme="light"] .chalisa-card, [data-theme="light"] .classic-player-card,
+[data-theme="light"] .cosmic-audio-card, [data-theme="light"] .cosmic-verse-card, [data-theme="light"] .coverflow-card,
+[data-theme="light"] .deity-card, [data-theme="light"] .devotional-hero-card, [data-theme="light"] .divine-card,
+[data-theme="light"] .dp-calendar-card, [data-theme="light"] .dp-fest-card-block, [data-theme="light"] .dp-fest-timing-card,
+[data-theme="light"] .drik-image1-card, [data-theme="light"] .fest-card, [data-theme="light"] .gallery-card,
+[data-theme="light"] .gallery-card-item, [data-theme="light"] .gallery-card-royal, [data-theme="light"] .grid-card,
+[data-theme="light"] .home-aarti-card, [data-theme="light"] .home-cat-card, [data-theme="light"] .home-promo-banner-card,
+[data-theme="light"] .info-card, [data-theme="light"] .katha-card, [data-theme="light"] .katha-card-luxury,
+[data-theme="light"] .mantra-card, [data-theme="light"] .muh-card, [data-theme="light"] .muhurat-home-card,
+[data-theme="light"] .panch-card, [data-theme="light"] .panchang-card, [data-theme="light"] .profile-hero-card,
+[data-theme="light"] .profile-royal-card, [data-theme="light"] .profile-top-card, [data-theme="light"] .progress-gauge-card,
+[data-theme="light"] .sadhana-card, [data-theme="light"] .sadhana-home-compact-card, [data-theme="light"] .sadhana-timeline-card,
+[data-theme="light"] .setting-card, [data-theme="light"] .sk-date-card, [data-theme="light"] .sk-rel-card,
+[data-theme="light"] .temple-card-royal, [data-theme="light"] .today-panchang-card, [data-theme="light"] .top10-card,
+[data-theme="light"] .tpc-card, [data-theme="light"] .vrat-card {
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 16px rgba(180, 83, 9, 0.08) !important;
+  color: #111827 !important;
+}
+
+/* Card titles and headings in light mode */
+body.theme-light [class*="-card"] h2, body.theme-light [class*="-card"] h3,
+body.theme-light [class*="-card"] h4, body.theme-light [class*="-card"] .card-title,
+body.theme-light [class*="-card"] [class*="-title"],
+body.theme-light [class*="-card"] [class*="-name"],
+body.light-mode [class*="-card"] h2, body.light-mode [class*="-card"] h3,
+body.light-mode [class*="-card"] h4, body.light-mode [class*="-card"] .card-title,
+body.light-mode [class*="-card"] [class*="-title"],
+body.light-mode [class*="-card"] [class*="-name"],
+[data-theme="light"] [class*="-card"] h2, [data-theme="light"] [class*="-card"] h3,
+[data-theme="light"] [class*="-card"] h4, [data-theme="light"] [class*="-card"] .card-title,
+[data-theme="light"] [class*="-card"] [class*="-title"],
+[data-theme="light"] [class*="-card"] [class*="-name"] {
+  color: #111827 !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+}
+
+/* Card descriptions and subtitles in light mode */
+body.theme-light [class*="-card"] p,
+body.theme-light [class*="-card"] [class*="-desc"],
+body.theme-light [class*="-card"] [class*="-sub"],
+body.theme-light [class*="-card"] [class*="-lang"],
+body.light-mode [class*="-card"] p,
+body.light-mode [class*="-card"] [class*="-desc"],
+body.light-mode [class*="-card"] [class*="-sub"],
+body.light-mode [class*="-card"] [class*="-lang"],
+[data-theme="light"] [class*="-card"] p,
+[data-theme="light"] [class*="-card"] [class*="-desc"],
+[data-theme="light"] [class*="-card"] [class*="-sub"],
+[data-theme="light"] [class*="-card"] [class*="-lang"] {
+  color: #4B5563 !important;
+  text-shadow: none !important;
+}
+
+/* ── 7. Overriding Inline Styles (Light text colors to dark) ── */
+body.theme-light [style*="color:#FFF"],
+body.theme-light [style*="color: #FFF"],
+body.theme-light [style*="color:#fff"],
+body.theme-light [style*="color: #fff"],
+body.theme-light [style*="color:#FFFDF8"],
+body.theme-light [style*="color: #FFFDF8"],
+body.theme-light [style*="color:#CBD5E1"],
+body.theme-light [style*="color: #CBD5E1"],
+body.theme-light [style*="color:#E9D5FF"],
+body.theme-light [style*="color: #E9D5FF"],
+body.theme-light [style*="color:#FBCFE8"],
+body.theme-light [style*="color: #FBCFE8"],
+body.theme-light [style*="color:white"],
+body.theme-light [style*="color: white"],
+body.theme-light [style*="color: rgba(255"],
+body.theme-light [style*="color:rgba(255"],
+body.light-mode [style*="color:#FFF"],
+body.light-mode [style*="color: #FFF"],
+body.light-mode [style*="color:#fff"],
+body.light-mode [style*="color: #fff"],
+body.light-mode [style*="color:#FFFDF8"],
+body.light-mode [style*="color: #FFFDF8"],
+body.light-mode [style*="color:#CBD5E1"],
+body.light-mode [style*="color: #CBD5E1"],
+body.light-mode [style*="color:#E9D5FF"],
+body.light-mode [style*="color: #E9D5FF"],
+body.light-mode [style*="color:#FBCFE8"],
+body.light-mode [style*="color: #FBCFE8"],
+body.light-mode [style*="color:white"],
+body.light-mode [style*="color: white"],
+body.light-mode [style*="color: rgba(255"],
+body.light-mode [style*="color:rgba(255"],
+[data-theme="light"] [style*="color:#FFF"],
+[data-theme="light"] [style*="color: #FFF"],
+[data-theme="light"] [style*="color:#fff"],
+[data-theme="light"] [style*="color: #fff"],
+[data-theme="light"] [style*="color:#FFFDF8"],
+[data-theme="light"] [style*="color: #FFFDF8"],
+[data-theme="light"] [style*="color:#CBD5E1"],
+[data-theme="light"] [style*="color: #CBD5E1"],
+[data-theme="light"] [style*="color:#E9D5FF"],
+[data-theme="light"] [style*="color: #E9D5FF"],
+[data-theme="light"] [style*="color:#FBCFE8"],
+[data-theme="light"] [style*="color: #FBCFE8"],
+[data-theme="light"] [style*="color:white"],
+[data-theme="light"] [style*="color: white"],
+[data-theme="light"] [style*="color: rgba(255"],
+[data-theme="light"] [style*="color:rgba(255"] {
+  color: #111827 !important;
+  text-shadow: none !important;
+}
+
+/* Inline Yellow & Gold Accents turn into Deep Sacred Amber/Saffron */
+body.theme-light [style*="color:#FDE68A"],
+body.theme-light [style*="color: #FDE68A"],
+body.theme-light [style*="color:#F8C83B"],
+body.theme-light [style*="color: #F8C83B"],
+body.light-mode [style*="color:#FDE68A"],
+body.light-mode [style*="color: #FDE68A"],
+body.light-mode [style*="color:#F8C83B"],
+body.light-mode [style*="color: #F8C83B"],
+[data-theme="light"] [style*="color:#FDE68A"],
+[data-theme="light"] [style*="color: #FDE68A"],
+[data-theme="light"] [style*="color:#F8C83B"],
+[data-theme="light"] [style*="color: #F8C83B"] {
+  color: #B45309 !important;
+  text-shadow: none !important;
+}
+
+/* Secondary muted text */
+body.theme-light span[style*="color:#CBD5E1"],
+body.theme-light div[style*="color:#CBD5E1"],
+body.theme-light p[style*="color:#CBD5E1"],
+body.theme-light span[style*="color:#E9D5FF"],
+body.theme-light div[style*="color:#E9D5FF"],
+body.light-mode span[style*="color:#CBD5E1"],
+body.light-mode div[style*="color:#CBD5E1"],
+body.light-mode p[style*="color:#CBD5E1"],
+body.light-mode span[style*="color:#E9D5FF"],
+body.light-mode div[style*="color:#E9D5FF"],
+[data-theme="light"] span[style*="color:#CBD5E1"],
+[data-theme="light"] div[style*="color:#CBD5E1"],
+[data-theme="light"] p[style*="color:#CBD5E1"],
+[data-theme="light"] span[style*="color:#E9D5FF"],
+[data-theme="light"] div[style*="color:#E9D5FF"] {
+  color: #4B5563 !important;
+}
+
+/* ── 8. Overriding Dark Background Gradients on Featured Sections ── */
+body.theme-light [style*="background: linear-gradient(135deg, #1F0738"],
+body.theme-light [style*="background: linear-gradient(135deg, #1C0A35"],
+body.theme-light [style*="background: linear-gradient(135deg, rgba(88"],
+body.theme-light [style*="background: linear-gradient(160deg, #2D1047"],
+body.theme-light [style*="background: linear-gradient(145deg, #1A103C"],
+body.theme-light [style*="background: linear-gradient(145deg, #172554"],
+body.theme-light [style*="background: linear-gradient(145deg, #431407"],
+body.theme-light [style*="background: linear-gradient(145deg, #4C0519"],
+body.theme-light [style*="background:linear-gradient(145deg, #2D1047"],
+body.theme-light [style*="background: radial-gradient(circle at 50% 20%, #3B1259"],
+body.light-mode [style*="background: linear-gradient(135deg, #1F0738"],
+body.light-mode [style*="background: linear-gradient(135deg, #1C0A35"],
+body.light-mode [style*="background: linear-gradient(135deg, rgba(88"],
+body.light-mode [style*="background: linear-gradient(160deg, #2D1047"],
+body.light-mode [style*="background: linear-gradient(145deg, #1A103C"],
+body.light-mode [style*="background: linear-gradient(145deg, #172554"],
+body.light-mode [style*="background: linear-gradient(145deg, #431407"],
+body.light-mode [style*="background: linear-gradient(145deg, #4C0519"],
+body.light-mode [style*="background:linear-gradient(145deg, #2D1047"],
+body.light-mode [style*="background: radial-gradient(circle at 50% 20%, #3B1259"],
+[data-theme="light"] [style*="background: linear-gradient(135deg, #1F0738"],
+[data-theme="light"] [style*="background: linear-gradient(135deg, #1C0A35"],
+[data-theme="light"] [style*="background: linear-gradient(135deg, rgba(88"],
+[data-theme="light"] [style*="background: linear-gradient(160deg, #2D1047"],
+[data-theme="light"] [style*="background: linear-gradient(145deg, #1A103C"],
+[data-theme="light"] [style*="background: linear-gradient(145deg, #172554"],
+[data-theme="light"] [style*="background: linear-gradient(145deg, #431407"],
+[data-theme="light"] [style*="background: linear-gradient(145deg, #4C0519"],
+[data-theme="light"] [style*="background:linear-gradient(145deg, #2D1047"],
+[data-theme="light"] [style*="background: radial-gradient(circle at 50% 20%, #3B1259"] {
+  background: #FFFFFF !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 4px 18px rgba(180, 83, 9, 0.08) !important;
+}
+
+/* Home 3D Parikrama Card in Light Mode */
+body.theme-light #parikrama-sankalp-home-card,
+body.light-mode #parikrama-sankalp-home-card,
+[data-theme="light"] #parikrama-sankalp-home-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F0 100%) !important;
+  border: 1.5px solid #F59E0B !important;
+  box-shadow: 0 8px 25px rgba(217, 119, 6, 0.12) !important;
+}
+
+/* Japa Mala Container in Light Mode */
+body.theme-light #page-mala div[style*="linear-gradient"],
+body.light-mode #page-mala div[style*="linear-gradient"],
+[data-theme="light"] #page-mala div[style*="linear-gradient"] {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F0 100%) !important;
+  border: 1.5px solid #F59E0B !important;
+  box-shadow: 0 8px 25px rgba(217, 119, 6, 0.12) !important;
+}
+
+/* Aarti Central Stage Hero in Light Mode */
+body.theme-light #page-aarti-stage div[style*="radial-gradient"],
+body.light-mode #page-aarti-stage div[style*="radial-gradient"],
+[data-theme="light"] #page-aarti-stage div[style*="radial-gradient"] {
+  background: radial-gradient(circle at 50% 20%, #FFFDF8 0%, #FFF3D6 65%, #FDE68A 100%) !important;
+  border: 2px solid #F59E0B !important;
+  box-shadow: 0 8px 25px rgba(217, 119, 6, 0.15) !important;
+}
+
+/* ── 9. Inputs, Textareas, and Dropdowns in Light Mode ── */
+body.theme-light input,
+body.theme-light textarea,
+body.theme-light select,
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select,
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.3) !important;
+}
+
+body.theme-light input::placeholder,
+body.theme-light textarea::placeholder,
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder,
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* ── 10. Drawer & Navigation in Light Mode ── */
+body.theme-light .drawer,
+body.theme-light #side-drawer,
+body.light-mode .drawer,
+body.light-mode #side-drawer,
+[data-theme="light"] .drawer,
+[data-theme="light"] #side-drawer {
+  background: #FFFFFF !important;
+  border-right: 1.5px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 4px 0 25px rgba(0, 0, 0, 0.1) !important;
+}
+body.theme-light .drawer-nav a,
+body.theme-light .drawer-item,
+body.light-mode .drawer-nav a,
+body.light-mode .drawer-item,
+[data-theme="light"] .drawer-nav a,
+[data-theme="light"] .drawer-item {
+  color: #111827 !important;
+}
+body.theme-light .drawer-item-title,
+body.light-mode .drawer-item-title,
+[data-theme="light"] .drawer-item-title {
+  color: #111827 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .drawer-item-sub,
+body.light-mode .drawer-item-sub,
+[data-theme="light"] .drawer-item-sub {
+  color: #4B5563 !important;
+}
+
+/* ── 11. Preserving Filled Badges & Action Buttons ── */
+body.theme-light button[style*="linear-gradient(135deg, #F8C83B"],
+body.theme-light button[style*="linear-gradient(135deg, #F59E0B"],
+body.light-mode button[style*="linear-gradient(135deg, #F8C83B"],
+body.light-mode button[style*="linear-gradient(135deg, #F59E0B"],
+[data-theme="light"] button[style*="linear-gradient(135deg, #F8C83B"],
+[data-theme="light"] button[style*="linear-gradient(135deg, #F59E0B"] {
+  color: #1A0B2E !important;
+}
+
+body.theme-light span[style*="background:#FF6B00"],
+body.theme-light span[style*="background: #FF6B00"],
+body.theme-light span[style*="background:#EF4444"],
+body.theme-light span[style*="background: #EF4444"],
+body.theme-light span[style*="background:#DC2626"],
+body.theme-light span[style*="background: #DC2626"],
+body.light-mode span[style*="background:#FF6B00"],
+body.light-mode span[style*="background: #FF6B00"],
+body.light-mode span[style*="background:#EF4444"],
+body.light-mode span[style*="background: #EF4444"],
+body.light-mode span[style*="background:#DC2626"],
+body.light-mode span[style*="background: #DC2626"],
+[data-theme="light"] span[style*="background:#FF6B00"],
+[data-theme="light"] span[style*="background: #FF6B00"],
+[data-theme="light"] span[style*="background:#EF4444"],
+[data-theme="light"] span[style*="background: #EF4444"],
+[data-theme="light"] span[style*="background:#DC2626"],
+[data-theme="light"] span[style*="background: #DC2626"] {
+  color: #FFFFFF !important;
+}

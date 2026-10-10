@@ -1,0 +1,83 @@
+सूर्य देव चालीसा, जय सविता जय जयति दिवाकर - हिन्दी गीतिकाव्य और वीडियो गीत
+class DpSignIn {
+constructor() {
+this.page_reload_flag_ = false;
+this.authenticated_user_flag_ = false;
+this.drik_ads_free_flag_ = false;
+this.drik_ads_free_status_ = null;
+this.drik_ads_free_signin_title_ = null;
+this.drik_ads_free_signin_message_ = null;
+this.drik_user_profile_info_ = {};
+}
+onSuccessfulSignInOnDrikServer(xhr) {
+this.authenticated_user_flag_ = true;
+let parsedJSONData = JSON.parse(xhr.responseText);
+let customLocationFlag = parsedJSONData['response']['custom-location-flag'];
+let drikSubscriptionStatus = parsedJSONData['response']['drik-subscription-status'];
+let drikUserProfile = parsedJSONData['response']['drik-user-profile'];
+dpSignIn.drik_user_profile_info_.name = drikUserProfile.name;
+dpSignIn.drik_user_profile_info_.email = drikUserProfile.email;
+dpSignIn.drik_user_profile_info_.image_path = drikUserProfile.picture;
+dpSignIn.drik_ads_free_status_ = drikSubscriptionStatus;
+dpSignIn.drik_ads_free_flag_ = 'active' === drikSubscriptionStatus;
+this.updateUserProfileWidgetOnSuccessfulSignIn(parsedJSONData);
+if (DpPostContext.kServerSignIn !== dpPostContext) {
+dpPageForm.handler_.handleDataOnSuccessfulSignIn();
+}
+else if (true === dpSignIn.page_reload_flag_ || true === dpSignIn.drik_ads_free_flag_ || true === customLocationFlag) {
+// custom location if set then after Sign-In we reload the page
+// if exec context missing then we can avoid reload - TODO
+location.reload();
+}
+else if ('calendar' === '') {
+dpUserNotes.updateGridGCalToolbar();
+dpUserNotes.loadUserNotes();
+}
+else {
+dpSubscription.checkPendingAdsFreeIconClick();
+dpPgComments.updateCommentsUIOnSignIn();
+}
+}
+updateUserProfileWidgetOnSuccessfulSignIn(parsedJSONData) {
+let headerSignedInUserUI = parsedJSONData['response']['header']['signed-in-ui'];
+let naviDrawerSignedInUserUI = parsedJSONData['response']['navidrawer']['signed-in-ui'];
+let naviDrawerSignOutButtonUI = parsedJSONData['response']['navidrawer']['sign-out-ui'];
+let signoutJSSnippet = parsedJSONData['response']['javascript-snippet'];
+$(".dpHeader").find(".dpSignInButtonWrapper").replaceWith(headerSignedInUserUI);
+$(".dpNaviDrawerHeader").find(".dpNaviDrawerProfileWrapper").replaceWith(naviDrawerSignedInUserUI);
+$(".dpNaviDrawerFooterContainer").append(naviDrawerSignOutButtonUI);
+$("body").append(signoutJSSnippet);
+}
+}
+var dpSignIn = new DpSignIn();
+dpSignIn.page_reload_flag_ = true;
+dpSignIn.authenticated_user_flag_ = false;
+dpSignIn.drik_ads_free_flag_ = false;
+dpSignIn.drik_ads_free_status_ = 'unknown';
+dpSignIn.drik_user_profile_info_.name = '';
+dpSignIn.drik_user_profile_info_.email = '';
+dpSignIn.drik_user_profile_info_.image_path = '/images/icon/person/person_icon_classic.svg';
+class DpEssential {
+constructor() {
+this.numeral_map_ = null;
+this.mobile_device_flag_ = false;
+this.olson_timezone_ = null;
+}
+replaceNumerals(match, offset, string) {
+return this.numeral_map_[match];
+}
+}
+var dpEssential = new DpEssential();
+dpEssential.numeral_map_ = {'0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9'};
+dpEssential.olson_timezone_ = 'Asia/Kolkata';
+dpEssential.mobile_device_flag_ = false;
+document.addEventListener("DOMContentLoaded",function(){dpSubscription=new DpSubscription();dpSubscription.ajax_post_url_='/ajax/subscription/drik-subscription.php';dpSubscription.wait_getting_result_string_='कृपया प्रतीक्षा करें&#8230;
+विवरण ले रहे हैं&#x2026;';dpSubscription.failed_to_get_result_string_='कुछ गलत हो गया!
+सदस्यता लेने में विफल। कृपया पुनः प्रयास करें या feedback@Sanatan Panchang.com पर रिपोर्ट करें।';dpSubscription.email_id_empty_error_string_='कृपया ई-मेल आई.डी. दर्ज करें।';dpSubscription.email_id_not_valid_error_string_='कृपया वैध ई-मेल आई.डी. दर्ज करें।';dpSubscription.country_empty_error_string_='कृपया देश का नाम प्रविष्ट करें।';dpSubscription.postal_code_empty_error_string_='कृपया पिन कोड दर्ज करें।';dpSubscription.postal_code_not_valid_error_string_='कृपया अक्षर, संख्या, हाइफ़न और रिक्त स्थान सहित एक मान्य पोस्टल कोड दर्ज करें।';dpSubscription.susbcribe_now_title_string_='सब्स्क्राइब करें';dpSubscription.signin_popup_title_string_='सनातन सदस्यता';dpSubscription.signin_popup_message_string_='विज्ञापन मुक्त सनातन पंचांग की सदस्यता लेने के लिये गूगल द्वारा साइन इन करें।';dpSubscription.add_city_premium_feature_message_='कस्टम शहर जोड़ना एक प्रीमियम सुविधा है और यह सनातन विज्ञापन-मुक्त सदस्यता के साथ उपलब्ध है। कृपया सनातन सदस्यता खरीदें और पुनः प्रयास करें।';dpSubscription.add_city_premium_feature_signin_message_='कस्टम शहर जोड़ना एक प्रीमियम सुविधा है और यह सनातन विज्ञापन-मुक्त सदस्यता के साथ उपलब्ध है। कृपया सनातन सदस्यता खरीदें और पुनः प्रयास करें।
+यदि आपके पास पहले से सनातन सदस्यता है, तो कृपया गूगल साइन इन के साथ लॉगिन करें।';dpSubscription.add_city_feature_note_title_='कस्टम स्थान के विषय में:';dpSubscription.add_city_feature_note_first_='1. यदि पहले से कस्टम स्थान सहेजा गया है -
+आपका सहेजा गया कस्टम स्थान बिना किसी समस्या के कार्य करता रहेगा। किन्तु, कस्टम स्थान को सम्पादित या अपडेट करना प्रतिबन्धित है। सहेजे गये स्थान में बदलाव करने के लिये कृपया सनातन सदस्यता योजना खरीदें।';dpSubscription.add_city_feature_note_second_='2. यदि नया स्थान जोड़ना हो -
+नया कस्टम स्थान सहेजने के लिये सक्रिय सदस्यता आवश्यक है। यदि आप सदस्यता नहीं लेना चाहते हैं, तो आप हमें ईमेल द्वारा अपने स्थान का विवरण भेज सकते हैंं। यदि यह कोई महत्त्वपूर्ण स्थान है, तो हम इसे समर्थित शहरों की सूचि में मैन्युअली जोड़ देंगे।';dpSubscription.add_city_feature_button_email_='ईमेल द्वारा अनुरोध करें';dpSubscription.add_city_feature_button_hide_='बन्द करें';dpSubscription.custom_city_delete_message_html_='';dpSubscription.custom_city_delete_title_string_='';dpSubscription.custom_city_delete_confirmation_string_='';dpSubscription.custom_city_delete_success_string_='';dpSubscription.custom_city_delete_failed_string_='';dpSubscription.initialize();});
+var dpCancelString='रद्द करें';var dpConfirmString='ठीक है';document.addEventListener("DOMContentLoaded",function(){dpPgComments=new DpPgComments();dpPgComments.reply_title_='टिप्पणी करें';dpPgComments.close_title_='बन्द करें';dpPgComments.input_text_warning_='आपकी टिप्पणी समीक्षा के लिये चिन्हित की जा सकती है।';dpPgComments.private_comment_submit_confirmation_='आपकी टिप्पणी निजी रहेगी और केवल आपको तथा सनातन पंचांग टीम को ही दिखायी देगी। क्या आप इसे सबमिट करना चाहते हैं?';dpPgComments.confirmation_title_format_='टिप्पणी को "%s" किया जा रहा है।';dpPgComments.initialize();});	document.addEventListener("DOMContentLoaded",function(){dpLyrics=new DpLyrics();dpLyrics.initializeLyricsHandlers();});
+(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-7521580084298365",enable_page_level_ads:true});
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6XQYRQ17XT');
+सनातन पंचांग

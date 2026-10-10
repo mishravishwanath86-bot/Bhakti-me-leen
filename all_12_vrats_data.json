@@ -1,0 +1,1234 @@
+{
+  "purnima": [
+    {
+      "month": "Jan",
+      "day": "3",
+      "weekday": "Sat",
+      "name": "Pausha Purnima Vrat & Pausha Purnima",
+      "tithi": "Pausha पूर्णिमा • प्रारंभ: 06:53 PM, समाप्त: 03:32 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "1",
+      "weekday": "Sun",
+      "name": "Magha Purnima Vrat & Magha Purnima",
+      "tithi": "Magha पूर्णिमा • प्रारंभ: 05:52 AM, समाप्त: 03:38 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "3",
+      "weekday": "Tue",
+      "name": "Phalguna Purnima Vrat & Phalguna Purnima",
+      "tithi": "Phalguna पूर्णिमा • प्रारंभ: 05:55 PM, समाप्त: 05:07 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "1",
+      "weekday": "Wed",
+      "name": "Chaitra Purnima Vrat",
+      "tithi": "Chaitra पूर्णिमा • प्रारंभ: 07:06 AM, समाप्त: 07:41 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "2",
+      "weekday": "Thu",
+      "name": "Chaitra Purnima",
+      "tithi": "Chaitra पूर्णिमा • प्रारंभ: 07:06 AM, समाप्त: 07:41 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "May",
+      "day": "1",
+      "weekday": "Fri",
+      "name": "Vaishakha Purnima Vrat & Vaishakha Purnima",
+      "tithi": "Vaishakha पूर्णिमा • प्रारंभ: 09:12 PM, समाप्त: 10:52 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "May",
+      "day": "30",
+      "weekday": "Sat",
+      "name": "Adhika Purnima Vrat",
+      "tithi": "Jyeshtha (Adhika) पूर्णिमा • प्रारंभ: 11:57 AM, समाप्त: 02:14 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "May",
+      "day": "31",
+      "weekday": "Sun",
+      "name": "Jyeshtha Adhika Purnima",
+      "tithi": "Jyeshtha (Adhika) पूर्णिमा • प्रारंभ: 11:57 AM, समाप्त: 02:14 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "29",
+      "weekday": "Mon",
+      "name": "Jyeshtha Purnima Vrat & Jyeshtha Purnima",
+      "tithi": "Jyeshtha पूर्णिमा • प्रारंभ: 03:06 AM, समाप्त: 05:26 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "29",
+      "weekday": "Wed",
+      "name": "Ashadha Purnima Vrat & Ashadha Purnima",
+      "tithi": "Ashadha पूर्णिमा • प्रारंभ: 06:18 PM, समाप्त: 08:05 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "27",
+      "weekday": "Thu",
+      "name": "Shravana Purnima Vrat",
+      "tithi": "Shravana पूर्णिमा • प्रारंभ: 09:08 AM, समाप्त: 09:48 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "28",
+      "weekday": "Fri",
+      "name": "Shravana Purnima",
+      "tithi": "Shravana पूर्णिमा • प्रारंभ: 09:08 AM, समाप्त: 09:48 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "26",
+      "weekday": "Sat",
+      "name": "Bhadrapada Purnima Vrat & Bhadrapada Purnima",
+      "tithi": "Bhadrapada पूर्णिमा • प्रारंभ: 11:06 PM, समाप्त: 10:18 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "25",
+      "weekday": "Sun",
+      "name": "Ashwina Purnima Vrat & Ashwina Purnima",
+      "tithi": "Ashwina पूर्णिमा • प्रारंभ: 11:55 AM, समाप्त: 09:41 AM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Kartika Purnima Vrat & Kartika Purnima",
+      "tithi": "Kartika पूर्णिमा • प्रारंभ: 11:42 PM, समाप्त: 08:23 PM",
+      "img": "assets/purnima_hero.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "23",
+      "weekday": "Wed",
+      "name": "Margashirsha Purnima Vrat & Margashirsha Purnima",
+      "tithi": "Margashirsha पूर्णिमा • प्रारंभ: 10:47 AM, समाप्त: 06:57 AM",
+      "img": "assets/purnima_hero.jpg"
+    }
+  ],
+  "amavasya": [
+    {
+      "month": "Jan",
+      "day": "18",
+      "weekday": "Sun",
+      "name": "दर्श अमावस्या / माघ अमावस्या",
+      "tithi": "माघ, कृष्ण अमावस्या • प्रारंभ: 12:03 ए एम, जनवरी 18 | समाप्त: 01:21 ए एम, जनवरी 19",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "17",
+      "weekday": "Tue",
+      "name": "दर्श अमावस्या / फाल्गुन अमावस्या",
+      "tithi": "फाल्गुन, कृष्ण अमावस्या • प्रारंभ: 05:34 पी एम, फरवरी 16 | समाप्त: 05:30 पी एम, फरवरी 17",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "18",
+      "weekday": "Wed",
+      "name": "दर्श अमावस्या",
+      "tithi": "चैत्र, कृष्ण अमावस्या • प्रारंभ: 08:25 ए एम, मार्च 18 | समाप्त: 06:52 ए एम, मार्च 19",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "19",
+      "weekday": "Thu",
+      "name": "चैत्र अमावस्या",
+      "tithi": "चैत्र, कृष्ण अमावस्या • प्रारंभ: 08:25 ए एम, मार्च 18 | समाप्त: 06:52 ए एम, मार्च 19",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "17",
+      "weekday": "Fri",
+      "name": "दर्श अमावस्या / वैशाख अमावस्या",
+      "tithi": "वैशाख, कृष्ण अमावस्या • प्रारंभ: 08:11 पी एम, अप्रैल 16 | समाप्त: 05:21 पी एम, अप्रैल 17",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "May",
+      "day": "16",
+      "weekday": "Sat",
+      "name": "दर्श अमावस्या / ज्येष्ठ अमावस्या",
+      "tithi": "ज्येष्ठ, कृष्ण अमावस्या • प्रारंभ: 05:11 ए एम, मई 16 | समाप्त: 01:30 ए एम, मई 17",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "14",
+      "weekday": "Sun",
+      "name": "अधिक दर्श अमावस्या",
+      "tithi": "ज्येष्ठ, कृष्ण अमावस्या • प्रारंभ: 12:19 पी एम, जून 14 | समाप्त: 08:23 ए एम, जून 15",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "15",
+      "weekday": "Mon",
+      "name": "ज्येष्ठ अधिक अमावस्या",
+      "tithi": "ज्येष्ठ, कृष्ण अमावस्या • प्रारंभ: 12:19 पी एम, जून 14 | समाप्त: 08:23 ए एम, जून 15",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "14",
+      "weekday": "Tue",
+      "name": "दर्श अमावस्या / आषाढ़ अमावस्या",
+      "tithi": "आषाढ़, कृष्ण अमावस्या • प्रारंभ: 06:49 पी एम, जुलाई 13 | समाप्त: 03:12 पी एम, जुलाई 14",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "12",
+      "weekday": "Wed",
+      "name": "दर्श अमावस्या / श्रावण अमावस्या",
+      "tithi": "श्रावण, कृष्ण अमावस्या • प्रारंभ: 01:52 ए एम, अगस्त 12 | समाप्त: 11:06 पी एम, अगस्त 12",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "10",
+      "weekday": "Thu",
+      "name": "दर्श अमावस्या",
+      "tithi": "भाद्रपद, कृष्ण अमावस्या • प्रारंभ: 10:33 ए एम, सितम्बर 10 | समाप्त: 08:56 ए एम, सितम्बर 11",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "11",
+      "weekday": "Fri",
+      "name": "भाद्रपद अमावस्या",
+      "tithi": "भाद्रपद, कृष्ण अमावस्या • प्रारंभ: 10:33 ए एम, सितम्बर 10 | समाप्त: 08:56 ए एम, सितम्बर 11",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "10",
+      "weekday": "Sat",
+      "name": "दर्श अमावस्या / आश्विन अमावस्या",
+      "tithi": "आश्विन, कृष्ण अमावस्या • प्रारंभ: 09:35 पी एम, अक्टूबर 09 | समाप्त: 09:19 पी एम, अक्टूबर 10",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "8",
+      "weekday": "Sun",
+      "name": "दर्श अमावस्या",
+      "tithi": "कार्तिक, कृष्ण अमावस्या • प्रारंभ: 11:27 ए एम, नवम्बर 08 | समाप्त: 12:31 पी एम, नवम्बर 09",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "9",
+      "weekday": "Mon",
+      "name": "कार्तिक अमावस्या",
+      "tithi": "कार्तिक, कृष्ण अमावस्या • प्रारंभ: 11:27 ए एम, नवम्बर 08 | समाप्त: 12:31 पी एम, नवम्बर 09",
+      "img": "assets/amavasya_moon.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "8",
+      "weekday": "Tue",
+      "name": "दर्श अमावस्या / मार्गशीर्ष अमावस्या",
+      "tithi": "मार्गशीर्ष, कृष्ण अमावस्या • प्रारंभ: 04:12 ए एम, दिसम्बर 08 | समाप्त: 06:21 ए एम, दिसम्बर 09",
+      "img": "assets/amavasya_moon.jpg"
+    }
+  ],
+  "navagraha": [
+    {
+      "month": "रवि",
+      "day": "सूर्य",
+      "weekday": "Sun",
+      "name": "रवि आदित्य सूर्य व्रत (रविवार)",
+      "tithi": "देवता: भगवान सूर्य नारायण • रंग: रक्त वर्ण/लाल • मंत्र: ॐ ह्रां ह्रीं ह्रौं सः सूर्याय नमः",
+      "img": "assets/navagraha_surya.jpg"
+    },
+    {
+      "month": "सोम",
+      "day": "चन्द्र",
+      "weekday": "Mon",
+      "name": "सोमवार चन्द्र देव व्रत (सोमवार)",
+      "tithi": "देवता: चन्द्र देव / शिव • रंग: श्वेत/दूधिया • मंत्र: ॐ श्रां श्रीं श्रौं सः चन्द्राय नमः",
+      "img": "assets/navagraha_chandra.jpg"
+    },
+    {
+      "month": "मंगल",
+      "day": "भौम",
+      "weekday": "Tue",
+      "name": "भौम मङ्गलवार व्रत (मंगलवार)",
+      "tithi": "देवता: हनुमान जी / मंगल देव • रंग: लाल/सिंदूरी • मंत्र: ॐ क्रां क्रीं क्रौं सः भौमाय नमः",
+      "img": "assets/navagraha_mangal.jpg"
+    },
+    {
+      "month": "बुध",
+      "day": "बुध",
+      "weekday": "Wed",
+      "name": "बुध बुधवार व्रत (बुधवार)",
+      "tithi": "देवता: बुध देव / गणेश / नारायण • रंग: हरा/दूर्वा वर्ण • मंत्र: ॐ ब्रां ब्रीं ब्रौं सः बुधाय नमः",
+      "img": "assets/navagraha_budha.jpg"
+    },
+    {
+      "month": "गुरु",
+      "day": "बृहस्पति",
+      "weekday": "Thu",
+      "name": "बृहस्पतिवार व्रत (गुरुवार)",
+      "tithi": "देवता: देवगुरु बृहस्पति / सत्यनारायण • रंग: पीतांबरी • मंत्र: ॐ ग्रां ग्रीं ग्रौं सः गुरवे नमः",
+      "img": "assets/navagraha_brihaspati.jpg"
+    },
+    {
+      "month": "शुक्र",
+      "day": "शुक्र",
+      "weekday": "Fri",
+      "name": "शुक्र शुक्रवार व्रत (शुक्रवार)",
+      "tithi": "देवता: शुक्र देव / संतोषी माता / लक्ष्मी • रंग: श्वेत/गुलाबी • मंत्र: ॐ द्रां द्रीं द्रौ सः शुक्राय नमः",
+      "img": "assets/navagraha_shukra.jpg"
+    },
+    {
+      "month": "शनि",
+      "day": "शनि",
+      "weekday": "Sat",
+      "name": "शनि शनिवार व्रत (शनिवार)",
+      "tithi": "देवता: न्यायाधीश शनिदेव • रंग: नीला/काला • मंत्र: ॐ प्रां प्रीं प्रौं सः शनैश्चराय नमः",
+      "img": "assets/navagraha_shani.jpg"
+    },
+    {
+      "month": "शनि",
+      "day": "राहु-केतु",
+      "weekday": "Sat",
+      "name": "राहु-केतु शनिवार व्रत (शनिवार)",
+      "tithi": "देवता: राहु-केतु / कालभैरव / दुर्गा • रंग: स्लेटी/धूम्र • मंत्र: ॐ भ्रां भ्रीं भ्रौं सः राहवे नमः",
+      "img": "assets/navagraha_rahu_ketu.jpg"
+    }
+  ],
+  "kalashtami": [
+    {
+      "month": "Jan",
+      "day": "10",
+      "weekday": "Sat",
+      "name": "कालाष्टमी (माघ)",
+      "tithi": "माघ, कृष्ण अष्टमी • प्रारम्भ - 08:23 AM, जन 10 | समाप्त - 10:20 AM, जन 11",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "9",
+      "weekday": "Mon",
+      "name": "कालाष्टमी (फाल्गुन)",
+      "tithi": "फाल्गुन, कृष्ण अष्टमी • प्रारम्भ - 05:01 AM, फर 09 | समाप्त - 07:27 AM, फर 10",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "11",
+      "weekday": "Wed",
+      "name": "कालाष्टमी (चैत्र)",
+      "tithi": "चैत्र, कृष्ण अष्टमी • प्रारम्भ - 01:54 AM, मार्च 11 | समाप्त - 04:19 AM, मार्च 12",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "10",
+      "weekday": "Fri",
+      "name": "कालाष्टमी (वैशाख)",
+      "tithi": "वैशाख, कृष्ण अष्टमी • प्रारम्भ - 09:19 PM, अप्रैल 09 | समाप्त - 11:15 PM, अप्रैल 10",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "May",
+      "day": "9",
+      "weekday": "Sat",
+      "name": "कालाष्टमी (ज्येष्ठ)",
+      "tithi": "ज्येष्ठ, कृष्ण अष्टमी • प्रारम्भ - 02:02 PM, मई 09 | समाप्त - 03:06 PM, मई 10",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "8",
+      "weekday": "Mon",
+      "name": "अधिक कालाष्टमी (ज्येष्ठ)",
+      "tithi": "ज्येष्ठ, कृष्ण अष्टमी • प्रारम्भ - 03:24 AM, जून 08 | समाप्त - 03:23 AM, जून 09",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "7",
+      "weekday": "Tue",
+      "name": "कालाष्टमी (आषाढ़)",
+      "tithi": "आषाढ़, कृष्ण अष्टमी • प्रारम्भ - 01:24 PM, जुलाई 07 | समाप्त - 12:21 PM, जुलाई 08",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "5",
+      "weekday": "Wed",
+      "name": "कालाष्टमी (श्रावण)",
+      "tithi": "श्रावण, कृष्ण अष्टमी • प्रारम्भ - 08:42 PM, अगस्त 05 | समाप्त - 06:52 PM, अगस्त 06",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "4",
+      "weekday": "Fri",
+      "name": "कालाष्टमी (भाद्रपद)",
+      "tithi": "भाद्रपद, कृष्ण अष्टमी • प्रारम्भ - 02:25 AM, सितम्बर 04 | समाप्त - 12:13 AM, सितम्बर 05",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "3",
+      "weekday": "Sat",
+      "name": "कालाष्टमी (आश्विन)",
+      "tithi": "आश्विन, कृष्ण अष्टमी • प्रारम्भ - 07:59 AM, अक्टूबर 03 | समाप्त - 05:51 AM, अक्टूबर 04",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "1",
+      "weekday": "Sun",
+      "name": "कालाष्टमी (कार्तिक)",
+      "tithi": "कार्तिक, कृष्ण अष्टमी • प्रारम्भ - 02:51 PM, नवम्बर 01 | समाप्त - 01:10 PM, नवम्बर 02",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "1",
+      "weekday": "Tue",
+      "name": "कालभैरव जयन्ती (मार्गशीर्ष)",
+      "tithi": "मार्गशीर्ष, कृष्ण अष्टमी • प्रारम्भ - 12:11 AM, दिसम्बर 01 | समाप्त - 11:13 PM, दिसम्बर 01",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "30",
+      "weekday": "Wed",
+      "name": "कालाष्टमी (पौष)",
+      "tithi": "पौष, कृष्ण अष्टमी • प्रारम्भ - 12:36 PM, दिसम्बर 30 | समाप्त - 12:32 PM, दिसम्बर 31",
+      "img": "assets/deity_bhairav.jpg"
+    }
+  ],
+  "satyanarayan": [
+    {
+      "month": "Jan",
+      "day": "3",
+      "weekday": "Sat",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Pausha मास • प्रारंभ: 06:53 PM, समाप्त: 03:32 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "1",
+      "weekday": "Sun",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Magha मास • प्रारंभ: 05:52 AM, समाप्त: 03:38 AM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "3",
+      "weekday": "Tue",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Phalguna मास • प्रारंभ: 05:55 PM, समाप्त: 05:07 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "1",
+      "weekday": "Wed",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Chaitra मास • प्रारंभ: 07:06 AM, समाप्त: 07:41 AM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "May",
+      "day": "1",
+      "weekday": "Fri",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Vaishakha मास • प्रारंभ: 09:12 PM, समाप्त: 10:52 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "May",
+      "day": "30",
+      "weekday": "Sat",
+      "name": "Adhika Shri Satyanarayana Vrat",
+      "tithi": "Jyeshtha (Adhika) मास • प्रारंभ: 11:57 AM, समाप्त: 02:14 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "29",
+      "weekday": "Mon",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Jyeshtha मास • प्रारंभ: 03:06 AM, समाप्त: 05:26 AM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "29",
+      "weekday": "Wed",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Ashadha मास • प्रारंभ: 06:18 PM, समाप्त: 08:05 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "27",
+      "weekday": "Thu",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Shravana मास • प्रारंभ: 09:08 AM, समाप्त: 09:48 AM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "26",
+      "weekday": "Sat",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Bhadrapada मास • प्रारंभ: 11:06 PM, समाप्त: 10:18 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "25",
+      "weekday": "Sun",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Ashwina मास • प्रारंभ: 11:55 AM, समाप्त: 09:41 AM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Kartika मास • प्रारंभ: 11:42 PM, समाप्त: 08:23 PM",
+      "img": "assets/satyanarayan_puja.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "23",
+      "weekday": "Wed",
+      "name": "Shri Satyanarayana Vrat",
+      "tithi": "Margashirsha मास • प्रारंभ: 10:47 AM, समाप्त: 06:57 AM",
+      "img": "assets/satyanarayan_puja.jpg"
+    }
+  ],
+  "sawan-somwar": [
+    {
+      "month": "Jul",
+      "day": "30",
+      "weekday": "Thu",
+      "name": "श्रावण प्रारम्भ",
+      "tithi": "Shravana Begins (North India) • श्रावण सोमवार भगवान शिव अभिषेक",
+      "img": "assets/sawan_somwar.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "3",
+      "weekday": "Mon",
+      "name": "पहला सावन सोमवार",
+      "tithi": "First Shravan Somwar Vrat • श्रावण सोमवार भगवान शिव अभिषेक",
+      "img": "assets/sawan_somwar.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "10",
+      "weekday": "Mon",
+      "name": "दूसरा सावन सोमवार",
+      "tithi": "Second Shravan Somwar Vrat • श्रावण सोमवार भगवान शिव अभिषेक",
+      "img": "assets/sawan_somwar.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "17",
+      "weekday": "Mon",
+      "name": "तीसरा सावन सोमवार",
+      "tithi": "Third Shravan Somwar Vrat • श्रावण सोमवार भगवान शिव अभिषेक",
+      "img": "assets/sawan_somwar.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "24",
+      "weekday": "Mon",
+      "name": "चौथा सावन सोमवार",
+      "tithi": "Fourth Shravan Somwar Vrat • श्रावण सोमवार भगवान शिव अभिषेक",
+      "img": "assets/sawan_somwar.jpg"
+    }
+  ],
+  "karthigai": [
+    {
+      "month": "Jan",
+      "day": "27",
+      "weekday": "Tue",
+      "name": "मासिक कार्तिगई (थाई (मकर))",
+      "tithi": "माघ मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "23",
+      "weekday": "Mon",
+      "name": "मासिक कार्तिगई (मासी (कुम्भ))",
+      "tithi": "फाल्गुन मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "23",
+      "weekday": "Mon",
+      "name": "मासिक कार्तिगई (पंगुनी (मीन))",
+      "tithi": "चैत्र मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "19",
+      "weekday": "Sun",
+      "name": "मासिक कार्तिगई (चित्तिरै (मेष))",
+      "tithi": "वैशाख मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "May",
+      "day": "16",
+      "weekday": "Sat",
+      "name": "मासिक कार्तिगई (वैकासी (वृषभ))",
+      "tithi": "ज्येष्ठ मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "13",
+      "weekday": "Sat",
+      "name": "मासिक कार्तिगई (आनी (मिथुन))",
+      "tithi": "ज्येष्ठ (अधिक) मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "10",
+      "weekday": "Fri",
+      "name": "मासिक कार्तिगई (आनी / आदि)",
+      "tithi": "आषाढ़ मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "7",
+      "weekday": "Fri",
+      "name": "मासिक कार्तिगई (आदि (कर्क))",
+      "tithi": "श्रावण मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "3",
+      "weekday": "Thu",
+      "name": "मासिक कार्तिगई (आवनि (सिंह))",
+      "tithi": "भाद्रपद मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "30",
+      "weekday": "Wed",
+      "name": "मासिक कार्तिगई (पुरट्टासी (कन्या))",
+      "tithi": "आश्विन मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "27",
+      "weekday": "Tue",
+      "name": "मासिक कार्तिगई (ऐप्पासी (तुला))",
+      "tithi": "कार्तिक मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "कार्तिगई दीपम (कार्तिकाई (वृश्चिक))",
+      "tithi": "मार्गशीर्ष मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "21",
+      "weekday": "Mon",
+      "name": "मासिक कार्तिगई (मार्गऴि (धनु))",
+      "tithi": "पौष मास • कृत्तिका नक्षत्र • दीप आराधना",
+      "img": "assets/karthigai_deepam.jpg"
+    }
+  ],
+  "shraddha": [
+    {
+      "month": "Sep",
+      "day": "26",
+      "weekday": "Sat",
+      "name": "पूर्णिमा श्राद्ध",
+      "tithi": "भाद्रपद, शुक्ल पूर्णिमा • कुतुप मुहूर्त: 11:48 AM to 12:36 PM | अपराह्न काल: 01:25 PM to 03:50 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "27",
+      "weekday": "Sun",
+      "name": "प्रतिपदा श्राद्ध",
+      "tithi": "आश्विन, कृष्ण प्रतिपदा • कुतुप मुहूर्त: 11:48 AM to 12:36 PM | अपराह्न काल: 01:24 PM to 03:49 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "28",
+      "weekday": "Mon",
+      "name": "द्वितीया श्राद्ध",
+      "tithi": "आश्विन, कृष्ण द्वितीया • कुतुप मुहूर्त: 11:48 AM to 12:36 PM | अपराह्न काल: 01:24 PM to 03:48 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "29",
+      "weekday": "Tue",
+      "name": "तृतीया श्राद्ध",
+      "tithi": "आश्विन, कृष्ण तृतीया • कुतुप मुहूर्त: 11:47 AM to 12:35 PM | अपराह्न काल: 01:23 PM to 03:47 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "29",
+      "weekday": "Tue",
+      "name": "महा भरणी",
+      "tithi": "आश्विन, भरणी नक्षत्र • कुतुप मुहूर्त: 11:47 AM to 12:35 PM | अपराह्न काल: 01:23 PM to 03:47 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "30",
+      "weekday": "Wed",
+      "name": "चतुर्थी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण चतुर्थी • कुतुप मुहूर्त: 11:47 AM to 12:35 PM | अपराह्न काल: 01:23 PM to 03:47 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "30",
+      "weekday": "Wed",
+      "name": "पञ्चमी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण पञ्चमी • कुतुप मुहूर्त: 11:47 AM to 12:35 PM | अपराह्न काल: 01:23 PM to 03:47 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "1",
+      "weekday": "Thu",
+      "name": "षष्ठी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण षष्ठी • कुतुप मुहूर्त: 11:47 AM to 12:35 PM | अपराह्न काल: 01:22 PM to 03:46 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "2",
+      "weekday": "Fri",
+      "name": "सप्तमी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण सप्तमी • कुतुप मुहूर्त: 11:46 AM to 12:34 PM | अपराह्न काल: 01:22 PM to 03:45 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "3",
+      "weekday": "Sat",
+      "name": "अष्टमी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण अष्टमी • कुतुप मुहूर्त: 11:46 AM to 12:34 PM | अपराह्न काल: 01:22 PM to 03:44 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "4",
+      "weekday": "Sun",
+      "name": "नवमी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण नवमी • कुतुप मुहूर्त: 11:46 AM to 12:34 PM | अपराह्न काल: 01:21 PM to 03:43 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "5",
+      "weekday": "Mon",
+      "name": "दशमी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण दशमी • कुतुप मुहूर्त: 11:46 AM to 12:34 PM | अपराह्न काल: 01:21 PM to 03:43 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "6",
+      "weekday": "Tue",
+      "name": "एकादशी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण एकादशी • कुतुप मुहूर्त: 11:46 AM to 12:33 PM | अपराह्न काल: 01:21 PM to 03:42 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "7",
+      "weekday": "Wed",
+      "name": "द्वादशी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण द्वादशी • कुतुप मुहूर्त: 11:45 AM to 12:33 PM | अपराह्न काल: 01:21 PM to 03:41 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "7",
+      "weekday": "Wed",
+      "name": "मघा श्राद्ध",
+      "tithi": "आश्विन, मघा नक्षत्र • कुतुप मुहूर्त: 11:45 AM to 12:33 PM | अपराह्न काल: 01:21 PM to 03:41 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "8",
+      "weekday": "Thu",
+      "name": "त्रयोदशी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण त्रयोदशी • कुतुप मुहूर्त: 11:45 AM to 12:33 PM | अपराह्न काल: 01:20 PM to 03:41 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "9",
+      "weekday": "Fri",
+      "name": "चतुर्दशी श्राद्ध",
+      "tithi": "आश्विन, कृष्ण चतुर्दशी • कुतुप मुहूर्त: 11:45 AM to 12:33 PM | अपराह्न काल: 01:20 PM to 03:40 PM",
+      "img": "assets/pitru_paksha.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "10",
+      "weekday": "Sat",
+      "name": "सर्वपितृ अमावस्या",
+      "tithi": "आश्विन, कृष्ण अमावस्या • कुतुप मुहूर्त: 11:45 AM to 12:32 PM | अपराह्न काल: 01:20 PM to 03:39 PM",
+      "img": "assets/pitru_paksha.jpg"
+    }
+  ],
+  "durgashtami": [
+    {
+      "month": "Jan",
+      "day": "26",
+      "weekday": "Mon",
+      "name": "मासिक दुर्गाष्टमी (माघ)",
+      "tithi": "माघ, शुक्ल अष्टमी • प्रारम्भ - 11:10 PM, जन 25 | समाप्त - 09:17 PM, जन 26",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "मासिक दुर्गाष्टमी (फाल्गुन)",
+      "tithi": "फाल्गुन, शुक्ल अष्टमी • प्रारम्भ - 07:01 AM, फर 24 | समाप्त - 04:51 AM, फर 25",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "26",
+      "weekday": "Thu",
+      "name": "मासिक दुर्गाष्टमी (चैत्र)",
+      "tithi": "चैत्र, शुक्ल अष्टमी • प्रारम्भ - 01:50 PM, मार्च 25 | समाप्त - 11:48 AM, मार्च 26",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "24",
+      "weekday": "Fri",
+      "name": "मासिक दुर्गाष्टमी (वैशाख)",
+      "tithi": "वैशाख, शुक्ल अष्टमी • प्रारम्भ - 08:49 PM, अप्रैल 23 | समाप्त - 07:21 PM, अप्रैल 24",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "May",
+      "day": "23",
+      "weekday": "Sat",
+      "name": "अधिक मासिक दुर्गाष्टमी (ज्येष्ठ)",
+      "tithi": "ज्येष्ठ, शुक्ल अष्टमी • प्रारम्भ - 05:04 AM, मई 23 | समाप्त - 04:27 AM, मई 24",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "22",
+      "weekday": "Mon",
+      "name": "मासिक दुर्गाष्टमी (ज्येष्ठ)",
+      "tithi": "ज्येष्ठ, शुक्ल अष्टमी • प्रारम्भ - 03:20 PM, जून 21 | समाप्त - 03:39 PM, जून 22",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "21",
+      "weekday": "Tue",
+      "name": "मासिक दुर्गाष्टमी (आषाढ़)",
+      "tithi": "आषाढ़, शुक्ल अष्टमी • प्रारम्भ - 04:02 AM, जुलाई 21 | समाप्त - 05:16 AM, जुलाई 22",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "20",
+      "weekday": "Thu",
+      "name": "मासिक दुर्गाष्टमी (श्रावण)",
+      "tithi": "श्रावण, शुक्ल अष्टमी • प्रारम्भ - 07:19 PM, अगस्त 19 | समाप्त - 09:18 PM, अगस्त 20",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "19",
+      "weekday": "Sat",
+      "name": "मासिक दुर्गाष्टमी (भाद्रपद)",
+      "tithi": "भाद्रपद, शुक्ल अष्टमी • प्रारम्भ - 01:00 PM, सितम्बर 18 | समाप्त - 03:26 PM, सितम्बर 19",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "19",
+      "weekday": "Mon",
+      "name": "दुर्गा अष्टमी (आश्विन)",
+      "tithi": "आश्विन, शुक्ल अष्टमी • प्रारम्भ - 08:27 AM, अक्टूबर 18 | समाप्त - 10:51 AM, अक्टूबर 19",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "17",
+      "weekday": "Tue",
+      "name": "मासिक दुर्गाष्टमी (कार्तिक)",
+      "tithi": "कार्तिक, शुक्ल अष्टमी • प्रारम्भ - 04:19 AM, नवम्बर 17 | समाप्त - 06:04 AM, नवम्बर 18",
+      "img": "assets/durga_ashtami.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "17",
+      "weekday": "Thu",
+      "name": "मासिक दुर्गाष्टमी (मार्गशीर्ष)",
+      "tithi": "मार्गशीर्ष, शुक्ल अष्टमी • प्रारम्भ - 10:45 PM, दिसम्बर 16 | समाप्त - 11:25 PM, दिसम्बर 17",
+      "img": "assets/durga_ashtami.jpg"
+    }
+  ],
+  "devi-devta": [
+    {
+      "month": "रवि",
+      "day": "सूर्य",
+      "weekday": "Sun",
+      "name": "भगवान सूर्य नारायण एवं माँ गायत्री व्रत",
+      "tithi": "आरोग्य, यश, तेज व आत्मबल की प्राप्ति • रक्त पुष्प व लाल चंदन से अर्घ्य",
+      "img": "assets/deity_surya.jpg"
+    },
+    {
+      "month": "सोम",
+      "day": "शिव",
+      "weekday": "Mon",
+      "name": "देवाधिदेव महादेव शिव-पार्वती व्रत",
+      "tithi": "सोमेश्वर महादेव व माता गौरी की आराधना • कच्चा दूध, बेलपत्र, धतूरा व पंचाक्षरी जप",
+      "img": "assets/deity_shiv.jpg"
+    },
+    {
+      "month": "मंगल",
+      "day": "हनुमान",
+      "weekday": "Tue",
+      "name": "संकटमोचन श्री हनुमान जी एवं माँ मंगलागौरी व्रत",
+      "tithi": "साहस, विजय, मंगल दोष व भय निवारण • सिंदूर, चमेली तेल, बूंदी लड्डू व सुंदरकांड",
+      "img": "assets/deity_hanuman.jpg"
+    },
+    {
+      "month": "बुध",
+      "day": "गणेश",
+      "weekday": "Wed",
+      "name": "विघ्नहर्ता श्री गणेश जी एवं माँ सरस्वती व्रत",
+      "tithi": "बुद्धि, विवेक, विद्या व विघ्न शांति • 21 दूर्वा दल, मोदक व ॐ गं गणपतये नमः",
+      "img": "assets/deity_ganesh.jpg"
+    },
+    {
+      "month": "गुरु",
+      "day": "विष्णु",
+      "weekday": "Thu",
+      "name": "भगवान श्री सत्यनारायण (विष्णु) एवं देवगुरु व्रत",
+      "tithi": "सौभाग्य, ज्ञान, वैवाहिक सुख व वंश वृद्धि • पीला चंदन, चने की दाल व बेसन भोग",
+      "img": "assets/deity_vishnu.jpg"
+    },
+    {
+      "month": "गुरु",
+      "day": "साईं",
+      "weekday": "Thu",
+      "name": "शिरडी साईं बाबा व्रत",
+      "tithi": "श्रद्धा और सबूरी • सर्व मनोकामना पूर्ति व लोककल्याण",
+      "img": "assets/deity_saibaba.jpg"
+    },
+    {
+      "month": "शुक्र",
+      "day": "लक्ष्मी",
+      "weekday": "Fri",
+      "name": "माँ महालक्ष्मी एवं माँ संतोषी व्रत",
+      "tithi": "अष्टलक्ष्मी कृपा, धन-ऐश्वर्य व सौभाग्य • 16 शुक्रवार गुड़-चने का भोग (खटाई वर्जित)",
+      "img": "assets/deity_lakshmi.jpg"
+    },
+    {
+      "month": "शुक्र",
+      "day": "दुर्गा",
+      "weekday": "Fri",
+      "name": "जगज्जननी माँ दुर्गा भगवती व्रत",
+      "tithi": "शत्रु शमन, शक्ति, सुरक्षा व सिद्धि • लाल चुनरी, पुष्प व दुर्गा सप्तशती पाठ",
+      "img": "assets/deity_durga.jpg"
+    },
+    {
+      "month": "शनि",
+      "day": "शनिदेव",
+      "weekday": "Sat",
+      "name": "कर्मफलदाता न्यायाधीश श्री शनिदेव व्रत",
+      "tithi": "साढ़ेसाती व ढैया शमन, न्याय व धर्म रक्षा • सरसों तेल का चौमुखी दीप व काले तिल",
+      "img": "assets/deity_shanidev.jpg"
+    },
+    {
+      "month": "शनि",
+      "day": "भैरव",
+      "weekday": "Sat",
+      "name": "भगवान श्री कालभैरव एवं बटुक भैरव व्रत",
+      "tithi": "तांत्रिक बाधा, भय व काल संकट निवारण • ॐ कालभैरवाय नमः व चौमुखी दीप",
+      "img": "assets/deity_bhairav.jpg"
+    },
+    {
+      "month": "शनि",
+      "day": "काली",
+      "weekday": "Sat",
+      "name": "माँ महाकाली आराधना व्रत",
+      "tithi": "असुर संहारक शक्ति, भय मुक्ति व आत्म विजय • गुड़हल पुष्प व महाकाली स्तोत्र",
+      "img": "assets/deity_kali.jpg"
+    }
+  ],
+  "rohini-vrat": [
+    {
+      "month": "Jan",
+      "day": "1",
+      "weekday": "Thu",
+      "name": "रोहिणी व्रत (मकर सौर मास / पौष)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Jan",
+      "day": "28",
+      "weekday": "Wed",
+      "name": "रोहिणी व्रत (कुम्भ सौर मास / माघ)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "25",
+      "weekday": "Wed",
+      "name": "रोहिणी व्रत (मीन सौर मास / फाल्गुन)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "रोहिणी व्रत (मेष सौर मास / चैत्र)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "20",
+      "weekday": "Mon",
+      "name": "रोहिणी व्रत (वृषभ सौर मास / वैशाख)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "May",
+      "day": "18",
+      "weekday": "Mon",
+      "name": "रोहिणी व्रत (मिथुन सौर मास / ज्येष्ठ)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "14",
+      "weekday": "Sun",
+      "name": "रोहिणी व्रत (कर्क सौर मास / आषाढ़)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "12",
+      "weekday": "Sun",
+      "name": "रोहिणी व्रत (कर्क-सिंह सौर मास / श्रावण)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "8",
+      "weekday": "Sat",
+      "name": "रोहिणी व्रत (सिंह सौर मास / भाद्रपद)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "4",
+      "weekday": "Fri",
+      "name": "रोहिणी व्रत (कन्या सौर मास / अश्विन (कन्या रोहिणी उपवास))",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "1",
+      "weekday": "Thu",
+      "name": "रोहिणी व्रत (कन्या सौर मास / कार्तिक)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "29",
+      "weekday": "Thu",
+      "name": "रोहिणी व्रत (तुला सौर मास / कार्तिक)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "25",
+      "weekday": "Wed",
+      "name": "रोहिणी व्रत (वृश्चिक सौर मास / मार्गशीर्ष)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "23",
+      "weekday": "Wed",
+      "name": "रोहिणी व्रत (धनु सौर मास / पौष)",
+      "tithi": "रोहिणी नक्षत्र: undefined से undefined",
+      "img": "assets/lord_mahavira.jpg"
+    }
+  ],
+  "chandra-darshan": [
+    {
+      "month": "Jan",
+      "day": "20",
+      "weekday": "Tue",
+      "name": "चंद्र दर्शन (January 20)",
+      "tithi": "दर्शन मुहूर्त: 05:50 PM to 07:16 PM • अवधि: 01 Hour 25 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Feb",
+      "day": "18",
+      "weekday": "Wed",
+      "name": "चंद्र दर्शन (February 18)",
+      "tithi": "दर्शन मुहूर्त: 06:13 PM to 07:05 PM • अवधि: 00 Hours 52 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Mar",
+      "day": "20",
+      "weekday": "Fri",
+      "name": "चंद्र दर्शन (March 20)",
+      "tithi": "दर्शन मुहूर्त: 06:32 PM to 07:59 PM • अवधि: 01 Hour 26 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Apr",
+      "day": "18",
+      "weekday": "Sat",
+      "name": "चंद्र दर्शन (April 18)",
+      "tithi": "दर्शन मुहूर्त: 06:49 PM to 07:56 PM • अवधि: 01 Hour 08 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "May",
+      "day": "17",
+      "weekday": "Sun",
+      "name": "चंद्र दर्शन (May 17)",
+      "tithi": "दर्शन मुहूर्त: 07:06 PM to 07:58 PM • अवधि: 00 Hours 52 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Jun",
+      "day": "16",
+      "weekday": "Tue",
+      "name": "चंद्र दर्शन (June 16)",
+      "tithi": "दर्शन मुहूर्त: 07:21 PM to 08:54 PM • अवधि: 01 Hour 33 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Jul",
+      "day": "15",
+      "weekday": "Wed",
+      "name": "चंद्र दर्शन (July 15)",
+      "tithi": "दर्शन मुहूर्त: 07:21 PM to 08:19 PM • अवधि: 00 Hours 58 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Aug",
+      "day": "14",
+      "weekday": "Fri",
+      "name": "चंद्र दर्शन (August 14)",
+      "tithi": "दर्शन मुहूर्त: 07:02 PM to 08:01 PM • अवधि: 00 Hours 59 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Sep",
+      "day": "13",
+      "weekday": "Sun",
+      "name": "चंद्र दर्शन (September 13)",
+      "tithi": "दर्शन मुहूर्त: 06:29 PM to 07:31 PM • अवधि: 01 Hour 02 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Oct",
+      "day": "12",
+      "weekday": "Mon",
+      "name": "चंद्र दर्शन (October 12)",
+      "tithi": "दर्शन मुहूर्त: 05:55 PM to 06:36 PM • अवधि: 00 Hours 41 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Nov",
+      "day": "11",
+      "weekday": "Wed",
+      "name": "चंद्र दर्शन (November 11)",
+      "tithi": "दर्शन मुहूर्त: 05:29 PM to 06:38 PM • अवधि: 01 Hour 09 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    },
+    {
+      "month": "Dec",
+      "day": "10",
+      "weekday": "Thu",
+      "name": "चंद्र दर्शन (December 10)",
+      "tithi": "दर्शन मुहूर्त: 05:25 PM to 06:16 PM • अवधि: 00 Hours 51 Mins • शुक्ल प्रतिपदा चंद्र दर्शन",
+      "img": "assets/purnima_vrat.jpg"
+    }
+  ]
+}

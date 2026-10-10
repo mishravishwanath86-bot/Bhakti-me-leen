@@ -1,0 +1,948 @@
+[
+  {
+    "category": "Ganesha Aarti",
+    "count": 3,
+    "items": [
+      {
+        "title": "Shree Ganesh Aarti",
+        "en_line": "Jai Ganesh Jai Ganesh Deva",
+        "hi_line": "जय गणेश जय गणेश देवा",
+        "en_url": "/lyrics/aarti/shree-ganesh/jay-ganesh-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-ganesh/jay-ganesh-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_ganesha.png.pagespeed.ic.WSttxeVvHi.png",
+        "alt_deity": "Lord Ganesha",
+        "matched_id": "aarti-ganesh-jai-ganesh-jai-ganesh-deva",
+        "matched_title": "जय गणेश जय गणेश जय गणेश देवा",
+        "audio_url": "https://www.youtube.com/watch?v=GKMSZ8SN0IA",
+        "has_content": true,
+        "content_len": 380
+      },
+      {
+        "title": "Vinayaka Aarti",
+        "en_line": "Aarti Gajavadan Vinayaka Ki",
+        "hi_line": "आरती गजबदन विनायक की",
+        "en_url": "/lyrics/aarti/shree-ganesh/gajavadan-vinayaka-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-ganesh/gajavadan-vinayaka-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_ganesha.png.pagespeed.ic.WSttxeVvHi.png",
+        "alt_deity": "Lord Ganesha"
+      },
+      {
+        "title": "Shree Ganapati Aarti",
+        "en_line": "Ganapati Ki Seva Mangal Meva",
+        "hi_line": "गणपति की सेवा मंगल मेवा",
+        "en_url": "/lyrics/aarti/shree-ganesh/ganapati-seva/ganapati-seva-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-ganesh/ganapati-seva/ganapati-seva-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_ganesha.png.pagespeed.ic.WSttxeVvHi.png",
+        "alt_deity": "Lord Ganesha"
+      }
+    ]
+  },
+  {
+    "category": "Hanuman Aarti",
+    "count": 3,
+    "items": [
+      {
+        "title": "Shree Hanuman Aarti",
+        "en_line": "Aarti Kije Hanuman Lala Ki",
+        "hi_line": "आरती की जै हनुमान लला की",
+        "en_url": "/lyrics/aarti/lord-hanuman/shree-hanuman-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-hanuman/shree-hanuman-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_hanuman.png.pagespeed.ic.joqilab8XC.png",
+        "alt_deity": "Lord Hanuman",
+        "matched_id": "aarti-hanuman-aarti-kijai-hanuman-lala-ki",
+        "matched_title": "आरती कीजै हनुमान लला की",
+        "audio_url": "https://www.youtube.com/watch?v=ijxRwMmx8r4",
+        "has_content": true,
+        "content_len": 563
+      },
+      {
+        "title": "Lord Balaji Aarti",
+        "en_line": "Om Jai Hanumata Vira",
+        "hi_line": "ॐ जय हनुमत वीरा",
+        "en_url": "/lyrics/aarti/shri-balaji/shri-balaji-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-balaji/shri-balaji-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_hanuman.png.pagespeed.ic.joqilab8XC.png",
+        "alt_deity": "Lord Hanuman"
+      },
+      {
+        "title": "Shri Pavanasuta Hanuman Aarti",
+        "en_line": "Jayati Mangalagara, Sansara, Bharapahara",
+        "hi_line": "जयति मंगलागार, संसार, भारापहर",
+        "en_url": "/lyrics/aarti/lord-hanuman/shri-pavanasuta-hanuman-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-hanuman/shri-pavanasuta-hanuman-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_hanuman.png.pagespeed.ic.joqilab8XC.png",
+        "alt_deity": "Lord Hanuman"
+      }
+    ]
+  },
+  {
+    "category": "Krishna Aarti",
+    "count": 7,
+    "items": [
+      {
+        "title": "Shree Krishna Aarti",
+        "en_line": "Aarti Kunj Bihari Ki",
+        "hi_line": "आरती कुंजबिहारी की",
+        "en_url": "/lyrics/aarti/lord-krishna/kunj-bihari-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/kunj-bihari-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna",
+        "matched_id": "aarti-krishna-aarti-kunj-bihari-ki",
+        "matched_title": "आरती कुंजबिहारी की (श्री गिरिधर कृष्ण मुरारी की)",
+        "audio_url": "https://www.youtube.com/watch?v=8jcUitdjbVY",
+        "has_content": true,
+        "content_len": 338
+      },
+      {
+        "title": "Banke Bihari Aarti",
+        "en_line": "Shri Banke Bihari Teri Aarti Gau",
+        "hi_line": "श्री बाँकेबिहारी तेरी आरती गाऊँ",
+        "en_url": "/lyrics/aarti/lord-krishna/shri-banke-bihari-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/shri-banke-bihari-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna",
+        "matched_id": "aarti-krishna-banke-bihari-teri-aarti",
+        "matched_title": "श्री बांके बिहारी तेरी आरती गाऊं",
+        "audio_url": "https://www.youtube.com/watch?v=6LO2PRgbutc",
+        "has_content": true,
+        "content_len": 323
+      },
+      {
+        "title": "Lord Gopal Aarti",
+        "en_line": "Aarti Jugal Kishor Ki Kijai",
+        "hi_line": "आरती जुगल किशोर की कीजै",
+        "en_url": "/lyrics/aarti/lord-krishna/shri-gopala-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/shri-gopala-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna"
+      },
+      {
+        "title": "Lord Natavara Aarti",
+        "en_line": "Aarti Kije Shri Natavara Ji Ki",
+        "hi_line": "आरती कीजै श्रीनटवर जी की",
+        "en_url": "/lyrics/aarti/lord-krishna/lord-natavara-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/lord-natavara-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna"
+      },
+      {
+        "title": "Lord Krishna Kanhaiya Aarti",
+        "en_line": "Aarti Shri Krishna Kanhaiya Ki",
+        "hi_line": "आरती श्रीकृष्ण कन्हैया की",
+        "en_url": "/lyrics/aarti/lord-krishna/shri-krishna-kanhaiya-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/shri-krishna-kanhaiya-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna"
+      },
+      {
+        "title": "Lord Giridhari Aarti",
+        "en_line": "Jai Jai Giridhari Prabhu",
+        "hi_line": "जय जय गिरिधारी प्रभु",
+        "en_url": "/lyrics/aarti/lord-krishna/lord-giridhari-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/lord-giridhari-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna"
+      },
+      {
+        "title": "Shri Yashodalala Aarti",
+        "en_line": "Aarti Karata Yasoda Prabhudita",
+        "hi_line": "आरती करत यसोदा प्रभुदित",
+        "en_url": "/lyrics/aarti/lord-krishna/shri-yashodalala-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-krishna/shri-yashodalala-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_krishna.png.pagespeed.ce.p9thlOHqIl.png",
+        "alt_deity": "Lord Krishna"
+      }
+    ]
+  },
+  {
+    "category": "Rama Aarti",
+    "count": 6,
+    "items": [
+      {
+        "title": "Shree Rama Aarti",
+        "en_line": "Shri Rama Chandra Kripalu Bhajuman",
+        "hi_line": "श्री रामचन्द्र कृपालु भजु मन",
+        "en_url": "/lyrics/aarti/shree-rama/shree-rama-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-rama/shree-rama-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_rama.png.pagespeed.ic.3YWrewErFI.png",
+        "alt_deity": "Lord Rama"
+      },
+      {
+        "title": "Lord Raghuvar Aarti",
+        "en_line": "Aarti Kijai Shri Raghuvara Ji Ki",
+        "hi_line": "आरती कीजै श्री रघुवर जी की",
+        "en_url": "/lyrics/aarti/shree-rama/shri-raghuvar-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-rama/shri-raghuvar-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_rama.png.pagespeed.ic.3YWrewErFI.png",
+        "alt_deity": "Lord Rama",
+        "matched_id": "b7-aarti-ram-shri-raghuvar-ji-ki-aarti-b7",
+        "matched_title": "आरती कीजै श्री रघुवर जी की कौशल्या सुत दीनबंधु की",
+        "audio_url": "/audio/b7-aarti-ram-shri-raghuvar-ji-ki-aarti-b7.mp3",
+        "has_content": true,
+        "content_len": 183
+      },
+      {
+        "title": "Lord Rama Raghuvira Aarti",
+        "en_line": "Esi Aarti Rama Raghuvira Ki Karahi Mana",
+        "hi_line": "ऐसी आरती राम रघुबीर की करहि मन",
+        "en_url": "/lyrics/aarti/shree-rama/shri-rama-raghuvira-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-rama/shri-rama-raghuvira-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_rama.png.pagespeed.ic.3YWrewErFI.png",
+        "alt_deity": "Lord Rama"
+      },
+      {
+        "title": "Shri Sitarama Aarti",
+        "en_line": "Gao Gao Ri, Priyapritama Ki Aarti",
+        "hi_line": "गाओ गाओ री, प्रियाप्रीतम की आरती",
+        "en_url": "/lyrics/aarti/shree-rama/shri-sitarama-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-rama/shri-sitarama-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_rama.png.pagespeed.ic.3YWrewErFI.png",
+        "alt_deity": "Lord Rama"
+      },
+      {
+        "title": "Shri Janakinatha Aarti",
+        "en_line": "Jai Janakinatha, Jai Shri Raghunatha",
+        "hi_line": "जय जानकीनाथा, जय श्री रघुनाथा",
+        "en_url": "/lyrics/aarti/shree-rama/shri-janakinatha-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-rama/shri-janakinatha-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_rama.png.pagespeed.ic.3YWrewErFI.png",
+        "alt_deity": "Lord Rama"
+      },
+      {
+        "title": "Shri Rama Raghupati Ki Aarti",
+        "en_line": "Bandaun Raghupati Karuna Nidhana",
+        "hi_line": "बन्दौं रघुपति करुना निधान",
+        "en_url": "/lyrics/aarti/shree-rama/shri-rama-raghupati-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-rama/shri-rama-raghupati-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_rama.png.pagespeed.ic.3YWrewErFI.png",
+        "alt_deity": "Lord Rama"
+      }
+    ]
+  },
+  {
+    "category": "Shiva Aarti",
+    "count": 5,
+    "items": [
+      {
+        "title": "Lord Shiva Aarti",
+        "en_line": "Om Jai Shiv Omkara",
+        "hi_line": "ॐ जय शिव ओंकारा, स्वामी जय",
+        "en_url": "/lyrics/aarti/lord-shiva/shiva-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-shiva/shiva-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xnataraj.png.pagespeed.ic.Wg3iYciAp-.png",
+        "alt_deity": "Lord Shiva"
+      },
+      {
+        "title": "Mahadev Aarti",
+        "en_line": "Har Har Har Mahadev",
+        "hi_line": "हर हर हर महादेव",
+        "en_url": "/lyrics/aarti/lord-shiva/mahadev-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-shiva/mahadev-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xnataraj.png.pagespeed.ic.Wg3iYciAp-.png",
+        "alt_deity": "Lord Shiva"
+      },
+      {
+        "title": "Lord Shankara Aarti",
+        "en_line": "Jayati Jayati Jaga Nivasa",
+        "hi_line": "जयति जयति जग-निवास",
+        "en_url": "/lyrics/aarti/lord-shiva/lord-shankara-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-shiva/lord-shankara-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xnataraj.png.pagespeed.ic.Wg3iYciAp-.png",
+        "alt_deity": "Lord Shiva"
+      },
+      {
+        "title": "Lord Gangadhara Aarti",
+        "en_line": "Om Jai Gangadhara",
+        "hi_line": "ॐ जय गंगाधर",
+        "en_url": "/lyrics/aarti/lord-shiva/lord-gangadhara-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-shiva/lord-gangadhara-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xnataraj.png.pagespeed.ic.Wg3iYciAp-.png",
+        "alt_deity": "Lord Shiva"
+      },
+      {
+        "title": "Lord Kailasavasi Aarti",
+        "en_line": "Shisha Ganga Ardhanga Parvati",
+        "hi_line": "शीश गंग अर्धन्ग पार्वती",
+        "en_url": "/lyrics/aarti/lord-shiva/lord-kailasavasi-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-shiva/lord-kailasavasi-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xnataraj.png.pagespeed.ic.Wg3iYciAp-.png",
+        "alt_deity": "Lord Shiva"
+      }
+    ]
+  },
+  {
+    "category": "Narayana Aarti",
+    "count": 5,
+    "items": [
+      {
+        "title": "Lord Jagdish Aarti",
+        "en_line": "Om Jai Jagdish Hare",
+        "hi_line": "ॐ जय जगदीश हरे, स्वामी ! जय",
+        "en_url": "/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_vishnu.png.pagespeed.ic.tZfMry7uui.png",
+        "alt_deity": "Lord Vishnu",
+        "matched_id": "b3-aarti-vishnu-om-jai-jagdish-hare-sampoorna-pad-b3",
+        "matched_title": "ॐ जय जगदीश हरे स्वामी जय जगदीश हरे (वैदिक स्तुति सहित)",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 184
+      },
+      {
+        "title": "Shri Lakshminarayana Aarti",
+        "en_line": "Jai Lakshmi Vishno, Jai Lakshminarayana",
+        "hi_line": "जय लक्ष्मी-विष्णो, जय लक्ष्मीनारायण",
+        "en_url": "/lyrics/aarti/lord-narayan/shri-lakshminarayana-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-narayan/shri-lakshminarayana-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_vishnu.png.pagespeed.ic.tZfMry7uui.png",
+        "alt_deity": "Lord Vishnu"
+      },
+      {
+        "title": "Lord Badarinatha Aarti",
+        "en_line": "Jai Jai Shri Badarinatha",
+        "hi_line": "जय जय श्री बदरीनाथ",
+        "en_url": "/lyrics/aarti/lord-narayan/lord-badarinatha-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-narayan/lord-badarinatha-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_vishnu.png.pagespeed.ic.tZfMry7uui.png",
+        "alt_deity": "Lord Vishnu"
+      },
+      {
+        "title": "Lord Satyanarayana Aarti",
+        "en_line": "Jai Lakshmiramana",
+        "hi_line": "जय लक्ष्मीरमणा श्री जय लक्ष्मीरमणा",
+        "en_url": "/lyrics/aarti/lord-narayan/shree-satyanarayan-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-narayan/shree-satyanarayan-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xsatyanarayan_puja.png.pagespeed.ic.9WHZ7pXRvG.png",
+        "alt_deity": "Satyanarayana Puja"
+      },
+      {
+        "title": "Lord Purushottam Aarti",
+        "en_line": "Jai Purushottam Deva",
+        "hi_line": "जय पुरुषोत्तम देवा",
+        "en_url": "/lyrics/aarti/lord-purushottam/lord-purushottam-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-purushottam/lord-purushottam-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_vishnu.png.pagespeed.ic.tZfMry7uui.png",
+        "alt_deity": "Lord Vishnu"
+      }
+    ]
+  },
+  {
+    "category": "Gods Aarti",
+    "count": 15,
+    "items": [
+      {
+        "title": "Shri Ramayan Ji Aarti",
+        "en_line": "Aarti Shri Ramayan Ji Ki",
+        "hi_line": "आरती श्री रामायण जी की",
+        "en_url": "/lyrics/aarti/shree-ramayan/shree-ramayan-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shree-ramayan/shree-ramayan-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/ramayan.png.pagespeed.ce.bIeqvlev1g.png",
+        "alt_deity": "Ramayana",
+        "matched_id": "aarti-ram-aarti-shri-ramayan-ji-ki",
+        "matched_title": "आरती श्री रामायण जी की",
+        "audio_url": "assets/audio/katha_ramayana.mp3",
+        "has_content": true,
+        "content_len": 452
+      },
+      {
+        "title": "Lord Surya Aarti",
+        "en_line": "Jai Kashyap-Nandan",
+        "hi_line": "जय कश्यप-नन्दन, ॐ जय अदिति नन्दन",
+        "en_url": "/lyrics/aarti/lord-surya/surya-deva-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-surya/surya-deva-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/events/sankranti/makara/120x120/makar_sankranti_surya_dev.png.pagespeed.ce.OTzaOJFgcE.png",
+        "alt_deity": "Surya Deva",
+        "matched_id": "b3-aarti-surya-jai-kashyapa-nandana-aarti-b3",
+        "matched_title": "जय कश्यप नन्दन ॐ जय अदिति नन्दन (भगवान सूर्य नारायण आरती)",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 130
+      },
+      {
+        "title": "Lord Shanidev Aarti",
+        "en_line": "Jai Jai Shri Shanidev",
+        "hi_line": "जय जय श्री शनिदेव",
+        "en_url": "/lyrics/aarti/lord-shanidev/shri-shanidev-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-shanidev/shri-shanidev-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xshani_dev.png.pagespeed.ic.TiK5UXHBoh.png",
+        "alt_deity": "Shani Deva",
+        "matched_id": "aarti-shanidev-om-jai-jai-shri-shanidev",
+        "matched_title": "शनिदेव जी की आरती - ॐ जय जय श्री शनिदेव",
+        "audio_url": "https://www.youtube.com/watch?v=J6DkdmLTe7A",
+        "has_content": true,
+        "content_len": 269
+      },
+      {
+        "title": "Lord Narasimha Aarti",
+        "en_line": "Om Jai Narsingh Hare",
+        "hi_line": "ॐ जय नरसिंह हरे",
+        "en_url": "/lyrics/aarti/lord-narasimha/om-jai-narsingh-hare.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-narasimha/om-jai-narsingh-hare.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_narasimha.png.pagespeed.ic.wlfq8f3ezC.png",
+        "alt_deity": "Lord Narasimha"
+      },
+      {
+        "title": "Narsingh Kunwar Aarti",
+        "en_line": "Aarti Kijai Narsingh Kunwar Ki",
+        "hi_line": "आरती कीजै नरसिंह कुँवर की",
+        "en_url": "/lyrics/aarti/lord-narasimha/aarti-kijai-narsingh-kunwarki.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-narasimha/aarti-kijai-narsingh-kunwarki.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_narasimha.png.pagespeed.ic.wlfq8f3ezC.png",
+        "alt_deity": "Lord Narasimha"
+      },
+      {
+        "title": "Shri Govardhan Aarti",
+        "en_line": "Shri Govardhan Maharaj",
+        "hi_line": "श्री गोवर्धन महाराज, ओ महाराज",
+        "en_url": "/lyrics/aarti/shri-govardhan/shri-govardhan-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-govardhan/shri-govardhan-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/gods/dashavatara/lord-krishna/120x120/krishna_lifting_govardhan.png.pagespeed.ce.Vdj-TuNWgh.png",
+        "alt_deity": "Govardhan"
+      },
+      {
+        "title": "Lord Chitragupta Aarti",
+        "en_line": "Om Jai Chitragupta Hare",
+        "hi_line": "ॐ जय चित्रगुप्त हरे",
+        "en_url": "/lyrics/aarti/lord-chitragupta/lord-chitragupta-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-chitragupta/lord-chitragupta-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/gods/chitragupta/120x120/god_chitragupta.png.pagespeed.ce.W3ccbWktPx.png",
+        "alt_deity": "Lord Chitragupta"
+      },
+      {
+        "title": "Lord Kubera Aarti",
+        "en_line": "Om Jai Yaksha Kubera Hare",
+        "hi_line": "ॐ जै यक्ष कुबेर हरे",
+        "en_url": "/lyrics/aarti/lord-kubera/lord-kubera-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-kubera/lord-kubera-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_kubera.png.pagespeed.ic.mLEyxdDoFh.png",
+        "alt_deity": "Lord Kubera"
+      },
+      {
+        "title": "Lord Dhanvantari Aarti",
+        "en_line": "Jai Dhanvantari Deva",
+        "hi_line": "जय धन्वन्तरि देवा",
+        "en_url": "/lyrics/aarti/lord-dhanvantari/lord-dhanvantari-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-dhanvantari/lord-dhanvantari-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/festivals/60x60/xgod_dhanvantari.png.pagespeed.ic._974HyqO8B.png",
+        "alt_deity": "Lord Dhanvantari"
+      },
+      {
+        "title": "Lord Vishwakarma Aarti",
+        "en_line": "Shri Vishwakarma Ghara Avo",
+        "hi_line": "प्रभु श्री विश्वकर्मा घर आवो",
+        "en_url": "/lyrics/aarti/lord-vishwakarma/shri-vishwakarma-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-vishwakarma/shri-vishwakarma-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_vishwakarma.png.pagespeed.ic.sB4rUEBC4Y.jpg",
+        "alt_deity": "Lord Vishwakarma"
+      },
+      {
+        "title": "Lord Brahma Aarti",
+        "en_line": "Pitu Matu Sahayaka Swami Sakha",
+        "hi_line": "पितु मातु सहायक स्वामी सखा",
+        "en_url": "/lyrics/aarti/lord-brahma/shri-brahma-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-brahma/shri-brahma-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xlord_brahma.png.pagespeed.ic.lOfEcS11f1.jpg",
+        "alt_deity": "Lord Brahma"
+      },
+      {
+        "title": "Lord Bhairava Aarti",
+        "en_line": "Suno Ji Bhairava Ladile",
+        "hi_line": "सुनो जी भैरव लाड़िले",
+        "en_url": "/lyrics/aarti/lord-bhairava/shri-bhairava-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-bhairava/shri-bhairava-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_kalabhairav.png.pagespeed.ce.MRjvFCEJTY.png",
+        "alt_deity": "Lord Bhairava"
+      },
+      {
+        "title": "Lord Batuka Bhairava Aarti",
+        "en_line": "Jai Bhairava Deva Prabhu Jai",
+        "hi_line": "जय भैरव देवा प्रभु जय",
+        "en_url": "/lyrics/aarti/lord-bhairava/batuka-bhairava-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lord-bhairava/batuka-bhairava-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/lord_kalabhairav.png.pagespeed.ce.MRjvFCEJTY.png",
+        "alt_deity": "Lord Bhairava",
+        "matched_id": "b2-aarti-bhairav-jai-bhairav-deva",
+        "matched_title": "श्री भैरव बाबा की आरती (जय भैरव देवा, प्रभु जय भैरव देवा)",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 161
+      },
+      {
+        "title": "Lord Parashurama Aarti",
+        "en_line": "Om Jai Parashudhari",
+        "hi_line": "ॐ जय परशुधारी",
+        "en_url": "/lyrics/aarti/shri-parashurama/shri-parashurama-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-parashurama/shri-parashurama-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/xparashurama.png.pagespeed.ic.6usGefdssF.png",
+        "alt_deity": "Lord Parashurama"
+      },
+      {
+        "title": "Giriraj Aarti",
+        "en_line": "Om Jai Jai Jai Giriraj",
+        "hi_line": "ॐ जय जय जय गिरिराज",
+        "en_url": "/lyrics/aarti/shri-giriraj/shri-giriraj-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-giriraj/shri-giriraj-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/gods/dashavatara/lord-krishna/120x120/krishna_lifting_govardhan.png.pagespeed.ce.Vdj-TuNWgh.png",
+        "alt_deity": "Govardhan"
+      }
+    ]
+  },
+  {
+    "category": "Goddesses Aarti",
+    "count": 28,
+    "items": [
+      {
+        "title": "Ambe Mata Aarti",
+        "en_line": "Jai Ambe Gauri",
+        "hi_line": "जय अम्बे गौरी, मैया जय श्यामा गौरी",
+        "en_url": "/lyrics/aarti/ambe-mata/ambe-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/ambe-mata/ambe-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xmata_ambe.png.pagespeed.ic.X6wX8a1q3u.png",
+        "alt_deity": "Ambe Mata",
+        "matched_id": "aarti-durga-jai-ambe-gauri",
+        "matched_title": "जय अम्बे गौरी (मैया जय श्यामा गौरी)",
+        "audio_url": "https://www.youtube.com/watch?v=-rKAOaS7Q3I",
+        "has_content": true,
+        "content_len": 381
+      },
+      {
+        "title": "Lakshmi Mata Aarti",
+        "en_line": "Om Jai Lakshmi Mata",
+        "hi_line": "ॐ जय लक्ष्मी माता, मैया जय",
+        "en_url": "/lyrics/aarti/lakshmi-mata/lakshmi-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lakshmi-mata/lakshmi-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xgoddess_lakshmi.png.pagespeed.ic.P0aKGmGy88.png",
+        "alt_deity": "Goddess Lakshmi",
+        "matched_id": "b7-aarti-lakshmi-om-jai-lakshmi-mata-b7",
+        "matched_title": "ॐ जय लक्ष्मी माता मैया जय लक्ष्मी माता (दीपावली महाआरती)",
+        "audio_url": "/audio/b7-aarti-lakshmi-om-jai-lakshmi-mata-b7.mp3",
+        "has_content": true,
+        "content_len": 211
+      },
+      {
+        "title": "Santoshi Mata Aarti",
+        "en_line": "Jai Santoshi Mata",
+        "hi_line": "जय सन्तोषी माता, मैया जय",
+        "en_url": "/lyrics/aarti/santoshi-mata/santoshi-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/santoshi-mata/santoshi-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xsantoshi_mata.png.pagespeed.ic.wRUetWVhfx.png",
+        "alt_deity": "Santoshi Mata"
+      },
+      {
+        "title": "Saraswati Mata Aarti",
+        "en_line": "Jai Saraswati Mata",
+        "hi_line": "जय सरस्वती माता, मैया जय",
+        "en_url": "/lyrics/aarti/saraswati-mata/saraswati-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/saraswati-mata/saraswati-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xmata_saraswati.png.pagespeed.ic.ooHAaeD2up.png",
+        "alt_deity": "Saraswati Mata",
+        "matched_id": "b3-aarti-saraswati-om-jai-saraswati-mata-sampoorna-b3",
+        "matched_title": "ॐ जय सरस्वती माता मैया जय सरस्वती माता (बसंत पंचमी महाआरती)",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 192
+      },
+      {
+        "title": "Vaishno Mata Aarti",
+        "en_line": "Jai Vaishnavi Mata",
+        "hi_line": "जय वैष्णवी माता, मैया जय",
+        "en_url": "/lyrics/aarti/vaishno-mata/vaishno-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/vaishno-mata/vaishno-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xvaishno_devi.png.pagespeed.ic.cngSaVe6yb.png",
+        "alt_deity": "Vaishno Devi"
+      },
+      {
+        "title": "Ganga Mata Aarti",
+        "en_line": "Om Jai Gange Mata",
+        "hi_line": "ॐ जय गंगे माता, मैया जय गंगे माता",
+        "en_url": "/lyrics/aarti/ganga-mata/ganga-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/ganga-mata/ganga-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/maa_ganga.png.pagespeed.ce.DY5kxc5rjS.png",
+        "alt_deity": "Ganga Mata",
+        "matched_id": "b7-aarti-ganga-om-jai-gange-mata-b7",
+        "matched_title": "ॐ जय गंगे माता मैया जय गंगे माता (हरिद्वार ऋषिकेश आरती)",
+        "audio_url": "/audio/b7-aarti-ganga-om-jai-gange-mata-b7.mp3",
+        "has_content": true,
+        "content_len": 204
+      },
+      {
+        "title": "Ganga Mata Aarti",
+        "en_line": "Jai Jai Bhagirathanandini",
+        "hi_line": "जय जय भगीरथनन्दिनि",
+        "en_url": "/lyrics/aarti/ganga-mata/ganga-bhagiratha-nandini-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/ganga-mata/ganga-bhagiratha-nandini-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/maa_ganga.png.pagespeed.ce.DY5kxc5rjS.png",
+        "alt_deity": "Ganga Mata"
+      },
+      {
+        "title": "Durga Mata Aarti",
+        "en_line": "Ambe Tu Hai Jagdambe Kali",
+        "hi_line": "अम्बे तू है जगदम्बे काली",
+        "en_url": "/lyrics/aarti/durga-mata/durga-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/durga-mata/durga-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xmata_durga.png.pagespeed.ic.Evj54yd4JF.png",
+        "alt_deity": "Durga Mata",
+        "matched_id": "aarti-durga-ambe-tu-hai-jagadambe-kali",
+        "matched_title": "अम्बे तू है जगदम्बे काली जय दुर्गे खप्पर वाली",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 306
+      },
+      {
+        "title": "Ahoi Mata Aarti",
+        "en_line": "Jai Ahoi Mata, Jai Ahoi Mata",
+        "hi_line": "जय अहोई माता, जय अहोई माता",
+        "en_url": "/lyrics/aarti/ahoi-mata/ahoi-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/ahoi-mata/ahoi-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xahoi_mata.png.pagespeed.ic.YFZ4DxajPW.png",
+        "alt_deity": "Ahoi Mata"
+      },
+      {
+        "title": "Ekadashi Mata Aarti",
+        "en_line": "Om Jai Ekadashi, Jai Ekadashi",
+        "hi_line": "ॐ जय एकादशी, जय एकादशी",
+        "en_url": "/lyrics/aarti/ekadashi/ekadashi-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/ekadashi/ekadashi-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/goddess_ekadashi.png.pagespeed.ce.OfJqDukyiJ.png",
+        "alt_deity": "Goddess Ekadashi"
+      },
+      {
+        "title": "Parvati Mata Aarti",
+        "en_line": "Jai Parvati Mata Jai Parvati Mata",
+        "hi_line": "जय पार्वती माता जय पार्वती माता",
+        "en_url": "/lyrics/aarti/parvati-mata/parvati-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/parvati-mata/parvati-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xmata_parvati.png.pagespeed.ic.e7i7rartr1.png",
+        "alt_deity": "Parvati Mata"
+      },
+      {
+        "title": "Lalita Mata Aarti",
+        "en_line": "Shree Mateshwari Jai Tripureshwari",
+        "hi_line": "श्री मातेश्वरी जय त्रिपुरेश्वरी",
+        "en_url": "/lyrics/aarti/lalita-mata/lalita-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/lalita-mata/lalita-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/lalita_mata.png.pagespeed.ce.DpGn3iEldt.png",
+        "alt_deity": "Lalita Mata"
+      },
+      {
+        "title": "Tulasi Mata Aarti",
+        "en_line": "Jai Jai Tulasi Mata",
+        "hi_line": "जय जय तुलसी माता",
+        "en_url": "/lyrics/aarti/tulasi-mata/tulasi-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/tulasi-mata/tulasi-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xtulasi_mata.png.pagespeed.ic.z5XKxwnhzu.png",
+        "alt_deity": "Tulasi Mata"
+      },
+      {
+        "title": "Gayatri Mata Aarti",
+        "en_line": "Aarti Shri Gayatri Ji Ki",
+        "hi_line": "आरती श्री गायत्रीजी की",
+        "en_url": "/lyrics/aarti/gayatri-mata/gayatri-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/gayatri-mata/gayatri-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/mata_gayatri.png.pagespeed.ce.bVOjSy31GC.png",
+        "alt_deity": "Gayatri Mata"
+      },
+      {
+        "title": "Shitala Mata Aarti",
+        "en_line": "Jai Shitala Mata, Maiya Jai",
+        "hi_line": "जय शीतला माता, मैया जय",
+        "en_url": "/lyrics/aarti/shitala-mata/shitala-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shitala-mata/shitala-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xgoddess_shitala.png.pagespeed.ic.tpD2DM8-bt.png",
+        "alt_deity": "Goddess Shitala",
+        "matched_id": "b2-aarti-durga-sheetla-mata",
+        "matched_title": "मां शीतला की आरती (जय शीतला माता, मैया जय शीतला माता)",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 151
+      },
+      {
+        "title": "Gau Mata Aarti",
+        "en_line": "Aarti Shri Gaiya Maiya ki",
+        "hi_line": "आरती श्री गैय्या मैंय्या की",
+        "en_url": "/lyrics/aarti/gau-mata/gau-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/gau-mata/gau-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/events/diwali/govatsa-dwadashi/120x120/govatsa_dwadashi.png.pagespeed.ce.VNpDp8R2Ly.png",
+        "alt_deity": "Gau Mata Puja"
+      },
+      {
+        "title": "Vindhyeshwari Mata Aarti",
+        "en_line": "Suna Meri Devi Parvatavasini",
+        "hi_line": "सुन मेरी देवी पर्वतवासिनि",
+        "en_url": "/lyrics/aarti/vindhyeshwari-mata/vindhyeshwari-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/vindhyeshwari-mata/vindhyeshwari-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xmata_durga.png.pagespeed.ic.Evj54yd4JF.png",
+        "alt_deity": "Durga Mata"
+      },
+      {
+        "title": "Mahakali Mata Aarti",
+        "en_line": "Mangala Ki Seva Suna Meri Deva",
+        "hi_line": "मंगल की सेवा, सुन मेरी देवा",
+        "en_url": "/lyrics/aarti/kali-mata/mahakali-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/kali-mata/mahakali-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/goddess_kali.png.pagespeed.ce.pwmZCyHlm7.png",
+        "alt_deity": "Goddess Kali",
+        "matched_id": "aarti-durga-kali-mata",
+        "matched_title": "आरती मां काली की (मंगल की सेवा सुन मेरी देवा)",
+        "audio_url": "https://www.youtube.com/watch?v=dVTUUtOHUCA",
+        "has_content": true,
+        "content_len": 216
+      },
+      {
+        "title": "Radha Mata Aarti",
+        "en_line": "Aarti Shri Vrishbhanusuta Ki",
+        "hi_line": "आरती श्री वृषभानुसुता की",
+        "en_url": "/lyrics/aarti/shri-radha/shri-radha-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-radha/shri-radha-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xgoddess_radha.png.pagespeed.ic.1nd1QxWp8l.png",
+        "alt_deity": "Goddess Radha"
+      },
+      {
+        "title": "Devi Radha Aarti",
+        "en_line": "Aarti Shri Vrishbhanulali Ki",
+        "hi_line": "आरती श्री श्रीवृषभानुलली की",
+        "en_url": "/lyrics/aarti/shri-radha/devi-radhika-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-radha/devi-radhika-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xgoddess_radha.png.pagespeed.ic.1nd1QxWp8l.png",
+        "alt_deity": "Goddess Radha"
+      },
+      {
+        "title": "Annapurna Mata Aarti",
+        "en_line": "Jo Nahi Dhyave Tumhe Ambike",
+        "hi_line": "जो नहीं ध्यावे तुम्हें अम्बिके",
+        "en_url": "/lyrics/aarti/annapurna-mata/annapurna-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/annapurna-mata/annapurna-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/goddess_annapurna.png.pagespeed.ce.LVINFNLEYk.png",
+        "alt_deity": "Annapurna Mata"
+      },
+      {
+        "title": "Bagalamukhi Mata Aarti",
+        "en_line": "Jai Jai Shri Bagalamukhi Mata",
+        "hi_line": "जय जय श्री बगलामुखी माता",
+        "en_url": "/lyrics/aarti/bagalamukhi-mata/bagalamukhi-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/bagalamukhi-mata/bagalamukhi-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/festivals/60x60/goddess_bagalamukhi.png.pagespeed.ce.b7LZiv88eh.png",
+        "alt_deity": "Bagalamukhi Mata"
+      },
+      {
+        "title": "Narmada Mata Aarti",
+        "en_line": "Om Jai Jagadanandi",
+        "hi_line": "ॐ जय जगदानन्दी",
+        "en_url": "/lyrics/aarti/narmada-mata/narmada-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/narmada-mata/narmada-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/goddess_narmada.png.pagespeed.ce.6fHh9GM6Es.png",
+        "alt_deity": "Narmada Mata"
+      },
+      {
+        "title": "Shakambhari Mata Aarti",
+        "en_line": "Hari Om Shri Shakambhar Amba Ji Ki",
+        "hi_line": "हरि ॐ श्री शाकम्भर अम्बा जी की",
+        "en_url": "/lyrics/aarti/shakambhari-mata/shakambhari-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shakambhari-mata/shakambhari-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xgoddess_shakambari.png.pagespeed.ic.QH_tq8dy23.png",
+        "alt_deity": "Shakambhari Mata"
+      },
+      {
+        "title": "Sharda Mata Aarti",
+        "en_line": "Maiya Sharda Tore Darvara",
+        "hi_line": "मैया शारदा तोरे दरबार",
+        "en_url": "/lyrics/aarti/sharda-mata/sharda-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/sharda-mata/sharda-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/goddess_sharda.png.pagespeed.ce.-MKijmknqj.png",
+        "alt_deity": "Sharda Mata"
+      },
+      {
+        "title": "Janaki Mata Aarti",
+        "en_line": "Aarti Kije Shri Janaka Lali Ki",
+        "hi_line": "आरती कीजै श्रीजनक लली की",
+        "en_url": "/lyrics/aarti/sita-mata/janaki-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/sita-mata/janaki-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/events/sita-navami/120x120/sita_navami.png.pagespeed.ce.2Q2tF9SOR3.png",
+        "alt_deity": "Goddess Sita"
+      },
+      {
+        "title": "Sita Mata Aarti",
+        "en_line": "Aarti Shri Janaka Dulari Ki",
+        "hi_line": "आरती श्री जनक दुलारी की",
+        "en_url": "/lyrics/aarti/sita-mata/sita-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/sita-mata/sita-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/events/sita-navami/120x120/sita_navami.png.pagespeed.ce.2Q2tF9SOR3.png",
+        "alt_deity": "Goddess Sita"
+      },
+      {
+        "title": "Yamuna Mata Aarti",
+        "en_line": "Om Jai Yamuna Mata",
+        "hi_line": "ॐ जय यमुना माता",
+        "en_url": "/lyrics/aarti/yamuna-mata/yamuna-mata-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/yamuna-mata/yamuna-mata-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/goddesses/yamuna/120x120/goddess_yamuna.png.pagespeed.ce.aSyXvr35cV.png",
+        "alt_deity": "Yamuna Mata",
+        "matched_id": "b7-aarti-yamuna-om-jai-yamuna-mata-b7",
+        "matched_title": "ॐ जय यमुना माता मैया जय यमुना माता (विश्राम घाट आरती)",
+        "audio_url": "/audio/b7-aarti-yamuna-om-jai-yamuna-mata-b7.mp3",
+        "has_content": true,
+        "content_len": 161
+      }
+    ]
+  },
+  {
+    "category": "Navdurga Aarti",
+    "count": 1,
+    "items": [
+      {
+        "title": "Navdurga Aarti Collection",
+        "en_line": "Navdurga Aartis",
+        "hi_line": "नवदुर्गा आरतियाँ",
+        "en_url": "/lyrics/aarti/navdurga/navdurga-aarti-collection.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/navdurga/navdurga-aarti-collection.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/goddesses/xnavdurga.png.pagespeed.ic.dKLQ4UwVsp.png",
+        "alt_deity": "Navdurga"
+      }
+    ]
+  },
+  {
+    "category": "Sants Aarti",
+    "count": 10,
+    "items": [
+      {
+        "title": "Shyam Baba Aarti",
+        "en_line": "Om Jai Shri Shyam Hare",
+        "hi_line": "ॐ जय श्री श्याम हरे, बाबा जय",
+        "en_url": "/lyrics/aarti/shyam-baba/shyam-baba-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shyam-baba/shyam-baba-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/gods/shyam_baba.png.pagespeed.ce.9RH0pdo3b9.png",
+        "alt_deity": "Shyam Baba",
+        "matched_id": "b6-aarti-khatushyam-om-jai-shri-shyam-hare-b6",
+        "matched_title": "ॐ जय श्री श्याम हरे बाबा जय श्री श्याम हरे (खाटू आरती)",
+        "audio_url": "",
+        "has_content": true,
+        "content_len": 175
+      },
+      {
+        "title": "Ramdev Aarti",
+        "en_line": "Om Jai Shri Ramade Swami",
+        "hi_line": "ॐ जय श्री रामादे स्वामी",
+        "en_url": "/lyrics/aarti/shri-ramdev/shri-ramdev-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-ramdev/shri-ramdev-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xramdev_baba.png.pagespeed.ic.5X3J9vg95Z.jpg",
+        "alt_deity": "Shri Ramdev"
+      },
+      {
+        "title": "Sai Baba Aarti",
+        "en_line": "Aarti Shri Sai Guruvara Ki",
+        "hi_line": "आरती श्री साईं गुरुवर की",
+        "en_url": "/lyrics/aarti/sai-baba/sai-baba-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/sai-baba/sai-baba-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xsai_baba.png.pagespeed.ic.Yzr57_TRm8.png",
+        "alt_deity": "Sai Baba",
+        "matched_id": "aarti-guru_sant-sai-baba-aarti",
+        "matched_title": "आरती श्री साईं गुरुवर की (शिर्डी साईं आरती)",
+        "audio_url": "https://www.youtube.com/watch?v=TVuR7zhjsaA",
+        "has_content": true,
+        "content_len": 219
+      },
+      {
+        "title": "Mahavir Aarti",
+        "en_line": "Om Jai Mahavir Prabhu",
+        "hi_line": "ॐ जय महावीर प्रभो",
+        "en_url": "/lyrics/aarti/shri-mahavir/shri-mahavir-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-mahavir/shri-mahavir-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/saints/mahavir/120x120/lord_mahavira_meditating_under_tree.png.pagespeed.ce.G39VchWpJu.png",
+        "alt_deity": "Shri Mahavir"
+      },
+      {
+        "title": "Ravidas Aarti",
+        "en_line": "Namu Tero Aarti Bhajanu Murare",
+        "hi_line": "नामु तेरो आरती भजनु मुरारे",
+        "en_url": "/lyrics/aarti/shri-ravidas/shri-ravidas-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-ravidas/shri-ravidas-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/guru_ravidas.png.pagespeed.ce.SVH2FRzaJL.png",
+        "alt_deity": "Shri Ravidas"
+      },
+      {
+        "title": "Baba Gangaram Aarti",
+        "en_line": "Jai Ho Gangaram Baba",
+        "hi_line": "जय हो गंगाराम बाबा",
+        "en_url": "/lyrics/aarti/baba-gangaram/baba-gangaram-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/baba-gangaram/baba-gangaram-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xbaba_gangaram.png.pagespeed.ic.q6h9x15EbG.png",
+        "alt_deity": "Baba Gangaram"
+      },
+      {
+        "title": "Pretaraj Aarti",
+        "en_line": "Aarti Pretaraj Ki Kijai",
+        "hi_line": "आरती प्रेतराज की कीजै",
+        "en_url": "/lyrics/aarti/shri-pretraj/shri-pretraj-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-pretraj/shri-pretraj-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xpretraj_sarkar.png.pagespeed.ic.OlPjAA-XSd.jpg",
+        "alt_deity": "Shri Pretraj"
+      },
+      {
+        "title": "Gorakha Nath Aarti",
+        "en_line": "Jai Gorakha Deva Jai",
+        "hi_line": "जय गोरख देवा जय",
+        "en_url": "/lyrics/aarti/shri-gorakha/shri-gorakha-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-gorakha/shri-gorakha-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xguru_gorakha_natha.png.pagespeed.ic.Q0DIYFXJvu.png",
+        "alt_deity": "Shri Gorakha Natha"
+      },
+      {
+        "title": "Jaharveer Aarti",
+        "en_line": "Jai Jai Jaharveera Hare",
+        "hi_line": "जय जय जाहरवीर हरे",
+        "en_url": "/lyrics/aarti/shri-jaharveer/shri-jaharveer-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-jaharveer/shri-jaharveer-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xbaba_jaharveer.png.pagespeed.ic.CMOFvlCOmX.png",
+        "alt_deity": "Shri Jaharveer"
+      },
+      {
+        "title": "Rani Sati Aarti",
+        "en_line": "Jai Shri Rani Sati Maiya",
+        "hi_line": "जय श्री रानी सती मैया",
+        "en_url": "/lyrics/aarti/rani-sati/shri-rani-sati-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/rani-sati/shri-rani-sati-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/saints/xdevi_rani_sati.png.pagespeed.ic.mPwzJfv7Fo.jpg",
+        "alt_deity": "Rani Sati"
+      }
+    ]
+  },
+  {
+    "category": "Weekday Aartis",
+    "count": 1,
+    "items": [
+      {
+        "title": "Weekday Aarti Collection",
+        "en_line": "Weekdays Aartis",
+        "hi_line": "सप्तवार आरतियाँ",
+        "en_url": "/lyrics/aarti/weekdays/weekdays-aarti-collection.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/weekdays/weekdays-aarti-collection.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/weekdays/xweekdays.png.pagespeed.ic.bsiAoDfkM7.png",
+        "alt_deity": "Weekdays"
+      }
+    ]
+  },
+  {
+    "category": "Other Aarti",
+    "count": 2,
+    "items": [
+      {
+        "title": "Shri Bhagavad Gita Aarti",
+        "en_line": "Jai Bhagavad Gite",
+        "hi_line": "जय भगवद् गीते",
+        "en_url": "/lyrics/aarti/bhagavad-gita/bhagavad-gita-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/bhagavad-gita/bhagavad-gita-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/festivals/120x120/xgita_jayanti.png.pagespeed.ic.mfs6KB2CFL.png",
+        "alt_deity": "Bhagavad Gita"
+      },
+      {
+        "title": "Pitar Aarti",
+        "en_line": "Jai Jai Pitarji Maharaja",
+        "hi_line": "जय जय पितरजी महाराज",
+        "en_url": "/lyrics/aarti/shri-pitar/shri-pitar-aarti.html?lang=en&ck=1",
+        "hi_url": "/lyrics/aarti/shri-pitar/shri-pitar-aarti.html?lang=hi&ck=1",
+        "img_src": "/images/lyrics/others/xpitru_paksha.png.pagespeed.ic.CEU9FqbUgr.png",
+        "alt_deity": "Shri Pitar"
+      }
+    ]
+  }
+]

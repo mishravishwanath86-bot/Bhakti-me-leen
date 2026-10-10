@@ -1,0 +1,719 @@
+{
+  "ekadashi": [
+    {
+      "month": "Jan",
+      "day": "14",
+      "weekday": "Wed",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jan",
+      "day": "29",
+      "weekday": "Thu",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "13",
+      "weekday": "Fri",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "27",
+      "weekday": "Fri",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "15",
+      "weekday": "Sun",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "29",
+      "weekday": "Sun",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "13",
+      "weekday": "Mon",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "27",
+      "weekday": "Mon",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "13",
+      "weekday": "Wed",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "27",
+      "weekday": "Wed",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "11",
+      "weekday": "Thu",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "25",
+      "weekday": "Thu",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "10",
+      "weekday": "Fri",
+      "name": "Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "11",
+      "weekday": "Sat",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "25",
+      "weekday": "Sat",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "9",
+      "weekday": "Sun",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "23",
+      "weekday": "Sun",
+      "name": "Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "24",
+      "weekday": "Mon",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "7",
+      "weekday": "Mon",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "22",
+      "weekday": "Tue",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "6",
+      "weekday": "Tue",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "22",
+      "weekday": "Thu",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "5",
+      "weekday": "Thu",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "20",
+      "weekday": "Fri",
+      "name": "Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "21",
+      "weekday": "Sat",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "4",
+      "weekday": "Fri",
+      "name": "Ekadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "20",
+      "weekday": "Sun",
+      "name": "Ekadashi",
+      "tithi": "..."
+    }
+  ],
+  "pradosham": [
+    {
+      "month": "Jan",
+      "day": "1",
+      "weekday": "Thu",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jan",
+      "day": "16",
+      "weekday": "Fri",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jan",
+      "day": "30",
+      "weekday": "Fri",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "14",
+      "weekday": "Sat",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "1",
+      "weekday": "Sun",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "16",
+      "weekday": "Mon",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "30",
+      "weekday": "Mon",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "15",
+      "weekday": "Wed",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "28",
+      "weekday": "Tue",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "14",
+      "weekday": "Thu",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "28",
+      "weekday": "Thu",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "12",
+      "weekday": "Fri",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "27",
+      "weekday": "Sat",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "12",
+      "weekday": "Sun",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "26",
+      "weekday": "Sun",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "10",
+      "weekday": "Mon",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "25",
+      "weekday": "Tue",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "8",
+      "weekday": "Tue",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "24",
+      "weekday": "Thu",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "8",
+      "weekday": "Thu",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "23",
+      "weekday": "Fri",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "6",
+      "weekday": "Fri",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "22",
+      "weekday": "Sun",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "6",
+      "weekday": "Sun",
+      "name": "Trayodashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "21",
+      "weekday": "Mon",
+      "name": "Trayodashi",
+      "tithi": "..."
+    }
+  ],
+  "vinayaka-chaturthi": [
+    {
+      "month": "Jan",
+      "day": "22",
+      "weekday": "Thu",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "21",
+      "weekday": "Sat",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "22",
+      "weekday": "Sun",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "20",
+      "weekday": "Mon",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "20",
+      "weekday": "Wed",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "18",
+      "weekday": "Thu",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "17",
+      "weekday": "Fri",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "16",
+      "weekday": "Sun",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "14",
+      "weekday": "Mon",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "14",
+      "weekday": "Wed",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "13",
+      "weekday": "Fri",
+      "name": "Chaturthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "13",
+      "weekday": "Sun",
+      "name": "Chaturthi",
+      "tithi": "..."
+    }
+  ],
+  "dwadashi": [
+    {
+      "month": "Jan",
+      "day": "15",
+      "weekday": "Thu",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jan",
+      "day": "29",
+      "weekday": "Thu",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "13",
+      "weekday": "Fri",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "28",
+      "weekday": "Sat",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "15",
+      "weekday": "Sun",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "29",
+      "weekday": "Sun",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "14",
+      "weekday": "Tue",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "28",
+      "weekday": "Tue",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "13",
+      "weekday": "Wed",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "27",
+      "weekday": "Wed",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "12",
+      "weekday": "Fri",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "26",
+      "weekday": "Fri",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "11",
+      "weekday": "Sat",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "25",
+      "weekday": "Sat",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "9",
+      "weekday": "Sun",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "24",
+      "weekday": "Mon",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "7",
+      "weekday": "Mon",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "8",
+      "weekday": "Tue",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "22",
+      "weekday": "Tue",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "7",
+      "weekday": "Wed",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "22",
+      "weekday": "Thu",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "5",
+      "weekday": "Thu",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "21",
+      "weekday": "Sat",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "5",
+      "weekday": "Sat",
+      "name": "Dwadashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "21",
+      "weekday": "Mon",
+      "name": "Dwadashi",
+      "tithi": "..."
+    }
+  ],
+  "masik-shivaratri": [
+    {
+      "month": "Jan",
+      "day": "16",
+      "weekday": "Fri",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "15",
+      "weekday": "Sun",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "17",
+      "weekday": "Tue",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "15",
+      "weekday": "Wed",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "15",
+      "weekday": "Fri",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "13",
+      "weekday": "Sat",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "12",
+      "weekday": "Sun",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "11",
+      "weekday": "Tue",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "9",
+      "weekday": "Wed",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "8",
+      "weekday": "Thu",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "7",
+      "weekday": "Sat",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "7",
+      "weekday": "Mon",
+      "name": "Chaturdashi",
+      "tithi": "..."
+    }
+  ]
+}

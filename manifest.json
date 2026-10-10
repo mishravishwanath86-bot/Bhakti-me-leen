@@ -1,0 +1,23 @@
+{
+  "name": "Bhakti – Daily Devotional App",
+  "short_name": "Bhakti",
+  "description": "भक्ति के दैनिक श्लोक, मंत्र और गीत।",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f9f9f9",
+  "theme_color": "#3366ff",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

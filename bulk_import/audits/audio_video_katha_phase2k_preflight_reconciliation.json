@@ -1,0 +1,238 @@
+{
+  "phase": "Phase 2K-Preflight - Katha Dataset Reconciliation",
+  "mode": "STRICT READ-ONLY",
+  "database": "db/bhakti.db",
+  "timestamp": "2026-08-31T09:02:44.153186",
+  "reconciliation_summary": {
+    "phase2i_apparent_katha_sum": 551,
+    "phase2j_actual_katha_count": 505,
+    "arithmetic_difference": 46,
+    "explanation": "The number 551 was a naive sum of Audio (90) + Video (27) + Both (23) + Neither (411). Because 23 records have BOTH audio and video, they were counted 3 times in the naive sum (once in Audio, once in Video, once in Both), creating an exact arithmetic double-count of 2 * 23 = 46. The actual distinct Katha count in SQLite is exactly 505."
+  },
+  "katha_media_breakdown": {
+    "total_katha_records": 505,
+    "katha_with_audio": 90,
+    "katha_with_video": 27,
+    "katha_with_both": 23,
+    "katha_with_neither": 411,
+    "audio_only": 67,
+    "video_only": 4
+  },
+  "medialess_411_reconciliation": {
+    "db_medialess_count": 411,
+    "csv_medialess_count": 411,
+    "intersection": 411,
+    "only_in_db": 0,
+    "only_in_csv": 0,
+    "reconciled": true
+  },
+  "batch_validations": {
+    "top_50_valid": "50 / 50",
+    "secondary_50_valid": "50 / 50",
+    "top_secondary_overlap": 0,
+    "duplicate_ids_in_csv": 0
+  },
+  "records_with_both_media_23": [
+    {
+      "record_id": "katha-krishna-govardhan-dharan-leela",
+      "title": "इंद्र दर्प दलन एवं श्री गोवर्धन धारण लीला",
+      "audio_url": "https://www.youtube.com/watch?v=ZXhNB0jriT0",
+      "video_url": "https://www.youtube.com/watch?v=jW86VFuSWsA",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-krishna-sudama-charitra",
+      "title": "सच्चे मित्र का सम्मान: सुदामा चरित्र प्रसंग",
+      "audio_url": "https://www.youtube.com/watch?v=rYnXsVOfG_A",
+      "video_url": "https://www.youtube.com/watch?v=wt2oI054Egg",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-hanuman-sanjeevani-booti-prasang",
+      "title": "द्रोणागिरि पर्वत एवं संजीवनी बूटी प्रसंग",
+      "audio_url": "https://www.youtube.com/watch?v=RAGL8Yi0fgg",
+      "video_url": "https://www.youtube.com/watch?v=j1LPAzOI4UU",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-khatushyam-barbareek-sheesh-daan",
+      "title": "महाबली बर्बरीक का शीश दान एवं श्याम रूप प्राप्ति कथा",
+      "audio_url": "https://www.youtube.com/watch?v=uRRoe12Wf04",
+      "video_url": "https://www.youtube.com/watch?v=POXXHjbMB10",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-dashavatara-matsya",
+      "title": "मत्स्य अवतार: प्रलय से वेदों व सप्तऋषियों की रक्षा",
+      "audio_url": "https://www.youtube.com/watch?v=jG4WPko_laM",
+      "video_url": "https://www.youtube.com/watch?v=r633N12mJxQ",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-dashavatara-kurma",
+      "title": "कूर्म (कच्छप) अवतार एवं समुद्र मंथन",
+      "audio_url": "https://www.youtube.com/watch?v=dJ2mzB3ADhI",
+      "video_url": "https://www.youtube.com/watch?v=hTVdwjK1YQw",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-dashavatara-narasimha",
+      "title": "नृसिंह अवतार: हिरण्यकश्यप वध एवं प्रह्लाद रक्षा",
+      "audio_url": "https://www.youtube.com/watch?v=P1dBpgjEnz4",
+      "video_url": "https://www.youtube.com/watch?v=GE_okUlJ2AA",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-dashavatara-kalki",
+      "title": "कल्कि अवतार: कलयुग के अंत में अधर्म का नाश",
+      "audio_url": "https://www.youtube.com/watch?v=n6oU7-PcwRQ",
+      "video_url": "https://www.youtube.com/watch?v=18HbayqQ84A",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-purana-shiva",
+      "title": "शिव पुराण सार: सदाशिव स्वरूप व 12 ज्योतिर्लिंग",
+      "audio_url": "https://www.youtube.com/watch?v=M9innkB3CdQ",
+      "video_url": "https://www.youtube.com/watch?v=CkEOQe1igag",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-purana-garuda",
+      "title": "गरुड़ पुराण सार: मृत्यु उपरांत जीव की गति व मोक्ष",
+      "audio_url": "https://www.youtube.com/watch?v=OLj0s8Amxmw",
+      "video_url": "https://www.youtube.com/watch?v=nXSQzScMf_s",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-pauranik-samudra-manthan-14-ratna",
+      "title": "समुद्र मंथन से निकले 14 दिव्य रत्नों का आध्यात्मिक रहस्य",
+      "audio_url": "https://www.youtube.com/watch?v=iqjT3lulmbo",
+      "video_url": "https://www.youtube.com/watch?v=vm3jN4FtzdM",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-pauranik-bhagirath-gangavataran",
+      "title": "महाराज भगीरथ की घोर तपस्या एवं गंगावतरण कथा",
+      "audio_url": "https://www.youtube.com/watch?v=t0BlmTjIcdQ",
+      "video_url": "https://www.youtube.com/watch?v=Je5w8zn4BE8",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "katha-pauranik-markandeya-shiva-kripa",
+      "title": "महर्षि मार्कण्डेय शिव कृपा: यमराज पर महामृत्युंजय की विजय",
+      "audio_url": "https://www.youtube.com/watch?v=Fp4NyEXQN0U",
+      "video_url": "https://www.youtube.com/watch?v=98VX9VbXzhk",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "title": "केवट संवाद कथा: प्रभु श्री राम के चरण पखारना और उतराई में भक्ति दान (10)",
+      "audio_url": "https://www.youtube.com/watch?v=1M8L4v7K2Ns",
+      "video_url": "https://www.youtube.com/watch?v=9L2M4v7K3Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "title": "गोवर्धन लीला: कनिष्ठिका उंगली पर गिरिराज उठाना और इंद्र का मानमर्दन (10)",
+      "audio_url": "https://www.youtube.com/watch?v=8M2K9v4L7Ns",
+      "video_url": "https://www.youtube.com/watch?v=3K9L7v2M4Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "title": "श्री रामचरितमानस केवट प्रेम एवं नौका प्रसंग कथा (केवट संवाद 11)",
+      "audio_url": "https://www.youtube.com/watch?v=4L7M2v9K1Ns",
+      "video_url": "https://www.youtube.com/watch?v=7N2L4v9K8Ms",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य मित्रता कथा (सुदामा मिलन 11)",
+      "audio_url": "https://www.youtube.com/watch?v=5V2M8k4L9Ns",
+      "video_url": "https://www.youtube.com/watch?v=7N4L2v9M3Ks",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "title": "श्री रामचरितमानस शबरी नवधा भक्ति प्रसंग (शबरी भक्ति 12)",
+      "audio_url": "https://www.youtube.com/watch?v=3N8L4v2K9Ms",
+      "video_url": "https://www.youtube.com/watch?v=5L9M2k7V4Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (गोवर्धन कथा 12)",
+      "audio_url": "https://www.youtube.com/watch?v=2K9M4v7L1Ns",
+      "video_url": "https://www.youtube.com/watch?v=9M3L7v2K4Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "title": "श्री रामचरितमानस केवट संवाद एवं चरणामृत प्रसंग (केवट प्रसंग 13)",
+      "audio_url": "https://www.youtube.com/watch?v=6L2M9v4K7Ns",
+      "video_url": "https://www.youtube.com/watch?v=8N4L2v7K1Ms",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "title": "श्रीमद्भागवत सुदामा चरित्र अनन्य सखा भाव (सुदामा चरित्र 13)",
+      "audio_url": "https://www.youtube.com/watch?v=1K7M9v2L4Ns",
+      "video_url": "https://www.youtube.com/watch?v=4M2L8v9K7Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "title": "श्री रामचरितमानस भरत मिलाप एवं पादुका प्रसंग (चतुर्दश भरत मिलाप 14)",
+      "audio_url": "https://www.youtube.com/watch?v=2K8M4v9L1Ns",
+      "video_url": "https://www.youtube.com/watch?v=4L2M9v7K1Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    },
+    {
+      "record_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (चतुर्दश गोवर्धन 14)",
+      "audio_url": "https://www.youtube.com/watch?v=8L3M7v2K9Ns",
+      "video_url": "https://www.youtube.com/watch?v=6M9L2v4K8Ns",
+      "explanation": "Record has both audio_url and video_url populated. In naive arithmetic summation (Audio + Video + Both + Neither), this record was counted 3 times (+2 excess)."
+    }
+  ],
+  "potential_priority_review_sample": [
+    {
+      "record_id": "b6-katha-ram-valmiki-pratham-shloka-maa-nishada-b6",
+      "title": "महर्षि वाल्मीकि का प्रथम श्लोक: क्रौंच वध से रामायण काव्य का जन्म",
+      "current_rank": 51,
+      "reason_for_concern": "Scriptural title contains major Purana/Epic keyword; currently queued in Secondary or Backlog."
+    },
+    {
+      "record_id": "b15-katha-shrimad-bhagavata-kalia-daman-leela-b15",
+      "title": "श्रीमद्भागवत कालिय दमन एवं यमुना शुद्धि लीला (पंचदश कालिय दमन 15)",
+      "current_rank": 79,
+      "reason_for_concern": "Scriptural title contains major Purana/Epic keyword; currently queued in Secondary or Backlog."
+    },
+    {
+      "record_id": "b2-katha-krishna-shanti-doot-mahabharata",
+      "title": "महाभारत शांति दूत: दुर्योधन को चेतावनी व विराट रूप",
+      "current_rank": 80,
+      "reason_for_concern": "Scriptural title contains major Purana/Epic keyword; currently queued in Secondary or Backlog."
+    },
+    {
+      "record_id": "b4-katha-krishna-gajendra-moksha-bhagavata",
+      "title": "गजेंद्र मोक्ष कथा (श्रीमद्भागवत अष्टम स्कंध)",
+      "current_rank": 82,
+      "reason_for_concern": "Scriptural title contains major Purana/Epic keyword; currently queued in Secondary or Backlog."
+    },
+    {
+      "record_id": "b4-katha-khatushyam-barbareek-mahabharat-sheesh-daan",
+      "title": "महाभारत युद्ध, बर्बरीक का शीश दान एवं श्याम नाम वरदान",
+      "current_rank": 97,
+      "reason_for_concern": "Scriptural title contains major Purana/Epic keyword; currently queued in Secondary or Backlog."
+    }
+  ],
+  "database_integrity": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "database_writes": 0
+  },
+  "final_gate": "READY FOR MEDIA DISCOVERY"
+}

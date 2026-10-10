@@ -1,0 +1,1867 @@
+{
+  "2026-8": {
+    "month": 8,
+    "year": 2026,
+    "hindi_month": "अगस्त",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "शुक्रवार",
+        "sunrise": "05:34",
+        "sunset": "19:20",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "मघा"
+      },
+      {
+        "day": 2,
+        "weekday": "शनिवार",
+        "sunrise": "05:35",
+        "sunset": "19:20",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 3,
+        "weekday": "रविवार",
+        "sunrise": "05:35",
+        "sunset": "19:19",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 4,
+        "weekday": "सोमवार",
+        "sunrise": "05:36",
+        "sunset": "19:19",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 5,
+        "weekday": "मंगलवार",
+        "sunrise": "05:36",
+        "sunset": "19:19",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 6,
+        "weekday": "बुधवार",
+        "sunrise": "05:37",
+        "sunset": "19:18",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 7,
+        "weekday": "गुरुवार",
+        "sunrise": "05:37",
+        "sunset": "19:18",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "विशाखा"
+      },
+      {
+        "day": 8,
+        "weekday": "शुक्रवार",
+        "sunrise": "05:38",
+        "sunset": "19:17",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 9,
+        "weekday": "शनिवार",
+        "sunrise": "05:38",
+        "sunset": "19:17",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 10,
+        "weekday": "रविवार",
+        "sunrise": "05:39",
+        "sunset": "19:16",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 11,
+        "weekday": "सोमवार",
+        "sunrise": "05:40",
+        "sunset": "19:15",
+        "tithi": "त्रयोदशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 12,
+        "weekday": "मंगलवार",
+        "sunrise": "05:40",
+        "sunset": "19:15",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 13,
+        "weekday": "बुधवार",
+        "sunrise": "05:41",
+        "sunset": "19:14",
+        "tithi": "पूर्णिमा",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 14,
+        "weekday": "गुरुवार",
+        "sunrise": "05:41",
+        "sunset": "19:14",
+        "tithi": "प्रतिपदा",
+        "paksha": "कृष्ण",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 15,
+        "weekday": "शुक्रवार",
+        "sunrise": "05:42",
+        "sunset": "19:13",
+        "tithi": "द्वितीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 16,
+        "weekday": "गुरुवार",
+        "sunrise": "05:34",
+        "sunset": "19:21",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 17,
+        "weekday": "रविवार",
+        "sunrise": "05:43",
+        "sunset": "19:11",
+        "tithi": "चतुर्थी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 18,
+        "weekday": "सोमवार",
+        "sunrise": "05:44",
+        "sunset": "19:11",
+        "tithi": "पंचमी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 19,
+        "weekday": "मंगलवार",
+        "sunrise": "05:44",
+        "sunset": "19:10",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 20,
+        "weekday": "बुधवार",
+        "sunrise": "05:45",
+        "sunset": "19:09",
+        "tithi": "सप्तमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 21,
+        "weekday": "गुरुवार",
+        "sunrise": "05:45",
+        "sunset": "19:08",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "भरणी"
+      },
+      {
+        "day": 22,
+        "weekday": "शुक्रवार",
+        "sunrise": "05:46",
+        "sunset": "19:08",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "कृत्तिका"
+      },
+      {
+        "day": 23,
+        "weekday": "शनिवार",
+        "sunrise": "05:46",
+        "sunset": "19:07",
+        "tithi": "दशमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "रोहिणी"
+      },
+      {
+        "day": 24,
+        "weekday": "रविवार",
+        "sunrise": "05:47",
+        "sunset": "19:06",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "मृगशिरा"
+      },
+      {
+        "day": 25,
+        "weekday": "सोमवार",
+        "sunrise": "05:47",
+        "sunset": "19:05",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 26,
+        "weekday": "मंगलवार",
+        "sunrise": "05:48",
+        "sunset": "19:04",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुनर्वसु"
+      },
+      {
+        "day": 27,
+        "weekday": "बुधवार",
+        "sunrise": "05:49",
+        "sunset": "19:03",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 28,
+        "weekday": "गुरुवार",
+        "sunrise": "05:49",
+        "sunset": "19:02",
+        "tithi": "प्रतिपदा",
+        "paksha": "शुक्ल",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 29,
+        "weekday": "सोमवार",
+        "sunrise": "05:32",
+        "sunset": "19:22",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 30,
+        "weekday": "मंगलवार",
+        "sunrise": "05:33",
+        "sunset": "19:21",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुनर्वसु"
+      },
+      {
+        "day": 31,
+        "weekday": "रविवार",
+        "sunrise": "05:51",
+        "sunset": "19:00",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      }
+    ]
+  },
+  "2026-9": {
+    "month": 9,
+    "year": 2026,
+    "hindi_month": "सितंबर",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "सोमवार",
+        "sunrise": "05:51",
+        "sunset": "18:59",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 2,
+        "weekday": "मंगलवार",
+        "sunrise": "05:52",
+        "sunset": "18:58",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 3,
+        "weekday": "बुधवार",
+        "sunrise": "05:52",
+        "sunset": "18:57",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 4,
+        "weekday": "गुरुवार",
+        "sunrise": "05:53",
+        "sunset": "18:56",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "विशाखा"
+      },
+      {
+        "day": 5,
+        "weekday": "शुक्रवार",
+        "sunrise": "05:53",
+        "sunset": "18:55",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 6,
+        "weekday": "शनिवार",
+        "sunrise": "05:54",
+        "sunset": "18:54",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 7,
+        "weekday": "रविवार",
+        "sunrise": "05:54",
+        "sunset": "18:53",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 8,
+        "weekday": "सोमवार",
+        "sunrise": "05:55",
+        "sunset": "18:52",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 9,
+        "weekday": "मंगलवार",
+        "sunrise": "05:55",
+        "sunset": "18:51",
+        "tithi": "त्रयोदशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 10,
+        "weekday": "बुधवार",
+        "sunrise": "05:56",
+        "sunset": "18:49",
+        "tithi": "त्रयोदशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 11,
+        "weekday": "गुरुवार",
+        "sunrise": "05:56",
+        "sunset": "18:48",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 12,
+        "weekday": "शुक्रवार",
+        "sunrise": "05:57",
+        "sunset": "18:47",
+        "tithi": "पूर्णिमा",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 13,
+        "weekday": "शनिवार",
+        "sunrise": "05:57",
+        "sunset": "18:46",
+        "tithi": "प्रतिपदा",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 14,
+        "weekday": "रविवार",
+        "sunrise": "05:58",
+        "sunset": "18:45",
+        "tithi": "द्वितीया",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 15,
+        "weekday": "सोमवार",
+        "sunrise": "05:58",
+        "sunset": "18:44",
+        "tithi": "तृतीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 16,
+        "weekday": "मंगलवार",
+        "sunrise": "05:59",
+        "sunset": "18:43",
+        "tithi": "चतुर्थी",
+        "paksha": "कृष्ण",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 17,
+        "weekday": "बुधवार",
+        "sunrise": "05:59",
+        "sunset": "18:42",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "भरणी"
+      },
+      {
+        "day": 18,
+        "weekday": "गुरुवार",
+        "sunrise": "06:00",
+        "sunset": "18:41",
+        "tithi": "सप्तमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "कृत्तिका"
+      },
+      {
+        "day": 19,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:00",
+        "sunset": "18:39",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "रोहिणी"
+      },
+      {
+        "day": 20,
+        "weekday": "शनिवार",
+        "sunrise": "06:01",
+        "sunset": "18:38",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "मृगशिरा"
+      },
+      {
+        "day": 21,
+        "weekday": "रविवार",
+        "sunrise": "06:01",
+        "sunset": "18:37",
+        "tithi": "दशमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 22,
+        "weekday": "सोमवार",
+        "sunrise": "06:02",
+        "sunset": "18:36",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुनर्वसु"
+      },
+      {
+        "day": 23,
+        "weekday": "मंगलवार",
+        "sunrise": "06:02",
+        "sunset": "18:35",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 24,
+        "weekday": "बुधवार",
+        "sunrise": "06:03",
+        "sunset": "18:34",
+        "tithi": "त्रयोदशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 25,
+        "weekday": "गुरुवार",
+        "sunrise": "06:03",
+        "sunset": "18:32",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "मघा"
+      },
+      {
+        "day": 26,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:04",
+        "sunset": "18:31",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 27,
+        "weekday": "शनिवार",
+        "sunrise": "06:04",
+        "sunset": "18:30",
+        "tithi": "प्रतिपदा",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 28,
+        "weekday": "रविवार",
+        "sunrise": "06:05",
+        "sunset": "18:29",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 29,
+        "weekday": "सोमवार",
+        "sunrise": "06:05",
+        "sunset": "18:28",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 30,
+        "weekday": "मंगलवार",
+        "sunrise": "06:06",
+        "sunset": "18:26",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 31,
+        "weekday": "रविवार",
+        "sunrise": "05:51",
+        "sunset": "19:00",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      }
+    ]
+  },
+  "2026-10": {
+    "month": 10,
+    "year": 2026,
+    "hindi_month": "अक्टूबर",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "गुरुवार",
+        "sunrise": "06:07",
+        "sunset": "18:24",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 2,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:07",
+        "sunset": "18:23",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 3,
+        "weekday": "शनिवार",
+        "sunrise": "06:08",
+        "sunset": "18:22",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 4,
+        "weekday": "रविवार",
+        "sunrise": "06:08",
+        "sunset": "18:20",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 5,
+        "weekday": "सोमवार",
+        "sunrise": "06:09",
+        "sunset": "18:19",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 6,
+        "weekday": "मंगलवार",
+        "sunrise": "06:09",
+        "sunset": "18:18",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 10,
+        "weekday": "बुधवार",
+        "sunrise": "06:10",
+        "sunset": "18:17",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 11,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:11",
+        "sunset": "18:14",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 12,
+        "weekday": "रविवार",
+        "sunrise": "06:12",
+        "sunset": "18:12",
+        "tithi": "प्रतिपदा",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 13,
+        "weekday": "मंगलवार",
+        "sunrise": "06:13",
+        "sunset": "18:10",
+        "tithi": "तृतीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 14,
+        "weekday": "गुरुवार",
+        "sunrise": "06:14",
+        "sunset": "18:07",
+        "tithi": "पंचमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "कृत्तिका"
+      },
+      {
+        "day": 15,
+        "weekday": "शनिवार",
+        "sunrise": "06:15",
+        "sunset": "18:05",
+        "tithi": "सप्तमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 16,
+        "weekday": "सोमवार",
+        "sunrise": "06:16",
+        "sunset": "18:03",
+        "tithi": "दशमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 17,
+        "weekday": "मंगलवार",
+        "sunrise": "06:17",
+        "sunset": "18:01",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 18,
+        "weekday": "गुरुवार",
+        "sunrise": "06:18",
+        "sunset": "17:59",
+        "tithi": "त्रयोदशी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 19,
+        "weekday": "शनिवार",
+        "sunrise": "06:19",
+        "sunset": "17:57",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 20,
+        "weekday": "सोमवार",
+        "sunrise": "06:20",
+        "sunset": "17:55",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 21,
+        "weekday": "बुधवार",
+        "sunrise": "06:21",
+        "sunset": "17:53",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 22,
+        "weekday": "गुरुवार",
+        "sunrise": "06:22",
+        "sunset": "17:52",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 23,
+        "weekday": "शनिवार",
+        "sunrise": "06:23",
+        "sunset": "17:50",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 28,
+        "weekday": "रविवार",
+        "sunrise": "06:05",
+        "sunset": "18:29",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 29,
+        "weekday": "सोमवार",
+        "sunrise": "06:05",
+        "sunset": "18:28",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 30,
+        "weekday": "मंगलवार",
+        "sunrise": "06:06",
+        "sunset": "18:26",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 31,
+        "weekday": "बुधवार",
+        "sunrise": "06:06",
+        "sunset": "18:25",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "विशाखा"
+      }
+    ]
+  },
+  "2026-11": {
+    "month": 11,
+    "year": 2026,
+    "hindi_month": "नवंबर",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "मंगलवार",
+        "sunrise": "06:45",
+        "sunset": "17:27",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 2,
+        "weekday": "बुधवार",
+        "sunrise": "06:46",
+        "sunset": "17:26",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 3,
+        "weekday": "गुरुवार",
+        "sunrise": "06:47",
+        "sunset": "17:26",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 4,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:48",
+        "sunset": "17:26",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 5,
+        "weekday": "शनिवार",
+        "sunrise": "06:48",
+        "sunset": "17:25",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 14,
+        "weekday": "शनिवार",
+        "sunrise": "06:32",
+        "sunset": "17:37",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 15,
+        "weekday": "रविवार",
+        "sunrise": "06:33",
+        "sunset": "17:36",
+        "tithi": "सप्तमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुनर्वसु"
+      },
+      {
+        "day": 16,
+        "weekday": "सोमवार",
+        "sunrise": "06:34",
+        "sunset": "17:35",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 17,
+        "weekday": "मंगलवार",
+        "sunrise": "06:34",
+        "sunset": "17:35",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 18,
+        "weekday": "बुधवार",
+        "sunrise": "06:35",
+        "sunset": "17:34",
+        "tithi": "दशमी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 19,
+        "weekday": "गुरुवार",
+        "sunrise": "06:36",
+        "sunset": "17:33",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 20,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:37",
+        "sunset": "17:33",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 21,
+        "weekday": "शनिवार",
+        "sunrise": "06:37",
+        "sunset": "17:32",
+        "tithi": "त्रयोदशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 22,
+        "weekday": "रविवार",
+        "sunrise": "06:38",
+        "sunset": "17:31",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 23,
+        "weekday": "सोमवार",
+        "sunrise": "06:39",
+        "sunset": "17:31",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 24,
+        "weekday": "रविवार",
+        "sunrise": "06:24",
+        "sunset": "17:49",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 25,
+        "weekday": "मंगलवार",
+        "sunrise": "06:25",
+        "sunset": "17:47",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 26,
+        "weekday": "गुरुवार",
+        "sunrise": "06:26",
+        "sunset": "17:45",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 27,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:27",
+        "sunset": "17:44",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 28,
+        "weekday": "रविवार",
+        "sunrise": "06:28",
+        "sunset": "17:42",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 29,
+        "weekday": "सोमवार",
+        "sunrise": "06:29",
+        "sunset": "17:41",
+        "tithi": "पूर्णिमा",
+        "paksha": "शुक्ल",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 30,
+        "weekday": "बुधवार",
+        "sunrise": "06:30",
+        "sunset": "17:39",
+        "tithi": "तृतीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "कृत्तिका"
+      },
+      {
+        "day": 31,
+        "weekday": "गुरुवार",
+        "sunrise": "06:31",
+        "sunset": "17:38",
+        "tithi": "चतुर्थी",
+        "paksha": "कृष्ण",
+        "nakshatra": "रोहिणी"
+      }
+    ]
+  },
+  "2026-12": {
+    "month": 12,
+    "year": 2026,
+    "hindi_month": "दिसंबर",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "मंगलवार",
+        "sunrise": "06:45",
+        "sunset": "17:27",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 2,
+        "weekday": "बुधवार",
+        "sunrise": "06:46",
+        "sunset": "17:26",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 3,
+        "weekday": "गुरुवार",
+        "sunrise": "06:47",
+        "sunset": "17:26",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 4,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:48",
+        "sunset": "17:26",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 5,
+        "weekday": "शनिवार",
+        "sunrise": "06:48",
+        "sunset": "17:25",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 6,
+        "weekday": "रविवार",
+        "sunrise": "06:49",
+        "sunset": "17:25",
+        "tithi": "त्रयोदशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 7,
+        "weekday": "सोमवार",
+        "sunrise": "06:50",
+        "sunset": "17:25",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "भरणी"
+      },
+      {
+        "day": 8,
+        "weekday": "मंगलवार",
+        "sunrise": "06:51",
+        "sunset": "17:25",
+        "tithi": "पूर्णिमा",
+        "paksha": "शुक्ल",
+        "nakshatra": "कृत्तिका"
+      },
+      {
+        "day": 9,
+        "weekday": "बुधवार",
+        "sunrise": "06:52",
+        "sunset": "17:24",
+        "tithi": "प्रतिपदा",
+        "paksha": "कृष्ण",
+        "nakshatra": "रोहिणी"
+      },
+      {
+        "day": 10,
+        "weekday": "गुरुवार",
+        "sunrise": "06:52",
+        "sunset": "17:24",
+        "tithi": "द्वितीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "मृगशिरा"
+      },
+      {
+        "day": 11,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:53",
+        "sunset": "17:24",
+        "tithi": "तृतीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 12,
+        "weekday": "शनिवार",
+        "sunrise": "06:54",
+        "sunset": "17:24",
+        "tithi": "चतुर्थी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुनर्वसु"
+      },
+      {
+        "day": 13,
+        "weekday": "रविवार",
+        "sunrise": "06:55",
+        "sunset": "17:24",
+        "tithi": "पंचमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 14,
+        "weekday": "सोमवार",
+        "sunrise": "06:55",
+        "sunset": "17:24",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 15,
+        "weekday": "मंगलवार",
+        "sunrise": "06:56",
+        "sunset": "17:24",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "मघा"
+      },
+      {
+        "day": 16,
+        "weekday": "बुधवार",
+        "sunrise": "06:57",
+        "sunset": "17:24",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 17,
+        "weekday": "गुरुवार",
+        "sunrise": "06:58",
+        "sunset": "17:24",
+        "tithi": "दशमी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 18,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:59",
+        "sunset": "17:24",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 19,
+        "weekday": "शनिवार",
+        "sunrise": "06:59",
+        "sunset": "17:24",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 20,
+        "weekday": "रविवार",
+        "sunrise": "07:00",
+        "sunset": "17:24",
+        "tithi": "त्रयोदशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 21,
+        "weekday": "सोमवार",
+        "sunrise": "07:01",
+        "sunset": "17:24",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "विशाखा"
+      },
+      {
+        "day": 22,
+        "weekday": "मंगलवार",
+        "sunrise": "07:01",
+        "sunset": "17:24",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 23,
+        "weekday": "बुधवार",
+        "sunrise": "07:02",
+        "sunset": "17:25",
+        "tithi": "प्रतिपदा",
+        "paksha": "शुक्ल",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 24,
+        "weekday": "गुरुवार",
+        "sunrise": "07:03",
+        "sunset": "17:25",
+        "tithi": "प्रतिपदा",
+        "paksha": "शुक्ल",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 25,
+        "weekday": "शुक्रवार",
+        "sunrise": "07:04",
+        "sunset": "17:25",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 26,
+        "weekday": "शनिवार",
+        "sunrise": "07:04",
+        "sunset": "17:25",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 27,
+        "weekday": "रविवार",
+        "sunrise": "07:05",
+        "sunset": "17:26",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 28,
+        "weekday": "सोमवार",
+        "sunrise": "07:06",
+        "sunset": "17:26",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 29,
+        "weekday": "रविवार",
+        "sunrise": "06:44",
+        "sunset": "17:28",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 30,
+        "weekday": "सोमवार",
+        "sunrise": "06:44",
+        "sunset": "17:27",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      }
+    ]
+  },
+  "2027-1": {
+    "month": 1,
+    "year": 2027,
+    "hindi_month": "जनवरी",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "बुधवार",
+        "sunrise": "07:07",
+        "sunset": "17:27",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 2,
+        "weekday": "गुरुवार",
+        "sunrise": "07:07",
+        "sunset": "17:27",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 3,
+        "weekday": "शुक्रवार",
+        "sunrise": "07:08",
+        "sunset": "17:27",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 4,
+        "weekday": "शनिवार",
+        "sunrise": "07:09",
+        "sunset": "17:28",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 5,
+        "weekday": "रविवार",
+        "sunrise": "07:09",
+        "sunset": "17:28",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 10,
+        "weekday": "सोमवार",
+        "sunrise": "07:10",
+        "sunset": "17:29",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "भरणी"
+      },
+      {
+        "day": 11,
+        "weekday": "बुधवार",
+        "sunrise": "07:11",
+        "sunset": "17:30",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रोहिणी"
+      },
+      {
+        "day": 12,
+        "weekday": "शनिवार",
+        "sunrise": "07:12",
+        "sunset": "17:31",
+        "tithi": "तृतीया",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 13,
+        "weekday": "सोमवार",
+        "sunrise": "07:13",
+        "sunset": "17:33",
+        "tithi": "पंचमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "मघा"
+      },
+      {
+        "day": 14,
+        "weekday": "गुरुवार",
+        "sunrise": "07:14",
+        "sunset": "17:35",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 15,
+        "weekday": "सोमवार",
+        "sunrise": "07:15",
+        "sunset": "17:37",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 27,
+        "weekday": "रविवार",
+        "sunrise": "07:05",
+        "sunset": "17:26",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 28,
+        "weekday": "सोमवार",
+        "sunrise": "07:06",
+        "sunset": "17:26",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 29,
+        "weekday": "मंगलवार",
+        "sunrise": "07:06",
+        "sunset": "17:26",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      }
+    ]
+  },
+  "2027-2": {
+    "month": 2,
+    "year": 2027,
+    "hindi_month": "फरवरी",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "शनिवार",
+        "sunrise": "07:01",
+        "sunset": "18:09",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "भरणी"
+      },
+      {
+        "day": 10,
+        "weekday": "रविवार",
+        "sunrise": "07:10",
+        "sunset": "17:59",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 11,
+        "weekday": "गुरुवार",
+        "sunrise": "07:11",
+        "sunset": "17:57",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 12,
+        "weekday": "मंगलवार",
+        "sunrise": "07:12",
+        "sunset": "17:55",
+        "tithi": "चतुर्थी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 13,
+        "weekday": "शनिवार",
+        "sunrise": "07:13",
+        "sunset": "17:53",
+        "tithi": "प्रतिपदा",
+        "paksha": "कृष्ण",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 14,
+        "weekday": "मंगलवार",
+        "sunrise": "07:14",
+        "sunset": "17:49",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रोहिणी"
+      },
+      {
+        "day": 15,
+        "weekday": "रविवार",
+        "sunrise": "07:15",
+        "sunset": "17:42",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 19,
+        "weekday": "मंगलवार",
+        "sunrise": "07:09",
+        "sunset": "18:01",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 20,
+        "weekday": "बुधवार",
+        "sunrise": "07:08",
+        "sunset": "18:02",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 21,
+        "weekday": "गुरुवार",
+        "sunrise": "07:08",
+        "sunset": "18:03",
+        "tithi": "त्रयोदशी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 22,
+        "weekday": "शुक्रवार",
+        "sunrise": "07:07",
+        "sunset": "18:03",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 23,
+        "weekday": "शनिवार",
+        "sunrise": "07:07",
+        "sunset": "18:04",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 24,
+        "weekday": "रविवार",
+        "sunrise": "07:06",
+        "sunset": "18:05",
+        "tithi": "प्रतिपदा",
+        "paksha": "शुक्ल",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 25,
+        "weekday": "सोमवार",
+        "sunrise": "07:05",
+        "sunset": "18:06",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 26,
+        "weekday": "मंगलवार",
+        "sunrise": "07:04",
+        "sunset": "18:06",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 27,
+        "weekday": "बुधवार",
+        "sunrise": "07:04",
+        "sunset": "18:07",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 28,
+        "weekday": "गुरुवार",
+        "sunrise": "07:03",
+        "sunset": "18:08",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 29,
+        "weekday": "शुक्रवार",
+        "sunrise": "07:02",
+        "sunset": "18:09",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "अश्विनी"
+      }
+    ]
+  },
+  "2027-3": {
+    "month": 3,
+    "year": 2027,
+    "hindi_month": "मार्च",
+    "days": [
+      {
+        "day": 1,
+        "weekday": "शनिवार",
+        "sunrise": "07:01",
+        "sunset": "18:09",
+        "tithi": "सप्तमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "भरणी"
+      },
+      {
+        "day": 2,
+        "weekday": "रविवार",
+        "sunrise": "07:01",
+        "sunset": "18:10",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "कृत्तिका"
+      },
+      {
+        "day": 3,
+        "weekday": "सोमवार",
+        "sunrise": "07:00",
+        "sunset": "18:11",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "रोहिणी"
+      },
+      {
+        "day": 4,
+        "weekday": "मंगलवार",
+        "sunrise": "06:59",
+        "sunset": "18:12",
+        "tithi": "दशमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "मृगशिरा"
+      },
+      {
+        "day": 5,
+        "weekday": "बुधवार",
+        "sunrise": "06:58",
+        "sunset": "18:12",
+        "tithi": "एकादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "आर्द्रा"
+      },
+      {
+        "day": 6,
+        "weekday": "गुरुवार",
+        "sunrise": "06:57",
+        "sunset": "18:13",
+        "tithi": "द्वादशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "पुनर्वसु"
+      },
+      {
+        "day": 7,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:56",
+        "sunset": "18:14",
+        "tithi": "त्रयोदशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "पुष्य"
+      },
+      {
+        "day": 8,
+        "weekday": "शनिवार",
+        "sunrise": "06:55",
+        "sunset": "18:15",
+        "tithi": "चतुर्दशी",
+        "paksha": "शुक्ल",
+        "nakshatra": "आश्लेषा"
+      },
+      {
+        "day": 9,
+        "weekday": "रविवार",
+        "sunrise": "06:55",
+        "sunset": "18:15",
+        "tithi": "प्रतिपदा",
+        "paksha": "कृष्ण",
+        "nakshatra": "मघा"
+      },
+      {
+        "day": 10,
+        "weekday": "सोमवार",
+        "sunrise": "06:54",
+        "sunset": "18:16",
+        "tithi": "द्वितीया",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 11,
+        "weekday": "मंगलवार",
+        "sunrise": "06:53",
+        "sunset": "18:17",
+        "tithi": "तृतीया",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 12,
+        "weekday": "बुधवार",
+        "sunrise": "06:52",
+        "sunset": "18:17",
+        "tithi": "चतुर्थी",
+        "paksha": "कृष्ण",
+        "nakshatra": "हस्त"
+      },
+      {
+        "day": 13,
+        "weekday": "गुरुवार",
+        "sunrise": "06:51",
+        "sunset": "18:18",
+        "tithi": "पंचमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "चित्रा"
+      },
+      {
+        "day": 14,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:50",
+        "sunset": "18:19",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "स्वाति"
+      },
+      {
+        "day": 15,
+        "weekday": "शनिवार",
+        "sunrise": "06:49",
+        "sunset": "18:19",
+        "tithi": "सप्तमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "विशाखा"
+      },
+      {
+        "day": 16,
+        "weekday": "रविवार",
+        "sunrise": "06:48",
+        "sunset": "18:20",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "अनुराधा"
+      },
+      {
+        "day": 17,
+        "weekday": "सोमवार",
+        "sunrise": "06:47",
+        "sunset": "18:21",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "ज्येष्ठा"
+      },
+      {
+        "day": 18,
+        "weekday": "मंगलवार",
+        "sunrise": "06:46",
+        "sunset": "18:21",
+        "tithi": "दशमी",
+        "paksha": "कृष्ण",
+        "nakshatra": "मूल"
+      },
+      {
+        "day": 19,
+        "weekday": "बुधवार",
+        "sunrise": "06:45",
+        "sunset": "18:22",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 20,
+        "weekday": "गुरुवार",
+        "sunrise": "06:44",
+        "sunset": "18:23",
+        "tithi": "एकादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": ""
+      },
+      {
+        "day": 21,
+        "weekday": "शुक्रवार",
+        "sunrise": "06:42",
+        "sunset": "18:23",
+        "tithi": "द्वादशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "श्रवण"
+      },
+      {
+        "day": 22,
+        "weekday": "शनिवार",
+        "sunrise": "06:41",
+        "sunset": "18:24",
+        "tithi": "त्रयोदशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "धनिष्ठा"
+      },
+      {
+        "day": 23,
+        "weekday": "रविवार",
+        "sunrise": "06:40",
+        "sunset": "18:24",
+        "tithi": "चतुर्दशी",
+        "paksha": "कृष्ण",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 24,
+        "weekday": "सोमवार",
+        "sunrise": "06:39",
+        "sunset": "18:25",
+        "tithi": "",
+        "paksha": "कृष्ण",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 25,
+        "weekday": "सोमवार",
+        "sunrise": "07:05",
+        "sunset": "18:06",
+        "tithi": "द्वितीया",
+        "paksha": "शुक्ल",
+        "nakshatra": "शतभिषा"
+      },
+      {
+        "day": 26,
+        "weekday": "मंगलवार",
+        "sunrise": "07:04",
+        "sunset": "18:06",
+        "tithi": "तृतीया",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 27,
+        "weekday": "बुधवार",
+        "sunrise": "07:04",
+        "sunset": "18:07",
+        "tithi": "चतुर्थी",
+        "paksha": "शुक्ल",
+        "nakshatra": ""
+      },
+      {
+        "day": 28,
+        "weekday": "गुरुवार",
+        "sunrise": "07:03",
+        "sunset": "18:08",
+        "tithi": "पंचमी",
+        "paksha": "शुक्ल",
+        "nakshatra": "रेवती"
+      },
+      {
+        "day": 29,
+        "weekday": "शुक्रवार",
+        "sunrise": "07:02",
+        "sunset": "18:09",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "अश्विनी"
+      },
+      {
+        "day": 30,
+        "weekday": "रविवार",
+        "sunrise": "06:32",
+        "sunset": "18:29",
+        "tithi": "",
+        "paksha": "शुक्ल",
+        "nakshatra": "कृत्तिका"
+      }
+    ]
+  }
+}

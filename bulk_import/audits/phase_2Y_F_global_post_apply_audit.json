@@ -1,0 +1,67 @@
+{
+  "phase": "2Y-F",
+  "mode": "STRICT_READ_ONLY",
+  "database_modified": false,
+  "database_writes": 0,
+  "authoritative_katha": 505,
+  "counts": {
+    "total_authoritative_katha": 505,
+    "with_audio": 334,
+    "with_video": 225,
+    "with_both": 201,
+    "with_neither": 147,
+    "audio_only": 133,
+    "video_only": 24
+  },
+  "deltas_from_phase_2y_e_baseline": {
+    "authoritative_katha_delta": 0,
+    "with_audio_delta": 1,
+    "with_video_delta": 1,
+    "with_both_delta": 1,
+    "with_neither_delta": -1,
+    "audio_only_delta": 0,
+    "video_only_delta": 0
+  },
+  "new_audio_verified": 1,
+  "new_video_verified": 1,
+  "unexpected_database_changes": 0,
+  "duplicate_katha_ids": 0,
+  "duplicate_audio_assignments": 0,
+  "duplicate_video_assignments": 0,
+  "duplicate_youtube_ids": 0,
+  "mapping_conflicts": 0,
+  "url_id_mismatches": 0,
+  "malformed_media_urls": 0,
+  "uncertain_audio_applied": 0,
+  "uncertain_video_applied": 0,
+  "no_suitable_applied": 0,
+  "legacy_audio_protected": "31/31",
+  "legacy_video_protected": "12/12",
+  "phase_2n_protected": true,
+  "phase_2o_protected": true,
+  "phase_2p_protected": true,
+  "phase_2q_protected": true,
+  "media_classification": {
+    "audio": {
+      "local_mp3": 64,
+      "youtube": 269,
+      "archive_org": 1,
+      "other": 0,
+      "invalid": 0,
+      "missing": 171
+    },
+    "video": {
+      "youtube": 224,
+      "archive_org": 1,
+      "other": 0,
+      "invalid": 0,
+      "missing": 280
+    }
+  },
+  "sqlite_integrity": "PASS",
+  "fts5_integrity": "PASS",
+  "foreign_keys": "PASS",
+  "schema_integrity": "PASS",
+  "backup_verification": "PASS",
+  "final_gate": "PASS"
+}

@@ -1,0 +1,953 @@
+{
+  "metadata": {
+    "audit_title": "Full Bhakti App Audio Coverage Audit (10,010 Records)",
+    "generated_at": "2026-08-29T11:24:46.174646+00:00",
+    "database_modified": false,
+    "audio_url_modifications_count": 0,
+    "batch_021_started": false,
+    "audit_type": "READ-ONLY"
+  },
+  "baseline": {
+    "total_records": 10010,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "fts5_document_count": 10010,
+    "total_playable_audio": 78,
+    "local_mp3_count": 38,
+    "youtube_count": 40,
+    "without_audio_count": 9932,
+    "current_coverage_pct": 0.78
+  },
+  "source_breakdown": {
+    "local_mp3": 38,
+    "youtube_total": 40,
+    "youtube_subtypes": {
+      "YOUTUBE_WATCH": 40
+    },
+    "invalid_legacy": 1000,
+    "other_external": 0,
+    "empty_audio_url": 8932
+  },
+  "local_mp3_audit": {
+    "total_records_mapped": 38,
+    "unique_files_on_disk": 33,
+    "playable_files_count": 27,
+    "broken_or_missing_count": 11,
+    "duplicate_audio_paths": {
+      "assets/audio/katha_hanuman.mp3": 2,
+      "assets/audio/bhajan_ram_janki.mp3": 2,
+      "assets/audio/katha_ramayana.mp3": 3,
+      "assets/audio/katha_rajan_sundarkand.mp3": 2
+    },
+    "records": [
+      {
+        "record_id": "bhajan-krishna-achyutam-keshavam",
+        "title": "अच्युतम केशवम कृष्ण दामोदरम",
+        "audio_url": "assets/audio/bhajan_achyutam_keshavam.mp3",
+        "file_exists": true,
+        "file_size_bytes": 4568011,
+        "file_size_mb": 4.36,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "chalisa-hanuman-shri-hanuman-chalisa",
+        "title": "श्री हनुमान चालीसा (दिव्य पाठ)",
+        "audio_url": "assets/audio/katha_hanuman.mp3",
+        "file_exists": true,
+        "file_size_bytes": 9309247,
+        "file_size_mb": 8.88,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "aarti-shiva-om-jai-shiv-omkara",
+        "title": "शिव जी की आरती - ॐ जय शिव ओंकारा",
+        "audio_url": "assets/audio/katha_shiva.mp3",
+        "file_exists": true,
+        "file_size_bytes": 3221254,
+        "file_size_mb": 3.07,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "aarti-ram-shri-ramchandra-kripalu",
+        "title": "श्री रामचंद्र कृपालु भजु मन",
+        "audio_url": "assets/audio/bhajan_ram_janki.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "aarti-ram-aarti-shri-ramayan-ji-ki",
+        "title": "आरती श्री रामायण जी की",
+        "audio_url": "assets/audio/katha_ramayana.mp3",
+        "file_exists": true,
+        "file_size_bytes": 5577708,
+        "file_size_mb": 5.32,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "bhajan-ram-nagari-ho-ayodhya-si",
+        "title": "नगरी हो अयोध्या सी रघुकुल सा घराना हो",
+        "audio_url": "assets/audio/bhajan_nagri_ayodhya.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "bhajan-ram-aayenge-to-angana-sajayungi",
+        "title": "मेरी झोपड़ी के भाग आज खुल जाएंगे (राम आएंगे)",
+        "audio_url": "assets/audio/bhajan_ram_aayenge.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "bhajan-ram-bhaye-pragat-kripala",
+        "title": "भए प्रगट कृपाला दीनदयाला कौसल्या हितकारी",
+        "audio_url": "assets/audio/katha_ramayana.mp3",
+        "file_exists": true,
+        "file_size_bytes": 5577708,
+        "file_size_mb": 5.32,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "bhajan-ram-bharat-bhai-kapi-se-urin",
+        "title": "भरत भाई कपि से उरिन हम नाहीं",
+        "audio_url": "assets/audio/katha_rajan_sundarkand.mp3",
+        "file_exists": true,
+        "file_size_bytes": 70417481,
+        "file_size_mb": 67.16,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "katha-ram-ram-janma-katha",
+        "title": "श्री राम जन्म एवं बाल लीला पावन कथा",
+        "audio_url": "assets/audio/katha_ramayana.mp3",
+        "file_exists": true,
+        "file_size_bytes": 5577708,
+        "file_size_mb": 5.32,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "katha-ram-sampurna-sundarkand-mahatmya",
+        "title": "सम्पूर्ण सुन्दरकाण्ड पाठ एवं महात्म्य",
+        "audio_url": "assets/audio/katha_rajan_sundarkand.mp3",
+        "file_exists": true,
+        "file_size_bytes": 70417481,
+        "file_size_mb": 67.16,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "bhajan-krishna-mera-aapki-kripa-se",
+        "title": "मेरा आपकी कृपा से सब काम हो रहा है",
+        "audio_url": "assets/audio/bhajan_kripa_se_sab_kaam.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "katha-krishna-shrimad-bhagwat-katha-saar",
+        "title": "श्रीमद् भागवत महापुराण सम्पूर्ण सार कथा",
+        "audio_url": "assets/audio/katha_bhagwat.mp3",
+        "file_exists": true,
+        "file_size_bytes": 13906381,
+        "file_size_mb": 13.26,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "bhajan-radharani-kishori-kuch-aisa-intezam",
+        "title": "किशोरी कुछ ऐसा इंतजाम हो जाए",
+        "audio_url": "assets/audio/bhajan_kishori_intezam.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "bhajan-radharani-radhe-radhe-barsane-wali",
+        "title": "राधे राधे जपो चले आएंगे बिहारी (बरसाने वाली राधे)",
+        "audio_url": "assets/audio/bhajan_radhe_radhe_japo.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "stotram-shiva-shiv-tandav-stotram-complete",
+        "title": "शिव ताण्डव स्तोत्रम् (सम्पूर्ण मूल पाठ)",
+        "audio_url": "assets/audio/bhajan_shiv_tandav_stotram.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "bhajan-shiva-har-har-shambhu",
+        "title": "हर हर शंभू शिव महादेवा",
+        "audio_url": "assets/audio/bhajan_har_har_shambhu.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "katha-shiva-shiv-parvati-vivah",
+        "title": "भगवान शिव एवं माता पार्वती पावन विवाह कथा",
+        "audio_url": "assets/audio/katha_rajan_shivbarat.mp3",
+        "file_exists": true,
+        "file_size_bytes": 52093732,
+        "file_size_mb": 49.68,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "chalisa-hanuman-shri-hanuman-chalisa-full",
+        "title": "श्री हनुमान चालीसा (सम्पूर्ण मूल पाठ व दोहे)",
+        "audio_url": "assets/audio/katha_hanuman.mp3",
+        "file_exists": true,
+        "file_size_bytes": 9309247,
+        "file_size_mb": 8.88,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "bhajan-hanuman-shri-ram-janki-baithe-hain",
+        "title": "श्री राम जानकी बैठे हैं मेरे सीने में",
+        "audio_url": "assets/audio/bhajan_ram_janki.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "bhajan-hanuman-duniya-chale-na-shri-ram-ke-bina",
+        "title": "दुनिया चले ना श्री राम के बिना (राम जी चले ना हनुमान के बिना)",
+        "audio_url": "assets/audio/bhajan_duniya_chale_na.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "aarti-vishnu-satyanarayan-jai-laxmi-ramana",
+        "title": "श्री सत्यनारायण जी की आरती (जय लक्ष्मी रमणा)",
+        "audio_url": "assets/audio/katha_satyanarayan.mp3",
+        "file_exists": true,
+        "file_size_bytes": 5874459,
+        "file_size_mb": 5.6,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "katha-vishnu-narsingh-avatar-prahlad",
+        "title": "भगवान नृसिंह अवतार एवं भक्त प्रह्लाद रक्षा कथा",
+        "audio_url": "assets/audio/katha_narsingh.mp3",
+        "file_exists": true,
+        "file_size_bytes": 5448141,
+        "file_size_mb": 5.2,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "chetawani_bhajan-gyan-kabhi-pyase-ko-paani-pilaya-nahi",
+        "title": "कभी प्यासे को पानी पिलाया नहीं बाद अमृत पिलाने से क्या फायदा",
+        "audio_url": "assets/audio/bhajan_kabhi_pyase_ko.mp3",
+        "file_exists": false,
+        "file_size_bytes": 0,
+        "file_size_mb": 0,
+        "extension": ".mp3",
+        "is_playable": false
+      },
+      {
+        "record_id": "satsang-guru_sant-rajan-ji-mata-pita-seva",
+        "title": "पूज्य राजन जी महाराज: माता-पिता की सेवा ही साक्षात तीर्थ है",
+        "audio_url": "assets/audio/katha_rajan_samvad.mp3",
+        "file_exists": true,
+        "file_size_bytes": 48370134,
+        "file_size_mb": 46.13,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "aarti-durga-vaishno-devi",
+        "title": "आरती मां वैष्णो देवी की (जय दुर्गे दुर्गति शमनी)",
+        "audio_url": "assets/audio/katha_vaishnodevi.mp3",
+        "file_exists": true,
+        "file_size_bytes": 5144284,
+        "file_size_mb": 4.91,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "katha-bhakta-harishchandra-satya",
+        "title": "सत्यवादी राजा हरिश्चंद्र: सत्य निष्ठा एवं काशी श्मशान प्रसंग",
+        "audio_url": "assets/audio/katha_harishchandra.mp3",
+        "file_exists": true,
+        "file_size_bytes": 22732425,
+        "file_size_mb": 21.68,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "b2-katha-shiva-sati-daha-veerbhadra",
+        "title": "सती देहत्याग एवं वीरभद्र प्राकट्य (दक्ष प्रजापति यज्ञ विध्वंस)",
+        "audio_url": "assets/audio/katha_rajan_saticharitra.mp3",
+        "file_exists": true,
+        "file_size_bytes": 40812596,
+        "file_size_mb": 38.92,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "b2-katha-shiva-parvati-kalyanam-vivah",
+        "title": "श्री शिव-पार्वती पावन विवाह एवं बारात प्रसंग",
+        "audio_url": "assets/audio/katha_rajan_shivparvati.mp3",
+        "file_exists": true,
+        "file_size_bytes": 59097056,
+        "file_size_mb": 56.36,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "b2-satsang-indresh-ji-bhagavata-ananya-prem",
+        "title": "पूज्य इंद्रेश उपाध्याय जी: भागवत का सर्वोच्च फल—अनन्य भगवद्प्रेम",
+        "audio_url": "assets/audio/katha_indresh_bhagwat.mp3",
+        "file_exists": true,
+        "file_size_bytes": 136154844,
+        "file_size_mb": 129.85,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-guru_sant-bhakt-chhitu-panda-pavaan-satya-katha-indresh-ji",
+        "title": "भक्त छीतू पंडा की पावन सत्य कथा",
+        "audio_url": "assets/audio/katha_indresh_chhitupanda.mp3",
+        "file_exists": true,
+        "file_size_bytes": 103822033,
+        "file_size_mb": 99.01,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-guru_sant-pandit-indresh-upadhyay-ji-pawan-prasang-pravachan",
+        "title": "पूज्य इंद्रेश उपाध्याय जी का पावन प्रसंग",
+        "audio_url": "assets/audio/katha_indresh_prasang.mp3",
+        "file_exists": true,
+        "file_size_bytes": 51962400,
+        "file_size_mb": 49.56,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-guru_sant-bhaktabhoop-rani-ratnavati-ji-ka-charitra-indresh-ji",
+        "title": "भक्तभूप रानी रत्नावती जी का चरित्र",
+        "audio_url": "assets/audio/katha_indresh_ratnavati.mp3",
+        "file_exists": true,
+        "file_size_bytes": 144530328,
+        "file_size_mb": 137.83,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-krishna-mahakavi-bhakt-surdas-ji-divya-jeevan-charitra-indresh-ji",
+        "title": "महाकवि भक्त सूरदास जी का दिव्य जीवन चरित्र",
+        "audio_url": "assets/audio/katha_indresh_surdas.mp3",
+        "file_exists": true,
+        "file_size_bytes": 161986069,
+        "file_size_mb": 154.48,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-guru_sant-bhakt-taj-begum-ki-adbhut-kahani-indresh-ji",
+        "title": "भक्त ताज बेगम की अद्भुत कहानी",
+        "audio_url": "assets/audio/katha_indresh_tajbegum.mp3",
+        "file_exists": true,
+        "file_size_bytes": 78273442,
+        "file_size_mb": 74.65,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-shiva-bhagwan-shankar-ne-kaise-kiya-mata-parvati-ka-bhram-door-rajan-ji",
+        "title": "भगवान शंकर ने कैसे किया माता पार्वती का भ्रम दूर",
+        "audio_url": "assets/audio/katha_rajan_bhramdoor.mp3",
+        "file_exists": true,
+        "file_size_bytes": 62169056,
+        "file_size_mb": 59.29,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-katha-shiva-ek-baar-treta-yug-mahi-shiva-sati-prasang-rajan-ji",
+        "title": "एक बार त्रेता युग माही — शिव सती प्रसंग",
+        "audio_url": "assets/audio/katha_rajan_kumbhaj.mp3",
+        "file_exists": true,
+        "file_size_bytes": 46816580,
+        "file_size_mb": 44.65,
+        "extension": ".mp3",
+        "is_playable": true
+      },
+      {
+        "record_id": "supp-bhajan-shiva-shrawan-maas-vishesh-shiv-bhajan-amritdhara-rajan-ji",
+        "title": "श्रावण मास विशेष शिव भजन अमृतधारा",
+        "audio_url": "assets/audio/katha_rajan_shivbhajan.mp3",
+        "file_exists": true,
+        "file_size_bytes": 41516021,
+        "file_size_mb": 39.59,
+        "extension": ".mp3",
+        "is_playable": true
+      }
+    ]
+  },
+  "category_coverage": [
+    {
+      "category": "bhajan",
+      "total": 5221,
+      "with_audio": 16,
+      "without_audio": 5205,
+      "mp3": 12,
+      "youtube": 4,
+      "invalid_legacy": 394,
+      "coverage_pct": 0.31,
+      "missing_pct": 99.69
+    },
+    {
+      "category": "stotram",
+      "total": 952,
+      "with_audio": 2,
+      "without_audio": 950,
+      "mp3": 1,
+      "youtube": 1,
+      "invalid_legacy": 135,
+      "coverage_pct": 0.21,
+      "missing_pct": 99.79
+    },
+    {
+      "category": "mantra",
+      "total": 601,
+      "with_audio": 4,
+      "without_audio": 597,
+      "mp3": 0,
+      "youtube": 4,
+      "invalid_legacy": 78,
+      "coverage_pct": 0.67,
+      "missing_pct": 99.33
+    },
+    {
+      "category": "aarti",
+      "total": 603,
+      "with_audio": 13,
+      "without_audio": 590,
+      "mp3": 5,
+      "youtube": 8,
+      "invalid_legacy": 94,
+      "coverage_pct": 2.16,
+      "missing_pct": 97.84
+    },
+    {
+      "category": "katha",
+      "total": 505,
+      "with_audio": 15,
+      "without_audio": 490,
+      "mp3": 15,
+      "youtube": 0,
+      "invalid_legacy": 49,
+      "coverage_pct": 2.97,
+      "missing_pct": 97.03
+    },
+    {
+      "category": "dharmik_gyan",
+      "total": 420,
+      "with_audio": 0,
+      "without_audio": 420,
+      "mp3": 0,
+      "youtube": 0,
+      "invalid_legacy": 50,
+      "coverage_pct": 0.0,
+      "missing_pct": 100.0
+    },
+    {
+      "category": "chalisa",
+      "total": 396,
+      "with_audio": 5,
+      "without_audio": 391,
+      "mp3": 2,
+      "youtube": 3,
+      "invalid_legacy": 37,
+      "coverage_pct": 1.26,
+      "missing_pct": 98.74
+    },
+    {
+      "category": "satsang",
+      "total": 290,
+      "with_audio": 2,
+      "without_audio": 288,
+      "mp3": 2,
+      "youtube": 0,
+      "invalid_legacy": 35,
+      "coverage_pct": 0.69,
+      "missing_pct": 99.31
+    },
+    {
+      "category": "naam_jaap",
+      "total": 261,
+      "with_audio": 2,
+      "without_audio": 259,
+      "mp3": 0,
+      "youtube": 2,
+      "invalid_legacy": 20,
+      "coverage_pct": 0.77,
+      "missing_pct": 99.23
+    },
+    {
+      "category": "festival_special",
+      "total": 213,
+      "with_audio": 0,
+      "without_audio": 213,
+      "mp3": 0,
+      "youtube": 0,
+      "invalid_legacy": 29,
+      "coverage_pct": 0.0,
+      "missing_pct": 100.0
+    },
+    {
+      "category": "vrat_katha",
+      "total": 206,
+      "with_audio": 18,
+      "without_audio": 188,
+      "mp3": 0,
+      "youtube": 18,
+      "invalid_legacy": 30,
+      "coverage_pct": 8.74,
+      "missing_pct": 91.26
+    },
+    {
+      "category": "chetawani_bhajan",
+      "total": 188,
+      "with_audio": 1,
+      "without_audio": 187,
+      "mp3": 1,
+      "youtube": 0,
+      "invalid_legacy": 29,
+      "coverage_pct": 0.53,
+      "missing_pct": 99.47
+    },
+    {
+      "category": "temple_katha",
+      "total": 154,
+      "with_audio": 0,
+      "without_audio": 154,
+      "mp3": 0,
+      "youtube": 0,
+      "invalid_legacy": 20,
+      "coverage_pct": 0.0,
+      "missing_pct": 100.0
+    }
+  ],
+  "deity_coverage": [
+    {
+      "deity_id": "krishna",
+      "name_hi": "श्री कृष्ण",
+      "total": 1562,
+      "with_audio": 10,
+      "without_audio": 1552,
+      "mp3": 4,
+      "youtube": 6,
+      "coverage_pct": 0.64
+    },
+    {
+      "deity_id": "ram",
+      "name_hi": "श्री राम",
+      "total": 1359,
+      "with_audio": 12,
+      "without_audio": 1347,
+      "mp3": 8,
+      "youtube": 4,
+      "coverage_pct": 0.88
+    },
+    {
+      "deity_id": "shiva",
+      "name_hi": "शिव जी",
+      "total": 1087,
+      "with_audio": 9,
+      "without_audio": 1078,
+      "mp3": 9,
+      "youtube": 0,
+      "coverage_pct": 0.83
+    },
+    {
+      "deity_id": "general_bhakti",
+      "name_hi": "सामान्य भक्ति",
+      "total": 898,
+      "with_audio": 2,
+      "without_audio": 896,
+      "mp3": 2,
+      "youtube": 0,
+      "coverage_pct": 0.22
+    },
+    {
+      "deity_id": "durga_mata",
+      "name_hi": "माता रानी/दुर्गा",
+      "total": 803,
+      "with_audio": 1,
+      "without_audio": 802,
+      "mp3": 1,
+      "youtube": 0,
+      "coverage_pct": 0.12
+    },
+    {
+      "deity_id": "hanuman",
+      "name_hi": "हनुमान जी",
+      "total": 765,
+      "with_audio": 6,
+      "without_audio": 759,
+      "mp3": 4,
+      "youtube": 2,
+      "coverage_pct": 0.78
+    },
+    {
+      "deity_id": "vishnu",
+      "name_hi": "भगवान विष्णु",
+      "total": 644,
+      "with_audio": 20,
+      "without_audio": 624,
+      "mp3": 2,
+      "youtube": 18,
+      "coverage_pct": 3.11
+    },
+    {
+      "deity_id": "guru_sant",
+      "name_hi": "गुरु/संत",
+      "total": 515,
+      "with_audio": 7,
+      "without_audio": 508,
+      "mp3": 6,
+      "youtube": 1,
+      "coverage_pct": 1.36
+    },
+    {
+      "deity_id": "ganesh",
+      "name_hi": "श्री गणेश",
+      "total": 427,
+      "with_audio": 2,
+      "without_audio": 425,
+      "mp3": 0,
+      "youtube": 2,
+      "coverage_pct": 0.47
+    },
+    {
+      "deity_id": "other_deities",
+      "name_hi": "अन्य देवी-देवता",
+      "total": 290,
+      "with_audio": 0,
+      "without_audio": 290,
+      "mp3": 0,
+      "youtube": 0,
+      "coverage_pct": 0.0
+    },
+    {
+      "deity_id": "surya",
+      "name_hi": "सूर्य देव",
+      "total": 266,
+      "with_audio": 0,
+      "without_audio": 266,
+      "mp3": 0,
+      "youtube": 0,
+      "coverage_pct": 0.0
+    },
+    {
+      "deity_id": "radharani",
+      "name_hi": "राधा रानी",
+      "total": 225,
+      "with_audio": 4,
+      "without_audio": 221,
+      "mp3": 2,
+      "youtube": 2,
+      "coverage_pct": 1.78
+    },
+    {
+      "deity_id": "khatushyam",
+      "name_hi": "खाटू श्याम जी",
+      "total": 217,
+      "with_audio": 1,
+      "without_audio": 216,
+      "mp3": 0,
+      "youtube": 1,
+      "coverage_pct": 0.46
+    },
+    {
+      "deity_id": "shanidev",
+      "name_hi": "शनिदेव",
+      "total": 201,
+      "with_audio": 1,
+      "without_audio": 200,
+      "mp3": 0,
+      "youtube": 1,
+      "coverage_pct": 0.5
+    },
+    {
+      "deity_id": "bhairav",
+      "name_hi": "भैरव बाबा",
+      "total": 188,
+      "with_audio": 0,
+      "without_audio": 188,
+      "mp3": 0,
+      "youtube": 0,
+      "coverage_pct": 0.0
+    },
+    {
+      "deity_id": "lakshmi",
+      "name_hi": "माता लक्ष्मी",
+      "total": 179,
+      "with_audio": 1,
+      "without_audio": 178,
+      "mp3": 0,
+      "youtube": 1,
+      "coverage_pct": 0.56
+    },
+    {
+      "deity_id": "saraswati",
+      "name_hi": "सरस्वती माता",
+      "total": 145,
+      "with_audio": 1,
+      "without_audio": 144,
+      "mp3": 0,
+      "youtube": 1,
+      "coverage_pct": 0.69
+    },
+    {
+      "deity_id": "santoshi",
+      "name_hi": "संतोषी माता",
+      "total": 89,
+      "with_audio": 1,
+      "without_audio": 88,
+      "mp3": 0,
+      "youtube": 1,
+      "coverage_pct": 1.12
+    },
+    {
+      "deity_id": "ganga",
+      "name_hi": "गंगा मैया",
+      "total": 82,
+      "with_audio": 0,
+      "without_audio": 82,
+      "mp3": 0,
+      "youtube": 0,
+      "coverage_pct": 0.0
+    },
+    {
+      "deity_id": "yamuna",
+      "name_hi": "यमुना मैया",
+      "total": 68,
+      "with_audio": 0,
+      "without_audio": 68,
+      "mp3": 0,
+      "youtube": 0,
+      "coverage_pct": 0.0
+    }
+  ],
+  "duplicate_analysis": {
+    "exact_duplicate_titles_count": 0,
+    "normalized_duplicate_titles_count": 1192,
+    "duplicate_hashes_count": 0,
+    "duplicate_slugs_count": 0
+  },
+  "realistic_expansion_estimates": [
+    {
+      "category": "bhajan",
+      "total_records": 5221,
+      "missing_audio": 5205,
+      "priority_tier": "B - HIGH",
+      "high_confidence_est": 2602,
+      "medium_confidence_est": 1562,
+      "unlikely_est": 1041,
+      "realistic_playable_yield": 4164,
+      "max_potential_coverage_pct": 80.1
+    },
+    {
+      "category": "stotram",
+      "total_records": 952,
+      "missing_audio": 950,
+      "priority_tier": "A - VERY HIGH",
+      "high_confidence_est": 475,
+      "medium_confidence_est": 285,
+      "unlikely_est": 190,
+      "realistic_playable_yield": 760,
+      "max_potential_coverage_pct": 80.0
+    },
+    {
+      "category": "mantra",
+      "total_records": 601,
+      "missing_audio": 597,
+      "priority_tier": "B - HIGH",
+      "high_confidence_est": 209,
+      "medium_confidence_est": 209,
+      "unlikely_est": 179,
+      "realistic_playable_yield": 418,
+      "max_potential_coverage_pct": 70.2
+    },
+    {
+      "category": "aarti",
+      "total_records": 603,
+      "missing_audio": 590,
+      "priority_tier": "A - VERY HIGH",
+      "high_confidence_est": 442,
+      "medium_confidence_est": 88,
+      "unlikely_est": 60,
+      "realistic_playable_yield": 530,
+      "max_potential_coverage_pct": 90.0
+    },
+    {
+      "category": "katha",
+      "total_records": 505,
+      "missing_audio": 490,
+      "priority_tier": "B - HIGH",
+      "high_confidence_est": 172,
+      "medium_confidence_est": 172,
+      "unlikely_est": 146,
+      "realistic_playable_yield": 344,
+      "max_potential_coverage_pct": 71.1
+    },
+    {
+      "category": "dharmik_gyan",
+      "total_records": 420,
+      "missing_audio": 420,
+      "priority_tier": "C - LOW",
+      "high_confidence_est": 42,
+      "medium_confidence_est": 105,
+      "unlikely_est": 273,
+      "realistic_playable_yield": 147,
+      "max_potential_coverage_pct": 35.0
+    },
+    {
+      "category": "chalisa",
+      "total_records": 396,
+      "missing_audio": 391,
+      "priority_tier": "A - VERY HIGH",
+      "high_confidence_est": 293,
+      "medium_confidence_est": 59,
+      "unlikely_est": 39,
+      "realistic_playable_yield": 352,
+      "max_potential_coverage_pct": 90.2
+    },
+    {
+      "category": "satsang",
+      "total_records": 290,
+      "missing_audio": 288,
+      "priority_tier": "C - MEDIUM",
+      "high_confidence_est": 58,
+      "medium_confidence_est": 101,
+      "unlikely_est": 129,
+      "realistic_playable_yield": 159,
+      "max_potential_coverage_pct": 55.5
+    },
+    {
+      "category": "naam_jaap",
+      "total_records": 261,
+      "missing_audio": 259,
+      "priority_tier": "A - VERY HIGH",
+      "high_confidence_est": 194,
+      "medium_confidence_est": 39,
+      "unlikely_est": 26,
+      "realistic_playable_yield": 233,
+      "max_potential_coverage_pct": 90.0
+    },
+    {
+      "category": "festival_special",
+      "total_records": 213,
+      "missing_audio": 213,
+      "priority_tier": "C - MEDIUM",
+      "high_confidence_est": 43,
+      "medium_confidence_est": 75,
+      "unlikely_est": 95,
+      "realistic_playable_yield": 118,
+      "max_potential_coverage_pct": 55.4
+    },
+    {
+      "category": "vrat_katha",
+      "total_records": 206,
+      "missing_audio": 188,
+      "priority_tier": "A - VERY HIGH",
+      "high_confidence_est": 94,
+      "medium_confidence_est": 56,
+      "unlikely_est": 38,
+      "realistic_playable_yield": 150,
+      "max_potential_coverage_pct": 81.6
+    },
+    {
+      "category": "chetawani_bhajan",
+      "total_records": 188,
+      "missing_audio": 187,
+      "priority_tier": "C - MEDIUM",
+      "high_confidence_est": 37,
+      "medium_confidence_est": 65,
+      "unlikely_est": 85,
+      "realistic_playable_yield": 102,
+      "max_potential_coverage_pct": 54.8
+    },
+    {
+      "category": "temple_katha",
+      "total_records": 154,
+      "missing_audio": 154,
+      "priority_tier": "B - HIGH",
+      "high_confidence_est": 54,
+      "medium_confidence_est": 54,
+      "unlikely_est": 46,
+      "realistic_playable_yield": 108,
+      "max_potential_coverage_pct": 70.1
+    }
+  ],
+  "future_projections": {
+    "current": {
+      "playable": 78,
+      "coverage_pct": 0.78
+    },
+    "target_1_high_confidence_only": {
+      "new_audio_added": 4715,
+      "projected_total_playable": 4793,
+      "projected_coverage_pct": 47.88
+    },
+    "target_2_high_plus_selected_medium": {
+      "new_audio_added": 6723,
+      "projected_total_playable": 6801,
+      "projected_coverage_pct": 67.94
+    },
+    "target_3_maximum_realistic_ceiling": {
+      "new_audio_added": 7585,
+      "projected_total_playable": 7663,
+      "projected_coverage_pct": 76.55
+    }
+  },
+  "recommendations": {
+    "priority_category": "aarti & chalisa & naam_jaap & vrat_katha",
+    "recommended_batch_name": "Batch Audio Exp 01: Core Liturgical (Aarti, Chalisa, Ekadashi, 108 Names)",
+    "target_records_to_audit": 250,
+    "estimated_high_confidence": 175,
+    "estimated_medium_confidence": 45,
+    "recommended_batch_size": 100,
+    "expected_playable_library_after_batch": 253
+  }
+}

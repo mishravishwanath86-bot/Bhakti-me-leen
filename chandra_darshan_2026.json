@@ -1,0 +1,122 @@
+[
+  {
+    "gregorianDate": "January 20, 2026",
+    "dayName": "Tuesday",
+    "month": "Jan",
+    "day": "20",
+    "weekday": "Tue",
+    "timing": "05:50 PM to 07:16 PM",
+    "duration": "01 Hour 25 Mins",
+    "isoDate": "2026-01-20"
+  },
+  {
+    "gregorianDate": "February 18, 2026",
+    "dayName": "Wednesday",
+    "month": "Feb",
+    "day": "18",
+    "weekday": "Wed",
+    "timing": "06:13 PM to 07:05 PM",
+    "duration": "00 Hours 52 Mins",
+    "isoDate": "2026-02-18"
+  },
+  {
+    "gregorianDate": "March 20, 2026",
+    "dayName": "Friday",
+    "month": "Mar",
+    "day": "20",
+    "weekday": "Fri",
+    "timing": "06:32 PM to 07:59 PM",
+    "duration": "01 Hour 26 Mins",
+    "isoDate": "2026-03-20"
+  },
+  {
+    "gregorianDate": "April 18, 2026",
+    "dayName": "Saturday",
+    "month": "Apr",
+    "day": "18",
+    "weekday": "Sat",
+    "timing": "06:49 PM to 07:56 PM",
+    "duration": "01 Hour 08 Mins",
+    "isoDate": "2026-04-18"
+  },
+  {
+    "gregorianDate": "May 17, 2026",
+    "dayName": "Sunday",
+    "month": "May",
+    "day": "17",
+    "weekday": "Sun",
+    "timing": "07:06 PM to 07:58 PM",
+    "duration": "00 Hours 52 Mins",
+    "isoDate": "2026-05-17"
+  },
+  {
+    "gregorianDate": "June 16, 2026",
+    "dayName": "Tuesday",
+    "month": "Jun",
+    "day": "16",
+    "weekday": "Tue",
+    "timing": "07:21 PM to 08:54 PM",
+    "duration": "01 Hour 33 Mins",
+    "isoDate": "2026-06-16"
+  },
+  {
+    "gregorianDate": "July 15, 2026",
+    "dayName": "Wednesday",
+    "month": "Jul",
+    "day": "15",
+    "weekday": "Wed",
+    "timing": "07:21 PM to 08:19 PM",
+    "duration": "00 Hours 58 Mins",
+    "isoDate": "2026-07-15"
+  },
+  {
+    "gregorianDate": "August 14, 2026",
+    "dayName": "Friday",
+    "month": "Aug",
+    "day": "14",
+    "weekday": "Fri",
+    "timing": "07:02 PM to 08:01 PM",
+    "duration": "00 Hours 59 Mins",
+    "isoDate": "2026-08-14"
+  },
+  {
+    "gregorianDate": "September 13, 2026",
+    "dayName": "Sunday",
+    "month": "Sep",
+    "day": "13",
+    "weekday": "Sun",
+    "timing": "06:29 PM to 07:31 PM",
+    "duration": "01 Hour 02 Mins",
+    "isoDate": "2026-09-13"
+  },
+  {
+    "gregorianDate": "October 12, 2026",
+    "dayName": "Monday",
+    "month": "Oct",
+    "day": "12",
+    "weekday": "Mon",
+    "timing": "05:55 PM to 06:36 PM",
+    "duration": "00 Hours 41 Mins",
+    "isoDate": "2026-10-12"
+  },
+  {
+    "gregorianDate": "November 11, 2026",
+    "dayName": "Wednesday",
+    "month": "Nov",
+    "day": "11",
+    "weekday": "Wed",
+    "timing": "05:29 PM to 06:38 PM",
+    "duration": "01 Hour 09 Mins",
+    "isoDate": "2026-11-11"
+  },
+  {
+    "gregorianDate": "December 10, 2026",
+    "dayName": "Thursday",
+    "month": "Dec",
+    "day": "10",
+    "weekday": "Thu",
+    "timing": "05:25 PM to 06:16 PM",
+    "duration": "00 Hours 51 Mins",
+    "isoDate": "2026-12-10"
+  }
+]

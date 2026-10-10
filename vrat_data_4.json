@@ -1,0 +1,345 @@
+{
+  "mahadwadashi": [],
+  "sawan-somwar": [
+    {
+      "month": "Jul",
+      "day": "30",
+      "weekday": "Thu",
+      "name": "First Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "3",
+      "weekday": "Mon",
+      "name": "Second Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "10",
+      "weekday": "Mon",
+      "name": "Third Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "17",
+      "weekday": "Mon",
+      "name": "Fourth Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "24",
+      "weekday": "Mon",
+      "name": "Shravana Ends",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "28",
+      "weekday": "Fri",
+      "name": "Shravana Begins",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "13",
+      "weekday": "Thu",
+      "name": "First Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "17",
+      "weekday": "Mon",
+      "name": "Second Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "24",
+      "weekday": "Mon",
+      "name": "Third Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "31",
+      "weekday": "Mon",
+      "name": "Fourth Shravan Somwar Vrat",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "7",
+      "weekday": "Mon",
+      "name": "Shravana Ends",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "11",
+      "weekday": "Fri",
+      "name": "Shravan Begins *Nepali",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "16",
+      "weekday": "Thu",
+      "name": "First Shravan Somwar",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "20",
+      "weekday": "Mon",
+      "name": "Second Shravan Somwar",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "27",
+      "weekday": "Mon",
+      "name": "Second Shravan Somwar",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "3",
+      "weekday": "Mon",
+      "name": "Second Shravan Somwar",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "10",
+      "weekday": "Mon",
+      "name": "Shravan Ends *Nepali",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "16",
+      "weekday": "Sun",
+      "name": "Sawan Somwar",
+      "tithi": "..."
+    }
+  ],
+  "satyanarayan": [
+    {
+      "month": "Jan",
+      "day": "3",
+      "weekday": "Sat",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "1",
+      "weekday": "Sun",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "3",
+      "weekday": "Tue",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "1",
+      "weekday": "Wed",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "1",
+      "weekday": "Fri",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "30",
+      "weekday": "Sat",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "29",
+      "weekday": "Mon",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "29",
+      "weekday": "Wed",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "27",
+      "weekday": "Thu",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "26",
+      "weekday": "Sat",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "25",
+      "weekday": "Sun",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "23",
+      "weekday": "Wed",
+      "name": "Purnima",
+      "tithi": "..."
+    }
+  ],
+  "purnima": [
+    {
+      "month": "Jan",
+      "day": "3",
+      "weekday": "Sat",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "1",
+      "weekday": "Sun",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "3",
+      "weekday": "Tue",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "1",
+      "weekday": "Wed",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "2",
+      "weekday": "Thu",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "1",
+      "weekday": "Fri",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "30",
+      "weekday": "Sat",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "31",
+      "weekday": "Sun",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "29",
+      "weekday": "Mon",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "29",
+      "weekday": "Wed",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "27",
+      "weekday": "Thu",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "28",
+      "weekday": "Fri",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "26",
+      "weekday": "Sat",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "25",
+      "weekday": "Sun",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "26",
+      "weekday": "Mon",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Purnima",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "23",
+      "weekday": "Wed",
+      "name": "Purnima",
+      "tithi": "..."
+    }
+  ]
+}

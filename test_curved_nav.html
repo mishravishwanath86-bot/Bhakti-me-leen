@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curved Bottom Nav Test</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #7c3aed; /* Purple background like Image 2 */
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* ══════════ CURVED FLUID BOTTOM NAV ══════════ */
+    .curved-nav-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      height: 70px;
+      margin: 0 auto;
+    }
+
+    /* SVG Bar Background */
+    .curved-nav-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.45));
+    }
+
+    .curved-nav-path {
+      fill: #18181c;
+      transition: d 0.4s cubic-bezier(0.34, 1.3, 0.64, 1);
+    }
+
+    /* Floating active circle */
+    .curved-nav-bubble {
+      position: absolute;
+      top: -22px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #22c55e; /* Vibrant green like Image 2 */
+      box-shadow: 0 8px 20px rgba(34, 197, 94, 0.5), inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.4s cubic-bezier(0.34, 1.3, 0.64, 1);
+      transform: translateX(-50%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .curved-nav-bubble svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: #18181c;
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Items Container */
+    .curved-nav-items {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      z-index: 5;
+    }
+
+    .curved-nav-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      color: #94a3b8;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .curved-nav-btn .icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .curved-nav-btn .icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #9ca3af;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    /* When active, hide the regular icon since bubble shows it */
+    .curved-nav-btn.active .icon {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .curved-nav-btn .label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 4px;
+      color: #9ca3af;
+      transition: all 0.3s ease;
+    }
+
+    .curved-nav-btn.active .label {
+      color: #22c55e;
+      font-weight: 700;
+      transform: translateY(6px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 style="color: white; text-align: center; margin: 0;">Liquid Curved Bottom Bar</h2>
+    
+    <div class="curved-nav-wrapper" id="nav-wrapper">
+      <svg class="curved-nav-svg" viewBox="0 0 1000 175" preserveAspectRatio="none">
+        <path id="nav-path" class="curved-nav-path" d="" />
+      </svg>
+
+      <div class="curved-nav-bubble" id="nav-bubble">
+        <div id="bubble-icon-wrap"></div>
+      </div>
+
+      <div class="curved-nav-items">
+        <button class="curved-nav-btn active" onclick="setNavTab(0)">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>
+          </div>
+          <span class="label">होम</span>
+        </button>
+
+        <button class="curved-nav-btn" onclick="setNavTab(1)">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+          </div>
+          <span class="label">ऑडियो</span>
+        </button>
+
+        <button class="curved-nav-btn" onclick="setNavTab(2)">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="20" cy="12" r="2"/></svg>
+          </div>
+          <span class="label">जाप माला</span>
+        </button>
+
+        <button class="curved-nav-btn" onclick="setNavTab(3)">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z"/><path d="M4 18h16a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg>
+          </div>
+          <span class="label">आरती</span>
+        </button>
+
+        <button class="curved-nav-btn" onclick="setNavTab(4)">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <span class="label">पंचांग</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const totalTabs = 5;
+    const viewWidth = 1000;
+    const viewHeight = 175;
+    const tabWidth = viewWidth / totalTabs; // 200
+    const cornerRadius = 45;
+
+    // Icons SVGs
+    const iconSvgs = [
+      '<svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>',
+      '<svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',
+      '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="20" cy="12" r="2"/></svg>',
+      '<svg viewBox="0 0 24 24"><path d="M12 2c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z"/><path d="M4 18h16a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg>',
+      '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'
+    ];
+
+    function getCurvedPath(activeIdx) {
+      const cx = (activeIdx + 0.5) * tabWidth;
+      // Scoop dimensions
+      const scoopRadius = 78;
+      const depth = 85;
+
+      const p1x = cx - scoopRadius;
+      const p2x = cx + scoopRadius;
+
+      // Smooth cubic bezier shoulders matching Image 2
+      // Top line from 0 to p1x, then curve down to (cx, depth), then curve up to p2x, then line to 1000
+      return `M 0,${cornerRadius} 
+              A ${cornerRadius},${cornerRadius} 0 0 1 ${cornerRadius},0 
+              L ${p1x - 15},0 
+              C ${p1x + 10},0 ${cx - 48},${depth} ${cx},${depth} 
+              C ${cx + 48},${depth} ${p2x - 10},0 ${p2x + 15},0 
+              L ${viewWidth - cornerRadius},0 
+              A ${cornerRadius},${cornerRadius} 0 0 1 ${viewWidth},${cornerRadius} 
+              L ${viewWidth},${viewHeight - cornerRadius} 
+              A ${cornerRadius},${cornerRadius} 0 0 1 ${viewWidth - cornerRadius},${viewHeight} 
+              L ${cornerRadius},${viewHeight} 
+              A ${cornerRadius},${cornerRadius} 0 0 1 0,${viewHeight - cornerRadius} 
+              Z`;
+    }
+
+    function setNavTab(idx) {
+      const path = document.getElementById('nav-path');
+      const bubble = document.getElementById('nav-bubble');
+      const iconWrap = document.getElementById('bubble-icon-wrap');
+      const buttons = document.querySelectorAll('.curved-nav-btn');
+
+      buttons.forEach((b, i) => {
+        b.classList.toggle('active', i === idx);
+      });
+
+      // Update path
+      path.setAttribute('d', getCurvedPath(idx));
+
+      // Move bubble
+      const percent = (idx + 0.5) * (100 / totalTabs);
+      bubble.style.left = percent + '%';
+
+      // Set bubble icon
+      iconWrap.innerHTML = iconSvgs[idx];
+    }
+
+    // Initial setup
+    setNavTab(0);
+  </script>
+</body>
+</html>

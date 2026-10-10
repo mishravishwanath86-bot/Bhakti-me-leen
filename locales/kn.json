@@ -1,0 +1,63 @@
+{
+  "appName": "Bhakti Me Leen",
+  "tagline": "ಸನಾತನ ಧರ್ಮ, ಧ್ಯಾನ ಮತ್ತು ಆತ್ಮಿಕ ಶಾಂತಿಯ ಪವಿತ್ರ ದ್ವಾರ",
+  "shubhaMantra": "✨ ಓಂ ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ ✨",
+  "nav": {
+    "panchang": "ಪಂಚಾಂಗ",
+    "jar": "ಅಮೃತ ಕಳಶ",
+    "home": "ಮುಖಪುಟ",
+    "katha": "ಆಡಿಯೋ",
+    "profile": "ಪ್ರೊಫೈಲ್",
+    "settings": "ಸೆಟ್ಟಿಂಗ್ಸ್",
+    "aarti": "ಆರತಿ ದರ್ಶನ",
+    "japMala": "ಜಪ ಮಾಲೆ"
+  },
+  "home": {
+    "welcome": "ಸ್ವಾಗತ",
+    "guestLogin": "ಅತಿಥಿ ಪ್ರವೇಶ",
+    "dailyTracker": "ದೈನಂದಿನ ಸಾಧನಾ ಟ್ರ್ಯಾಕರ್",
+    "visitsToday": "ಇಂದಿನ ಪವಿತ್ರ ಭೇಟಿ",
+    "times": "ಬಾರಿ",
+    "streak": "ದಿನಗಳ ಸರಣಿ",
+    "streakShield": "ರಕ್ಷಣಾ ಕವಚ",
+    "punyaPoints": "ಪುಣ್ಯ ಅಂಕಗಳು",
+    "openSadhanaCenter": "ಸಾಧನಾ ನಿಯಂತ್ರಣ ತೆರೆಯಿರಿ",
+    "liveRadio": "24×7 ಲೈವ್ ಭಕ್ತಿ ರೇಡಿಯೋ",
+    "parikrama": "ದಿವ್ಯ 3D ದೇವಾಲಯ ಪರಿಕ್ರಮ",
+    "amritKalash": "ಭಕ್ತಿ ಅಮೃತ ಕಳಶ",
+    "radioNowPlaying": "ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿದೆ",
+    "categories": "ದಿವ್ಯ ವರ್ಗಗಳು",
+    "dailyPanchang": "ದೈನಂದಿನ ಪಂಚಾಂಗ",
+    "shubhMuhurat": "ಶುಭ ಮುಹೂರ್ತ"
+  },
+  "categories": {
+    "aarti": "ಆರತಿ",
+    "chalisa": "ಚಾಲೀಸಾ",
+    "mantra": "ಮಂತ್ರ",
+    "stotra": "ಸ್ತೋತ್ರ",
+    "vrat": "ವ್ರತ",
+    "festival": "ಹಬ್ಬಗಳು",
+    "ramayana": "ರಾಮಾಯಣ",
+    "katha": "ಕಥೆಗಳು",
+    "desh": "ದೇಶಭಕ್ತಿ",
+    "panchang": "ಪಂಚಾಂಗ"
+  },
+  "settings": {
+    "title": "ಸಾಧನಾ ನಿಯಂತ್ರಣ ಮತ್ತು ಸೆಟ್ಟಿಂಗ್ಸ್",
+    "haptics": "ಆಧ್ಯಾತ್ಮಿಕ ಸ್ಪರ್ಶ ಮತ್ತು ಧ್ವನಿ",
+    "brahmaMuhurta": "ಬ್ರಾಹ್ಮೀ ಮುಹೂರ್ತ ಅಲಾರಾಂ",
+    "bioAura": "ಪ್ರಾಣ ಶಕ್ತಿ ಔರಾ",
+    "vault": "ಸಾಧನಾ ಕ್ಲೌಡ್ ವಾಲ್ಟ್",
+    "language": "ಭಾಷೆ ಆಯ್ಕೆ (Language)",
+    "selectLanguage": "ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "applyLanguage": "ಭಾಷೆ ಅನ್ವಯಿಸಿ",
+    "logout": "ಲಾಗ್ ಔಟ್"
+  },
+  "audio": {
+    "title": "ಭಕ್ತಿ ಆಡಿಯೋ ಲೈಬ್ರರಿ",
+    "pureAudio": "ಆಡಿಯೋ ಮಾತ್ರ",
+    "watchVideo": "ವೀಡಿಯೊ ವೀಕ್ಷಿಸಿ",
+    "nowPlaying": "ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿದೆ",
+    "lyrics": "ಸಾಹಿತ್ಯ ಮತ್ತು ಭಾವಾರ್ಥ"
+  }
+}

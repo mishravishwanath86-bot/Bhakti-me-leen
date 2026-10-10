@@ -1,0 +1,6 @@
+dpPageTitleWrapper">
+Home
+Panchang
+Month Panchang	Dainik Panchang	Assamese Panjika	Bengali Panjika	Tamil Panchangam
+Odia Panji	Malayalam Panchangam	Marathi Panchang	Gujarati Panchang	Kannada Panchang
+<a href="/telugu/panchanga/telugu-month-panchan

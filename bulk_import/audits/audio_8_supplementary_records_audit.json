@@ -1,0 +1,81 @@
+{
+  "audit_type": "INSERT 8 SUPPLEMENTARY AUDIO RECORDS",
+  "timestamp": "2026-08-29T07:36:22.475376+00:00",
+  "backup": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\db\\backups\\bhakti_pre_8_supp_records_20260829_073626.db",
+  "before": {
+    "count": 10002,
+    "working_audio": 30,
+    "integrity": "ok",
+    "fts5": 10002
+  },
+  "after": {
+    "count": 10010,
+    "working_audio": 38,
+    "integrity": "ok",
+    "fts5": 10010,
+    "fts5_sync": true,
+    "fk_errors": 0,
+    "dup_ids": 0,
+    "dup_hashes": 0
+  },
+  "inserted_records": [
+    {
+      "id": "supp-katha-guru_sant-bhakt-chhitu-panda-pavaan-satya-katha-indresh-ji",
+      "audio_file": "katha_indresh_chhitupanda.mp3",
+      "audio_url": "assets/audio/katha_indresh_chhitupanda.mp3"
+    },
+    {
+      "id": "supp-katha-guru_sant-pandit-indresh-upadhyay-ji-pawan-prasang-pravachan",
+      "audio_file": "katha_indresh_prasang.mp3",
+      "audio_url": "assets/audio/katha_indresh_prasang.mp3"
+    },
+    {
+      "id": "supp-katha-guru_sant-bhaktabhoop-rani-ratnavati-ji-ka-charitra-indresh-ji",
+      "audio_file": "katha_indresh_ratnavati.mp3",
+      "audio_url": "assets/audio/katha_indresh_ratnavati.mp3"
+    },
+    {
+      "id": "supp-katha-krishna-mahakavi-bhakt-surdas-ji-divya-jeevan-charitra-indresh-ji",
+      "audio_file": "katha_indresh_surdas.mp3",
+      "audio_url": "assets/audio/katha_indresh_surdas.mp3"
+    },
+    {
+      "id": "supp-katha-guru_sant-bhakt-taj-begum-ki-adbhut-kahani-indresh-ji",
+      "audio_file": "katha_indresh_tajbegum.mp3",
+      "audio_url": "assets/audio/katha_indresh_tajbegum.mp3"
+    },
+    {
+      "id": "supp-katha-shiva-bhagwan-shankar-ne-kaise-kiya-mata-parvati-ka-bhram-door-rajan-ji",
+      "audio_file": "katha_rajan_bhramdoor.mp3",
+      "audio_url": "assets/audio/katha_rajan_bhramdoor.mp3"
+    },
+    {
+      "id": "supp-katha-shiva-ek-baar-treta-yug-mahi-shiva-sati-prasang-rajan-ji",
+      "audio_file": "katha_rajan_kumbhaj.mp3",
+      "audio_url": "assets/audio/katha_rajan_kumbhaj.mp3"
+    },
+    {
+      "id": "supp-bhajan-shiva-shrawan-maas-vishesh-shiv-bhajan-amritdhara-rajan-ji",
+      "audio_file": "katha_rajan_shivbhajan.mp3",
+      "audio_url": "assets/audio/katha_rajan_shivbhajan.mp3"
+    }
+  ],
+  "final_report": {
+    "BEFORE_COUNT": 10002,
+    "NEW_RECORDS": 8,
+    "AFTER_COUNT": 10010,
+    "AUDIO_BEFORE": 30,
+    "AUDIO_AFTER": 38,
+    "ALL_8_VERIFIED": true,
+    "DUPLICATES": 0,
+    "FK_ERRORS": 0,
+    "PRAGMA_INTEGRITY": "ok",
+    "FTS5_COUNT": 10010,
+    "FTS5_SYNC": "TRUE",
+    "DATABASE_CHANGES": "+8 records, audio_url only",
+    "FILES_CHANGED": 0,
+    "DOWNLOADS": 0,
+    "BATCH_021_STARTED": "NO",
+    "FINAL_STATUS": "PASS"
+  }
+}

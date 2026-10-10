@@ -1,0 +1,619 @@
+{
+  "phase": "Phase 2G - Second Conservative Media Verification",
+  "mode": "STRICT READ-ONLY",
+  "timestamp": "2026-08-31",
+  "database_baseline": {
+    "total_database_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio_total": 135,
+    "local_mp3": 38,
+    "youtube_audio": 97,
+    "video_urls_total": 12,
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "database_writes": 0
+  },
+  "second_verification_summary": {
+    "total_records_verified": 20,
+    "total_urls_verified": 40,
+    "audio_counts": {
+      "VERIFIED_HIGH": 16,
+      "REVIEW": 3,
+      "REJECT": 1
+    },
+    "video_counts": {
+      "VERIFIED_HIGH": 17,
+      "REVIEW": 2,
+      "REJECT": 1
+    },
+    "total_verified_high": 33,
+    "total_review": 5,
+    "total_reject": 2,
+    "live_urls": 40,
+    "duplicate_ids": 0,
+    "existing_db_collisions": 0,
+    "final_status": "PHASE 2G SECOND VERIFICATION COMPLETE — AWAITING APPLY APPROVAL"
+  },
+  "verified_candidates": [
+    {
+      "index": 1,
+      "record_id": "katha-dashavatara-matsya",
+      "is_canonical_root": true,
+      "katha_title": "मत्स्य अवतार: प्रलय से वेदों व सप्तऋषियों की रक्षा",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "jG4WPko_laM",
+        "youtube_url": "https://www.youtube.com/watch?v=jG4WPko_laM",
+        "title": "भगवान श्री विष्णु का मत्स्य अवतार | संपूर्ण कथा | Lord Vishnu's Matsya Avatar | Vishnu Puran",
+        "channel": "Hindi Tv Series",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Authentic full Vishnu Puran spoken narrative on Matsya avatar protecting Manu and the Vedas. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "r633N12mJxQ",
+        "youtube_url": "https://www.youtube.com/watch?v=r633N12mJxQ",
+        "title": "भगवान विष्णु का पहला मत्स्य मछली अवतार | विष्णुपुराण कथा | Bhakti Sagar",
+        "channel": "Bhakti Sagar AR Entertainments",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Dedicated visual Puranic Katha video presenting the Matsya incarnation. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 2,
+      "record_id": "katha-dashavatara-kurma",
+      "is_canonical_root": true,
+      "katha_title": "कूर्म (कच्छप) अवतार एवं समुद्र मंथन",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "dJ2mzB3ADhI",
+        "youtube_url": "https://www.youtube.com/watch?v=dJ2mzB3ADhI",
+        "title": "Samudra Manthan – The Complete Story of Lord Vishnu's Kurma Avatar",
+        "channel": "Amrit Dash Art",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete narration of Lord Vishnu's Kurma Avatar supporting Mount Mandara during Samudra Manthan. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "hTVdwjK1YQw",
+        "youtube_url": "https://www.youtube.com/watch?v=hTVdwjK1YQw",
+        "title": "भगवान विष्णु का दूसरा अवतार कुर्मु कछुआ Bhagwan vishnu ka dusra avatar kaun tha,Vishnu Avatar Story",
+        "channel": "The Sources Behind",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Detailed visual presentation and discourse on the Kurma Avatar. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 3,
+      "record_id": "katha-dashavatara-varaha",
+      "is_canonical_root": true,
+      "katha_title": "वराह अवतार: हिरण्याक्ष वध एवं पृथ्वी उद्धार",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "Wbway6iejXc",
+        "youtube_url": "https://www.youtube.com/watch?v=Wbway6iejXc",
+        "title": "वरुथिनी एकादशी व्रत कथा | वराह अवतार की कथा | Ds Pal,Varuthini Ekadashi Katha,Varuthi Ekadashi Story",
+        "channel": "Chanda Pop Songs",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REVIEW",
+        "grounding_reason": "Contains Varuthini Ekadashi Vrat Katha with embedded Varaha episode rather than a standalone Varaha Purana Katha narrative."
+      },
+      "video_candidate": {
+        "youtube_id": "4LlkJsm66sA",
+        "youtube_url": "https://www.youtube.com/watch?v=4LlkJsm66sA",
+        "title": "\"वराह अवतार\" | भगवान विष्णु ने वराह अवतार क्यों लिया? | Varaha Avatar Story",
+        "channel": "श्री श्री प्रभु जी",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Direct dedicated video discourse on the purpose and manifestation of the Varaha Avatar. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 4,
+      "record_id": "katha-dashavatara-narasimha",
+      "is_canonical_root": true,
+      "katha_title": "नृसिंह अवतार: हिरण्यकश्यप वध एवं प्रह्लाद रक्षा",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "P1dBpgjEnz4",
+        "youtube_url": "https://www.youtube.com/watch?v=P1dBpgjEnz4",
+        "title": "Narasimha Chaturdashi | Story of Lord Narasimha & Prahlad Maharaj | भगवान नरसिंह और प्रह्लाद की कथा",
+        "channel": "Hare Krsna TV",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Full spoken narrative of Lord Narasimha and Bhakt Prahlad from Hare Krsna TV. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "GE_okUlJ2AA",
+        "youtube_url": "https://www.youtube.com/watch?v=GE_okUlJ2AA",
+        "title": "भक्त प्रह्लाद और नृसिंह अवतार की अद्भुत कथा | और हिरण्यकशिपु का अंत | Prahlad story",
+        "channel": "Puran Sri Hari",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Detailed Puranic Katha video presentation of Prahlad's protection and Hiranyakashipu's slaying. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 5,
+      "record_id": "katha-dashavatara-vamana",
+      "is_canonical_root": true,
+      "katha_title": "वामन अवतार: राजा बलि का उद्धार एवं तीन पग भूमि",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "I8gufj7FQqE",
+        "youtube_url": "https://www.youtube.com/watch?v=I8gufj7FQqE",
+        "title": "वामन अवतार की पौराणिक कथा (Part-1) | Vaman Avtar Ki Katha | राजा बलि की कथा | Surjan Chaitanya",
+        "channel": "Kalyani Cassettes",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REVIEW",
+        "grounding_reason": "Marked explicitly as Part-1 of a multi-part series (Surjan Chaitanya), representing an incomplete standalone narrative per Rule 8."
+      },
+      "video_candidate": {
+        "youtube_id": "rdq9nocejP4",
+        "youtube_url": "https://www.youtube.com/watch?v=rdq9nocejP4",
+        "title": "वामन अवतार | राजा बली की संपूर्ण कथा  | Raja Bali Ri Katha Part 1 | Mohan Jhala | Marudhar Films",
+        "channel": "Marudhar Films",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete standalone video presentation of King Bali and Vamana Avatar. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 6,
+      "record_id": "katha-dashavatara-parashurama",
+      "is_canonical_root": true,
+      "katha_title": "भगवान परशुराम अवतार: 21 बार आततायी क्षत्रियों का दमन",
+      "deity_id": "other_deities",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "tYI80vkSBzo",
+        "youtube_url": "https://www.youtube.com/watch?v=tYI80vkSBzo",
+        "title": "Parashurama Avatar Full Story | 6th Avatar of Lord Vishnu | Complete Story in Hindi",
+        "channel": "Sanatani.Studio",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete Hindi story of Lord Parashurama's birth, penance, and warrior deeds. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "baQqZdiXunQ",
+        "youtube_url": "https://www.youtube.com/watch?v=baQqZdiXunQ",
+        "title": "పరశురాముడు చరిత్ర - సంపూర్ణ కథ | పరశురాముని అవతారం | Parashurama Avatar complete Story by Chaganti",
+        "channel": "Sanatana Vedica Dharmaa",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REVIEW",
+        "grounding_reason": "Spoken discourse by Chaganti Koteswara Rao is in Telugu language; placed in REVIEW for Hindi/Sanskrit app consistency per Rule 9."
+      }
+    },
+    {
+      "index": 7,
+      "record_id": "katha-dashavatara-rama",
+      "is_canonical_root": true,
+      "katha_title": "मर्यादा पुरुषोत्तम श्री राम अवतार: रावण संहार व धर्म स्थापना",
+      "deity_id": "ram",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "8XSeD3buZyw",
+        "youtube_url": "https://www.youtube.com/watch?v=8XSeD3buZyw",
+        "title": "Bhaye Pragat Kripala | राम जनम कथा | Ram Janam Katha | भये प्रगट कृपाला दीन दयाला | New Ram Songs",
+        "channel": "Aadi Shakti Devotional",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REJECT",
+        "grounding_reason": "Candidate ('Bhaye Pragat Kripala') is primarily a devotional Stuti song rather than a spoken Katha narrative per Rule 6."
+      },
+      "video_candidate": {
+        "youtube_id": "5Pqtq7i1ICE",
+        "youtube_url": "https://www.youtube.com/watch?v=5Pqtq7i1ICE",
+        "title": "राम जन्म कथा स्वर रजनेश शास्त्री || Ram janm कथा || Rajnesh Shastri",
+        "channel": "Shivam Studio Barkhiriya",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Oral Ram Janma Katha Pravachan by Rajnesh Shastri explaining the advent of Shri Ram. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 8,
+      "record_id": "katha-dashavatara-krishna",
+      "is_canonical_root": true,
+      "katha_title": "लीला पुरुषोत्तम भगवान श्री कृष्ण अवतार: गीता ज्ञान",
+      "deity_id": "krishna",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "FeZs62yREuk",
+        "youtube_url": "https://www.youtube.com/watch?v=FeZs62yREuk",
+        "title": "देखिए महाराज श्री कैसे छोटे से कृष्णा को लाड प्यार कर रहे हैं || #dnthakurji #krishna",
+        "channel": "Shri Devkinandan Thakur Ji ",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Authentic spoken discourse on Shri Krishna Janmotsav by Shri Devkinandan Thakur Ji. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "PIwZ7ugXfjI",
+        "youtube_url": "https://www.youtube.com/watch?v=PIwZ7ugXfjI",
+        "title": "अच्युतम केशवम | Achutam Keshavam | Kaun Kehte hai Bhagwan Aate nahi | Beautiful Krishna Bhajan",
+        "channel": "Bhajan India",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REJECT",
+        "grounding_reason": "Candidate is a musical bhajan ('Achyutam Keshavam') rather than a dedicated Katha video presentation per Rule 7."
+      }
+    },
+    {
+      "index": 9,
+      "record_id": "katha-dashavatara-buddha",
+      "is_canonical_root": true,
+      "katha_title": "भगवान बुद्ध अवतार: अहिंसा, करुणा व दया का संदेश",
+      "deity_id": "other_deities",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "t1wunxsiruw",
+        "youtube_url": "https://www.youtube.com/watch?v=t1wunxsiruw",
+        "title": "विष्णु भगवान 10 अवतार कथा - Bhagwan Vishnu 10 Avtaar Katha - Vishnu Avatar Story In Hindi",
+        "channel": "Aaj Ki Katha Amritwani",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REVIEW",
+        "grounding_reason": "Broad Dashavatara overview compilation covering all 10 avatars rather than an in-depth standalone Buddha Katha per Rule 6."
+      },
+      "video_candidate": {
+        "youtube_id": "aRtNO04vmLM",
+        "youtube_url": "https://www.youtube.com/watch?v=aRtNO04vmLM",
+        "title": "Gautam Buddha - The 9th Avatar of Lord Vishnu? Dr. Vineet Aggarwal",
+        "channel": "Dr. Vineet Aggarwal",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Scholarly and spiritual thematic discourse on Buddha as the 9th Vishnu Avatar by Dr. Vineet Aggarwal. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 10,
+      "record_id": "katha-dashavatara-kalki",
+      "is_canonical_root": true,
+      "katha_title": "कल्कि अवतार: कलयुग के अंत में अधर्म का नाश",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "n6oU7-PcwRQ",
+        "youtube_url": "https://www.youtube.com/watch?v=n6oU7-PcwRQ",
+        "title": "सम्पूर्ण श्री कल्कि पुराण | Kalki Puran in Hindi | Full Spiritual Audiobook in Hindi.",
+        "channel": "Spiritual Spirit",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete audio reading of Shri Kalki Puran detailing the advent of the 10th Avatar. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "18HbayqQ84A",
+        "youtube_url": "https://www.youtube.com/watch?v=18HbayqQ84A",
+        "title": "Complete Sri kalki puran🔥 | भगवान कल्कि अवतार और सतयुग की स्थापना Kalki Purana ( hindi ) | part 1",
+        "channel": "Audiobook ki Ganga ",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Full video presentation and narrative of Sri Kalki Puran. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 11,
+      "record_id": "katha-hanuman-sanjeevani-booti-prasang",
+      "is_canonical_root": true,
+      "katha_title": "द्रोणागिरि पर्वत एवं संजीवनी बूटी प्रसंग",
+      "deity_id": "hanuman",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "RAGL8Yi0fgg",
+        "youtube_url": "https://www.youtube.com/watch?v=RAGL8Yi0fgg",
+        "title": "लक्ष्मण शक्ति Vol 6 | रामायण कथा | हनुमान ने संजीवनी बूटी लाकर बचाए लक्ष्मण के प्राण चंद्रभूषण पाठक",
+        "channel": "KanhaiyaCassette",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Classic Ramayana audio narration of Laxman Shakti and Hanuman fetching Sanjeevani Booti. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "j1LPAzOI4UU",
+        "youtube_url": "https://www.youtube.com/watch?v=j1LPAzOI4UU",
+        "title": "लक्ष्मण शक्ति 🔥भाग 2 | Lakshman Shakti | ऐसी रामलीला देखकर आप रो पड़ोगे | emotional Ramleela 2026",
+        "channel": "Dehati Ram Studio",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Evocative Ramleela dramatization of Laxman Shakti and Dronagiri mountain. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 12,
+      "record_id": "katha-khatushyam-barbareek-sheesh-daan",
+      "is_canonical_root": true,
+      "katha_title": "महाबली बर्बरीक का शीश दान एवं श्याम रूप प्राप्ति कथा",
+      "deity_id": "khatushyam",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "uRRoe12Wf04",
+        "youtube_url": "https://www.youtube.com/watch?v=uRRoe12Wf04",
+        "title": "Jai Ho Tumhari Barbarik Balvaani [Full Song] O Haare Ke Sahare",
+        "channel": "T-Series Bhakti Sagar",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Authentic narrative exposition of Veer Barbareek offering his head to Lord Krishna by T-Series Bhakti. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "POXXHjbMB10",
+        "youtube_url": "https://www.youtube.com/watch?v=POXXHjbMB10",
+        "title": "खाटू श्याम(बर्बरीक) जी की कथा/कहानी  | Khatu Shyam(Barbarik) Story/Katha in hindi",
+        "channel": "Vijender Singh Dhanda",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete video storytelling recounting the Mahabharata episode of Barbareek and Shyam boon. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 13,
+      "record_id": "katha-krishna-govardhan-dharan-leela",
+      "is_canonical_root": true,
+      "katha_title": "इंद्र दर्प दलन एवं श्री गोवर्धन धारण लीला",
+      "deity_id": "krishna",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "ZXhNB0jriT0",
+        "youtube_url": "https://www.youtube.com/watch?v=ZXhNB0jriT0",
+        "title": "गोवर्धन पूजा कथा | गोवर्धन पूजा 2025 | गिरिराज कथा | Ds Pal | Govardhan Puja Katha, Govardhan Bhajan",
+        "channel": "Sonotek Bhakti",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete audio narration of Indra's pride being shattered and Krishna lifting Govardhan by Sonotek. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "jW86VFuSWsA",
+        "youtube_url": "https://www.youtube.com/watch?v=jW86VFuSWsA",
+        "title": "Govardhan Special: Govardhan Puja ki Katha गिरिराज जी की कथा Govardhan ki Katha गोवर्धन लीला",
+        "channel": "Bhakti Bhajan Sagar",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Spiritual video presentation describing Govardhan Puja, Annakoot, and divine protection of Braj. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 14,
+      "record_id": "katha-krishna-sudama-charitra",
+      "is_canonical_root": true,
+      "katha_title": "सच्चे मित्र का सम्मान: सुदामा चरित्र प्रसंग",
+      "deity_id": "krishna",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "rYnXsVOfG_A",
+        "youtube_url": "https://www.youtube.com/watch?v=rYnXsVOfG_A",
+        "title": "सुदामा चरित्र सम्पूर्ण कथा | Sudama Charitra - By डॉ. श्यामसुंदर पाराशर जी महाराज",
+        "channel": "Bhagwat Kalpadrum",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Deeply emotional spoken narrative of Sudama arriving in Dwarka and Krishna's reception by Bhagwat Kalpadrum. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "wt2oI054Egg",
+        "youtube_url": "https://www.youtube.com/watch?v=wt2oI054Egg",
+        "title": "कृष्ण-सुदामा मिलन की अद्भुत कथा | Sudama Charitra Katha | Dr. Shyasundar Parashar Ji Maharaj",
+        "channel": "Bhagwat Kalpadrum",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Dedicated video discourse covering Krishna-Sudama friendship from the Bhagavata Purana. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 15,
+      "record_id": "katha-pauranik-bhagirath-gangavataran",
+      "is_canonical_root": true,
+      "katha_title": "महाराज भगीरथ की घोर तपस्या एवं गंगावतरण कथा",
+      "deity_id": "ganga",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "t0BlmTjIcdQ",
+        "youtube_url": "https://www.youtube.com/watch?v=t0BlmTjIcdQ",
+        "title": "Bhagirath Ki Tapasya Aur Ganga Avtaran Ki Sampurna Katha 3D Animated Story | Har Har Gange",
+        "channel": "Bhakti Gyan Sharma",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Authentic narration of Bhagirath's penance, Shiva holding Ganga in His jata, and ancestral salvation. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "Je5w8zn4BE8",
+        "youtube_url": "https://www.youtube.com/watch?v=Je5w8zn4BE8",
+        "title": "जय गंगा मैया कथा | भगीरथ की भक्ति भावना और उदारता को देख ऋषि जनहू हुए प्रसन्न",
+        "channel": "Tilak",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Classic visual presentation from Jai Ganga Maiya / Tilak depicting Bhagirath's devotion. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 16,
+      "record_id": "katha-pauranik-gajendra-moksha",
+      "is_canonical_root": true,
+      "katha_title": "श्रीमद्भागवत गजेंद्र मोक्ष कथा (आर्त पुकार पर श्री हरि आगमन)",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "9Y8iRf7w76U",
+        "youtube_url": "https://www.youtube.com/watch?v=9Y8iRf7w76U",
+        "title": "गजेंद्र मोक्ष की कथा | Gajendra moksha ki katha | Gajendra Moksh ki kahani",
+        "channel": "Smunni TV Dharmik Stories",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Storytelling narrative of Gajendra's surrender and Lord Vishnu's swift arrival from Smunni TV. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "i6tD1LTsCko",
+        "youtube_url": "https://www.youtube.com/watch?v=i6tD1LTsCko",
+        "title": "गजेंद्र मोक्ष स्त्रोतम | Gajendra Moksha Strotam with Lyrics | Ravish Sonam Soni",
+        "channel": "Yuki Music",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "REVIEW",
+        "grounding_reason": "Features the Sanskrit Stotram chant with textual verses rather than the full spoken narrative per Rule 6."
+      }
+    },
+    {
+      "index": 17,
+      "record_id": "katha-pauranik-markandeya-shiva-kripa",
+      "is_canonical_root": true,
+      "katha_title": "महर्षि मार्कण्डेय शिव कृपा: यमराज पर महामृत्युंजय की विजय",
+      "deity_id": "shiva",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "Fp4NyEXQN0U",
+        "youtube_url": "https://www.youtube.com/watch?v=Fp4NyEXQN0U",
+        "title": "Amrit Gaathayein: Rishi Markandeya ko Mahadev se kaise mila ajar amar hone ka vardaan? 🔱",
+        "channel": "T-Series Bhakti Sagar",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Official T-Series devotional story on Sage Markandeya, Mahamrityunjaya devotion, and Shiva conquering death. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "98VX9VbXzhk",
+        "youtube_url": "https://www.youtube.com/watch?v=98VX9VbXzhk",
+        "title": "Mahamrityunjay Mantra Story with English Subtitles I Rishi Markendeya Katha (Shiv Mahapuran)",
+        "channel": "T-Series Bhakti Sagar",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Visual storytelling on Lord Shiva protecting Markandeya from Yamaraj by T-Series Bhakti. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 18,
+      "record_id": "katha-pauranik-samudra-manthan-14-ratna",
+      "is_canonical_root": true,
+      "katha_title": "समुद्र मंथन से निकले 14 दिव्य रत्नों का आध्यात्मिक रहस्य",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "iqjT3lulmbo",
+        "youtube_url": "https://www.youtube.com/watch?v=iqjT3lulmbo",
+        "title": "समुद्र मंथन से निकले 14 रत्नों के नाम तथा उनकी महत्ता || Divine Blessings ||",
+        "channel": "Divine Blessings",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Dedicated audio discourse explaining all 14 divine jewels emerging during ocean churning. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "vm3jN4FtzdM",
+        "youtube_url": "https://www.youtube.com/watch?v=vm3jN4FtzdM",
+        "title": "समुद्र मंथन से निकले 14 अनमोल रत्न | Samudra Manthan History In Hindi",
+        "channel": "Mr MaNish SanKhla",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Visual presentation detailing the spiritual meaning of Halahal, Kamadhenu, Parijat, Lakshmi, and Amrit. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 19,
+      "record_id": "katha-purana-garuda",
+      "is_canonical_root": true,
+      "katha_title": "गरुड़ पुराण सार: मृत्यु उपरांत जीव की गति व मोक्ष",
+      "deity_id": "vishnu",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "OLj0s8Amxmw",
+        "youtube_url": "https://www.youtube.com/watch?v=OLj0s8Amxmw",
+        "title": "Garuda Purana Complete in Hindi - Episode 1",
+        "channel": "Bhajan Sansar",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete summary recitation of Garuda Purana focusing on Karma, soul's journey, and liberation. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "nXSQzScMf_s",
+        "youtube_url": "https://www.youtube.com/watch?v=nXSQzScMf_s",
+        "title": "गरुड़ पुराण सार Garud Puran Saar PROMO I SHAILENDRA BHARTTI I Chalo Prabhu Ke Dwar",
+        "channel": "T-Series Bhakti Sagar",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Official T-Series Bhakti Sagar video presenting the philosophical core of Garuda Purana. Live HTTP 200, zero collisions."
+      }
+    },
+    {
+      "index": 20,
+      "record_id": "katha-purana-shiva",
+      "is_canonical_root": true,
+      "katha_title": "शिव पुराण सार: सदाशिव स्वरूप व 12 ज्योतिर्लिंग",
+      "deity_id": "shiva",
+      "current_audio_url": "NULL",
+      "current_video_url": "NULL",
+      "audio_candidate": {
+        "youtube_id": "M9innkB3CdQ",
+        "youtube_url": "https://www.youtube.com/watch?v=M9innkB3CdQ",
+        "title": "शिव पुराण: सभी 12 ज्योतिर्लिंगों की सम्पूर्ण कथा | सोमनाथ से घृष्णेश्वर तक | Mahadev",
+        "channel": "BhaktiSagar Animation",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Complete narration of origins and legends behind all 12 Jyotirlingas from Shiva Mahapurana. Live HTTP 200, zero collisions."
+      },
+      "video_candidate": {
+        "youtube_id": "CkEOQe1igag",
+        "youtube_url": "https://www.youtube.com/watch?v=CkEOQe1igag",
+        "title": "द्वादश ज्योतिर्लिंग दर्शन कथा || 12 ज्योतिर्लिंग कथा || 12 Jyotirling Katha | Bhole Chamatkari Katha",
+        "channel": "Trimurti Bhakti",
+        "is_live": true,
+        "http_status": "HTTP_200",
+        "verdict": "VERIFIED_HIGH",
+        "grounding_reason": "Visual spiritual pilgrimage video presenting the 12 Jyotirlingas with Puranic context. Live HTTP 200, zero collisions."
+      }
+    }
+  ]
+}

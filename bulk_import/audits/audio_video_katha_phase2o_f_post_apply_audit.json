@@ -1,0 +1,593 @@
+{
+  "phase": "2O-F",
+  "mode": "STRICT_READ_ONLY_POST_APPLY_AUDIT",
+  "database_modified": false,
+  "database_writes": 0,
+  "source_apply": {
+    "audio": 27,
+    "video": 17,
+    "total": 44
+  },
+  "current_database": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio": 349,
+    "local_mp3": 38,
+    "youtube_audio": 311,
+    "video_urls": 197,
+    "total_katha": 505
+  },
+  "mapping_verification": {
+    "applied_match": 44,
+    "mismatch": 0,
+    "missing": 0,
+    "status": "PASS"
+  },
+  "apply_scope": {
+    "approved_audio": 27,
+    "approved_video": 17,
+    "applied_audio": 27,
+    "applied_video": 17,
+    "status": "PASS"
+  },
+  "authorized_changes": [
+    {
+      "katha_id": "b20-ganesh-katha-b20-458",
+      "title": "भगवान गणेश दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 458 - 20)",
+      "media_type": "Audio",
+      "youtube_id": "im-9cVVmND0",
+      "youtube_url": "https://www.youtube.com/watch?v=im-9cVVmND0",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=im-9cVVmND0",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-02-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 14)",
+      "media_type": "Audio",
+      "youtube_id": "BEaKZkkgWS0",
+      "youtube_url": "https://www.youtube.com/watch?v=BEaKZkkgWS0",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=BEaKZkkgWS0",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-06-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 14)",
+      "media_type": "Audio",
+      "youtube_id": "Ja_a7HkqId4",
+      "youtube_url": "https://www.youtube.com/watch?v=Ja_a7HkqId4",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Ja_a7HkqId4",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-11-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 14)",
+      "media_type": "Audio",
+      "youtube_id": "qdIN32_64TY",
+      "youtube_url": "https://www.youtube.com/watch?v=qdIN32_64TY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=qdIN32_64TY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-12-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 14)",
+      "media_type": "Audio",
+      "youtube_id": "QvS4fJkdgbQ",
+      "youtube_url": "https://www.youtube.com/watch?v=QvS4fJkdgbQ",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=QvS4fJkdgbQ",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-14-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 14)",
+      "media_type": "Audio",
+      "youtube_id": "nJOus0U09kA",
+      "youtube_url": "https://www.youtube.com/watch?v=nJOus0U09kA",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=nJOus0U09kA",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-01-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 15)",
+      "media_type": "Audio",
+      "youtube_id": "UsjjH72AW-g",
+      "youtube_url": "https://www.youtube.com/watch?v=UsjjH72AW-g",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=UsjjH72AW-g",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-03-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 15)",
+      "media_type": "Audio",
+      "youtube_id": "yRSqoO3NlBY",
+      "youtube_url": "https://www.youtube.com/watch?v=yRSqoO3NlBY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=yRSqoO3NlBY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-07-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 15)",
+      "media_type": "Audio",
+      "youtube_id": "x85RW_X4am8",
+      "youtube_url": "https://www.youtube.com/watch?v=x85RW_X4am8",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=x85RW_X4am8",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-11-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 15)",
+      "media_type": "Audio",
+      "youtube_id": "nXUASKBoOgU",
+      "youtube_url": "https://www.youtube.com/watch?v=nXUASKBoOgU",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=nXUASKBoOgU",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-12-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 15)",
+      "media_type": "Audio",
+      "youtube_id": "iHWqj7oIwhs",
+      "youtube_url": "https://www.youtube.com/watch?v=iHWqj7oIwhs",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=iHWqj7oIwhs",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-01-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "U4APjh0F1qk",
+      "youtube_url": "https://www.youtube.com/watch?v=U4APjh0F1qk",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=U4APjh0F1qk",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-02-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "iIncNaPYRKg",
+      "youtube_url": "https://www.youtube.com/watch?v=iIncNaPYRKg",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=iIncNaPYRKg",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-03-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "5x65Up1aCHI",
+      "youtube_url": "https://www.youtube.com/watch?v=5x65Up1aCHI",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=5x65Up1aCHI",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-05-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "avfiuu3CNHY",
+      "youtube_url": "https://www.youtube.com/watch?v=avfiuu3CNHY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=avfiuu3CNHY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-06-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "7jRU1ihheRM",
+      "youtube_url": "https://www.youtube.com/watch?v=7jRU1ihheRM",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=7jRU1ihheRM",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-07-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "kuaVoZj0Znk",
+      "youtube_url": "https://www.youtube.com/watch?v=kuaVoZj0Znk",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=kuaVoZj0Znk",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-08-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "Z0wUpPdkjgQ",
+      "youtube_url": "https://www.youtube.com/watch?v=Z0wUpPdkjgQ",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Z0wUpPdkjgQ",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-12-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "HccUZCqU89w",
+      "youtube_url": "https://www.youtube.com/watch?v=HccUZCqU89w",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=HccUZCqU89w",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-14-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "Q8oOLAy-_Wo",
+      "youtube_url": "https://www.youtube.com/watch?v=Q8oOLAy-_Wo",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Q8oOLAy-_Wo",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-15-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 16)",
+      "media_type": "Audio",
+      "youtube_id": "hqd5SXOAtRo",
+      "youtube_url": "https://www.youtube.com/watch?v=hqd5SXOAtRo",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=hqd5SXOAtRo",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-02-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "Jo6oLuuvMRs",
+      "youtube_url": "https://www.youtube.com/watch?v=Jo6oLuuvMRs",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Jo6oLuuvMRs",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-03-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "rygW62CNh_I",
+      "youtube_url": "https://www.youtube.com/watch?v=rygW62CNh_I",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=rygW62CNh_I",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-04-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "lD5RgQmOSa0",
+      "youtube_url": "https://www.youtube.com/watch?v=lD5RgQmOSa0",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=lD5RgQmOSa0",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-06-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "WM32qiXGwe4",
+      "youtube_url": "https://www.youtube.com/watch?v=WM32qiXGwe4",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=WM32qiXGwe4",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-07-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "WUY6qP8CIIM",
+      "youtube_url": "https://www.youtube.com/watch?v=WUY6qP8CIIM",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=WUY6qP8CIIM",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b17-katha-purana-prerak-dhara-08-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (सप्तदश प्रसंग 17)",
+      "media_type": "Audio",
+      "youtube_id": "tmkesQtMjbA",
+      "youtube_url": "https://www.youtube.com/watch?v=tmkesQtMjbA",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=tmkesQtMjbA",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-02-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 14)",
+      "media_type": "Video",
+      "youtube_id": "tsVUA4HnCGY",
+      "youtube_url": "https://www.youtube.com/watch?v=tsVUA4HnCGY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=tsVUA4HnCGY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-12-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 14)",
+      "media_type": "Video",
+      "youtube_id": "Glm8cbIffvY",
+      "youtube_url": "https://www.youtube.com/watch?v=Glm8cbIffvY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Glm8cbIffvY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-14-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 14)",
+      "media_type": "Video",
+      "youtube_id": "mcXFzdw8xPc",
+      "youtube_url": "https://www.youtube.com/watch?v=mcXFzdw8xPc",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=mcXFzdw8xPc",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b14-katha-purana-prerak-dhara-15-b14",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 14)",
+      "media_type": "Video",
+      "youtube_id": "sl0luytodHU",
+      "youtube_url": "https://www.youtube.com/watch?v=sl0luytodHU",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=sl0luytodHU",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-01-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 01 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "NasJo3o3TBI",
+      "youtube_url": "https://www.youtube.com/watch?v=NasJo3o3TBI",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=NasJo3o3TBI",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-02-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "R_fAzJmcVNs",
+      "youtube_url": "https://www.youtube.com/watch?v=R_fAzJmcVNs",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=R_fAzJmcVNs",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-03-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "zgxbesdaqy8",
+      "youtube_url": "https://www.youtube.com/watch?v=zgxbesdaqy8",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=zgxbesdaqy8",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-05-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "x-SCSHDRq6Y",
+      "youtube_url": "https://www.youtube.com/watch?v=x-SCSHDRq6Y",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=x-SCSHDRq6Y",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-07-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 07 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "Mvu-RpKR6Gk",
+      "youtube_url": "https://www.youtube.com/watch?v=Mvu-RpKR6Gk",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Mvu-RpKR6Gk",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-08-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "967OEenZ-lg",
+      "youtube_url": "https://www.youtube.com/watch?v=967OEenZ-lg",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=967OEenZ-lg",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-11-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "9sdm1Tq8zgY",
+      "youtube_url": "https://www.youtube.com/watch?v=9sdm1Tq8zgY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=9sdm1Tq8zgY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-12-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "b9Lr6gTZjxc",
+      "youtube_url": "https://www.youtube.com/watch?v=b9Lr6gTZjxc",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=b9Lr6gTZjxc",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b15-katha-purana-prerak-dhara-15-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (अमृत प्रसंग 15)",
+      "media_type": "Video",
+      "youtube_id": "Kh9-SfQ1ogQ",
+      "youtube_url": "https://www.youtube.com/watch?v=Kh9-SfQ1ogQ",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=Kh9-SfQ1ogQ",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-02-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 02 (अमृत प्रसंग 16)",
+      "media_type": "Video",
+      "youtube_id": "3nOjaWXGkpY",
+      "youtube_url": "https://www.youtube.com/watch?v=3nOjaWXGkpY",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=3nOjaWXGkpY",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-03-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 03 (अमृत प्रसंग 16)",
+      "media_type": "Video",
+      "youtube_id": "1nfFk_y9Juc",
+      "youtube_url": "https://www.youtube.com/watch?v=1nfFk_y9Juc",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=1nfFk_y9Juc",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-06-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अमृत प्रसंग 16)",
+      "media_type": "Video",
+      "youtube_id": "PRBvvd62FGo",
+      "youtube_url": "https://www.youtube.com/watch?v=PRBvvd62FGo",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=PRBvvd62FGo",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    },
+    {
+      "katha_id": "b16-katha-purana-prerak-dhara-14-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 16)",
+      "media_type": "Video",
+      "youtube_id": "pRp6L77NkN8",
+      "youtube_url": "https://www.youtube.com/watch?v=pRp6L77NkN8",
+      "old_value": "NULL",
+      "new_value": "https://www.youtube.com/watch?v=pRp6L77NkN8",
+      "rows_affected": 1,
+      "apply_status": "SUCCESS"
+    }
+  ],
+  "unauthorized_changes": [],
+  "duplicates": {
+    "duplicate_youtube_ids": 0,
+    "duplicate_urls": 0
+  },
+  "conflicts": {
+    "conflicts": 0
+  },
+  "cross_field_conflicts": {
+    "cross_field_conflicts": 0
+  },
+  "url_id_mismatches": {
+    "url_id_mismatches": 0
+  },
+  "malformed_urls": {
+    "malformed_urls": 0
+  },
+  "live_verification": {
+    "live_pass": 44,
+    "live_fail": 0,
+    "status": "PASS"
+  },
+  "verified_high_evidence": {
+    "verified_high_count": 44,
+    "total": 44,
+    "status": "PASS"
+  },
+  "review_applied": 0,
+  "reject_applied": 0,
+  "no_suitable_applied": 0,
+  "fts5": {
+    "fts5_docs": 10010,
+    "search_status": "PASS",
+    "status": "PASS"
+  },
+  "integrity": {
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "schema_audit": {
+    "status": "PASS"
+  },
+  "backup": {
+    "backup_path": "bhakti_pre_phase2o_e_apply_backup.db",
+    "status": "PASS"
+  },
+  "katha_reconciliation": {
+    "katha_with_audio": 288,
+    "katha_with_video": 195,
+    "katha_with_both": 174,
+    "katha_with_neither": 196,
+    "audio_only": 114,
+    "video_only": 21,
+    "disjoint_sum": 505,
+    "status": "PASS"
+  },
+  "media_reconciliation": {
+    "playable_audio": 349,
+    "local_mp3": 38,
+    "youtube_audio": 311,
+    "video_urls": 197,
+    "status": "PASS"
+  },
+  "delta_reconciliation": {
+    "audio_added": 27,
+    "video_added": 17,
+    "total_added": 44,
+    "status": "PASS"
+  },
+  "final_gate": {
+    "verdict": "PASS",
+    "database_modified": false,
+    "database_writes": 0
+  }
+}

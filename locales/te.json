@@ -1,0 +1,63 @@
+{
+  "appName": "Bhakti Me Leen",
+  "tagline": "సనాతన ధర్మం, ధ్యానం మరియు ఆత్మిక శాంతికి పవిత్ర ద్వారం",
+  "shubhaMantra": "✨ ఓం శ్రీ గణేశాయ నమః ✨",
+  "nav": {
+    "panchang": "పంచాంగం",
+    "jar": "అమృత కలశం",
+    "home": "హోమ్",
+    "katha": "ఆడియో",
+    "profile": "ప్రొఫైల్",
+    "settings": "సెట్టింగ్‌లు",
+    "aarti": "హారతి దర్శనం",
+    "japMala": "జప మాల"
+  },
+  "home": {
+    "welcome": "స్వాగతం",
+    "guestLogin": "అతిథి ప్రవేశం",
+    "dailyTracker": "రోజువారీ సాధన ట్రాకర్",
+    "visitsToday": "ఈ రోజు పవిత్ర ప్రవేశం",
+    "times": "సార్లు",
+    "streak": "రోజుల స్ట్రీక్",
+    "streakShield": "రక్షణ కవచం",
+    "punyaPoints": "పుణ్య పాయింట్లు",
+    "openSadhanaCenter": "సాధన కేంద్రాన్ని తెరవండి",
+    "liveRadio": "24×7 లైవ్ భక్తి రేడియో",
+    "parikrama": "దివ్య 3D ఆలయ ప్రదక్షిణ",
+    "amritKalash": "భక్తి అమృత కలశం",
+    "radioNowPlaying": "ఇప్పుడు ప్లే అవుతోంది",
+    "categories": "దివ్య వర్గాలు",
+    "dailyPanchang": "దైనందిన పంచాంగం",
+    "shubhMuhurat": "శుభ ముహూర్తం"
+  },
+  "categories": {
+    "aarti": "హారతి",
+    "chalisa": "చాలీసా",
+    "mantra": "మంత్రం",
+    "stotra": "స్తోత్రం",
+    "vrat": "వ్రతం",
+    "festival": "పండుగలు",
+    "ramayana": "రామాయణం",
+    "katha": "కథలు",
+    "desh": "దేశభక్తి",
+    "panchang": "పంచాంగం"
+  },
+  "settings": {
+    "title": "సాధన సెట్టింగ్‌లు & నియంత్రణ",
+    "haptics": "ఆధ్యాత్మిక స్పర్శ & శబ్దం",
+    "brahmaMuhurta": "బ్రహ్మ ముహూర్తం అలారం",
+    "bioAura": "ప్రాణ శక్తి ఆరా",
+    "vault": "సాధన క్లౌడ్ వాల్ట్",
+    "language": "భాష ఎంపిక (Language)",
+    "selectLanguage": "మీకు నచ్చిన భాషను ఎంచుకోండి",
+    "applyLanguage": "భాషను వర్తింపజేయండి",
+    "logout": "లాగ్ అవుట్"
+  },
+  "audio": {
+    "title": "భక్తి ఆడియో లైబ్రరీ",
+    "pureAudio": "ఆడియో మాత్రమే",
+    "watchVideo": "వీడియో చూడండి",
+    "nowPlaying": "ఇప్పుడు ప్లే అవుతోంది",
+    "lyrics": "పాట సాహిత్యం & అర్థం"
+  }
+}

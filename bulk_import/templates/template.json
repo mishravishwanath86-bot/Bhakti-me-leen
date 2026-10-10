@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bhajan-krishna-achyutam-keshavam",
+    "title": "अच्युतम केशवम कृष्ण दामोदरम",
+    "title_en": "Achyutam Keshavam Krishna Damodaram",
+    "deity_id": "krishna",
+    "category_id": "bhakti",
+    "content_type": "bhajan",
+    "language": "hi",
+    "short_description": "भगवान श्रीकृष्ण का अत्यंत मधुर एवं पावन संकीर्तन भजन।",
+    "content": "॥ अच्युतम केशवम कृष्ण दामोदरम ॥\n\nअच्युतं केशवं कृष्ण दामोदरं, रामनारायणं जानकीवल्लभम्।\nकौन कहता है भगवान आते नहीं, तुम मीरा के जैसे बुलाते नहीं॥\n\nअच्युतं केशवं सत्यभामाधवं, माधवं श्रीधरं राधिकेशं भजे।\nहरे राम हरे राम राम राम हरे हरे, हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे॥",
+    "thumbnail": "assets/deity_krishna.jpg",
+    "audio_url": "assets/audio/bhajan_achyutam_keshavam.mp3",
+    "video_url": "https://www.youtube.com/watch?v=example1",
+    "duration": 285,
+    "tags": ["श्री कृष्ण", "मधुर भजन", "संकीर्तन"],
+    "is_popular": true,
+    "is_featured": true,
+    "is_trending": false,
+    "status": "published"
+  },
+  {
+    "id": "chalisa-hanuman-shri-hanuman-chalisa",
+    "title": "श्री हनुमान चालीसा (दिव्य पाठ)",
+    "title_en": "Shri Hanuman Chalisa Divine Path",
+    "deity_id": "hanuman",
+    "category_id": "stuti",
+    "content_type": "chalisa",
+    "language": "hi",
+    "short_description": "महाकवि गोस्वामी तुलसीदास जी द्वारा रचित सर्वसंकट हरण पावन चालीसा पाठ।",
+    "content": "॥ श्री हनुमान चालीसा ॥\n\nदोहा:\nश्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि।\nबरनउँ रघुबर बिमल जसु जो दायकु फल चारि॥\n\nबुद्धिहीन तनु जानिके सुमिरौ पवन-कुमार।\nबल बुधि बिद्या देहु मोहिं हरहु कलेस बिकार॥\n\nचौपाई:\nजय हनुमान ज्ञान गुन सागर। जय कपीस तिहुँ लोक उजागर॥\nराम दूत अतुलित बल धामा। अंजनि-पुत्र पवनसुत नामा॥",
+    "thumbnail": "assets/deity_hanuman.jpg",
+    "audio_url": "assets/audio/katha_hanuman.mp3",
+    "video_url": "https://www.youtube.com/watch?v=example2",
+    "duration": 581,
+    "tags": ["हनुमान जी", "चालीसा", "संकटमोचन"],
+    "is_popular": true,
+    "is_featured": true,
+    "is_trending": true,
+    "status": "published"
+  }
+]

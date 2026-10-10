@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="28" height="28" version="1.1" viewBox="0 0 847 847">
+  <defs>
+    <style type="text/css">
+      .fil1 {fill:#4B5563;}
+      .fil2 {fill:#FFFFFF;}
+    </style>
+  </defs>
+  <g>
+    <circle class="fil1" cx="423" cy="423" r="402"/>
+    <path class="fil2" d="M423 44c210,0 380,170 380,379 0,210 -170,380 -380,380 -3,0 -6,0 -9,0 130,-66 220,-211 220,-380 0,-168 -90,-313 -220,-379 3,0 6,0 9,0z"/>
+  </g>
+</svg>

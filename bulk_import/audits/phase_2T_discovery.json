@@ -1,0 +1,504 @@
+{
+  "phase": "2T",
+  "mode": "STRICT_READ_ONLY_DISCOVERY",
+  "database_modified": false,
+  "database_writes": 0,
+  "current_baseline": {
+    "total_database_records": 10010,
+    "fts5_documents": 10010,
+    "total_authoritative_katha": 505,
+    "katha_with_audio": 333,
+    "katha_with_video": 224,
+    "katha_with_both": 200,
+    "katha_with_neither": 148,
+    "audio_only": 133,
+    "video_only": 24,
+    "playable_audio": 333,
+    "local_mp3_audio": 64,
+    "youtube_audio": 269,
+    "video_urls": 224
+  },
+  "discovery_scope": {
+    "eligible_medialess_pool": 48,
+    "top_50_selected": 48
+  },
+  "audio_candidates": {
+    "VERIFIED_HIGH": 0,
+    "REVIEW": 42,
+    "REJECT": 0,
+    "NO_SUITABLE": 6
+  },
+  "video_candidates": {
+    "VERIFIED_HIGH": 0,
+    "REVIEW": 42,
+    "REJECT": 0,
+    "NO_SUITABLE": 6
+  },
+  "combined_result": {
+    "verified_high_audio": 0,
+    "verified_high_video": 0,
+    "total_verified_high": 0,
+    "candidates_with_both": 0,
+    "candidates_with_audio_only": 0,
+    "candidates_with_video_only": 0,
+    "candidates_with_neither": 48
+  },
+  "live_verification": {
+    "live_check_pass": 84,
+    "live_check_fail": 0
+  },
+  "safety_checks": {
+    "duplicate_ids": 0,
+    "conflicts": 0,
+    "url_id_mismatches": 0,
+    "overwrite_candidates": 0,
+    "protected_legacy_overlap": 0,
+    "malformed_urls": 0
+  },
+  "legacy_protection": {
+    "pre_2n_audio_failures_protected": "31 / 31",
+    "pre_2n_video_failures_protected": "12 / 12"
+  },
+  "database_safety": {
+    "database_modified": "NO",
+    "database_writes": 0,
+    "sqlite_integrity": "PASS",
+    "foreign_key_violations": 0,
+    "fts5_integrity": "PASS"
+  },
+  "selected_katha": [
+    {
+      "index": 1,
+      "katha_id": "b15-katha-purana-prerak-dhara-14-b15",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 14 (अमृत प्रसंग 15)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 2,
+      "katha_id": "b16-katha-purana-prerak-dhara-04-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 04 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 3,
+      "katha_id": "b16-katha-purana-prerak-dhara-09-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 09 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 4,
+      "katha_id": "b16-katha-purana-prerak-dhara-10-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 5,
+      "katha_id": "b16-katha-purana-prerak-dhara-11-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 11 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 6,
+      "katha_id": "b16-katha-purana-prerak-dhara-13-b16",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अमृत प्रसंग 16)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 7,
+      "katha_id": "b17-katha-purana-prerak-dhara-05-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 05 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 8,
+      "katha_id": "b17-katha-purana-prerak-dhara-10-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 10 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 9,
+      "katha_id": "b17-katha-purana-prerak-dhara-15-b17",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 15 (सप्तदश प्रसंग 17)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 10,
+      "katha_id": "b18-katha-purana-prerak-dhara-06-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 06 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 11,
+      "katha_id": "b18-katha-purana-prerak-dhara-08-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 08 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 12,
+      "katha_id": "b18-katha-purana-prerak-dhara-12-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 12 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 13,
+      "katha_id": "b18-katha-purana-prerak-dhara-13-b18",
+      "title": "सनातन धर्म पावन पुराण प्रेरक प्रसंग 13 (अष्टादश प्रसंग 18)",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 14,
+      "katha_id": "b2-katha-bhakta-dadhichi-asthi-daan",
+      "title": "महर्षि दधीचि का परम अस्थि दान (वज्र निर्माण)",
+      "deity_id": "general_bhakti",
+      "category_id": "gyan",
+      "audio_status": "NO_SUITABLE",
+      "video_status": "NO_SUITABLE"
+    },
+    {
+      "index": 15,
+      "katha_id": "b2-katha-bhakta-yudhishthir-swargarohan",
+      "title": "महाराज युधिष्ठिर का स्वर्गारोहण एवं धर्मराज (श्वान) प्रसंग",
+      "deity_id": "general_bhakti",
+      "category_id": "gyan",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 16,
+      "katha_id": "b2-katha-durga-parvati-panchagni-tapasya",
+      "title": "मां पार्वती की पंचाग्नि घोर तपस्या (अपर्णा नामकरण)",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "NO_SUITABLE",
+      "video_status": "NO_SUITABLE"
+    },
+    {
+      "index": 17,
+      "katha_id": "b2-katha-durga-shumbha-nishumbha-raktabeej",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज संहार कथा",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 18,
+      "katha_id": "b20-guru_sant-katha-b20-350",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 350 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 19,
+      "katha_id": "b20-guru_sant-katha-b20-410",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 410 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 20,
+      "katha_id": "b20-guru_sant-katha-b20-470",
+      "title": "सद्गुरु देव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 470 - 20)",
+      "deity_id": "guru_sant",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 21,
+      "katha_id": "b20-other_deities-katha-b20-089",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 089 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 22,
+      "katha_id": "b20-other_deities-katha-b20-149",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 149 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 23,
+      "katha_id": "b20-other_deities-katha-b20-209",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 209 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 24,
+      "katha_id": "b20-other_deities-katha-b20-269",
+      "title": "देव मंडल लीला प्रसंग स्तुति संकीर्तन (विंशति पद 269 - 20)",
+      "deity_id": "other_deities",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 25,
+      "katha_id": "b20-radharani-katha-b20-302",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 302 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 26,
+      "katha_id": "b20-radharani-katha-b20-362",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 362 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 27,
+      "katha_id": "b20-radharani-katha-b20-422",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 422 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 28,
+      "katha_id": "b20-radharani-katha-b20-482",
+      "title": "श्री राधा रानी दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 482 - 20)",
+      "deity_id": "radharani",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 29,
+      "katha_id": "b20-santoshi-katha-b20-101",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 101 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 30,
+      "katha_id": "b20-santoshi-katha-b20-161",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 161 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 31,
+      "katha_id": "b20-santoshi-katha-b20-221",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 221 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 32,
+      "katha_id": "b20-santoshi-katha-b20-281",
+      "title": "मां संतोषी लीला प्रसंग स्तुति संकीर्तन (विंशति पद 281 - 20)",
+      "deity_id": "santoshi",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 33,
+      "katha_id": "b20-shanidev-katha-b20-326",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 326 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 34,
+      "katha_id": "b20-shanidev-katha-b20-386",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 386 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 35,
+      "katha_id": "b20-shanidev-katha-b20-446",
+      "title": "भगवान शनिदेव दिव्य चरित्र स्तुति संकीर्तन (विंशति पद 446 - 20)",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 36,
+      "katha_id": "b20-yamuna-katha-b20-125",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 125 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 37,
+      "katha_id": "b20-yamuna-katha-b20-185",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 185 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 38,
+      "katha_id": "b20-yamuna-katha-b20-245",
+      "title": "मां यमुना लीला प्रसंग स्तुति संकीर्तन (विंशति पद 245 - 20)",
+      "deity_id": "yamuna",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 39,
+      "katha_id": "b3-katha-durga-chamunda-devi-chanda-munda-vadh",
+      "title": "मां कौशिकी की भृकुटि से कालिका प्राकट्य एवं चंड-मुंड संहार",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "NO_SUITABLE",
+      "video_status": "NO_SUITABLE"
+    },
+    {
+      "index": 40,
+      "katha_id": "b3-katha-durga-jwala-devi-akbar-chhatra-leela",
+      "title": "मां ज्वाला जी में बादशाह अकबर का सोने का छत्र खंडन",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "NO_SUITABLE",
+      "video_status": "NO_SUITABLE"
+    },
+    {
+      "index": 41,
+      "katha_id": "b3-katha-durga-shumbha-nishumbha-rakht-beej-vadh",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज वध कथा (मां कालिका का रूप)",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 42,
+      "katha_id": "b3-katha-durga-vaishno-devi-bhairav-nath-moksha",
+      "title": "मां वैष्णो देवी गुफा प्राकट्य एवं भैरवनाथ मोक्ष कथा",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 43,
+      "katha_id": "b3-katha-general-raja-harishchandra-satya-pariksha",
+      "title": "सत्यवादी राजा हरिश्चंद्र की परीक्षा एवं काशी श्मशान घाट",
+      "deity_id": "general_bhakti",
+      "category_id": "leela",
+      "audio_status": "NO_SUITABLE",
+      "video_status": "NO_SUITABLE"
+    },
+    {
+      "index": 44,
+      "katha_id": "b4-katha-durga-chanda-munda-vadh-chamunda",
+      "title": "चंड-मुंड संहार एवं मां भगवती का 'चामुंडा' नामकरण",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "NO_SUITABLE",
+      "video_status": "NO_SUITABLE"
+    },
+    {
+      "index": 45,
+      "katha_id": "b4-katha-durga-shumbha-nishumbha-vadh-katha",
+      "title": "शुंभ-निशुंभ वध, रक्तबीज संहार एवं मां काली का तांडव",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 46,
+      "katha_id": "b4-katha-shani-janma-aur-surya-shani-samvad",
+      "title": "शनिदेव का जन्म, छाया की तपस्या एवं न्यायदंड प्राप्ति",
+      "deity_id": "shanidev",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 47,
+      "katha_id": "b5-katha-durga-shumbha-nishumbha-vadh-kaushiki",
+      "title": "शुंभ-निशुंभ एवं रक्तबीज वध: मां कौशिकी और काली का रौद्र रूप",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    },
+    {
+      "index": 48,
+      "katha_id": "b5-katha-durga-vaishno-devi-bhairavnath-katha",
+      "title": "मां वैष्णो देवी एवं भैरवनाथ उद्धार: त्रिकूटा गुफा रहस्य",
+      "deity_id": "durga_mata",
+      "category_id": "leela",
+      "audio_status": "REVIEW",
+      "video_status": "REVIEW"
+    }
+  ],
+  "final_gate": "PASS"
+}

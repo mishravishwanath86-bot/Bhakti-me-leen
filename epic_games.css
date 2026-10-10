@@ -1,0 +1,1072 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   🎮 EPIC GAMES (एपिक भक्ति महाकाव्य खेल) — DESIGN SYSTEM & STYLES
+   Replicating the WhatsApp Video UI with Vedic Temple Aesthetics
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Home Page Promo Banner ── */
+.home-epic-games-banner {
+  margin: 0 1.2rem 1.8rem;
+  background: linear-gradient(135deg, #2D0F3E 0%, #1A052A 50%, #3B124D 100%);
+  border: 1.8px solid #F59E0B;
+  border-radius: 24px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 20px rgba(245,158,11,0.2) inset;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-epic-games-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 38px rgba(0,0,0,0.7), 0 0 25px rgba(245,158,11,0.3) inset;
+}
+
+/* ── Epic Games Hub (frame_000_0s.jpg style) ── */
+.epic-hub-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(238, 230, 218, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid rgba(180, 140, 90, 0.25);
+}
+
+body.dark-mode .epic-hub-header,
+[data-theme="dark"] .epic-hub-header,
+body:not(.theme-light):not(.light-mode) .epic-hub-header {
+  background: rgba(26, 11, 46, 0.95);
+  border-bottom-color: rgba(245, 158, 11, 0.25);
+}
+
+.epic-games-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 16px 18px 80px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.epic-game-menu-card {
+  background: #FFFDF8;
+  border: 1.5px solid rgba(220, 180, 120, 0.4);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+body:not(.theme-light):not(.light-mode) .epic-game-menu-card {
+  background: linear-gradient(150deg, #2A103D 0%, #170724 100%);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.epic-game-menu-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.25);
+}
+
+.epic-card-cover-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #E8DEC8;
+  position: relative;
+}
+
+.epic-card-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.epic-card-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+.epic-tag-memory { background: rgba(168, 85, 247, 0.85); color: #FFF; }
+.epic-tag-story { background: rgba(249, 115, 22, 0.85); color: #FFF; }
+.epic-tag-puzzle { background: rgba(16, 185, 129, 0.85); color: #FFF; }
+.epic-tag-word { background: rgba(236, 72, 153, 0.85); color: #FFF; }
+
+.epic-card-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #2D1400;
+  margin: 8px 0 2px;
+}
+
+body:not(.theme-light):not(.light-mode) .epic-card-title {
+  color: #FFFDF8;
+}
+
+.epic-card-subtitle {
+  font-size: 0.72rem;
+  color: #786C5E;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  min-height: 28px;
+}
+
+body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
+  color: #D1C4E9;
+}
+
+.epic-card-play-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 8px 0;
+  font-weight: 900;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #FFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.epic-card-play-btn:active {
+  transform: scale(0.97);
+}
+
+.btn-purple { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+.btn-blue { background: linear-gradient(135deg, #3B82F6, #1D4ED8); }
+.btn-cyan { background: linear-gradient(135deg, #06B6D4, #0891B2); }
+.btn-gold { background: linear-gradient(135deg, #D97706, #B45309); }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   SWIPE GAME ARENA (Exact Match to WhatsApp Video)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.swipe-game-arena {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #EAE1D2 url('assets/games/bg_vedic_temple.jpg') no-repeat center center;
+  background-size: cover;
+  user-select: none;
+  touch-action: none;
+  overflow: hidden;
+}
+
+/* Arena Top Header */
+.swipe-top-bar {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.swipe-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #2D1400;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.swipe-cat-dropdown {
+  background: #F7EFE1;
+  border: 1.2px solid #333;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #222;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swipe-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.swipe-lang-btn, .swipe-settings-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #222;
+  cursor: pointer;
+}
+
+/* Coin Counter */
+.swipe-coin-banner {
+  background: #FFFBF0;
+  border: 2px solid #F59E0B;
+  border-radius: 24px;
+  padding: 4px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+  margin-top: 4px;
+  z-index: 10;
+}
+
+.swipe-coin-icon {
+  font-size: 1.3rem;
+}
+
+.swipe-coin-amount {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #2D1400;
+}
+
+/* Instruction Prompt */
+.swipe-instruction-text {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2D1400;
+  text-align: center;
+  margin: 10px 0 6px;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+  z-index: 10;
+}
+
+/* Card Deck Stage */
+.swipe-card-deck-stage {
+  position: relative;
+  width: 270px;
+  height: 350px;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  z-index: 5;
+}
+
+/* Underneath Shadow Cards (Stack Depth Effect) */
+.swipe-card-underlay {
+  position: absolute;
+  width: 250px;
+  height: 330px;
+  background: #E8D3B4;
+  border: 2px solid #C49755;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+.swipe-card-underlay-2 {
+  transform: scale(0.93) translateY(8px) rotate(-3deg);
+  opacity: 0.6;
+}
+
+.swipe-card-underlay-1 {
+  transform: scale(0.96) translateY(4px) rotate(2deg);
+  opacity: 0.8;
+}
+
+/* Main Interactive Card */
+.swipe-main-card {
+  position: absolute;
+  width: 255px;
+  height: 335px;
+  background: #FFF8EA;
+  border: 3.5px solid #F59E0B;
+  border-radius: 26px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35), 0 0 12px rgba(245, 158, 11, 0.4) inset;
+  cursor: grab;
+  user-select: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  will-change: transform;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.swipe-main-card.dragging {
+  cursor: grabbing;
+  transition: none !important;
+}
+
+/* Corner & Midpoint Jewels (From Video) */
+.swipe-card-jewel-top {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 14px;
+  height: 14px;
+  background: #3B82F6;
+  border: 2px solid #F59E0B;
+  box-shadow: 0 0 8px #3B82F6;
+  z-index: 4;
+}
+
+.swipe-card-jewel-left {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #3B82F6;
+  border: 2px solid #F59E0B;
+  z-index: 4;
+}
+
+.swipe-card-jewel-right {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #3B82F6;
+  border: 2px solid #F59E0B;
+  z-index: 4;
+}
+
+/* Character Portrait */
+.swipe-char-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  position: absolute;
+  inset: 0;
+}
+
+/* Character Name Bar Overlay */
+.swipe-char-name-bar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 3px 18px;
+  border-radius: 16px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #1A052A;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 3;
+}
+
+/* ── Bottom Portals (Exact video shrines) ── */
+.swipe-portals-container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0 16px 24px;
+  z-index: 10;
+}
+
+.swipe-portal-shrine {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.swipe-portal-shrine.active-target {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.8));
+}
+
+.swipe-portal-img-wrap {
+  width: 130px;
+  height: 155px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipe-portal-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Portal Live Score Badge */
+.swipe-portal-score-badge {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: #FFF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  border: 1.5px solid #F59E0B;
+}
+
+.score-ayodhya {
+  background: radial-gradient(circle, #7C3AED 0%, #4C1D95 100%);
+}
+
+.score-mithila {
+  background: radial-gradient(circle, #DC2626 0%, #7F1D1D 100%);
+}
+
+/* Portal Name Label Base */
+.swipe-portal-label {
+  margin-top: -15px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #2D1400;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.9);
+  z-index: 2;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   CHARACTER REVIEW & LORE SCREEN (frame_018_71s.jpg style)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.swipe-review-arena {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 31000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #EAE1D2 url('assets/games/bg_vedic_temple.jpg') no-repeat center center;
+  background-size: cover;
+  user-select: none;
+  overflow: hidden;
+}
+
+.swipe-review-top-bar {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swipe-review-back-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  border: 2px solid #FFF;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Large Review Character Card */
+.swipe-review-card {
+  width: 290px;
+  background: #FFFDF5;
+  border: 3.5px solid #F59E0B;
+  border-radius: 26px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  animation: reviewCardPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes reviewCardPop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.swipe-review-img-wrap {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swipe-review-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swipe-review-team-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  background: linear-gradient(135deg, #7C3AED, #4C1D95);
+  color: #FFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.swipe-review-info-body {
+  padding: 14px 18px 18px;
+  text-align: center;
+  background: #FFFDF5;
+}
+
+.swipe-review-char-name {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #2D1400;
+  margin-bottom: 6px;
+}
+
+.swipe-review-divider {
+  width: 60px;
+  height: 2px;
+  background: #F59E0B;
+  margin: 0 auto 10px;
+}
+
+.swipe-review-char-desc {
+  font-size: 0.85rem;
+  color: #4A3A2C;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.swipe-review-network-btn {
+  background: linear-gradient(135deg, #4F46E5, #3730A3);
+  color: #FFF;
+  border: 1.5px solid #818CF8;
+  border-radius: 18px;
+  padding: 7px 18px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+/* Bottom Token Rail: "देखने के लिए टैप करें" */
+.swipe-review-bottom-rail {
+  width: 100%;
+  max-width: 480px;
+  padding: 0 16px 20px;
+}
+
+.swipe-review-rail-heading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2D1400;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+}
+
+.swipe-tokens-scroll-wrap {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px 4px 12px;
+  scrollbar-width: none;
+}
+
+.swipe-tokens-scroll-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.swipe-char-token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.swipe-char-token:hover, .swipe-char-token.active-token {
+  transform: scale(1.08);
+}
+
+.swipe-token-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 2.5px solid #F59E0B;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: relative;
+  background: #FFF;
+}
+
+.swipe-token-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swipe-token-check {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #10B981;
+  border: 2px solid #FFF;
+  color: #FFF;
+  font-size: 0.72rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.swipe-token-label {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #2D1400;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   VICTORY / TRY AGAIN MODAL (frame_84s.jpg style)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.swipe-result-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 32000;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.swipe-result-box {
+  width: 310px;
+  background: #FFFDF5;
+  border: 3.5px solid #F59E0B;
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+  position: relative;
+  padding: 44px 22px 24px;
+  text-align: center;
+  animation: resultBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes resultBounce {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.swipe-result-ribbon {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 50%, #7F1D1D 100%);
+  border: 2px solid #FDE68A;
+  border-radius: 18px;
+  padding: 8px 28px;
+  color: #FFFDF8;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 16px rgba(185, 28, 28, 0.5);
+  white-space: nowrap;
+}
+
+.swipe-result-stats {
+  font-size: 0.95rem;
+  color: #5A4A3B;
+  margin: 6px 0 14px;
+}
+
+.swipe-result-score-chip {
+  background: #FEF3C7;
+  border: 1.5px solid #F59E0B;
+  border-radius: 16px;
+  padding: 6px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #2D1400;
+  margin-bottom: 14px;
+}
+
+.swipe-result-heading {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #1D4ED8;
+  margin-bottom: 4px;
+}
+
+.swipe-result-message {
+  font-size: 0.82rem;
+  color: #6B5B4C;
+  margin-bottom: 20px;
+}
+
+.swipe-result-btns-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.btn-learn-lore {
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  color: #FFF;
+  border: none;
+  border-radius: 14px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
+}
+
+.btn-retry-round {
+  background: linear-gradient(135deg, #FDE68A, #F59E0B);
+  color: #2D1400;
+  border: none;
+  border-radius: 14px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.4);
+}
+
+.swipe-result-new-game-btn {
+  background: none;
+  border: none;
+  color: #2D1400;
+  font-size: 0.88rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.swipe-result-home-link {
+  color: #4A3A2C;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+}
+
+/* ── Additional Styles for Match & JigSaw Tiles ── */
+.match-tile {
+  aspect-ratio: 1 / 1;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.match-tile-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.match-tile.flipped .match-tile-inner,
+.match-tile.matched .match-tile-inner {
+  transform: rotateY(180deg);
+}
+
+.match-tile-back, .match-tile-front {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-tile-back {
+  background: linear-gradient(135deg, #4A154B 0%, #2D104E 100%);
+  border: 1.5px solid #FCD34D;
+  font-size: 1.6rem;
+}
+
+.match-tile-front {
+  background: #FFFBEB;
+  border: 2px solid #F59E0B;
+  transform: rotateY(180deg);
+}
+
+.match-tile.matched .match-tile-front {
+  background: #D1FAE5;
+  border-color: #10B981;
+}
+
+.jigsaw-tile {
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+  border: 2px solid #F59E0B;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.15s ease;
+  user-select: none;
+}
+
+.jigsaw-tile:hover {
+  transform: scale(1.04);
+}
+
+.jigsaw-tile.empty-slot {
+  background: transparent;
+  border: 2px dashed rgba(245, 158, 11, 0.3);
+  box-shadow: none;
+  cursor: default;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   🔒 EPIC GAMES LOCKED STATE STYLES (अभी लॉक है)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.btn-locked {
+  background: linear-gradient(135deg, #4B5563, #374151) !important;
+  color: #E5E7EB !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.epic-card-lock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid #F59E0B;
+  color: #FDE68A;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.epic-game-menu-card.is-locked .epic-card-cover-img {
+  filter: grayscale(35%) brightness(0.72);
+}
+
+.epic-card-lock-watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 10, 25, 0.45);
+  backdrop-filter: blur(1.5px);
+  z-index: 4;
+  pointer-events: none;
+  border-radius: 16px 16px 0 0;
+}
+
+.epic-card-lock-watermark .lock-icon-lg {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+  animation: lockPulse 2.5s infinite ease-in-out;
+}
+
+.epic-card-lock-watermark .lock-label-sm {
+  color: #FDE68A;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  background: rgba(0,0,0,0.65);
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(245,158,11,0.4);
+}
+
+@keyframes lockPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* Modal Overlay for Lock Announcement */
+.epic-locked-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50000;
+  background: rgba(10, 6, 20, 0.85);
+  backdrop-filter: blur(12px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.epic-locked-modal-box {
+  background: linear-gradient(145deg, #1F1530 0%, #120A20 100%);
+  border: 2px solid #F59E0B;
+  border-radius: 26px;
+  padding: 28px 22px 24px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 35px rgba(245,158,11,0.25);
+  position: relative;
+}
+
+.epic-locked-icon-orb {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px;
+  background: radial-gradient(circle, #FDE68A 0%, #D97706 60%, #78350F 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.5), inset 0 2px 4px rgba(255,255,255,0.8);
+  animation: lockPulse 2s infinite ease-in-out;
+}
+
+.epic-locked-status-chip {
+  display: inline-block;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #EF4444;
+  color: #FCA5A5;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.epic-locked-modal-title {
+  color: #FFFDF8;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.epic-locked-modal-desc {
+  color: #D8B4FE;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.epic-locked-btn-ok {
+  width: 100%;
+  background: linear-gradient(135deg, #F8C83B 0%, #D97706 100%);
+  color: #1A0B2E;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 0;
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(248, 200, 59, 0.4);
+  transition: transform 0.15s ease;
+}
+
+.epic-locked-btn-ok:active {
+  transform: scale(0.97);
+}
+
+.epic-locked-toast {
+  position: fixed;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: rgba(17, 24, 39, 0.95);
+  border: 1.5px solid #F59E0B;
+  color: #FFFDF8;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  z-index: 60000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.epic-locked-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}

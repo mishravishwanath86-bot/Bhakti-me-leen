@@ -1,0 +1,866 @@
+{
+  "proposal_type": "READ-ONLY MAPPING DRY-RUN — Existing Audio Connection Proposal",
+  "timestamp": "2026-08-29T06:20:51.659951+00:00",
+  "status": "AWAITING USER APPROVAL — DO NOT APPLY YET",
+  "strict_rules": {
+    "database_modified": false,
+    "files_modified": false,
+    "batch_021_started": false,
+    "downloads": 0,
+    "modifications": 0
+  },
+  "step1_inventory": {
+    "assets/audio/bhajan_achyutam_keshavam.mp3": {
+      "filename": "bhajan_achyutam_keshavam.mp3",
+      "rel_path": "assets/audio/bhajan_achyutam_keshavam.mp3",
+      "size_bytes": 4568011,
+      "size_mb": 4.36,
+      "duration_sec": 285.5,
+      "duration_str": "4m 45s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "bhajan-krishna-achyutam-keshavam",
+          "audio_url": "assets/audio/bhajan_achyutam_keshavam.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_bhagwat.mp3": {
+      "filename": "katha_bhagwat.mp3",
+      "rel_path": "assets/audio/katha_bhagwat.mp3",
+      "size_bytes": 13906381,
+      "size_mb": 13.26,
+      "duration_sec": 869.1,
+      "duration_str": "14m 29s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "katha-krishna-shrimad-bhagwat-katha-saar",
+          "audio_url": "assets/audio/katha_bhagwat.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_hanuman.mp3": {
+      "filename": "katha_hanuman.mp3",
+      "rel_path": "assets/audio/katha_hanuman.mp3",
+      "size_bytes": 9309247,
+      "size_mb": 8.88,
+      "duration_sec": 581.8,
+      "duration_str": "9m 41s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "chalisa-hanuman-shri-hanuman-chalisa",
+          "audio_url": "assets/audio/katha_hanuman.mp3"
+        },
+        {
+          "id": "chalisa-hanuman-shri-hanuman-chalisa-full",
+          "audio_url": "assets/audio/katha_hanuman.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_harishchandra.mp3": {
+      "filename": "katha_harishchandra.mp3",
+      "rel_path": "assets/audio/katha_harishchandra.mp3",
+      "size_bytes": 22732425,
+      "size_mb": 21.68,
+      "duration_sec": 1420.8,
+      "duration_str": "23m 40s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_indresh_bhagwat.mp3": {
+      "filename": "katha_indresh_bhagwat.mp3",
+      "rel_path": "assets/audio/katha_indresh_bhagwat.mp3",
+      "size_bytes": 136154844,
+      "size_mb": 129.85,
+      "duration_sec": 8509.7,
+      "duration_str": "2h 21m 49s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_indresh_chhitupanda.mp3": {
+      "filename": "katha_indresh_chhitupanda.mp3",
+      "rel_path": "assets/audio/katha_indresh_chhitupanda.mp3",
+      "size_bytes": 103822033,
+      "size_mb": 99.01,
+      "duration_sec": 6488.9,
+      "duration_str": "1h 48m 08s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_indresh_prasang.mp3": {
+      "filename": "katha_indresh_prasang.mp3",
+      "rel_path": "assets/audio/katha_indresh_prasang.mp3",
+      "size_bytes": 51962400,
+      "size_mb": 49.56,
+      "duration_sec": 3247.7,
+      "duration_str": "54m 07s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_indresh_ratnavati.mp3": {
+      "filename": "katha_indresh_ratnavati.mp3",
+      "rel_path": "assets/audio/katha_indresh_ratnavati.mp3",
+      "size_bytes": 144530328,
+      "size_mb": 137.83,
+      "duration_sec": 9033.1,
+      "duration_str": "2h 30m 33s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_indresh_surdas.mp3": {
+      "filename": "katha_indresh_surdas.mp3",
+      "rel_path": "assets/audio/katha_indresh_surdas.mp3",
+      "size_bytes": 161986069,
+      "size_mb": 154.48,
+      "duration_sec": 10124.1,
+      "duration_str": "2h 48m 44s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_indresh_tajbegum.mp3": {
+      "filename": "katha_indresh_tajbegum.mp3",
+      "rel_path": "assets/audio/katha_indresh_tajbegum.mp3",
+      "size_bytes": 78273442,
+      "size_mb": 74.65,
+      "duration_sec": 4892.1,
+      "duration_str": "1h 21m 32s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_narsingh.mp3": {
+      "filename": "katha_narsingh.mp3",
+      "rel_path": "assets/audio/katha_narsingh.mp3",
+      "size_bytes": 5448141,
+      "size_mb": 5.2,
+      "duration_sec": 340.5,
+      "duration_str": "5m 40s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "katha-vishnu-narsingh-avatar-prahlad",
+          "audio_url": "assets/audio/katha_narsingh.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_rajan_bhramdoor.mp3": {
+      "filename": "katha_rajan_bhramdoor.mp3",
+      "rel_path": "assets/audio/katha_rajan_bhramdoor.mp3",
+      "size_bytes": 62169056,
+      "size_mb": 59.29,
+      "duration_sec": 3885.6,
+      "duration_str": "1h 04m 45s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_rajan_kumbhaj.mp3": {
+      "filename": "katha_rajan_kumbhaj.mp3",
+      "rel_path": "assets/audio/katha_rajan_kumbhaj.mp3",
+      "size_bytes": 46816580,
+      "size_mb": 44.65,
+      "duration_sec": 2926.0,
+      "duration_str": "48m 46s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_rajan_samvad.mp3": {
+      "filename": "katha_rajan_samvad.mp3",
+      "rel_path": "assets/audio/katha_rajan_samvad.mp3",
+      "size_bytes": 48370134,
+      "size_mb": 46.13,
+      "duration_sec": 3023.1,
+      "duration_str": "50m 23s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "satsang-guru_sant-rajan-ji-mata-pita-seva",
+          "audio_url": "assets/audio/katha_rajan_samvad.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_rajan_saticharitra.mp3": {
+      "filename": "katha_rajan_saticharitra.mp3",
+      "rel_path": "assets/audio/katha_rajan_saticharitra.mp3",
+      "size_bytes": 40812596,
+      "size_mb": 38.92,
+      "duration_sec": 2550.8,
+      "duration_str": "42m 30s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_rajan_shivbarat.mp3": {
+      "filename": "katha_rajan_shivbarat.mp3",
+      "rel_path": "assets/audio/katha_rajan_shivbarat.mp3",
+      "size_bytes": 52093732,
+      "size_mb": 49.68,
+      "duration_sec": 3255.9,
+      "duration_str": "54m 15s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "katha-shiva-shiv-parvati-vivah",
+          "audio_url": "assets/audio/katha_rajan_shivbarat.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_rajan_shivbhajan.mp3": {
+      "filename": "katha_rajan_shivbhajan.mp3",
+      "rel_path": "assets/audio/katha_rajan_shivbhajan.mp3",
+      "size_bytes": 41516021,
+      "size_mb": 39.59,
+      "duration_sec": 2594.8,
+      "duration_str": "43m 14s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_rajan_shivparvati.mp3": {
+      "filename": "katha_rajan_shivparvati.mp3",
+      "rel_path": "assets/audio/katha_rajan_shivparvati.mp3",
+      "size_bytes": 59097056,
+      "size_mb": 56.36,
+      "duration_sec": 3693.6,
+      "duration_str": "1h 01m 33s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    },
+    "assets/audio/katha_rajan_sundarkand.mp3": {
+      "filename": "katha_rajan_sundarkand.mp3",
+      "rel_path": "assets/audio/katha_rajan_sundarkand.mp3",
+      "size_bytes": 70417481,
+      "size_mb": 67.16,
+      "duration_sec": 4401.1,
+      "duration_str": "1h 13m 21s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "bhajan-ram-bharat-bhai-kapi-se-urin",
+          "audio_url": "assets/audio/katha_rajan_sundarkand.mp3"
+        },
+        {
+          "id": "katha-ram-sampurna-sundarkand-mahatmya",
+          "audio_url": "assets/audio/katha_rajan_sundarkand.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_ramayana.mp3": {
+      "filename": "katha_ramayana.mp3",
+      "rel_path": "assets/audio/katha_ramayana.mp3",
+      "size_bytes": 5577708,
+      "size_mb": 5.32,
+      "duration_sec": 348.6,
+      "duration_str": "5m 48s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "aarti-ram-aarti-shri-ramayan-ji-ki",
+          "audio_url": "assets/audio/katha_ramayana.mp3"
+        },
+        {
+          "id": "bhajan-ram-bhaye-pragat-kripala",
+          "audio_url": "assets/audio/katha_ramayana.mp3"
+        },
+        {
+          "id": "katha-ram-ram-janma-katha",
+          "audio_url": "assets/audio/katha_ramayana.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_satyanarayan.mp3": {
+      "filename": "katha_satyanarayan.mp3",
+      "rel_path": "assets/audio/katha_satyanarayan.mp3",
+      "size_bytes": 5874459,
+      "size_mb": 5.6,
+      "duration_sec": 367.2,
+      "duration_str": "6m 07s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "aarti-vishnu-satyanarayan-jai-laxmi-ramana",
+          "audio_url": "assets/audio/katha_satyanarayan.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_shiva.mp3": {
+      "filename": "katha_shiva.mp3",
+      "rel_path": "assets/audio/katha_shiva.mp3",
+      "size_bytes": 3221254,
+      "size_mb": 3.07,
+      "duration_sec": 201.3,
+      "duration_str": "3m 21s",
+      "format": "mp3",
+      "current_db_refs": [
+        {
+          "id": "aarti-shiva-om-jai-shiv-omkara",
+          "audio_url": "assets/audio/katha_shiva.mp3"
+        }
+      ],
+      "currently_connected": true
+    },
+    "assets/audio/katha_vaishnodevi.mp3": {
+      "filename": "katha_vaishnodevi.mp3",
+      "rel_path": "assets/audio/katha_vaishnodevi.mp3",
+      "size_bytes": 5144284,
+      "size_mb": 4.91,
+      "duration_sec": 321.5,
+      "duration_str": "5m 21s",
+      "format": "mp3",
+      "current_db_refs": [],
+      "currently_connected": false
+    }
+  },
+  "step2_match_results": {
+    "assets/audio/katha_harishchandra.mp3": {
+      "classification": "CONFIDENT_MATCH",
+      "top_match": {
+        "id": "katha-bhakta-harishchandra-satya",
+        "title": "सत्यवादी राजा हरिश्चंद्र: सत्य निष्ठा एवं काशी श्मशान प्रसंग",
+        "title_en": "Satyavadi Raja Harishchandra Katha",
+        "content_type": "katha",
+        "deity_id": "general_bhakti",
+        "current_audio_url": "",
+        "score": 70,
+        "already_has_audio": false
+      },
+      "top_score": 70,
+      "proposed_audio_url": "assets/audio/katha_harishchandra.mp3",
+      "reason": "Score=70, speaker=None, keywords=['harishchandra', 'harish chandra', 'raja harishchandra']"
+    },
+    "assets/audio/katha_indresh_bhagwat.mp3": {
+      "classification": "CONFIDENT_MATCH",
+      "top_match": {
+        "id": "b2-satsang-indresh-ji-bhagavata-ananya-prem",
+        "title": "पूज्य इंद्रेश उपाध्याय जी: भागवत का सर्वोच्च फल—अनन्य भगवद्प्रेम",
+        "title_en": "Pujya Indresh Upadhyay Ji Bhagavata Prem",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 70,
+        "already_has_audio": false
+      },
+      "top_score": 70,
+      "proposed_audio_url": "assets/audio/katha_indresh_bhagwat.mp3",
+      "reason": "Score=70, speaker=pandit indresh upadhyay, keywords=['bhagwat', 'bhagavat', 'srimad']"
+    },
+    "assets/audio/katha_indresh_chhitupanda.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "satsang-indresh-ji-bhagwat-prem",
+        "title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "title_en": "Pujya Indresh Upadhyay Ji Prem Tattva",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['chhitu panda', 'chhitupanda', 'chitupanda']"
+    },
+    "assets/audio/katha_indresh_prasang.mp3": {
+      "classification": "CONFIDENT_MATCH",
+      "top_match": {
+        "id": "katha-ram-kewat-samvad-prasang",
+        "title": "केवट प्रेम एवं गंगा पार प्रसंग",
+        "title_en": "Kewat Prem and Ganga Paar Prasang",
+        "content_type": "katha",
+        "deity_id": "ram",
+        "current_audio_url": "",
+        "score": 70,
+        "already_has_audio": false
+      },
+      "top_score": 70,
+      "proposed_audio_url": "assets/audio/katha_indresh_prasang.mp3",
+      "reason": "Score=70, speaker=pandit indresh upadhyay, keywords=['prasang', 'pravachan']"
+    },
+    "assets/audio/katha_indresh_ratnavati.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "satsang-indresh-ji-bhagwat-prem",
+        "title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "title_en": "Pujya Indresh Upadhyay Ji Prem Tattva",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['ratnavati', 'ratnawati']"
+    },
+    "assets/audio/katha_indresh_surdas.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "satsang-indresh-ji-bhagwat-prem",
+        "title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "title_en": "Pujya Indresh Upadhyay Ji Prem Tattva",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['surdas', 'sur das']"
+    },
+    "assets/audio/katha_indresh_tajbegum.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "satsang-indresh-ji-bhagwat-prem",
+        "title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "title_en": "Pujya Indresh Upadhyay Ji Prem Tattva",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['taj begum', 'tajbegum']"
+    },
+    "assets/audio/katha_rajan_bhramdoor.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "b2-satsang-rajan-ji-aadarsh-parivar-ramcharitmanas",
+        "title": "पूज्य राजन जी: मानस से सीखें आदर्श भाई, बेटा और पिता बनना",
+        "title_en": "Pujya Rajan Ji Ideal Family Lessons",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit rajan mishra, keywords=['bhramdoor', 'bhram door', 'bramdoor']"
+    },
+    "assets/audio/katha_rajan_kumbhaj.mp3": {
+      "classification": "CONFIDENT_MATCH",
+      "top_match": {
+        "id": "b5-katha-ram-kumbhakaran-meghnad-ravan-vadh",
+        "title": "मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय",
+        "title_en": "Kumbhakaran Meghnad Ravan Vadh",
+        "content_type": "katha",
+        "deity_id": "ram",
+        "current_audio_url": "",
+        "score": 70,
+        "already_has_audio": false
+      },
+      "top_score": 70,
+      "proposed_audio_url": "assets/audio/katha_rajan_kumbhaj.mp3",
+      "reason": "Score=70, speaker=pandit rajan mishra, keywords=['kumbhaj', 'kumbh', 'kumbha']"
+    },
+    "assets/audio/katha_rajan_saticharitra.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "b2-katha-shiva-sati-daha-veerbhadra",
+        "title": "सती देहत्याग एवं वीरभद्र प्राकट्य (दक्ष प्रजापति यज्ञ विध्वंस)",
+        "title_en": "Sati Dehatyag and Veerbhadra Katha",
+        "content_type": "katha",
+        "deity_id": "shiva",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit rajan mishra, keywords=['sati charitra', 'saticharitra', 'sati']"
+    },
+    "assets/audio/katha_rajan_shivbhajan.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "b7-bhajan-shiva-damroo-wale-bhole-nath-b7",
+        "title": "डमरू वाले भोले नाथ तेरे दर पे आया भिखारी (झोली पद)",
+        "title_en": "Damroo Wale Bhole Nath B7",
+        "content_type": "bhajan",
+        "deity_id": "shiva",
+        "current_audio_url": "/audio/b7-bhajan-shiva-damroo-wale-bhole-nath-b7.mp3",
+        "score": 70,
+        "already_has_audio": true
+      },
+      "top_score": 70,
+      "proposed_audio_url": null,
+      "reason": "Score=70, speaker=pandit rajan mishra, keywords=['shiv bhajan', 'shiva bhajan', 'bhole']"
+    },
+    "assets/audio/katha_rajan_shivparvati.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "b2-satsang-rajan-ji-aadarsh-parivar-ramcharitmanas",
+        "title": "पूज्य राजन जी: मानस से सीखें आदर्श भाई, बेटा और पिता बनना",
+        "title_en": "Pujya Rajan Ji Ideal Family Lessons",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "current_audio_url": "",
+        "score": 40,
+        "already_has_audio": false
+      },
+      "top_score": 40,
+      "proposed_audio_url": null,
+      "reason": "Score=40, speaker=pandit rajan mishra, keywords=['shiv parvati', 'shivparvati', 'parvati vivah']"
+    },
+    "assets/audio/katha_vaishnodevi.mp3": {
+      "classification": "POSSIBLE_MATCH",
+      "top_match": {
+        "id": "b5-bhajan-durga-sher-sawari-karne-wali-mata",
+        "title": "शेर सवारी करने वाली माता संकट हर लो हमारे",
+        "title_en": "Sher Sawari Karne Wali Mata",
+        "content_type": "bhajan",
+        "deity_id": "durga_mata",
+        "current_audio_url": "",
+        "score": 60,
+        "already_has_audio": false
+      },
+      "top_score": 60,
+      "proposed_audio_url": null,
+      "reason": "Score=60, speaker=None, keywords=['vaishno devi', 'vaishnodevi', 'mata vaishno']"
+    }
+  },
+  "step3_mapping_table": {
+    "confident_matches": [
+      {
+        "audio_file": "assets/audio/katha_harishchandra.mp3",
+        "db_record_id": "katha-bhakta-harishchandra-satya",
+        "db_title": "सत्यवादी राजा हरिश्चंद्र: सत्य निष्ठा एवं काशी श्मशान प्रसंग",
+        "content_type": "katha",
+        "deity_id": "general_bhakti",
+        "batch": 1,
+        "match_confidence": "CONFIDENT",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_harishchandra.mp3",
+        "player_path_ok": true,
+        "score": 70,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_harishchandra.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_harishchandra.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_harishchandra.mp3) → server.py → katha_harishchandra.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_indresh_bhagwat.mp3",
+        "db_record_id": "b2-satsang-indresh-ji-bhagavata-ananya-prem",
+        "db_title": "पूज्य इंद्रेश उपाध्याय जी: भागवत का सर्वोच्च फल—अनन्य भगवद्प्रेम",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 2,
+        "match_confidence": "CONFIDENT",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_indresh_bhagwat.mp3",
+        "player_path_ok": true,
+        "score": 70,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_indresh_bhagwat.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_indresh_bhagwat.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_indresh_bhagwat.mp3) → server.py → katha_indresh_bhagwat.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_indresh_prasang.mp3",
+        "db_record_id": "katha-ram-kewat-samvad-prasang",
+        "db_title": "केवट प्रेम एवं गंगा पार प्रसंग",
+        "content_type": "katha",
+        "deity_id": "ram",
+        "batch": 1,
+        "match_confidence": "CONFIDENT",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_indresh_prasang.mp3",
+        "player_path_ok": true,
+        "score": 70,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_indresh_prasang.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_indresh_prasang.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_indresh_prasang.mp3) → server.py → katha_indresh_prasang.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_rajan_kumbhaj.mp3",
+        "db_record_id": "b5-katha-ram-kumbhakaran-meghnad-ravan-vadh",
+        "db_title": "मेघनाद, कुंभकर्ण और रावण वध: अधर्म पर धर्म की विजय",
+        "content_type": "katha",
+        "deity_id": "ram",
+        "batch": 5,
+        "match_confidence": "CONFIDENT",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_rajan_kumbhaj.mp3",
+        "player_path_ok": true,
+        "score": 70,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_rajan_kumbhaj.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_rajan_kumbhaj.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_rajan_kumbhaj.mp3) → server.py → katha_rajan_kumbhaj.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      }
+    ],
+    "possible_matches": [
+      {
+        "audio_file": "assets/audio/katha_indresh_chhitupanda.mp3",
+        "db_record_id": "satsang-indresh-ji-bhagwat-prem",
+        "db_title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 1,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_indresh_chhitupanda.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['chhitu panda', 'chhitupanda', 'chitupanda']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_indresh_chhitupanda.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_indresh_chhitupanda.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_indresh_chhitupanda.mp3) → server.py → katha_indresh_chhitupanda.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_indresh_ratnavati.mp3",
+        "db_record_id": "satsang-indresh-ji-bhagwat-prem",
+        "db_title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 1,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_indresh_ratnavati.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['ratnavati', 'ratnawati']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_indresh_ratnavati.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_indresh_ratnavati.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_indresh_ratnavati.mp3) → server.py → katha_indresh_ratnavati.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_indresh_surdas.mp3",
+        "db_record_id": "satsang-indresh-ji-bhagwat-prem",
+        "db_title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 1,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_indresh_surdas.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['surdas', 'sur das']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_indresh_surdas.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_indresh_surdas.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_indresh_surdas.mp3) → server.py → katha_indresh_surdas.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_indresh_tajbegum.mp3",
+        "db_record_id": "satsang-indresh-ji-bhagwat-prem",
+        "db_title": "पूज्य इंद्रेश उपाध्याय जी: प्रेम ही भगवान को बांधने की एकमात्र रस्सी है",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 1,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_indresh_tajbegum.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit indresh upadhyay, keywords=['taj begum', 'tajbegum']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_indresh_tajbegum.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_indresh_tajbegum.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_indresh_tajbegum.mp3) → server.py → katha_indresh_tajbegum.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_rajan_bhramdoor.mp3",
+        "db_record_id": "b2-satsang-rajan-ji-aadarsh-parivar-ramcharitmanas",
+        "db_title": "पूज्य राजन जी: मानस से सीखें आदर्श भाई, बेटा और पिता बनना",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 2,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_rajan_bhramdoor.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit rajan mishra, keywords=['bhramdoor', 'bhram door', 'bramdoor']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_rajan_bhramdoor.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_rajan_bhramdoor.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_rajan_bhramdoor.mp3) → server.py → katha_rajan_bhramdoor.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_rajan_saticharitra.mp3",
+        "db_record_id": "b2-katha-shiva-sati-daha-veerbhadra",
+        "db_title": "सती देहत्याग एवं वीरभद्र प्राकट्य (दक्ष प्रजापति यज्ञ विध्वंस)",
+        "content_type": "katha",
+        "deity_id": "shiva",
+        "batch": 2,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_rajan_saticharitra.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit rajan mishra, keywords=['sati charitra', 'saticharitra', 'sati']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_rajan_saticharitra.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_rajan_saticharitra.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_rajan_saticharitra.mp3) → server.py → katha_rajan_saticharitra.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_rajan_shivbhajan.mp3",
+        "db_record_id": "b7-bhajan-shiva-damroo-wale-bhole-nath-b7",
+        "db_title": "डमरू वाले भोले नाथ तेरे दर पे आया भिखारी (झोली पद)",
+        "content_type": "bhajan",
+        "deity_id": "shiva",
+        "batch": 7,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "/audio/b7-bhajan-shiva-damroo-wale-bhole-nath-b7.mp3",
+        "proposed_audio_url": "assets/audio/katha_rajan_shivbhajan.mp3",
+        "already_has_audio": true,
+        "score": 70,
+        "reason": "Score=70, speaker=pandit rajan mishra, keywords=['shiv bhajan', 'shiva bhajan', 'bhole']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_rajan_shivbhajan.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_rajan_shivbhajan.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_rajan_shivbhajan.mp3) → server.py → katha_rajan_shivbhajan.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_rajan_shivparvati.mp3",
+        "db_record_id": "b2-satsang-rajan-ji-aadarsh-parivar-ramcharitmanas",
+        "db_title": "पूज्य राजन जी: मानस से सीखें आदर्श भाई, बेटा और पिता बनना",
+        "content_type": "satsang",
+        "deity_id": "guru_sant",
+        "batch": 2,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_rajan_shivparvati.mp3",
+        "already_has_audio": false,
+        "score": 40,
+        "reason": "Score=40, speaker=pandit rajan mishra, keywords=['shiv parvati', 'shivparvati', 'parvati vivah']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_rajan_shivparvati.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_rajan_shivparvati.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_rajan_shivparvati.mp3) → server.py → katha_rajan_shivparvati.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      },
+      {
+        "audio_file": "assets/audio/katha_vaishnodevi.mp3",
+        "db_record_id": "b5-bhajan-durga-sher-sawari-karne-wali-mata",
+        "db_title": "शेर सवारी करने वाली माता संकट हर लो हमारे",
+        "content_type": "bhajan",
+        "deity_id": "durga_mata",
+        "batch": 5,
+        "match_confidence": "POSSIBLE",
+        "current_audio_url": "",
+        "proposed_audio_url": "assets/audio/katha_vaishnodevi.mp3",
+        "already_has_audio": false,
+        "score": 60,
+        "reason": "Score=60, speaker=None, keywords=['vaishno devi', 'vaishnodevi', 'mata vaishno']",
+        "player_path_ok": true,
+        "player_verification": {
+          "proposed_url": "assets/audio/katha_vaishnodevi.mp3",
+          "physical_path": "C:\\Users\\vishw\\.gemini\\antigravity-ide\\scratch\\bhakti-app\\assets\\audio\\katha_vaishnodevi.mp3",
+          "file_exists": true,
+          "file_readable": true,
+          "path_format_correct": true,
+          "pipeline_ok": true,
+          "pipeline": "DB(assets/audio/katha_vaishnodevi.mp3) → server.py → katha_vaishnodevi.mp3 → HTTP 206 → HTML5 Audio"
+        }
+      }
+    ],
+    "no_match": []
+  },
+  "step5_dry_run_summary": {
+    "TOTAL_LOCAL_MP3": 23,
+    "CURRENTLY_CONNECTED": 10,
+    "ORPHANED": 13,
+    "CONFIDENT_MATCHES": 4,
+    "POSSIBLE_MATCHES": 9,
+    "NO_MATCH": 0,
+    "DATABASE_CHANGES": 0,
+    "FILES_CHANGED": 0,
+    "BATCH_021_STARTED": "NO",
+    "DOWNLOADS": 0
+  }
+}

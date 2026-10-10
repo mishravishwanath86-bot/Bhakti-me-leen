@@ -1,0 +1,440 @@
+{
+  "phase": "COMPLETE_PLAYBACK_VERIFICATION",
+  "mode": "STRICT_READ_ONLY",
+  "database_modified": false,
+  "database_writes": 0,
+  "total_katha": 505,
+  "katha_media_summary": {
+    "total_katha": 505,
+    "with_audio": 333,
+    "with_video": 224,
+    "with_both": 200,
+    "with_neither": 148,
+    "audio_only": 133,
+    "video_only": 24,
+    "disjoint_sum": 505
+  },
+  "audio": {
+    "total_sources": 394,
+    "local_mp3": 38,
+    "local_mp3_pass": 38,
+    "youtube_audio": 356,
+    "youtube_audio_pass": 325,
+    "playback_pass": 38,
+    "load_pass_user_play_required": 325,
+    "failed": 31,
+    "inaccessible": 0
+  },
+  "youtube_audio": {
+    "total": 356,
+    "pass": 325,
+    "failed": 31
+  },
+  "video": {
+    "total_sources": 226,
+    "playback_pass": 0,
+    "load_pass_user_play_required": 214,
+    "failed": 12,
+    "inaccessible": 0
+  },
+  "phase_media": {
+    "2N": {
+      "audio": 38,
+      "video": 32,
+      "total": 70,
+      "verified_in_db": 70,
+      "status": "PASS"
+    },
+    "2O": {
+      "audio": 27,
+      "video": 17,
+      "total": 44,
+      "verified_in_db": 44,
+      "status": "PASS"
+    },
+    "2P": {
+      "audio": 21,
+      "video": 6,
+      "total": 27,
+      "verified_in_db": 27,
+      "status": "PASS"
+    },
+    "2Q": {
+      "audio": 24,
+      "video": 23,
+      "total": 47,
+      "verified_in_db": 47,
+      "status": "PASS"
+    }
+  },
+  "duplicates": {
+    "duplicate_youtube_ids": 0,
+    "duplicate_youtube_urls": 0
+  },
+  "conflicts": {
+    "conflicts": 0,
+    "cross_field_conflicts": 0
+  },
+  "url_id_consistency": {
+    "url_id_mismatches": 0,
+    "malformed_urls": 0
+  },
+  "failures": [
+    {
+      "record_id": "bhajan-krishna-yashomati-maiya-se-bole",
+      "title": "यशोमति मैया से बोले नंदलाला",
+      "media_type": "YouTube Audio",
+      "youtube_id": "yWTN6bsDWN4",
+      "youtube_url": "https://www.youtube.com/watch?v=yWTN6bsDWN4",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "chalisa-durga-shri-durga-chalisa",
+      "title": "श्री दुर्गा चालीसा (नमो नमो दुर्गे सुख करनी)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "kYIqj20eB54",
+      "youtube_url": "https://www.youtube.com/watch?v=kYIqj20eB54",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "aarti-lakshmi-om-jai-lakshmi-mata",
+      "title": "महालक्ष्मी जी की आरती - ॐ जय लक्ष्मी माता",
+      "media_type": "YouTube Audio",
+      "youtube_id": "_4sTBRQQe9s",
+      "youtube_url": "https://www.youtube.com/watch?v=_4sTBRQQe9s",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "bhajan-surdas-nisidin-barsat-nain-hamare",
+      "title": "निसिदिन बरसत नैन हमारे",
+      "media_type": "YouTube Audio",
+      "youtube_id": "AmXOoh3JPWU",
+      "youtube_url": "https://www.youtube.com/watch?v=AmXOoh3JPWU",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "aarti-krishna-shrinathji-ki",
+      "title": "आरती श्रीनाथ जी की (आरती श्री नवनीतप्रिया की)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "8Uj2tn5vSQE",
+      "youtube_url": "https://www.youtube.com/watch?v=8Uj2tn5vSQE",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b6-chalisa-hanuman-shri-hanuman-chalisa-tulsidas-b6",
+      "title": "श्री हनुमान चालीसा (गोस्वामी तुलसीदास कृत 40 चौपाई)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "AETFv444yoE",
+      "youtube_url": "https://www.youtube.com/watch?v=AETFv444yoE",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b10-chalisa-shri-ram-avadh-chalisa-sampurna-b10",
+      "title": "श्री राम चालीसा (अवधपति रघुवीर दयाला करो कृपा दशरथ के लाला 10)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "1F9L7v3K2Nm",
+      "youtube_url": "https://www.youtube.com/watch?v=1F9L7v3K2Nm",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b10-chalisa-shri-krishna-gopal-chalisa-sampurna-b10",
+      "title": "श्री कृष्ण चालीसा (जय जय श्री गोकुल के वासी मुरलीधर त्रिभुवन सुखरासी 10)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "7X5b9L3eN2Q",
+      "youtube_url": "https://www.youtube.com/watch?v=7X5b9L3eN2Q",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "title": "केवट संवाद कथा: प्रभु श्री राम के चरण पखारना और उतराई में भक्ति दान (10)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "1M8L4v7K2Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=1M8L4v7K2Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "title": "गोवर्धन लीला: कनिष्ठिका उंगली पर गिरिराज उठाना और इंद्र का मानमर्दन (10)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "8M2K9v4L7Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=8M2K9v4L7Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-chalisa-ram-chandra-kripa-chalisa-b11",
+      "title": "श्री रामचंद्र कृपालु भक्ति चालीसा (राम चालीसा 11)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "6K2M8v7L4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=6K2M8v7L4Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-chalisa-krishna-gopal-madhav-chalisa-b11",
+      "title": "श्री कृष्ण गोपाल माधव भक्ति चालीसा (गोपाल चालीसा 11)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "9B2L1v4k8Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=9B2L1v4k8Ms",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-chalisa-durga-bhagavati-kripa-chalisa-b11",
+      "title": "श्री दुर्गा भगवती नवदुर्गा चालीसा (दुर्गा चालीसा 11)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "JmHj24NqE7w",
+      "youtube_url": "https://www.youtube.com/watch?v=JmHj24NqE7w",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-chalisa-shanidev-shanti-kripa-chalisa-b11",
+      "title": "श्री शनिदेव महाराज शांति एवं न्याय चालीसा (शनि चालीसा 11)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "8M3L2v7K9Ps",
+      "youtube_url": "https://www.youtube.com/watch?v=8M3L2v7K9Ps",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "title": "श्री रामचरितमानस केवट प्रेम एवं नौका प्रसंग कथा (केवट संवाद 11)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "4L7M2v9K1Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=4L7M2v9K1Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य मित्रता कथा (सुदामा मिलन 11)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "5V2M8k4L9Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=5V2M8k4L9Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-chalisa-ram-raghupati-kripa-chalisa-b12",
+      "title": "श्री रघुपति राघव कृपालु भक्ति चालीसा (रघुपति चालीसा 12)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "4N7L3v2K9Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=4N7L3v2K9Ms",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-chalisa-krishna-nandanandana-kripa-chalisa-b12",
+      "title": "श्री नंदनंदन कृष्ण कन्हैया अमृत चालीसा (नंदनंदन चालीसा 12)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "3K8L2v9s1Nm",
+      "youtube_url": "https://www.youtube.com/watch?v=3K8L2v9s1Nm",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-chalisa-durga-singhavahini-kripa-chalisa-b12",
+      "title": "श्री सिंहवाहिनी दुर्गा भवानी चालीसा (सिंहवाहिनी चालीसा 12)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "482D1P8sH9A",
+      "youtube_url": "https://www.youtube.com/watch?v=482D1P8sH9A",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-chalisa-hanuman-mahavir-kripa-chalisa-b12",
+      "title": "श्री महावीर हनुमान संकटमोचन चालीसा (महावीर चालीसा 12)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "Gk3K3u4k7Yg",
+      "youtube_url": "https://www.youtube.com/watch?v=Gk3K3u4k7Yg",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "title": "श्री रामचरितमानस शबरी नवधा भक्ति प्रसंग (शबरी भक्ति 12)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "3N8L4v2K9Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=3N8L4v2K9Ms",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (गोवर्धन कथा 12)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "2K9M4v7L1Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=2K9M4v7L1Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-chalisa-ram-avadh-pati-kripa-chalisa-b13",
+      "title": "श्री अवधपति राघव कृपालु चालीसा (अवधपति चालीसा 13)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "7M2L9v4K1Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=7M2L9v4K1Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-chalisa-krishna-gokul-chandra-chalisa-b13",
+      "title": "श्री गोकुल चंद्र कृष्ण कन्हैया अमृत चालीसा (गोकुल चंद्र चालीसा 13)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "2L9M4k7V8Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=2L9M4k7V8Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-chalisa-durga-ashtabhuja-bhavani-chalisa-b13",
+      "title": "श्री अष्टभुजा दुर्गा भवानी अमृत चालीसा (अष्टभुजा चालीसा 13)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "M99b2G5vG1Q",
+      "youtube_url": "https://www.youtube.com/watch?v=M99b2G5vG1Q",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-chalisa-hanuman-anjaneya-kripa-chalisa-b13",
+      "title": "श्री आंजनेय संकटमोचन महावीर चालीसा (आंजनेय चालीसा 13)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "D6F6bK2L9sY",
+      "youtube_url": "https://www.youtube.com/watch?v=D6F6bK2L9sY",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "title": "श्री रामचरितमानस केवट संवाद एवं चरणामृत प्रसंग (केवट प्रसंग 13)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "6L2M9v4K7Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=6L2M9v4K7Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "title": "श्रीमद्भागवत सुदामा चरित्र अनन्य सखा भाव (सुदामा चरित्र 13)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "1K7M9v2L4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=1K7M9v2L4Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "title": "श्री रामचरितमानस भरत मिलाप एवं पादुका प्रसंग (चतुर्दश भरत मिलाप 14)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "2K8M4v9L1Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=2K8M4v9L1Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (चतुर्दश गोवर्धन 14)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "8L3M7v2K9Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=8L3M7v2K9Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b14-bhajan-guru-sant-kabir-chadariya-jhini-re-jhini-b14",
+      "title": "झीनी झीनी बीनी चदरिया (संत कबीर पद 14)",
+      "media_type": "YouTube Audio",
+      "youtube_id": "Fj-E_U2x6fE",
+      "youtube_url": "https://www.youtube.com/watch?v=Fj-E_U2x6fE",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "bhajan-krishna-achyutam-keshavam",
+      "title": "अच्युतम केशवम कृष्ण दामोदरम",
+      "media_type": "YouTube Video",
+      "youtube_id": "example1",
+      "youtube_url": "https://www.youtube.com/watch?v=example1",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "chalisa-hanuman-shri-hanuman-chalisa",
+      "title": "श्री हनुमान चालीसा (दिव्य पाठ)",
+      "media_type": "YouTube Video",
+      "youtube_id": "example2",
+      "youtube_url": "https://www.youtube.com/watch?v=example2",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "title": "केवट संवाद कथा: प्रभु श्री राम के चरण पखारना और उतराई में भक्ति दान (10)",
+      "media_type": "YouTube Video",
+      "youtube_id": "9L2M4v7K3Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=9L2M4v7K3Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "title": "गोवर्धन लीला: कनिष्ठिका उंगली पर गिरिराज उठाना और इंद्र का मानमर्दन (10)",
+      "media_type": "YouTube Video",
+      "youtube_id": "3K9L7v2M4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=3K9L7v2M4Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "title": "श्री रामचरितमानस केवट प्रेम एवं नौका प्रसंग कथा (केवट संवाद 11)",
+      "media_type": "YouTube Video",
+      "youtube_id": "7N2L4v9K8Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=7N2L4v9K8Ms",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य मित्रता कथा (सुदामा मिलन 11)",
+      "media_type": "YouTube Video",
+      "youtube_id": "7N4L2v9M3Ks",
+      "youtube_url": "https://www.youtube.com/watch?v=7N4L2v9M3Ks",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "title": "श्री रामचरितमानस शबरी नवधा भक्ति प्रसंग (शबरी भक्ति 12)",
+      "media_type": "YouTube Video",
+      "youtube_id": "5L9M2k7V4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=5L9M2k7V4Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (गोवर्धन कथा 12)",
+      "media_type": "YouTube Video",
+      "youtube_id": "9M3L7v2K4Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=9M3L7v2K4Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "title": "श्री रामचरितमानस केवट संवाद एवं चरणामृत प्रसंग (केवट प्रसंग 13)",
+      "media_type": "YouTube Video",
+      "youtube_id": "8N4L2v7K1Ms",
+      "youtube_url": "https://www.youtube.com/watch?v=8N4L2v7K1Ms",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "title": "श्रीमद्भागवत सुदामा चरित्र अनन्य सखा भाव (सुदामा चरित्र 13)",
+      "media_type": "YouTube Video",
+      "youtube_id": "4M2L8v9K7Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=4M2L8v9K7Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "title": "श्री रामचरितमानस भरत मिलाप एवं पादुका प्रसंग (चतुर्दश भरत मिलाप 14)",
+      "media_type": "YouTube Video",
+      "youtube_id": "4L2M9v7K1Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=4L2M9v7K1Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    },
+    {
+      "record_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (चतुर्दश गोवर्धन 14)",
+      "media_type": "YouTube Video",
+      "youtube_id": "6M9L2v4K8Ns",
+      "youtube_url": "https://www.youtube.com/watch?v=6M9L2v4K8Ns",
+      "reason": "LIVE_VERIFICATION_FAILED"
+    }
+  ],
+  "fts5": {
+    "fts5_docs": 10010,
+    "status": "PASS"
+  },
+  "integrity": {
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "final_gate": {
+    "actual_playback_status": "PASS",
+    "verdict": "REVIEW"
+  }
+}

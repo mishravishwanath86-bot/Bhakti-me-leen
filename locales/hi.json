@@ -1,0 +1,64 @@
+{
+  "appName": "भक्ति में लीन",
+  "tagline": "दिव्य साधना एवं आत्मिक शांति का मार्ग",
+  "shubhaMantra": "✨ ॐ श्री गणेशाय नमः ✨",
+  "nav": {
+    "panchang": "पंचांग",
+    "jar": "अमृत कलश",
+    "home": "होम",
+    "katha": "ऑडियो",
+    "profile": "प्रोफ़ाइल",
+    "settings": "सेटिंग्स",
+    "aarti": "आरती दर्शन",
+    "japMala": "जाप माला",
+    "audio": "ऑडियो"
+  },
+  "home": {
+    "welcome": "स्वागत है",
+    "guestLogin": "अतिथि प्रवेश",
+    "dailyTracker": "दैनिक साधना संज्ञान",
+    "visitsToday": "आज का पावन प्रवेश",
+    "times": "बार",
+    "streak": "दिन स्ट्रीक",
+    "streakShield": "कवच",
+    "punyaPoints": "संचित पुण्य",
+    "openSadhanaCenter": "साधना नियंत्रण कक्ष खोलें",
+    "liveRadio": "24×7 लाइव भक्ति रेडियो",
+    "parikrama": "दिव्य परिक्रमा संकल्प",
+    "amritKalash": "भक्ति अमृत कलश",
+    "radioNowPlaying": "वर्तमान प्रसारण",
+    "categories": "दिव्य श्रेणियां",
+    "dailyPanchang": "दैनिक पंचांग",
+    "shubhMuhurat": "शुभ मुहूर्त"
+  },
+  "categories": {
+    "aarti": "आरती",
+    "chalisa": "चालीसा",
+    "mantra": "मंत्र",
+    "stotra": "स्तोत्र",
+    "vrat": "व्रत",
+    "festival": "त्यौहार",
+    "ramayana": "रामायण",
+    "katha": "कथा",
+    "desh": "देशभक्ति",
+    "panchang": "पंचांग"
+  },
+  "settings": {
+    "title": "साधना नियंत्रण एवं सेटिंग्स",
+    "haptics": "दिव्य अनुभूति एवं हैप्टिक्स",
+    "brahmaMuhurta": "ब्रह्म मुहूर्त जागरण अलार्म",
+    "bioAura": "क्वांटम बायो-एनर्जी व ऑरा विज़ुअलाइज़र",
+    "vault": "साधना वॉल्ट व क्लाउड सिंक",
+    "language": "ऐप की भाषा",
+    "selectLanguage": "अपनी पसंदीदा भाषा चुनें",
+    "applyLanguage": "भाषा लागू करें",
+    "logout": "लॉग आउट"
+  },
+  "audio": {
+    "title": "भक्ति ऑडियो लाइब्रेरी",
+    "pureAudio": "केवल ऑडियो सुनें",
+    "watchVideo": "वीडियो देखें",
+    "nowPlaying": "अब बज रहा है",
+    "lyrics": "पाठ एवं भावार्थ देखें"
+  }
+}

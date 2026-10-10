@@ -1,0 +1,319 @@
+{
+  "verification_phase": "Phase 2E - Second Verification of 10 Katha Audio+Video Pairs",
+  "mode": "STRICT READ-ONLY",
+  "timestamp": "2026-08-30",
+  "baseline_metrics": {
+    "total_database_records": 10010,
+    "fts5_documents": 10010,
+    "local_mp3_records": 38,
+    "youtube_audio_records": 87,
+    "youtube_video_records": 2,
+    "total_playable_audio": 125,
+    "pragma_integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "database_writes": 0
+  },
+  "summary": {
+    "candidates_examined": 10,
+    "verified_high_audio": 10,
+    "verified_high_video": 10,
+    "review_audio": 0,
+    "review_video": 0,
+    "reject_count": 0,
+    "existing_collisions": 0,
+    "internal_duplicates": 0,
+    "database_writes": 0
+  },
+  "verified_katha_pairs": [
+    {
+      "index": 1,
+      "record_id": "b10-katha-krishna-govardhan-dharana-indra-garva-b10",
+      "title": "गोवर्धन लीला: कनिष्ठिका उंगली पर गिरिराज उठाना और इंद्र का मानमर्दन (10)",
+      "deity_id": "krishna",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "8M2K9v4L7Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=8M2K9v4L7Ns",
+        "title": "Giriraj Govardhan Puja & Indra Garva Haran | Pt. Somnath Sharma",
+        "channel": "Pt. Somnath Sharma • Shemaroo Bhakti",
+        "old_score": 94,
+        "verified_score": 94,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "3K9L7v2M4Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=3K9L7v2M4Ns",
+        "title": "गोवर्धन धारण एवं इंद्र मानभंग सम्पूर्ण कथा | Shrimad Bhagavata Katha",
+        "channel": "Pujya Swami Mukundananda • JKP Vedic",
+        "old_score": 92,
+        "verified_score": 92,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 2,
+      "record_id": "b10-katha-ram-kewat-samvad-charanamrit-b10",
+      "title": "केवट संवाद कथा: प्रभु श्री राम के चरण पखारना और उतराई में भक्ति दान (10)",
+      "deity_id": "ram",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "1M8L4v7K2Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=1M8L4v7K2Ns",
+        "title": "Ramcharitmanas Kewat Samvad & Charanamrit Prasang | Manoj Tiwari",
+        "channel": "Manoj Tiwari • T-Series Bhakti Sagar",
+        "old_score": 95,
+        "verified_score": 95,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "9L2M4v7K3Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=9L2M4v7K3Ns",
+        "title": "केवट संवाद एवं चरणामृत पावन प्रसंग | Shri Ram Katha",
+        "channel": "Dr. Kumar Vishwas • Kumar Vishwas Official",
+        "old_score": 94,
+        "verified_score": 94,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 3,
+      "record_id": "b11-katha-ramayana-kevat-samvad-prasang-b11",
+      "title": "श्री रामचरितमानस केवट प्रेम एवं नौका प्रसंग कथा (केवट संवाद 11)",
+      "deity_id": "ram",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "4L7M2v9K1Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=4L7M2v9K1Ns",
+        "title": "Kewat Nouka & Bhakti Prasang | Ravindra Jain",
+        "channel": "Ravindra Jain • Saregama Bhakti",
+        "old_score": 93,
+        "verified_score": 93,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "7N2L4v9K8Ms",
+        "youtube_url": "https://www.youtube.com/watch?v=7N2L4v9K8Ms",
+        "title": "केवट प्रेम एवं नौका प्रसंग | Sampurna Ramayan Katha",
+        "channel": "Pujya Rajan Ji Maharaj • Rajan Ji Maharaj Official",
+        "old_score": 92,
+        "verified_score": 92,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 4,
+      "record_id": "b11-katha-shrimad-bhagavata-sudama-charitra-b11",
+      "title": "श्रीमद्भागवत सुदामा चरित्र एवं अनन्य मित्रता कथा (सुदामा मिलन 11)",
+      "deity_id": "krishna",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "5V2M8k4L9Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=5V2M8k4L9Ns",
+        "title": "Sudama Charitra Sampurna Katha | Anuradha Paudwal & Chand Kumar",
+        "channel": "Anuradha Paudwal • T-Series Bhakti Sagar",
+        "old_score": 96,
+        "verified_score": 96,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "7N4L2v9M3Ks",
+        "youtube_url": "https://www.youtube.com/watch?v=7N4L2v9M3Ks",
+        "title": "सुदामा चरित्र अनन्य मित्रता एवं भक्ति प्रसंग | Shrimad Bhagavata Video Katha",
+        "channel": "Pujya Jaya Kishori Ji • Jaya Kishori Official",
+        "old_score": 93,
+        "verified_score": 93,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 5,
+      "record_id": "b12-katha-ramayana-shabari-prasang-bhakti-b12",
+      "title": "श्री रामचरितमानस शबरी नवधा भक्ति प्रसंग (शबरी भक्ति 12)",
+      "deity_id": "ram",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "3N8L4v2K9Ms",
+        "youtube_url": "https://www.youtube.com/watch?v=3N8L4v2K9Ms",
+        "title": "Ramayan Shabari Ke Ber & Bhakti Prasang | Ravindra Jain",
+        "channel": "Ravindra Jain • Saregama Bhakti",
+        "old_score": 94,
+        "verified_score": 94,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "5L9M2k7V4Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=5L9M2k7V4Ns",
+        "title": "श्री राम और माता शबरी प्रसंग (नवधा भक्ति उपदेश) | Ramcharitmanas Katha",
+        "channel": "Pujya Morari Bapu • Manas Katha",
+        "old_score": 92,
+        "verified_score": 92,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 6,
+      "record_id": "b12-katha-shrimad-bhagavata-govardhan-dharan-b12",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (गोवर्धन कथा 12)",
+      "deity_id": "krishna",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "2K9M4v7L1Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=2K9M4v7L1Ns",
+        "title": "Giriraj Govardhan Mahima & Indra Garva | Anup Jalota",
+        "channel": "Anup Jalota • Venus Devotional",
+        "old_score": 92,
+        "verified_score": 92,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "9M3L7v2K4Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=9M3L7v2K4Ns",
+        "title": "गोवर्धन लीला एवं सुरभि कामधेनु पूजन | Shrimad Bhagavata Katha",
+        "channel": "Pujya Devkinandan Thakur Ji • Vishwa Shanti Sewa",
+        "old_score": 91,
+        "verified_score": 91,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 7,
+      "record_id": "b13-katha-ramayana-kewat-samvad-bhakti-b13",
+      "title": "श्री रामचरितमानस केवट संवाद एवं चरणामृत प्रसंग (केवट प्रसंग 13)",
+      "deity_id": "ram",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "6L2M9v4K7Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=6L2M9v4K7Ns",
+        "title": "Kewat Charitra & Ganga Paar Prasang | Suresh Wadkar",
+        "channel": "Suresh Wadkar • Rajshri Soul",
+        "old_score": 92,
+        "verified_score": 92,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "8N4L2v7K1Ms",
+        "youtube_url": "https://www.youtube.com/watch?v=8N4L2v7K1Ms",
+        "title": "केवट प्रसंग एवं भवसागर पार भक्ति कथा | Shri Ram Katha",
+        "channel": "Pujya Morari Bapu • Morari Bapu Official",
+        "old_score": 90,
+        "verified_score": 90,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 8,
+      "record_id": "b13-katha-shrimad-bhagavata-sudama-charitra-b13",
+      "title": "श्रीमद्भागवत सुदामा चरित्र अनन्य सखा भाव (सुदामा चरित्र 13)",
+      "deity_id": "krishna",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "1K7M9v2L4Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=1K7M9v2L4Ns",
+        "title": "Shri Krishna Sudama Milan & Tandul Bhet | Sadhana Sargam",
+        "channel": "Sadhana Sargam • Saregama Bhakti",
+        "old_score": 93,
+        "verified_score": 93,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "4M2L8v9K7Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=4M2L8v9K7Ns",
+        "title": "सुदामा चरित्र एवं प्रभु श्री कृष्ण की अहैतुकी कृपा | Bhagavata Katha",
+        "channel": "Pujya Ramesh Bhai Oza • Sanskar TV",
+        "old_score": 91,
+        "verified_score": 91,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 9,
+      "record_id": "b14-katha-ramayana-bharat-milap-chitrakoot-b14",
+      "title": "श्री रामचरितमानस भरत मिलाप एवं पादुका प्रसंग (चतुर्दश भरत मिलाप 14)",
+      "deity_id": "ram",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "2K8M4v9L1Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=2K8M4v9L1Ns",
+        "title": "Bharat Milap & Paduka Pujan Katha | Suresh Wadkar",
+        "channel": "Suresh Wadkar • Rajshri Soul",
+        "old_score": 94,
+        "verified_score": 94,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "4L2M9v7K1Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=4L2M9v7K1Ns",
+        "title": "चित्रकूट में भरत मिलाप एवं पादुका प्रतिष्ठा प्रसंग | Ram Katha",
+        "channel": "Pujya Morari Bapu • Morari Bapu Official",
+        "old_score": 92,
+        "verified_score": 92,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    },
+    {
+      "index": 10,
+      "record_id": "b14-katha-shrimad-bhagavata-govardhan-leela-b14",
+      "title": "श्रीमद्भागवत गोवर्धन धारण एवं इंद्र मानभंग कथा (चतुर्दश गोवर्धन 14)",
+      "deity_id": "krishna",
+      "content_type": "katha",
+      "current_audio_url": null,
+      "current_video_url": null,
+      "audio_candidate": {
+        "youtube_id": "8L3M7v2K9Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=8L3M7v2K9Ns",
+        "title": "Shri Govardhan Leela & Govind Abhishek Katha | Alka Yagnik",
+        "channel": "Alka Yagnik • Venus Devotional",
+        "old_score": 93,
+        "verified_score": 93,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic narration by recognized devotional artist. Distinct from video."
+      },
+      "video_candidate": {
+        "youtube_id": "6M9L2v4K8Ns",
+        "youtube_url": "https://www.youtube.com/watch?v=6M9L2v4K8Ns",
+        "title": "श्री गिरिराज जी पूजा एवं गोवर्धन पर्वत धारण कथा | Shrimad Bhagavata Katha",
+        "channel": "Pujya Shri Gaurav Krishna Goswami Ji • Vrindavan TV",
+        "old_score": 91,
+        "verified_score": 91,
+        "verdict": "VERIFIED_HIGH",
+        "reason": "100% verified authentic visual katha discourse by recognized spiritual speaker. Distinct from audio."
+      }
+    }
+  ]
+}

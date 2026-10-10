@@ -1,0 +1,384 @@
+{
+  "navagraha": [],
+  "devi-devta": [],
+  "amavasya": [
+    {
+      "month": "Jan",
+      "day": "18",
+      "weekday": "Sun",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "17",
+      "weekday": "Tue",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "18",
+      "weekday": "Wed",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "19",
+      "weekday": "Thu",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "17",
+      "weekday": "Fri",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "16",
+      "weekday": "Sat",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "14",
+      "weekday": "Sun",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "15",
+      "weekday": "Mon",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "14",
+      "weekday": "Tue",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "12",
+      "weekday": "Wed",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "10",
+      "weekday": "Thu",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "11",
+      "weekday": "Fri",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "10",
+      "weekday": "Sat",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "8",
+      "weekday": "Sun",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "9",
+      "weekday": "Mon",
+      "name": "Amavasya",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "8",
+      "weekday": "Tue",
+      "name": "Amavasya",
+      "tithi": "..."
+    }
+  ],
+  "skanda-sashti": [
+    {
+      "month": "Jan",
+      "day": "24",
+      "weekday": "Sat",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "22",
+      "weekday": "Sun",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "22",
+      "weekday": "Wed",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "21",
+      "weekday": "Thu",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "19",
+      "weekday": "Fri",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "19",
+      "weekday": "Sun",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "17",
+      "weekday": "Mon",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "16",
+      "weekday": "Wed",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "16",
+      "weekday": "Fri",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "15",
+      "weekday": "Sun",
+      "name": "Shashthi",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "15",
+      "weekday": "Tue",
+      "name": "Shashthi",
+      "tithi": "..."
+    }
+  ],
+  "karthigai": [
+    {
+      "month": "Jan",
+      "day": "27",
+      "weekday": "Tue",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "23",
+      "weekday": "Mon",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "23",
+      "weekday": "Mon",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "19",
+      "weekday": "Sun",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "16",
+      "weekday": "Sat",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "13",
+      "weekday": "Sat",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "10",
+      "weekday": "Fri",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "7",
+      "weekday": "Fri",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "3",
+      "weekday": "Thu",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "30",
+      "weekday": "Wed",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "27",
+      "weekday": "Tue",
+      "name": "Karthigai Deepam",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Masik Karthigai",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "21",
+      "weekday": "Mon",
+      "name": "Masik Karthigai Dates",
+      "tithi": "..."
+    }
+  ],
+  "shraddha": [],
+  "durgashtami": [
+    {
+      "month": "Jan",
+      "day": "26",
+      "weekday": "Mon",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Feb",
+      "day": "24",
+      "weekday": "Tue",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Mar",
+      "day": "26",
+      "weekday": "Thu",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Apr",
+      "day": "24",
+      "weekday": "Fri",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "May",
+      "day": "23",
+      "weekday": "Sat",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Jun",
+      "day": "22",
+      "weekday": "Mon",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Jul",
+      "day": "21",
+      "weekday": "Tue",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Aug",
+      "day": "20",
+      "weekday": "Thu",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Sep",
+      "day": "19",
+      "weekday": "Sat",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Oct",
+      "day": "19",
+      "weekday": "Mon",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Nov",
+      "day": "17",
+      "weekday": "Tue",
+      "name": "Ashtami",
+      "tithi": "..."
+    },
+    {
+      "month": "Dec",
+      "day": "17",
+      "weekday": "Thu",
+      "name": "Ashtami",
+      "tithi": "..."
+    }
+  ]
+}

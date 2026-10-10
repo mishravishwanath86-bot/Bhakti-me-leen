@@ -1,0 +1,90 @@
+{
+  "phase": "2Q-E",
+  "mode": "STRICT_VERIFIED_MEDIA_APPLY",
+  "database_modified": true,
+  "database_writes": 47,
+  "approved_audio": 24,
+  "approved_video": 23,
+  "approved_total": 47,
+  "audio_applied": 24,
+  "video_applied": 23,
+  "total_applied": 47,
+  "audio_skipped": 0,
+  "video_skipped": 0,
+  "total_failed": 0,
+  "overwrite_attempts": 0,
+  "duplicate_youtube_ids": 0,
+  "duplicate_youtube_urls": 0,
+  "cross_field_conflicts": 0,
+  "url_id_mismatches": 0,
+  "malformed_urls": 0,
+  "unauthorized_changes": 0,
+  "mapping_verification": {
+    "status": "PASS",
+    "verified_count": 47,
+    "total": 47
+  },
+  "live_verification": {
+    "status": "PASS",
+    "verified_count": 47
+  },
+  "pre_apply_counts": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio": 370,
+    "local_mp3": 38,
+    "youtube_audio": 332,
+    "video_urls": 203,
+    "total_katha": 505,
+    "katha_with_audio": 309,
+    "katha_with_video": 201,
+    "katha_with_both": 180,
+    "katha_with_neither": 175
+  },
+  "post_apply_counts": {
+    "total_records": 10010,
+    "fts5_documents": 10010,
+    "playable_audio": 394,
+    "local_mp3": 38,
+    "youtube_audio": 356,
+    "video_urls": 226,
+    "total_katha": 505,
+    "katha_with_audio": 333,
+    "katha_with_video": 224,
+    "katha_with_both": 200,
+    "katha_with_neither": 148,
+    "audio_only": 133,
+    "video_only": 24
+  },
+  "delta": {
+    "playable_audio_delta": 24,
+    "youtube_audio_delta": 24,
+    "video_url_delta": 23,
+    "total_media_delta": 47
+  },
+  "katha_reconciliation": {
+    "disjoint_sum": 505,
+    "status": "PASS"
+  },
+  "fts5": {
+    "status": "PASS"
+  },
+  "integrity": {
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "schema_audit": {
+    "status": "PASS"
+  },
+  "backup": {
+    "backup_file": "bhakti_pre_phase2q_e_apply_backup.db",
+    "status": "PASS"
+  },
+  "review_applied": 0,
+  "reject_applied": 0,
+  "no_suitable_applied": 0,
+  "transaction": "COMMITTED",
+  "final_gate": {
+    "verdict": "PASS"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "audit_type": "APPLY EXISTING AUDIO MAPPINGS — ALL CONFIDENT",
+  "timestamp": "2026-08-29T07:30:05.132895+00:00",
+  "mappings_applied": [
+    {
+      "db_id": "b2-katha-shiva-sati-daha-veerbhadra",
+      "audio_file": "katha_rajan_saticharitra.mp3",
+      "before": null,
+      "after": "assets/audio/katha_rajan_saticharitra.mp3"
+    },
+    {
+      "db_id": "b2-katha-shiva-parvati-kalyanam-vivah",
+      "audio_file": "katha_rajan_shivparvati.mp3",
+      "before": null,
+      "after": "assets/audio/katha_rajan_shivparvati.mp3"
+    },
+    {
+      "db_id": "aarti-durga-vaishno-devi",
+      "audio_file": "katha_vaishnodevi.mp3",
+      "before": null,
+      "after": "assets/audio/katha_vaishnodevi.mp3"
+    }
+  ],
+  "mappings_count": 3,
+  "no_match_files": [
+    {
+      "file": "katha_indresh_chhitupanda.mp3",
+      "reason": "Chhitu Panda = specific character in a story. No DB record found with this topic/name."
+    },
+    {
+      "file": "katha_indresh_prasang.mp3",
+      "reason": "55min Indresh Ji pravachan. Kewat Samvad record exists (katha-ram-kewat-samvad-prasang) but is a short narrative katha — duration mismatch (55min vs expected ~10min). Could be a different prasang. NO confident match."
+    },
+    {
+      "file": "katha_indresh_ratnavati.mp3",
+      "reason": "Ratnavati = historical figure. No DB record found."
+    },
+    {
+      "file": "katha_indresh_surdas.mp3",
+      "reason": "Indresh Ji Surdas katha (2h51m). Surdas stotrams exist but are Shankaracharya compositions, not Surdas Ji katha records."
+    },
+    {
+      "file": "katha_indresh_tajbegum.mp3",
+      "reason": "Taj Begum = historical figure. No DB record found."
+    },
+    {
+      "file": "katha_rajan_bhramdoor.mp3",
+      "reason": "Bhramdoor = unknown toponym/story name. No DB record found with this title."
+    },
+    {
+      "file": "katha_rajan_kumbhaj.mp3",
+      "reason": "Kumbhaj = Agastya Rishi (Agastya records exist but are stotra/gyan texts, not kathas). Kumbhakaran records exist but Kumbhaj ≠ Kumbhakaran. NO confident match."
+    },
+    {
+      "file": "katha_rajan_shivbhajan.mp3",
+      "reason": "Shiva bhajan by Rajan Ji. Many Shiva bhajans in DB (b7/b8 have /audio/ broken refs). No seed-level Shiva bhajan without audio found. No Rajan Mishra attribution in DB. NO confident match."
+    }
+  ],
+  "before": {
+    "count": 10002,
+    "working_audio": 27,
+    "integrity": "ok",
+    "fts5": 10002
+  },
+  "after": {
+    "count": 10002,
+    "working_audio": 30,
+    "broken_audio": 1000,
+    "no_audio": 8972,
+    "integrity": "ok",
+    "fts5": 10002,
+    "fts5_sync": true,
+    "fk_errors": 0,
+    "dup_ids": 0,
+    "dup_hashes": 0
+  },
+  "final_report": {
+    "TOTAL_BATCH_001_020_RECORDS": 9932,
+    "AUDIO_RECORDS_BEFORE": 27,
+    "AUDIO_RECORDS_AFTER": 30,
+    "NEW_AUDIO_MAPPINGS": 3,
+    "LOCAL_MP3_FILES_USED": 3,
+    "STILL_MISSING_AUDIO": 8972,
+    "BROKEN_AUDIO_REFS": 1000,
+    "PRAGMA_INTEGRITY": "ok",
+    "FK_ERRORS": 0,
+    "FTS5_COUNT": 10002,
+    "FTS5_SYNC": "TRUE",
+    "DATABASE_STATUS": "GOOD",
+    "FILES_CHANGED": 0,
+    "DOWNLOADS": 0,
+    "BATCH_021_STARTED": "NO",
+    "FINAL_STATUS": "PASS"
+  }
+}

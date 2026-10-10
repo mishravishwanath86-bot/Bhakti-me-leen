@@ -1,0 +1,63 @@
+{
+  "appName": "भक्ति में लीन",
+  "tagline": "सनातनधर्मस्य ध्यानस्य आत्मशान्तेश्च पावनद्वारम्",
+  "shubhaMantra": "✨ ॐ श्रीगणेशाय नमः ✨",
+  "nav": {
+    "panchang": "पञ्चाङ्गम्",
+    "jar": "अमृतकलशः",
+    "home": "गृहम्",
+    "katha": "श्रव्यम्",
+    "profile": "विवरणम्",
+    "settings": "नियन्त्रणम्",
+    "aarti": "आरतीदर्शनम्",
+    "japMala": "जपमाला"
+  },
+  "home": {
+    "welcome": "स्वागतम्",
+    "guestLogin": "अतिथिप्रवेशः",
+    "dailyTracker": "नित्यसाधनासंज्ञानम्",
+    "visitsToday": "अद्यतनपावनप्रवेशः",
+    "times": "वारम्",
+    "streak": "दिनक्रमः",
+    "streakShield": "सक्रियकवचम्",
+    "punyaPoints": "पुण्याङ्काः",
+    "openSadhanaCenter": "साधनानियन्त्रणकक्षमुद्घाटयतु",
+    "liveRadio": "२४×७ भक्तिरेडियो",
+    "parikrama": "दिव्य ३D मन्दिरपरिक्रमा",
+    "amritKalash": "भक्ति-अमृतकलशः",
+    "radioNowPlaying": "अधुना प्रचलति",
+    "categories": "दिव्यविभागाः",
+    "dailyPanchang": "दैनिकपञ्चाङ्गम्",
+    "shubhMuhurat": "शुभमुहूर्तः"
+  },
+  "categories": {
+    "aarti": "आरती",
+    "chalisa": "चालीसा",
+    "mantra": "मन्त्राः",
+    "stotra": "स्तोत्राणि",
+    "vrat": "व्रतम्",
+    "festival": "उत्सवाः",
+    "ramayana": "रामायणम्",
+    "katha": "कथाः",
+    "desh": "देशभक्तिः",
+    "panchang": "पञ्चाङ्गम्"
+  },
+  "settings": {
+    "title": "साधनानियन्त्रणं तथा विन्यासाः",
+    "haptics": "दिव्यानुभूतिः हैप्टिक्स च",
+    "brahmaMuhurta": "ब्राह्ममुहूर्तजागरणम्",
+    "bioAura": "प्राणिक-ऊर्जा-ऑरा",
+    "vault": "साधनाकोशः मेघसञ्चयः",
+    "language": "भाषाचयनम् (Language)",
+    "selectLanguage": "स्वाभिमतां भाषां चिनोतु",
+    "applyLanguage": "भाषां प्रयोजयतु",
+    "logout": "निर्गमः"
+  },
+  "audio": {
+    "title": "भक्ति-श्रव्य-पुस्तकालयः",
+    "pureAudio": "केवलं श्रव्यम्",
+    "watchVideo": "दृश्यं पश्यतु",
+    "nowPlaying": "अधुना प्रचलति",
+    "lyrics": "पाठं भावार्थं च पश्यतु"
+  }
+}

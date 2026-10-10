@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#9F2800">
+<title>शाकम्भरी माता चालीसा, श्री शाकम्भरी चालीसा - हिन्दी गीतिकाव्य और वीडियो गीत</title>
+<meta name="description" content="यह पृष्ठ शाकम्भरी चालीसा के हिन्दी बोल प्रदान करता है। शाकम्भरी चालीसा एक भक्ति गीत है जो देवी शाकम्भरी पर आधारित है।"/>
+<meta name="keywords" content="शाकम्भरी चालीसा, शाकम्भरी माता चालीसा, शाकम्भरी चालीसा की गीतिकाव्य, शाकम्भरी चालीसा की हिन्दी गीतिकाव्य, शाकम्भरी चालीसा की हिन्दी लिरिक्स, शाकम्भरी चालीसा के हिन्दी बोल, शाकम्भरी माता चालीसा के हिन्दी बोल, माँ शाकम्भरी चालीसा, शाकम्भरी चालीसा का वीडियो"/>
+<link rel="search" type="application/opensearchdescription+xml" title="Sanatan Panchang" href="/assets/opensearch.xml"/>
+<meta property="fb:app_id" content="9020965791275198"/>
+<meta property="og:url" content="http://www.Sanatan Panchang.com/lyrics/chalisa/shakambhari-mata/shakambhari-mata-chalisa.html"/>
+<meta property="og:title" content="शाकम्भरी माता चालीसा, श्री शाकम्भरी चालीसा - हिन्दी गीतिकाव्य और वीडियो गीत"/>
+<meta property="og:description" content="यह पृष्ठ शाकम्भरी चालीसा के हिन्दी बोल प्रदान करता है। शाकम्भरी चालीसा एक भक्ति गीत है जो देवी शाकम्भरी पर आधारित है।"/>
+<meta property="og:image" content="https://www.Sanatan Panchang.com/images/brand/1200x630/Sanatan Panchang.png"/>
+<meta property="og:image:alt" content="Sanatan Panchang"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Sanatan Panchang"/>
+<meta property="og:locale:alternate" content="en"/>
+<meta property="og:locale:alternate" content="hi"/>
+<meta name="google" content="notranslate"/>
+<meta name="author" content="Adarsh Mobile Applications LLP"/>
+<link href="/manifest.json" rel="manifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<link href="/styles/A.universal,,_dp-jquery-ui.v1.0.6.css+classic,,_dp-jquery-ui.v1.0.3.css+universal,,_dp-common.v1.4.63.css+classic,,_dp-common.v1.2.38.css+universal,,_dp-subscription.v1.0.6.css+classic,,_dp-subscription.v1.0.4.css+universal,,_dp-page-comments.v1.0.2.css+classic,,_dp-page-comments.v1.0.2.css+universal,,_dp-popup-widgets.v1.0.2.css+classic,,_dp-popup-widgets.v1.0.1.css+universal,,_dp-toolbar.v1.1.31.css+classic,,_dp-toolbar.v1.0.13.css+universal,,_dp-lyrics.v1.0.20.css+classic,,_dp-lyrics.v1.0.11.css,Mcc.mZWiMFcHda.css.pagespeed.cf.biqk2ykJ3Y.css" rel="stylesheet"/>
+<style></style>
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script defer src="/scripts/helper/jsnlog/jsnlog.v1.0.5.js.pagespeed.ce.dP6OclPv9g.js"></script>
+<script defer src="/scripts/universal/dp-oops.v2.0.8.js.pagespeed.ce.4EVciMk5gN.js"></script>
+<script defer src="/scripts/universal/dp-core.v1.3.23.js.pagespeed.ce.sFyGlKbfgS.js"></script>
+<script defer src="/scripts/utilities/dp-dialo

@@ -1,0 +1,29 @@
+{
+  "batch_name": "bhakti_batch_004",
+  "part": "PART 4",
+  "timestamp": "2026-08-27T09:42:30Z",
+  "database_path": "db/bhakti.db",
+  "backup_path": "db/backups/bhakti_pre_batch004_backup.db",
+  "metrics": {
+    "before_count": 1502,
+    "imported_count": 500,
+    "after_count": 2002,
+    "batch_004_in_db": 500,
+    "preserved_existing": 1502,
+    "duplicate_ids": 0,
+    "duplicate_hashes": 0,
+    "missing_content": 0,
+    "invalid_records": 0,
+    "foreign_key_violations": 0,
+    "fts5_sync": true,
+    "fts5_count": 2002,
+    "pragma_integrity_check": "ok",
+    "csv_count": 500,
+    "json_count": 500,
+    "csv_equals_json": true,
+    "locked_assets_status": "UNMODIFIED",
+    "backup_record_count": 1502,
+    "backup_integrity": "PASS",
+    "final_status": "PASS"
+  }
+}

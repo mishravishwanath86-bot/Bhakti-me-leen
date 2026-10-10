@@ -1,0 +1,160 @@
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   🪔 Sanatan Panchang COMPLETE AARTI STYLING (EXACT IMAGE 1 MATCH)
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+.aarti-modal-content {
+  width: 100% !important;
+  max-width: min(95vw, 760px) !important;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.drik-image1-card {
+  background: linear-gradient(145deg, #FEF3C7 0%, #FDE68A 100%) !important;
+  border: 1.5px solid #D97706 !important;
+  border-radius: 18px !important;
+  padding: 12px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  position: relative !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+  color: #1A0B2E !important;
+}
+
+.drik-image1-card:hover {
+  transform: translateY(-2px) scale(1.01) !important;
+  box-shadow: 0 8px 22px rgba(217, 119, 6, 0.35) !important;
+  border-color: #B45309 !important;
+}
+
+.drik-card-thumb {
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid #D97706 !important;
+  box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35) !important;
+  flex-shrink: 0 !important;
+}
+
+.drik-card-title-en {
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  color: #9A3412 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.drik-card-sub-en {
+  font-size: 0.8rem !important;
+  color: #78350F !important;
+  font-style: italic !important;
+  line-height: 1.2 !important;
+  margin-bottom: 3px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.drik-card-title-hi {
+  font-size: 0.92rem !important;
+  font-weight: 900 !important;
+  color: #B45309 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  line-height: 1.25 !important;
+  margin-bottom: 6px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  cursor: pointer !important;
+}
+
+.drik-card-title-hi:hover {
+  color: #78350F !important;
+}
+
+.drik-card-play-btn {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+  color: #FFF !important;
+  font-size: 0.74rem !important;
+  font-weight: 900 !important;
+  padding: 5px 12px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35) !important;
+  transition: transform 0.15s ease !important;
+}
+
+.drik-card-play-btn:hover {
+  transform: scale(1.05) !important;
+}
+
+.drik-card-read-btn {
+  background: rgba(120, 53, 15, 0.08) !important;
+  color: #78350F !important;
+  border: 1px solid rgba(217, 119, 6, 0.45) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  padding: 5px 12px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: all 0.15s ease !important;
+}
+
+.drik-card-read-btn:hover {
+  background: rgba(217, 119, 6, 0.18) !important;
+}
+
+.home-aarti-card:hover {
+  transform: translateY(-3px) scale(1.01) !important;
+  border-color: rgba(248, 200, 59, 0.7) !important;
+  box-shadow: 0 10px 25px rgba(248, 200, 59, 0.25) !important;
+}
+
+.home-aarti-filter-chip.active {
+  background: linear-gradient(135deg, #F8C83B, #D97706) !important;
+  color: #1A0B2E !important;
+  font-weight: 900 !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(248, 200, 59, 0.4) !important;
+}
+
+.drik-page-chip {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.06);
+  color: #FDE68A;
+  font-weight: 700;
+  border: 1px solid rgba(248, 200, 59, 0.25);
+}
+
+.drik-page-chip.active {
+  background: linear-gradient(135deg, #F8C83B, #D97706) !important;
+  color: #1A0B2E !important;
+  font-weight: 900 !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(248, 200, 59, 0.4) !important;
+}
