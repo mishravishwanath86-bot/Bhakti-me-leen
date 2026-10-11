@@ -40,6 +40,9 @@ db/backups/
 assets/audio/katha_indresh_*.mp3
 assets/audio/katha_rajan_*.mp3
 
+# Generated on-demand AI Bhakti Audio cache
+assets/ai_audio/*.mp3
+
 # IDE and Editor directories
 .vscode/
 .idea/

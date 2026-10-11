@@ -34,7 +34,8 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="assets/app_logo.png?v=1788295872" />
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1789846695" />
+  <link rel="stylesheet" href="styles.css?v=1791671977" />
+  <link rel="stylesheet" href="ai_bhakti_player.css" />
   <!-- Light Mode Disabled for now: <link rel="stylesheet" href="light_theme.css?v=1" /> -->
 
 <script>
@@ -750,6 +751,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
   <!-- 🌟 5-SLIDE DEVOTIONAL ONBOARDING CAROUSEL 🌟 -->
   <!-- 🌟 5-SLIDE DEVOTIONAL ONBOARDING CAROUSEL 🌟 -->
   <div id="onboarding-overlay" style="display:none;">
+    <!-- ✕ Close Button for Onboarding Tour -->
+    <button class="onboarding-close-btn" id="onboarding-close-btn" onclick="closeOnboardingTour()" aria-label="टूर बंद करें" title="टूर बंद करें">✕</button>
     <div class="onboarding-slides-container" id="onboarding-track">
       
       <!-- Slide 1: Radiant Mix Gods Divine Emblem -->
@@ -2259,126 +2262,93 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
 
     
-      <!-- 🎮 EPIC GAMES HOME BANNER (LOCKED / सुरक्षित - अभी लॉक है) 🎮 -->
-      <div class="home-epic-games-banner home-promo-banner-card" onclick="showEpicGameLockedNotice(event)" style="opacity: 0.95; border: 1.5px solid rgba(245,158,11,0.6); background: linear-gradient(135deg, rgba(35, 20, 60, 0.94), rgba(20, 10, 35, 0.98)); cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.5);">
+      <!-- 🎮 EPIC GAMES HOME BANNER (महाकाव्य भक्ति गेम्स हब - ४ दिव्य खेल) 🎮 -->
+      <div class="home-epic-games-banner home-promo-banner-card" onclick="showPage('page-epic-games')" style="opacity:1; border:1.8px solid #F59E0B; background:linear-gradient(135deg, rgba(45, 16, 71, 0.96) 0%, rgba(26, 11, 46, 0.98) 100%); cursor:pointer; box-shadow:0 8px 25px rgba(245,158,11,0.3); border-radius:20px; padding:14px 16px; margin:14px 0;">
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
           <div style="display:flex; align-items:center; gap:14px;">
-            <div style="position:relative;">
-              <div style="font-size:2.4rem; filter:drop-shadow(0 0 10px rgba(245,158,11,0.4)); opacity:0.85;">🎮</div>
-              <div style="position:absolute; bottom:-3px; right:-5px; background:#EF4444; color:#FFF; font-size:0.85rem; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.5); border:1.5px solid #FFF;">🔒</div>
-            </div>
+            <div style="font-size:2.4rem; filter:drop-shadow(0 0 12px #F59E0B);">🎮</div>
             <div>
               <div style="display:flex; align-items:center; gap:8px;">
                 <span style="color:#FFFDF8; font-size:1.15rem; font-weight:900;">एपिक गेम्स (Epic Games)</span>
-                <span style="background:rgba(239,68,68,0.25); border:1px solid #EF4444; color:#FCA5A5; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:10px;">🔒 अभी लॉक है</span>
+                <span style="background:rgba(245,158,11,0.25); border:1px solid #F59E0B; color:#FDE68A; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:10px;">४ दिव्य खेल</span>
               </div>
-              <div style="color:#E9D5FF; font-size:0.8rem; margin-top:3px;">शीघ्र ही अनलॉक होगा • ४ दिव्य महाकाव्य खेल ❯</div>
+              <div style="color:#E9D5FF; font-size:0.8rem; margin-top:3px;">स्वाइप, स्मृति मिलान, पहेली व शब्द ग्रिड ❯</div>
             </div>
           </div>
-          <button style="background:rgba(255,255,255,0.12); color:#FDE68A; border:1px solid rgba(245,158,11,0.4); font-weight:900; font-size:0.82rem; padding:8px 16px; border-radius:16px; display:flex; align-items:center; gap:6px; cursor:pointer; box-shadow:none;">🔒 लॉक</button>
+          <button style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-weight:900; font-size:0.85rem; padding:8px 18px; border-radius:16px; box-shadow:0 4px 15px rgba(248,200,59,0.4); cursor:pointer;">खेलें ❯</button>
         </div>
       </div>
 </section>
 
-    <!-- ══════════ 🎮 EPIC GAMES HUB (Exact WhatsApp Video Frame 0 Style) ══════════ -->
-    <section id="page-epic-games" class="page" style="display:none; padding-bottom:90px; background:#F5EFE6; min-height:100vh;">
+    <!-- ══════════ 🧩 DIVINE BHAKTI JIGSAW PUZZLE GAME MODULE ══════════ -->
+        <!-- ══════════ 🎮 EPIC GAMES HUB (Exact WhatsApp Video Style + All 4 Games Unlocked) ══════════ -->
+    <section id="page-epic-games" class="page" style="display:none; padding-bottom:90px; background:#180A28; min-height:100vh; color:#FFFDF8;">
       <!-- Sticky Header -->
-      <div class="epic-hub-header">
+      <div class="epic-hub-header" style="background:rgba(26, 11, 46, 0.96); backdrop-filter:blur(14px); border-bottom:1.5px solid rgba(248, 200, 59, 0.35); padding:12px 16px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100;">
         <div style="display:flex; align-items:center; gap:12px;">
-          <button class="back-btn" data-back="page-home" onclick="showPage('page-home')" style="background:none; border:none; font-size:1.5rem; font-weight:900; color:#2D1400; cursor:pointer;">←</button>
-          <h2 style="margin:0; font-size:1.25rem; font-weight:900; color:#2D1400;">Epic Games</h2>
+          <button class="back-btn" data-back="page-home" onclick="showPage('page-home')" style="background:rgba(255,255,255,0.1); border:1px solid rgba(248,200,59,0.4); border-radius:50%; width:36px; height:36px; font-size:1.2rem; font-weight:900; color:#FDE68A; cursor:pointer; display:flex; align-items:center; justify-content:center;">←</button>
+          <h2 style="margin:0; font-size:1.25rem; font-weight:900; color:#FFFDF8; display:flex; align-items:center; gap:6px;">
+            <span>🎮</span> Epic Games
+          </h2>
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
-          <div style="background:#FFFBF0; border:1.5px solid #F59E0B; border-radius:18px; padding:3px 12px; display:flex; align-items:center; gap:6px; font-weight:900; font-size:0.9rem; color:#2D1400; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+          <div style="background:rgba(248,200,59,0.2); border:1.5px solid #F59E0B; border-radius:18px; padding:4px 14px; display:flex; align-items:center; gap:6px; font-weight:900; font-size:0.9rem; color:#FFFDF8; box-shadow:0 2px 8px rgba(248,200,59,0.25);">
             <span>🪙</span>
             <span class="epic-coins-val">1K</span>
           </div>
         </div>
       </div>
 
-      <!-- 2x2 Grid matching frame_000_0s.jpg -->
-      <div class="epic-games-grid">
-        <!-- 1. Match -->
-        <div class="epic-game-menu-card is-locked" onclick="showEpicGameLockedNotice(event)">
-          <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-memory">Memory</span>
-            <div class="epic-card-lock-badge">🔒 लॉक</div>
-            <img src="assets/games/cover_match.jpg" alt="Match" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
-            <div class="epic-card-lock-watermark">
-              <span class="lock-icon-lg">🔒</span>
-              <span class="lock-label-sm">शीघ्र आ रहा है</span>
-            </div>
-          </div>
-          <div class="epic-card-title">Match</div>
-          <div class="epic-card-subtitle">Find and match the same card</div>
-          <button class="epic-card-play-btn btn-locked">🔒 Locked</button>
-        </div>
-
-        <!-- 2. Swipe -->
-        <div class="epic-game-menu-card is-locked" onclick="showEpicGameLockedNotice(event)">
+      <!-- 2x2 Grid of 4 Games (All Unlocked & Playable) -->
+      <div class="epic-games-grid" style="padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:540px; margin:0 auto;">
+        <!-- 1. Swipe (WhatsApp Video Game!) -->
+        <div class="epic-game-menu-card" onclick="openSwipeGame('ayodhya_mithila')" style="cursor:pointer;">
           <div class="epic-card-cover-wrap">
             <span class="epic-card-tag epic-tag-story">Story</span>
-            <div class="epic-card-lock-badge">🔒 लॉक</div>
             <img src="assets/games/cover_swipe.jpg" alt="Swipe" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
-            <div class="epic-card-lock-watermark">
-              <span class="lock-icon-lg">🔒</span>
-              <span class="lock-label-sm">शीघ्र आ रहा है</span>
-            </div>
           </div>
           <div class="epic-card-title">Swipe</div>
           <div class="epic-card-subtitle">Swipe to the right team</div>
-          <button class="epic-card-play-btn btn-locked">🔒 Locked</button>
+          <button class="epic-card-play-btn btn-blue" onclick="event.stopPropagation(); openSwipeGame('ayodhya_mithila');">🎮 Play</button>
         </div>
 
-        <!-- 3. JigSaw -->
-        <div class="epic-game-menu-card is-locked" onclick="showEpicGameLockedNotice(event)">
+        <!-- 2. Match (Memory Card Game) -->
+        <div class="epic-game-menu-card" onclick="openMatchGame()" style="cursor:pointer;">
+          <div class="epic-card-cover-wrap">
+            <span class="epic-card-tag epic-tag-memory">Memory</span>
+            <img src="assets/games/cover_match.jpg" alt="Match" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
+          </div>
+          <div class="epic-card-title">Match</div>
+          <div class="epic-card-subtitle">Find and match the same card</div>
+          <button class="epic-card-play-btn btn-purple" onclick="event.stopPropagation(); openMatchGame();">🎮 Play</button>
+        </div>
+
+        <!-- 3. JigSaw (Puzzle Game) -->
+        <div class="epic-game-menu-card" onclick="openJigsawGame()" style="cursor:pointer;">
           <div class="epic-card-cover-wrap">
             <span class="epic-card-tag epic-tag-puzzle">Puzzle</span>
-            <div class="epic-card-lock-badge">🔒 लॉक</div>
             <img src="assets/games/cover_jigsaw.jpg" alt="JigSaw" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
-            <div class="epic-card-lock-watermark">
-              <span class="lock-icon-lg">🔒</span>
-              <span class="lock-label-sm">शीघ्र आ रहा है</span>
-            </div>
           </div>
           <div class="epic-card-title">JigSaw</div>
-          <div class="epic-card-subtitle">Shape the epic characters/scenes</div>
-          <button class="epic-card-play-btn btn-locked">🔒 Locked</button>
+          <div class="epic-card-subtitle">Shape the epic characters</div>
+          <button class="epic-card-play-btn btn-cyan" onclick="event.stopPropagation(); openJigsawGame();">🎮 Play</button>
         </div>
 
-        <!-- 4. PadaBandham -->
-        <div class="epic-game-menu-card is-locked" onclick="showEpicGameLockedNotice(event)">
+        <!-- 4. PadaBandham (Word Grid) -->
+        <div class="epic-game-menu-card" onclick="openPadabandhamGame()" style="cursor:pointer;">
           <div class="epic-card-cover-wrap">
             <span class="epic-card-tag epic-tag-word">Word</span>
-            <div class="epic-card-lock-badge">🔒 लॉक</div>
             <img src="assets/games/cover_padabandham.jpg" alt="PadaBandham" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
-            <div class="epic-card-lock-watermark">
-              <span class="lock-icon-lg">🔒</span>
-              <span class="lock-label-sm">शीघ्र आ रहा है</span>
-            </div>
           </div>
           <div class="epic-card-title">PadaBandham</div>
           <div class="epic-card-subtitle">Find the epic word</div>
-          <button class="epic-card-play-btn btn-locked">🔒 Locked</button>
+          <button class="epic-card-play-btn btn-gold" onclick="event.stopPropagation(); openPadabandhamGame();">🎮 Play</button>
         </div>
       </div>
-</section>
+    </section>
 
     <!-- ══════════ 🏹 SWIPE GAME ARENA (The Exact Video Screen) ══════════ -->
-    
-    <!-- ══════════ 🔒 EPIC GAMES LOCKED NOTICE MODAL ══════════ -->
-    <div id="epic-locked-modal" class="epic-locked-modal-overlay" onclick="closeEpicLockedModal()">
-      <div class="epic-locked-modal-box" onclick="event.stopPropagation()">
-        <div class="epic-locked-icon-orb">🔒</div>
-        <div class="epic-locked-status-chip">सुरक्षित • COMING SOON</div>
-        <div class="epic-locked-modal-title">एपिक गेम्स अभी लॉक है</div>
-        <div class="epic-locked-modal-desc">
-          यह विशेष भक्ति गेमिंग अनुभव वर्तमान में सुरक्षित व तैयार किया गया है। आगामी संस्करण में यह सभी भक्तों के लिए अनलॉक कर दिया जाएगा।
-        </div>
-        <button class="epic-locked-btn-ok" onclick="closeEpicLockedModal()">समझ गया (ठीक है)</button>
-      </div>
-    </div>
-<div id="swipe-arena" class="swipe-game-arena">
+    <div id="swipe-arena" class="swipe-game-arena">
       <!-- Top Bar -->
       <div class="swipe-top-bar">
         <button class="swipe-close-btn" onclick="closeSwipeGame()">✕</button>
@@ -2539,10 +2509,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
     </div>
 
-
-
-        <!-- ══════════ AARTI DEITY GRID (Sanatan Panchang COMPLETE HUB) ══════════ -->
-    <section id="page-aarti" class="page">
+<section id="page-aarti" class="page">
       <div class="page-header-bar" style="position:sticky; top:0; z-index:10; background:rgba(26,11,46,0.95); backdrop-filter:blur(10px); border-bottom:1.5px solid rgba(248,200,59,0.3); padding:0.8rem 1.2rem; display:flex; align-items:center; justify-content:space-between;">
         <div style="display:flex; align-items:center; gap:10px;">
           <button class="back-btn" data-back="page-home" onclick="showPage('page-home')" style="font-size:1.2rem; cursor:pointer; background:none; border:none; color:#FDE68A;">←</button>
@@ -2795,7 +2762,48 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         </button>
       </div>
 
+      <!-- 🪔 AI BHAKTI SINGING & DEVOTIONAL AUDIO BAR (एआई भक्ति स्वर) 🪔 -->
+      <div id="ai-bhakti-audio-bar" class="ai-bhakti-bar-container">
+        <div class="ai-bar-header">
+          <div class="ai-bar-title-wrap">
+            <span class="ai-bar-badge">AI स्वर</span>
+            <span class="ai-bar-title">दिव्य भक्ति गायन व पाठ</span>
+          </div>
+          <div id="ai-audio-status-pill" class="ai-audio-status-pill">
+            <span>✨</span> प्ले करने पर AI प्रारंभ होगा
+          </div>
+        </div>
 
+        <!-- 🌟 PRIMARY PLAY/PAUSE ACTION -->
+        <button id="ai-audio-play-btn" class="ai-audio-play-btn" onclick="AiBhaktiPlayer.togglePlay()">
+          <span>▶</span> <span class="ai-btn-text">AI दिव्य पाठ / गायन सुनें</span>
+        </button>
+
+        <!-- 🎚️ PROGRESS & TIME -->
+        <div class="ai-progress-wrap">
+          <input type="range" id="ai-audio-progress-bar" class="ai-progress-bar" min="0" max="100" value="0" oninput="AiBhaktiPlayer.seek(this.value)">
+          <span id="ai-audio-time-label" class="ai-time-label">00:00 / 00:00</span>
+        </div>
+
+        <!-- 🎛️ CONTROLS ROW -->
+        <div class="ai-controls-row">
+          <button id="ai-voice-toggle-btn" class="ai-ctrl-pill" onclick="AiBhaktiPlayer.toggleVoice()" title="आवाज़ बदलें">
+            <span>🪔</span> ऋषि/पुजारी स्वर (मधुर)
+          </button>
+
+          <button id="ai-speed-btn" class="ai-ctrl-pill" onclick="AiBhaktiPlayer.cycleSpeed()" title="गायन गति बदलें">
+            <span>⚡</span> 1.00x
+          </button>
+
+          <button id="ai-loop-btn" class="ai-ctrl-pill" onclick="AiBhaktiPlayer.toggleLoop()" title="१०८ बार निरंतर जाप">
+            <span>🔁</span> लूप
+          </button>
+
+          <button id="ai-drone-toggle-btn" class="ai-ctrl-pill ai-drone-pill active" onclick="AiBhaktiPlayer.toggleTempleDrone()" title="मंदिर तानपुरा व सुर संगत चालू/बंद">
+            <span>🪕</span> तानपुरा संगत: चालू
+          </button>
+        </div>
+      </div>
 
       <!-- 📜 GLOWING DEVANAGARI SCRIPTURE TEXT CONTAINER -->
       <!-- 🎬 RESPONSIVE YOUTUBE STREAMING CONTAINER (READER) -->
@@ -2811,28 +2819,42 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
     <!-- ══════════ PROFILE ══════════ -->
     <!-- 👤 LUXURY USER PROFILE PAGE 👤 -->
         <!-- PROFILE PAGE (CLASSIC ROYAL VEDIC UI) 👤 -->
-    <section id="page-profile" class="page">
-      <div class="page-header-bar">
-        <button class="back-btn" data-back="page-home">←</button>
-        <h2 data-i18n="nav_profile">प्रोफ़ाइल</h2>
+        <!-- ══════════ PROFILE ══════════ -->
+    <!-- 👤 LUXURY USER PROFILE PAGE (CLASSIC ROYAL VEDIC UI) 👤 -->
+    <section id="page-profile" class="page" style="padding-bottom: 120px;">
+      <div class="page-header-bar" style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px;">
+        <button class="back-btn" data-back="page-home" onclick="showPage('page-home')" style="background:rgba(248,200,59,0.18); border:1.2px solid #F8C83B; color:#FDE68A; border-radius:50%; width:38px; height:38px; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">←</button>
+        <h2 data-i18n="nav_profile" style="font-size:1.25rem; font-weight:900; color:#FFFDF8; margin:0; display:flex; align-items:center; gap:6px;">
+          <span>👤</span> भक्त प्रोफ़ाइल <span>🕉️</span>
+        </h2>
+        <button onclick="shareDivineCard()" title="शेयर करें" style="background:rgba(248,200,59,0.18); border:1.2px solid #F8C83B; color:#FDE68A; border-radius:50%; width:38px; height:38px; font-size:1.05rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">📤</button>
       </div>
 
       <!-- Royal Profile Card -->
       <div class="profile-royal-card">
-        <div class="profile-avatar-wrap">
+        <div class="profile-avatar-wrap" onclick="openAvatarPickerModal()" title="अवतार बदलें (Tap to Change Avatar)" style="cursor:pointer; position:relative;">
           <img src="assets/gallery/bal_ganesha_little.jpg" id="prof-user-avatar" class="profile-avatar-img" alt="User Avatar" />
+          <div style="position:absolute; bottom:0; right:0; background:linear-gradient(135deg, #F8C83B, #D97706); border:1.5px solid #FEF3C7; color:#1A0B2E; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:900; box-shadow:0 2px 8px rgba(0,0,0,0.5);">✏️</div>
         </div>
-        <div class="profile-name-title" id="prof-user-name">भक्त जन</div>
-        <div class="profile-status-badge">✨ दैनिक वैदिक साधक</div>
+        <div class="profile-name-title" id="prof-user-name" onclick="promptDevoteeNameEdit()" title="नाम बदलें (Tap to edit name)" style="cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:6px;">
+          <span>सनातन भक्त जन</span> <span style="font-size:0.75rem; opacity:0.7;">✏️</span>
+        </div>
+        <div class="profile-status-badge">
+          <span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#22C55E; box-shadow:0 0 6px #22C55E; margin-right:4px;"></span>
+          नित्य वैदिक साधक • सक्रिय
+        </div>
         
-        <div>
-          <button onclick="openAuthModal()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-weight:900; font-size:0.85rem; padding:8px 20px; border-radius:20px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.35);">
-            🔑 खाता बदलें / लॉगिन करें
+        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+          <button onclick="openAuthModal()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:1px solid #FEF3C7; font-weight:900; font-size:0.82rem; padding:8px 18px; border-radius:20px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.35); display:inline-flex; align-items:center; gap:6px;">
+            <span>🔑</span> <span>खाता बदलें / लॉगिन करें</span>
+          </button>
+          <button onclick="openSankalpModal()" style="background:rgba(255,255,255,0.08); border:1.2px solid rgba(248,200,59,0.4); color:#FDE68A; font-weight:800; font-size:0.82rem; padding:8px 16px; border-radius:20px; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+            <span>🪔</span> <span>दैनिक संकल्प</span>
           </button>
         </div>
 
-        <div class="profile-stats-grid">
-          <div class="profile-stat-box">
+        <div class="profile-stats-grid" style="grid-template-columns: repeat(4, 1fr); gap:8px;">
+          <div class="profile-stat-box" onclick="showPage('page-mala')" style="cursor:pointer;">
             <div class="profile-stat-val" id="prof-stat-jaap">108</div>
             <div class="profile-stat-lbl">जाप संख्या</div>
           </div>
@@ -2840,8 +2862,12 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <div class="profile-stat-val" id="prof-stat-streak">7 दिन</div>
             <div class="profile-stat-lbl">साधना स्ट्रीक</div>
           </div>
+          <div class="profile-stat-box" onclick="showPage('page-aarti-stage')" style="cursor:pointer;">
+            <div class="profile-stat-val" id="prof-stat-aarti" style="color:#F59E0B;">21</div>
+            <div class="profile-stat-lbl">दीपदान/दर्शन</div>
+          </div>
           <div class="profile-stat-box">
-            <div class="profile-stat-val" id="prof-stat-favs">12</div>
+            <div class="profile-stat-val" id="prof-stat-favs" style="color:#EC4899;">12</div>
             <div class="profile-stat-lbl">पसंदीदा</div>
           </div>
         </div>
@@ -2849,7 +2875,27 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
       <!-- Settings & Tools Menu -->
       <div class="profile-menu-section">
-        <h3 style="font-size:1rem; font-weight:900; color:#1A0B2E; margin:0 0 10px 4px; display:flex; align-items:center; gap:6px;">
+        
+        <!-- 🌟 VIP FEATURED HERO: APP SWAGAT YATRA (5-SLIDE TOUR) 🌟 -->
+        <div class="profile-featured-tour-card" onclick="replayOnboarding('page-profile')">
+          <div class="tour-card-badge">
+            <span>★</span> <span>विशेष दिव्य दर्शन टूर</span> <span>★</span>
+          </div>
+          <div class="tour-card-body">
+            <div class="tour-card-icon-wrap">🚩</div>
+            <div class="tour-card-text">
+              <div class="tour-card-title">ऐप स्वागत यात्रा (App Welcome Tour)</div>
+              <div class="tour-card-desc">सनातन धर्म, दिव्य आरती, मंत्र, पंचांग एवं अमृत कलश का 5-दिव्य दर्शन पुनः देखें</div>
+              <button class="tour-card-cta-btn" onclick="event.stopPropagation(); replayOnboarding('page-profile');">
+                <span>▶ दर्शन शुरू करें</span>
+              </button>
+            </div>
+            <div style="color:#F8C83B; font-weight:900; font-size:1.25rem;">❯</div>
+          </div>
+        </div>
+
+        <!-- Category 1: Preferences & Spiritual Tools -->
+        <h3 style="font-size:0.95rem; font-weight:900; color:#F8C83B; margin:16px 0 10px 4px; display:flex; align-items:center; gap:6px; letter-spacing:0.3px;">
           <span>⚙️</span> आध्यात्मिक सेटिंग्स व सुविधाएं
         </h3>
 
@@ -2858,19 +2904,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <div class="profile-menu-icon">🌐</div>
           <div class="profile-menu-text">
             <div class="profile-menu-title">ऐप भाषा (Language)</div>
-            <div class="profile-menu-sub">हिन्दी / English / संस्कृत</div>
+            <div class="profile-menu-sub">हिन्दी / English / संस्कृत व क्षेत्रीय भाषाएं</div>
           </div>
-          <div style="color:#FDE68A; font-weight:800; font-size:0.9rem;">❯</div>
-        </div>
-
-        <!-- Onboarding Tour Replay -->
-        <div class="profile-menu-item" onclick="replayOnboarding()">
-          <div class="profile-menu-icon">🔄</div>
-          <div class="profile-menu-text">
-            <div class="profile-menu-title">ऐप स्वागत यात्रा (Tour)</div>
-            <div class="profile-menu-sub">5-स्लाइड वाली भक्ति यात्रा दोबारा देखें</div>
-          </div>
-          <div style="color:#FDE68A; font-weight:800; font-size:0.9rem;">❯</div>
+          <div style="color:#F8C83B; font-weight:800; font-size:1rem;">❯</div>
         </div>
 
         <!-- Japa Mala Settings -->
@@ -2878,39 +2914,54 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <div class="profile-menu-icon">📿</div>
           <div class="profile-menu-text">
             <div class="profile-menu-title">डिजिटल जाप माला</div>
-            <div class="profile-menu-sub">108x मणके, कम्पन व शंख ध्वनि</div>
+            <div class="profile-menu-sub">108x मणके, कम्पन व दिव्य शंख ध्वनि</div>
           </div>
-          <div style="color:#FDE68A; font-weight:800; font-size:0.9rem;">❯</div>
+          <div style="color:#F8C83B; font-weight:800; font-size:1rem;">❯</div>
         </div>
+
+        <!-- Global Theme Toggle -->
+        <div class="profile-menu-item" onclick="toggleGlobalAppTheme()">
+          <div class="profile-menu-icon">🎨</div>
+          <div class="profile-menu-text">
+            <div class="profile-menu-title">थीम एवं दिव्य आभामंडल</div>
+            <div class="profile-menu-sub">स्वर्ण रात्रि मोड (Dark) / पावन प्रभात (Light)</div>
+          </div>
+          <div style="color:#F8C83B; font-weight:800; font-size:1rem;">❯</div>
+        </div>
+
+        <!-- Category 2: Dharma Seva & Share -->
+        <h3 style="font-size:0.95rem; font-weight:900; color:#F8C83B; margin:20px 0 10px 4px; display:flex; align-items:center; gap:6px; letter-spacing:0.3px;">
+          <span>🙏</span> सनातन धर्म प्रसार व सहयोग
+        </h3>
 
         <!-- Share App -->
         <div class="profile-menu-item" onclick="shareDivineCard()">
           <div class="profile-menu-icon">📤</div>
           <div class="profile-menu-text">
-            <div class="profile-menu-title">मित्रों को शेयर करें</div>
-            <div class="profile-menu-sub">सनातन धर्म का पावन प्रचार करें</div>
+            <div class="profile-menu-title">मित्रों व परिजनों को शेयर करें</div>
+            <div class="profile-menu-sub">सनातन धर्म एवं भक्ति का पावन संदेश फैलाएं</div>
           </div>
-          <div style="color:#FDE68A; font-weight:800; font-size:0.9rem;">❯</div>
+          <div style="color:#F8C83B; font-weight:800; font-size:1rem;">❯</div>
         </div>
 
         <!-- Rate Modal -->
-        <div class="profile-menu-item" onclick="document.getElementById('rate-modal').classList.remove('hidden'); document.getElementById('rate-modal').style.display='flex';">
-          <div class="profile-menu-icon">⭐</div>
+        <div class="profile-menu-item" onclick="openRateAppModal()">
+          <div class="profile-menu-icon" style="color:#F59E0B;">⭐</div>
           <div class="profile-menu-text">
             <div class="profile-menu-title">ऐप को 5 स्टार रेटिंग दें</div>
-            <div class="profile-menu-sub">अपना अमूल्य आशीर्वाद एवं सुझाव दें</div>
+            <div class="profile-menu-sub">अपना अमूल्य आशीर्वाद एवं सुझाव साझा करें</div>
           </div>
-          <div style="color:#FDE68A; font-weight:800; font-size:0.9rem;">❯</div>
+          <div style="color:#F8C83B; font-weight:800; font-size:1rem;">❯</div>
         </div>
 
         <!-- Logout / Guest Reset -->
         <div class="profile-menu-item" onclick="handleLogout()">
           <div class="profile-menu-icon" style="background:rgba(239,68,68,0.2); border-color:rgba(239,68,68,0.4);">🚪</div>
           <div class="profile-menu-text">
-            <div class="profile-menu-title" style="color:#FCA5A5;">लॉग आउट (Log Out)</div>
-            <div class="profile-menu-sub">खाता रीसेट करें अथवा नया लॉगिन करें</div>
+            <div class="profile-menu-title" style="color:#FCA5A5;">लॉग आउट (Log Out / रीसेट)</div>
+            <div class="profile-menu-sub">साधक खाता रीसेट करें अथवा नया लॉगिन करें</div>
           </div>
-          <div style="color:#FCA5A5; font-weight:800; font-size:0.9rem;">❯</div>
+          <div style="color:#FCA5A5; font-weight:800; font-size:1rem;">❯</div>
         </div>
       </div>
     </section>
@@ -13666,46 +13717,52 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
         </div>
 
-        <!-- 🌺 SELECT DEITY FILTER CHIPS 🌺 -->
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-          <div style="font-size:0.98rem; font-weight:900; color:#FFFDF8; display:flex; align-items:center; gap:6px;">
-            <span>🪔</span> सम्पूर्ण दिव्य आरती संग्रह (60+ महाआरती)
+                <!-- 🪔 १० पावन स्वरूप चयन (DEITY AARTI SELECTOR CAROUSEL) 🪔 -->
+        <div style="background:rgba(255,255,255,0.06); border:1.5px solid rgba(248,200,59,0.3); border-radius:22px; padding:14px; margin-top:10px; margin-bottom:14px; box-shadow:0 8px 25px rgba(0,0,0,0.35);">
+          <div style="font-size:0.92rem; font-weight:900; color:#FDE68A; display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+            <span style="display:flex; align-items:center; gap:6px;"><span>🕉️</span> थाली में स्वरूप स्थापित करें</span>
+            <span style="font-size:0.72rem; color:#CBD5E1; font-weight:700;">टैप कर दर्शन करें</span>
+          </div>
+
+          <div style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; scrollbar-width:none;">
+            <button onclick="setStageDeity('गणेश जी', 'assets/gallery/bal_ganesha_little.jpg', '॥ श्री गणेश जी की आरती — जय गणेश देवा ॥', 'विघ्नहर्ता श्री गणेश', 'aarti_ganesh')" style="flex-shrink:0; background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; padding:8px 14px; border-radius:14px; font-weight:900; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px; box-shadow:0 2px 8px rgba(248,200,59,0.3);">
+              <span>🌺</span> श्री गणेश
+            </button>
+            <button onclick="setStageDeity('भगवान शिव', 'assets/gallery/divya_shiva.jpg', '॥ ॐ जय शिव ओंकारा — भगवान शिव आरती ॥', 'कैलाशपति देवाधिदेव महादेव', 'aarti_shiva')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>🔱</span> भगवान शिव
+            </button>
+            <button onclick="setStageDeity('श्री हनुमान', 'assets/gallery/bal_hanuman.jpg', '॥ आरती कीजै हनुमान लला की ॥', 'संकटमोचन महाबली हनुमान', 'aarti_hanuman')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>🚩</span> हनुमान जी
+            </button>
+            <button onclick="setStageDeity('श्री राम', 'assets/gallery/bal_rama.jpg', '॥ श्री रामचन्द्र कृपालु भजु मन ॥', 'मर्यादा पुरुषोत्तम श्री राम', 'aarti_ram')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>🏹</span> श्री राम
+            </button>
+            <button onclick="setStageDeity('श्री कृष्ण', 'assets/gallery/bal_krishna_makhan.jpg', '॥ आरती कुंजबिहारी की — श्री गिरिधर कृष्ण ॥', 'लीलाधर बांके बिहारी', 'aarti_krishna')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>🪷</span> श्री कृष्ण
+            </button>
+            <button onclick="setStageDeity('माँ दुर्गा', 'assets/gallery/divya_durga.jpg', '॥ जय अम्बे गौरी — माँ दुर्गा आरती ॥', 'महिषासुरमर्दिनी माँ भवानी', 'aarti_durga')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>🌺</span> माँ दुर्गा
+            </button>
+            <button onclick="setStageDeity('माँ लक्ष्मी', 'assets/gallery/divya_lakshmi.jpg', '॥ ॐ जय लक्ष्मी माता — माँ महालक्ष्मी आरती ॥', 'धन-वैभव दायिनी माँ लक्ष्मी', 'aarti_lakshmi')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>🪷</span> माँ लक्ष्मी
+            </button>
+            <button onclick="setStageDeity('श्री विष्णु', 'assets/gallery/divya_vishnu.jpg', '॥ ॐ जय जगदीश हरे — भगवान श्री हरि विष्णु ॥', 'जगत के पालनहार श्री नारायण', 'aarti_vishnu')" style="flex-shrink:0; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(248,200,59,0.3); padding:8px 14px; border-radius:14px; font-weight:800; font-size:0.78rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <span>☸️</span> श्री विष्णु
+            </button>
           </div>
         </div>
 
-        <div style="display:flex; gap:6px; overflow-x:auto; padding-bottom:8px; margin-bottom:12px; scrollbar-width:none;">
-          <button onclick="filterAartiCategory('all', this)" class="aarti-cat-pill active" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:900; background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; cursor:pointer; white-space:nowrap;">
-            ✨ सभी (All)
+        <!-- 🪔 अखंड दीपदान व पावन संकल्प कार्ड 🪔 -->
+        <div style="background:linear-gradient(145deg, #2D1047 0%, #1A052E 60%, #120320 100%); border:1.5px solid rgba(248,200,59,0.4); border-radius:22px; padding:16px; margin-bottom:14px; text-align:center; box-shadow:0 8px 25px rgba(0,0,0,0.5);">
+          <div style="font-size:1.05rem; font-weight:900; color:#F8C83B; margin-bottom:4px; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <span>🪔</span> नित्य दीपदान व आरती पुण्य
+          </div>
+          <p style="font-size:0.8rem; color:#CBD5E1; margin:0 0 12px 0; line-height:1.4;">
+            आरती दर्शन कर अखंड दीपदान करें और अपने जीवन में सुख, शांति व समृद्धि का संचार करें।
+          </p>
+          <button onclick="offerAartiDeepDaan()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-weight:900; font-size:0.88rem; padding:10px 24px; border-radius:16px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.4); display:inline-flex; align-items:center; gap:6px;">
+            <span>🪔</span> दीपदान अर्पित करें (+5 पुण्य अंक)
           </button>
-          <button onclick="filterAartiCategory('ganesh', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🌺 श्री गणेश
-          </button>
-          <button onclick="filterAartiCategory('shiva', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🔱 भगवान शिव
-          </button>
-          <button onclick="filterAartiCategory('hanuman', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🚩 हनुमान जी
-          </button>
-          <button onclick="filterAartiCategory('ram', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🏹 श्री राम
-          </button>
-          <button onclick="filterAartiCategory('krishna', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🪷 श्री कृष्ण
-          </button>
-          <button onclick="filterAartiCategory('durga', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🌺 माँ दुर्गा
-          </button>
-          <button onclick="filterAartiCategory('laxmi', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            🪷 माँ लक्ष्मी
-          </button>
-          <button onclick="filterAartiCategory('vishnu', this)" class="aarti-cat-pill" style="padding:6px 14px; border-radius:14px; font-size:0.75rem; font-weight:800; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer; white-space:nowrap;">
-            ☸️ श्री विष्णु
-          </button>
-        </div>
-
-        <!-- 📜 DYNAMIC AARTI CARDS CONTAINER 📜 -->
-        <div id="aarti-stage-cards-grid" style="display:flex; flex-direction:column; gap:10px;">
-          <!-- Rendered dynamically by JavaScript -->
         </div>
 
       </div>
@@ -16535,11 +16592,11 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <stop offset="100%" stop-color="rgba(255, 255, 255, 0.45)"/>
         </linearGradient>
       </defs>
-      <path id="curved-nav-dynamic-path" class="curved-nav-path" d="M 0,36 A 36,36 0 0 1 36,0 L 84.0,0 C 112.0,0 122.0,96 160.0,96 C 198.0,96 208.0,0 236.0,0 L 964.0,0 A 36,36 0 0 1 1000,36 L 1000,124 A 36,36 0 0 1 964.0,160 L 36.0,160 A 36,36 0 0 1 0,124 Z" fill="url(#navBaseReflectGrad)" stroke="url(#navBaseStrokeGrad)" stroke-width="2.4" />
+      <path id="curved-nav-dynamic-path" class="curved-nav-path" d="M 0,36 A 36,36 0 0 1 36,0 L 424.0,0 C 452.0,0 462.0,96 500.0,96 C 538.0,96 548.0,0 576.0,0 L 964.0,0 A 36,36 0 0 1 1000,36 L 1000,124 A 36,36 0 0 1 964.0,160 L 36.0,160 A 36,36 0 0 1 0,124 Z" fill="url(#navBaseReflectGrad)" stroke="url(#navBaseStrokeGrad)" stroke-width="2.4" />
     </svg>
 
     <!-- Elevated Floating Active Golden Glass Jewel Bubble (Hugs curve at Tab 0 cx=16.0%) -->
-    <div class="curved-nav-bubble" id="curved-nav-bubble" style="left: 16.0%;" aria-hidden="true">
+    <div class="curved-nav-bubble" id="curved-nav-bubble" style="left: 50.0%;">
       <div class="bubble-inner" id="bubble-icon-wrap">
         <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>
       </div>
@@ -16547,34 +16604,40 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
     <!-- 5 Interactive Navigation Tabs (with 7.5% end margins matching viewBox margin_x=75) -->
     <div class="curved-nav-items-wrap">
-      <button class="curved-tab-btn active" data-page="page-home" data-idx="0" onclick="window.switchCurvedNavTab(0, 'page-home')" title="होम">
-        <div class="tab-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>
-        </div>
-        <span class="tab-label">होम</span>
-      </button>
-
-      <button class="curved-tab-btn" data-page="page-katha" data-idx="1" onclick="window.switchCurvedNavTab(1, 'page-katha')" title="कथा व साहित्य">
-        <div class="tab-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-        </div>
-        <span class="tab-label">कथा/साहित्य</span>
-      </button>
-
-      <button class="curved-tab-btn" data-page="page-mala" data-idx="2" onclick="window.switchCurvedNavTab(2, 'page-mala')" title="जाप माला">
-        <div class="tab-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" stroke-dasharray="2 3"/><circle cx="12" cy="4" r="1.8" fill="currentColor"/><circle cx="12" cy="20" r="1.8" fill="currentColor"/><circle cx="4" cy="12" r="1.8" fill="currentColor"/><circle cx="20" cy="12" r="1.8" fill="currentColor"/><circle cx="6.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="6.5" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="17.5" r="1.8" fill="currentColor"/></svg>
-        </div>
-        <span class="tab-label">जाप माला</span>
-      </button>
-
-      <button class="curved-tab-btn" data-page="page-aarti-stage" data-idx="3" onclick="window.switchCurvedNavTab(3, 'page-aarti-stage')" title="आरती दर्शन">
+      <!-- Tab 0: आरती दर्शन -->
+      <button class="curved-tab-btn" data-page="page-aarti-stage" data-idx="0" onclick="window.switchCurvedNavTab(0, 'page-aarti-stage')" title="आरती दर्शन">
         <div class="tab-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2c0 3.5-3.5 5.5-3.5 9a3.5 3.5 0 007 0c0-3.5-3.5-5.5-3.5-9z"/><path d="M4 17c0 3 4 5 8 5s8-2 8-5H4z"/></svg>
         </div>
         <span class="tab-label">आरती दर्शन</span>
       </button>
 
+      <!-- Tab 1: ऑडियो (🔒 LOCKED) -->
+      <button class="curved-tab-btn is-locked-tab" data-page="tab-audio" data-idx="1" onclick="window.showAudioLockedNotice()" title="ऑडियो (अभी लॉक है)">
+        <div class="tab-icon" style="position:relative;">
+          <svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 00-2-2H3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+          <span style="position:absolute; top:-4px; right:-6px; font-size:0.65rem; background:#EF4444; border-radius:50%; width:14px; height:14px; display:flex; align-items:center; justify-content:center; color:#FFF; border:1px solid #FFF; font-weight:900;">🔒</span>
+        </div>
+        <span class="tab-label" style="color:#FCA5A5;">🔒 ऑडियो</span>
+      </button>
+
+      <!-- Tab 2: होम (CENTER - ACTIVE) -->
+      <button class="curved-tab-btn active" data-page="page-home" data-idx="2" onclick="window.switchCurvedNavTab(2, 'page-home')" title="होम">
+        <div class="tab-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>
+        </div>
+        <span class="tab-label">होम</span>
+      </button>
+
+      <!-- Tab 3: जाप माला -->
+      <button class="curved-tab-btn" data-page="page-mala" data-idx="3" onclick="window.switchCurvedNavTab(3, 'page-mala')" title="जाप माला">
+        <div class="tab-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" stroke-dasharray="2 3"/><circle cx="12" cy="4" r="1.8" fill="currentColor"/><circle cx="12" cy="20" r="1.8" fill="currentColor"/><circle cx="4" cy="12" r="1.8" fill="currentColor"/><circle cx="20" cy="12" r="1.8" fill="currentColor"/><circle cx="6.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="6.5" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="17.5" r="1.8" fill="currentColor"/></svg>
+        </div>
+        <span class="tab-label">जाप माला</span>
+      </button>
+
+      <!-- Tab 4: वैदिक पंचांग -->
       <button class="curved-tab-btn" data-page="page-panchang" data-idx="4" onclick="window.switchCurvedNavTab(4, 'page-panchang')" title="वैदिक पंचांग">
         <div class="tab-icon">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/></svg>
@@ -16822,27 +16885,23 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       const TOTAL_TABS = 5;
       const TAB_W = USABLE_W / TOTAL_TABS; // 170
       const CORNER_R = 36;
-
-      // Perfectly hugging contour: depth reaches right to circle's bottom edge (96 units)
-      // Width flares smoothly without touching the circle (76 units half-width = 152 mouth > 127 circle)
       const SCOOP_W = 76;
       const DEPTH = 96;
       const SHOULDER_W = 28;
 
       const PAGE_MAP = {
-        'page-home': 0,
-        'page-katha': 1,
-        'page-mala': 2,
-        'page-aarti-stage': 3,
+        'page-aarti-stage': 0,
+        'page-home': 2,
+        'page-mala': 3,
         'page-panchang': 4
       };
 
       const ICONS = [
-        '<svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>',
-        '<svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 00-2-2H3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',
-        '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" stroke-dasharray="2 3"/><circle cx="12" cy="4" r="1.8" fill="currentColor"/><circle cx="12" cy="20" r="1.8" fill="currentColor"/><circle cx="4" cy="12" r="1.8" fill="currentColor"/><circle cx="20" cy="12" r="1.8" fill="currentColor"/><circle cx="6.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="6.5" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="17.5" r="1.8" fill="currentColor"/></svg>',
-        '<svg viewBox="0 0 24 24"><path d="M12 2c0 3.5-3.5 5.5-3.5 9a3.5 3.5 0 007 0c0-3.5-3.5-5.5-3.5-9z"/><path d="M4 17c0 3 4 5 8 5s8-2 8-5H4z"/></svg>',
-        '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/></svg>'
+        '<svg viewBox="0 0 24 24"><path d="M12 2c0 3.5-3.5 5.5-3.5 9a3.5 3.5 0 007 0c0-3.5-3.5-5.5-3.5-9z"/><path d="M4 17c0 3 4 5 8 5s8-2 8-5H4z"/></svg>', // 0: Aarti
+        '<svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 00-2-2H3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>', // 1: Audio (Locked)
+        '<svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5v9.5a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9.5z"/></svg>', // 2: Home (Center)
+        '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" stroke-dasharray="2 3"/><circle cx="12" cy="4" r="1.8" fill="currentColor"/><circle cx="12" cy="20" r="1.8" fill="currentColor"/><circle cx="4" cy="12" r="1.8" fill="currentColor"/><circle cx="20" cy="12" r="1.8" fill="currentColor"/><circle cx="6.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="6.5" r="1.8" fill="currentColor"/><circle cx="6.5" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17.5" cy="17.5" r="1.8" fill="currentColor"/></svg>', // 3: Mala
+        '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/></svg>' // 4: Panchang
       ];
 
       function calcCurvedPath(cx) {
@@ -16867,9 +16926,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
                'Z';
       }
 
-      let activeIndex = 0;
-      let currentAnimatedCx = MARGIN_X + 0.5 * TAB_W; // 160.0
-      let targetAnimatedCx = MARGIN_X + 0.5 * TAB_W;
+      let activeIndex = 2; // Home is at center (Index 2)
+      let currentAnimatedCx = MARGIN_X + 2.5 * TAB_W; // 500.0 (Dead center)
+      let targetAnimatedCx = MARGIN_X + 2.5 * TAB_W;
       let animId = null;
 
       function renderNotch(targetIdx) {
@@ -16901,18 +16960,21 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       }
 
       window.switchCurvedNavTab = function(idx, pageId) {
-        idx = parseInt(idx, 10);
-        if (isNaN(idx) || idx < 0 || idx >= TOTAL_TABS) return;
-        activeIndex = idx;
+        if (idx === 1) {
+          window.showAudioLockedNotice();
+          return;
+        }
 
-        // Update active classes
-        document.querySelectorAll('.curved-tab-btn').forEach((btn, i) => {
-          btn.classList.toggle('active', i === idx);
+        activeIndex = idx;
+        const allButtons = document.querySelectorAll('.curved-tab-btn');
+        allButtons.forEach(btn => {
+          const btnIdx = parseInt(btn.getAttribute('data-idx'), 10);
+          btn.classList.toggle('active', btnIdx === idx);
         });
 
         renderNotch(idx);
 
-        if (pageId && typeof window.showPage === 'function') {
+        if (typeof window.showPage === 'function' && pageId) {
           window.showPage(pageId);
         }
       };
@@ -16921,76 +16983,40 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         const navEl = document.getElementById('curved-fluid-bottom-nav');
         if (!navEl) return;
 
-        // The user requirement: Show bottom nav ONLY on page-home, hide everywhere else!
-        const isHome = (!pageId || pageId === 'page-home');
-        if (isHome) {
-          navEl.classList.remove('nav-hidden');
-          navEl.style.removeProperty('display');
-          navEl.style.removeProperty('visibility');
-          navEl.style.removeProperty('opacity');
-          navEl.style.removeProperty('pointer-events');
-          navEl.style.removeProperty('transform');
-
-          activeIndex = 0;
-          document.querySelectorAll('.curved-tab-btn').forEach((btn, i) => {
-            btn.classList.toggle('active', i === 0);
-          });
-          renderNotch(0);
-        } else {
+        // Hide on reader or 3d mandir
+        if (pageId === 'page-reader' || pageId === 'page-3d-mandir') {
           navEl.classList.add('nav-hidden');
-          navEl.style.setProperty('display', 'none', 'important');
-          navEl.style.setProperty('visibility', 'hidden', 'important');
-          navEl.style.setProperty('opacity', '0', 'important');
-          navEl.style.setProperty('pointer-events', 'none', 'important');
-          navEl.style.setProperty('transform', 'translate(-50%, 150%)', 'important');
+          return;
+        } else {
+          navEl.classList.remove('nav-hidden');
+        }
+
+        const mappedIdx = PAGE_MAP[pageId];
+        if (typeof mappedIdx === 'number') {
+          activeIndex = mappedIdx;
+          document.querySelectorAll('.curved-tab-btn').forEach(btn => {
+            const btnIdx = parseInt(btn.getAttribute('data-idx'), 10);
+            btn.classList.toggle('active', btnIdx === mappedIdx);
+          });
+          renderNotch(mappedIdx);
+        } else {
+          document.querySelectorAll('.curved-tab-btn').forEach(btn => btn.classList.remove('active'));
         }
       };
 
-      // Failsafe MutationObserver to ensure bottom nav stays in sync with active page
-      function initBottomNavPageWatcher() {
-        const syncVisibility = function() {
-          const homeEl = document.getElementById('page-home');
-          const isHome = homeEl && homeEl.classList.contains('active');
-          window.updateCurvedBottomNav(isHome ? 'page-home' : 'sub-page');
-        };
-
-        try {
-          const pages = document.querySelectorAll('.page');
-          if (window.MutationObserver && pages.length) {
-            const observer = new MutationObserver(syncVisibility);
-            pages.forEach(p => observer.observe(p, { attributes: true, attributeFilter: ['class', 'style'] }));
-          }
-        } catch (e) {}
-
-        syncVisibility();
-      }
-
-      // Hook into showPage
-      function hookShowPage() {
-        if (typeof window.showPage === 'function') {
-          const orig = window.showPage;
-          window.showPage = function(pageId) {
-            const res = orig.apply(this, arguments);
-            window.updateCurvedBottomNav(pageId);
-            return res;
-          };
+      window.showAudioLockedNotice = function() {
+        if (typeof window.showToast === 'function') {
+          window.showToast('🔒 पावन ऑडियो (Audio) अभी सुरक्षित रूप से लॉक है!');
         } else {
-          setTimeout(hookShowPage, 100);
+          alert('🔒 पावन ऑडियो (Audio) अभी सुरक्षित रूप से लॉक है!');
         }
-      }
+      };
 
-      // Initialize
-      if (document.readyState === 'complete' || document.readyState === 'interactive') {
-        renderNotch(0);
-        hookShowPage();
-        setTimeout(initBottomNavPageWatcher, 50);
-      } else {
-        document.addEventListener('DOMContentLoaded', function() {
-          renderNotch(0);
-          hookShowPage();
-          setTimeout(initBottomNavPageWatcher, 50);
-        });
-      }
+      // Initial layout on DOM ready
+      document.addEventListener('DOMContentLoaded', function() {
+        renderNotch(2); // Center Home
+      });
+      setTimeout(function() { renderNotch(2); }, 150);
     })();
   </script>
 
@@ -17908,156 +17934,171 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           </div>
         </div>
 
-        <!-- 6 Prominent UPI Apps Grid (2x3) -->
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
-          
-          <!-- 1. Paytm -->
-          <div onclick="openSpecificUpiApp('paytm')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,46,110,0.4) 0%, rgba(0,186,242,0.15) 100%); border:1.5px solid #00BAF2; border-radius:16px; padding:10px 12px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:transform 0.15s ease, box-shadow 0.15s ease; box-shadow:0 4px 15px rgba(0,186,242,0.2);">
-            <div style="width:40px; height:40px; border-radius:12px; background:#002E6E; border:1px solid #00BAF2; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="6" fill="#002E6E"/>
-                <path d="M4 8h5c1.5 0 2.5 1 2.5 2.5S10.5 13 9 13H6.5v4H4V8zm2.5 3h2.3c.5 0 .8-.3.8-.8s-.3-.7-.8-.7H6.5v1.5z" fill="#00BAF2"/>
-                <path d="M14 10h2.2l1.3 3.3L18.8 10H21l-2.6 6.5h-1.8L14 10z" fill="#FFF"/>
-              </svg>
+        <!-- 🌟 PRIMARY DEFAULT PAYMENT METHOD: GOOGLE PAY (GPAY) 🌟 -->
+        <div style="background:linear-gradient(135deg, rgba(66,133,244,0.16) 0%, rgba(52,168,83,0.1) 50%, rgba(251,188,5,0.14) 100%); border:2px solid #4285F4; border-radius:20px; padding:15px 16px; margin-bottom:12px; box-shadow:0 6px 24px rgba(66,133,244,0.22); text-align:center;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:0.68rem; background:#4285F4; color:#FFF; font-weight:900; padding:3px 9px; border-radius:8px; text-transform:uppercase; letter-spacing:0.4px;">★ मुख्य माध्यम (Default)</span>
             </div>
-            <div style="flex:1; min-width:0; text-align:left;">
-              <div style="display:flex; align-items:center; justify-content:space-between;">
-                <div style="font-size:0.88rem; font-weight:900; color:#FFFDF8;">Paytm</div>
-                <span style="font-size:0.58rem; background:#00BAF2; color:#002E6E; font-weight:900; padding:1px 5px; border-radius:6px;">Direct</span>
-              </div>
-              <div style="font-size:0.7rem; color:#A5F3FC; margin-top:2px;">पेटीएम ऐप खोलें</div>
-            </div>
+            <span style="font-size:0.68rem; color:#34D399; font-weight:800; background:rgba(16,185,129,0.15); border:1px solid #10B981; padding:3px 8px; border-radius:8px;">
+              ⚡ 1-टैप फास्ट पेमेंट
+            </span>
           </div>
 
-          <!-- 2. PhonePe -->
-          <div onclick="openSpecificUpiApp('phonepe')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(95,37,159,0.4) 0%, rgba(147,51,234,0.15) 100%); border:1.5px solid #A855F7; border-radius:16px; padding:10px 12px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:transform 0.15s ease, box-shadow 0.15s ease; box-shadow:0 4px 15px rgba(168,85,247,0.2);">
-            <div style="width:40px; height:40px; border-radius:12px; background:#5F259F; border:1px solid #C084FC; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="11" fill="#5F259F"/>
-                <path d="M7 6h4c2.5 0 4 1.5 4 4s-1.5 4-4 4H9.5v5H7V6zm2.5 6H11c1 0 1.6-.6 1.6-1.5S12 9 11 9H9.5v3z" fill="#FFF"/>
-                <path d="M14.5 13.5l3.5 5.5h-2.5l-2.6-4.2 1.6-1.3z" fill="#F8C83B"/>
-              </svg>
-            </div>
-            <div style="flex:1; min-width:0; text-align:left;">
-              <div style="display:flex; align-items:center; justify-content:space-between;">
-                <div style="font-size:0.88rem; font-weight:900; color:#FFFDF8;">PhonePe</div>
-                <span style="font-size:0.58rem; background:#A855F7; color:#FFF; font-weight:900; padding:1px 5px; border-radius:6px;">Fast</span>
-              </div>
-              <div style="font-size:0.7rem; color:#E9D5FF; margin-top:2px;">फ़ोनपे ऐप खोलें</div>
-            </div>
-          </div>
-
-          <!-- 3. Google Pay (GPay) -->
-          <div onclick="openSpecificUpiApp('gpay')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(66,133,244,0.15) 100%); border:1.5px solid #60A5FA; border-radius:16px; padding:10px 12px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:transform 0.15s ease, box-shadow 0.15s ease; box-shadow:0 4px 15px rgba(96,165,250,0.2);">
-            <div style="width:40px; height:40px; border-radius:12px; background:#1E293B; border:1px solid #60A5FA; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; text-align:left;">
+            <div style="width:48px; height:48px; border-radius:14px; background:#FFFFFF; border:1.5px solid #60A5FA; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.18);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
                 <path d="M21.35 11.1H12v3.8h5.38c-.45 2.1-2.25 3.6-5.38 3.6-3.3 0-6-2.7-6-6s2.7-6 6-6c1.45 0 2.75.55 3.75 1.45l2.85-2.85C16.9 3.4 14.6 2.5 12 2.5 6.75 2.5 2.5 6.75 2.5 12s4.25 9.5 9.5 9.5c5.5 0 9.15-3.85 9.15-9.3 0-.7-.05-1.4-.15-2.1z" fill="#4285F4"/>
                 <path d="M4.2 7.7l3.15 2.3c.85-2.3 2.85-3.5 4.65-3.5 1.45 0 2.75.55 3.75 1.45l2.85-2.85C16.9 3.4 14.6 2.5 12 2.5c-3.6 0-6.7 2.1-8.2 5.2z" fill="#EA4335"/>
                 <path d="M12 21.5c2.5 0 4.7-.85 6.35-2.35l-3-2.45c-.85.6-1.95.95-3.35.95-3.1 0-4.9-1.5-5.35-3.6l-3.2 2.45C5.1 19.5 8.25 21.5 12 21.5z" fill="#34A853"/>
                 <path d="M3.45 14.05c-.2-.6-.35-1.3-.35-2.05s.15-1.45.35-2.05l-3.2-2.45C.1 8.8 0 10.35 0 12s.1 3.2.25 4.5l3.2-2.45z" fill="#FBBC05"/>
               </svg>
             </div>
-            <div style="flex:1; min-width:0; text-align:left;">
-              <div style="display:flex; align-items:center; justify-content:space-between;">
-                <div style="font-size:0.88rem; font-weight:900; color:#FFFDF8;">Google Pay</div>
-                <span style="font-size:0.58rem; background:#3B82F6; color:#FFF; font-weight:900; padding:1px 5px; border-radius:6px;">Popular</span>
+            <div style="flex:1; min-width:0;">
+              <div style="font-size:1.05rem; font-weight:900; color:#FFFFFF; letter-spacing:0.3px;">
+                Google Pay (GPay)
               </div>
-              <div style="font-size:0.7rem; color:#BFDBFE; margin-top:2px;">GPay ऐप खोलें</div>
-            </div>
-          </div>
-
-          <!-- 4. BHIM UPI -->
-          <div onclick="openSpecificUpiApp('bhim')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,121,107,0.4) 0%, rgba(20,184,166,0.15) 100%); border:1.5px solid #14B8A6; border-radius:16px; padding:10px 12px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:transform 0.15s ease, box-shadow 0.15s ease; box-shadow:0 4px 15px rgba(20,184,166,0.2);">
-            <div style="width:40px; height:40px; border-radius:12px; background:#042F2E; border:1px solid #14B8A6; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="6" fill="#042F2E"/>
-                <path d="M5 6h5c2 0 3.2 1 3.2 2.5 0 1-.6 1.8-1.5 2.1 1.2.3 2 1.2 2 2.4 0 1.6-1.3 2.6-3.5 2.6H5V6zm2.4 3.7h2.2c.6 0 1-.3 1-.8s-.4-.8-1-.8H7.4v1.6zm0 3.8h2.5c.7 0 1.2-.3 1.2-.9s-.5-.9-1.2-.9H7.4v1.8z" fill="#F97316"/>
-                <path d="M14.5 6h2.4v9.6h-2.4V6z" fill="#FFF"/>
-                <path d="M18.5 6H21v9.6h-2.5V6z" fill="#10B981"/>
-              </svg>
-            </div>
-            <div style="flex:1; min-width:0; text-align:left;">
-              <div style="display:flex; align-items:center; justify-content:space-between;">
-                <div style="font-size:0.88rem; font-weight:900; color:#FFFDF8;">BHIM UPI</div>
-                <span style="font-size:0.58rem; background:#14B8A6; color:#042F2E; font-weight:900; padding:1px 5px; border-radius:6px;">NPCI</span>
+              <div style="font-size:0.75rem; color:#BFDBFE; margin-top:2px;">
+                खाताधारक: <strong style="color:#FFF;">Vishwanath Mishra</strong>
               </div>
-              <div style="font-size:0.7rem; color:#99F6E4; margin-top:2px;">भीम ऐप से भुगतान</div>
+              <div style="font-size:0.72rem; color:#93C5FD; font-weight:700;">
+                UPI ID: <span style="letter-spacing:0.3px;">mishravishwanath86-2@oksbi</span>
+              </div>
             </div>
           </div>
 
-          <!-- 5. CRED Pay -->
-          <div onclick="openSpecificUpiApp('cred')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(17,24,39,0.7) 0%, rgba(31,41,55,0.4) 100%); border:1.5px solid rgba(255,255,255,0.25); border-radius:16px; padding:10px 12px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-            <div style="width:40px; height:40px; border-radius:12px; background:#000; border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="#FFF" stroke-width="2"/>
-                <circle cx="12" cy="12" r="5" fill="#FFF"/>
-              </svg>
-            </div>
-            <div style="flex:1; min-width:0; text-align:left;">
-              <div style="font-size:0.88rem; font-weight:900; color:#FFFDF8;">CRED Pay</div>
-              <div style="font-size:0.7rem; color:#9CA3AF; margin-top:2px;">क्रेड ऐप से भुगतान</div>
-            </div>
-          </div>
-
-          <!-- 6. Amazon Pay -->
-          <div onclick="openSpecificUpiApp('amazonpay')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(245,158,11,0.2) 0%, rgba(180,83,9,0.1) 100%); border:1.5px solid #F59E0B; border-radius:16px; padding:10px 12px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-            <div style="width:40px; height:40px; border-radius:12px; background:#1C1917; border:1px solid #F59E0B; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <path d="M4 14.5c4.5 3 11.5 3 16 0" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M18 13.5l2.2 1-1 2.2" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="12" cy="8" r="3" fill="#FFF"/>
-              </svg>
-            </div>
-            <div style="flex:1; min-width:0; text-align:left;">
-              <div style="font-size:0.88rem; font-weight:900; color:#FFFDF8;">Amazon Pay</div>
-              <div style="font-size:0.7rem; color:#FDE68A; margin-top:2px;">अमेज़न पे ऐप</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- 7. Universal "Any UPI App" Card -->
-        <div onclick="openSpecificUpiApp('generic')" class="upi-app-card" style="background:linear-gradient(135deg, rgba(248,200,59,0.25) 0%, rgba(217,119,6,0.18) 100%); border:1.5px solid #F8C83B; border-radius:16px; padding:11px 14px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; box-shadow:0 4px 18px rgba(248,200,59,0.25); transition:transform 0.15s ease;">
-          <div style="display:flex; align-items:center; gap:10px; text-align:left;">
-            <div style="width:38px; height:38px; border-radius:12px; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:#1A0B2E; flex-shrink:0;">
-              ⚡
-            </div>
-            <div>
-              <div style="font-size:0.9rem; font-weight:900; color:#FFFDF8;">अन्य सभी UPI ऐप्स (Universal Intent)</div>
-              <div style="font-size:0.7rem; color:#FDE68A; margin-top:1px;">Navi, WhatsApp Pay, Tata Neu, YONO SBI, iMobile, Bank Apps आदि</div>
-            </div>
-          </div>
-          <div style="font-size:1.1rem; color:#F8C83B; font-weight:900;">❯</div>
-        </div>
-
-        <!-- QR Code & Manual UPI Options -->
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          
-          <!-- Toggle QR Button -->
-          <button onclick="toggleSankalpQrCode()" style="background:rgba(255,255,255,0.08); border:1.5px solid #F8C83B; color:#FDE68A; border-radius:14px; padding:10px 14px; font-size:0.84rem; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; width:100%; transition:all 0.2s ease; box-shadow:0 0 12px rgba(248,200,59,0.18);">
-            <span style="font-size:1.1rem;">📷</span> 
-            <span id="sankalp-qr-btn-label">QR कोड से स्कैन कर भुगतान करें (Paytm QR)</span>
-            <span id="sankalp-qr-arrow">▲</span>
+          <!-- Main Google Pay Pay Action Button -->
+          <button onclick="openSpecificUpiApp('gpay')" style="width:100%; background:linear-gradient(135deg, #1A73E8 0%, #1557B0 100%); color:#FFFFFF; border:none; font-size:0.95rem; font-weight:900; padding:13px 16px; border-radius:14px; cursor:pointer; box-shadow:0 4px 18px rgba(26,115,232,0.45); display:flex; align-items:center; justify-content:center; gap:8px; transition:transform 0.15s ease;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M21.35 11.1H12v3.8h5.38c-.45 2.1-2.25 3.6-5.38 3.6-3.3 0-6-2.7-6-6s2.7-6 6-6c1.45 0 2.75.55 3.75 1.45l2.85-2.85C16.9 3.4 14.6 2.5 12 2.5 6.75 2.5 2.5 6.75 2.5 12s4.25 9.5 9.5 9.5c5.5 0 9.15-3.85 9.15-9.3 0-.7-.05-1.4-.15-2.1z" fill="#FFF"/>
+            </svg>
+            <span id="gpay-action-btn-text">Google Pay से भुगतान करें (₹21)</span> ➔
           </button>
+        </div>
+
+        <!-- 🔄 EXPAND / COLLAPSE OTHER PAYMENT OPTIONS TOGGLE BUTTON 🔄 -->
+        <button id="toggle-other-upi-btn" onclick="toggleOtherUpiOptions()" style="width:100%; background:rgba(255,255,255,0.06); border:1.5px solid rgba(248,200,59,0.35); color:#FDE68A; border-radius:14px; padding:11px 14px; font-size:0.83rem; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:12px; transition:all 0.2s ease; box-shadow:0 2px 10px rgba(0,0,0,0.3);">
+          <span>✨ अन्य UPI ऐप्स (PhonePe, Paytm) व QR कोड देखें ▼</span>
+        </button>
+
+        <!-- ═════════════════════════════════════════════════════════
+             COLLAPSIBLE SECTION: OTHER UPI APPS, QR & COPY ID (HIDDEN BY DEFAULT)
+             ═════════════════════════════════════════════════════════ -->
+        <div id="other-upi-options-container" style="display:none; animation:fadeIn 0.25s ease;">
           
-          <!-- Official QR Code Container (Visible for immediate scanning) -->
-          <div id="sankalp-qr-container" style="display:block; background:#FFFFFF; border-radius:20px; padding:16px 14px; text-align:center; box-shadow:0 10px 32px rgba(0,0,0,0.75); border:2px solid #00BAF2; animation:fadeIn 0.25s ease;">
+          <div style="font-size:0.75rem; color:#FDE68A; font-weight:800; text-align:left; margin-bottom:8px; padding-left:2px;">
+            अन्य उपलब्ध UPI विकल्प:
+          </div>
+
+          <!-- Other UPI Apps Grid -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-bottom:10px;">
+            
+            <!-- 1. PhonePe -->
+            <div onclick="openSpecificUpiApp('phonepe')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(95,37,159,0.4) 0%, rgba(147,51,234,0.15) 100%); border:1.5px solid #A855F7; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:36px; height:36px; border-radius:10px; background:#5F259F; border:1px solid #C084FC; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="11" fill="#5F259F"/>
+                  <path d="M7 6h4c2.5 0 4 1.5 4 4s-1.5 4-4 4H9.5v5H7V6zm2.5 6H11c1 0 1.6-.6 1.6-1.5S12 9 11 9H9.5v3z" fill="#FFF"/>
+                  <path d="M14.5 13.5l3.5 5.5h-2.5l-2.6-4.2 1.6-1.3z" fill="#F8C83B"/>
+                </svg>
+              </div>
+              <div style="flex:1; min-width:0; text-align:left;">
+                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">PhonePe</div>
+                <div style="font-size:0.68rem; color:#E9D5FF;">फ़ोनपे ऐप</div>
+              </div>
+            </div>
+
+            <!-- 2. Paytm -->
+            <div onclick="openSpecificUpiApp('paytm')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,46,110,0.4) 0%, rgba(0,186,242,0.15) 100%); border:1.5px solid #00BAF2; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:36px; height:36px; border-radius:10px; background:#002E6E; border:1px solid #00BAF2; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="6" fill="#002E6E"/>
+                  <path d="M4 8h5c1.5 0 2.5 1 2.5 2.5S10.5 13 9 13H6.5v4H4V8zm2.5 3h2.3c.5 0 .8-.3.8-.8s-.3-.7-.8-.7H6.5v1.5z" fill="#00BAF2"/>
+                  <path d="M14 10h2.2l1.3 3.3L18.8 10H21l-2.6 6.5h-1.8L14 10z" fill="#FFF"/>
+                </svg>
+              </div>
+              <div style="flex:1; min-width:0; text-align:left;">
+                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">Paytm</div>
+                <div style="font-size:0.68rem; color:#A5F3FC;">पेटीएम ऐप</div>
+              </div>
+            </div>
+
+            <!-- 3. BHIM UPI -->
+            <div onclick="openSpecificUpiApp('bhim')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,121,107,0.4) 0%, rgba(20,184,166,0.15) 100%); border:1.5px solid #14B8A6; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:36px; height:36px; border-radius:10px; background:#042F2E; border:1px solid #14B8A6; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="6" fill="#042F2E"/>
+                  <path d="M5 6h5c2 0 3.2 1 3.2 2.5 0 1-.6 1.8-1.5 2.1 1.2.3 2 1.2 2 2.4 0 1.6-1.3 2.6-3.5 2.6H5V6zm2.4 3.7h2.2c.6 0 1-.3 1-.8s-.4-.8-1-.8H7.4v1.6zm0 3.8h2.5c.7 0 1.2-.3 1.2-.9s-.5-.9-1.2-.9H7.4v1.8z" fill="#F97316"/>
+                  <path d="M14.5 6h2.4v9.6h-2.4V6z" fill="#FFF"/>
+                  <path d="M18.5 6H21v9.6h-2.5V6z" fill="#10B981"/>
+                </svg>
+              </div>
+              <div style="flex:1; min-width:0; text-align:left;">
+                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">BHIM UPI</div>
+                <div style="font-size:0.68rem; color:#99F6E4;">भीम ऐप</div>
+              </div>
+            </div>
+
+            <!-- 4. Amazon Pay -->
+            <div onclick="openSpecificUpiApp('amazonpay')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(245,158,11,0.2) 0%, rgba(180,83,9,0.1) 100%); border:1.5px solid #F59E0B; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:36px; height:36px; border-radius:10px; background:#1C1917; border:1px solid #F59E0B; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 14.5c4.5 3 11.5 3 16 0" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M18 13.5l2.2 1-1 2.2" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="8" r="3" fill="#FFF"/>
+                </svg>
+              </div>
+              <div style="flex:1; min-width:0; text-align:left;">
+                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">Amazon Pay</div>
+                <div style="font-size:0.68rem; color:#FDE68A;">अमेज़न पे</div>
+              </div>
+            </div>
+
+            <!-- 5. CRED Pay -->
+            <div onclick="openSpecificUpiApp('cred')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(17,24,39,0.7) 0%, rgba(31,41,55,0.4) 100%); border:1.5px solid rgba(255,255,255,0.25); border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:36px; height:36px; border-radius:10px; background:#000; border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#FFF" stroke-width="2"/>
+                  <circle cx="12" cy="12" r="5" fill="#FFF"/>
+                </svg>
+              </div>
+              <div style="flex:1; min-width:0; text-align:left;">
+                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">CRED Pay</div>
+                <div style="font-size:0.68rem; color:#9CA3AF;">क्रेड ऐप</div>
+              </div>
+            </div>
+
+            <!-- 6. Universal "Any UPI App" Card -->
+            <div onclick="openSpecificUpiApp('generic')" class="upi-app-card" style="background:linear-gradient(135deg, rgba(248,200,59,0.22) 0%, rgba(217,119,6,0.15) 100%); border:1.5px solid #F8C83B; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease;">
+              <div style="width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:#1A0B2E; flex-shrink:0;">
+                ⚡
+              </div>
+              <div style="flex:1; min-width:0; text-align:left;">
+                <div style="font-size:0.82rem; font-weight:900; color:#FFFDF8;">अन्य सभी ऐप्स</div>
+                <div style="font-size:0.65rem; color:#FDE68A;">WhatsApp, SBI आदि</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Official QR Code Container with Google Pay QR -->
+          <div id="sankalp-qr-container" style="display:block; background:#FFFFFF; border-radius:20px; padding:16px 14px; text-align:center; box-shadow:0 10px 32px rgba(0,0,0,0.75); border:2px solid #4285F4; margin-bottom:10px; animation:fadeIn 0.25s ease;">
             <!-- Payee Name & Verified Badge -->
             <div style="display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:0.95rem; font-weight:900; color:#0F172A;">Mr Vishwanath Mishra</span>
-              <span style="display:inline-flex; align-items:center; justify-content:center; background:#00BAF2; color:#FFF; width:17px; height:17px; border-radius:50%; font-size:11px; font-weight:900;">✓</span>
+              <span style="font-size:0.95rem; font-weight:900; color:#0F172A;">Vishwanath Mishra</span>
+              <span style="display:inline-flex; align-items:center; justify-content:center; background:#4285F4; color:#FFF; width:17px; height:17px; border-radius:50%; font-size:11px; font-weight:900;">✓</span>
             </div>
             
             <div style="font-size:0.75rem; color:#475569; font-weight:700; margin-bottom:2px;">
-              UPI ID: <span style="color:#002E6E; font-weight:900;">7985304144@ptsbi</span>
+              UPI ID: <span style="color:#1A73E8; font-weight:900;">mishravishwanath86-2@oksbi</span>
             </div>
             <div style="font-size:0.68rem; color:#64748B; margin-bottom:10px;">
-              Indian Bank • Paytm • PhonePe • GPay • BHIM • कोई भी UPI स्कैनर
+              Google Pay • PhonePe • Paytm • BHIM • कोई भी UPI स्कैनर
             </div>
 
-            <!-- QR Code Card -->
+            <!-- QR Code Image Card -->
             <div style="display:flex; justify-content:center; align-items:center; margin-bottom:10px;">
-              <img id="sankalp-qr-image" src="assets/upi_qr_card.png" alt="Mr Vishwanath Mishra Paytm UPI QR Code" style="width:100%; max-width:280px; height:auto; border-radius:16px; border:2px solid #00BAF2; background:#FFF; display:block; box-shadow:0 6px 20px rgba(0,0,0,0.14);" />
+              <img id="sankalp-qr-image" src="assets/gpay_qr_code.png" alt="Vishwanath Mishra Google Pay UPI QR Code" style="width:100%; max-width:260px; height:auto; border-radius:16px; border:1.5px solid #E2E8F0; background:#FFF; display:block; box-shadow:0 6px 20px rgba(0,0,0,0.12);" />
             </div>
 
             <!-- Dynamic Amount Badge -->
@@ -18067,13 +18108,13 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           </div>
 
           <!-- One-Tap Copy UPI ID -->
-          <div style="background:rgba(0,0,0,0.4); border:1.5px dashed rgba(248,200,59,0.45); border-radius:16px; padding:10px 14px; display:flex; align-items:center; justify-content:space-between;">
+          <div style="background:rgba(0,0,0,0.4); border:1.5px dashed rgba(248,200,59,0.45); border-radius:16px; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
             <div style="display:flex; align-items:center; gap:10px; text-align:left;">
               <span style="font-size:1.3rem;">💳</span>
               <div>
                 <div style="font-size:0.65rem; color:#94A3B8; text-transform:uppercase; letter-spacing:0.5px;">प्राप्तकर्ता (Payee Account):</div>
-                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">Mr Vishwanath Mishra</div>
-                <div style="font-size:0.75rem; font-weight:800; color:#FDE68A; letter-spacing:0.5px;">7985304144@ptsbi</div>
+                <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">Vishwanath Mishra</div>
+                <div style="font-size:0.75rem; font-weight:800; color:#FDE68A; letter-spacing:0.4px;">mishravishwanath86-2@oksbi</div>
               </div>
             </div>
             <button onclick="copySankalpUpiId()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); border:none; color:#1A0B2E; font-size:0.76rem; font-weight:900; padding:8px 14px; border-radius:10px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); flex-shrink:0;">
@@ -18911,7 +18952,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
   <script src="amrit_kalash_3d_engine.js?v=1788504008"></script>
   <script src="i18n_engine.js?v=1788376135"></script>
   <script src="sadhana_gamification_engine.js?v=1788456689"></script>
-  <script src="app.js?v=1789850000"></script>
+  <script src="app.js?v=1791671977"></script>
   <script src="mantra_engine.js?v=1789850000"></script>
   <script src="sundarkand_engine.js?v=1790000000"></script>
   <script src="gita_engine.js?v=1790000000"></script>
@@ -19023,6 +19064,11 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       window._appPageHistory = ['page-home'];
       window._isNavigatingBack = false;
 
+      // Seed initial history entry with page-home so back button never exits at depth 1
+      try {
+        history.replaceState({ page: 'page-home', depth: 0 }, '', window.location.pathname + '#page-home');
+      } catch(err) {}
+
       function hookShowPageForHistory() {
         if (typeof window.showPage === 'function' && !window.showPage._historyHooked) {
           const originalShowPage = window.showPage;
@@ -19035,15 +19081,18 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
               }
               if (pageId === 'page-home') {
                 window._appPageHistory = ['page-home'];
+                try {
+                  history.pushState({ page: 'page-home', depth: 0 }, '', '#page-home');
+                } catch(e) {}
               } else {
                 const currentTop = window._appPageHistory[window._appPageHistory.length - 1];
                 if (currentTop !== pageId) {
                   window._appPageHistory.push(pageId);
                 }
+                try {
+                  history.pushState({ page: pageId, depth: window._appPageHistory.length }, '', '#' + pageId);
+                } catch(e) {}
               }
-              try {
-                history.pushState({ page: pageId }, '', '#' + pageId);
-              } catch(err) {}
             }
 
             const ret = originalShowPage.apply(this, arguments);
@@ -19059,12 +19108,38 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       }
       hookShowPageForHistory();
 
-      // 3. Universal Step-by-Step Back Navigation
+      // Universal Step-by-Step Back Navigation
       window.goStepBack = function(e) {
         if (e && typeof e.preventDefault === 'function') e.preventDefault();
         if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
 
-        // Level 1: Sub-modals / Readers inside Chapter or Section
+        // Level 1: Epic Game Arenas and Modals
+        if (document.getElementById('swipe-review-arena') && document.getElementById('swipe-review-arena').style.display === 'flex') {
+          if (typeof window.closeSwipeReview === 'function') window.closeSwipeReview();
+          return true;
+        }
+        if (document.getElementById('swipe-arena') && document.getElementById('swipe-arena').style.display === 'flex') {
+          if (typeof window.closeSwipeGame === 'function') window.closeSwipeGame();
+          return true;
+        }
+        if (document.getElementById('swipe-result-modal') && document.getElementById('swipe-result-modal').style.display === 'flex') {
+          if (typeof window.hideSwipeResultModal === 'function') window.hideSwipeResultModal();
+          return true;
+        }
+        if (document.getElementById('match-game-modal') && document.getElementById('match-game-modal').style.display === 'flex') {
+          if (typeof window.closeMatchGame === 'function') window.closeMatchGame();
+          return true;
+        }
+        if (document.getElementById('jigsaw-game-modal') && document.getElementById('jigsaw-game-modal').style.display === 'flex') {
+          if (typeof window.closeJigsawGame === 'function') window.closeJigsawGame();
+          return true;
+        }
+        if (document.getElementById('padabandham-game-modal') && document.getElementById('padabandham-game-modal').style.display === 'flex') {
+          if (typeof window.closePadabandhamGame === 'function') window.closePadabandhamGame();
+          return true;
+        }
+
+        // Sub-modals inside chapters / readers
         const subModals = [
           {
             id: 'gita-chapter-reader-modal',
@@ -19084,14 +19159,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
               if (p) p.style.display = 'block';
             }
           },
-          {
-            id: 'gita-jumper-modal',
-            close: function() { if (typeof window.closeGitaJumperModal === 'function') window.closeGitaJumperModal(); }
-          },
-          {
-            id: 'sundarkand-jumper-modal',
-            close: function() { if (typeof window.closeSundarkandJumperModal === 'function') window.closeSundarkandJumperModal(); }
-          }
+          { id: 'gita-jumper-modal', close: function() { if (typeof window.closeGitaJumperModal === 'function') window.closeGitaJumperModal(); } },
+          { id: 'sundarkand-jumper-modal', close: function() { if (typeof window.closeSundarkandJumperModal === 'function') window.closeSundarkandJumperModal(); } }
         ];
 
         for (let i = 0; i < subModals.length; i++) {
@@ -19166,7 +19235,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         // Level 4: Page History Stack Pop (Step-by-Step Back)
         if (window._appPageHistory && window._appPageHistory.length > 1) {
           window._appPageHistory.pop(); // Remove current page
-          const prevPage = window._appPageHistory[window._appPageHistory.length - 1];
+          const prevPage = window._appPageHistory[window._appPageHistory.length - 1] || 'page-home';
           window._isNavigatingBack = true;
           try {
             window.showPage(prevPage);
@@ -19191,7 +19260,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         return false;
       };
 
-      // 4. Capture Phase Interception for all Back Buttons
+      // 4. Capture Phase Interception for all In-App Back Buttons
       document.addEventListener('click', function(e) {
         const backBtn = e.target.closest('.back-btn, [data-back], .gallery-back-btn, .page-back-button');
         if (backBtn) {
@@ -19199,16 +19268,93 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           e.stopImmediatePropagation();
           window.goStepBack(e);
         }
-      }, true); // Capture phase interceptor!
+      }, true);
 
-      // 5. Mobile & Browser Hardware Back Button Handler
+      // 5. Mobile Hardware Back Button Protection (Never exits from sub-sub-pages!)
+      let lastBackPressTime = 0;
+      function handleHardwareBackSafely(e) {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+
+        // If not on home page: ALWAYS step back internally!
+        if (window.currentPage && window.currentPage !== 'page-home') {
+          window.goStepBack(e);
+          // Re-push a history trap barrier so the WebView activity cannot close
+          try {
+            history.pushState({ page: window.currentPage }, '', '#' + window.currentPage);
+          } catch(err) {}
+          return;
+        }
+
+        // If we ARE on page-home: double-press back to exit gracefully
+        const now = Date.now();
+        if (now - lastBackPressTime < 2200) {
+          // Double press within 2.2s -> Allow app close
+          if (navigator.app && navigator.app.exitApp) {
+            navigator.app.exitApp();
+          } else if (navigator.device && navigator.device.exitApp) {
+            navigator.device.exitApp();
+          }
+        } else {
+          lastBackPressTime = now;
+          // Re-push state so first press doesn't close app
+          try {
+            history.pushState({ page: 'page-home' }, '', '#page-home');
+          } catch(err) {}
+          if (typeof window.showToast === 'function') {
+            window.showToast('ऐप से बाहर निकलने के लिए एक बार और बैक दबाएं');
+          }
+        }
+      }
+
       window.addEventListener('popstate', function(e) {
-        window.goStepBack();
+        handleHardwareBackSafely(e);
       });
+
+      document.addEventListener('backbutton', function(e) {
+        handleHardwareBackSafely(e);
+      }, false);
+
+      // Helper function for Aarti Stage Deity switching
+      window.setStageDeity = function(name, img, title, subtitle, aartiId) {
+        const titleEl = document.getElementById('aarti-current-deity-title');
+        const subEl = document.getElementById('aarti-current-deity-sub');
+        const imgEl = document.getElementById('aarti-thali-deity-img');
+        if (titleEl) titleEl.textContent = title;
+        if (subEl) subEl.textContent = subtitle + ' — दीपदान व नमन करें';
+        if (imgEl) {
+          imgEl.src = img;
+          imgEl.style.animation = 'none';
+          setTimeout(() => { imgEl.style.animation = 'pulseGlow 1.5s infinite'; }, 10);
+        }
+        window.currentSelectedStageDeity = { name, img, title, subtitle, aartiId };
+        if (typeof window.showToast === 'function') {
+          window.showToast(`✨ ${name} जी की पावन आरती स्थापित हुई!`);
+        }
+        if (navigator.vibrate) navigator.vibrate(30);
+      };
+
+      // Helper function for Aarti Stage Deep Daan
+      window.offerAartiDeepDaan = function() {
+        if (typeof window.triggerFlowerShower === 'function') window.triggerFlowerShower();
+        if (typeof window.ringTempleBell === 'function') window.ringTempleBell();
+        if (typeof window.showToast === 'function') {
+          window.showToast('🪔 पावन अखंड दीपदान अर्पित हुआ! प्रभु की कृपा प्राप्त हुई (+5 अंक)');
+        }
+      };
+
+      // Helper function to read the currently selected Aarti text
+      window.openCurrentSelectedAartiReader = function() {
+        const deity = window.currentSelectedStageDeity || { aartiId: 'aarti_ganesh', title: 'श्री गणेश जी की आरती' };
+        if (typeof window.openAartiReader === 'function') {
+          window.openAartiReader(deity.aartiId || 'aarti_ganesh');
+        } else if (typeof window.showPage === 'function') {
+          window.showPage('page-aarti');
+        }
+      };
     })();
   </script>
-
   <script src="epic_games_engine.js"></script>
+  <script src="ai_bhakti_player.js"></script>
   <!-- ═══════════════════════════════════════════════════════════════════════════
        🚀 IN-APP UPDATE MODAL 🚀
        ═══════════════════════════════════════════════════════════════════════════ -->
@@ -19256,6 +19402,64 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         </button>
       </div>
 
+    </div>
+  </div>
+
+
+  <!-- 🕉️ DEVOTEE AVATAR PICKER MODAL 🕉️ -->
+  <div id="avatar-picker-modal" style="display:none; position:fixed; inset:0; z-index:100250; background:rgba(7,1,16,0.85); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); align-items:center; justify-content:center; padding:1.2rem;">
+    <div style="width:100%; max-width:380px; background:radial-gradient(circle at 50% 20%, #351252 0%, #170526 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.4rem; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.9), 0 0 25px rgba(248,200,59,0.2) inset; position:relative;">
+      <button onclick="closeAvatarPickerModal()" style="position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); color:#FFF; font-weight:900; cursor:pointer;">✕</button>
+      <div style="font-size:1.6rem; margin-bottom:4px;">✨</div>
+      <h3 style="font-size:1.2rem; font-weight:900; color:#FFFDF8; margin:0 0 4px;">अपना दिव्य इष्ट स्वरूप चुनें</h3>
+      <p style="font-size:0.75rem; color:#FDE68A; margin:0 0 14px;">अपनी प्रोफ़ाइल के लिए पावन देव स्वरूप का चयन करें</p>
+      
+      <div class="avatar-picker-grid">
+        <div class="avatar-option-card" onclick="selectDevoteeAvatar('assets/gallery/bal_ganesha_little.jpg', 'श्री गणेश')">
+          <img src="assets/gallery/bal_ganesha_little.jpg" class="avatar-option-img" alt="श्री गणेश">
+          <span class="avatar-option-label">श्री गणेश</span>
+        </div>
+        <div class="avatar-option-card" onclick="selectDevoteeAvatar('assets/gallery/bal_parvati_little.jpg', 'महादेव शिव')">
+          <img src="assets/gallery/bal_parvati_little.jpg" class="avatar-option-img" alt="महादेव">
+          <span class="avatar-option-label">महादेव</span>
+        </div>
+        <div class="avatar-option-card" onclick="selectDevoteeAvatar('assets/gallery/bal_rama_little.jpg', 'प्रभु श्री राम')">
+          <img src="assets/gallery/bal_rama_little.jpg" class="avatar-option-img" alt="श्री राम">
+          <span class="avatar-option-label">श्री राम</span>
+        </div>
+        <div class="avatar-option-card" onclick="selectDevoteeAvatar('assets/gallery/bal_durga_little.jpg', 'माँ भगवती')">
+          <img src="assets/gallery/bal_durga_little.jpg" class="avatar-option-img" alt="माँ भगवती">
+          <span class="avatar-option-label">माँ भगवती</span>
+        </div>
+        <div class="avatar-option-card" onclick="selectDevoteeAvatar('assets/gallery/bal_murugan_little.jpg', 'श्री हनुमान')">
+          <img src="assets/gallery/bal_murugan_little.jpg" class="avatar-option-img" alt="श्री हनुमान">
+          <span class="avatar-option-label">हनुमान जी</span>
+        </div>
+        <div class="avatar-option-card" onclick="selectDevoteeAvatar('assets/gallery/bal_chandra_little.jpg', 'श्री कृष्ण')">
+          <img src="assets/gallery/bal_chandra_little.jpg" class="avatar-option-img" alt="श्री कृष्ण">
+          <span class="avatar-option-label">श्री कृष्ण</span>
+        </div>
+      </div>
+      
+      <button onclick="closeAvatarPickerModal()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; padding:10px; border-radius:18px; font-weight:900; font-size:0.88rem; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.35);">
+        सम्पन्न (Done)
+      </button>
+    </div>
+  </div>
+
+  <!-- 🪔 SANKALP MODAL 🪔 -->
+  <div id="sankalp-modal" style="display:none; position:fixed; inset:0; z-index:100250; background:rgba(7,1,16,0.85); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); align-items:center; justify-content:center; padding:1.2rem;">
+    <div style="width:100%; max-width:380px; background:radial-gradient(circle at 50% 20%, #3B1259 0%, #150426 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.5rem; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.9), 0 0 25px rgba(248,200,59,0.2) inset; position:relative;">
+      <button onclick="document.getElementById('sankalp-modal').style.display='none'" style="position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); color:#FFF; font-weight:900; cursor:pointer;">✕</button>
+      <div style="font-size:2rem; margin-bottom:6px;">🪔</div>
+      <h3 style="font-size:1.25rem; font-weight:900; color:#FFFDF8; margin:0 0 6px;">दैनिक वैदिक संकल्प</h3>
+      <p style="font-size:0.85rem; color:#FDE68A; line-height:1.5; margin:0 0 16px;">
+        "अहं सनातन धर्मे निष्ठया, नित्यं प्रभु स्मरणं, सत्यं सेवां च आचरामि।"<br>
+        <span style="font-size:0.75rem; color:#CBD5E1;">(आज मैं निष्ठापूर्वक प्रभु स्मरण, सत्य और सेवा का संकल्प लेता हूँ।)</span>
+      </p>
+      <button onclick="recordDailySankalp()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; padding:11px; border-radius:20px; font-weight:900; font-size:0.92rem; cursor:pointer; box-shadow:0 4px 18px rgba(248,200,59,0.4);">
+        🙏 संकल्प स्वीकारें (Accept Pledge)
+      </button>
     </div>
   </div>
 

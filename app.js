@@ -7628,6 +7628,7 @@ function showPage(id){
   }
 
   if(!$(id)) return;
+  if(id === 'page-profile' && typeof window.updateProfileUI === 'function') { window.updateProfileUI(); }
   if(id === 'page-chalisa' && typeof window.renderFullDrikChalisaPage === 'function') {
     window.renderFullDrikChalisaPage('all', '');
   }
@@ -7812,9 +7813,10 @@ function openReader(key, fromPage) {
     }
     readerAudio.src = rMediaUrl;
   } else {
-    // No Media
-    if (window.MediaRouter) window.MediaRouter.destroyYouTubePlayer();
-    if (readerAudioBar) readerAudioBar.style.display = 'none';
+    // Bind to AI Bhakti Singing & Chanting Player
+    if (window.AiBhaktiPlayer) {
+      window.AiBhaktiPlayer.loadContent(item);
+    }
   }
 
   showPage('page-reader');
@@ -22474,7 +22476,7 @@ window.selectDaanAmount = function(amt, btnEl) {
 };
 
 window.triggerUPIDaan = function() {
-  const upi = `upi://pay?pa=7985304144@ptsbi&pn=Vishwanath%20Mishra&am=${window.currentDaanAmount || 21}&cu=INR&tn=GauSeva`;
+  const upi = `upi://pay?pa=mishravishwanath86-2@oksbi&pn=Vishwanath%20Mishra&am=${window.currentDaanAmount || 21}&cu=INR&tn=GauSeva`;
   if (window.AndroidBridge && typeof window.AndroidBridge.openUpiPayment === 'function') {
     window.AndroidBridge.openUpiPayment(upi, null);
   } else {
@@ -22946,6 +22948,7 @@ window.proceedToUpiAppSelection = function() {
   const sumPurpose = document.getElementById('upi-summary-purpose');
   const sumAmount = document.getElementById('upi-summary-amount');
   const qrAmountDisplay = document.getElementById('sankalp-qr-amount-display');
+  const gpayBtnText = document.getElementById('gpay-action-btn-text');
 
   if (sumYajman) sumYajman.textContent = yajman;
   if (sumGotra) sumGotra.textContent = gotra;
@@ -22953,14 +22956,20 @@ window.proceedToUpiAppSelection = function() {
   if (sumPurpose) sumPurpose.textContent = purpose;
   if (sumAmount) sumAmount.textContent = `₹${amount}`;
   if (qrAmountDisplay) qrAmountDisplay.textContent = `₹${amount}`;
+  if (gpayBtnText) gpayBtnText.textContent = `Google Pay से भुगतान करें (₹${amount})`;
+
+  // Ensure other UPI options container is closed by default (Clean & Simple UI)
+  const otherContainer = document.getElementById('other-upi-options-container');
+  const toggleBtn = document.getElementById('toggle-other-upi-btn');
+  if (otherContainer) otherContainer.style.display = 'none';
+  if (toggleBtn) toggleBtn.innerHTML = '<span>✨ अन्य UPI ऐप्स (PhonePe, Paytm) व QR कोड देखें ▼</span>';
 
   // Pre-generate Dynamic Live UPI QR Code
   const note = `${title} - ${yajman} (${gotra})`;
-  const upiLink = `upi://pay?pa=7985304144@ptsbi&pn=Vishwanath%20Mishra&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(upiLink)}`;
+  const upiLink = `upi://pay?pa=mishravishwanath86-2@oksbi&pn=Vishwanath%20Mishra&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
   const qrImg = document.getElementById('sankalp-qr-image');
   if (qrImg) {
-    qrImg.src = 'assets/upi_qr_card.png';
+    qrImg.src = 'assets/gpay_qr_code.png';
   }
 
   // Switch views
@@ -22974,7 +22983,7 @@ window.proceedToUpiAppSelection = function() {
     triggerFlowerShower();
   }
   if (typeof showToast === 'function') {
-    showToast(`🚩 ${yajman} जी का ₹${amount} का संकल्प दर्ज हुआ! अब UPI ऐप चुनें।`);
+    showToast(`🚩 ${yajman} जी का ₹${amount} का संकल्प दर्ज हुआ! Google Pay से भुगतान करें।`);
   }
   if (navigator.vibrate) {
     navigator.vibrate([40, 50, 40]);
@@ -22992,7 +23001,7 @@ window.backToSankalpStep1 = function() {
   if (step1) step1.style.display = 'block';
 };
 
-// 7. Open Specific UPI App (Paytm, PhonePe, Google Pay, BHIM, CRED, Amazon Pay, Generic)
+// 7. Open Specific UPI App (Default: Google Pay, or PhonePe, Paytm, BHIM, CRED, Amazon Pay, Generic)
 window.openSpecificUpiApp = function(appKey) {
   const yajman = document.getElementById('sankalp-yajman-name')?.value?.trim() || 'श्रद्धालु भक्त';
   const gotra = document.getElementById('sankalp-gotra')?.value?.trim() || 'कश्यप / सर्वगोत्र';
@@ -23000,9 +23009,13 @@ window.openSpecificUpiApp = function(appKey) {
   const amount = window.currentSelectedSevaAmount || 21;
   const note = `${title} - ${yajman} (${gotra})`;
 
-  const pa = '7985304144@ptsbi';
+  const pa = 'mishravishwanath86-2@oksbi';
   const pn = 'Vishwanath Mishra';
-  const baseParams = `pa=${encodeURIComponent(pa)}&pn=${encodeURIComponent(pn)}&am=${encodeURIComponent(amount)}&cu=INR&tn=${encodeURIComponent(note)}`;
+  const aid = 'uGICAgIDN_4HJPw';
+  let baseParams = `pa=${encodeURIComponent(pa)}&pn=${encodeURIComponent(pn)}&am=${encodeURIComponent(amount)}&cu=INR&tn=${encodeURIComponent(note)}`;
+  if (appKey === 'gpay') {
+    baseParams += `&aid=${encodeURIComponent(aid)}`;
+  }
   const genericUpi = `upi://pay?${baseParams}`;
 
   const pkgMap = {
@@ -23036,7 +23049,7 @@ window.openSpecificUpiApp = function(appKey) {
     navigator.vibrate(30);
   }
 
-  // 1. DIRECT NATIVE ANDROID BRIDGE (Most reliable!)
+  // 1. DIRECT NATIVE ANDROID BRIDGE (Most reliable in Android WebView/APK!)
   if (window.AndroidBridge && typeof window.AndroidBridge.openUpiPayment === 'function') {
     window.AndroidBridge.openUpiPayment(genericUpi, selectedPkg);
     return;
@@ -23058,10 +23071,10 @@ window.openSpecificUpiApp = function(appKey) {
     window.open(genericUpi, '_blank');
   }
 
-  // Fallback for desktop: show QR code
+  // Fallback for desktop: reveal other options and QR code
   setTimeout(() => {
     if (!isAndroid && !isIOS) {
-      window.toggleSankalpQrCode(true);
+      window.toggleOtherUpiOptions(true);
       if (typeof showToast === 'function') {
         showToast('📱 डेस्कटॉप पर: कृपया नीचे दिया गया QR कोड मोबाइल से स्कैन करें!');
       }
@@ -23069,33 +23082,39 @@ window.openSpecificUpiApp = function(appKey) {
   }, 1000);
 };
 
-window.toggleSankalpQrCode = function(forceOpen) {
-  const qrBox = document.getElementById('sankalp-qr-container');
-  const arrow = document.getElementById('sankalp-qr-arrow');
-  const label = document.getElementById('sankalp-qr-btn-label');
-  if (!qrBox) return;
+// 8. Toggle Other UPI Apps & QR Code (Accordion / Expand-Collapse)
+window.toggleOtherUpiOptions = function(forceOpen) {
+  const container = document.getElementById('other-upi-options-container');
+  const btn = document.getElementById('toggle-other-upi-btn');
+  if (!container) return;
 
-  const isCurrentlyOpen = qrBox.style.display !== 'none';
-  const shouldOpen = forceOpen !== undefined ? forceOpen : !isCurrentlyOpen;
+  const isHidden = container.style.display === 'none';
+  const shouldOpen = forceOpen !== undefined ? forceOpen : isHidden;
 
   if (shouldOpen) {
-    qrBox.style.display = 'block';
-    if (arrow) arrow.textContent = '▲';
-    if (label) label.textContent = 'QR कोड छिपाएं (Hide QR)';
+    container.style.display = 'block';
+    if (btn) btn.innerHTML = '<span>▲ अन्य विकल्प छिपाएं</span>';
+    setTimeout(() => {
+      container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 60);
   } else {
-    qrBox.style.display = 'none';
-    if (arrow) arrow.textContent = '▼';
-    if (label) label.textContent = 'QR कोड स्कैन करके भुगतान करें (Scan & Pay)';
+    container.style.display = 'none';
+    if (btn) btn.innerHTML = '<span>✨ अन्य UPI ऐप्स (PhonePe, Paytm) व QR कोड देखें ▼</span>';
   }
+};
+
+window.toggleSankalpQrCode = function(forceOpen) {
+  // Alias for backward compatibility
+  window.toggleOtherUpiOptions(forceOpen);
 };
 
 // 9. Copy Official UPI ID
 window.copySankalpUpiId = function() {
-  const upiId = '7985304144@ptsbi';
+  const upiId = 'mishravishwanath86-2@oksbi';
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(upiId).then(() => {
       if (typeof showToast === 'function') {
-        showToast('✓ आधिकारिक UPI ID (7985304144@ptsbi - Mr Vishwanath Mishra) कॉपी हो गई!');
+        showToast('✓ आधिकारिक UPI ID (mishravishwanath86-2@oksbi - Vishwanath Mishra) कॉपी हो गई!');
       }
     }).catch(() => {
       _fallbackCopyUpi(upiId);
@@ -30093,10 +30112,10 @@ window.renderFullDrikChalisaPage = function(filterCategory, searchQuery) {
 // ══════════════════════════════════════════════════════════════════════════════
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 5,
-  currentVersionName: '1.4.0',
+  currentVersionCode: 6,
+  currentVersionName: '1.5.0',
   manifestUrl: 'https://raw.githubusercontent.com/mishravishwanath86-bot/Bhakti-me-leen/main/version.json',
-  downloadUrl: 'https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.4.0/bhakti-app.apk',
+  downloadUrl: 'https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.5.0/bhakti-app.apk',
   latestReleaseInfo: null
 };
 
@@ -30175,6 +30194,9 @@ window.openUpdateModal = function(data) {
 
   modal.style.display = 'flex';
   if (navigator.vibrate) navigator.vibrate([40, 30, 80]);
+  if (typeof showToast === 'function') {
+    showToast('🚀 नया पावन अपडेट v' + (data.versionName || '1.5.0') + ' उपलब्ध है!');
+  }
 };
 
 window.closeUpdateModal = function() {
@@ -30195,10 +30217,10 @@ window.triggerApkDownload = function() {
   }
 };
 
-// Automatic silent background check 4 seconds after app launch
+// Automatic silent background check 2.5 seconds after app launch
 setTimeout(() => {
   window.checkForAppUpdates(false);
-}, 4000);
+}, 2500);
 
 
 
@@ -30442,4 +30464,191 @@ window.continueAsGuest = function() {
     authType: 'guest',
     isLoggedIn: true
   });
+};
+
+
+
+// ══════════════════════════════════════════════════════════════════════════════
+// 🚩 BULLETPROOF DEVOTIONAL ONBOARDING & ROYAL PROFILE SYSTEM (V1.5)
+// ══════════════════════════════════════════════════════════════════════════════
+
+window.onboardingReturnPage = null;
+
+window.replayOnboarding = function(source) {
+  window.onboardingReturnPage = source || 'page-profile';
+  window.currentOnboardingSlide = 0;
+  const ob = document.getElementById('onboarding-overlay');
+  if (ob) {
+    ob.classList.remove('hidden');
+    ob.style.display = 'flex';
+    ob.style.visibility = 'visible';
+    ob.style.opacity = '1';
+    ob.style.pointerEvents = 'auto';
+    ob.style.zIndex = '999999';
+    if (typeof window.updateOnboardingSlide === 'function') {
+      window.updateOnboardingSlide();
+    }
+    if (typeof showToast === 'function') {
+      showToast('🚩 ऐप स्वागत यात्रा में आपका स्वागत है!');
+    }
+  }
+};
+
+window.closeOnboardingTour = function() {
+  const ob = document.getElementById('onboarding-overlay');
+  if (ob) {
+    ob.style.opacity = '0';
+    ob.style.transition = 'opacity 0.3s ease';
+    setTimeout(() => {
+      ob.style.display = 'none';
+      ob.classList.add('hidden');
+      ob.style.pointerEvents = 'none';
+      ob.style.opacity = '1';
+    }, 300);
+  }
+  
+  if (window.onboardingReturnPage && typeof showPage === 'function') {
+    const returnTarget = window.onboardingReturnPage;
+    window.onboardingReturnPage = null;
+    showPage(returnTarget);
+    if (typeof showToast === 'function') {
+      showToast('✨ स्वागत यात्रा पूर्ण! हर हर महादेव 🕉️');
+    }
+  } else if (!localStorage.getItem('bhakti_user')) {
+    const authModal = document.getElementById('auth-modal');
+    if (authModal) {
+      authModal.classList.remove('hidden');
+      authModal.style.display = 'flex';
+    }
+  } else if (typeof showPage === 'function') {
+    showPage('page-home');
+  }
+};
+
+window.finishOnboarding = function() {
+  try { localStorage.setItem('bhakti_onboarded', 'true'); } catch(e) {}
+  window.closeOnboardingTour();
+};
+
+window.nextOnboardingSlide = function() {
+  if (window.currentOnboardingSlide < (window.totalOnboardingSlides || 5) - 1) {
+    window.currentOnboardingSlide++;
+    if (typeof window.updateOnboardingSlide === 'function') {
+      window.updateOnboardingSlide();
+    }
+  } else {
+    window.finishOnboarding();
+  }
+};
+
+window.openAvatarPickerModal = function() {
+  const m = document.getElementById('avatar-picker-modal');
+  if (m) m.style.display = 'flex';
+};
+
+window.closeAvatarPickerModal = function() {
+  const m = document.getElementById('avatar-picker-modal');
+  if (m) m.style.display = 'none';
+};
+
+window.selectDevoteeAvatar = function(src, name) {
+  try {
+    localStorage.setItem('bhakti_user_avatar', src);
+    localStorage.setItem('bhakti_ishta_name', name);
+  } catch(e) {}
+  const img = document.getElementById('prof-user-avatar');
+  if (img) img.src = src;
+  window.closeAvatarPickerModal();
+  if (typeof showToast === 'function') showToast(`✨ दिव्य स्वरूप: ${name} चयनित!`);
+  if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
+};
+
+window.promptDevoteeNameEdit = function() {
+  const current = localStorage.getItem('bhakti_user_name') || 'सनातन भक्त जन';
+  const newName = prompt('कृपया अपना शुभ नाम दर्ज करें:', current);
+  if (newName && newName.trim()) {
+    try {
+      localStorage.setItem('bhakti_user_name', newName.trim());
+      const raw = localStorage.getItem('bhakti_user');
+      let u = raw ? JSON.parse(raw) : {};
+      u.name = newName.trim();
+      localStorage.setItem('bhakti_user', JSON.stringify(u));
+    } catch(e) {}
+    window.updateProfileUI();
+    if (typeof showToast === 'function') showToast(`✓ नाम अपडेट हुआ: ${newName.trim()}`);
+  }
+};
+
+window.openSankalpModal = function() {
+  const m = document.getElementById('sankalp-modal');
+  if (m) m.style.display = 'flex';
+};
+
+window.recordDailySankalp = function() {
+  const m = document.getElementById('sankalp-modal');
+  if (m) m.style.display = 'none';
+  try {
+    localStorage.setItem('bhakti_sankalp_today', new Date().toDateString());
+    let streak = parseInt(localStorage.getItem('bhakti_streak') || '7', 10);
+    streak++;
+    localStorage.setItem('bhakti_streak', streak.toString());
+  } catch(e) {}
+  window.updateProfileUI();
+  if (typeof showToast === 'function') showToast('🪔 पावन संकल्प स्वीकार हुआ! हर हर महादेव 🕉️');
+  if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
+  if (typeof playSoundEffect === 'function') playSoundEffect('victory');
+};
+
+window.openRateAppModal = function() {
+  const rm = document.getElementById('rate-modal');
+  if (rm) {
+    rm.classList.remove('hidden');
+    rm.style.display = 'flex';
+  } else if (typeof showToast === 'function') {
+    showToast('⭐ आपके 5-स्टार आशीर्वाद के लिए धन्यवाद! 🕉️');
+  }
+};
+
+window.updateProfileUI = function() {
+  try {
+    const raw = localStorage.getItem('bhakti_user');
+    let user = { name: 'सनातन भक्त जन' };
+    if (raw) {
+      try { user = JSON.parse(raw); } catch(e) {}
+    }
+    const savedName = localStorage.getItem('bhakti_user_name') || user.name || 'सनातन भक्त जन';
+    const savedAvatar = localStorage.getItem('bhakti_user_avatar') || 'assets/gallery/bal_ganesha_little.jpg';
+    
+    const nameEl = document.getElementById('prof-user-name');
+    if (nameEl) {
+      nameEl.innerHTML = `<span>${savedName}</span> <span style="font-size:0.75rem; opacity:0.7;">✏️</span>`;
+    }
+    
+    const avatarEl = document.getElementById('prof-user-avatar');
+    if (avatarEl) {
+      avatarEl.src = savedAvatar;
+    }
+    
+    const jaapEl = document.getElementById('prof-stat-jaap');
+    if (jaapEl) {
+      jaapEl.textContent = localStorage.getItem('bhakti_jaap_count') || '108';
+    }
+    
+    const streakEl = document.getElementById('prof-stat-streak');
+    if (streakEl) {
+      streakEl.textContent = (localStorage.getItem('bhakti_streak') || '7') + ' दिन';
+    }
+    
+    const favsEl = document.getElementById('prof-stat-favs');
+    if (favsEl) {
+      favsEl.textContent = localStorage.getItem('bhakti_favs') || '12';
+    }
+    
+    const aartiEl = document.getElementById('prof-stat-aarti');
+    if (aartiEl) {
+      aartiEl.textContent = localStorage.getItem('bhakti_aarti_count') || '21';
+    }
+  } catch(e) {
+    console.error('Error in updateProfileUI:', e);
+  }
 };

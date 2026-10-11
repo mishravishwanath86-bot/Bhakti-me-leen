@@ -9,6 +9,7 @@ from typing import Dict, Any, Tuple
 from db.database import BhaktiDB
 from core.validator import validate_content_data
 from bulk_import.importer import run_bulk_import
+from core.ai_audio_engine import generate_ai_bhakti_audio, AI_AUDIO_DIR
 
 db = BhaktiDB()
 
@@ -193,6 +194,50 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
 
             res = db.bulk_insert(items, on_duplicate=on_dup)
             return (200, headers_ct, json.dumps(res, ensure_ascii=False).encode('utf-8'))
+
+        # 10. POST /api/ai-audio/generate (On-Demand AI Bhakti Singing & Chanting Generation)
+        if method == "POST" and path == "/api/ai-audio/generate":
+            if not isinstance(body_data, dict):
+                return (400, headers_ct, json.dumps({'success': False, 'error': 'Invalid JSON body'}).encode('utf-8'))
+            
+            content_id = body_data.get('content_id') or body_data.get('id') or 'custom'
+            text = body_data.get('text') or body_data.get('content') or ''
+            title = body_data.get('title') or ''
+            content_type = body_data.get('content_type') or body_data.get('type') or 'aarti'
+            voice = body_data.get('voice') or 'male'
+            speed = float(body_data.get('speed', 1.0))
+
+            if not text:
+                return (400, headers_ct, json.dumps({'success': False, 'error': 'टेक्स्ट रिक्त है (Text required)'}).encode('utf-8'))
+
+            result = generate_ai_bhakti_audio(
+                content_id=str(content_id),
+                text=text,
+                title=title,
+                content_type=content_type,
+                voice=voice,
+                custom_speed=speed
+            )
+            status_code = 200 if result.get('success') else 500
+            return (status_code, headers_ct, json.dumps(result, ensure_ascii=False).encode('utf-8'))
+
+        # 11. GET /api/ai-audio/status (Check if AI audio exists for content)
+        if method == "GET" and path == "/api/ai-audio/status":
+            content_id = query_params.get('content_id') or query_params.get('id')
+            voice = query_params.get('voice', 'male')
+            if not content_id:
+                return (400, headers_ct, json.dumps({'error': 'Missing content_id'}).encode('utf-8'))
+            
+            # Check if any file matches bhakti_{content_id}_{voice}_*.mp3
+            prefix = f"bhakti_{content_id}_{voice.lower()}_"
+            matched = [f for f in os.listdir(AI_AUDIO_DIR) if f.startswith(prefix) and f.endswith(".mp3")]
+            if matched:
+                return (200, headers_ct, json.dumps({
+                    'exists': True,
+                    'audio_url': f"/assets/ai_audio/{matched[0]}",
+                    'file_name': matched[0]
+                }).encode('utf-8'))
+            return (200, headers_ct, json.dumps({'exists': False}).encode('utf-8'))
 
         return (404, headers_ct, json.dumps({'error': 'Not Found'}).encode('utf-8'))
 

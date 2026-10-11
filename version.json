@@ -1,15 +1,15 @@
 {
-  "versionCode": 5,
-  "versionName": "1.4.0",
-  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.4.0/bhakti-app.apk",
-  "apkSize": "295.5 MB",
-  "releaseDate": "2026-10-10",
+  "versionCode": 6,
+  "versionName": "1.5.0",
+  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.5.0/bhakti-app.apk",
+  "apkSize": "296 MB",
+  "releaseDate": "2026-10-11",
   "forceUpdate": false,
-  "title": "पावन अपडेट v1.4.0 उपलब्ध है! 🚀",
+  "title": "पावन अपडेट v1.5.0 उपलब्ध है! 🚀",
   "releaseNotes": [
-    "कॉपीराइट सुरक्षा: सभी आरती व मंत्रों से तृतीय-पक्ष (Drik) संदर्भ हटाकर 100% सनातन प्रामाणिक किया गया",
-    "दिव्य गैलरी मोबाइल UI/UX: फोन के अनुरूप 2-कॉलम ग्रिड व स्मार्ट खोज (Shiva, Krishna, Ram आदि)",
-    "दैनिक डाउनलोड कोटा: प्रतिदिन 1 दिव्य छवि डाउनलोड व कोटा पूर्ण होने पर चेतावनी सूचना",
-    "इष्टदेव १० विकल्प व २४×७ अखंड लाइव रेडियो पूर्णतः सक्रिय"
+    "नया सनातन गेम्स हब: भव्य दिव्य पहेली (Jigsaw Puzzle) और 5 भक्तिमय स्तर",
+    "सरल व सुरक्षित दान/सहयोग: Google Pay डिफ़ॉल्ट व अन्य समस्त UPI ऐप्स विकल्प",
+    "समस्त दिव्य आरती, भजन व श्रीमद्भगवद्गीता के नवीनतम सुधार",
+    "प्रोफाइल स्वागत, दिव्य वॉलपेपर और ऑडियो परफॉर्मेंस ऑप्टिमाइज़ेशन"
   ]
 }

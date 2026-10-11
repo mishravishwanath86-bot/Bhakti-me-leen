@@ -392,10 +392,8 @@ window.filterGitaVerses = function(query) {
   });
 };
 
-// Play audio recitation for a specific verse
+// Play audio recitation for a specific verse (with on-demand AI recitation fallback)
 window.playVerseAudio = function(audioUrl, btnEl) {
-  if (!audioUrl) return;
-
   if (window._gitaVerseAudioInstance && !window._gitaVerseAudioInstance.paused && window._currentPlayingVerseBtn === btnEl) {
     window._gitaVerseAudioInstance.pause();
     btnEl.innerHTML = '<span>▶</span> सुनें';
@@ -410,20 +408,72 @@ window.playVerseAudio = function(audioUrl, btnEl) {
   }
 
   btnEl.innerHTML = '<span>⏳</span>...';
-  const audio = new Audio(audioUrl);
-  window._gitaVerseAudioInstance = audio;
-  window._currentPlayingVerseBtn = btnEl;
 
-  audio.play().then(() => {
-    btnEl.innerHTML = '<span>⏸</span> विराम';
-  }).catch(() => {
+  // Helper to start playback
+  const startPlay = (url) => {
+    const audio = new Audio(url);
+    window._gitaVerseAudioInstance = audio;
+    window._currentPlayingVerseBtn = btnEl;
+
+    audio.play().then(() => {
+      btnEl.innerHTML = '<span>⏸</span> विराम';
+      if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
+    }).catch((err) => {
+      console.warn("Verse audio play failed:", err);
+      btnEl.innerHTML = '<span>▶</span> सुनें';
+    });
+
+    audio.onended = function() {
+      btnEl.innerHTML = '<span>▶</span> सुनें';
+      window._currentPlayingVerseBtn = null;
+    };
+  };
+
+  // If audioUrl is provided and valid, try it first
+  if (audioUrl && audioUrl !== 'undefined' && audioUrl !== 'null' && audioUrl.length > 5) {
+    startPlay(audioUrl);
+    return;
+  }
+
+  // Otherwise -> On-Demand AI Bhakti Recitation Generation
+  const card = btnEl ? btnEl.closest('.gita-verse-card') : null;
+  let shlokaText = '';
+  let verseTitle = 'श्रीमद्भगवद्गीता श्लोक';
+  if (card) {
+    const sanskritEl = card.querySelector('div[style*="Tiro Devanagari Hindi"]');
+    if (sanskritEl) shlokaText = sanskritEl.innerText.trim();
+    const titleEl = card.querySelector('span[style*="linear-gradient"]');
+    if (titleEl) verseTitle = titleEl.innerText.trim();
+  }
+
+  if (!shlokaText) {
+    btnEl.innerHTML = '<span>▶</span> सुनें';
+    return;
+  }
+
+  fetch('/api/ai-audio/generate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      content_id: 'gita_verse_' + (card ? card.id : 'verse'),
+      text: shlokaText,
+      title: verseTitle,
+      content_type: 'shloka',
+      voice: 'male'
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success && data.audio_url) {
+      startPlay(data.audio_url);
+    } else {
+      btnEl.innerHTML = '<span>▶</span> सुनें';
+    }
+  })
+  .catch(err => {
+    console.error("AI Verse recitation error:", err);
     btnEl.innerHTML = '<span>▶</span> सुनें';
   });
-
-  audio.onended = function() {
-    btnEl.innerHTML = '<span>▶</span> सुनें';
-    window._currentPlayingVerseBtn = null;
-  };
 };
 
 // ══════════════════════════════════════════════════════════════════════════════

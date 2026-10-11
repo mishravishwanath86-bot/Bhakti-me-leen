@@ -21380,3 +21380,196 @@ body.light-mode .aarti-preview-name,
   object-fit: contain !important;
   display: block !important;
 }
+
+
+
+/* ══════════════════════════════════════════════════════════════════
+   🚩 ROYAL VEDIC PROFILE & VIP APP SWAGAT YATRA (TOUR) UI/UX
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Close button on Onboarding Tour Overlay */
+.onboarding-close-btn {
+  position: absolute !important;
+  top: 18px !important;
+  right: 18px !important;
+  z-index: 100005 !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: rgba(18, 6, 36, 0.88) !important;
+  border: 1.8px solid #F8C83B !important;
+  color: #FFFDF8 !important;
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7) !important;
+  transition: all 0.2s ease !important;
+}
+
+.onboarding-close-btn:hover {
+  background: rgba(248, 200, 59, 0.35) !important;
+  transform: scale(1.08) !important;
+}
+
+.onboarding-close-btn:active {
+  transform: scale(0.92) !important;
+}
+
+/* Featured VIP Swagat Yatra Card in Profile */
+.profile-featured-tour-card {
+  background: linear-gradient(135deg, rgba(82, 28, 126, 0.95) 0%, rgba(32, 10, 58, 0.98) 100%) !important;
+  border: 2px solid #F8C83B !important;
+  border-radius: 24px !important;
+  padding: 18px !important;
+  margin-bottom: 18px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(248, 200, 59, 0.2) inset !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease !important;
+}
+
+.profile-featured-tour-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  right: -20% !important;
+  width: 220px !important;
+  height: 220px !important;
+  background: radial-gradient(circle, rgba(248, 200, 59, 0.25) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+.profile-featured-tour-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: #FEF3C7 !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.6), 0 0 30px rgba(248, 200, 59, 0.3) inset !important;
+}
+
+.profile-featured-tour-card:active {
+  transform: scale(0.99) !important;
+}
+
+.tour-card-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  background: linear-gradient(135deg, #F8C83B 0%, #D97706 100%) !important;
+  color: #1A0B2E !important;
+  font-size: 0.74rem !important;
+  font-weight: 900 !important;
+  padding: 3px 11px !important;
+  border-radius: 12px !important;
+  letter-spacing: 0.4px !important;
+  box-shadow: 0 2px 10px rgba(248, 200, 59, 0.4) !important;
+  margin-bottom: 10px !important;
+}
+
+.tour-card-body {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+.tour-card-icon-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 16px !important;
+  background: radial-gradient(circle, rgba(248, 200, 59, 0.3) 0%, rgba(217, 119, 6, 0.15) 100%) !important;
+  border: 1.5px solid #F8C83B !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.65rem !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 0 16px rgba(248, 200, 59, 0.35) !important;
+}
+
+.tour-card-text {
+  flex: 1 !important;
+}
+
+.tour-card-title {
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #FFFDF8 !important;
+  margin-bottom: 3px !important;
+  letter-spacing: 0.2px !important;
+}
+
+.tour-card-desc {
+  font-size: 0.78rem !important;
+  color: #FDE68A !important;
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+}
+
+.tour-card-cta-btn {
+  background: linear-gradient(135deg, #F8C83B 0%, #D97706 100%) !important;
+  border: 1.2px solid #FEF3C7 !important;
+  color: #1A0B2E !important;
+  font-weight: 900 !important;
+  font-size: 0.82rem !important;
+  padding: 7px 16px !important;
+  border-radius: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(248, 200, 59, 0.4) !important;
+  margin-top: 10px !important;
+  transition: transform 0.15s ease !important;
+}
+
+.tour-card-cta-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* Avatar Picker Modal */
+.avatar-picker-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 12px !important;
+  margin: 16px 0 !important;
+}
+
+.avatar-option-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1.5px solid rgba(248, 200, 59, 0.25) !important;
+  border-radius: 18px !important;
+  padding: 10px 6px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.avatar-option-card:hover,
+.avatar-option-card.active {
+  border-color: #F8C83B !important;
+  background: rgba(248, 200, 59, 0.18) !important;
+  box-shadow: 0 0 15px rgba(248, 200, 59, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.avatar-option-img {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1.5px solid #F8C83B !important;
+}
+
+.avatar-option-label {
+  font-size: 0.72rem !important;
+  color: #FFFDF8 !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+}

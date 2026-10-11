@@ -817,93 +817,11 @@
   document.addEventListener('DOMContentLoaded', loadCoins);
   setTimeout(loadCoins, 100);
 
-})();
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   🔒 EPIC GAMES LOCK / UNLOCK ENGINE LOGIC
-   ══════════════════════════════════════════════════════════════════════════════ */
-window.IS_EPIC_GAMES_LOCKED = true;
-
-window.showEpicGameLockedNotice = function(e) {
-  if (e && e.stopPropagation) e.stopPropagation();
-  var modal = document.getElementById('epic-locked-modal');
-  if (modal) {
-    modal.style.display = 'flex';
-  } else {
-    showEpicLockedToast('🔒 एपिक गेम्स अभी लॉक है! शीघ्र आ रहा है।');
-  }
-};
-
-window.closeEpicLockedModal = function() {
-  var modal = document.getElementById('epic-locked-modal');
-  if (modal) modal.style.display = 'none';
-};
-
-window.showEpicLockedToast = function(msg) {
-  var toast = document.getElementById('epic-locked-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'epic-locked-toast';
-    toast.className = 'epic-locked-toast';
-    document.body.appendChild(toast);
-  }
-  toast.innerHTML = '<span>🔒</span> <span>' + (msg || 'यह खेल अभी लॉक है! शीघ्र आ रहा है।') + '</span>';
-  toast.classList.add('show');
-  setTimeout(function() {
-    toast.classList.remove('show');
-  }, 2800);
-};
-
-// Hook open methods to enforce lock
-var _origOpenSwipe = window.openSwipeGame;
-window.openSwipeGame = function(theme) {
-  if (window.IS_EPIC_GAMES_LOCKED) {
-    window.showEpicGameLockedNotice();
-    return;
-  }
-  if (_origOpenSwipe) _origOpenSwipe(theme);
-};
-
-var _origOpenMatch = window.openMatchGame;
-window.openMatchGame = function() {
-  if (window.IS_EPIC_GAMES_LOCKED) {
-    window.showEpicGameLockedNotice();
-    return;
-  }
-  if (_origOpenMatch) _origOpenMatch();
-};
-
-var _origOpenJigsaw = window.openJigsawGame;
-window.openJigsawGame = function() {
-  if (window.IS_EPIC_GAMES_LOCKED) {
-    window.showEpicGameLockedNotice();
-    return;
-  }
-  if (_origOpenJigsaw) _origOpenJigsaw();
-};
-
-var _origOpenPada = window.openPadabandhamGame;
-window.openPadabandhamGame = function() {
-  if (window.IS_EPIC_GAMES_LOCKED) {
-    window.showEpicGameLockedNotice();
-    return;
-  }
-  if (_origOpenPada) _origOpenPada();
-};
-
-window.unlockEpicGames = function() {
+  // ── UNLOCKED PRODUCTION STATE (No Locks!) ──
   window.IS_EPIC_GAMES_LOCKED = false;
-  document.querySelectorAll('.epic-game-menu-card').forEach(function(card) {
-    card.classList.remove('is-locked');
-  });
-  document.querySelectorAll('.epic-card-play-btn').forEach(function(btn) {
-    btn.classList.remove('btn-locked');
-    btn.innerHTML = '🎮 Play';
-  });
-  var bannerBtn = document.querySelector('.home-epic-games-banner button');
-  if (bannerBtn) {
-    bannerBtn.innerHTML = 'खेलें ❯';
-    bannerBtn.style.background = 'linear-gradient(135deg, #F8C83B, #D97706)';
-  }
-  alert('🔓 Epic Games Unlocked!');
-};
+  window.showEpicGameLockedNotice = function() {};
+  window.closeEpicLockedModal = function() {};
+  window.showEpicLockedToast = function() {};
+  window.unlockEpicGames = function() {};
+
+})();

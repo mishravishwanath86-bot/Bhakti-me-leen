@@ -39,6 +39,8 @@ GOOGLE_OAUTH_REDIRECT_URI = os.environ.get(
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from api.routes import handle_api_request
 
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 class RangeHTTPRequestHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         # Clean logging
@@ -68,7 +70,7 @@ class RangeHTTPRequestHandler(BaseHTTPRequestHandler):
         clean_path = path.lstrip('/')
         if not clean_path or clean_path == '':
             clean_path = 'index.html'
-        local_path = os.path.join(os.getcwd(), clean_path.replace('/', os.sep))
+        local_path = os.path.join(APP_ROOT, clean_path.replace('/', os.sep))
         if os.path.isdir(local_path):
             local_path = os.path.join(local_path, 'index.html')
         if not os.path.exists(local_path):
@@ -176,7 +178,7 @@ class RangeHTTPRequestHandler(BaseHTTPRequestHandler):
         if not clean_path or clean_path == '':
             clean_path = 'index.html'
 
-        local_path = os.path.join(os.getcwd(), clean_path.replace('/', os.sep))
+        local_path = os.path.join(APP_ROOT, clean_path.replace('/', os.sep))
         if os.path.isdir(local_path):
             local_path = os.path.join(local_path, 'index.html')
 
