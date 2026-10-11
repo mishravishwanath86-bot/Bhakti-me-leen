@@ -2335,7 +2335,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <img src="assets/deity_ganesh.jpg" alt="JigSaw Puzzle" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
           <div class="epic-card-title">दिव्य पहेली (JigSaw)</div>
-          <div class="epic-card-subtitle">१८ पावन स्तर • समस्त देव स्वरूप जोड़ें</div>
+          <div class="epic-card-subtitle">५० पावन स्तर • बॉस स्तर • दिव्य जिग्सॉ पहेली</div>
           <button class="epic-card-play-btn btn-cyan" onclick="event.stopPropagation(); openJigsawGame();">🎮 खेलें (Play)</button>
         </div>
 
@@ -2480,122 +2480,84 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
     <!-- ══════════ 🎴 1. BHAKTI JODI MILAO (MATCH GAME WITH LEVELS) ══════════ -->
     <div id="match-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.94); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
-      <div class="bhakti-match-container" style="background:linear-gradient(135deg, #FF7E5F, #FEB47B); border:3px solid #FFD700; border-radius:24px; width:100%; max-width:390px; padding:18px 12px; position:relative; box-shadow:0 15px 45px rgba(0,0,0,0.75), 0 0 25px rgba(255,215,0,0.3) inset; display:flex; flex-direction:column; align-items:center; text-align:center;">
+      <div class="bhakti-match-wrapper" style="position:relative; width:100%; max-width:390px; background:linear-gradient(135deg, #ff7e5f, #feb47b); border-radius:24px; padding:20px 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 15px 45px rgba(0,0,0,0.75);">
         
         <!-- Close Button -->
-        <button onclick="closeMatchGame()" style="position:absolute; top:10px; right:12px; background:rgba(0,0,0,0.25); border:1.5px solid rgba(255,255,255,0.5); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FFF; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10;">✕</button>
+        <button onclick="closeMatchGame()" style="position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.25); border:1.5px solid rgba(255,255,255,0.6); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FFF; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10;">✕</button>
         
-        <!-- Header Title -->
-        <h2 style="color:#FFF; font-size:1.35rem; font-weight:900; margin-bottom:6px; text-shadow:1px 2px 4px rgba(0,0,0,0.35); display:flex; align-items:center; gap:6px;">
-          <span>🎴</span> Bhakti Jodi Milao
-        </h2>
-
-        <!-- Level Selector Chips -->
-        <div style="display:flex; gap:6px; margin-bottom:10px;">
-          <button id="match-lvl-btn-0" onclick="startMatchLevel(0)" style="background:rgba(139,0,0,0.9); color:#FFD700; border:1.5px solid #FFD700; padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer;">१. Sugam</button>
-          <button id="match-lvl-btn-1" onclick="startMatchLevel(1)" style="background:rgba(255,255,255,0.25); color:#FFF; border:1px solid rgba(255,255,255,0.4); padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer;">२. Madhyam</button>
-          <button id="match-lvl-btn-2" onclick="startMatchLevel(2)" style="background:rgba(255,255,255,0.25); color:#FFF; border:1px solid rgba(255,255,255,0.4); padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer;">३. Kathin</button>
+        <h2>Bhakti Jodi Milao</h2>
+        <div class="hud">
+            <div>Level: <span id="level-display">1</span></div>
+            <div>Moves: <span id="moves">0</span></div>
+            <div>Matches: <span id="matches">0</span>/<span id="total-matches">4</span></div>
         </div>
 
-        <!-- HUD -->
-        <div class="hud" style="display:flex; justify-content:space-around; width:100%; max-width:320px; color:#FFF; font-weight:bold; margin-bottom:12px; font-size:14px; background:rgba(0,0,0,0.25); padding:6px 10px; border-radius:14px; text-shadow:1px 1px 2px rgba(0,0,0,0.3);">
-          <div>Level: <span id="match-level-display" style="color:#FFD700;">1 (Sugam)</span></div>
-          <div>Moves: <span id="match-moves" style="color:#FFD700;">0</span></div>
-          <div>Matches: <span id="match-matches" style="color:#FFD700;">0</span>/<span id="match-total-matches">4</span></div>
-        </div>
+        <div class="grid" id="grid"></div>
 
-        <!-- Cards Grid -->
-        <div class="bhakti-match-grid" id="match-grid" style="display:grid; grid-template-columns:repeat(4, 70px); gap:10px; perspective:1000px; justify-content:center; margin:0 auto 12px; min-height:170px;">
-          <!-- Injected dynamically -->
-        </div>
-
-        <!-- Bottom Action Button -->
-        <div style="display:flex; gap:10px; width:100%; max-width:320px;">
-          <button onclick="startMatchLevel(window.currentMatchLevelIndex || 0)" style="flex:1; background:linear-gradient(135deg, #8B0000, #5A0000); color:#FFD700; border:1.8px solid #FFD700; padding:8px 0; border-radius:14px; font-weight:900; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.25);">
-            🔄 Fari Thi Sharu Karo
-          </button>
-        </div>
-
-        <!-- Celebration Modal -->
-        <div id="match-result-modal" style="display:none; position:absolute; inset:0; background:rgba(0,0,0,0.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-radius:24px; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; padding:20px; z-index:20;">
-          <div style="font-size:3rem; margin-bottom:6px;">🎉</div>
-          <h2 id="match-modal-title" style="color:#FFD700; margin-bottom:8px; font-size:1.5rem; font-weight:900; text-shadow:0 0 10px rgba(255,215,0,0.5);">Abhinandan! 🎉</h2>
-          <p id="match-modal-desc" style="font-size:0.9rem; color:#FFF; line-height:1.5; margin-bottom:16px; max-width:280px;">Tame aa level safaltapurvak puru karyu!</p>
-          <button id="match-modal-btn" onclick="nextMatchAction()" style="padding:10px 28px; background:linear-gradient(135deg, #FF7700, #E65100); border:2px solid #FFD700; color:#FFF; font-size:16px; font-weight:bold; border-radius:24px; cursor:pointer; box-shadow:0 6px 20px rgba(255,119,0,0.5);">Aagal Vadho ➔</button>
+        <div id="modal">
+            <h2 id="modal-title">Abhinandan! 🎉</h2>
+            <p id="modal-desc">Tame aa level safaltapurvak puru karyu!</p>
+            <button id="modal-btn" onclick="nextAction()">Aagal Vadho</button>
         </div>
 
       </div>
     </div>
 
-    <!-- ══════════ 🧩 2. JIGSAW PUZZLE MODAL (दिव्य स्वरूप पहेली - १० पावन स्तर) ══════════ -->
-    <div id="jigsaw-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
-      <div style="background:radial-gradient(circle at 50% 20%, #2A0E44 0%, #130522 100%); border:2px solid #F59E0B; border-radius:24px; width:100%; max-width:420px; padding:18px 16px; position:relative; box-shadow:0 15px 50px rgba(0,0,0,0.85), 0 0 25px rgba(245,158,11,0.2) inset; color:#FFFDF8;">
-        
+    <!-- ══════════ 🧩 2. JIGSAW PUZZLE MODAL (Bhakti Jigsaw Puzzle - 50 Levels) ══════════ -->
+    <div id="jigsaw-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.94); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
+      <div class="jigsaw-modal-card" style="background:radial-gradient(circle at 50% 15%, #24083E 0%, #10031E 100%); border:2px solid #F59E0B; border-radius:24px; width:100%; max-width:430px; padding:16px 14px 20px; position:relative; box-shadow:0 15px 50px rgba(0,0,0,0.85), 0 0 25px rgba(245,158,11,0.2) inset; color:#FFFDF8; display:flex; flex-direction:column; align-items:center; box-sizing:border-box;">
+
         <!-- Header & Close -->
-        <button onclick="closeJigsawGame()" style="position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FDE68A; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
-        <div style="font-size:1.2rem; font-weight:900; color:#FFFDF8; text-align:center; margin-bottom:2px; display:flex; align-items:center; justify-content:center; gap:6px;">
-          <span>🧩</span> दिव्य स्वरूप पहेली (JigSaw)
-        </div>
-        <div id="jigsaw-level-subtitle" style="font-size:0.78rem; color:#FDE68A; text-align:center; margin-bottom:10px;">
-          खण्डों को मिलाकर भगवान के पावन दर्शन करें
+        <button onclick="closeJigsawGame()" style="position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:50%; width:34px; height:34px; font-size:1.15rem; font-weight:900; color:#FDE68A; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:30;">✕</button>
+
+        <!-- Top Level Header Bar -->
+        <div class="header" style="width:100%; max-width:390px; display:flex; justify-content:space-between; align-items:center; background:rgba(255, 215, 0, 0.1); border:1px solid #ffd700; border-radius:14px; padding:10px 16px; margin-top:22px; margin-bottom:10px; box-sizing:border-box;">
+          <div>
+            <div class="title" id="level-title" style="font-size:16px; font-weight:bold; color:#ffd700;">स्तर 1 / 50</div>
+            <div style="font-size:12px; color:#ccc;" id="pieces-count">खण्ड: 6</div>
+          </div>
+          <div id="boss-container"></div>
         </div>
 
-        <!-- 10 Deities Horizontal Level Selector Carousel -->
-        <div style="margin-bottom:12px;">
-          <div style="font-size:0.7rem; color:#CBD5E1; font-weight:800; margin-bottom:5px; display:flex; justify-content:space-between; align-items:center;">
-            <span>🚩 पावन स्वरूप चुनें (१० स्तर)</span>
-            <span id="jigsaw-current-level-badge" style="color:#FDE68A; background:rgba(245,158,11,0.2); padding:1px 7px; border-radius:8px; border:1px solid rgba(245,158,11,0.4);">स्तर १/१०</span>
-          </div>
-          <div id="jigsaw-levels-selector" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; scrollbar-width:thin;">
-            <!-- Injected dynamically by engine -->
-          </div>
+        <!-- Controls: Prev / Hint / Reset / Next -->
+        <div style="width:100%; max-width:390px; display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:6px;">
+          <button onclick="prevLevel()" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(255,215,0,0.3); color:#ffd700; padding:6px 0; border-radius:10px; font-size:12px; font-weight:bold; cursor:pointer;">◀ पिछला</button>
+          <button onclick="toggleJigsawPreviewModal()" style="flex:1.2; background:rgba(255,215,0,0.18); border:1px solid #ffd700; color:#ffd700; padding:6px 0; border-radius:10px; font-size:12px; font-weight:bold; cursor:pointer;">👁️ संकेत (Hint)</button>
+          <button onclick="initLevel(currentLevel)" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(255,215,0,0.3); color:#ffd700; padding:6px 0; border-radius:10px; font-size:12px; font-weight:bold; cursor:pointer;">🔄 पुनः मिलाएँ</button>
+          <button onclick="nextLevel()" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(255,215,0,0.3); color:#ffd700; padding:6px 0; border-radius:10px; font-size:12px; font-weight:bold; cursor:pointer;">अगला ▶</button>
         </div>
 
-        <!-- Stats & Preview Header Bar -->
-        <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.35); border:1px solid rgba(245,158,11,0.25); border-radius:14px; padding:6px 12px; margin-bottom:12px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <img id="jigsaw-target-preview-thumb" src="assets/deity_ganesh.jpg" alt="Preview" style="width:38px; height:38px; border-radius:8px; object-fit:cover; border:1.5px solid #F59E0B; cursor:pointer;" onclick="toggleJigsawPreviewModal()" title="मूल छवि देखें">
-            <div>
-              <div id="jigsaw-deity-display-name" style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">श्री गणेश जी</div>
-              <div style="font-size:0.7rem; color:#A7F3D0;">चालें: <strong id="jigsaw-moves-count" style="color:#FDE68A;">0</strong></div>
+        <!-- Puzzle Target Board Container -->
+        <div id="puzzle-board-container" style="position:relative; display:flex; flex-direction:column; align-items:center; width:100%;">
+          <!-- Target Board -->
+          <div id="puzzle-board"></div>
+
+          <!-- Scatter Tray Area below Board -->
+          <div id="puzzle-tray-area" style="position:relative; width:100%; min-height:160px; margin-top:14px; border-top:1px dashed rgba(255,215,0,0.25); padding-top:8px;">
+            <div style="font-size:13px; color:#fde68a; text-align:center; margin-bottom:8px; font-weight:600;">
+              खिसकाकर सही खांचे में जोड़ें (Drag pieces to slots)
             </div>
           </div>
-          <button onclick="toggleJigsawPreviewModal()" style="background:rgba(245,158,11,0.2); border:1px solid #F59E0B; color:#FDE68A; font-size:0.72rem; font-weight:800; padding:4px 10px; border-radius:10px; cursor:pointer;">
-            👁️ संकेत (Peek)
-          </button>
-        </div>
-        
-        <!-- 3x3 Puzzle Arena Board -->
-        <div style="position:relative; width:282px; height:282px; margin:0 auto 14px; background:#0F0418; padding:6px; border-radius:18px; border:2px solid #F59E0B; box-shadow:0 6px 20px rgba(0,0,0,0.6);">
-          <div id="jigsaw-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, 1fr); gap:5px; width:100%; height:100%;">
-            <!-- 3x3 image tiles injected here -->
-          </div>
-          
-          <!-- Victory Celebration Overlay inside Board -->
-          <div id="jigsaw-board-victory-overlay" style="display:none; position:absolute; inset:0; background:rgba(18, 6, 36, 0.94); border-radius:18px; flex-direction:column; align-items:center; justify-content:center; padding:16px; text-align:center; animation:fadeIn 0.3s ease;">
-            <div style="font-size:2.2rem; margin-bottom:4px;">🎉</div>
-            <div style="font-size:1.1rem; font-weight:900; color:#FDE68A; margin-bottom:2px;">पावन दर्शन सम्पूर्ण!</div>
-            <div style="font-size:0.75rem; color:#E2E8F0; margin-bottom:8px;">+150 🪙 सिक्के अर्जित किए!</div>
-            <img id="jigsaw-victory-full-img" src="assets/deity_ganesh.jpg" alt="Completed" style="width:90px; height:90px; border-radius:12px; border:2px solid #F59E0B; object-fit:cover; margin-bottom:10px; box-shadow:0 0 20px #F59E0B;">
-            <button onclick="nextJigsawLevel()" style="background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E; border:none; padding:7px 18px; border-radius:12px; font-weight:900; font-size:0.82rem; cursor:pointer; width:100%; box-shadow:0 3px 12px rgba(245,158,11,0.4);">अगला स्वरूप खेलें ➔</button>
-          </div>
-        </div>
-
-        <!-- Controls: Shuffle & Next -->
-        <div style="display:flex; gap:8px;">
-          <button onclick="initJigsawGame()" style="flex:1; background:rgba(255,255,255,0.1); border:1px solid rgba(245,158,11,0.4); color:#FDE68A; padding:9px 0; border-radius:12px; font-weight:900; font-size:0.8rem; cursor:pointer;">🔄 पुनः मिलाएँ (Reset)</button>
-          <button onclick="nextJigsawLevel()" style="flex:1; background:linear-gradient(135deg, #06B6D4, #0891B2); color:#FFF; border:none; padding:9px 0; border-radius:12px; font-weight:900; font-size:0.8rem; cursor:pointer;">अगला स्तर ➔</button>
         </div>
 
         <!-- Hint / Full Preview Popup Modal (Inside Jigsaw) -->
-        <div id="jigsaw-peek-modal" style="display:none; position:absolute; inset:0; z-index:10; background:rgba(10,3,20,0.95); border-radius:24px; padding:18px; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+        <div id="jigsaw-peek-modal" style="display:none; position:absolute; inset:0; z-index:150; background:rgba(10,3,20,0.96); border-radius:24px; padding:18px; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
           <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:8px;">
-            <span style="font-weight:900; color:#FDE68A; font-size:0.9rem;">👁️ मूल पावन स्वरूप</span>
-            <button onclick="toggleJigsawPreviewModal()" style="background:none; border:none; color:#FFF; font-size:1.2rem; cursor:pointer;">✕</button>
+            <span style="font-weight:900; color:#FDE68A; font-size:0.95rem;">👁️ मूल पावन स्वरूप</span>
+            <button onclick="toggleJigsawPreviewModal()" style="background:none; border:none; color:#FFF; font-size:1.3rem; cursor:pointer;">✕</button>
           </div>
-          <img id="jigsaw-peek-full-image" src="assets/deity_ganesh.jpg" alt="Original" style="width:230px; height:230px; border-radius:16px; border:2px solid #F59E0B; object-fit:cover; margin-bottom:10px;">
-          <div style="font-size:0.75rem; color:#CBD5E1; margin-bottom:12px;">इस छवि के अनुसार खण्डों को क्रम में जमाएँ।</div>
-          <button onclick="toggleJigsawPreviewModal()" style="background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E; border:none; padding:7px 20px; border-radius:12px; font-weight:900; cursor:pointer;">समझ गया (Back to Puzzle)</button>
+          <img id="jigsaw-peek-img" src="" alt="Original" style="max-width:240px; max-height:240px; border-radius:16px; border:2px solid #F59E0B; object-fit:cover; margin-bottom:10px; box-shadow:0 0 20px rgba(245,158,11,0.5);">
+          <div style="font-size:0.8rem; color:#CBD5E1; margin-bottom:14px;">इस दिव्य स्वरूप के अनुसार खण्डों को सही स्थान पर जोड़ें।</div>
+          <button onclick="toggleJigsawPreviewModal()" style="background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E; border:none; padding:8px 24px; border-radius:14px; font-weight:900; cursor:pointer;">समझ गया (Back to Puzzle)</button>
+        </div>
+
+        <!-- Level Complete Popup -->
+        <div class="modal" id="winModal" style="position:absolute; inset:0; background:rgba(0, 0, 0, 0.88); border-radius:24px; display:none; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; z-index:200;">
+          <div style="font-size:3rem; margin-bottom:6px;">🌸</div>
+          <h1 id="win-heading" style="color:#ffd700; margin-bottom:10px; font-size:24px;">दिव्य दर्शन पूर्ण! 🌸</h1>
+          <p id="win-desc" style="color:#e0e0e0; margin-bottom:14px; font-size:15px;">आपने यह स्तर सफलतापूर्वक पूर्ण कर लिया है।</p>
+          <div id="win-coins-badge" style="background:rgba(255,215,0,0.15); border:1px solid #ffd700; color:#fde68a; padding:6px 16px; border-radius:20px; font-weight:bold; font-size:14px; margin-bottom:18px;">+100 🪙 सिक्के अर्जित किए!</div>
+          <button onclick="nextLevel()" style="background:linear-gradient(135deg, #ff9900, #ff4500); color:white; border:none; padding:12px 30px; font-size:17px; font-weight:bold; border-radius:25px; cursor:pointer; box-shadow:0 4px 15px rgba(255, 69, 0, 0.5);">अगला स्तर ➔</button>
         </div>
 
       </div>

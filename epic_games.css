@@ -812,27 +812,63 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
 }
 
 /* ── Bhakti Jodi Milao (Card Match with Levels) ── */
-.bhakti-match-grid {
+.bhakti-match-wrapper {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: 3px solid #ffd700;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 390px;
+  padding: 24px 16px;
+  position: relative;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.75), 0 0 25px rgba(255,215,0,0.3) inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bhakti-match-wrapper h2 {
+  color: #fff;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.hud {
+  display: flex;
+  gap: 15px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 16px;
+  background: rgba(0,0,0,0.15);
+  padding: 6px 14px;
+  border-radius: 14px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(4, 70px);
   gap: 10px;
   perspective: 1000px;
   justify-content: center;
-  align-items: center;
 }
 
 @media (max-width: 360px) {
-  .bhakti-match-grid {
-    grid-template-columns: repeat(4, 62px) !important;
-    gap: 6px !important;
+  .grid {
+    grid-template-columns: repeat(4, 62px);
+    gap: 6px;
   }
-  .bhakti-match-card {
+  .card {
     width: 62px !important;
     height: 72px !important;
   }
 }
 
-.bhakti-match-card {
+.card {
   width: 70px;
   height: 80px;
   position: relative;
@@ -844,11 +880,11 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
   -webkit-user-select: none;
 }
 
-.bhakti-match-card.flipped {
+.card.flipped {
   transform: rotateY(180deg);
 }
 
-.bhakti-match-card-face {
+.card-face {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -861,20 +897,66 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
-.bhakti-match-card-back {
+.card-back {
   background: #8b0000;
   color: #ffd700;
-  font-size: 26px;
+  font-size: 24px;
   border: 2px solid #ffd700;
-  font-weight: 900;
-  text-shadow: 0 0 4px rgba(255,215,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.bhakti-match-card-front {
+.card-front {
   background: #ffffff;
-  font-size: 32px;
+  font-size: 30px;
   transform: rotateY(180deg);
   border: 2px solid #ff9900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 100260;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#modal h2 {
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+#modal p {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  max-width: 280px;
+}
+
+#modal button {
+  margin-top: 15px;
+  padding: 10px 24px;
+  background: #ff7700;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 119, 0, 0.4);
 }
 
 .jigsaw-tile {
@@ -1131,74 +1213,71 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
   z-index: 100250 !important;
 }
 
-.jigsaw-tile {
-  background-size: 300% 300% !important;
-  background-repeat: no-repeat !important;
-  border: 1.5px solid #F59E0B !important;
-  border-radius: 10px !important;
-  position: relative !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
-  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
-  user-select: none !important;
-  -webkit-user-select: none !important;
-  overflow: hidden !important;
-}
-.jigsaw-tile:active {
-  transform: scale(0.96) !important;
-}
-.jigsaw-tile-badge {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  background: rgba(18, 6, 36, 0.85);
-  border: 1px solid #F59E0B;
-  color: #FDE68A;
-  font-size: 0.65rem;
-  font-weight: 900;
-  padding: 1px 5px;
-  border-radius: 6px;
-  pointer-events: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-.jigsaw-tile.empty-slot {
-  background: rgba(245, 158, 11, 0.08) !important;
-  border: 2px dashed rgba(245, 158, 11, 0.45) !important;
-  box-shadow: none !important;
-  cursor: default !important;
+.boss-badge {
+  background: #ff2200;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  animation: pulse-boss 1s infinite alternate;
+  box-shadow: 0 0 10px rgba(255, 34, 0, 0.6);
+  letter-spacing: 0.5px;
 }
 
-/* Jigsaw Level Selector Pills */
-.jigsaw-level-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  border-radius: 20px;
-  padding: 4px 10px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  color: #E2E8F0;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
+@keyframes pulse-boss {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+#puzzle-board {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px dashed rgba(255, 215, 0, 0.45);
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  margin: 0 auto;
+}
+
+.puzzle-slot {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+.jigsaw-piece {
+  position: absolute;
+  cursor: grab;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+  transition: transform 0.1s ease;
+  touch-action: none;
+  z-index: 10;
   user-select: none;
+  -webkit-user-select: none;
 }
-.jigsaw-level-pill.active {
-  background: linear-gradient(135deg, #F59E0B, #D97706) !important;
-  border-color: #FEF3C7 !important;
-  color: #1A0B2E !important;
-  font-weight: 900 !important;
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.7) !important;
+
+.jigsaw-piece:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+  z-index: 50;
 }
-.jigsaw-level-pill img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #FEF3C7;
+
+.jigsaw-piece.locked {
+  cursor: default;
+  pointer-events: none;
+  filter: none;
+  z-index: 5;
+}
+
+.jigsaw-modal-card {
+  box-sizing: border-box;
+}
+
+.jigsaw-modal-card * {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 

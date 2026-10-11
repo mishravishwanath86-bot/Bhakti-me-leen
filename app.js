@@ -30119,8 +30119,8 @@ window.renderFullDrikChalisaPage = function(filterCategory, searchQuery) {
 // ══════════════════════════════════════════════════════════════════════════════
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 10,
-  currentVersionName: '1.9.0',
+  currentVersionCode: 11,
+  currentVersionName: '1.10.0',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',
