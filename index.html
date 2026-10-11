@@ -1697,9 +1697,14 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <div style="display:flex; gap:6px; font-size:0.72rem; color:#FDE68A;">
             <span>🏛️ मंदिर</span> • <span>🌍 विश्व</span> • <span>📜 चालीसा</span> • <span>📖 गीता</span>
           </div>
-          <button onclick="event.stopPropagation(); openQuizHubModal()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.82rem; font-weight:900; padding:8px 18px; border-radius:16px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.4); display:flex; align-items:center; gap:5px;">
-            <span>MCQ खेलें</span> ❯
-          </button>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button onclick="event.stopPropagation(); openWallOfFameModal()" style="background:linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color:#FFFFFF; border:none; font-size:0.78rem; font-weight:900; padding:8px 12px; border-radius:14px; cursor:pointer; box-shadow:0 3px 12px rgba(2,132,199,0.35); display:flex; align-items:center; gap:4px;">
+              <span>🏆</span> Wall of Fame
+            </button>
+            <button onclick="event.stopPropagation(); openQuizHubModal()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.82rem; font-weight:900; padding:8px 16px; border-radius:16px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.4); display:flex; align-items:center; gap:5px;">
+              <span>MCQ खेलें</span> ❯
+            </button>
+          </div>
         </div>
       </div>
 
@@ -17610,156 +17615,409 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
   
 
 
-          <!-- 🎯 DEDICATED SACRED MCQ QUIZ HUB MODAL 🎯 -->
-  <div id="quiz-hub-modal" style="display:none; position:fixed; inset:0; z-index:100025; background:rgba(8,1,14,0.96); backdrop-filter:blur(30px); -webkit-backdrop-filter:blur(30px); align-items:center; justify-content:center; padding:10px; overflow-y:auto;">
-    <div id="quiz-hub-card" style="width:100%; max-width:440px; background:radial-gradient(circle at 50% 0%, #2A0845 0%, #150325 55%, #0B0114 100%); border:2px solid #F59E0B; border-radius:26px; padding:14px 13px; box-shadow:0 20px 70px rgba(0,0,0,0.95), inset 0 0 25px rgba(245,158,11,0.15); position:relative; margin:auto 0; transition:all 0.3s ease; max-height:94vh; overflow-y:auto; -webkit-overflow-scrolling:touch;">
-      
-      <!-- Top Row: Title, Subtitle, Theme Toggle & Close Button -->
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <div style="width:38px; height:38px; border-radius:12px; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); display:flex; align-items:center; justify-content:center; font-size:1.25rem; box-shadow:0 0 16px rgba(248,200,59,0.5); flex-shrink:0;">
-            🎯
+          <!-- 🎯 DEDICATED SACRED MCQ QUIZ & TEST SERIES HUB MODAL 🎯 -->
+  <div id="quiz-hub-modal" style="display:none; position:fixed; inset:0; z-index:100025; background:rgba(8,8,10,0.96); backdrop-filter:blur(30px); -webkit-backdrop-filter:blur(30px); align-items:center; justify-content:center; padding:10px; overflow-y:auto;">
+    <div id="quiz-hub-card" style="width:100%; max-width:440px; background:#121214; border:1.5px solid #27272A; border-radius:24px; box-shadow:0 25px 70px rgba(0,0,0,0.95); position:relative; margin:auto 0; transition:all 0.3s ease; max-height:94vh; display:flex; flex-direction:column; overflow:hidden;">
+
+      <!-- ═════════════════════════════════════════════════════════
+           📱 STEP 1: TOPICS / MOCK TESTS LISTING (IMAGE 1)
+           ═════════════════════════════════════════════════════════ -->
+      <div id="ts-step-topics" style="display:flex; flex-direction:column; height:100%; max-height:92vh; overflow:hidden;">
+        
+        <!-- Header: Title & Close -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 16px 10px; border-bottom:1px solid #27272A; background:#18181B;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">🎯</span>
+            <div>
+              <div style="font-size:1.05rem; font-weight:900; color:#F4F4F5; letter-spacing:0.2px;">सनातन मॉक टेस्ट श्रृंखला</div>
+              <div style="font-size:0.68rem; color:#A1A1AA; font-weight:600;">Sanatan Mock Test Series</div>
+            </div>
           </div>
-          <div>
-            <div id="quiz-header-title" style="font-size:1.15rem; font-weight:900; color:#FFFDF8; line-height:1.2; letter-spacing:0.2px;">
-              दिव्य प्रश्नोत्तरी
-            </div>
-            <div id="quiz-header-subtitle" style="font-size:0.7rem; color:#FDE68A; font-weight:700; opacity:0.9;">
-              सनातन ज्ञान महायज्ञ
-            </div>
+          <button onclick="closeQuizHubModal()" title="बंद करें" style="background:rgba(255,255,255,0.08); border:1px solid #3F3F46; color:#D4D4D8; width:32px; height:32px; border-radius:50%; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+
+        <!-- Tab Bar (Mock Tests & Wall of Fame) -->
+        <div style="display:flex; align-items:center; border-bottom:1px solid #27272A; background:#121214; padding:0 16px;">
+          <div id="ts-tab-btn-mock" onclick="switchQuizViewTab('tests')" style="padding:12px 14px 10px; font-size:0.92rem; font-weight:800; color:#FFFFFF; border-bottom:3px solid #3B82F6; cursor:pointer;">
+            Mock Tests
+          </div>
+          <div id="ts-tab-btn-wall" onclick="switchQuizViewTab('wall_of_fame')" style="padding:12px 14px 10px; font-size:0.92rem; font-weight:700; color:#F59E0B; border-bottom:3px solid transparent; cursor:pointer; display:flex; align-items:center; gap:5px;">
+            <span>🏆</span> Wall of Fame
+          </div>
+          <div onclick="openTopicTestSets('all')" style="padding:12px 14px 10px; font-size:0.88rem; font-weight:600; color:#71717A; cursor:pointer; margin-left:auto;">
+            All India Mega
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:8px;">
-          <!-- 🌓 Theme Toggle Button -->
-          <button id="quiz-theme-btn" onclick="toggleQuizTheme()" title="थीम बदलें (Dark / Light)" style="background:rgba(255,255,255,0.1); border:1.5px solid rgba(248,200,59,0.4); color:#FDE68A; width:34px; height:34px; border-radius:50%; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:0 2px 8px rgba(0,0,0,0.3);">
-            ☀️
+
+        <!-- Topics List Scrollable Container (Image 1 List) -->
+        <div id="ts-topics-list" style="flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch;">
+          <!-- Dynamically filled with topic rows -->
+        </div>
+
+        <!-- Bottom CTA Button (Image 1 Style: "Enroll In Test Series" -> "Start Any Test") -->
+        <div style="padding:12px 16px; background:#18181B; border-top:1px solid #27272A;">
+          <button onclick="openTopicTestSets('all')" style="width:100%; background:#2563EB; color:#FFFFFF; border:none; font-size:0.95rem; font-weight:800; padding:13px 0; border-radius:12px; cursor:pointer; box-shadow:0 4px 16px rgba(37,99,235,0.4); display:flex; align-items:center; justify-content:center; gap:8px;">
+            <span>🚀</span> ऑल इंडिया मॉक टेस्ट शुरू करें
           </button>
-          
-          <!-- Close Button -->
-          <button onclick="closeQuizHubModal()" title="क्विज़ बंद करें" style="background:rgba(255,255,255,0.1); border:1.5px solid rgba(248,200,59,0.4); color:#FDE68A; width:34px; height:34px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:0 2px 8px rgba(0,0,0,0.3);">✕</button>
-        </div>
-      </div>
-
-      <!-- Second Row: Question Progress Badge & 120s Timer Badge (Spacious 2-column layout) -->
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px;">
-        <!-- Q Progress Badge (Clean, Never Wraps) -->
-        <div id="quiz-progress-badge" style="display:inline-flex; align-items:center; gap:6px; font-size:0.78rem; font-weight:900; background:rgba(248,200,59,0.16); border:1.5px solid rgba(248,200,59,0.45); color:#FDE68A; padding:5px 12px; border-radius:14px; white-space:nowrap;">
-          <span>✨</span> <span id="quiz-progress-text">प्रश्न 1 / 10</span>
         </div>
 
-        <!-- ⏱️ Timer Badge (Never Wraps) -->
-        <div id="quiz-timer-badge" style="display:inline-flex; align-items:center; gap:6px; font-size:0.78rem; font-weight:900; background:rgba(248,200,59,0.16); border:1.5px solid #F8C83B; color:#FDE68A; padding:5px 12px; border-radius:14px; white-space:nowrap; transition:all 0.3s;">
-          <span>⏱️</span> <span id="quiz-timer-text">120s</span>
-        </div>
       </div>
 
-      <!-- Dynamic Progress Fill Bar -->
-      <div style="width:100%; height:4px; background:rgba(255,255,255,0.08); border-radius:2px; margin-bottom:10px; overflow:hidden;">
-        <div id="quiz-progress-fill" style="width:10%; height:100%; background:linear-gradient(90deg, #F59E0B 0%, #10B981 100%); border-radius:2px; transition:width 0.3s ease; box-shadow:0 0 8px rgba(245,158,11,0.6);"></div>
-      </div>
-
-      <!-- 🎮 Question Count Selector (Segmented Bar) -->
-      <div style="display:flex; align-items:center; gap:6px; background:rgba(0,0,0,0.35); padding:4px 6px; border-radius:14px; margin-bottom:10px; border:1px solid rgba(248,200,59,0.22);">
-        <span style="font-size:0.72rem; font-weight:800; color:#FDE68A; padding-left:4px; flex-shrink:0;">
-          🔢 प्रश्न:
-        </span>
-        <div style="display:flex; gap:4px; flex:1;">
-          <button onclick="setQuizLength(10, this)" class="quiz-len-btn active" style="flex:1; padding:4px 0; font-size:0.74rem; font-weight:900; border-radius:8px; background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; cursor:pointer;">10</button>
-          <button onclick="setQuizLength(25, this)" class="quiz-len-btn" style="flex:1; padding:4px 0; font-size:0.74rem; font-weight:800; border-radius:8px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer;">25</button>
-          <button onclick="setQuizLength(50, this)" class="quiz-len-btn" style="flex:1; padding:4px 0; font-size:0.74rem; font-weight:800; border-radius:8px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer;">50</button>
-          <button onclick="setQuizLength(0, this)" class="quiz-len-btn" title="डेटाबेस के सभी प्रश्न" style="flex:1.4; padding:4px 0; font-size:0.72rem; font-weight:800; border-radius:8px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); cursor:pointer;">⚡ सभी (811)</button>
-        </div>
-      </div>
-
-      <!-- 🏷️ Category Filter Chips (Horizontal Swipeable Track - ZERO OVERLAPPING) -->
-      <div id="quiz-cat-scroll" style="display:flex; gap:7px; overflow-x:auto; -webkit-overflow-scrolling:touch; padding:4px 2px 10px 2px; margin-bottom:10px; scrollbar-width:none;">
-        <button onclick="switchQuizCategory('all', this)" class="quiz-cat-btn active" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:900; border-radius:18px; background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; cursor:pointer; box-shadow:0 3px 10px rgba(245,158,11,0.4);">🎯 संपूर्ण (Mega)</button>
-        <button onclick="switchQuizCategory('bookmarks', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">⭐ सहेजे गए (Bookmarks)</button>
-        <button onclick="switchQuizCategory('mahabharat', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">⚔️ महाभारत एवं गीता</button>
-        <button onclick="switchQuizCategory('ramayan', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">🏹 रामायण</button>
-        <button onclick="switchQuizCategory('god', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">🪔 देवी-देवता / अवतार</button>
-        <button onclick="switchQuizCategory('ved', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">📜 वेद एवं उपनिषद</button>
-        <button onclick="switchQuizCategory('mantra', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">🕉️ मंत्र एवं स्तोत्र</button>
-        <button onclick="switchQuizCategory('aarti', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">🪔 आरती</button>
-        <button onclick="switchQuizCategory('chalisa', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">📖 चालीसा</button>
-        <button onclick="switchQuizCategory('bhakti_sahitya', this)" class="quiz-cat-btn" style="flex-shrink:0; white-space:nowrap; padding:6px 14px; font-size:0.78rem; font-weight:800; border-radius:18px; background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.18); cursor:pointer;">🌸 भक्ति साहित्य व संत</button>
-      </div>
-
-      <!-- Main Question & Options Container -->
-      <div id="quiz-main-view">
-        <!-- Question Card Box -->
-        <div id="quiz-question-box" style="background:rgba(255,255,255,0.05); border:1.5px solid rgba(248,200,59,0.3); border-radius:20px; padding:14px; margin-bottom:10px;">
-          
-          <!-- Question Meta Toolbar (Category Badge on Left, Action Buttons on Right) -->
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.08);">
-            <div id="quiz-card-category-badge" style="display:inline-flex; align-items:center; gap:5px; font-size:0.74rem; font-weight:800; color:#FDE68A; background:rgba(248,200,59,0.15); border:1px solid rgba(248,200,59,0.3); padding:3px 10px; border-radius:10px;">
-              <span>📜</span> <span id="quiz-card-category-text">सनातन ज्ञान</span>
-            </div>
-            
+      <!-- ═════════════════════════════════════════════════════════
+           🏆 STEP: WALL OF FAME (TESTBOOK STYLE ALL INDIA TOPPERS)
+           ═════════════════════════════════════════════════════════ -->
+      <div id="ts-step-wall-of-fame" style="display:none; flex-direction:column; height:100%; max-height:92vh; overflow:hidden; background:#F8FAFC;">
+        
+        <!-- Header: Back button, Logo + Wall of Fame, Close button -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; background:#FFFFFF; border-bottom:1px solid #E2E8F0; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <button onclick="switchQuizViewTab('tests')" title="पीछे जाएं" style="background:#F1F5F9; border:none; color:#334155; width:32px; height:32px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+              ←
+            </button>
             <div style="display:flex; align-items:center; gap:8px;">
-              <!-- 🎙️ AI Voice Read Aloud -->
-              <button onclick="speakCurrentQuizQuestion()" title="🎙️ AI हिंदी वॉइस से सुनें" style="background:rgba(255,255,255,0.08); border:1.2px solid rgba(248,200,59,0.35); color:#FDE68A; width:32px; height:32px; border-radius:50%; font-size:0.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform 0.15s ease;">
-                🔊
-              </button>
-              <!-- 🔖 Bookmark Question Button -->
-              <button id="quiz-bookmark-btn" onclick="toggleCurrentQuestionBookmark()" title="प्रश्न सहेजें / बुकमार्क करें" style="background:rgba(255,255,255,0.08); border:1.2px solid rgba(248,200,59,0.35); color:#FDE68A; width:32px; height:32px; border-radius:50%; font-size:0.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform 0.15s ease;">
-                🔖
-              </button>
+              <div style="width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg, #0284C7, #06B6D4); display:flex; align-items:center; justify-content:center; color:#FFF; font-weight:900; font-size:0.95rem; box-shadow:0 2px 8px rgba(2,132,199,0.35);">
+                📐
+              </div>
+              <div>
+                <div style="display:flex; align-items:baseline; gap:5px;">
+                  <span style="font-size:1.15rem; font-weight:900; color:#0284C7; letter-spacing:-0.3px;">sanatan</span>
+                  <span style="font-size:1.15rem; font-weight:900; color:#0F172A; letter-spacing:-0.2px;">Wall of Fame</span>
+                </div>
+                <div style="font-size:0.68rem; color:#64748B; font-weight:600;">शीर्ष सनातन साधक एवं प्रतियोगी • All India Rankers</div>
+              </div>
+            </div>
+          </div>
+          <button onclick="closeQuizHubModal()" title="बंद करें" style="background:#F1F5F9; border:none; color:#64748B; width:30px; height:30px; border-radius:50%; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+
+        <!-- Logged-in Devotee Interactive Rank Ribbon -->
+        <div id="wof-user-strip" style="background:linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border-bottom:1.5px solid #FCD34D; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <!-- Dynamically filled by renderWallOfFame() -->
+        </div>
+
+        <!-- Live Leaderboard Status Bar & Controls -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 14px; background:#FFFFFF; border-bottom:1px solid #E2E8F0;">
+          <div style="font-size:0.75rem; font-weight:800; color:#475569; display:flex; align-items:center; gap:5px;">
+            <span>🏆</span> <span>ऑल इंडिया रैंक सूची (Live Leaderboard)</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <button onclick="boostMcqDemoScore(10)" title="10 प्रश्न सही जोड़कर रैंक बढ़ाएं" style="background:#ECFDF5; border:1px solid #10B981; color:#059669; font-size:0.68rem; font-weight:800; padding:4px 8px; border-radius:10px; cursor:pointer;">
+              ⚡ +10 सही उत्तर
+            </button>
+            <button onclick="openTopicTestSets('all')" style="background:#2563EB; color:#FFF; border:none; font-size:0.72rem; font-weight:800; padding:5px 10px; border-radius:10px; cursor:pointer; display:flex; align-items:center; gap:4px;">
+              <span>🚀</span> टेस्ट दें
+            </button>
+          </div>
+        </div>
+
+        <!-- Scrollable Cards Grid Container -->
+        <div id="wof-cards-container" style="flex:1; overflow-y:auto; padding:12px 14px 20px; -webkit-overflow-scrolling:touch; background:#F8FAFC;">
+          <div id="wof-cards-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:12px;">
+            <!-- 12+ Cards injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Bottom CTA Bar -->
+        <div style="padding:10px 16px; background:#FFFFFF; border-top:1px solid #E2E8F0; display:flex; gap:8px;">
+          <button onclick="openTopicTestSets('all')" style="flex:1; background:linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color:#FFFFFF; border:none; font-size:0.88rem; font-weight:800; padding:11px 0; border-radius:12px; cursor:pointer; box-shadow:0 4px 12px rgba(2,132,199,0.3); display:flex; align-items:center; justify-content:center; gap:6px;">
+            <span>🎯</span> नया टेस्ट देकर रैंक बढ़ाएं
+          </button>
+        </div>
+
+      </div>
+
+
+      <!-- ═════════════════════════════════════════════════════════
+           📱 STEP 2: TESTS LIST UNDER SELECTED TOPIC (IMAGE 2)
+           ═════════════════════════════════════════════════════════ -->
+      <div id="ts-step-tests" style="display:none; flex-direction:column; height:100%; max-height:92vh; overflow:hidden;">
+        
+        <!-- Header with Back Button (Image 2 Style) -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid #27272A; background:#18181B;">
+          <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:0;">
+            <button onclick="goToQuizStep(1)" title="पीछे जाएं" style="background:transparent; border:none; color:#F4F4F5; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; flex-shrink:0;">
+              ←
+            </button>
+            <div style="min-width:0;">
+              <div id="ts-sets-header-title" style="font-size:0.92rem; font-weight:800; color:#F4F4F5; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                रामायण टेस्ट श्रृंखला
+              </div>
+              <div style="font-size:0.68rem; color:#A1A1AA;">Free Mock Tests • 10 Questions Each</div>
+            </div>
+          </div>
+          <button onclick="closeQuizHubModal()" title="बंद करें" style="background:rgba(255,255,255,0.08); border:1px solid #3F3F46; color:#D4D4D8; width:30px; height:30px; border-radius:50%; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+
+        <!-- Horizontal Sub-Tabs Bar (Image 2 Style) -->
+        <div id="ts-sets-tabs-bar" style="display:flex; align-items:center; gap:18px; border-bottom:1px solid #27272A; background:#121214; padding:0 16px; overflow-x:auto; white-space:nowrap; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+          <div id="ts-subtab-all" onclick="filterTestSetsByTab('all')" style="padding:10px 4px 8px; font-size:0.85rem; font-weight:800; color:#FFFFFF; border-bottom:3px solid #FFFFFF; cursor:pointer;">
+            सभी टेस्ट (All Tests)
+          </div>
+          <div id="ts-subtab-part1" onclick="filterTestSetsByTab('part1')" style="padding:10px 4px 8px; font-size:0.85rem; font-weight:600; color:#71717A; cursor:pointer;">
+            अभ्यास सेट (1-5)
+          </div>
+          <div id="ts-subtab-part2" onclick="filterTestSetsByTab('part2')" style="padding:10px 4px 8px; font-size:0.85rem; font-weight:600; color:#71717A; cursor:pointer;">
+            उन्नत सेट (6-10)
+          </div>
+          <div id="ts-subtab-special" onclick="filterTestSetsByTab('special')" style="padding:10px 4px 8px; font-size:0.85rem; font-weight:600; color:#71717A; cursor:pointer;">
+            विशेष टेस्ट
+          </div>
+        </div>
+
+        <!-- Sub-header Tab Bar (Image 2: "| Free Tests") -->
+        <div style="padding:10px 16px 6px; font-size:0.88rem; font-weight:800; color:#F4F4F5; display:flex; align-items:center; gap:8px;">
+          <span style="color:#3B82F6; font-size:1.1rem; line-height:1;">|</span> Free Tests
+        </div>
+
+        <!-- Scrollable Test Cards Container (Image 2 Cards) -->
+        <div id="ts-sets-list" style="flex:1; overflow-y:auto; padding:8px 16px 16px; -webkit-overflow-scrolling:touch;">
+          <!-- Dynamically rendered test cards -->
+        </div>
+
+      </div>
+
+      <!-- ═════════════════════════════════════════════════════════
+           📱 STEP 3: TEST INSTRUCTIONS SCREEN (IMAGE 3)
+           ═════════════════════════════════════════════════════════ -->
+      <div id="ts-step-instructions" style="display:none; flex-direction:column; height:100%; max-height:92vh; overflow:hidden;">
+        
+        <!-- Header with Back Button (Image 3 Style) -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid #27272A; background:#18181B;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <button onclick="goToQuizStep(2)" title="पीछे जाएं" style="background:transparent; border:none; color:#F4F4F5; font-size:1.3rem; cursor:pointer; padding:0;">
+              ←
+            </button>
+            <span style="font-size:1rem; font-weight:800; color:#F4F4F5;">Your Tests</span>
+          </div>
+          <button onclick="closeQuizHubModal()" title="बंद करें" style="background:rgba(255,255,255,0.08); border:1px solid #3F3F46; color:#D4D4D8; width:30px; height:30px; border-radius:50%; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+
+        <!-- Scrollable Instructions Content -->
+        <div style="flex:1; overflow-y:auto; padding:16px 18px; -webkit-overflow-scrolling:touch;">
+          
+          <!-- Test Title & Meta -->
+          <h3 id="ts-instr-test-title" style="font-size:1.05rem; font-weight:800; color:#F4F4F5; margin:0 0 8px 0; line-height:1.4;">
+            रामायण टेस्ट #1: बालकाण्ड एवं श्री राम जन्म
+          </h3>
+          <div id="ts-instr-meta" style="font-size:0.78rem; font-weight:700; color:#A1A1AA; margin-bottom:16px;">
+            Duration: 10 Mins.    Maximum Marks: 20.0
+          </div>
+
+          <!-- Instructions Bullet Points (Image 3 exact layout) -->
+          <div style="display:flex; flex-direction:column; gap:11px; font-size:0.83rem; color:#D4D4D8; line-height:1.55;">
+            <div>• The test contains <strong id="ts-instr-total-q" style="color:#FFF;">10</strong> total questions. (इस टेस्ट में कुल 10 प्रश्न हैं।)</div>
+            <div>• Each question has 4 options out of which only one is correct. (प्रत्येक प्रश्न में 4 विकल्प हैं, केवल एक सही है।)</div>
+            <div>• You have to finish the test in 10 minutes. (परीक्षण 10 मिनट में पूरा करना होगा।)</div>
+            <div>• You will be awarded <strong id="ts-instr-marks-each" style="color:#10B981;">2</strong> mark for each correct answer and <strong style="color:#EF4444;">0.5</strong> will be deducted for each wrong answer. (प्रत्येक सही उत्तर पर 2 अंक, गलत पर 0.5 अंक कटेंगे।)</div>
+            <div>• There is no negative marking for the questions that you have not attempted. (अनुत्तरित प्रश्नों के लिए कोई नकारात्मक अंकन नहीं।)</div>
+            <div>• You can navigate to any question anytime during the examination using Question Palette. (आप किसी भी प्रश्न पर कभी भी जा सकते हैं।)</div>
+            <div>• I have read all the instructions carefully and understood them. (मैंने सभी निर्देश ध्यानपूर्वक पढ़ लिए हैं और परीक्षा देने हेतु सहमत हूँ।)</div>
+          </div>
+
+          <!-- Language Selector Dropdown (Image 3 Style) -->
+          <div style="margin-top:20px; border:1px solid #3F3F46; border-radius:10px; background:#18181B; padding:10px 14px; display:flex; align-items:center; justify-content:space-between;">
+            <label for="ts-lang-select" style="font-size:0.82rem; font-weight:600; color:#D4D4D8;">Choose your Default Language</label>
+            <select id="ts-lang-select" style="background:#27272A; border:1px solid #52525B; color:#F4F4F5; font-size:0.82rem; font-weight:700; border-radius:6px; padding:4px 8px; outline:none; cursor:pointer;">
+              <option value="hi" selected>हिंदी (Hindi)</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Bottom Sticky Button (Image 3 Style: "Agree and Continue") -->
+        <div style="padding:12px 16px; background:#18181B; border-top:1px solid #27272A;">
+          <button onclick="startActualExam()" style="width:100%; background:#2563EB; color:#FFFFFF; border:none; font-size:0.95rem; font-weight:800; padding:13px 0; border-radius:12px; cursor:pointer; box-shadow:0 4px 16px rgba(37,99,235,0.4); display:flex; align-items:center; justify-content:center; gap:6px;">
+            Agree and Continue
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ═════════════════════════════════════════════════════════
+           📱 STEP 4: ACTIVE MCQ EXAMINATION INTERFACE (IMAGE 4)
+           ═════════════════════════════════════════════════════════ -->
+      <div id="ts-step-exam" style="display:none; flex-direction:column; height:100%; max-height:92vh; overflow:hidden; position:relative;">
+        
+        <!-- Top Navigation Bar (Image 4 Style) -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 14px; border-bottom:1px solid #27272A; background:#18181B;">
+          <!-- Pause / Exit Button & Timer -->
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button onclick="confirmAndSubmitExam()" title="परीक्षा समाप्त करें" style="background:transparent; border:none; color:#F4F4F5; font-size:1.1rem; cursor:pointer; padding:0; display:flex; align-items:center;">
+              ⏸
+            </button>
+            <div id="ts-exam-countdown-text" style="font-size:0.95rem; font-weight:900; color:#F4F4F5; letter-spacing:0.5px; font-variant-numeric:tabular-nums;">
+              00:10:00
             </div>
           </div>
 
-          <!-- Question Text (Full 100% Width, Clear, Spacious Typography) -->
-          <h4 id="quiz-question-text" style="font-size:1.06rem; color:#FFFDF8; font-weight:900; line-height:1.6; margin:0 0 14px 0; letter-spacing:0.2px;">
+          <!-- Truncated Test Title -->
+          <div id="ts-exam-header-title" style="font-size:0.75rem; color:#A1A1AA; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:130px;">
+            मॉक टेस्ट
+          </div>
+
+          <!-- Right Action Buttons: Language toggle [E/अ] & Palette [☰] -->
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button id="ts-exam-lang-btn" onclick="toggleExamLanguage()" title="भाषा बदलें" style="background:#27272A; border:1px solid #3F3F46; color:#F4F4F5; border-radius:6px; font-size:0.75rem; font-weight:800; padding:3px 7px; cursor:pointer;">
+              अ
+            </button>
+            <button onclick="toggleQuestionPalette()" title="प्रश्न सूची (Palette)" style="background:transparent; border:none; color:#F4F4F5; font-size:1.25rem; cursor:pointer; padding:0; line-height:1;">
+              ☰
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Sub-bar (Image 4: Number Circle, Time, +2.0/-0.0, Icons) -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 16px; border-bottom:1px solid #27272A; background:#121214;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <!-- Question Number Circle -->
+            <div id="ts-exam-q-num" style="width:26px; height:26px; border-radius:50%; background:#27272A; color:#F4F4F5; font-size:0.8rem; font-weight:900; display:flex; align-items:center; justify-content:center;">
+              1
+            </div>
+            <!-- Question Spent Time -->
+            <div style="display:flex; align-items:center; gap:4px; font-size:0.75rem; color:#A1A1AA; font-weight:700;">
+              <span>⏱️</span> <span id="ts-exam-q-timer">00:00</span>
+            </div>
+            <!-- Marks Badges -->
+            <div style="display:flex; align-items:center; gap:4px; font-size:0.72rem; font-weight:800;">
+              <span style="background:rgba(16,185,129,0.18); border:1px solid #10B981; color:#34D399; padding:1px 6px; border-radius:4px;">+ 2.0</span>
+              <span style="background:rgba(239,68,68,0.15); border:1px solid #EF4444; color:#F87171; padding:1px 6px; border-radius:4px;">- 0.5</span>
+            </div>
+          </div>
+
+          <!-- Action Icons on Right: Report, Bookmark, Star -->
+          <div style="display:flex; align-items:center; gap:10px; font-size:1rem; color:#A1A1AA;">
+            <button onclick="reportCurrentExamQuestion()" title="रिपोर्ट करें" style="background:transparent; border:none; color:#A1A1AA; cursor:pointer; padding:0; font-size:0.95rem;">⚠️</button>
+            <button id="ts-exam-bookmark-btn" onclick="toggleExamBookmark()" title="बुकमार्क करें" style="background:transparent; border:none; color:#A1A1AA; cursor:pointer; padding:0; font-size:0.95rem;">🔖</button>
+            <button onclick="toggleExamBookmark()" title="स्टार" style="background:transparent; border:none; color:#A1A1AA; cursor:pointer; padding:0; font-size:0.95rem;">⭐</button>
+          </div>
+        </div>
+
+        <!-- Scrollable Exam Question & Options Area -->
+        <div style="flex:1; overflow-y:auto; padding:16px; -webkit-overflow-scrolling:touch;">
+          
+          <!-- Question Text -->
+          <div id="ts-exam-q-text" style="font-size:0.98rem; font-weight:700; color:#F4F4F5; line-height:1.55; margin-bottom:18px;">
             प्रश्न लोड हो रहा है...
+          </div>
+
+          <!-- Options 1, 2, 3, 4 Cards Container -->
+          <div id="ts-exam-options-list" style="display:flex; flex-direction:column; gap:10px;">
+            <!-- Rendered by JS -->
+          </div>
+
+        </div>
+
+        <!-- Question Palette Popover / Drawer (Hidden by default) -->
+        <div id="ts-palette-drawer" style="display:none; position:absolute; top:46px; right:10px; z-index:40; width:220px; background:#18181B; border:1.5px solid #3F3F46; border-radius:14px; padding:12px; box-shadow:0 12px 30px rgba(0,0,0,0.8); animation:fadeIn 0.2s ease;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+            <span style="font-size:0.8rem; font-weight:800; color:#F4F4F5;">Question Palette</span>
+            <button onclick="toggleQuestionPalette(false)" style="background:transparent; border:none; color:#A1A1AA; cursor:pointer; font-size:0.9rem;">✕</button>
+          </div>
+          <div style="display:flex; gap:6px; font-size:0.65rem; color:#A1A1AA; margin-bottom:10px;">
+            <span>🟢 उत्तर दिया</span> • <span>🟣 समीक्षा</span>
+          </div>
+          <div id="ts-palette-grid" style="display:grid; grid-template-columns:repeat(5, 1fr); gap:8px;">
+            <!-- 1 to 10 numbers -->
+          </div>
+        </div>
+
+        <!-- Bottom Action Bar (Image 4 Style: Mark & Next, Clear, Save & Next) -->
+        <div style="display:flex; align-items:center; gap:8px; padding:12px 14px; background:#18181B; border-top:1px solid #27272A;">
+          <button onclick="markAndNextQuestion()" style="flex:1; background:transparent; border:1px solid #52525B; color:#E4E4E7; font-size:0.8rem; font-weight:700; padding:10px 4px; border-radius:8px; cursor:pointer; white-space:nowrap;">
+            Mark & Next
+          </button>
+          <button onclick="clearCurrentExamOption()" style="flex:0.8; background:transparent; border:1px solid #52525B; color:#E4E4E7; font-size:0.8rem; font-weight:700; padding:10px 4px; border-radius:8px; cursor:pointer; white-space:nowrap;">
+            Clear
+          </button>
+          <button id="ts-btn-save-next" onclick="saveAndNextQuestion()" style="flex:1.2; background:#3B82F6; border:none; color:#FFFFFF; font-size:0.82rem; font-weight:800; padding:10px 6px; border-radius:8px; cursor:pointer; white-space:nowrap; box-shadow:0 2px 10px rgba(59,130,246,0.3);">
+            Save & Next
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ═════════════════════════════════════════════════════════
+           📱 STEP 5: SCORECARD & PERFORMANCE REVIEW
+           ═════════════════════════════════════════════════════════ -->
+      <div id="ts-step-result" style="display:none; flex-direction:column; height:100%; max-height:92vh; overflow:hidden;">
+        
+        <!-- Header -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid #27272A; background:#18181B;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.2rem;">🏆</span>
+            <span style="font-size:1rem; font-weight:800; color:#F4F4F5;">परीक्षा परिणाम (Scorecard)</span>
+          </div>
+          <button onclick="closeQuizHubModal()" title="बंद करें" style="background:rgba(255,255,255,0.08); border:1px solid #3F3F46; color:#D4D4D8; width:30px; height:30px; border-radius:50%; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+
+        <!-- Scrollable Result & Solution List -->
+        <div style="flex:1; overflow-y:auto; padding:16px; -webkit-overflow-scrolling:touch;">
+          
+          <h4 id="ts-result-test-title" style="font-size:0.95rem; font-weight:800; color:#F4F4F5; margin:0 0 12px 0; text-align:center;">
+            रामायण मॉक टेस्ट
           </h4>
 
-          <!-- MCQ Options List (A, B, C, D) -->
-          <div id="quiz-options-list" style="display:flex; flex-direction:column; gap:9px;">
-            <!-- Options rendered dynamically -->
+          <!-- Summary Metric Cards Grid -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px;">
+            
+            <div style="background:#18181B; border:1px solid #27272A; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:0.7rem; color:#A1A1AA; font-weight:700;">प्राप्तांक (SCORE)</div>
+              <div id="ts-result-score" style="font-size:1.4rem; font-weight:900; color:#F59E0B; margin-top:2px;">18.0 / 20.0</div>
+            </div>
+
+            <div style="background:#18181B; border:1px solid #27272A; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:0.7rem; color:#A1A1AA; font-weight:700;">सटीकता (ACCURACY)</div>
+              <div id="ts-result-accuracy" style="font-size:1.4rem; font-weight:900; color:#10B981; margin-top:2px;">90%</div>
+            </div>
+
+            <div style="background:#18181B; border:1px solid #27272A; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:0.7rem; color:#A1A1AA; font-weight:700;">समय (TIME SPENT)</div>
+              <div id="ts-result-time" style="font-size:1.15rem; font-weight:800; color:#60A5FA; margin-top:4px;">04m 12s</div>
+            </div>
+
+            <div style="background:#18181B; border:1px solid #27272A; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:0.7rem; color:#A1A1AA; font-weight:700;">सही / गलत / छोड़े</div>
+              <div style="font-size:0.95rem; font-weight:800; margin-top:5px;">
+                <span id="ts-result-correct" style="color:#10B981;">9</span> / 
+                <span id="ts-result-wrong" style="color:#EF4444;">1</span> / 
+                <span id="ts-result-skipped" style="color:#A1A1AA;">0</span>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Dynamic Feedback Area (Explanation & Next Button) -->
-          <div id="quiz-feedback-box" style="display:none; margin-top:14px; padding:12px 14px; border-radius:16px; background:rgba(16,185,129,0.18); border:1.5px solid #10B981; animation:fadeInUp 0.25s ease;">
-            <div id="quiz-feedback-title" style="font-size:0.94rem; font-weight:900; color:#34D399; margin-bottom:4px;">
-              🎉 शाबाश! सही जवाब! (+10 साधना अंक)
-            </div>
-            <p id="quiz-feedback-desc" style="font-size:0.86rem; color:#F1F5F9; margin:0 0 10px 0; line-height:1.55; font-weight:600;">
-              स्पष्टीकरण
-            </p>
-            <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
-              <a id="quiz-map-link" href="#" target="_blank" style="font-size:0.78rem; color:#FDE68A; text-decoration:underline; font-weight:800;">📍 गूगल मैप पर देखें</a>
-              <button onclick="nextQuizQuestion()" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-size:0.86rem; font-weight:900; padding:8px 18px; border-radius:14px; cursor:pointer; box-shadow:0 3px 12px rgba(248,200,59,0.4); display:flex; align-items:center; gap:6px;">अगला प्रश्न ➔</button>
-            </div>
+          <!-- Share on WhatsApp CTA -->
+          <button onclick="shareScoreWhatsApp()" style="width:100%; background:#25D366; color:#FFFFFF; border:none; font-size:0.88rem; font-weight:800; padding:11px 0; border-radius:12px; cursor:pointer; margin-bottom:16px; display:flex; align-items:center; justify-content:center; gap:8px;">
+            <span>📲</span> WhatsApp पर स्कोर शेयर करें
+          </button>
+
+          <!-- Wall of Fame View Rank Button -->
+          <button onclick="switchQuizViewTab('wall_of_fame')" style="width:100%; background:linear-gradient(135deg, #F59E0B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.88rem; font-weight:900; padding:12px 0; border-radius:12px; cursor:pointer; margin-bottom:12px; box-shadow:0 4px 15px rgba(245,158,11,0.35); display:flex; align-items:center; justify-content:center; gap:8px;">
+            <span>🏆</span> Wall of Fame पर अपनी रैंक देखें ➔
+          </button>
+
+          <!-- Action Buttons: Re-attempt & Change Topic -->
+          <div style="display:flex; gap:10px; margin-bottom:18px;">
+            <button onclick="startActualExam()" style="flex:1; background:#27272A; border:1px solid #3F3F46; color:#F4F4F5; font-size:0.82rem; font-weight:800; padding:10px 0; border-radius:10px; cursor:pointer;">
+              🔄 पुनः टेस्ट दें
+            </button>
+            <button onclick="goToQuizStep(1)" style="flex:1; background:#3B82F6; border:none; color:#FFFFFF; font-size:0.82rem; font-weight:800; padding:10px 0; border-radius:10px; cursor:pointer;">
+              📚 अन्य टॉपिक चुनें
+            </button>
+          </div>
+
+          <!-- Solutions & Detailed Explanations Section -->
+          <div style="font-size:0.92rem; font-weight:800; color:#F4F4F5; margin-bottom:12px; display:flex; align-items:center; gap:6px;">
+            <span>💡</span> प्रश्न हल एवं स्पष्टीकरण (Solutions & Explanations)
+          </div>
+
+          <div id="ts-result-review-list">
+            <!-- Review items dynamically injected -->
           </div>
 
         </div>
-      </div>
 
-      <!-- 🏆 Completion Result View (Hidden during gameplay) -->
-      <div id="quiz-result-view" style="display:none; text-align:center; padding:1rem 0.5rem;">
-        <div style="font-size:3.5rem; margin-bottom:8px;">🏆</div>
-        <h3 style="font-size:1.35rem; font-weight:900; color:#FFFDF8; margin:0 0 4px 0;">॥ क्विज़ पूर्ण ॥</h3>
-        <p style="font-size:0.85rem; color:#FDE68A; margin:0 0 16px 0;">पावन सनातन ज्ञान यात्रा</p>
-
-        <div style="background:rgba(248,200,59,0.12); border:1.5px solid rgba(248,200,59,0.4); border-radius:20px; padding:1.2rem; margin-bottom:18px;">
-          <div id="quiz-final-score" style="font-size:2.8rem; font-weight:900; color:#F8C83B; line-height:1;">
-            10 / 10
-          </div>
-          <div style="font-size:0.82rem; color:#CBD5E1; margin-top:4px;">आज का आपका स्कोर</div>
-          <div id="quiz-high-score-banner" style="font-size:0.85rem; color:#34D399; font-weight:800; margin-top:10px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.1);">
-            🌟 आपका सर्वश्रेष्ठ स्कोर: <span id="quiz-high-score-num">10</span>
-          </div>
-        </div>
-
-        <!-- 📲 WhatsApp Share Button -->
-        <button onclick="shareQuizScoreWhatsApp()" style="width:100%; padding:12px; background:#25D366; color:#FFF; border:none; border-radius:16px; font-weight:900; font-size:0.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 15px rgba(37,211,102,0.4); margin-bottom:10px;">
-          <span>📲</span> WhatsApp पर उपलब्धि शेयर करें 🚩
-        </button>
-
-        <!-- 🔄 Play Again Button -->
-        <button onclick="restartQuizCurrentCategory()" style="width:100%; padding:11px; background:rgba(255,255,255,0.1); color:#FDE68A; border:1.5px solid rgba(248,200,59,0.3); border-radius:16px; font-weight:800; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
-          <span>🔄</span> पुनः खेलें (नये प्रश्न)
-        </button>
       </div>
 
     </div>
@@ -18075,13 +18333,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           </div>
 
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; text-align:left;">
-            <div style="width:48px; height:48px; border-radius:14px; background:#FFFFFF; border:1.5px solid #60A5FA; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.18);">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M21.35 11.1H12v3.8h5.38c-.45 2.1-2.25 3.6-5.38 3.6-3.3 0-6-2.7-6-6s2.7-6 6-6c1.45 0 2.75.55 3.75 1.45l2.85-2.85C16.9 3.4 14.6 2.5 12 2.5 6.75 2.5 2.5 6.75 2.5 12s4.25 9.5 9.5 9.5c5.5 0 9.15-3.85 9.15-9.3 0-.7-.05-1.4-.15-2.1z" fill="#4285F4"/>
-                <path d="M4.2 7.7l3.15 2.3c.85-2.3 2.85-3.5 4.65-3.5 1.45 0 2.75.55 3.75 1.45l2.85-2.85C16.9 3.4 14.6 2.5 12 2.5c-3.6 0-6.7 2.1-8.2 5.2z" fill="#EA4335"/>
-                <path d="M12 21.5c2.5 0 4.7-.85 6.35-2.35l-3-2.45c-.85.6-1.95.95-3.35.95-3.1 0-4.9-1.5-5.35-3.6l-3.2 2.45C5.1 19.5 8.25 21.5 12 21.5z" fill="#34A853"/>
-                <path d="M3.45 14.05c-.2-.6-.35-1.3-.35-2.05s.15-1.45.35-2.05l-3.2-2.45C.1 8.8 0 10.35 0 12s.1 3.2.25 4.5l3.2-2.45z" fill="#FBBC05"/>
-              </svg>
+            <div style="width:48px; height:48px; border-radius:14px; background:#FFFFFF; border:1.5px solid #60A5FA; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.18); padding:5px; box-sizing:border-box;">
+              <img src="assets/gpay_logo.png" alt="Google Pay" style="width:100%; height:100%; object-fit:contain; display:block;" />
             </div>
             <div style="flex:1; min-width:0;">
               <div style="font-size:1.05rem; font-weight:900; color:#FFFFFF; letter-spacing:0.3px;">
@@ -18097,17 +18350,15 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           </div>
 
           <!-- Main Google Pay Pay Action Button -->
-          <button onclick="openSpecificUpiApp('gpay')" style="width:100%; background:linear-gradient(135deg, #1A73E8 0%, #1557B0 100%); color:#FFFFFF; border:none; font-size:0.95rem; font-weight:900; padding:13px 16px; border-radius:14px; cursor:pointer; box-shadow:0 4px 18px rgba(26,115,232,0.45); display:flex; align-items:center; justify-content:center; gap:8px; transition:transform 0.15s ease;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M21.35 11.1H12v3.8h5.38c-.45 2.1-2.25 3.6-5.38 3.6-3.3 0-6-2.7-6-6s2.7-6 6-6c1.45 0 2.75.55 3.75 1.45l2.85-2.85C16.9 3.4 14.6 2.5 12 2.5 6.75 2.5 2.5 6.75 2.5 12s4.25 9.5 9.5 9.5c5.5 0 9.15-3.85 9.15-9.3 0-.7-.05-1.4-.15-2.1z" fill="#FFF"/>
-            </svg>
+          <button onclick="openSpecificUpiApp('gpay')" style="width:100%; background:linear-gradient(135deg, #1A73E8 0%, #1557B0 100%); color:#FFFFFF; border:none; font-size:0.95rem; font-weight:900; padding:13px 16px; border-radius:14px; cursor:pointer; box-shadow:0 4px 18px rgba(26,115,232,0.45); display:flex; align-items:center; justify-content:center; gap:10px; transition:transform 0.15s ease;">
+            <img src="assets/gpay_logo.png" alt="Google Pay" style="width:24px; height:24px; object-fit:contain; background:#FFFFFF; border-radius:6px; padding:2px; flex-shrink:0; display:block;" />
             <span id="gpay-action-btn-text">Google Pay से भुगतान करें (₹21)</span> ➔
           </button>
         </div>
 
         <!-- 🔄 EXPAND / COLLAPSE OTHER PAYMENT OPTIONS TOGGLE BUTTON 🔄 -->
         <button id="toggle-other-upi-btn" onclick="toggleOtherUpiOptions()" style="width:100%; background:rgba(255,255,255,0.06); border:1.5px solid rgba(248,200,59,0.35); color:#FDE68A; border-radius:14px; padding:11px 14px; font-size:0.83rem; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:12px; transition:all 0.2s ease; box-shadow:0 2px 10px rgba(0,0,0,0.3);">
-          <span>✨ अन्य UPI ऐप्स (PhonePe, Paytm) व QR कोड देखें ▼</span>
+          <span>✨ अन्य UPI ऐप्स (PhonePe, Paytm, BHIM, Amazon Pay) व QR कोड देखें ▼</span>
         </button>
 
         <!-- ═════════════════════════════════════════════════════════
@@ -18123,13 +18374,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-bottom:10px;">
             
             <!-- 1. PhonePe -->
-            <div onclick="openSpecificUpiApp('phonepe')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(95,37,159,0.4) 0%, rgba(147,51,234,0.15) 100%); border:1.5px solid #A855F7; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-              <div style="width:36px; height:36px; border-radius:10px; background:#5F259F; border:1px solid #C084FC; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="11" fill="#5F259F"/>
-                  <path d="M7 6h4c2.5 0 4 1.5 4 4s-1.5 4-4 4H9.5v5H7V6zm2.5 6H11c1 0 1.6-.6 1.6-1.5S12 9 11 9H9.5v3z" fill="#FFF"/>
-                  <path d="M14.5 13.5l3.5 5.5h-2.5l-2.6-4.2 1.6-1.3z" fill="#F8C83B"/>
-                </svg>
+            <div onclick="openSpecificUpiApp('phonepe')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(95,37,159,0.4) 0%, rgba(147,51,234,0.15) 100%); border:1.5px solid #A855F7; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:9px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:38px; height:38px; border-radius:12px; background:#5F259F; border:1.5px solid #C084FC; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; box-shadow:0 3px 10px rgba(95,37,159,0.35);">
+                <img src="assets/phonepe_logo.png" alt="PhonePe" style="width:100%; height:100%; object-fit:cover; display:block;" />
               </div>
               <div style="flex:1; min-width:0; text-align:left;">
                 <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">PhonePe</div>
@@ -18138,13 +18385,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             </div>
 
             <!-- 2. Paytm -->
-            <div onclick="openSpecificUpiApp('paytm')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,46,110,0.4) 0%, rgba(0,186,242,0.15) 100%); border:1.5px solid #00BAF2; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-              <div style="width:36px; height:36px; border-radius:10px; background:#002E6E; border:1px solid #00BAF2; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <rect width="24" height="24" rx="6" fill="#002E6E"/>
-                  <path d="M4 8h5c1.5 0 2.5 1 2.5 2.5S10.5 13 9 13H6.5v4H4V8zm2.5 3h2.3c.5 0 .8-.3.8-.8s-.3-.7-.8-.7H6.5v1.5z" fill="#00BAF2"/>
-                  <path d="M14 10h2.2l1.3 3.3L18.8 10H21l-2.6 6.5h-1.8L14 10z" fill="#FFF"/>
-                </svg>
+            <div onclick="openSpecificUpiApp('paytm')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,46,110,0.4) 0%, rgba(0,186,242,0.15) 100%); border:1.5px solid #00BAF2; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:9px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:38px; height:38px; border-radius:12px; background:#FFFFFF; border:1.5px solid #00BAF2; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; box-shadow:0 3px 10px rgba(0,186,242,0.3); padding:3px; box-sizing:border-box;">
+                <img src="assets/paytm_logo.png" alt="Paytm" style="width:100%; height:100%; object-fit:contain; display:block;" />
               </div>
               <div style="flex:1; min-width:0; text-align:left;">
                 <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">Paytm</div>
@@ -18153,14 +18396,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             </div>
 
             <!-- 3. BHIM UPI -->
-            <div onclick="openSpecificUpiApp('bhim')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,121,107,0.4) 0%, rgba(20,184,166,0.15) 100%); border:1.5px solid #14B8A6; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-              <div style="width:36px; height:36px; border-radius:10px; background:#042F2E; border:1px solid #14B8A6; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <rect width="24" height="24" rx="6" fill="#042F2E"/>
-                  <path d="M5 6h5c2 0 3.2 1 3.2 2.5 0 1-.6 1.8-1.5 2.1 1.2.3 2 1.2 2 2.4 0 1.6-1.3 2.6-3.5 2.6H5V6zm2.4 3.7h2.2c.6 0 1-.3 1-.8s-.4-.8-1-.8H7.4v1.6zm0 3.8h2.5c.7 0 1.2-.3 1.2-.9s-.5-.9-1.2-.9H7.4v1.8z" fill="#F97316"/>
-                  <path d="M14.5 6h2.4v9.6h-2.4V6z" fill="#FFF"/>
-                  <path d="M18.5 6H21v9.6h-2.5V6z" fill="#10B981"/>
-                </svg>
+            <div onclick="openSpecificUpiApp('bhim')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(0,121,107,0.4) 0%, rgba(20,184,166,0.15) 100%); border:1.5px solid #14B8A6; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:9px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:38px; height:38px; border-radius:12px; background:#FFFFFF; border:1.5px solid #14B8A6; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; box-shadow:0 3px 10px rgba(20,184,166,0.3); padding:4px; box-sizing:border-box;">
+                <img src="assets/bhim_logo.png" alt="BHIM UPI" style="width:100%; height:100%; object-fit:contain; display:block;" />
               </div>
               <div style="flex:1; min-width:0; text-align:left;">
                 <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">BHIM UPI</div>
@@ -18169,13 +18407,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             </div>
 
             <!-- 4. Amazon Pay -->
-            <div onclick="openSpecificUpiApp('amazonpay')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(245,158,11,0.2) 0%, rgba(180,83,9,0.1) 100%); border:1.5px solid #F59E0B; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-              <div style="width:36px; height:36px; border-radius:10px; background:#1C1917; border:1px solid #F59E0B; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 14.5c4.5 3 11.5 3 16 0" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
-                  <path d="M18 13.5l2.2 1-1 2.2" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="12" cy="8" r="3" fill="#FFF"/>
-                </svg>
+            <div onclick="openSpecificUpiApp('amazonpay')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(245,158,11,0.2) 0%, rgba(180,83,9,0.1) 100%); border:1.5px solid #F59E0B; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:9px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
+              <div style="width:38px; height:38px; border-radius:12px; background:#232F3E; border:1.5px solid #F59E0B; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; box-shadow:0 3px 10px rgba(245,158,11,0.3); padding:2px; box-sizing:border-box;">
+                <img src="assets/amazonpay_logo.png" alt="Amazon Pay" style="width:100%; height:100%; object-fit:contain; display:block;" />
               </div>
               <div style="flex:1; min-width:0; text-align:left;">
                 <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">Amazon Pay</div>
@@ -18185,7 +18419,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
             <!-- 5. CRED Pay -->
             <div onclick="openSpecificUpiApp('cred')" class="upi-app-card" style="background:linear-gradient(145deg, rgba(17,24,39,0.7) 0%, rgba(31,41,55,0.4) 100%); border:1.5px solid rgba(255,255,255,0.25); border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;">
-              <div style="width:36px; height:36px; border-radius:10px; background:#000; border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <div style="width:38px; height:38px; border-radius:12px; background:#000; border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <circle cx="12" cy="12" r="10" stroke="#FFF" stroke-width="2"/>
                   <circle cx="12" cy="12" r="5" fill="#FFF"/>
@@ -18199,7 +18433,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
             <!-- 6. Universal "Any UPI App" Card -->
             <div onclick="openSpecificUpiApp('generic')" class="upi-app-card" style="background:linear-gradient(135deg, rgba(248,200,59,0.22) 0%, rgba(217,119,6,0.15) 100%); border:1.5px solid #F8C83B; border-radius:14px; padding:9px 11px; cursor:pointer; display:flex; align-items:center; gap:8px; transition:transform 0.15s ease;">
-              <div style="width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:#1A0B2E; flex-shrink:0;">
+              <div style="width:38px; height:38px; border-radius:12px; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:#1A0B2E; flex-shrink:0;">
                 ⚡
               </div>
               <div style="flex:1; min-width:0; text-align:left;">
@@ -18218,11 +18452,21 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
               <span style="display:inline-flex; align-items:center; justify-content:center; background:#4285F4; color:#FFF; width:17px; height:17px; border-radius:50%; font-size:11px; font-weight:900;">✓</span>
             </div>
             
-            <div style="font-size:0.75rem; color:#475569; font-weight:700; margin-bottom:2px;">
+            <div style="font-size:0.75rem; color:#475569; font-weight:700; margin-bottom:4px;">
               UPI ID: <span style="color:#1A73E8; font-weight:900;">mishravishwanath86-2@oksbi</span>
             </div>
+
+            <!-- Supported Apps Icons Row -->
+            <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin:8px 0 6px;">
+              <img src="assets/gpay_logo.png" alt="Google Pay" title="Google Pay" style="width:22px; height:22px; object-fit:contain;" />
+              <img src="assets/phonepe_logo.png" alt="PhonePe" title="PhonePe" style="width:22px; height:22px; border-radius:50%; object-fit:cover;" />
+              <img src="assets/paytm_logo.png" alt="Paytm" title="Paytm" style="width:22px; height:22px; border-radius:5px; object-fit:contain; background:#fff;" />
+              <img src="assets/bhim_logo.png" alt="BHIM" title="BHIM" style="width:22px; height:22px; border-radius:5px; object-fit:contain; background:#fff;" />
+              <img src="assets/amazonpay_logo.png" alt="Amazon Pay" title="Amazon Pay" style="width:22px; height:22px; border-radius:50%; object-fit:cover;" />
+            </div>
+
             <div style="font-size:0.68rem; color:#64748B; margin-bottom:10px;">
-              Google Pay • PhonePe • Paytm • BHIM • कोई भी UPI स्कैनर
+              Google Pay • PhonePe • Paytm • BHIM • Amazon Pay
             </div>
 
             <!-- QR Code Image Card -->
@@ -19484,10 +19728,28 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
   </script>
   <script src="epic_games_engine.js"></script>
   <script src="ai_bhakti_player.js"></script>
+  <script src="mcq_test_series_engine.js?v=1792000002"></script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       🚀 FLOATING IN-APP UPDATE NOTIFICATION BANNER 🚀
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <div id="app-update-top-banner" style="display:none; position:fixed; top:12px; left:50%; transform:translateX(-50%); width:calc(100% - 24px); max-width:440px; z-index:100400; background:linear-gradient(135deg, #7C2D12 0%, #B45309 50%, #D97706 100%); border:1.8px solid #FDE68A; border-radius:18px; padding:10px 14px; box-shadow:0 12px 35px rgba(0,0,0,0.8), 0 0 15px rgba(245,158,11,0.5); align-items:center; justify-content:space-between; cursor:pointer;" onclick="if(window.APP_UPDATE_CONFIG &amp;&amp; window.APP_UPDATE_CONFIG.latestReleaseInfo) window.openUpdateModal(window.APP_UPDATE_CONFIG.latestReleaseInfo)">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="font-size:1.6rem;">🚀</div>
+      <div style="text-align:left;">
+        <div style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">नया पावन अपडेट उपलब्ध है! <span id="banner-version-tag" style="background:#FEF3C7; color:#92400E; padding:1px 6px; border-radius:6px; font-size:0.75rem;"></span></div>
+        <div style="font-size:0.72rem; color:#FEF3C7;">नए पावन फीचर्स व सुधार के लिए यहाँ टैप करें</div>
+      </div>
+    </div>
+    <div style="background:#FFFDF8; color:#92400E; font-size:0.78rem; font-weight:900; padding:6px 12px; border-radius:12px; white-space:nowrap; box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+      अपडेट करें ➔
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════════════════════════════════════════════
        🚀 IN-APP UPDATE MODAL 🚀
        ═══════════════════════════════════════════════════════════════════════════ -->
-  <div id="app-update-modal" style="display:none; position:fixed; inset:0; z-index:100300; background:rgba(7,1,16,0.95); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); align-items:center; justify-content:center; padding:1.2rem; overflow-y:auto;">
+  <div id="app-update-modal" style="display:none; position:fixed; inset:0; z-index:100500; background:rgba(7,1,16,0.95); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); align-items:center; justify-content:center; padding:1.2rem; overflow-y:auto;">
     <div style="width:100%; max-width:400px; background:radial-gradient(circle at 50% 20%, #3B1259 0%, #1A052E 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.6rem 1.4rem; text-align:center; box-shadow:0 25px 80px rgba(0,0,0,0.95), 0 0 25px rgba(248,200,59,0.3) inset; position:relative; animation:fadeInUp 0.3s ease;">
       
       <!-- Icon & Close Button -->

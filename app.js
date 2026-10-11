@@ -21961,24 +21961,31 @@ window.prepareActiveQuizDeck = function(category) {
 // 🎯 CONTROLLER METHODS
 
 window.openQuizHubModal = async function() {
+  if (typeof window.openSanatanTestSeriesModal === 'function') {
+    window.openSanatanTestSeriesModal();
+    return;
+  }
   const modal = document.getElementById('quiz-hub-modal');
   if (modal) {
     modal.style.display = 'flex';
-    if (!window.ALL_MCQS_DATA || window.ALL_MCQS_DATA.length === 0) {
+    if (typeof window.ensureMCQsLoaded === 'function') {
+      await window.ensureMCQsLoaded();
+    } else if (typeof window.loadAllMCQsData === 'function') {
       await window.loadAllMCQsData();
     }
-    window.prepareActiveQuizDeck(window.currentQuizCategory);
-    window.applyQuizTheme();
-    window.startQuizTimer();
-    window.renderCurrentQuiz();
-    if (navigator.vibrate) navigator.vibrate(30);
+    if (typeof window.renderTopicsListStep === 'function') window.renderTopicsListStep();
+    if (typeof window.goToQuizStep === 'function') window.goToQuizStep(1);
+    if (navigator.vibrate) navigator.vibrate(25);
   }
 };
 
 window.closeQuizHubModal = function() {
   const modal = document.getElementById('quiz-hub-modal');
   if (modal) modal.style.display = 'none';
-  window.stopQuizTimer();
+  if (window.tsState) {
+    clearInterval(window.tsState.examTimerInterval);
+    clearInterval(window.tsState.qTimerInterval);
+  }
   if ('speechSynthesis' in window) window.speechSynthesis.cancel();
 };
 
@@ -22962,7 +22969,7 @@ window.proceedToUpiAppSelection = function() {
   const otherContainer = document.getElementById('other-upi-options-container');
   const toggleBtn = document.getElementById('toggle-other-upi-btn');
   if (otherContainer) otherContainer.style.display = 'none';
-  if (toggleBtn) toggleBtn.innerHTML = '<span>✨ अन्य UPI ऐप्स (PhonePe, Paytm) व QR कोड देखें ▼</span>';
+  if (toggleBtn) toggleBtn.innerHTML = '<span>✨ अन्य UPI ऐप्स (PhonePe, Paytm, BHIM, Amazon Pay) व QR कोड देखें ▼</span>';
 
   // Pre-generate Dynamic Live UPI QR Code
   const note = `${title} - ${yajman} (${gotra})`;
@@ -23099,7 +23106,7 @@ window.toggleOtherUpiOptions = function(forceOpen) {
     }, 60);
   } else {
     container.style.display = 'none';
-    if (btn) btn.innerHTML = '<span>✨ अन्य UPI ऐप्स (PhonePe, Paytm) व QR कोड देखें ▼</span>';
+    if (btn) btn.innerHTML = '<span>✨ अन्य UPI ऐप्स (PhonePe, Paytm, BHIM, Amazon Pay) व QR कोड देखें ▼</span>';
   }
 };
 
@@ -30112,53 +30119,118 @@ window.renderFullDrikChalisaPage = function(filterCategory, searchQuery) {
 // ══════════════════════════════════════════════════════════════════════════════
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 8,
-  currentVersionName: '1.7.0',
-  manifestUrl: 'https://raw.githubusercontent.com/mishravishwanath86-bot/Bhakti-me-leen/main/version.json',
-  downloadUrl: 'https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.7.0/bhakti-app.apk',
-  latestReleaseInfo: null
+  currentVersionCode: 9,
+  currentVersionName: '1.8.0',
+  manifestUrls: [
+    'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
+    'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',
+    'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/releases/latest',
+    'https://raw.githubusercontent.com/mishravishwanath86-bot/Bhakti-me-leen/main/version.json'
+  ],
+  downloadUrl: 'https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/latest/download/bhakti-app.apk',
+  latestReleaseInfo: null,
+  isChecking: false
 };
 
 window.checkForAppUpdates = async function(isManualUserCheck = false) {
-  if (isManualUserCheck) {
-    if (typeof showToast === 'function') showToast('🔄 नए अपडेट की जांच हो रही है...');
+  if (window.APP_UPDATE_CONFIG.isChecking) return;
+  window.APP_UPDATE_CONFIG.isChecking = true;
+
+  if (isManualUserCheck && typeof showToast === 'function') {
+    showToast('🔄 नए अपडेट की जांच हो रही है...');
   }
 
-  try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 6000);
+  let updateData = null;
 
-    const resp = await fetch(window.APP_UPDATE_CONFIG.manifestUrl + '?t=' + Date.now(), {
-      signal: controller.signal,
-      headers: { 'Cache-Control': 'no-cache' }
-    });
-    clearTimeout(timeoutId);
+  for (const endpoint of window.APP_UPDATE_CONFIG.manifestUrls) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 4500);
+      const cacheBust = endpoint.includes('?') ? '&_t=' + Date.now() : '?_t=' + Date.now();
 
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const data = await resp.json();
-    window.APP_UPDATE_CONFIG.latestReleaseInfo = data;
+      const resp = await fetch(endpoint + cacheBust, {
+        signal: controller.signal,
+        headers: { 'Accept': 'application/json' }
+      });
+      clearTimeout(timeoutId);
 
-    const remoteCode = parseInt(data.versionCode || 0, 10);
-    const currentCode = window.APP_UPDATE_CONFIG.currentVersionCode;
+      if (!resp.ok) continue;
+      const raw = await resp.json();
 
-    if (remoteCode > currentCode) {
-      const badge = document.getElementById('update-badge');
-      if (badge) badge.style.display = 'inline-block';
-
-      window.openUpdateModal(data);
-    } else {
-      if (isManualUserCheck) {
-        if (typeof showToast === 'function') {
-          showToast(`✅ आपका ऐप नवीनतम संस्करण पर है (${window.APP_UPDATE_CONFIG.currentVersionName})!`);
-        }
+      // Case 1: GitHub /contents/ API (base64 payload)
+      if (raw && raw.content && raw.encoding === 'base64') {
+        try {
+          const decodedStr = decodeURIComponent(escape(atob(raw.content.replace(/\s/g, ''))));
+          updateData = JSON.parse(decodedStr);
+          if (updateData && updateData.versionCode) break;
+        } catch (_) {}
       }
+      // Case 2: Direct version.json (jsDelivr or Raw GitHub)
+      else if (raw && raw.versionCode) {
+        updateData = raw;
+        break;
+      }
+      // Case 3: GitHub /releases/latest API
+      else if (raw && raw.tag_name) {
+        const apkAsset = Array.isArray(raw.assets) ? raw.assets.find(a => a.name && a.name.endsWith('.apk')) : null;
+        const tagVer = raw.tag_name.replace(/^v/, '');
+        const verNum = parseInt(tagVer.replace(/[^0-9]/g, '') || '0', 10);
+        updateData = {
+          versionCode: verNum > 0 ? verNum : 999,
+          versionName: tagVer,
+          apkUrl: apkAsset ? apkAsset.browser_download_url : `https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/${raw.tag_name}/bhakti-app.apk`,
+          title: raw.name || `पावन अपडेट ${raw.tag_name} उपलब्ध है! 🚀`,
+          releaseNotes: raw.body ? raw.body.split('\n').map(l => l.trim()).filter(l => l.length > 0) : ['समस्त पावन फीचर्स व सुधार'],
+          forceUpdate: false
+        };
+        break;
+      }
+    } catch (e) {
+      // Endpoint timed out or blocked by ISP; continue to next mirror
     }
-  } catch (err) {
-    console.log('[UpdateChecker] Offline or manifest unavailable:', err.message);
-    if (isManualUserCheck) {
-      if (typeof showToast === 'function') {
-        showToast(`ℹ️ वर्तमान संस्करण: ${window.APP_UPDATE_CONFIG.currentVersionName} (नेटवर्क उपलब्ध होने पर पुनः जांचें)`);
-      }
+  }
+
+  window.APP_UPDATE_CONFIG.isChecking = false;
+
+  if (!updateData) {
+    console.log('[UpdateChecker] Offline or mirrors unreachable');
+    if (isManualUserCheck && typeof showToast === 'function') {
+      showToast(`ℹ️ वर्तमान संस्करण: v${window.APP_UPDATE_CONFIG.currentVersionName} (इंटरनेट उपलब्ध होने पर पुनः जांचें)`);
+    }
+    return;
+  }
+
+  window.APP_UPDATE_CONFIG.latestReleaseInfo = updateData;
+  if (updateData.apkUrl) {
+    window.APP_UPDATE_CONFIG.downloadUrl = updateData.apkUrl;
+  }
+
+  const remoteCode = parseInt(updateData.versionCode || 0, 10);
+  const currentCode = window.APP_UPDATE_CONFIG.currentVersionCode;
+  const isNewer = remoteCode > currentCode || (
+    updateData.versionName && 
+    updateData.versionName !== window.APP_UPDATE_CONFIG.currentVersionName && 
+    remoteCode >= currentCode
+  );
+
+  if (isNewer) {
+    // 1. Show Red Badge in Drawer and Settings
+    const badges = document.querySelectorAll('#update-badge, .update-badge');
+    badges.forEach(b => { b.style.display = 'inline-block'; });
+
+    // 2. Show persistent Top Update Notification Banner
+    const topBanner = document.getElementById('app-update-top-banner');
+    const bannerTag = document.getElementById('banner-version-tag');
+    if (topBanner) {
+      if (bannerTag && updateData.versionName) bannerTag.textContent = 'v' + updateData.versionName;
+      topBanner.style.display = 'flex';
+    }
+
+    // 3. Open full modal popup
+    window.openUpdateModal(updateData);
+  } else {
+    if (isManualUserCheck && typeof showToast === 'function') {
+      showToast(`✅ आपका ऐप नवीनतम संस्करण पर है (v${window.APP_UPDATE_CONFIG.currentVersionName})!`);
     }
   }
 };
@@ -30182,6 +30254,11 @@ window.openUpdateModal = function(data) {
     window.APP_UPDATE_CONFIG.downloadUrl = data.apkUrl;
   }
 
+  const dwnBtn = document.getElementById('update-download-btn');
+  if (dwnBtn && data.apkSize) {
+    dwnBtn.innerHTML = `<span>📲</span> अभी अपडेट डाउनलोड करें (${data.apkSize}) ➔`;
+  }
+
   const laterBtn = document.getElementById('update-later-btn');
   const closeBtn = document.getElementById('update-modal-close-btn');
   if (data.forceUpdate) {
@@ -30195,7 +30272,7 @@ window.openUpdateModal = function(data) {
   modal.style.display = 'flex';
   if (navigator.vibrate) navigator.vibrate([40, 30, 80]);
   if (typeof showToast === 'function') {
-    showToast('🚀 नया पावन अपडेट v' + (data.versionName || '1.5.0') + ' उपलब्ध है!');
+    showToast('🚀 नया पावन अपडेट v' + (data.versionName || '1.8.0') + ' उपलब्ध है!');
   }
 };
 
@@ -30217,11 +30294,20 @@ window.triggerApkDownload = function() {
   }
 };
 
-// Automatic silent background check 2.5 seconds after app launch
+// Automatic silent background check on launch
 setTimeout(() => {
   window.checkForAppUpdates(false);
-}, 2500);
+}, 2000);
 
+// Check again whenever app comes back to foreground
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    window.checkForAppUpdates(false);
+  }
+});
+window.addEventListener('focus', () => {
+  window.checkForAppUpdates(false);
+});
 
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -30627,6 +30713,14 @@ window.updateProfileUI = function() {
     const avatarEl = document.getElementById('prof-user-avatar');
     if (avatarEl) {
       avatarEl.src = savedAvatar;
+    }
+
+    if (typeof window.renderWallOfFame === 'function' && document.getElementById('ts-step-wall-of-fame') && document.getElementById('ts-step-wall-of-fame').style.display === 'flex') {
+      window.renderWallOfFame();
+    }
+
+    if (typeof window.renderWallOfFame === 'function' && document.getElementById('ts-step-wall-of-fame') && document.getElementById('ts-step-wall-of-fame').style.display === 'flex') {
+      window.renderWallOfFame();
     }
     
     const jaapEl = document.getElementById('prof-stat-jaap');
