@@ -563,15 +563,33 @@
   // 5. RELATED GAMES (Match, JigSaw, PadaBandham)
   // ══════════════════════════════════════════════════════════════════════════════
 
-  // ── Game 2: Match (Memory Card Game) ──
-  var matchDeck = [
-    { id: 'om', name: 'ॐ', symbol: '🕉️' },
-    { id: 'bow', name: 'धनुष-बाण', symbol: '🏹' },
-    { id: 'lotus', name: 'दिव्य कमल', symbol: '🪷' },
-    { id: 'shankh', name: 'पाञ्चजन्य', symbol: '🐚' },
-    { id: 'crown', name: 'मुकुट', symbol: '👑' },
-    { id: 'deepak', name: 'दीपक', symbol: '🪔' }
+  // ══════════════════════════════════════════════════════════════════════════════
+  // 5. RELATED GAMES (Match, JigSaw, PadaBandham) WITH COMPREHENSIVE APP DEITY IMAGES
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  // Master Repository of all authentic sacred deity images in the app
+  var ALL_APP_DEITIES = [
+    { id: 'ganesh', name: 'श्री गणेश', title: 'विघ्नहर्ता श्री गणेश जी', img: 'assets/deity_ganesh.jpg' },
+    { id: 'krishna', name: 'श्री कृष्ण', title: 'मुरलीधर श्री कृष्ण जी', img: 'assets/deity_krishna.jpg' },
+    { id: 'hanuman', name: 'श्री हनुमान', title: 'संकटमोचन हनुमान जी', img: 'assets/deity_hanuman.jpg' },
+    { id: 'shiva', name: 'महादेव शिव', title: 'देवों के देव महादेव', img: 'assets/deity_shiva.jpg' },
+    { id: 'durga', name: 'माँ दुर्गा', title: 'सिंहवाहिनी माँ दुर्गा', img: 'assets/deity_durga_hd.jpg' },
+    { id: 'lakshmi', name: 'माँ लक्ष्मी', title: 'महालक्ष्मी माता', img: 'assets/deity_lakshmi.jpg' },
+    { id: 'ram', name: 'श्री राम', title: 'मर्यादा पुरुषोत्तम श्री राम', img: 'assets/deity_ram.jpg' },
+    { id: 'saraswati', name: 'माँ सरस्वती', title: 'विद्या दायिनी माँ सरस्वती', img: 'assets/deity_saraswati.jpg' },
+    { id: 'radha_krishna', name: 'राधा कृष्ण', title: 'युगल सरकार राधा-कृष्ण', img: 'assets/deity_radha_krishna.jpg' },
+    { id: 'vishnu', name: 'श्री विष्णु', title: 'वैकुंठनाथ श्री हरि विष्णु', img: 'assets/deity_vishnu.jpg' },
+    { id: 'gayatri', name: 'माँ गायत्री', title: 'वेदमाता माँ गायत्री', img: 'assets/deity_gayatri.jpg' },
+    { id: 'khatushyam', name: 'खाटू श्याम', title: 'हारे का सहारा खाटू श्याम जी', img: 'assets/deity_khatushyam.jpg' },
+    { id: 'narasimha', name: 'श्री नरसिंह', title: 'भक्तवत्सल नरसिंह भगवान', img: 'assets/deity_narasimha.jpg' },
+    { id: 'sai', name: 'साईं बाबा', title: 'शिर्डी के साईं नाथ', img: 'assets/deity_sai.jpg' },
+    { id: 'shanidev', name: 'शनिदेव', title: 'कर्मफल दाता सूर्यपुत्र शनिदेव', img: 'assets/deity_shanidev.jpg' },
+    { id: 'shiva_parvati', name: 'शिव पार्वती', title: 'कल्याणकारी शिव-पार्वती जी', img: 'assets/shiva_parvati.jpg' },
+    { id: 'surya', name: 'सूर्य देव', title: 'प्रत्यक्ष देव भगवान भास्कर', img: 'assets/deity_surya.jpg' },
+    { id: 'kali', name: 'माँ काली', title: 'असुर संहारिणी माँ महाकाली', img: 'assets/deity_kali.jpg' }
   ];
+
+  // ── Game 2: Match (Memory Card Game with Rotating Real Deity Images) ──
   var matchFlipped = [];
   var matchMatchedCount = 0;
   var matchMoves = 0;
@@ -580,10 +598,20 @@
     matchFlipped = [];
     matchMatchedCount = 0;
     matchMoves = 0;
-    document.getElementById('match-moves-count').textContent = '0';
+    var movesEl = document.getElementById('match-moves-count');
+    if (movesEl) movesEl.textContent = '0';
 
-    var cards = matchDeck.concat(matchDeck); // 12 cards
-    // Shuffle
+    // Pick 6 random deities from master pool
+    var shuffledPool = ALL_APP_DEITIES.slice();
+    for (var p = shuffledPool.length - 1; p > 0; p--) {
+      var r = Math.floor(Math.random() * (p + 1));
+      var tmp = shuffledPool[p]; shuffledPool[p] = shuffledPool[r]; shuffledPool[r] = tmp;
+    }
+    var chosen6 = shuffledPool.slice(0, 6);
+
+    // Create 12 cards (6 pairs)
+    var cards = chosen6.concat(chosen6);
+    // Fisher-Yates shuffle cards
     for (var i = cards.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
       var t = cards[i]; cards[i] = cards[j]; cards[j] = t;
@@ -600,10 +628,13 @@
       card.dataset.index = index;
       card.innerHTML = `
         <div class="match-tile-inner">
-          <div class="match-tile-back">🎴</div>
-          <div class="match-tile-front">
-            <span style="font-size:2.2rem;">${item.symbol}</span>
-            <span style="font-size:0.75rem;font-weight:800;color:#3B124D;margin-top:4px;">${item.name}</span>
+          <div class="match-tile-back" style="background:linear-gradient(135deg, #3B1259 0%, #1A052E 100%); border:1.8px solid #F59E0B; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <span style="font-size:1.6rem; filter:drop-shadow(0 0 6px #F59E0B);">🕉️</span>
+            <span style="font-size:0.6rem; color:#FDE68A; font-weight:800; margin-top:2px;">भक्ति</span>
+          </div>
+          <div class="match-tile-front" style="background:#FFFDF8; border:2px solid #F59E0B; border-radius:12px; padding:4px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <img src="${item.img}" alt="${item.name}" style="width:100%; height:52px; object-fit:cover; border-radius:8px; border:1px solid rgba(245,158,11,0.3);">
+            <div class="match-tile-name" style="font-size:0.65rem; font-weight:900; color:#2A0E44; margin-top:2px; text-align:center;">${item.name}</div>
           </div>
         </div>
       `;
@@ -621,7 +652,8 @@
 
     if (matchFlipped.length === 2) {
       matchMoves++;
-      document.getElementById('match-moves-count').textContent = matchMoves;
+      var movesEl = document.getElementById('match-moves-count');
+      if (movesEl) movesEl.textContent = matchMoves;
 
       var c1 = matchFlipped[0];
       var c2 = matchFlipped[1];
@@ -638,7 +670,7 @@
           setTimeout(function () {
             playSound('victory');
             addCoins(100);
-            alert(`🎉 बधाई हो! आपने ${matchMoves} चालों में स्मृति खेल पूरा किया!\n+100 🪙 सिक्के अर्जित किए!`);
+            alert(`🎉 बधाई हो! आपने ${matchMoves} चालों में दिव्य स्मृति खेल पूरा किया!\n+100 🪙 सिक्के अर्जित किए!`);
           }, 400);
         }
       } else {
@@ -652,40 +684,119 @@
     }
   }
 
-  // ── Game 3: JigSaw (Sliding Tile Puzzle) ──
-  var jigsawTiles = [1, 2, 3, 4, 5, 6, 7, 8, 0]; // 0 is empty slot
+  // ── Game 3: JigSaw (Divine Deity Picture Puzzle Game - 18 Sacred Levels) ──
+  var JIGSAW_LEVELS = ALL_APP_DEITIES;
+  var currentJigsawLevel = 0;
+  // Solvable initial layouts for 3x3 sliding tile puzzle
+  var JIGSAW_SOLVABLE_STARTS = [
+    [1, 2, 3, 4, 0, 5, 7, 8, 6],
+    [1, 2, 3, 0, 4, 6, 7, 5, 8],
+    [2, 1, 3, 4, 5, 6, 7, 0, 8],
+    [1, 3, 0, 4, 2, 5, 7, 8, 6],
+    [1, 2, 0, 4, 5, 3, 7, 8, 6],
+    [1, 2, 3, 4, 5, 0, 7, 8, 6],
+    [1, 0, 3, 4, 2, 5, 7, 8, 6]
+  ];
+  var jigsawTiles = [1, 2, 3, 4, 0, 5, 7, 8, 6];
   var jigsawMoves = 0;
+  var jigsawSolved = false;
+
+  function renderJigsawLevelSelector() {
+    var container = document.getElementById('jigsaw-levels-selector');
+    if (!container) return;
+    container.innerHTML = '';
+
+    JIGSAW_LEVELS.forEach(function (lvl, idx) {
+      var pill = document.createElement('div');
+      pill.className = 'jigsaw-level-pill' + (idx === currentJigsawLevel ? ' active' : '');
+      pill.innerHTML = `<img src="${lvl.img}" alt="${lvl.name}"> <span>${lvl.name}</span>`;
+      pill.onclick = function () { switchJigsawLevel(idx); };
+      container.appendChild(pill);
+    });
+  }
 
   function initJigsawGame() {
     jigsawMoves = 0;
-    document.getElementById('jigsaw-moves-count').textContent = '0';
-    // Shuffle with a solvable configuration
-    jigsawTiles = [1, 2, 3, 4, 0, 5, 7, 8, 6];
+    jigsawSolved = false;
+    var movesEl = document.getElementById('jigsaw-moves-count');
+    if (movesEl) movesEl.textContent = '0';
+
+    var cur = JIGSAW_LEVELS[currentJigsawLevel];
+    var titleEl = document.getElementById('jigsaw-deity-display-name');
+    if (titleEl) titleEl.textContent = cur.title;
+    var badgeEl = document.getElementById('jigsaw-current-level-badge');
+    if (badgeEl) badgeEl.textContent = `स्तर ${currentJigsawLevel + 1}/${JIGSAW_LEVELS.length}`;
+    var thumbEl = document.getElementById('jigsaw-target-preview-thumb');
+    if (thumbEl) thumbEl.src = cur.img;
+    var peekImg = document.getElementById('jigsaw-peek-full-image');
+    if (peekImg) peekImg.src = cur.img;
+    var victoryImg = document.getElementById('jigsaw-victory-full-img');
+    if (victoryImg) victoryImg.src = cur.img;
+    var victoryOverlay = document.getElementById('jigsaw-board-victory-overlay');
+    if (victoryOverlay) victoryOverlay.style.display = 'none';
+
+    // Pick solvable configuration
+    var config = JIGSAW_SOLVABLE_STARTS[currentJigsawLevel % JIGSAW_SOLVABLE_STARTS.length];
+    jigsawTiles = config.slice();
+
+    renderJigsawLevelSelector();
     renderJigsawGrid();
+  }
+
+  function switchJigsawLevel(idx) {
+    if (idx >= 0 && idx < JIGSAW_LEVELS.length) {
+      currentJigsawLevel = idx;
+      initJigsawGame();
+    }
+  }
+
+  function nextJigsawLevel() {
+    currentJigsawLevel = (currentJigsawLevel + 1) % JIGSAW_LEVELS.length;
+    initJigsawGame();
+  }
+
+  function toggleJigsawPreviewModal() {
+    var modal = document.getElementById('jigsaw-peek-modal');
+    if (!modal) return;
+    modal.style.display = (modal.style.display === 'flex' ? 'none' : 'flex');
   }
 
   function renderJigsawGrid() {
     var grid = document.getElementById('jigsaw-grid');
     if (!grid) return;
     grid.innerHTML = '';
+    var cur = JIGSAW_LEVELS[currentJigsawLevel];
 
     jigsawTiles.forEach(function (val, idx) {
       var tile = document.createElement('div');
       tile.className = 'jigsaw-tile' + (val === 0 ? ' empty-slot' : '');
+
       if (val !== 0) {
-        tile.innerHTML = `
-          <div style="font-size:1.4rem;font-weight:900;color:#FDE68A;">${val}</div>
-          <div style="font-size:0.65rem;color:#E9D5FF;">खण्ड</div>
-        `;
+        var pieceRow = Math.floor((val - 1) / 3);
+        var pieceCol = (val - 1) % 3;
+        var posX = pieceCol * 50;
+        var posY = pieceRow * 50;
+
+        tile.style.backgroundImage = `url("${cur.img}")`;
+        tile.style.backgroundSize = '300% 300%';
+        tile.style.backgroundPosition = `${posX}% ${posY}%`;
+        tile.innerHTML = `<span class="jigsaw-tile-badge">${val}</span>`;
         tile.onclick = function () { moveJigsawTile(idx); };
+      } else {
+        tile.innerHTML = `
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:rgba(245,158,11,0.5); font-size:0.75rem; font-weight:800;">
+            <span>🪷</span>
+            <span>खाली</span>
+          </div>
+        `;
       }
       grid.appendChild(tile);
     });
   }
 
   function moveJigsawTile(idx) {
+    if (jigsawSolved) return;
     var emptyIdx = jigsawTiles.indexOf(0);
-    // Check adjacency in 3x3 grid (row diff + col diff === 1)
     var r1 = Math.floor(idx / 3), c1 = idx % 3;
     var r2 = Math.floor(emptyIdx / 3), c2 = emptyIdx % 3;
 
@@ -694,7 +805,8 @@
       jigsawTiles[emptyIdx] = jigsawTiles[idx];
       jigsawTiles[idx] = 0;
       jigsawMoves++;
-      document.getElementById('jigsaw-moves-count').textContent = jigsawMoves;
+      var movesEl = document.getElementById('jigsaw-moves-count');
+      if (movesEl) movesEl.textContent = jigsawMoves;
       renderJigsawGrid();
 
       // Check win condition: [1, 2, 3, 4, 5, 6, 7, 8, 0]
@@ -703,31 +815,100 @@
       });
 
       if (won) {
+        jigsawSolved = true;
         setTimeout(function () {
           playSound('victory');
           addCoins(150);
-          alert(`🎉 अद्भुत! आपने ${jigsawMoves} चालों में श्री राम पहेली पूर्ण की!\n+150 🪙 सिक्के प्राप्त हुए!`);
+          var victoryOverlay = document.getElementById('jigsaw-board-victory-overlay');
+          if (victoryOverlay) victoryOverlay.style.display = 'flex';
         }, 300);
       }
     }
   }
 
   // ── Game 4: PadaBandham (Word Grid) ──
-  var PADA_WORDS = ['राम', 'सीता', 'कृष्ण', 'शिव', 'गंगा'];
+  var PADA_WORDS = [
+    { word: 'राम', chars: ['रा', 'म'], deity: 'श्री राम', img: 'assets/deity_ram.jpg' },
+    { word: 'कृष्ण', chars: ['कृ', 'ष्ण'], deity: 'श्री कृष्ण', img: 'assets/deity_krishna.jpg' },
+    { word: 'शिव', chars: ['शि', 'व'], deity: 'महादेव शिव', img: 'assets/deity_shiva.jpg' },
+    { word: 'गणेश', chars: ['ग', 'णे', 'श'], deity: 'श्री गणेश', img: 'assets/deity_ganesh.jpg' },
+    { word: 'हनुमान', chars: ['ह', 'नु', 'मा', 'न'], deity: 'श्री हनुमान', img: 'assets/deity_hanuman.jpg' },
+    { word: 'दुर्गा', chars: ['दु', 'र्गा'], deity: 'माँ दुर्गा', img: 'assets/deity_durga_hd.jpg' },
+    { word: 'श्याम', chars: ['श्या', 'म'], deity: 'खाटू श्याम', img: 'assets/deity_khatushyam.jpg' }
+  ];
   var foundWords = [];
+  var currentSelectedCells = [];
+
+  var PADA_LETTERS = [
+    'रा', 'म', 'ॐ', 'शि',
+    'कृ', 'ष्ण', 'व', 'ह',
+    'ग', 'णे', 'श', 'नु',
+    'दु', 'र्गा', 'श्या', 'म'
+  ];
 
   function initPadabandhamGame() {
     foundWords = [];
+    currentSelectedCells = [];
+    var statusEl = document.getElementById('padabandham-status');
+    if (statusEl) statusEl.textContent = 'अक्षरों को क्रम में स्पर्श करें...';
     renderPadabandham();
   }
 
   function renderPadabandham() {
-    var listEl = document.getElementById('padabandham-word-list');
-    if (listEl) {
-      listEl.innerHTML = PADA_WORDS.map(function (w) {
-        var isFound = foundWords.includes(w);
-        return `<span style="background:${isFound ? '#10B981' : 'rgba(245,158,11,0.2)'}; color:${isFound ? '#FFF' : '#FDE68A'}; border:1px solid #F59E0B; padding:4px 12px; border-radius:12px; font-weight:800; font-size:0.85rem;">${w} ${isFound ? '✓' : ''}</span>`;
+    var targetsEl = document.getElementById('padabandham-word-targets') || document.getElementById('padabandham-word-list');
+    if (targetsEl) {
+      targetsEl.innerHTML = PADA_WORDS.map(function (item) {
+        var isFound = foundWords.includes(item.word);
+        return `<span style="display:inline-flex; align-items:center; gap:6px; background:${isFound ? '#10B981' : 'rgba(255,255,255,0.08)'}; color:${isFound ? '#FFF' : '#FDE68A'}; border:1px solid ${isFound ? '#34D399' : 'rgba(245,158,11,0.3)'}; padding:5px 12px; border-radius:14px; font-weight:800; font-size:0.82rem; transition:all 0.3s ease;"><img src="${item.img}" style="width:20px; height:20px; border-radius:50%; object-fit:cover;"> ${item.word} ${isFound ? '✓' : ''}</span>`;
       }).join(' ');
+    }
+
+    var gridEl = document.getElementById('padabandham-grid');
+    if (gridEl) {
+      gridEl.innerHTML = '';
+      PADA_LETTERS.forEach(function (char, idx) {
+        var cell = document.createElement('div');
+        var isSel = currentSelectedCells.includes(idx);
+        cell.className = 'padabandham-cell';
+        cell.style.cssText = `background:${isSel ? 'linear-gradient(135deg, #F59E0B, #D97706)' : 'rgba(255,255,255,0.08)'}; border:1.5px solid ${isSel ? '#FEF3C7' : 'rgba(245,158,11,0.25)'}; color:${isSel ? '#1A0B2E' : '#FFFDF8'}; font-size:1.15rem; font-weight:900; height:56px; display:flex; align-items:center; justify-content:center; border-radius:12px; cursor:pointer; user-select:none; transition:transform 0.15s ease, background 0.2s ease; box-shadow:${isSel ? '0 0 12px rgba(245,158,11,0.6)' : 'none'};`;
+        cell.textContent = char;
+        cell.onclick = function () { handlePadabandhamTap(idx); };
+        gridEl.appendChild(cell);
+      });
+    }
+  }
+
+  function handlePadabandhamTap(idx) {
+    if (currentSelectedCells.includes(idx)) {
+      currentSelectedCells = currentSelectedCells.filter(function (i) { return i !== idx; });
+    } else {
+      currentSelectedCells.push(idx);
+    }
+    renderPadabandham();
+
+    var formedStr = currentSelectedCells.map(function (i) { return PADA_LETTERS[i]; }).join('');
+    var statusEl = document.getElementById('padabandham-status');
+    if (statusEl) statusEl.textContent = `चयनित: ${formedStr || '...'}`;
+
+    // Check if formed string matches any word
+    var matched = PADA_WORDS.find(function (w) {
+      return w.chars.join('') === formedStr || w.word === formedStr;
+    });
+
+    if (matched && !foundWords.includes(matched.word)) {
+      foundWords.push(matched.word);
+      playSound('correct');
+      currentSelectedCells = [];
+      if (statusEl) statusEl.textContent = `🎉 अद्भुत! आपने खोजा: ${matched.word} (${matched.deity})`;
+      renderPadabandham();
+
+      if (foundWords.length === PADA_WORDS.length) {
+        setTimeout(function () {
+          playSound('victory');
+          addCoins(200);
+          if (statusEl) statusEl.textContent = '🏆 सम्पूर्ण विजय! समस्त पावन नाम खोजे गए! (+200 सिक्के)';
+        }, 300);
+      }
     }
   }
 
@@ -754,38 +935,84 @@
 
   window.openMatchGame = function () {
     var modal = document.getElementById('match-game-modal');
-    if (modal) modal.style.display = 'flex';
+    if (modal) {
+      modal.classList.add('active');
+      modal.classList.add('is-open');
+      modal.style.setProperty('display', 'flex', 'important');
+      modal.style.setProperty('opacity', '1', 'important');
+      modal.style.setProperty('pointer-events', 'auto', 'important');
+      modal.style.setProperty('visibility', 'visible', 'important');
+    }
     initMatchGame();
   };
 
   window.closeMatchGame = function () {
     var modal = document.getElementById('match-game-modal');
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.classList.remove('active');
+      modal.classList.remove('is-open');
+      modal.style.setProperty('display', 'none', 'important');
+      modal.style.setProperty('opacity', '0', 'important');
+      modal.style.setProperty('pointer-events', 'none', 'important');
+    }
   };
 
-  window.openJigsawGame = function () {
+  window.openJigsawGame = function (levelIdx) {
     var modal = document.getElementById('jigsaw-game-modal');
-    if (modal) modal.style.display = 'flex';
+    if (modal) {
+      modal.classList.add('active');
+      modal.classList.add('is-open');
+      modal.style.setProperty('display', 'flex', 'important');
+      modal.style.setProperty('opacity', '1', 'important');
+      modal.style.setProperty('pointer-events', 'auto', 'important');
+      modal.style.setProperty('visibility', 'visible', 'important');
+    }
+    if (typeof levelIdx === 'number') {
+      currentJigsawLevel = levelIdx;
+    }
     initJigsawGame();
   };
 
   window.closeJigsawGame = function () {
     var modal = document.getElementById('jigsaw-game-modal');
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.classList.remove('active');
+      modal.classList.remove('is-open');
+      modal.style.setProperty('display', 'none', 'important');
+      modal.style.setProperty('opacity', '0', 'important');
+      modal.style.setProperty('pointer-events', 'none', 'important');
+    }
   };
+
+  window.switchJigsawLevel = switchJigsawLevel;
+  window.nextJigsawLevel = nextJigsawLevel;
+  window.toggleJigsawPreviewModal = toggleJigsawPreviewModal;
 
   window.openPadabandhamGame = function () {
     var modal = document.getElementById('padabandham-game-modal');
-    if (modal) modal.style.display = 'flex';
+    if (modal) {
+      modal.classList.add('active');
+      modal.classList.add('is-open');
+      modal.style.setProperty('display', 'flex', 'important');
+      modal.style.setProperty('opacity', '1', 'important');
+      modal.style.setProperty('pointer-events', 'auto', 'important');
+      modal.style.setProperty('visibility', 'visible', 'important');
+    }
     initPadabandhamGame();
   };
 
   window.closePadabandhamGame = function () {
     var modal = document.getElementById('padabandham-game-modal');
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.classList.remove('active');
+      modal.classList.remove('is-open');
+      modal.style.setProperty('display', 'none', 'important');
+      modal.style.setProperty('opacity', '0', 'important');
+      modal.style.setProperty('pointer-events', 'none', 'important');
+    }
   };
 
-  window.swipeCardManual = function (direction) {
+    window.swipeCardManual = function (direction) {
     handleSwipeCommit(direction);
   };
 
@@ -1193,6 +1420,7 @@
     if (arena) arena.style.display = 'none';
   };
 
+  var arpanDeityIdx = 0;
   window.restartPhoolArpanGame = function () {
     if (arpanState.animFrameId) {
       cancelAnimationFrame(arpanState.animFrameId);
@@ -1205,6 +1433,16 @@
     arpanState.floatTexts.length = 0;
     arpanState.isGameOver = false;
     arpanState.frameCount = 0;
+
+    // Cycle worshipped deity at top altar
+    if (typeof ALL_APP_DEITIES !== 'undefined' && ALL_APP_DEITIES.length > 0) {
+      var curD = ALL_APP_DEITIES[arpanDeityIdx % ALL_APP_DEITIES.length];
+      arpanDeityIdx++;
+      var dImg = document.getElementById('arpan-deity-img');
+      if (dImg) dImg.src = curD.img;
+      var dName = document.getElementById('arpan-deity-name');
+      if (dName) dName.textContent = curD.name;
+    }
 
     if (arpanState.scoreDisplay) arpanState.scoreDisplay.innerText = "Prasad: 0";
     if (arpanState.livesDisplay) arpanState.livesDisplay.innerText = "Lives: ❤️❤️❤️";

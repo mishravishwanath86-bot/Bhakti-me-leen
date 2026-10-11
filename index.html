@@ -2302,36 +2302,36 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       <!-- 2x2 Grid of 4 Games (All Unlocked & Playable) -->
       <div class="epic-games-grid" style="padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:540px; margin:0 auto;">
         <!-- 1. Swipe (WhatsApp Video Game!) -->
-        <div class="epic-game-menu-card" onclick="openSwipeGame('ayodhya_mithila')" style="cursor:pointer;">
+        <div class="epic-game-menu-card" onclick="openSwipeGame('ayodhya_mithila')" style="cursor:pointer; border:1.8px solid #3B82F6; box-shadow:0 8px 24px rgba(59,130,246,0.2);">
           <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-story">Story</span>
+            <span class="epic-card-tag epic-tag-story" style="background:#2563EB;">🏹 स्वाइप</span>
             <img src="assets/games/cover_swipe.jpg" alt="Swipe" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
           </div>
-          <div class="epic-card-title">Swipe</div>
-          <div class="epic-card-subtitle">Swipe to the right team</div>
-          <button class="epic-card-play-btn btn-blue" onclick="event.stopPropagation(); openSwipeGame('ayodhya_mithila');">🎮 Play</button>
+          <div class="epic-card-title">रामायण स्वाइप (Swipe)</div>
+          <div class="epic-card-subtitle">अयोध्या व मिथिला के पात्र पहचानें</div>
+          <button class="epic-card-play-btn btn-blue" onclick="event.stopPropagation(); openSwipeGame('ayodhya_mithila');">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 2. Match (Memory Card Game) -->
-        <div class="epic-game-menu-card" onclick="openMatchGame()" style="cursor:pointer;">
+        <div class="epic-game-menu-card" onclick="openMatchGame()" style="cursor:pointer; border:1.8px solid #8B5CF6; box-shadow:0 8px 24px rgba(139,92,246,0.2);">
           <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-memory">Memory</span>
-            <img src="assets/games/cover_match.jpg" alt="Match" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
+            <span class="epic-card-tag epic-tag-memory" style="background:#7C3AED;">🎴 स्मृति</span>
+            <img src="assets/deity_krishna.jpg" alt="Match" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
-          <div class="epic-card-title">Match</div>
-          <div class="epic-card-subtitle">Find and match the same card</div>
-          <button class="epic-card-play-btn btn-purple" onclick="event.stopPropagation(); openMatchGame();">🎮 Play</button>
+          <div class="epic-card-title">स्मृति कार्ड (Match)</div>
+          <div class="epic-card-subtitle">समान दिव्य चित्रों के जोड़े खोजें</div>
+          <button class="epic-card-play-btn btn-purple" onclick="event.stopPropagation(); openMatchGame();">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 3. JigSaw (Puzzle Game) -->
-        <div class="epic-game-menu-card" onclick="openJigsawGame()" style="cursor:pointer;">
+        <div class="epic-game-menu-card" onclick="openJigsawGame()" style="cursor:pointer; border:1.8px solid #06B6D4; box-shadow:0 8px 24px rgba(6,182,212,0.2);">
           <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-puzzle">Puzzle</span>
-            <img src="assets/games/cover_jigsaw.jpg" alt="JigSaw" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
+            <span class="epic-card-tag epic-tag-puzzle" style="background:#0891B2;">🧩 पहेली</span>
+            <img src="assets/deity_ganesh.jpg" alt="JigSaw Puzzle" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
-          <div class="epic-card-title">JigSaw</div>
-          <div class="epic-card-subtitle">Shape the epic characters</div>
-          <button class="epic-card-play-btn btn-cyan" onclick="event.stopPropagation(); openJigsawGame();">🎮 Play</button>
+          <div class="epic-card-title">दिव्य पहेली (JigSaw)</div>
+          <div class="epic-card-subtitle">१८ पावन स्तर • समस्त देव स्वरूप जोड़ें</div>
+          <button class="epic-card-play-btn btn-cyan" onclick="event.stopPropagation(); openJigsawGame();">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 5. Phool Arpan (Flower & Prasad Offering Game) -->
@@ -2349,14 +2349,14 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         </div>
 
         <!-- 4. PadaBandham (Word Grid) -->
-        <div class="epic-game-menu-card" onclick="openPadabandhamGame()" style="cursor:pointer;">
+        <div class="epic-game-menu-card" onclick="openPadabandhamGame()" style="cursor:pointer; border:1.8px solid #EAB308; box-shadow:0 8px 24px rgba(234,179,8,0.2);">
           <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-word">Word</span>
-            <img src="assets/games/cover_padabandham.jpg" alt="PadaBandham" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
+            <span class="epic-card-tag epic-tag-word" style="background:#CA8A04;">🔤 शब्द</span>
+            <img src="assets/deity_hanuman.jpg" alt="PadaBandham" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
-          <div class="epic-card-title">PadaBandham</div>
-          <div class="epic-card-subtitle">Find the epic word</div>
-          <button class="epic-card-play-btn btn-gold" onclick="event.stopPropagation(); openPadabandhamGame();">🎮 Play</button>
+          <div class="epic-card-title">पदबन्धम (Word Grid)</div>
+          <div class="epic-card-subtitle">शास्त्रों के पावन शब्द खोजें</div>
+          <button class="epic-card-play-btn btn-gold" onclick="event.stopPropagation(); openPadabandhamGame();">🎮 खेलें (Play)</button>
         </div>
       </div>
     </section>
@@ -2474,7 +2474,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
     </div>
 
     <!-- ══════════ 🎴 1. MATCH GAME MODAL ══════════ -->
-    <div id="match-game-modal" class="modal-overlay" style="display:none; z-index:35000; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); position:fixed; inset:0; align-items:center; justify-content:center; padding:16px;">
+    <div id="match-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:14px; overflow-y:auto;">
       <div style="background:#FFFDF8; border:3px solid #F59E0B; border-radius:24px; width:100%; max-width:420px; padding:20px; position:relative; box-shadow:0 12px 35px rgba(0,0,0,0.6);">
         <button onclick="closeMatchGame()" style="position:absolute; top:12px; right:14px; background:none; border:none; font-size:1.5rem; font-weight:900; color:#2D1400; cursor:pointer;">✕</button>
         <div style="font-size:1.25rem; font-weight:900; color:#2D1400; text-align:center; margin-bottom:4px;">दिव्य स्मृति कार्ड (Match)</div>
@@ -2488,27 +2488,115 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
     </div>
 
-    <!-- ══════════ 🧩 2. JIGSAW PUZZLE MODAL ══════════ -->
-    <div id="jigsaw-game-modal" class="modal-overlay" style="display:none; z-index:35000; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); position:fixed; inset:0; align-items:center; justify-content:center; padding:16px;">
-      <div style="background:#FFFDF8; border:3px solid #F59E0B; border-radius:24px; width:100%; max-width:400px; padding:20px; position:relative; box-shadow:0 12px 35px rgba(0,0,0,0.6);">
-        <button onclick="closeJigsawGame()" style="position:absolute; top:12px; right:14px; background:none; border:none; font-size:1.5rem; font-weight:900; color:#2D1400; cursor:pointer;">✕</button>
-        <div style="font-size:1.25rem; font-weight:900; color:#2D1400; text-align:center; margin-bottom:4px;">श्री राम पौराणिक पहेली (JigSaw)</div>
-        <div style="font-size:0.8rem; color:#786C5E; text-align:center; margin-bottom:12px;">खण्डों को क्रम में जमाएँ (1 से 8) • चालें: <strong id="jigsaw-moves-count" style="color:#0891B2;">0</strong></div>
+    <!-- ══════════ 🧩 2. JIGSAW PUZZLE MODAL (दिव्य स्वरूप पहेली - १० पावन स्तर) ══════════ -->
+    <div id="jigsaw-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
+      <div style="background:radial-gradient(circle at 50% 20%, #2A0E44 0%, #130522 100%); border:2px solid #F59E0B; border-radius:24px; width:100%; max-width:420px; padding:18px 16px; position:relative; box-shadow:0 15px 50px rgba(0,0,0,0.85), 0 0 25px rgba(245,158,11,0.2) inset; color:#FFFDF8;">
         
-        <div id="jigsaw-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; width:270px; height:270px; margin:0 auto 16px; background:#FDE68A; padding:8px; border-radius:18px;">
-          <!-- 3x3 tiles injected here -->
+        <!-- Header & Close -->
+        <button onclick="closeJigsawGame()" style="position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FDE68A; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        <div style="font-size:1.2rem; font-weight:900; color:#FFFDF8; text-align:center; margin-bottom:2px; display:flex; align-items:center; justify-content:center; gap:6px;">
+          <span>🧩</span> दिव्य स्वरूप पहेली (JigSaw)
+        </div>
+        <div id="jigsaw-level-subtitle" style="font-size:0.78rem; color:#FDE68A; text-align:center; margin-bottom:10px;">
+          खण्डों को मिलाकर भगवान के पावन दर्शन करें
         </div>
 
-        <button onclick="initJigsawGame()" style="width:100%; background:linear-gradient(135deg, #06B6D4, #0891B2); color:#FFF; border:none; padding:10px 0; border-radius:14px; font-weight:900; cursor:pointer;">🔄 पुनः क्रमबद्ध करें</button>
+        <!-- 10 Deities Horizontal Level Selector Carousel -->
+        <div style="margin-bottom:12px;">
+          <div style="font-size:0.7rem; color:#CBD5E1; font-weight:800; margin-bottom:5px; display:flex; justify-content:space-between; align-items:center;">
+            <span>🚩 पावन स्वरूप चुनें (१० स्तर)</span>
+            <span id="jigsaw-current-level-badge" style="color:#FDE68A; background:rgba(245,158,11,0.2); padding:1px 7px; border-radius:8px; border:1px solid rgba(245,158,11,0.4);">स्तर १/१०</span>
+          </div>
+          <div id="jigsaw-levels-selector" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; scrollbar-width:thin;">
+            <!-- Injected dynamically by engine -->
+          </div>
+        </div>
+
+        <!-- Stats & Preview Header Bar -->
+        <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.35); border:1px solid rgba(245,158,11,0.25); border-radius:14px; padding:6px 12px; margin-bottom:12px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <img id="jigsaw-target-preview-thumb" src="assets/deity_ganesh.jpg" alt="Preview" style="width:38px; height:38px; border-radius:8px; object-fit:cover; border:1.5px solid #F59E0B; cursor:pointer;" onclick="toggleJigsawPreviewModal()" title="मूल छवि देखें">
+            <div>
+              <div id="jigsaw-deity-display-name" style="font-size:0.85rem; font-weight:900; color:#FFFDF8;">श्री गणेश जी</div>
+              <div style="font-size:0.7rem; color:#A7F3D0;">चालें: <strong id="jigsaw-moves-count" style="color:#FDE68A;">0</strong></div>
+            </div>
+          </div>
+          <button onclick="toggleJigsawPreviewModal()" style="background:rgba(245,158,11,0.2); border:1px solid #F59E0B; color:#FDE68A; font-size:0.72rem; font-weight:800; padding:4px 10px; border-radius:10px; cursor:pointer;">
+            👁️ संकेत (Peek)
+          </button>
+        </div>
+        
+        <!-- 3x3 Puzzle Arena Board -->
+        <div style="position:relative; width:282px; height:282px; margin:0 auto 14px; background:#0F0418; padding:6px; border-radius:18px; border:2px solid #F59E0B; box-shadow:0 6px 20px rgba(0,0,0,0.6);">
+          <div id="jigsaw-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, 1fr); gap:5px; width:100%; height:100%;">
+            <!-- 3x3 image tiles injected here -->
+          </div>
+          
+          <!-- Victory Celebration Overlay inside Board -->
+          <div id="jigsaw-board-victory-overlay" style="display:none; position:absolute; inset:0; background:rgba(18, 6, 36, 0.94); border-radius:18px; flex-direction:column; align-items:center; justify-content:center; padding:16px; text-align:center; animation:fadeIn 0.3s ease;">
+            <div style="font-size:2.2rem; margin-bottom:4px;">🎉</div>
+            <div style="font-size:1.1rem; font-weight:900; color:#FDE68A; margin-bottom:2px;">पावन दर्शन सम्पूर्ण!</div>
+            <div style="font-size:0.75rem; color:#E2E8F0; margin-bottom:8px;">+150 🪙 सिक्के अर्जित किए!</div>
+            <img id="jigsaw-victory-full-img" src="assets/deity_ganesh.jpg" alt="Completed" style="width:90px; height:90px; border-radius:12px; border:2px solid #F59E0B; object-fit:cover; margin-bottom:10px; box-shadow:0 0 20px #F59E0B;">
+            <button onclick="nextJigsawLevel()" style="background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E; border:none; padding:7px 18px; border-radius:12px; font-weight:900; font-size:0.82rem; cursor:pointer; width:100%; box-shadow:0 3px 12px rgba(245,158,11,0.4);">अगला स्वरूप खेलें ➔</button>
+          </div>
+        </div>
+
+        <!-- Controls: Shuffle & Next -->
+        <div style="display:flex; gap:8px;">
+          <button onclick="initJigsawGame()" style="flex:1; background:rgba(255,255,255,0.1); border:1px solid rgba(245,158,11,0.4); color:#FDE68A; padding:9px 0; border-radius:12px; font-weight:900; font-size:0.8rem; cursor:pointer;">🔄 पुनः मिलाएँ (Reset)</button>
+          <button onclick="nextJigsawLevel()" style="flex:1; background:linear-gradient(135deg, #06B6D4, #0891B2); color:#FFF; border:none; padding:9px 0; border-radius:12px; font-weight:900; font-size:0.8rem; cursor:pointer;">अगला स्तर ➔</button>
+        </div>
+
+        <!-- Hint / Full Preview Popup Modal (Inside Jigsaw) -->
+        <div id="jigsaw-peek-modal" style="display:none; position:absolute; inset:0; z-index:10; background:rgba(10,3,20,0.95); border-radius:24px; padding:18px; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+          <div style="display:flex; justify-content:space-between; width:100%; margin-bottom:8px;">
+            <span style="font-weight:900; color:#FDE68A; font-size:0.9rem;">👁️ मूल पावन स्वरूप</span>
+            <button onclick="toggleJigsawPreviewModal()" style="background:none; border:none; color:#FFF; font-size:1.2rem; cursor:pointer;">✕</button>
+          </div>
+          <img id="jigsaw-peek-full-image" src="assets/deity_ganesh.jpg" alt="Original" style="width:230px; height:230px; border-radius:16px; border:2px solid #F59E0B; object-fit:cover; margin-bottom:10px;">
+          <div style="font-size:0.75rem; color:#CBD5E1; margin-bottom:12px;">इस छवि के अनुसार खण्डों को क्रम में जमाएँ।</div>
+          <button onclick="toggleJigsawPreviewModal()" style="background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E; border:none; padding:7px 20px; border-radius:12px; font-weight:900; cursor:pointer;">समझ गया (Back to Puzzle)</button>
+        </div>
+
       </div>
     </div>
 
     <!-- ══════════ 📖 3. PADABANDHAM WORD GRID MODAL ══════════ -->
+    <div id="padabandham-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
+      <div style="background:radial-gradient(circle at 50% 20%, #2A0E44 0%, #130522 100%); border:2px solid #EAB308; border-radius:24px; width:100%; max-width:400px; padding:18px 16px; position:relative; box-shadow:0 15px 50px rgba(0,0,0,0.85); color:#FFFDF8; text-align:center;">
+        <button onclick="closePadabandhamGame()" style="position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.1); border:1px solid rgba(234,179,8,0.3); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FDE68A; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        <div style="font-size:1.25rem; font-weight:900; color:#FFFDF8; margin-bottom:4px; display:flex; align-items:center; justify-content:center; gap:6px;">
+          <span>🔤</span> पदबन्धम (वैदिक शब्द संधान)
+        </div>
+        <div style="font-size:0.8rem; color:#FDE68A; margin-bottom:12px;">
+          पावन मंत्र व देव नामों के अक्षर खोजकर स्पर्श करें
+        </div>
+        <div id="padabandham-word-targets" style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+          <!-- Word Badges -->
+        </div>
+        <div id="padabandham-grid" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; max-width:280px; margin:0 auto 14px;">
+          <!-- 4x4 Grid Letters -->
+        </div>
+        <div id="padabandham-status" style="font-size:0.85rem; font-weight:800; color:#4ADE80; min-height:22px; margin-bottom:12px;"></div>
+        <button onclick="initPadabandhamGame()" style="width:100%; background:linear-gradient(135deg, #EAB308, #CA8A04); color:#1A0B2E; border:none; padding:10px 0; border-radius:14px; font-weight:900; cursor:pointer;">🔄 नए शब्द (New Puzzle)</button>
+      </div>
+    </div>
 
     <!-- ══════════ 🌸 4. PHOOL ARPAN GAME ARENA (फूल अर्पण खेल) ══════════ -->
     <div id="phool-arpan-arena" class="phool-arpan-arena">
       <div class="arpan-wrapper" id="arpan-container">
         <!-- Top Bar & HUD -->
+                <!-- Deity Altar Altar Header (पावन देव दर्शन) -->
+        <div id="arpan-altar-banner" style="position:absolute; top:54px; left:0; right:0; display:flex; justify-content:center; align-items:center; z-index:15; pointer-events:none;">
+          <div style="background:rgba(26,11,46,0.88); border:1.8px solid #F59E0B; border-radius:24px; padding:4px 14px 4px 6px; display:flex; align-items:center; gap:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+            <img id="arpan-deity-img" src="assets/deity_ganesh.jpg" alt="Deity" style="width:36px; height:36px; border-radius:50%; object-fit:cover; border:1.5px solid #FDE68A;">
+            <div>
+              <div id="arpan-deity-name" style="color:#FFFDF8; font-weight:900; font-size:0.82rem; line-height:1.2;">विघ्नहर्ता श्री गणेश</div>
+              <div style="color:#FDE68A; font-size:0.65rem;">चरणों में पुष्प अर्पण करें 🌸</div>
+            </div>
+          </div>
+        </div>
         <div class="arpan-top-bar">
           <button class="arpan-close-btn" onclick="closePhoolArpanGame()" title="बंद करें">✕</button>
           <div class="arpan-hud">
@@ -2548,24 +2636,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
     </div>
 
-    <div id="padabandham-game-modal" class="modal-overlay" style="display:none; z-index:35000; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); position:fixed; inset:0; align-items:center; justify-content:center; padding:16px;">
-      <div style="background:#FFFDF8; border:3px solid #F59E0B; border-radius:24px; width:100%; max-width:420px; padding:20px; position:relative; box-shadow:0 12px 35px rgba(0,0,0,0.6);">
-        <button onclick="closePadabandhamGame()" style="position:absolute; top:12px; right:14px; background:none; border:none; font-size:1.5rem; font-weight:900; color:#2D1400; cursor:pointer;">✕</button>
-        <div style="font-size:1.25rem; font-weight:900; color:#2D1400; text-align:center; margin-bottom:4px;">पदबन्धम् (PadaBandham)</div>
-        <div style="font-size:0.8rem; color:#786C5E; text-align:center; margin-bottom:12px;">रामायण व महाभारत के पवित्र नाम खोजें</div>
-        
-        <div id="padabandham-word-list" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:16px;">
-          <!-- Words list injected here -->
-        </div>
 
-        <div style="background:#FEF3C7; border:1.5px solid #F59E0B; border-radius:18px; padding:14px; text-align:center; font-size:0.95rem; font-weight:800; color:#2D1400; line-height:1.5; margin-bottom:16px;">
-          🚩 <strong>रामायण - महाभारत शब्द संज्ञान</strong><br>
-          <span style="font-size:0.82rem; color:#5A4A3B;">शब्दों को पहचानें और दिव्य ज्ञान संकलित करें।</span>
-        </div>
-
-        <button onclick="alert('🎉 शब्द ग्रिड संज्ञान पूर्ण! +100 🪙');" style="width:100%; background:linear-gradient(135deg, #D97706, #B45309); color:#FFF; border:none; padding:10px 0; border-radius:14px; font-weight:900; cursor:pointer;">✅ संज्ञान पूर्ण करें</button>
-      </div>
-    </div>
 
 <section id="page-aarti" class="page">
       <div class="page-header-bar" style="position:sticky; top:0; z-index:10; background:rgba(26,11,46,0.95); backdrop-filter:blur(10px); border-bottom:1.5px solid rgba(248,200,59,0.3); padding:0.8rem 1.2rem; display:flex; align-items:center; justify-content:space-between;">
