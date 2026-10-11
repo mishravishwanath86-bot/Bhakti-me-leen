@@ -30112,10 +30112,10 @@ window.renderFullDrikChalisaPage = function(filterCategory, searchQuery) {
 // ══════════════════════════════════════════════════════════════════════════════
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 6,
-  currentVersionName: '1.5.0',
+  currentVersionCode: 7,
+  currentVersionName: '1.6.0',
   manifestUrl: 'https://raw.githubusercontent.com/mishravishwanath86-bot/Bhakti-me-leen/main/version.json',
-  downloadUrl: 'https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.5.0/bhakti-app.apk',
+  downloadUrl: 'https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.6.0/bhakti-app.apk',
   latestReleaseInfo: null
 };
 

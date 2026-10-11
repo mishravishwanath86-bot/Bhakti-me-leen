@@ -1,15 +1,15 @@
 {
-  "versionCode": 6,
-  "versionName": "1.5.0",
-  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.5.0/bhakti-app.apk",
+  "versionCode": 7,
+  "versionName": "1.6.0",
+  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.6.0/bhakti-app.apk",
   "apkSize": "296 MB",
   "releaseDate": "2026-10-11",
   "forceUpdate": false,
-  "title": "पावन अपडेट v1.5.0 उपलब्ध है! 🚀",
+  "title": "पावन अपडेट v1.6.0 उपलब्ध है! 🚀",
   "releaseNotes": [
-    "नया सनातन गेम्स हब: भव्य दिव्य पहेली (Jigsaw Puzzle) और 5 भक्तिमय स्तर",
+    "नया पावन खेल: फूल अर्पण (Phool Arpan) — स्वर्ण थाली में दिव्य पुष्प व प्रसाद अर्पण",
+    "सनातन गेम्स हब: भव्य दिव्य पहेली (Jigsaw Puzzle) और 5 भक्तिमय स्तर",
     "सरल व सुरक्षित दान/सहयोग: Google Pay डिफ़ॉल्ट व अन्य समस्त UPI ऐप्स विकल्प",
-    "समस्त दिव्य आरती, भजन व श्रीमद्भगवद्गीता के नवीनतम सुधार",
     "प्रोफाइल स्वागत, दिव्य वॉलपेपर और ऑडियो परफॉर्मेंस ऑप्टिमाइज़ेशन"
   ]
 }

@@ -2262,7 +2262,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
 
     
-      <!-- 🎮 EPIC GAMES HOME BANNER (महाकाव्य भक्ति गेम्स हब - ४ दिव्य खेल) 🎮 -->
+      <!-- 🎮 EPIC GAMES HOME BANNER (महाकाव्य भक्ति गेम्स हब - ५ दिव्य खेल) 🎮 -->
       <div class="home-epic-games-banner home-promo-banner-card" onclick="showPage('page-epic-games')" style="opacity:1; border:1.8px solid #F59E0B; background:linear-gradient(135deg, rgba(45, 16, 71, 0.96) 0%, rgba(26, 11, 46, 0.98) 100%); cursor:pointer; box-shadow:0 8px 25px rgba(245,158,11,0.3); border-radius:20px; padding:14px 16px; margin:14px 0;">
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
           <div style="display:flex; align-items:center; gap:14px;">
@@ -2270,9 +2270,9 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <div>
               <div style="display:flex; align-items:center; gap:8px;">
                 <span style="color:#FFFDF8; font-size:1.15rem; font-weight:900;">एपिक गेम्स (Epic Games)</span>
-                <span style="background:rgba(245,158,11,0.25); border:1px solid #F59E0B; color:#FDE68A; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:10px;">४ दिव्य खेल</span>
+                <span style="background:rgba(245,158,11,0.25); border:1px solid #F59E0B; color:#FDE68A; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:10px;">५ दिव्य खेल</span>
               </div>
-              <div style="color:#E9D5FF; font-size:0.8rem; margin-top:3px;">स्वाइप, स्मृति मिलान, पहेली व शब्द ग्रिड ❯</div>
+              <div style="color:#E9D5FF; font-size:0.8rem; margin-top:3px;">स्वाइप, फूल अर्पण, स्मृति मिलान, पहेली ❯</div>
             </div>
           </div>
           <button style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-weight:900; font-size:0.85rem; padding:8px 18px; border-radius:16px; box-shadow:0 4px 15px rgba(248,200,59,0.4); cursor:pointer;">खेलें ❯</button>
@@ -2332,6 +2332,20 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <div class="epic-card-title">JigSaw</div>
           <div class="epic-card-subtitle">Shape the epic characters</div>
           <button class="epic-card-play-btn btn-cyan" onclick="event.stopPropagation(); openJigsawGame();">🎮 Play</button>
+        </div>
+
+        <!-- 5. Phool Arpan (Flower & Prasad Offering Game) -->
+        <div class="epic-game-menu-card" onclick="openPhoolArpanGame()" style="cursor:pointer; grid-column:span 2; background:radial-gradient(circle at 50% 30%, rgba(245,158,11,0.2) 0%, rgba(30,10,50,0.95) 100%); border:1.8px solid #F59E0B; box-shadow:0 8px 24px rgba(245,158,11,0.25);">
+          <div class="epic-card-cover-wrap" style="height:120px; aspect-ratio:auto; background:linear-gradient(135deg, #FF9933 0%, #FFE680 60%, #FFF 100%); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+            <span class="epic-card-tag" style="background:#D97706; color:#FFF; font-weight:900; position:absolute; top:8px; left:8px; z-index:2; padding:3px 10px; border-radius:8px; font-size:0.72rem;">🌸 Arpan</span>
+            <img src="assets/games/cover_phool_arpan.jpg" alt="Phool Arpan" class="epic-card-cover-img" style="object-fit:cover; opacity:0.95;">
+            <div style="position:absolute; bottom:6px; right:10px; font-size:1.6rem; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.4));">🌸🌺🥥</div>
+          </div>
+          <div style="padding:10px 4px 6px;">
+            <div class="epic-card-title" style="font-size:1.12rem; font-weight:900; color:#FFFDF8;">फूल अर्पण (Phool Arpan)</div>
+            <div class="epic-card-subtitle" style="font-size:0.78rem; color:#E9D5FF; margin:2px 0 8px;">स्वर्ण थाली में पावन पुष्प व प्रसाद संकलित करें</div>
+            <button class="epic-card-play-btn" style="width:100%; background:linear-gradient(135deg, #F59E0B 0%, #D97706 100%); color:#1A0B2E; font-weight:900; font-size:0.88rem; padding:9px 0; border-radius:14px; border:none; cursor:pointer; box-shadow:0 4px 15px rgba(245,158,11,0.4);" onclick="event.stopPropagation(); openPhoolArpanGame();">🎮 खेलें (Play Arpan)</button>
+          </div>
         </div>
 
         <!-- 4. PadaBandham (Word Grid) -->
@@ -2490,6 +2504,50 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
     </div>
 
     <!-- ══════════ 📖 3. PADABANDHAM WORD GRID MODAL ══════════ -->
+
+    <!-- ══════════ 🌸 4. PHOOL ARPAN GAME ARENA (फूल अर्पण खेल) ══════════ -->
+    <div id="phool-arpan-arena" class="phool-arpan-arena">
+      <div class="arpan-wrapper" id="arpan-container">
+        <!-- Top Bar & HUD -->
+        <div class="arpan-top-bar">
+          <button class="arpan-close-btn" onclick="closePhoolArpanGame()" title="बंद करें">✕</button>
+          <div class="arpan-hud">
+            <div class="arpan-score-pill">
+              <span>🌸</span>
+              <span id="arpan-score">Prasad: 0</span>
+            </div>
+            <div class="arpan-lives-pill" id="arpan-lives">Lives: ❤️❤️❤️</div>
+          </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="arpanCanvas" class="arpan-canvas"></canvas>
+
+        <!-- Game Over Modal -->
+        <div id="arpan-game-over-modal" class="arpan-game-over-modal">
+          <div class="arpan-modal-content">
+            <div class="arpan-modal-icon">🌸</div>
+            <h2 class="arpan-modal-title">पूजा सम्पूर्ण! 🕉️</h2>
+            <div class="arpan-modal-sub">आपने भक्तिभाव से प्रभु चरणों में पुष्प व प्रसाद अर्पित किए</div>
+            
+            <div class="arpan-stats-card">
+              <div class="arpan-stat-row">
+                <span style="color:#CBD5E1;">कुल अर्पित प्रसाद:</span>
+                <span id="arpan-final-score" style="color:#FDE68A; font-size:1.15rem;">0</span>
+              </div>
+              <div class="arpan-stat-row" style="border-top:1px solid rgba(255,255,255,0.1); margin-top:4px; padding-top:6px;">
+                <span style="color:#CBD5E1;">अर्जित सिक्के:</span>
+                <span id="arpan-earned-coins" style="color:#F59E0B; font-size:1.15rem;">+0 🪙</span>
+              </div>
+            </div>
+
+            <button class="arpan-btn-restart" id="arpan-restart-btn" onclick="restartPhoolArpanGame()">🔄 दोबारा खेलें (Dobara Khele)</button>
+            <button class="arpan-btn-hub" onclick="closePhoolArpanGame()">🏠 मुख्य मेन्यू (Back to Hub)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="padabandham-game-modal" class="modal-overlay" style="display:none; z-index:35000; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); position:fixed; inset:0; align-items:center; justify-content:center; padding:16px;">
       <div style="background:#FFFDF8; border:3px solid #F59E0B; border-radius:24px; width:100%; max-width:420px; padding:20px; position:relative; box-shadow:0 12px 35px rgba(0,0,0,0.6);">
         <button onclick="closePadabandhamGame()" style="position:absolute; top:12px; right:14px; background:none; border:none; font-size:1.5rem; font-weight:900; color:#2D1400; cursor:pointer;">✕</button>

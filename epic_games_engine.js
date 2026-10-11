@@ -818,7 +818,406 @@
   setTimeout(loadCoins, 100);
 
   // ── UNLOCKED PRODUCTION STATE (No Locks!) ──
-  window.IS_EPIC_GAMES_LOCKED = false;
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // 🌸 GAME 5: PHOOL ARPAN (Flower & Prasad Offering Game)
+  // ══════════════════════════════════════════════════════════════════════════════
+  var arpanState = {
+    canvas: null,
+    ctx: null,
+    container: null,
+    scoreDisplay: null,
+    livesDisplay: null,
+    gameOverModal: null,
+    finalScore: null,
+    earnedCoins: null,
+    width: 0,
+    height: 0,
+    score: 0,
+    lives: 3,
+    isGameOver: false,
+    animFrameId: null,
+    basket: {
+      width: 85,
+      height: 26,
+      x: 100,
+      y: 300,
+      speed: 8
+    },
+    items: [],
+    particles: [],
+    floatTexts: [],
+    itemTypes: [
+      { char: "🌸", name: "कमल", type: "good", points: 10 },
+      { char: "🌺", name: "गुड़हल", type: "good", points: 10 },
+      { char: "🥥", name: "श्रीफल", type: "good", points: 20 },
+      { char: "🪔", name: "दीपक", type: "good", points: 15 },
+      { char: "🍃", name: "तुलसी", type: "good", points: 15 },
+      { char: "🪨", name: "कंकड़", type: "bad", points: 0 }
+    ],
+    spawnInterval: 55,
+    frameCount: 0,
+    initialized: false
+  };
+
+  function moveArpanBasket(clientX) {
+    if (!arpanState.canvas || arpanState.isGameOver) return;
+    var rect = arpanState.canvas.getBoundingClientRect();
+    var touchX = clientX - rect.left;
+    arpanState.basket.x = touchX - arpanState.basket.width / 2;
+
+    if (arpanState.basket.x < 0) arpanState.basket.x = 0;
+    if (arpanState.basket.x + arpanState.basket.width > arpanState.width) {
+      arpanState.basket.x = arpanState.width - arpanState.basket.width;
+    }
+  }
+
+  function resizeArpanCanvas() {
+    if (!arpanState.container || !arpanState.canvas) return;
+    arpanState.width = arpanState.container.clientWidth;
+    arpanState.height = arpanState.container.clientHeight;
+    arpanState.canvas.width = arpanState.width;
+    arpanState.canvas.height = arpanState.height;
+    arpanState.basket.width = Math.max(76, Math.min(100, arpanState.width * 0.22));
+    arpanState.basket.y = arpanState.height - 75;
+  }
+
+  function spawnArpanItem() {
+    var randomItem = arpanState.itemTypes[Math.floor(Math.random() * arpanState.itemTypes.length)];
+    var xPos = Math.random() * (arpanState.width - 50) + 25;
+    var speedBonus = Math.min(3.5, arpanState.score / 250);
+    arpanState.items.push({
+      x: xPos,
+      y: -25,
+      char: randomItem.char,
+      type: randomItem.type,
+      points: randomItem.points,
+      speed: Math.random() * 2 + 3 + speedBonus,
+      rot: Math.random() * Math.PI,
+      rotSpeed: (Math.random() - 0.5) * 0.05
+    });
+  }
+
+  function addArpanParticles(x, y, count, color) {
+    for (var i = 0; i < count; i++) {
+      arpanState.particles.push({
+        x: x,
+        y: y,
+        vx: (Math.random() - 0.5) * 5,
+        vy: (Math.random() - 0.5) * 5 - 2,
+        life: 1.0,
+        decay: Math.random() * 0.04 + 0.03,
+        size: Math.random() * 4 + 2,
+        color: color || '#FFD700'
+      });
+    }
+  }
+
+  function addArpanFloatText(x, y, text, color) {
+    arpanState.floatTexts.push({
+      x: x,
+      y: y,
+      text: text,
+      color: color || '#8B0000',
+      life: 1.0,
+      vy: -1.5
+    });
+  }
+
+  function updateArpan() {
+    if (arpanState.isGameOver) return;
+
+    arpanState.frameCount++;
+    var interval = Math.max(32, arpanState.spawnInterval - Math.floor(arpanState.score / 150) * 3);
+    if (arpanState.frameCount % interval === 0) {
+      spawnArpanItem();
+    }
+
+    var b = arpanState.basket;
+
+    for (var i = arpanState.items.length - 1; i >= 0; i--) {
+      var item = arpanState.items[i];
+      item.y += item.speed;
+      item.rot += item.rotSpeed;
+
+      // Collision Detection with Thali
+      if (
+        item.y + 16 >= b.y &&
+        item.y - 16 <= b.y + b.height &&
+        item.x >= b.x - 10 &&
+        item.x <= b.x + b.width + 10
+      ) {
+        if (item.type === "good") {
+          arpanState.score += item.points;
+          if (arpanState.scoreDisplay) arpanState.scoreDisplay.innerText = "Prasad: " + arpanState.score;
+          playSound('correct');
+          addArpanParticles(item.x, item.y, 8, '#FFD700');
+          addArpanFloatText(item.x, item.y, "+" + item.points, "#8B0000");
+        } else {
+          arpanState.lives--;
+          playSound('wrong');
+          if (navigator.vibrate) navigator.vibrate([60, 40, 60]);
+          addArpanParticles(item.x, item.y, 10, '#64748B');
+          addArpanFloatText(item.x, item.y, "💔 -1", "#DC2626");
+          updateArpanLivesUI();
+        }
+        arpanState.items.splice(i, 1);
+        continue;
+      }
+
+      // Missed item falling off bottom
+      if (item.y > arpanState.height) {
+        if (item.type === "good") {
+          arpanState.lives--;
+          playSound('wrong');
+          addArpanFloatText(item.x, arpanState.height - 30, "चूका! -1", "#DC2626");
+          updateArpanLivesUI();
+        }
+        arpanState.items.splice(i, 1);
+      }
+    }
+
+    // Update Particles
+    for (var pIdx = arpanState.particles.length - 1; pIdx >= 0; pIdx--) {
+      var p = arpanState.particles[pIdx];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      if (p.life <= 0) arpanState.particles.splice(pIdx, 1);
+    }
+
+    // Update Float Texts
+    for (var fIdx = arpanState.floatTexts.length - 1; fIdx >= 0; fIdx--) {
+      var ft = arpanState.floatTexts[fIdx];
+      ft.y += ft.vy;
+      ft.life -= 0.025;
+      if (ft.life <= 0) arpanState.floatTexts.splice(fIdx, 1);
+    }
+  }
+
+  function updateArpanLivesUI() {
+    var hearts = "";
+    for (var i = 0; i < arpanState.lives; i++) hearts += "❤️";
+    if (arpanState.livesDisplay) arpanState.livesDisplay.innerText = "Lives: " + (hearts || "💔");
+
+    if (arpanState.lives <= 0) {
+      arpanState.isGameOver = true;
+      playSound('victory');
+      var earnedCoins = Math.max(10, Math.floor(arpanState.score * 0.75));
+      addCoins(earnedCoins);
+      if (arpanState.finalScore) arpanState.finalScore.innerText = arpanState.score;
+      if (arpanState.earnedCoins) arpanState.earnedCoins.innerText = "+" + earnedCoins + " 🪙";
+      if (arpanState.gameOverModal) arpanState.gameOverModal.style.display = "flex";
+    }
+  }
+
+  function drawArpan() {
+    var ctx = arpanState.ctx;
+    var w = arpanState.width;
+    var h = arpanState.height;
+    if (!ctx) return;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Subtle background temple ray glow
+    var glow = ctx.createRadialGradient(w / 2, 80, 20, w / 2, 80, w * 0.8);
+    glow.addColorStop(0, 'rgba(255, 255, 255, 0.45)');
+    glow.addColorStop(0.5, 'rgba(255, 230, 150, 0.2)');
+    glow.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, w, h);
+
+    // Draw Falling Items
+    ctx.font = "28px sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    for (var i = 0; i < arpanState.items.length; i++) {
+      var it = arpanState.items[i];
+      ctx.save();
+      ctx.translate(it.x, it.y);
+      ctx.rotate(it.rot);
+      ctx.fillText(it.char, 0, 0);
+      ctx.restore();
+    }
+
+    // Draw Particles
+    for (var pi = 0; pi < arpanState.particles.length; pi++) {
+      var pt = arpanState.particles[pi];
+      ctx.fillStyle = pt.color;
+      ctx.globalAlpha = Math.max(0, pt.life);
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1.0;
+
+    // Draw Float Texts
+    ctx.font = "bold 16px sans-serif";
+    for (var fi = 0; fi < arpanState.floatTexts.length; fi++) {
+      var ft = arpanState.floatTexts[fi];
+      ctx.fillStyle = ft.color;
+      ctx.globalAlpha = Math.max(0, ft.life);
+      ctx.fillText(ft.text, ft.x, ft.y);
+    }
+    ctx.globalAlpha = 1.0;
+
+    // Draw Basket / Golden Pooja Thali
+    var b = arpanState.basket;
+    b.y = h - 75;
+
+    // Outer Glow under Thali
+    ctx.shadowColor = "rgba(245, 158, 11, 0.55)";
+    ctx.shadowBlur = 12;
+
+    // Golden metallic gradient
+    var thaliGrad = ctx.createLinearGradient(b.x, b.y, b.x, b.y + b.height);
+    thaliGrad.addColorStop(0, '#FFE066');
+    thaliGrad.addColorStop(0.3, '#FFD700');
+    thaliGrad.addColorStop(0.7, '#D4AF37');
+    thaliGrad.addColorStop(1, '#996515');
+
+    ctx.fillStyle = thaliGrad;
+    ctx.beginPath();
+    if (typeof ctx.roundRect === 'function') {
+      ctx.roundRect(b.x, b.y, b.width, b.height, [4, 4, 16, 16]);
+    } else {
+      ctx.rect(b.x, b.y, b.width, b.height);
+    }
+    ctx.fill();
+
+    // Metallic Rim Stroke
+    ctx.shadowBlur = 0;
+    ctx.lineWidth = 2.5;
+    ctx.strokeStyle = '#8B5A00';
+    ctx.stroke();
+
+    // Inner rim shine
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#FFFBEB';
+    ctx.beginPath();
+    ctx.moveTo(b.x + 6, b.y + 3);
+    ctx.lineTo(b.x + b.width - 6, b.y + 3);
+    ctx.stroke();
+
+    // Sacred Tilak dot in center
+    ctx.fillStyle = "#DC2626";
+    ctx.beginPath();
+    ctx.arc(b.x + b.width / 2, b.y + b.height / 2 - 1, 3, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Thali Label
+    ctx.fillStyle = "#3D1E03";
+    ctx.font = "bold 11px sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("थाली 🌸", b.x + b.width / 2, b.y + b.height - 8);
+  }
+
+  function arpanGameLoop() {
+    updateArpan();
+    drawArpan();
+    if (!arpanState.isGameOver) {
+      arpanState.animFrameId = requestAnimationFrame(arpanGameLoop);
+    }
+  }
+
+  function initPhoolArpanDOM() {
+    arpanState.canvas = document.getElementById("arpanCanvas");
+    if (!arpanState.canvas) return;
+    arpanState.ctx = arpanState.canvas.getContext("2d");
+    arpanState.container = document.getElementById("arpan-container");
+    arpanState.scoreDisplay = document.getElementById("arpan-score");
+    arpanState.livesDisplay = document.getElementById("arpan-lives");
+    arpanState.gameOverModal = document.getElementById("arpan-game-over-modal");
+    arpanState.finalScore = document.getElementById("arpan-final-score");
+    arpanState.earnedCoins = document.getElementById("arpan-earned-coins");
+
+    if (!arpanState.initialized) {
+      arpanState.initialized = true;
+
+      window.addEventListener("resize", function () {
+        var arena = document.getElementById('phool-arpan-arena');
+        if (arena && arena.style.display === 'flex') {
+          resizeArpanCanvas();
+        }
+      });
+
+      // Touch & Mouse
+      arpanState.container.addEventListener("touchmove", function (e) {
+        if (!arpanState.isGameOver && e.touches.length > 0) {
+          moveArpanBasket(e.touches[0].clientX);
+        }
+      }, { passive: false });
+
+      arpanState.container.addEventListener("touchstart", function (e) {
+        if (!arpanState.isGameOver && e.touches.length > 0) {
+          moveArpanBasket(e.touches[0].clientX);
+        }
+      }, { passive: false });
+
+      arpanState.container.addEventListener("mousemove", function (e) {
+        if (!arpanState.isGameOver) {
+          moveArpanBasket(e.clientX);
+        }
+      });
+
+      // Keyboard Controls for desktop
+      window.addEventListener("keydown", function(e) {
+        var arena = document.getElementById('phool-arpan-arena');
+        if (!arena || arena.style.display !== 'flex' || arpanState.isGameOver) return;
+        if (e.key === 'ArrowLeft' || e.key === 'a') {
+          arpanState.basket.x = Math.max(0, arpanState.basket.x - 24);
+        } else if (e.key === 'ArrowRight' || e.key === 'd') {
+          arpanState.basket.x = Math.min(arpanState.width - arpanState.basket.width, arpanState.basket.x + 24);
+        }
+      });
+    }
+  }
+
+  window.openPhoolArpanGame = function () {
+    var arena = document.getElementById('phool-arpan-arena');
+    if (!arena) return;
+    arena.style.display = 'flex';
+
+    initPhoolArpanDOM();
+    resizeArpanCanvas();
+    window.restartPhoolArpanGame();
+  };
+
+  window.closePhoolArpanGame = function () {
+    if (arpanState.animFrameId) {
+      cancelAnimationFrame(arpanState.animFrameId);
+      arpanState.animFrameId = null;
+    }
+    var arena = document.getElementById('phool-arpan-arena');
+    if (arena) arena.style.display = 'none';
+  };
+
+  window.restartPhoolArpanGame = function () {
+    if (arpanState.animFrameId) {
+      cancelAnimationFrame(arpanState.animFrameId);
+      arpanState.animFrameId = null;
+    }
+    arpanState.score = 0;
+    arpanState.lives = 3;
+    arpanState.items.length = 0;
+    arpanState.particles.length = 0;
+    arpanState.floatTexts.length = 0;
+    arpanState.isGameOver = false;
+    arpanState.frameCount = 0;
+
+    if (arpanState.scoreDisplay) arpanState.scoreDisplay.innerText = "Prasad: 0";
+    if (arpanState.livesDisplay) arpanState.livesDisplay.innerText = "Lives: ❤️❤️❤️";
+    if (arpanState.gameOverModal) arpanState.gameOverModal.style.display = "none";
+
+    resizeArpanCanvas();
+    if (arpanState.basket && arpanState.width) {
+      arpanState.basket.x = arpanState.width / 2 - arpanState.basket.width / 2;
+    }
+    arpanGameLoop();
+  };
+
+    window.IS_EPIC_GAMES_LOCKED = false;
   window.showEpicGameLockedNotice = function() {};
   window.closeEpicLockedModal = function() {};
   window.showEpicLockedToast = function() {};
