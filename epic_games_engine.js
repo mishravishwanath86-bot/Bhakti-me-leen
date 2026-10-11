@@ -589,100 +589,164 @@
     { id: 'kali', name: 'माँ काली', title: 'असुर संहारिणी माँ महाकाली', img: 'assets/deity_kali.jpg' }
   ];
 
-  // ── Game 2: Match (Memory Card Game with Rotating Real Deity Images) ──
-  var matchFlipped = [];
+  // ── Game 2: Bhakti Jodi Milao (Card Match with Levels) ──
+  var allMatchIcons = ['🕉️', '🪔', '📿', '🌸', '🔱', '🥥', '🦚', '🪷'];
+
+  var matchLevels = [
+    { level: 1, name: "Sugam", pairs: 4 },
+    { level: 2, name: "Madhyam", pairs: 6 },
+    { level: 3, name: "Kathin", pairs: 8 }
+  ];
+
+  var currentMatchLevelIndex = 0;
+  window.currentMatchLevelIndex = 0;
+  var matchFlippedCards = [];
   var matchMatchedCount = 0;
   var matchMoves = 0;
+  var matchLockBoard = false;
 
-  function initMatchGame() {
-    matchFlipped = [];
-    matchMatchedCount = 0;
-    matchMoves = 0;
-    var movesEl = document.getElementById('match-moves-count');
-    if (movesEl) movesEl.textContent = '0';
+  function shuffleMatchArray(array) {
+    return array.slice().sort(function () { return Math.random() - 0.5; });
+  }
 
-    // Pick 6 random deities from master pool
-    var shuffledPool = ALL_APP_DEITIES.slice();
-    for (var p = shuffledPool.length - 1; p > 0; p--) {
-      var r = Math.floor(Math.random() * (p + 1));
-      var tmp = shuffledPool[p]; shuffledPool[p] = shuffledPool[r]; shuffledPool[r] = tmp;
+  function startMatchLevel(lvlIndex) {
+    currentMatchLevelIndex = lvlIndex;
+    window.currentMatchLevelIndex = lvlIndex;
+    var currentLevel = matchLevels[currentMatchLevelIndex];
+
+    var grid = document.getElementById('match-grid');
+    var levelDisplay = document.getElementById('match-level-display');
+    var movesText = document.getElementById('match-moves');
+    var matchesText = document.getElementById('match-matches');
+    var totalMatchesText = document.getElementById('match-total-matches');
+    var modal = document.getElementById('match-result-modal');
+
+    // Update level buttons visual state
+    for (var l = 0; l < matchLevels.length; l++) {
+      var btn = document.getElementById('match-lvl-btn-' + l);
+      if (btn) {
+        if (l === currentMatchLevelIndex) {
+          btn.style.background = 'rgba(139,0,0,0.9)';
+          btn.style.color = '#FFD700';
+          btn.style.borderColor = '#FFD700';
+        } else {
+          btn.style.background = 'rgba(255,255,255,0.25)';
+          btn.style.color = '#FFF';
+          btn.style.borderColor = 'rgba(255,255,255,0.4)';
+        }
+      }
     }
-    var chosen6 = shuffledPool.slice(0, 6);
 
-    // Create 12 cards (6 pairs)
-    var cards = chosen6.concat(chosen6);
-    // Fisher-Yates shuffle cards
-    for (var i = cards.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var t = cards[i]; cards[i] = cards[j]; cards[j] = t;
-    }
-
-    var grid = document.getElementById('match-cards-grid');
     if (!grid) return;
     grid.innerHTML = '';
+    matchFlippedCards = [];
+    matchMatchedCount = 0;
+    matchMoves = 0;
+    matchLockBoard = false;
 
-    cards.forEach(function (item, index) {
+    if (levelDisplay) levelDisplay.innerText = `${currentLevel.level} (${currentLevel.name})`;
+    if (movesText) movesText.innerText = matchMoves;
+    if (matchesText) matchesText.innerText = matchMatchedCount;
+    if (totalMatchesText) totalMatchesText.innerText = currentLevel.pairs;
+    if (modal) modal.style.display = 'none';
+
+    // Select icons for current level
+    var selectedIcons = allMatchIcons.slice(0, currentLevel.pairs);
+    var cardDeck = shuffleMatchArray(selectedIcons.concat(selectedIcons));
+
+    cardDeck.forEach(function (icon) {
       var card = document.createElement('div');
-      card.className = 'match-tile';
-      card.dataset.id = item.id;
-      card.dataset.index = index;
+      card.className = 'bhakti-match-card';
+      card.dataset.icon = icon;
+
       card.innerHTML = `
-        <div class="match-tile-inner">
-          <div class="match-tile-back" style="background:linear-gradient(135deg, #3B1259 0%, #1A052E 100%); border:1.8px solid #F59E0B; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-            <span style="font-size:1.6rem; filter:drop-shadow(0 0 6px #F59E0B);">🕉️</span>
-            <span style="font-size:0.6rem; color:#FDE68A; font-weight:800; margin-top:2px;">भक्ति</span>
-          </div>
-          <div class="match-tile-front" style="background:#FFFDF8; border:2px solid #F59E0B; border-radius:12px; padding:4px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-            <img src="${item.img}" alt="${item.name}" style="width:100%; height:52px; object-fit:cover; border-radius:8px; border:1px solid rgba(245,158,11,0.3);">
-            <div class="match-tile-name" style="font-size:0.65rem; font-weight:900; color:#2A0E44; margin-top:2px; text-align:center;">${item.name}</div>
-          </div>
-        </div>
+        <div class="bhakti-match-card-face bhakti-match-card-back">ॐ</div>
+        <div class="bhakti-match-card-face bhakti-match-card-front">${icon}</div>
       `;
-      card.onclick = function () { handleMatchCardClick(card, item); };
+
+      card.addEventListener('click', flipMatchCard);
       grid.appendChild(card);
     });
   }
+  window.startMatchLevel = startMatchLevel;
+  window.initMatchGame = function () { startMatchLevel(0); };
 
-  function handleMatchCardClick(card, item) {
-    if (card.classList.contains('flipped') || card.classList.contains('matched') || matchFlipped.length >= 2) return;
+  function flipMatchCard() {
+    if (matchLockBoard) return;
+    if (this === matchFlippedCards[0]) return;
+    if (this.classList.contains('flipped')) return;
 
     playSound('swipe');
-    card.classList.add('flipped');
-    matchFlipped.push({ card: card, item: item });
+    this.classList.add('flipped');
+    matchFlippedCards.push(this);
 
-    if (matchFlipped.length === 2) {
+    if (matchFlippedCards.length === 2) {
       matchMoves++;
-      var movesEl = document.getElementById('match-moves-count');
-      if (movesEl) movesEl.textContent = matchMoves;
-
-      var c1 = matchFlipped[0];
-      var c2 = matchFlipped[1];
-
-      if (c1.item.id === c2.item.id) {
-        playSound('correct');
-        c1.card.classList.add('matched');
-        c2.card.classList.add('matched');
-        matchFlipped = [];
-        matchMatchedCount += 2;
-        addCoins(25);
-
-        if (matchMatchedCount === 12) {
-          setTimeout(function () {
-            playSound('victory');
-            addCoins(100);
-            alert(`🎉 बधाई हो! आपने ${matchMoves} चालों में दिव्य स्मृति खेल पूरा किया!\n+100 🪙 सिक्के अर्जित किए!`);
-          }, 400);
-        }
-      } else {
-        playSound('wrong');
-        setTimeout(function () {
-          c1.card.classList.remove('flipped');
-          c2.card.classList.remove('flipped');
-          matchFlipped = [];
-        }, 800);
-      }
+      var movesText = document.getElementById('match-moves');
+      if (movesText) movesText.innerText = matchMoves;
+      checkMatchPair();
     }
   }
+
+  function checkMatchPair() {
+    var card1 = matchFlippedCards[0];
+    var card2 = matchFlippedCards[1];
+    var isMatch = card1.dataset.icon === card2.dataset.icon;
+
+    if (isMatch) {
+      playSound('correct');
+      addCoins(25);
+      matchMatchedCount++;
+      var matchesText = document.getElementById('match-matches');
+      if (matchesText) matchesText.innerText = matchMatchedCount;
+      matchFlippedCards = [];
+
+      if (matchMatchedCount === matchLevels[currentMatchLevelIndex].pairs) {
+        setTimeout(handleMatchLevelComplete, 500);
+      }
+    } else {
+      playSound('wrong');
+      matchLockBoard = true;
+      setTimeout(function () {
+        card1.classList.remove('flipped');
+        card2.classList.remove('flipped');
+        matchFlippedCards = [];
+        matchLockBoard = false;
+      }, 750);
+    }
+  }
+
+  function handleMatchLevelComplete() {
+    playSound('victory');
+    addCoins(100);
+    var modal = document.getElementById('match-result-modal');
+    var modalTitle = document.getElementById('match-modal-title');
+    var modalDesc = document.getElementById('match-modal-desc');
+    var modalBtn = document.getElementById('match-modal-btn');
+
+    if (!modal) return;
+
+    if (currentMatchLevelIndex < matchLevels.length - 1) {
+      if (modalTitle) modalTitle.innerText = "Level Puru Thayu! 🎉";
+      if (modalDesc) modalDesc.innerText = `Tame ${matchMoves} moves ma aa charan puru karyu. Have aagalna level ma vadho. (+100 🪙)`;
+      if (modalBtn) modalBtn.innerText = "Pachhina Level Par Jao ➔";
+    } else {
+      if (modalTitle) modalTitle.innerText = "Sampurna Vijayi! 🏆";
+      if (modalDesc) modalDesc.innerText = "Tame badha j devotional levels safaltapurvak pura kari lidha! (+100 🪙)";
+      if (modalBtn) modalBtn.innerText = "Fari Thi Sharu Karo 🔄";
+    }
+    modal.style.display = 'flex';
+  }
+
+  function nextMatchAction() {
+    if (currentMatchLevelIndex < matchLevels.length - 1) {
+      startMatchLevel(currentMatchLevelIndex + 1);
+    } else {
+      startMatchLevel(0);
+    }
+  }
+  window.nextMatchAction = nextMatchAction;
+  window.nextAction = nextMatchAction;
 
   // ── Game 3: JigSaw (Divine Deity Picture Puzzle Game - 18 Sacred Levels) ──
   var JIGSAW_LEVELS = ALL_APP_DEITIES;

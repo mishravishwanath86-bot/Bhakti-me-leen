@@ -2317,15 +2317,15 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <button class="epic-card-play-btn btn-blue" onclick="event.stopPropagation(); openSwipeGame('ayodhya_mithila');">🎮 खेलें (Play)</button>
         </div>
 
-        <!-- 2. Match (Memory Card Game) -->
-        <div class="epic-game-menu-card" onclick="openMatchGame()" style="cursor:pointer; border:1.8px solid #8B5CF6; box-shadow:0 8px 24px rgba(139,92,246,0.2);">
+        <!-- 2. Match (Memory Card Game - Bhakti Jodi Milao) -->
+        <div class="epic-game-menu-card" onclick="openMatchGame()" style="cursor:pointer; border:1.8px solid #FF7700; box-shadow:0 8px 24px rgba(255,119,0,0.25);">
           <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-memory" style="background:#7C3AED;">🎴 स्मृति</span>
-            <img src="assets/deity_krishna.jpg" alt="Match" class="epic-card-cover-img" style="object-fit:cover;">
+            <span class="epic-card-tag epic-tag-memory" style="background:#E65100;">🎴 जोड़ी मिलाओ</span>
+            <img src="assets/deity_krishna.jpg" alt="Bhakti Jodi Milao" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
-          <div class="epic-card-title">स्मृति कार्ड (Match)</div>
-          <div class="epic-card-subtitle">समान दिव्य चित्रों के जोड़े खोजें</div>
-          <button class="epic-card-play-btn btn-purple" onclick="event.stopPropagation(); openMatchGame();">🎮 खेलें (Play)</button>
+          <div class="epic-card-title">Bhakti Jodi Milao</div>
+          <div class="epic-card-subtitle">३ पावन स्तर (Sugam, Madhyam, Kathin) • जोड़े मिलाएँ</div>
+          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #FF7700, #E65100); color:#FFF;" onclick="event.stopPropagation(); openMatchGame();">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 3. JigSaw (Puzzle Game) -->
@@ -2478,18 +2478,52 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
     </div>
 
-    <!-- ══════════ 🎴 1. MATCH GAME MODAL ══════════ -->
-    <div id="match-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:14px; overflow-y:auto;">
-      <div style="background:#FFFDF8; border:3px solid #F59E0B; border-radius:24px; width:100%; max-width:420px; padding:20px; position:relative; box-shadow:0 12px 35px rgba(0,0,0,0.6);">
-        <button onclick="closeMatchGame()" style="position:absolute; top:12px; right:14px; background:none; border:none; font-size:1.5rem; font-weight:900; color:#2D1400; cursor:pointer;">✕</button>
-        <div style="font-size:1.25rem; font-weight:900; color:#2D1400; text-align:center; margin-bottom:4px;">दिव्य स्मृति कार्ड (Match)</div>
-        <div style="font-size:0.8rem; color:#786C5E; text-align:center; margin-bottom:12px;">समान दिव्य प्रतीकों के जोड़े खोजें • चालें: <strong id="match-moves-count" style="color:#D97706;">0</strong></div>
+    <!-- ══════════ 🎴 1. BHAKTI JODI MILAO (MATCH GAME WITH LEVELS) ══════════ -->
+    <div id="match-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.94); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
+      <div class="bhakti-match-container" style="background:linear-gradient(135deg, #FF7E5F, #FEB47B); border:3px solid #FFD700; border-radius:24px; width:100%; max-width:390px; padding:18px 12px; position:relative; box-shadow:0 15px 45px rgba(0,0,0,0.75), 0 0 25px rgba(255,215,0,0.3) inset; display:flex; flex-direction:column; align-items:center; text-align:center;">
         
-        <div id="match-cards-grid" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; margin-bottom:16px;">
-          <!-- 12 cards injected here -->
+        <!-- Close Button -->
+        <button onclick="closeMatchGame()" style="position:absolute; top:10px; right:12px; background:rgba(0,0,0,0.25); border:1.5px solid rgba(255,255,255,0.5); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FFF; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10;">✕</button>
+        
+        <!-- Header Title -->
+        <h2 style="color:#FFF; font-size:1.35rem; font-weight:900; margin-bottom:6px; text-shadow:1px 2px 4px rgba(0,0,0,0.35); display:flex; align-items:center; gap:6px;">
+          <span>🎴</span> Bhakti Jodi Milao
+        </h2>
+
+        <!-- Level Selector Chips -->
+        <div style="display:flex; gap:6px; margin-bottom:10px;">
+          <button id="match-lvl-btn-0" onclick="startMatchLevel(0)" style="background:rgba(139,0,0,0.9); color:#FFD700; border:1.5px solid #FFD700; padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer;">१. Sugam</button>
+          <button id="match-lvl-btn-1" onclick="startMatchLevel(1)" style="background:rgba(255,255,255,0.25); color:#FFF; border:1px solid rgba(255,255,255,0.4); padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer;">२. Madhyam</button>
+          <button id="match-lvl-btn-2" onclick="startMatchLevel(2)" style="background:rgba(255,255,255,0.25); color:#FFF; border:1px solid rgba(255,255,255,0.4); padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer;">३. Kathin</button>
         </div>
 
-        <button onclick="initMatchGame()" style="width:100%; background:linear-gradient(135deg, #8B5CF6, #6D28D9); color:#FFF; border:none; padding:10px 0; border-radius:14px; font-weight:900; cursor:pointer;">🔄 पुनः प्रारम्भ करें</button>
+        <!-- HUD -->
+        <div class="hud" style="display:flex; justify-content:space-around; width:100%; max-width:320px; color:#FFF; font-weight:bold; margin-bottom:12px; font-size:14px; background:rgba(0,0,0,0.25); padding:6px 10px; border-radius:14px; text-shadow:1px 1px 2px rgba(0,0,0,0.3);">
+          <div>Level: <span id="match-level-display" style="color:#FFD700;">1 (Sugam)</span></div>
+          <div>Moves: <span id="match-moves" style="color:#FFD700;">0</span></div>
+          <div>Matches: <span id="match-matches" style="color:#FFD700;">0</span>/<span id="match-total-matches">4</span></div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="bhakti-match-grid" id="match-grid" style="display:grid; grid-template-columns:repeat(4, 70px); gap:10px; perspective:1000px; justify-content:center; margin:0 auto 12px; min-height:170px;">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Bottom Action Button -->
+        <div style="display:flex; gap:10px; width:100%; max-width:320px;">
+          <button onclick="startMatchLevel(window.currentMatchLevelIndex || 0)" style="flex:1; background:linear-gradient(135deg, #8B0000, #5A0000); color:#FFD700; border:1.8px solid #FFD700; padding:8px 0; border-radius:14px; font-weight:900; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+            🔄 Fari Thi Sharu Karo
+          </button>
+        </div>
+
+        <!-- Celebration Modal -->
+        <div id="match-result-modal" style="display:none; position:absolute; inset:0; background:rgba(0,0,0,0.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-radius:24px; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; padding:20px; z-index:20;">
+          <div style="font-size:3rem; margin-bottom:6px;">🎉</div>
+          <h2 id="match-modal-title" style="color:#FFD700; margin-bottom:8px; font-size:1.5rem; font-weight:900; text-shadow:0 0 10px rgba(255,215,0,0.5);">Abhinandan! 🎉</h2>
+          <p id="match-modal-desc" style="font-size:0.9rem; color:#FFF; line-height:1.5; margin-bottom:16px; max-width:280px;">Tame aa level safaltapurvak puru karyu!</p>
+          <button id="match-modal-btn" onclick="nextMatchAction()" style="padding:10px 28px; background:linear-gradient(135deg, #FF7700, #E65100); border:2px solid #FFD700; color:#FFF; font-size:16px; font-weight:bold; border-radius:24px; cursor:pointer; box-shadow:0 6px 20px rgba(255,119,0,0.5);">Aagal Vadho ➔</button>
+        </div>
+
       </div>
     </div>
 
