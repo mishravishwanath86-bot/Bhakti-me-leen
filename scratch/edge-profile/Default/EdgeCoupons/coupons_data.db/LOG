@@ -1,0 +1,5 @@
+2026/10/12-14:18:07.590 d10 Creating DB C:\Users\vishw\.gemini\antigravity-ide\scratch\bhakti-app\scratch\edge-profile\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/10/12-14:18:07.609 d10 Reusing MANIFEST C:\Users\vishw\.gemini\antigravity-ide\scratch\bhakti-app\scratch\edge-profile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/10/12-14:18:07.774 5310 Level-0 table #5: started
+2026/10/12-14:18:07.776 5310 Level-0 table #5: 683273 bytes OK
+2026/10/12-14:18:07.777 5310 Delete type=0 #3

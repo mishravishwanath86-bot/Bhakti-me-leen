@@ -1605,14 +1605,20 @@ window.readMantraItemDirect = function(deityKey, idx, initialMode) {
   }
 
   // Load clean Vedic Sanskrit into AiBhaktiPlayer for divine recitation
-  if (window.AiBhaktiPlayer) {
-    window.AiBhaktiPlayer.loadContent({
-      id: item.id || `mantra_${deityKey}_${idx}`,
-      title: `${coll.deity} • ${item.title}`,
-      text: item.sanskrit,
-      type: 'mantra',
-      deity: coll.deity
-    });
+  const activeMantraObj = {
+    id: item.id || `mantra_${deityKey}_${idx}`,
+    title: `${coll.deity} • ${item.title}`,
+    text: item.sanskrit,
+    type: 'mantra',
+    deity: coll.deity,
+    source: 'mantra_collections',
+    deityKey: deityKey,
+    idx: idx
+  };
+  window._activeDevotionalContent = activeMantraObj;
+
+  if (window.AiBhaktiPlayer && typeof window.AiBhaktiPlayer.loadContent === 'function') {
+    window.AiBhaktiPlayer.loadContent(activeMantraObj);
   }
 };
 

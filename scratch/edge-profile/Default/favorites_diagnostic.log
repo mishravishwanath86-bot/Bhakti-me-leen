@@ -1,0 +1,16 @@
+2026-10-12 08:48:05.393: [INFO] CurrentProfilePath: C:\Users\vishw\.gemini\antigravity-ide\scratch\bhakti-app\scratch\edge-profile\Default
+2026-10-12 08:48:05.393: [INFO] Profiles total count: 1
+2026-10-12 08:48:05.393: [INFO] Profile: name=Profile 1 path=C:\Users\vishw\.gemini\antigravity-ide\scratch\bhakti-app\scratch\edge-profile\Default lastActive=null
+2026-10-12 08:48:05.393: [INFO] LastUsedProfileDir: C:\Users\vishw\.gemini\antigravity-ide\scratch\bhakti-app\scratch\edge-profile\Default
+2026-10-12 08:48:05.393: [INFO] VisibilityChanged: 0
+2026-10-12 08:48:05.406: [INFO] OnDoneLoading sync enabled: 0
+2026-10-12 08:48:05.406: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-12 08:48:05.406: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-12 08:48:05.406: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-12 08:48:05.411: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-12 08:48:07.367: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-12 08:48:07.370: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-12 08:48:07.371: [INFO] Primary account changed.
+2026-10-12 08:48:07.371: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-10-12 08:48:07.376: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-12 08:48:14.783: [INFO] BookmarkNodeAdded, ABU: 0

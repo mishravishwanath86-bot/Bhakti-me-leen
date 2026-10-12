@@ -7819,6 +7819,11 @@ function openReader(key, fromPage) {
     }
   }
 
+  // Guaranteed synchronization with AI Bhakti Player
+  if (window.AiBhaktiPlayer && typeof window.AiBhaktiPlayer.loadContent === 'function') {
+    window.AiBhaktiPlayer.loadContent(item);
+  }
+
   showPage('page-reader');
 }
 
@@ -18940,40 +18945,20 @@ function closeAartiOptionsModal() {
 }
 
 function openAartiItemDirect(deityKey, idx) {
-  readAartiItemDirect(deityKey, idx);
+  if (typeof window.readAartiItemDirect === 'function') {
+    window.readAartiItemDirect(deityKey, idx);
+  }
 }
 
 function readAartiItemDirect(deityKey, idx) {
-  const item = window.AARTI_COLLECTIONS[deityKey].items[idx];
-  if (!item) return;
-  closeAartiOptionsModal();
-
-  // Load into Reader
-  const readerTitle = document.getElementById('reader-title');
-  const readerContent = document.getElementById('reader-content');
-  if (readerTitle) readerTitle.textContent = item.title;
-  if (readerContent) {
-    readerContent.innerHTML = `<div style="white-space:pre-line; text-align:center; line-height:2.0; font-size:1.1rem; color:#1A0B2E; font-weight:700;">${item.content}</div>`;
+  if (typeof window.readAartiItemDirect === 'function' && window.readAartiItemDirect !== readAartiItemDirect) {
+    return window.readAartiItemDirect(deityKey, idx);
   }
-  showPage('page-reader');
 }
 
 function playAartiItemDirect(deityKey, idx) {
-  const item = window.AARTI_COLLECTIONS[deityKey].items[idx];
-  if (!item) return;
-  closeAartiOptionsModal();
-
-  const record = {
-    title: item.title,
-    deity_id: deityKey,
-    deity_name_hi: window.AARTI_COLLECTIONS[deityKey].deity,
-    content_type: 'aarti',
-    audio_url: item.audio_url,
-    content: item.content
-  };
-
-  if (window.MediaRouter) {
-    window.MediaRouter.playRecord(record);
+  if (typeof window.playAartiItemDirect === 'function' && window.playAartiItemDirect !== playAartiItemDirect) {
+    return window.playAartiItemDirect(deityKey, idx);
   }
 }
 
@@ -19915,49 +19900,7 @@ window.closeAartiOptionsModal = function() {
   }
 };
 
-window.readAartiItemDirect = function(deityKey, idx) {
-  const coll = window.AARTI_COLLECTIONS ? window.AARTI_COLLECTIONS[deityKey] : null;
-  if (!coll || !coll.items[idx]) return;
-  const item = coll.items[idx];
-  
-  window.closeAartiOptionsModal();
-
-  // Load into Reader
-  const readerTitle = document.getElementById('reader-title');
-  const readerContent = document.getElementById('reader-content');
-  if (readerTitle) readerTitle.textContent = item.title;
-  if (readerContent) {
-    readerContent.innerHTML = `
-      <div style="text-align:center; padding:1rem 0;">
-        <div style="font-size:1.15rem; color:#D97706; font-weight:800; margin-bottom:0.5rem;">${coll.deity}</div>
-        <div style="font-size:0.9rem; color:#78350F; font-weight:600; margin-bottom:1.5rem;">${coll.mantra}</div>
-        <div style="white-space:pre-line; text-align:center; line-height:2.2; font-size:1.15rem; color:#1A0B2E; font-weight:700; font-family:'Tiro Devanagari Hindi', serif;">${item.content}</div>
-      </div>
-    `;
-  }
-  window.showPage('page-reader');
-};
-
-window.playAartiItemDirect = function(deityKey, idx) {
-  const coll = window.AARTI_COLLECTIONS ? window.AARTI_COLLECTIONS[deityKey] : null;
-  if (!coll || !coll.items[idx]) return;
-  const item = coll.items[idx];
-  
-  window.closeAartiOptionsModal();
-
-  const record = {
-    title: item.title,
-    deity_id: deityKey,
-    deity_name_hi: coll.deity,
-    content_type: 'aarti',
-    audio_url: item.audio_url,
-    content: item.content
-  };
-
-  if (window.MediaRouter) {
-    window.MediaRouter.playRecord(record);
-  }
-};
+// Legacy 19918 Aarti handlers removed in favor of canonical reader
 
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -21600,71 +21543,7 @@ window.cycleAudioSpeed = function() {
 // 🪔 GUARANTEED BULLETPROOF AARTI ITEM READER & PLAYER CONTROLLERS
 // ══════════════════════════════════════════════════════════════════════════════
 
-window.readAartiItemDirect = function(deityKey, idx) {
-  const coll = window.AARTI_COLLECTIONS ? window.AARTI_COLLECTIONS[deityKey] : null;
-  if (!coll || !coll.items || !coll.items[idx]) {
-    console.warn("Aarti item not found:", deityKey, idx);
-    return;
-  }
-  const item = coll.items[idx];
-  
-  if (typeof window.closeAartiOptionsModal === 'function') {
-    window.closeAartiOptionsModal();
-  }
-
-  // 1. Set Header Title
-  const titleEl = document.getElementById('reader-page-title');
-  if (titleEl) titleEl.textContent = item.title;
-
-  // 2. Set Deity Image & Audio Titles
-  const deityImg = document.getElementById('reader-deity-img');
-  if (deityImg) deityImg.src = coll.img || coll.fallbackImg || 'assets/deity_ganesh.jpg';
-
-  const aTitleEl = document.getElementById('reader-audio-title');
-  if (aTitleEl) aTitleEl.textContent = item.title;
-
-  const aSubEl = document.getElementById('reader-audio-sub');
-  if (aSubEl) aSubEl.textContent = `${coll.deity || 'सनातन'} • ${item.sub || 'पावन नित्य आरती'}`;
-
-  // 3. Set Back Button Target to page-home
-  window.readerBackPage = 'page-home';
-  const backBtn = document.querySelector('#page-reader .back-btn');
-  if (backBtn) {
-    backBtn.setAttribute('data-back', 'page-home');
-    backBtn.onclick = () => window.showPage('page-home');
-  }
-
-  // 4. Render Pure, Complete, Authentic Devanagari Lyrics
-  const readerContent = document.getElementById('reader-cosmic-content') || document.getElementById('reader-content');
-  if (readerContent) {
-    readerContent.innerHTML = `
-      <div class="pure-reader-wrapper" style="padding: 1.2rem 0 2.5rem; text-align: center;">
-        <div style="font-size: 1.3rem; color: #D97706; font-weight: 900; margin-bottom: 0.5rem;">
-          ॥ ${item.title} ॥
-        </div>
-        <div style="font-size: 0.88rem; color: #78350F; font-weight: 700; margin-bottom: 1.5rem; background: rgba(248, 200, 59, 0.15); display: inline-block; padding: 4px 16px; border-radius: 14px; border: 1px solid rgba(248, 200, 59, 0.3);">
-          🪔 ${coll.deity} • ${item.sub || 'पावन आरती'}
-        </div>
-        
-        <div class="pure-reader-text" style="font-family: 'Tiro Devanagari Hindi', 'Inter', serif; font-size: 1.2rem; line-height: 2.3; color: #1A0B2E; font-weight: 700; white-space: pre-line; max-width: 680px; margin: 0 auto;">
-${item.content}
-        </div>
-
-        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-          <button onclick="triggerFlowerShower()" style="background: linear-gradient(135deg, #F8C83B, #D97706); color: #1A0B2E; border: none; font-weight: 900; font-size: 0.9rem; padding: 10px 22px; border-radius: 24px; cursor: pointer; box-shadow: 0 4px 15px rgba(248,200,59,0.4); display: inline-flex; align-items: center; gap: 6px;">
-            🌸 पुष्प वर्षा करें
-          </button>
-          <button onclick="shareDivineCard()" style="background: rgba(26, 11, 46, 0.08); color: #1A0B2E; border: 1.5px solid rgba(26, 11, 46, 0.25); font-weight: 800; font-size: 0.9rem; padding: 10px 20px; border-radius: 24px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-            📤 शेयर करें
-          </button>
-        </div>
-      </div>
-    `;
-  }
-
-  // 5. Open Reader Page
-  window.showPage('page-reader');
-};
+// Legacy 21603 Aarti handler removed in favor of canonical reader
 
 window.playAartiItemDirect = function(deityKey, idx) {
   const coll = window.AARTI_COLLECTIONS ? window.AARTI_COLLECTIONS[deityKey] : null;
@@ -28636,14 +28515,20 @@ ${item.english_lyrics}
   window.scrollTo(0, 0);
 
   // 7. Load into AI Bhakti Player Engine for on-demand playback
-  if (window.AiBhaktiPlayer) {
-    window.AiBhaktiPlayer.loadContent({
-      id: item.id || `aarti_${deityKey}_${idx}`,
-      title: item.hi_line || item.title || coll.title,
-      text: item.content || item.text,
-      type: 'aarti',
-      deity: coll.deity || deityKey
-    });
+  const activeAartiObj = {
+    id: item.id || `aarti_${deityKey}_${idx}`,
+    title: item.hi_line || item.title || coll.title,
+    text: item.content || item.text,
+    type: 'aarti',
+    deity: coll.deity || deityKey,
+    source: 'aarti_collections',
+    deityKey: deityKey,
+    idx: idx
+  };
+  window._activeDevotionalContent = activeAartiObj;
+
+  if (window.AiBhaktiPlayer && typeof window.AiBhaktiPlayer.loadContent === 'function') {
+    window.AiBhaktiPlayer.loadContent(activeAartiObj);
   }
 };
 
@@ -30013,14 +29898,20 @@ ${item.english_lyrics}
   window.scrollTo(0, 0);
 
   // 7. Connect to AI Bhakti Player Engine for On-Demand Audio
-  if (window.AiBhaktiPlayer) {
-    window.AiBhaktiPlayer.loadContent({
-      id: item.id || `chalisa_${deityKey}_${idx}`,
-      title: item.hi_line || item.title || coll.title,
-      text: item.content || item.text,
-      type: 'chalisa',
-      deity: coll.deity || deityKey
-    });
+  const activeChalisaObj = {
+    id: item.id || `chalisa_${deityKey}_${idx}`,
+    title: item.hi_line || item.title || coll.title,
+    text: item.content || item.text,
+    type: 'chalisa',
+    deity: coll.deity || deityKey,
+    source: 'chalisa_collections',
+    deityKey: deityKey,
+    idx: idx
+  };
+  window._activeDevotionalContent = activeChalisaObj;
+
+  if (window.AiBhaktiPlayer && typeof window.AiBhaktiPlayer.loadContent === 'function') {
+    window.AiBhaktiPlayer.loadContent(activeChalisaObj);
   }
 };
 
@@ -30160,8 +30051,8 @@ function compareAppSemver(v1, v2) {
 }
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 13,
-  currentVersionName: '1.12.0',
+  currentVersionCode: 14,
+  currentVersionName: '1.13.0',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',

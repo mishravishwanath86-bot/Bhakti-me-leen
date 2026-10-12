@@ -2456,14 +2456,19 @@ window.openSundarkandDohaReader = function(dohaNum) {
   const recitationText = recitationParts.join('\n\n');
 
   // Load into AiBhaktiPlayer Engine
-  if (window.AiBhaktiPlayer) {
-    window.AiBhaktiPlayer.loadContent({
-      id: `sundarkand-doha-${dohaNum}`,
-      title: `सुन्दरकाण्ड दोहा ${dohaNum}: ${doha.title}`,
-      text: recitationText,
-      type: 'sundarkand',
-      deity: 'श्री हनुमान जी'
-    });
+  const activeSkObj = {
+    id: `sundarkand-doha-${dohaNum}`,
+    title: `सुन्दरकाण्ड दोहा ${dohaNum}: ${doha.title}`,
+    text: recitationText,
+    type: 'sundarkand',
+    deity: 'श्री हनुमान जी',
+    source: 'sundarkand_data',
+    dohaNum: dohaNum
+  };
+  window._activeDevotionalContent = activeSkObj;
+
+  if (window.AiBhaktiPlayer && typeof window.AiBhaktiPlayer.loadContent === 'function') {
+    window.AiBhaktiPlayer.loadContent(activeSkObj);
   }
 
   // Build Reader Content

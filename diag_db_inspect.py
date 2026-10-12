@@ -1,35 +1,37 @@
-import sqlite3, os, json, sys
+import sqlite3
+import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Open database strictly read-only
-conn = sqlite3.connect('file:db/bhakti.db?mode=ro', uri=True)
-cursor = conn.cursor()
+conn = sqlite3.connect('db/bhakti.db')
+c = conn.cursor()
 
-# Check total katha and audio counts
-cursor.execute("SELECT COUNT(*) FROM katha_content")
-total_katha = cursor.fetchone()[0]
+c.execute("SELECT name FROM sqlite_master WHERE type='table'")
+tables = [r[0] for r in c.fetchall()]
+print('Tables:', tables)
 
-cursor.execute("SELECT COUNT(*) FROM katha_content WHERE audio_url IS NOT NULL AND audio_url != ''")
-playable_audio = cursor.fetchone()[0]
+print('\n--- Content Types ---')
+c.execute("SELECT id, name_hi, name_en FROM content_types")
+for r in c.fetchall():
+    print(r)
 
-cursor.execute("SELECT COUNT(*) FROM katha_content WHERE audio_url LIKE '%youtube%' OR audio_url LIKE '%youtu.be%'")
-yt_audio = cursor.fetchone()[0]
+print('\n--- Categories ---')
+c.execute("SELECT id, name_hi, name_en FROM categories")
+for r in c.fetchall():
+    print(r)
 
-print(f"Total Katha: {total_katha}")
-print(f"Playable Audio: {playable_audio}")
-print(f"YouTube Audio: {yt_audio}")
+print('\n--- Content Items Count by Type ---')
+c.execute("SELECT content_type, COUNT(1) FROM content_items GROUP BY content_type")
+for r in c.fetchall():
+    print(r)
 
-# Inspect some old known-good audio items
-cursor.execute("""
-    SELECT id, title, deity, category, audio_url, duration, audio_type 
-    FROM katha_content 
-    WHERE audio_url IS NOT NULL AND audio_url != ''
-    LIMIT 10
-""")
-old_samples = cursor.fetchall()
-print("\n--- Sample Audio Records in DB ---")
-for row in old_samples:
-    print(f"ID: {row[0]} | Title: {row[1]} | Audio: {row[4]} | Type: {row[6]}")
+print('\n--- Total Content Items ---')
+c.execute("SELECT COUNT(1) FROM content_items")
+print('Total:', c.fetchone()[0])
+
+print('\n--- Check for Gita, Sundarkand, Mantra, Chalisa, Aarti items ---')
+for term in ['gita', 'geeta', 'sundarkand', 'sundar', 'mantra', 'chalisa', 'aarti']:
+    c.execute("SELECT COUNT(1) FROM content_items WHERE content_type = ? OR id LIKE ? OR title LIKE ?", (term, f'%{term}%', f'%{term}%'))
+    print(f'Matches for {term}:', c.fetchone()[0])
 
 conn.close()
