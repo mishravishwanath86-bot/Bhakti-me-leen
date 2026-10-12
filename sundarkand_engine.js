@@ -2447,8 +2447,61 @@ window.openSundarkandDohaReader = function(dohaNum) {
     nextBtn.onclick = function() { window.openSundarkandDohaReader(dohaNum + 1); };
   }
 
+  // Assemble full text for authentic AI recitation (Sanskrit/Awadhi scripture verses)
+  const recitationParts = [];
+  if (doha.shloka && doha.shloka.length > 0) recitationParts.push(doha.shloka.join('\n'));
+  if (doha.chaupais && doha.chaupais.length > 0) recitationParts.push(doha.chaupais.join('\n'));
+  if (doha.chhand && doha.chhand.length > 0) recitationParts.push(doha.chhand.join('\n'));
+  if (doha.doha && doha.doha.length > 0) recitationParts.push(doha.doha.join('\n'));
+  const recitationText = recitationParts.join('\n\n');
+
+  // Load into AiBhaktiPlayer Engine
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.loadContent({
+      id: `sundarkand-doha-${dohaNum}`,
+      title: `सुन्दरकाण्ड दोहा ${dohaNum}: ${doha.title}`,
+      text: recitationText,
+      type: 'sundarkand',
+      deity: 'श्री हनुमान जी'
+    });
+  }
+
   // Build Reader Content
-  let html = '';
+  let html = `
+    <!-- 🪔 AI DIVINE RECITATION AUDIO BAR 🪔 -->
+    <div class="sundarkand-audio-card" style="background:linear-gradient(135deg, rgba(31,7,56,0.92) 0%, rgba(59,18,89,0.85) 100%); border:1.8px solid #F8C83B; border-radius:20px; padding:14px 16px; margin-bottom:18px; box-shadow:0 8px 25px rgba(0,0,0,0.45);">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; font-size:0.75rem; font-weight:900; padding:2px 8px; border-radius:8px;">AI भक्ति स्वर</span>
+          <span style="color:#FFFDF8; font-weight:900; font-size:0.9rem;">दोहा ${dohaNum} पावन पाठ</span>
+        </div>
+        <div id="sundarkand-audio-status" style="font-size:0.72rem; color:#FDE68A;">
+          ✨ ऑन-डिमांड AI पाठ
+        </div>
+      </div>
+
+      <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px; flex-wrap:wrap;">
+        <button id="sundarkand-play-btn" onclick="window.AiBhaktiPlayer.togglePlay()" style="flex:2; min-width:140px; background:linear-gradient(135deg, #F8C83B, #D97706); border:none; color:#1A0B2E; padding:10px 16px; border-radius:14px; font-weight:900; font-size:0.92rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 15px rgba(248,200,59,0.35);">
+          <span>▶</span> <span id="sundarkand-play-btn-text">AI दिव्य पाठ सुनें</span>
+        </button>
+        <button onclick="window.AiBhaktiPlayer.toggleVoice()" title="स्वर बदलें (ऋषि/देवी)" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FDE68A; padding:9px 8px; border-radius:12px; font-weight:800; font-size:0.75rem; cursor:pointer; white-space:nowrap; text-align:center;">
+          🪔 स्वर
+        </button>
+        <button onclick="window.AiBhaktiPlayer.cycleSpeed()" title="गति बदलें" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FDE68A; padding:9px 8px; border-radius:12px; font-weight:800; font-size:0.75rem; cursor:pointer; white-space:nowrap; text-align:center;">
+          ⚡ गति
+        </button>
+        <button onclick="window.AiBhaktiPlayer.toggleTempleDrone()" title="तानपुरा संगत" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FDE68A; padding:9px 8px; border-radius:12px; font-weight:800; font-size:0.75rem; cursor:pointer; white-space:nowrap; text-align:center;">
+          🪕 तानपुरा
+        </button>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:8px; font-size:0.72rem; color:#CBD5E1;">
+        <span style="white-space:nowrap;">प्रगति:</span>
+        <input type="range" id="sundarkand-audio-progress" min="0" max="100" value="0" oninput="window.AiBhaktiPlayer.seek(this.value)" style="flex:1; accent-color:#F8C83B; cursor:pointer;" />
+        <span id="sundarkand-audio-time" style="white-space:nowrap;">00:00 / 00:00</span>
+      </div>
+    </div>
+  `;
 
   // 1. Shloka (If Doha 1)
   if (doha.shloka && doha.shloka.length > 0) {
@@ -2545,6 +2598,13 @@ window.closeSundarkandDohaReader = function() {
   const readerModal = document.getElementById('sundarkand-reader-modal');
   if (readerModal) readerModal.style.display = 'none';
   document.body.style.overflow = '';
+};
+
+window.playSundarkandDoha = function(dohaNum) {
+  window.openSundarkandDohaReader(dohaNum);
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.togglePlay();
+  }
 };
 
 // 3. Quick Doha Jumper (दोहा चयन 1 से 60)
@@ -2692,8 +2752,16 @@ window.renderFullSundarkandPage = function(filterCategory, searchQuery) {
               <div style="font-size:0.88rem; font-weight:800; color:#FFFDF8; margin-bottom:4px; line-height:1.35;">
                 ${doha.title}
               </div>
-              <div style="font-size:0.78rem; color:#FDE68A; font-family:'Tiro Devanagari Hindi', serif; line-height:1.35; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; opacity:0.9;">
+              <div style="font-size:0.78rem; color:#FDE68A; font-family:'Tiro Devanagari Hindi', serif; line-height:1.35; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; opacity:0.9; margin-bottom:8px;">
                 ${doha.doha ? doha.doha[0] : ''}
+              </div>
+              <div style="display:flex; align-items:center; gap:8px;" onclick="event.stopPropagation();">
+                <button onclick="window.playSundarkandDoha(${doha.doha_number})" style="background:linear-gradient(135deg, #F8C83B, #D97706); border:none; color:#1A0B2E; padding:4px 10px; border-radius:10px; font-size:0.75rem; font-weight:900; cursor:pointer; display:flex; align-items:center; gap:4px; box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+                  <span>▶</span> सुनें
+                </button>
+                <button onclick="window.openSundarkandDohaReader(${doha.doha_number})" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FDE68A; padding:4px 10px; border-radius:10px; font-size:0.75rem; font-weight:700; cursor:pointer;">
+                  <span>📖</span> पाठ पढ़ें
+                </button>
               </div>
             </div>
           `).join('')}

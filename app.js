@@ -28634,13 +28634,26 @@ ${item.english_lyrics}
   // 6. Open Reader Page
   window.showPage('page-reader');
   window.scrollTo(0, 0);
+
+  // 7. Load into AI Bhakti Player Engine for on-demand playback
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.loadContent({
+      id: item.id || `aarti_${deityKey}_${idx}`,
+      title: item.hi_line || item.title || coll.title,
+      text: item.content || item.text,
+      type: 'aarti',
+      deity: coll.deity || deityKey
+    });
+  }
 };
 
 window.playAartiItemDirect = function(deityKey, idx) {
   // Directly launch reader in audio mode
   window.readAartiItemDirect(deityKey, idx, 'audio');
   
-  if (typeof toggleReaderAudioPlay === 'function') {
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.togglePlay();
+  } else if (typeof toggleReaderAudioPlay === 'function') {
     toggleReaderAudioPlay();
   }
 };
@@ -29997,6 +30010,18 @@ ${item.english_lyrics}
   }
 
   window.showPage('page-reader');
+  window.scrollTo(0, 0);
+
+  // 7. Connect to AI Bhakti Player Engine for On-Demand Audio
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.loadContent({
+      id: item.id || `chalisa_${deityKey}_${idx}`,
+      title: item.hi_line || item.title || coll.title,
+      text: item.content || item.text,
+      type: 'chalisa',
+      deity: coll.deity || deityKey
+    });
+  }
 };
 
 // Direct audio/video player
@@ -30010,7 +30035,10 @@ window.playChalisaItemDirect = function(deityKey, idx) {
   } else if (item.audio_url && typeof playAudioUrl === 'function') {
     playAudioUrl(item.audio_url, item.title, coll.deity);
   } else {
-    window.readChalisaItemDirect(deityKey, idx);
+    window.readChalisaItemDirect(deityKey, idx, 'audio');
+    if (window.AiBhaktiPlayer) {
+      window.AiBhaktiPlayer.togglePlay();
+    }
   }
 };
 
@@ -30132,8 +30160,8 @@ function compareAppSemver(v1, v2) {
 }
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 12,
-  currentVersionName: '1.11.0',
+  currentVersionCode: 13,
+  currentVersionName: '1.12.0',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',

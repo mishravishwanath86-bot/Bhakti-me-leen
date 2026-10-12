@@ -1673,40 +1673,47 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         </button>
       </div>
 
-            <!-- 🎯 SACRED KNOWLEDGE ZONE (QUIZ HUB ENTRY CARD) 🎯 -->
-      <div onclick="openQuizHubModal()" style="margin: 0 1.2rem 1.4rem; background: radial-gradient(circle at 70% 30%, #3B1153 0%, #1F072C 60%, #120320 100%); border: 1.5px solid rgba(248,200,59,0.45); border-radius: 24px; padding: 1.2rem; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative; overflow: hidden; transition: transform 0.2s ease;">
-        <div style="position:absolute; -right:15px; -bottom:15px; font-size:4.5rem; opacity:0.12; select-none; pointer-events:none;">🎯</div>
+      <!-- 🎯 SACRED KNOWLEDGE ZONE (QUIZ HUB ENTRY CARD) 🎯 -->
+      <div onclick="openQuizHubModal()" class="mcq-hub-entry-card" style="margin: 0 1.2rem 1.4rem; background: radial-gradient(circle at 85% 15%, rgba(248,200,59,0.14) 0%, transparent 60%), linear-gradient(145deg, #2D0F4A 0%, #1A072E 55%, #110220 100%); border: 1.5px solid rgba(248,200,59,0.42); border-radius: 24px; padding: 1.3rem 1.25rem 1.25rem; cursor: pointer; box-shadow: 0 12px 32px rgba(0,0,0,0.55), 0 0 20px rgba(248,200,59,0.06) inset, inset 0 1px 0 rgba(255,255,255,0.1); position: relative; overflow: hidden; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);">
         
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
-          <div style="font-size:0.75rem; font-weight:800; color:#FDE68A; background:rgba(248,200,59,0.2); border:1px solid rgba(248,200,59,0.4); padding:3px 10px; border-radius:12px; display:inline-flex; align-items:center; gap:5px;">
-            <span>✨</span> दैनिक ज्ञान महाकुंभ
+        <!-- Ambient Watermark -->
+        <div style="position:absolute; right:-6px; bottom:-10px; font-size:5rem; opacity:0.08; user-select:none; pointer-events:none; filter:drop-shadow(0 0 12px rgba(248,200,59,0.4)); transform:rotate(-8deg);">🎯</div>
+        
+        <!-- Top Badges Row -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+          <div style="font-size:0.75rem; font-weight:800; color:#FDE68A; background:linear-gradient(135deg, rgba(248,200,59,0.2) 0%, rgba(217,119,6,0.15) 100%); border:1px solid rgba(248,200,59,0.45); padding:4px 11px; border-radius:12px; display:inline-flex; align-items:center; gap:5px; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+            <span style="font-size:0.85rem;">✨</span> दैनिक ज्ञान महाकुंभ
           </div>
-          <span style="font-size:0.75rem; color:#34D399; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10B981; padding:3px 8px; border-radius:10px;">
-            +10 साधना अंक
-          </span>
+          <div style="font-size:0.74rem; color:#34D399; font-weight:800; background:linear-gradient(135deg, rgba(16,185,129,0.2) 0%, rgba(5,150,105,0.15) 100%); border:1px solid #10B981; padding:4px 10px; border-radius:12px; display:inline-flex; align-items:center; gap:4px; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+            <span style="font-size:0.8rem;">⚡</span> +10 साधना अंक
+          </div>
         </div>
 
-        <h3 style="font-size:1.15rem; font-weight:900; color:#FFFDF8; margin:0 0 4px 0; display:flex; align-items:center; gap:6px;">
-          <span>🎯</span> दैनिक दिव्य प्रश्नोत्तरी (MCQ Hub)
-        </h3>
-        <p style="font-size:0.8rem; color:#CBD5E1; margin:0 0 12px 0; line-height:1.4;">
+        <!-- Title & Icon -->
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:6px;">
+          <div style="width:36px; height:36px; border-radius:11px; background:linear-gradient(135deg, rgba(248,200,59,0.25) 0%, rgba(217,119,6,0.15) 100%); border:1.2px solid rgba(248,200,59,0.4); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; box-shadow:0 3px 10px rgba(0,0,0,0.3);">
+            🎯
+          </div>
+          <div style="flex:1; min-width:0;">
+            <h3 style="font-size:1.16rem; font-weight:900; color:#FFFDF8; margin:0; line-height:1.25; display:flex; align-items:center; gap:6px; flex-wrap:wrap; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
+              दैनिक दिव्य प्रश्नोत्तरी
+              <span style="font-size:0.72rem; font-weight:800; color:#F8C83B; background:rgba(248,200,59,0.18); border:1px solid rgba(248,200,59,0.38); padding:2px 7px; border-radius:8px; letter-spacing:0.3px;">MCQ Hub</span>
+            </h3>
+          </div>
+        </div>
+
+        <!-- Subtitle / Description -->
+        <p style="font-size:0.82rem; color:#CBD5E1; margin:0 0 16px 0; line-height:1.45; font-weight:500; text-shadow:0 1px 3px rgba(0,0,0,0.3);">
           भारत के प्रमुख मंदिर, विश्व तीर्थ, चालीसा एवं श्रीमद्भगवद्गीता ज्ञान का परीक्षण करें
         </p>
 
-        <div style="display:flex; align-items:center; justify-content:space-between;">
-          <div style="display:flex; gap:6px; font-size:0.72rem; color:#FDE68A;">
-            <span>🏛️ मंदिर</span> • <span>🌍 विश्व</span> • <span>📜 चालीसा</span> • <span>📖 गीता</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:8px;">
-            <button onclick="event.stopPropagation(); openWallOfFameModal()" style="background:linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color:#FFFFFF; border:none; font-size:0.78rem; font-weight:900; padding:8px 12px; border-radius:14px; cursor:pointer; box-shadow:0 3px 12px rgba(2,132,199,0.35); display:flex; align-items:center; gap:4px;">
-              <span>🏆</span> Wall of Fame
-            </button>
-            <button onclick="event.stopPropagation(); openQuizHubModal()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.82rem; font-weight:900; padding:8px 16px; border-radius:16px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.4); display:flex; align-items:center; gap:5px;">
-              <span>MCQ खेलें</span> ❯
-            </button>
-          </div>
-        </div>
+        <!-- Divine CTA Button -->
+        <button onclick="event.stopPropagation(); openQuizHubModal()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #EAB308 40%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.95rem; font-weight:900; padding:12px 0; border-radius:16px; cursor:pointer; box-shadow:0 5px 20px rgba(248,200,59,0.45); display:flex; align-items:center; justify-content:center; gap:8px; transition:transform 0.15s ease, box-shadow 0.15s ease;" onmousedown="this.style.transform='scale(0.98)'" onmouseup="this.style.transform='scale(1)'" ontouchstart="this.style.transform='scale(0.98)'" ontouchend="this.style.transform='scale(1)'">
+          <span>MCQ खेलें</span>
+          <span style="font-size:1.1rem; font-weight:900; line-height:1;">➔</span>
+        </button>
       </div>
+
 
 <!-- 🙏 KALYAN KUND (DIGITAL DAAN & SEVA TRACKER) 🙏 -->
       <div style="margin: 0 1.2rem 1.4rem; background: linear-gradient(145deg, #2D1047 0%, #1A052E 60%, #120320 100%); border: 1.5px solid rgba(248,200,59,0.35); border-radius: 22px; padding: 1.2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.55), 0 0 15px rgba(248,200,59,0.08) inset;">

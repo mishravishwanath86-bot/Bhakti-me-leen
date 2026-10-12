@@ -128,9 +128,60 @@
     },
 
     // ─────────────────────────────────────────────────────────────────
+    // 🔍 RESILIENT AUTO-DETECTION (यदि सीधे Play बटन दबाया जाए)
+    // ─────────────────────────────────────────────────────────────────
+    autoDetectCurrentContent: function() {
+      // 1. Check if Sundarkand modal is open
+      const skModal = document.getElementById('sundarkand-reader-modal');
+      if (skModal && (skModal.style.display === 'flex' || skModal.style.display === 'block') && window.SUNDARKAND_DATA) {
+        const dohaNum = window._sundarkandCurrentDoha || 1;
+        const doha = window.SUNDARKAND_DATA.dohas ? window.SUNDARKAND_DATA.dohas.find(d => d.doha_number === dohaNum) : null;
+        if (doha) {
+          const recitationParts = [];
+          if (doha.shloka && doha.shloka.length > 0) recitationParts.push(doha.shloka.join('\n'));
+          if (doha.chaupais && doha.chaupais.length > 0) recitationParts.push(doha.chaupais.join('\n'));
+          if (doha.chhand && doha.chhand.length > 0) recitationParts.push(doha.chhand.join('\n'));
+          if (doha.doha && doha.doha.length > 0) recitationParts.push(doha.doha.join('\n'));
+          this.loadContent({
+            id: `sundarkand-doha-${dohaNum}`,
+            title: `सुन्दरकाण्ड दोहा ${dohaNum}: ${doha.title}`,
+            text: recitationParts.join('\n\n'),
+            type: 'sundarkand',
+            deity: 'श्री हनुमान जी'
+          });
+          return;
+        }
+      }
+
+      // 2. Check if active reader has scripture text
+      const cosmicEl = document.getElementById('reader-cosmic-content') || document.getElementById('reader-content');
+      const text = cosmicEl ? (cosmicEl.innerText || cosmicEl.textContent || '').trim() : '';
+      if (text.length > 15) {
+        const titleEl = document.getElementById('reader-page-title') || document.getElementById('reader-audio-title');
+        const title = titleEl ? titleEl.textContent.trim() : 'दिव्य भक्ति पाठ';
+        let type = 'aarti';
+        if (title.includes('चालीसा')) type = 'chalisa';
+        else if (title.includes('मन्त्र') || title.includes('मंत्र')) type = 'mantra';
+        else if (title.includes('सुन्दरकाण्ड') || title.includes('दोहा')) type = 'sundarkand';
+
+        this.loadContent({
+          id: 'auto_' + type + '_' + Math.abs(text.length),
+          title: title,
+          text: text,
+          type: type,
+          deity: 'सनातन'
+        });
+      }
+    },
+
+    // ─────────────────────────────────────────────────────────────────
     // 🎧 ON-DEMAND AUDIO GENERATION & PLAYBACK (जब Play दबे, तभी बने)
     // ─────────────────────────────────────────────────────────────────
     togglePlay: async function() {
+      if (!this.currentContent) {
+        this.autoDetectCurrentContent();
+      }
+
       if (!this.currentContent) {
         this.showToast('⚠️ कोई सामग्री लोड नहीं है');
         return;
@@ -301,6 +352,14 @@
       if (timeEl) {
         timeEl.textContent = `${this.formatTime(cur)} / ${this.formatTime(dur)}`;
       }
+
+      const skProgress = document.getElementById('sundarkand-audio-progress');
+      if (skProgress) skProgress.value = pct;
+
+      const skTime = document.getElementById('sundarkand-audio-time');
+      if (skTime) {
+        skTime.textContent = `${this.formatTime(cur)} / ${this.formatTime(dur)}`;
+      }
     },
 
     handleTrackEnded: function() {
@@ -432,6 +491,32 @@
         } else {
           statusPill.innerHTML = '<span>✨</span> प्ले करने पर AI गायन प्रारंभ होगा';
           statusPill.style.color = '#FDE68A';
+        }
+      }
+
+      // Also update Sundarkand modal controls if active
+      const skPlayBtn = document.getElementById('sundarkand-play-btn');
+      const skPlayText = document.getElementById('sundarkand-play-btn-text');
+      const skStatus = document.getElementById('sundarkand-audio-status');
+      if (skPlayBtn) {
+        if (this.isGenerating) {
+          if (skPlayText) skPlayText.textContent = 'दिव्य स्वर सृजन हो रहा है...';
+        } else if (this.isPlaying) {
+          if (skPlayText) skPlayText.textContent = 'विराम (Pause)';
+        } else {
+          if (skPlayText) skPlayText.textContent = 'AI दिव्य पाठ सुनें';
+        }
+      }
+      if (skStatus) {
+        if (this.isGenerating) {
+          skStatus.textContent = '⏳ AI दिव्य सुर सृजन...';
+          skStatus.style.color = '#F59E0B';
+        } else if (this.isPlaying) {
+          skStatus.textContent = '🎵 लाइव भक्ति श्रवण';
+          skStatus.style.color = '#10B981';
+        } else {
+          skStatus.textContent = '✨ ऑन-डिमांड AI पाठ';
+          skStatus.style.color = '#FDE68A';
         }
       }
     },

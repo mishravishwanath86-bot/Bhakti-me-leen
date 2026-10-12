@@ -28,6 +28,7 @@ CADENCE_SETTINGS = {
     "stotram": {"rate": "-8%", "pitch": "+0Hz"},
     "gita": {"rate": "-8%", "pitch": "+1Hz"},
     "shloka": {"rate": "-8%", "pitch": "+1Hz"},
+    "sundarkand": {"rate": "-6%", "pitch": "+1Hz"},
     "chalisa": {"rate": "-4%", "pitch": "+2Hz"},
     "aarti": {"rate": "-3%", "pitch": "+2Hz"},
     "bhajan": {"rate": "-2%", "pitch": "+3Hz"},
@@ -115,7 +116,8 @@ def generate_ai_bhakti_audio(
     pitch_str = cadence["pitch"]
 
     cache_hash = compute_cache_key(str(content_id), cleaned_text, voice.lower(), c_type)
-    file_name = f"bhakti_{content_id}_{voice.lower()}_{cache_hash}.mp3"
+    safe_id = re.sub(r'[^a-zA-Z0-9_\-]', '_', str(content_id))[:40]
+    file_name = f"bhakti_{safe_id}_{voice.lower()}_{cache_hash}.mp3"
     full_path = os.path.join(AI_AUDIO_DIR, file_name)
     web_url = f"/assets/ai_audio/{file_name}"
 

@@ -38,8 +38,15 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
             stats = db.get_stats()
             return (200, headers_ct, json.dumps(stats, ensure_ascii=False).encode('utf-8'))
 
-        # 3. GET /api/content (Paginated List)
+        # 3. GET /api/content (Paginated List or Single item by id)
         if method == "GET" and path == "/api/content":
+            item_id = query_params.get('id')
+            if item_id:
+                item = db.get_content_by_id(item_id)
+                if not item:
+                    return (404, headers_ct, json.dumps({'error': 'Item not found'}, ensure_ascii=False).encode('utf-8'))
+                return (200, headers_ct, json.dumps(item, ensure_ascii=False).encode('utf-8'))
+
             ctype = query_params.get('type') or query_params.get('content_type')
             if ctype in ('all', '', 'null', 'undefined'):
                 ctype = None

@@ -1438,11 +1438,14 @@ window.renderDrikMantraCardHtml = function(item, catKey, coll, idx) {
         </div>
 
         <div style="display:flex; align-items:center; gap:8px;" onclick="event.stopPropagation();">
+          <button onclick="window.playMantraItemDirect('${catKey}', ${idx})" style="background:linear-gradient(135deg,#F59E0B,#D97706); color:#1A0B2E; border:1px solid #FDE68A; border-radius:12px; font-size:0.75rem; font-weight:900; padding:5px 12px; cursor:pointer; display:flex; align-items:center; gap:4px; box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+            <span>▶</span> सुनें
+          </button>
           <button onclick="window.startMantraJaap('${catKey}', ${idx})" style="background:linear-gradient(135deg,#D97706,#B45309); color:#FFFDF8; border:1px solid #FDE68A; border-radius:12px; font-size:0.75rem; font-weight:800; padding:5px 12px; cursor:pointer; display:flex; align-items:center; gap:4px; box-shadow:0 2px 8px rgba(0,0,0,0.3);">
-            <span>📿</span> १०८ जप करें
+            <span>📿</span> १०८ जप
           </button>
           <button onclick="window.readMantraItemDirect('${catKey}', ${idx})" style="background:rgba(255,255,255,0.08); color:#FDE68A; border:1px solid rgba(248,200,59,0.3); border-radius:12px; font-size:0.75rem; font-weight:700; padding:5px 12px; cursor:pointer; display:flex; align-items:center; gap:4px;">
-            <span>📖</span> भावार्थ व फल
+            <span>📖</span> पाठ
           </button>
         </div>
       </div>
@@ -1541,11 +1544,14 @@ window.openMantraCollectionModal = function(deityKey) {
           </div>` : ''}
 
           <div style="display:flex; gap:8px; margin-top:8px;">
-            <button onclick="window.startMantraJaap('${deityKey}', ${idx})" style="flex:1; background:linear-gradient(135deg, #D97706, #B45309); color:#FFFDF8; border:1px solid #FDE68A; border-radius:12px; font-size:0.78rem; font-weight:800; padding:7px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow:0 3px 10px rgba(0,0,0,0.3);">
-              <span>📿</span> १०८ जाप आरम्भ करें
+            <button onclick="window.playMantraItemDirect('${deityKey}', ${idx})" style="flex:1; background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E; border:1px solid #FDE68A; border-radius:12px; font-size:0.78rem; font-weight:900; padding:7px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px; box-shadow:0 3px 10px rgba(0,0,0,0.3);">
+              <span>▶</span> सुनें
             </button>
-            <button onclick="window.readMantraItemDirect('${deityKey}', ${idx})" style="flex:1; background:rgba(255,255,255,0.08); color:#FDE68A; border:1px solid rgba(248,200,59,0.3); border-radius:12px; font-size:0.78rem; font-weight:700; padding:7px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
-              <span>📖</span> सम्पूर्ण पाठ व दर्शन
+            <button onclick="window.startMantraJaap('${deityKey}', ${idx})" style="flex:1; background:linear-gradient(135deg, #D97706, #B45309); color:#FFFDF8; border:1px solid #FDE68A; border-radius:12px; font-size:0.78rem; font-weight:800; padding:7px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px; box-shadow:0 3px 10px rgba(0,0,0,0.3);">
+              <span>📿</span> १०८ जाप
+            </button>
+            <button onclick="window.readMantraItemDirect('${deityKey}', ${idx})" style="flex:1; background:rgba(255,255,255,0.08); color:#FDE68A; border:1px solid rgba(248,200,59,0.3); border-radius:12px; font-size:0.78rem; font-weight:700; padding:7px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">
+              <span>📖</span> दर्शन
             </button>
           </div>
         </div>
@@ -1568,7 +1574,7 @@ window.closeMantraOptionsModal = function() {
 };
 
 // 3. Direct Reader Opening for a Mantra
-window.readMantraItemDirect = function(deityKey, idx) {
+window.readMantraItemDirect = function(deityKey, idx, initialMode) {
   const coll = window.MANTRA_COLLECTIONS ? window.MANTRA_COLLECTIONS[deityKey] : null;
   if (!coll || !coll.items || !coll.items[idx]) return;
 
@@ -1578,10 +1584,12 @@ window.readMantraItemDirect = function(deityKey, idx) {
   const fullText = `॥ ${item.title} ॥\n\n${item.sanskrit}\n\n${item.english ? `[उच्चारण / Transliteration]\n${item.english}\n\n` : ''}॥ भावार्थ एवं माहात्म्य ॥\n${item.meaning || ''}\n\n${item.significance ? `॥ आध्यात्मिक महत्व ॥\n${item.significance}\n\n` : ''}${item.benefits ? `॥ जप फल ॥\n${item.benefits}\n\n` : ''}सनातन पंचांग प्रमाणिक वैदिक मन्त्र संग्रह।`;
 
   const readerObj = {
+    id: item.id || `mantra_${deityKey}_${idx}`,
     title: item.title,
     deity: coll.deity,
     mantra: coll.mantra,
     text: fullText,
+    type: 'mantra',
     meaning: item.meaning,
     english_lyrics: item.english,
     significance: item.significance,
@@ -1594,6 +1602,24 @@ window.readMantraItemDirect = function(deityKey, idx) {
 
   if (typeof openReader === 'function') {
     openReader(readerObj, 'page-mantra');
+  }
+
+  // Load clean Vedic Sanskrit into AiBhaktiPlayer for divine recitation
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.loadContent({
+      id: item.id || `mantra_${deityKey}_${idx}`,
+      title: `${coll.deity} • ${item.title}`,
+      text: item.sanskrit,
+      type: 'mantra',
+      deity: coll.deity
+    });
+  }
+};
+
+window.playMantraItemDirect = function(deityKey, idx) {
+  window.readMantraItemDirect(deityKey, idx, 'audio');
+  if (window.AiBhaktiPlayer) {
+    window.AiBhaktiPlayer.togglePlay();
   }
 };
 
