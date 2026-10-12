@@ -1213,62 +1213,169 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
   z-index: 100250 !important;
 }
 
+/* --- DIVINE JIGSAW UI/UX FIXES --- */
+
+/* Modal Container */
+#jigsaw-game-modal {
+    background: radial-gradient(circle at top, #240a34 0%, #0c0214 100%);
+    color: #ffffff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10px;
+}
+
+#jigsaw-game-modal.active,
+#jigsaw-game-modal.is-open {
+    display: flex !important;
+}
+
+/* Fixed Top Status & Level Bar (Hamesha dikhega) */
+.jigsaw-top-bar {
+    width: 92%;
+    max-width: 420px;
+    background: rgba(255, 215, 0, 0.12);
+    border: 1.5px solid #e6b800;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+    margin-bottom: 12px;
+}
+
+.jigsaw-level-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#level-title {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #ffd700 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    display: block !important;
+}
+
+#pieces-count {
+    font-size: 13px !important;
+    color: #ffd99f !important;
+    font-weight: 600;
+}
+
+/* Boss Level Animated Badge */
 .boss-badge {
-  background: #ff2200;
-  color: #fff;
-  padding: 3px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: bold;
-  animation: pulse-boss 1s infinite alternate;
-  box-shadow: 0 0 10px rgba(255, 34, 0, 0.6);
-  letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+    color: #ffffff !important;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 0 12px #ff0844;
+    animation: bossPulse 0.9s infinite alternate;
 }
 
-@keyframes pulse-boss {
-  from { transform: scale(1); }
-  to { transform: scale(1.08); }
+@keyframes bossPulse {
+    from { transform: scale(0.96); box-shadow: 0 0 8px #ff0844; }
+    to { transform: scale(1.06); box-shadow: 0 0 18px #ff0844; }
 }
 
+/* Controls Bar */
+.jigsaw-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.jigsaw-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ffcc00;
+    color: #ffd700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.jigsaw-btn:active {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Main Puzzle Frame - BOX BORDER REMOVED */
 #puzzle-board {
-  position: relative;
-  background: rgba(255, 255, 255, 0.04);
-  border: 2px dashed rgba(255, 215, 0, 0.45);
-  border-radius: 12px;
-  overflow: visible;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-  margin: 0 auto;
+    position: relative;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 8px 24px rgba(0, 0, 0, 0.6);
+    overflow: visible;
 }
 
+/* Background preview overlay (Transparent guide instead of square lines) */
+#puzzle-guide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.18;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+/* Square Slots ko puri tarah transparent kar diya gaya hai (Zero boxes) */
 .puzzle-slot {
-  position: absolute;
-  box-sizing: border-box;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  pointer-events: none;
+    display: none !important; /* Kisi bhi purane square grid ko hide kar dega */
 }
 
+/* Jigsaw Interlocking Piece styling */
 .jigsaw-piece {
-  position: absolute;
-  cursor: grab;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
-  transition: transform 0.1s ease;
-  touch-action: none;
-  z-index: 10;
-  user-select: none;
-  -webkit-user-select: none;
+    position: absolute;
+    cursor: grab;
+    touch-action: none;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.7));
+    transition: filter 0.2s;
+    z-index: 20;
 }
 
 .jigsaw-piece:active {
-  cursor: grabbing;
-  transform: scale(1.05);
-  z-index: 50;
+    cursor: grabbing;
+    filter: drop-shadow(0 8px 16px rgba(255, 215, 0, 0.6));
+    z-index: 100;
 }
 
 .jigsaw-piece.locked {
-  cursor: default;
-  pointer-events: none;
-  filter: none;
-  z-index: 5;
+    cursor: default;
+    pointer-events: none;
+    filter: none;
+    z-index: 10;
+}
+
+/* Pieces Tray (Niche piece rakhne ka velvet carpet look) */
+#puzzle-tray-area {
+    width: 95%;
+    max-width: 440px;
+    height: 130px;
+    background: rgba(43, 10, 62, 0.6);
+    border: 1.5px solid rgba(255, 215, 0, 0.3);
+    border-radius: 16px;
+    margin-top: 15px;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.7);
 }
 
 .jigsaw-modal-card {

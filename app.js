@@ -30118,9 +30118,22 @@ window.renderFullDrikChalisaPage = function(filterCategory, searchQuery) {
 // 🚀 IN-APP UPDATE CHECKER ENGINE
 // ══════════════════════════════════════════════════════════════════════════════
 
+function compareAppSemver(v1, v2) {
+  if (!v1 || !v2) return 0;
+  const p1 = ('' + v1).replace(/^v/, '').split('.').map(n => parseInt(n, 10) || 0);
+  const p2 = ('' + v2).replace(/^v/, '').split('.').map(n => parseInt(n, 10) || 0);
+  for (let i = 0; i < Math.max(p1.length, p2.length); i++) {
+    const n1 = p1[i] || 0;
+    const n2 = p2[i] || 0;
+    if (n1 > n2) return 1;
+    if (n1 < n2) return -1;
+  }
+  return 0;
+}
+
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 11,
-  currentVersionName: '1.10.0',
+  currentVersionCode: 12,
+  currentVersionName: '1.11.0',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',
@@ -30162,11 +30175,11 @@ window.checkForAppUpdates = async function(isManualUserCheck = false) {
         try {
           const decodedStr = decodeURIComponent(escape(atob(raw.content.replace(/\s/g, ''))));
           updateData = JSON.parse(decodedStr);
-          if (updateData && updateData.versionCode) break;
+          if (updateData && (updateData.versionCode || updateData.versionName)) break;
         } catch (_) {}
       }
       // Case 2: Direct version.json (jsDelivr or Raw GitHub)
-      else if (raw && raw.versionCode) {
+      else if (raw && (raw.versionCode || raw.versionName)) {
         updateData = raw;
         break;
       }
@@ -30174,12 +30187,11 @@ window.checkForAppUpdates = async function(isManualUserCheck = false) {
       else if (raw && raw.tag_name) {
         const apkAsset = Array.isArray(raw.assets) ? raw.assets.find(a => a.name && a.name.endsWith('.apk')) : null;
         const tagVer = raw.tag_name.replace(/^v/, '');
-        const verNum = parseInt(tagVer.replace(/[^0-9]/g, '') || '0', 10);
         updateData = {
-          versionCode: verNum > 0 ? verNum : 999,
+          versionCode: 0,
           versionName: tagVer,
           apkUrl: apkAsset ? apkAsset.browser_download_url : `https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/${raw.tag_name}/bhakti-app.apk`,
-          title: raw.name || `पावन अपडेट ${raw.tag_name} उपलब्ध है! 🚀`,
+          title: raw.name || `पावन अपडेट v${tagVer} उपलब्ध है! 🚀`,
           releaseNotes: raw.body ? raw.body.split('\n').map(l => l.trim()).filter(l => l.length > 0) : ['समस्त पावन फीचर्स व सुधार'],
           forceUpdate: false
         };
@@ -30207,11 +30219,22 @@ window.checkForAppUpdates = async function(isManualUserCheck = false) {
 
   const remoteCode = parseInt(updateData.versionCode || 0, 10);
   const currentCode = window.APP_UPDATE_CONFIG.currentVersionCode;
-  const isNewer = remoteCode > currentCode || (
-    updateData.versionName && 
-    updateData.versionName !== window.APP_UPDATE_CONFIG.currentVersionName && 
-    remoteCode >= currentCode
-  );
+  const currentName = window.APP_UPDATE_CONFIG.currentVersionName;
+  const remoteName = updateData.versionName;
+
+  let isNewer = false;
+  if (remoteName && currentName) {
+    const cmp = compareAppSemver(remoteName, currentName);
+    if (cmp > 0) {
+      isNewer = true;
+    } else if (cmp < 0) {
+      isNewer = false;
+    } else {
+      isNewer = remoteCode > currentCode && remoteCode > 0;
+    }
+  } else if (remoteCode > 0 && currentCode > 0) {
+    isNewer = remoteCode > currentCode;
+  }
 
   if (isNewer) {
     // 1. Show Red Badge in Drawer and Settings
@@ -30226,9 +30249,32 @@ window.checkForAppUpdates = async function(isManualUserCheck = false) {
       topBanner.style.display = 'flex';
     }
 
-    // 3. Open full modal popup
-    window.openUpdateModal(updateData);
+    // 3. Open full modal popup if NOT dismissed or downloaded
+    const verKey = updateData.versionName || updateData.versionCode;
+    const dismissedKey = 'dismissed_update_v' + verKey;
+    const downloadedKey = 'downloaded_update_v' + verKey;
+    const wasDismissed = (localStorage.getItem(dismissedKey) === 'true') || 
+                         (localStorage.getItem(downloadedKey) === 'true') ||
+                         (sessionStorage.getItem(dismissedKey) === 'true');
+
+    if (isManualUserCheck) {
+      window.openUpdateModal(updateData);
+    } else if (updateData.forceUpdate) {
+      window.openUpdateModal(updateData);
+    } else if (!wasDismissed) {
+      window.openUpdateModal(updateData);
+    }
   } else {
+    // App is up to date! Ensure all update banners, badges, and modals are hidden
+    const badges = document.querySelectorAll('#update-badge, .update-badge');
+    badges.forEach(b => { b.style.display = 'none'; });
+
+    const topBanner = document.getElementById('app-update-top-banner');
+    if (topBanner) topBanner.style.display = 'none';
+
+    const modal = document.getElementById('app-update-modal');
+    if (modal) modal.style.display = 'none';
+
     if (isManualUserCheck && typeof showToast === 'function') {
       showToast(`✅ आपका ऐप नवीनतम संस्करण पर है (v${window.APP_UPDATE_CONFIG.currentVersionName})!`);
     }
@@ -30272,20 +30318,44 @@ window.openUpdateModal = function(data) {
   modal.style.display = 'flex';
   if (navigator.vibrate) navigator.vibrate([40, 30, 80]);
   if (typeof showToast === 'function') {
-    showToast('🚀 नया पावन अपडेट v' + (data.versionName || '1.8.0') + ' उपलब्ध है!');
+    showToast('🚀 नया पावन अपडेट v' + (data.versionName || '1.11.0') + ' उपलब्ध है!');
   }
 };
 
 window.closeUpdateModal = function() {
   const modal = document.getElementById('app-update-modal');
   if (modal) modal.style.display = 'none';
+  if (window.APP_UPDATE_CONFIG.latestReleaseInfo) {
+    const v = window.APP_UPDATE_CONFIG.latestReleaseInfo.versionName || window.APP_UPDATE_CONFIG.latestReleaseInfo.versionCode;
+    try {
+      localStorage.setItem('dismissed_update_v' + v, 'true');
+      sessionStorage.setItem('dismissed_update_v' + v, 'true');
+    } catch (_) {}
+  }
 };
 
 window.triggerApkDownload = function() {
   const url = window.APP_UPDATE_CONFIG.downloadUrl;
   if (!url) return;
 
-  if (typeof showToast === 'function') showToast('📥 अपडेट डाउनलोड शुरू हो रहा है...');
+  // Immediately close modal & hide top banner so popup vanishes
+  window.closeUpdateModal();
+  const topBanner = document.getElementById('app-update-top-banner');
+  if (topBanner) topBanner.style.display = 'none';
+
+  const info = window.APP_UPDATE_CONFIG.latestReleaseInfo;
+  if (info) {
+    const v = info.versionName || info.versionCode;
+    try {
+      localStorage.setItem('dismissed_update_v' + v, 'true');
+      localStorage.setItem('downloaded_update_v' + v, 'true');
+      sessionStorage.setItem('dismissed_update_v' + v, 'true');
+    } catch (_) {}
+  }
+
+  if (typeof showToast === 'function') {
+    showToast('📥 पावन अपडेट डाउनलोड शुरू हो रहा है...');
+  }
 
   if (window.AndroidBridge && typeof window.AndroidBridge.downloadApk === 'function') {
     window.AndroidBridge.downloadApk(url);
@@ -30297,17 +30367,7 @@ window.triggerApkDownload = function() {
 // Automatic silent background check on launch
 setTimeout(() => {
   window.checkForAppUpdates(false);
-}, 2000);
-
-// Check again whenever app comes back to foreground
-document.addEventListener('visibilitychange', () => {
-  if (!document.hidden) {
-    window.checkForAppUpdates(false);
-  }
-});
-window.addEventListener('focus', () => {
-  window.checkForAppUpdates(false);
-});
+}, 2500);
 
 
 // ══════════════════════════════════════════════════════════════════════════════

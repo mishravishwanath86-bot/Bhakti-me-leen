@@ -829,159 +829,128 @@
     el.style.top = y + 'px';
   }
 
+  var peekTimer = null;
+  function togglePeek() {
+    var guideImg = document.getElementById('puzzle-guide-image');
+    if (!guideImg) return;
+    if (guideImg.style.opacity === '0.85') {
+      guideImg.style.opacity = '0.18';
+      if (peekTimer) clearTimeout(peekTimer);
+    } else {
+      guideImg.style.opacity = '0.85';
+      if (typeof showToast === 'function') showToast('👁️ दिव्य दर्शन: संकेत 3 सेकंड सक्रिय');
+      if (peekTimer) clearTimeout(peekTimer);
+      peekTimer = setTimeout(function() {
+        if (guideImg) guideImg.style.opacity = '0.18';
+      }, 3000);
+    }
+  }
+
   function initLevel(lvl) {
     currentLevel = lvl;
     placedPieces = 0;
-    var board = document.getElementById('puzzle-board');
-    if (!board) return;
-    board.innerHTML = '';
 
+    var board = document.getElementById('puzzle-board');
+    var tray = document.getElementById('puzzle-tray-area');
+    var guideImg = document.getElementById('puzzle-guide-image');
+    if (!board || !tray || !guideImg) return;
+
+    // Board clear
+    board.querySelectorAll('.jigsaw-piece').forEach(function(e) { e.remove(); });
+    tray.querySelectorAll('.jigsaw-piece').forEach(function(e) { e.remove(); });
+    tray.innerHTML = '';
     var winModal = document.getElementById('winModal');
     if (winModal) winModal.style.display = 'none';
-    var peekModal = document.getElementById('jigsaw-peek-modal');
-    if (peekModal) peekModal.style.display = 'none';
 
     var cfg = getLevelConfig(lvl);
     totalPieces = cfg.cols * cfg.rows;
 
-    // UI header
+    // Header updates
     var titleEl = document.getElementById('level-title');
     if (titleEl) titleEl.innerText = `स्तर ${lvl} / 50`;
     var countEl = document.getElementById('pieces-count');
     if (countEl) countEl.innerText = `खण्ड: ${totalPieces} (${cfg.cols}x${cfg.rows})`;
-    var bossContainer = document.getElementById('boss-container');
-    if (bossContainer) {
-      bossContainer.innerHTML = cfg.isBoss ? '<span class="boss-badge">🔥 BOSS LEVEL</span>' : '';
+    var bossEl = document.getElementById('boss-container');
+    if (bossEl) {
+      bossEl.innerHTML = cfg.isBoss 
+        ? `<span class="boss-badge">🔥 BOSS LEVEL</span>` 
+        : '';
     }
 
-    // Dynamic Board sizing to fit mobile viewport cleanly
-    var availWidth = Math.min(window.innerWidth - 36, 380);
-    var cellW = Math.floor(availWidth / cfg.cols);
-    var cellH = cellW; // square-aspect cells
+    // Board Dimensions
+    var maxW = Math.min(window.innerWidth * 0.88, 360);
+    var cellW = Math.floor(maxW / cfg.cols);
+    var cellH = cellW;
     var boardW = cellW * cfg.cols;
     var boardH = cellH * cfg.rows;
 
     board.style.width = boardW + 'px';
     board.style.height = boardH + 'px';
 
-    // Update peek preview image
-    var imgSrc = getLevelImage(lvl);
-    var peekImg = document.getElementById('jigsaw-peek-img');
-    if (peekImg) peekImg.src = imgSrc;
+    var currentImgUrl = bgImages[(lvl - 1) % bgImages.length];
+    guideImg.src = currentImgUrl;
+    guideImg.style.opacity = '0.18';
 
-    // Pre-calculate puzzle interlocking tabs
-    var hTabs = [];
+    // Compute tabs
+    var hTabs = Array.from({length: cfg.rows}, function() {
+      return Array.from({length: cfg.cols - 1}, function() { return Math.random() < 0.5 ? 1 : -1; });
+    });
+    var vTabs = Array.from({length: cfg.rows - 1}, function() {
+      return Array.from({length: cfg.cols}, function() { return Math.random() < 0.5 ? 1 : -1; });
+    });
+
+    var pieces = [];
+
     for (var r = 0; r < cfg.rows; r++) {
-      hTabs[r] = [];
-      for (var c = 0; c < cfg.cols - 1; c++) {
-        hTabs[r][c] = Math.random() < 0.5 ? 1 : -1;
-      }
-    }
+      for (var c = 0; c < cfg.cols; c++) {
+        var top = r === 0 ? 0 : -vTabs[r - 1][c];
+        var right = c === cfg.cols - 1 ? 0 : hTabs[r][c];
+        var bottom = r === cfg.rows - 1 ? 0 : vTabs[r][c];
+        var left = c === 0 ? 0 : -hTabs[r][c - 1];
 
-    var vTabs = [];
-    for (var vr = 0; vr < cfg.rows - 1; vr++) {
-      vTabs[vr] = [];
-      for (var vc = 0; vc < cfg.cols; vc++) {
-        vTabs[vr][vc] = Math.random() < 0.5 ? 1 : -1;
-      }
-    }
-
-    // Create slot outlines on the target board
-    for (var sr = 0; sr < cfg.rows; sr++) {
-      for (var sc = 0; sc < cfg.cols; sc++) {
-        var slot = document.createElement('div');
-        slot.className = 'puzzle-slot';
-        slot.style.left = (sc * cellW) + 'px';
-        slot.style.top = (sr * cellH) + 'px';
-        slot.style.width = cellW + 'px';
-        slot.style.height = cellH + 'px';
-        board.appendChild(slot);
-      }
-    }
-
-    // Pieces list for scrambling
-    var piecesData = [];
-
-    for (var pr = 0; pr < cfg.rows; pr++) {
-      for (var pc = 0; pc < cfg.cols; pc++) {
-        var targetX = pc * cellW;
-        var targetY = pr * cellH;
-
-        var top = pr === 0 ? 0 : -vTabs[pr - 1][pc];
-        var right = pc === cfg.cols - 1 ? 0 : hTabs[pr][pc];
-        var bottom = pr === cfg.rows - 1 ? 0 : vTabs[pr][pc];
-        var left = pc === 0 ? 0 : -hTabs[pr][pc - 1];
-
-        var pathData = createJigsawPath(cellW, cellH, top, right, bottom, left);
-        var pad = cellW * 0.35; // margin for tabs
+        var path = createJigsawPath(cellW, cellH, top, right, bottom, left);
+        var pad = cellW * 0.35;
         var svgW = cellW + pad * 2;
         var svgH = cellH + pad * 2;
 
-        // SVG Piece with clipping path and interlocking shape
-        var pieceSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        pieceSvg.setAttribute("class", "jigsaw-piece");
-        pieceSvg.setAttribute("width", svgW);
-        pieceSvg.setAttribute("height", svgH);
-        pieceSvg.style.width = svgW + "px";
-        pieceSvg.style.height = svgH + "px";
+        var targetX = c * cellW;
+        var targetY = r * cellH;
 
-        var clipId = `clip_${lvl}_${pr}_${pc}`;
-        pieceSvg.innerHTML = `
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("class", "jigsaw-piece");
+        svg.setAttribute("width", svgW);
+        svg.setAttribute("height", svgH);
+        svg.style.width = svgW + "px";
+        svg.style.height = svgH + "px";
+
+        var clipId = `clip_${lvl}_${r}_${c}`;
+        svg.innerHTML = `
           <defs>
             <clipPath id="${clipId}">
-              <path d="${pathData}" transform="translate(${pad}, ${pad})" />
+              <path d="${path}" transform="translate(${pad}, ${pad})" />
             </clipPath>
           </defs>
           <g clip-path="url(#${clipId})">
-            <image href="${imgSrc}" x="${-targetX + pad}" y="${-targetY + pad}" width="${boardW}" height="${boardH}" preserveAspectRatio="none" />
+            <image href="${currentImgUrl}" x="${-targetX + pad}" y="${-targetY + pad}" width="${boardW}" height="${boardH}" preserveAspectRatio="none"/>
           </g>
-          <path d="${pathData}" transform="translate(${pad}, ${pad})" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.8" />
+          <path d="${path}" transform="translate(${pad}, ${pad})" fill="none" stroke="rgba(255,215,0,0.85)" stroke-width="1.8" />
         `;
 
-        piecesData.push({
-          pieceSvg: pieceSvg,
-          targetX: targetX,
-          targetY: targetY,
-          pad: pad
-        });
+        pieces.push({ svg: svg, targetX: targetX - pad, targetY: targetY - pad, snapDist: cellW * 0.35, pad: pad, cellW: cellW, cellH: cellH });
       }
     }
 
-    // Shuffle pieces order for scattering
-    piecesData.sort(function () { return Math.random() - 0.5; });
-
-    // Distribute scattered initial positions below board
-    var trayArea = document.getElementById('puzzle-tray-area');
-    var piecesPerRow = Math.min(cfg.cols, 5);
-    var pieceRows = Math.ceil(totalPieces / piecesPerRow);
-    var trayMinHeight = Math.max(160, pieceRows * (cellH * 0.8) + 60);
-    if (trayArea) {
-      trayArea.style.minHeight = trayMinHeight + 'px';
-    }
-
-    for (var pi = 0; pi < piecesData.length; pi++) {
-      var item = piecesData[pi];
-      var pCol = pi % piecesPerRow;
-      var pRow = Math.floor(pi / piecesPerRow);
-
-      var colWidth = (boardW - cellW) / Math.max(1, piecesPerRow - 1);
-      var baseX = pCol * colWidth;
-      var baseY = boardH + 20 + pRow * (cellH * 0.75);
-
-      var jitterX = (Math.random() - 0.5) * 16;
-      var jitterY = (Math.random() - 0.5) * 12;
-
-      var scatterX = Math.max(0, Math.min(boardW - cellW, baseX + jitterX));
-      var scatterY = baseY + jitterY;
-
-      setPiecePos(item.pieceSvg, scatterX - item.pad, scatterY - item.pad);
-      board.appendChild(item.pieceSvg);
-
-      enableDrag(item.pieceSvg, item.targetX - item.pad, item.targetY - item.pad, cellW / 3.5);
-    }
+    // Shuffle pieces into bottom tray
+    pieces.sort(function() { return Math.random() - 0.5; }).forEach(function(p, idx) {
+      board.appendChild(p.svg);
+      // Initially set scattered or tray positions
+      p.svg.style.left = (idx * 25) + 'px';
+      p.svg.style.top = (boardH + 20) + 'px';
+      setupDrag(p.svg, p.targetX, p.targetY, p.snapDist);
+    });
   }
 
-  function enableDrag(el, correctX, correctY, snapDist) {
+  function setupDrag(el, correctX, correctY, snapDist) {
     var startX, startY, origX, origY;
     var isDraggingPiece = false;
 
@@ -993,8 +962,8 @@
       var evt = e.touches ? e.touches[0] : e;
       startX = evt.clientX;
       startY = evt.clientY;
-      origX = parseFloat(el.style.left);
-      origY = parseFloat(el.style.top);
+      origX = parseFloat(el.style.left) || 0;
+      origY = parseFloat(el.style.top) || 0;
 
       el.style.zIndex = 100;
       if (e.pointerId && el.setPointerCapture) {
@@ -1014,7 +983,8 @@
       var evt = e.touches ? e.touches[0] : e;
       var dx = evt.clientX - startX;
       var dy = evt.clientY - startY;
-      setPiecePos(el, origX + dx, origY + dy);
+      el.style.left = (origX + dx) + 'px';
+      el.style.top = (origY + dy) + 'px';
     }
 
     function onPointerUp(e) {
@@ -1030,15 +1000,16 @@
         try { el.releasePointerCapture(e.pointerId); } catch (err) {}
       }
 
-      var currX = parseFloat(el.style.left);
-      var currY = parseFloat(el.style.top);
+      var currX = parseFloat(el.style.left) || 0;
+      var currY = parseFloat(el.style.top) || 0;
       var dist = Math.hypot(currX - correctX, currY - correctY);
 
       // Snapping mechanism
       if (dist < snapDist) {
-        setPiecePos(el, correctX, correctY);
+        el.style.left = correctX + 'px';
+        el.style.top = correctY + 'px';
         el.classList.add('locked');
-        el.style.zIndex = 5;
+        el.style.zIndex = 10;
         if (typeof playSound === 'function') playSound('correct');
         placedPieces++;
 
@@ -1050,7 +1021,7 @@
           setTimeout(onLevelComplete, 400);
         }
       } else {
-        el.style.zIndex = 10;
+        el.style.zIndex = 20;
         if (typeof playSound === 'function') playSound('swipe');
       }
     }
@@ -1095,10 +1066,8 @@
     }
   }
 
-  function toggleJigsawPreviewModal() {
-    var modal = document.getElementById('jigsaw-peek-modal');
-    if (!modal) return;
-    modal.style.display = (modal.style.display === 'flex' ? 'none' : 'flex');
+  function resetCurrentLevel() {
+    initLevel(currentLevel);
   }
 
   // ── Game 4: PadaBandham (Word Grid) ──
@@ -1266,7 +1235,10 @@
   window.initLevel = initLevel;
   window.nextLevel = nextLevel;
   window.prevLevel = prevLevel;
-  window.toggleJigsawPreviewModal = toggleJigsawPreviewModal;
+  window.skipToNextLevel = nextLevel;
+  window.resetCurrentLevel = resetCurrentLevel;
+  window.togglePeek = togglePeek;
+  window.toggleJigsawPreviewModal = togglePeek;
 
   window.openPadabandhamGame = function () {
     var modal = document.getElementById('padabandham-game-modal');
