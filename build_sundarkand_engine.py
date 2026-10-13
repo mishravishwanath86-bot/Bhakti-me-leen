@@ -175,7 +175,12 @@ window.openSundarkandChapterModal = function(chapterId) {
     listContainer.innerHTML = switchPillsHtml + dohasHtml;
   }
 
-  modal.style.display = 'flex';
+  modal.classList.remove('hidden');
+  if (modal.style.setProperty) {
+    modal.style.setProperty('display', 'flex', 'important');
+  } else {
+    modal.style.display = 'flex';
+  }
   document.body.style.overflow = 'hidden';
 
   setTimeout(() => {
@@ -194,7 +199,14 @@ window.openSundarkandChapterModal = function(chapterId) {
 
 window.closeSundarkandChapterModal = function() {
   const modal = document.getElementById('sundarkand-options-modal');
-  if (modal) modal.style.display = 'none';
+  if (modal) {
+    modal.classList.add('hidden');
+    if (modal.style.setProperty) {
+      modal.style.setProperty('display', 'none', 'important');
+    } else {
+      modal.style.display = 'none';
+    }
+  }
   document.body.style.overflow = '';
 };
 

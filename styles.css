@@ -21680,13 +21680,18 @@ body.light-mode .reader-flip-btn span,
   background: radial-gradient(circle at 50% 15%, rgba(35, 10, 68, 0.98) 0%, rgba(12, 3, 25, 0.99) 60%, rgba(5, 1, 12, 1) 100%) !important;
   backdrop-filter: blur(35px) !important;
   -webkit-backdrop-filter: blur(35px) !important;
-  display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: flex-start !important;
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch !important;
   padding: max(1rem, env(safe-area-inset-top)) 1rem max(2.5rem, env(safe-area-inset-bottom)) !important;
+}
+
+#sundarkand-options-modal[style*="display: none"],
+#sundarkand-options-modal[style*="display:none"],
+#sundarkand-options-modal.hidden {
+  display: none !important;
 }
 
 #sundarkand-options-modal .aarti-modal-content {

@@ -30104,8 +30104,8 @@ function compareAppSemver(v1, v2) {
 }
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 15,
-  currentVersionName: '1.14.0',
+  currentVersionCode: 16,
+  currentVersionName: '1.14.1',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',
