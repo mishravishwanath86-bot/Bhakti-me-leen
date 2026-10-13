@@ -98,11 +98,11 @@ def main():
 
     # Release Notes
     default_notes = [
-        "दानवीर भक्त सम्मान (Wall of Fame): पवित्र सहयोगियों के नाम व पदवी दर्शन",
-        "सनातन गेम्स हब: समस्त १८ देव स्वरूपों के साथ दिव्य पहेली व स्मृति कार्ड",
-        "पुष्प अर्पण: प्रभु चरणों में सुगंधित पुष्प व प्रसाद संकलन",
-        "इन-ऐप ऑटो अपडेट: नए संस्करण का त्वरित नोटिफिकेशन व वन-टैप डाउनलोड",
-        "UPI भुगतान व संपूर्ण प्रदर्शन में गति व स्थिरता सुधार"
+        "दिव्य आरती पहेली (Aarti Game): सम्पूर्ण आरती पंक्तियों का मनोरम क्रम संयोजन",
+        "वैदिक मन्त्र पहेली (Mantra Game): महामृत्युंजय व गायत्री मन्त्र का पावन संयोजन",
+        "सनातन गेम्स हब ५० स्तर: रामायण स्वाइप, ३० स्तर कार्ड मैच, ५० स्तर जिग्सॉ पहेली, फूल अर्पण",
+        "सुन्दरकाण्ड पाठ UI/UX सम्पूर्ण नवीनीकरण: सोपान पिल्स, रॉयल दोहा कार्ड्स व त्वरित जम्पर",
+        "दानवीर भक्त सम्मान (Wall of Fame) व संपूर्ण प्रदर्शन में गति व स्थिरता सुधार"
     ]
     notes = default_notes
     if len(sys.argv) > 3:
@@ -154,6 +154,7 @@ def main():
     # Sync specific key files and directories
     sync_files = [
         "index.html", "app.js", "styles.css", "epic_games_engine.js", "epic_games.css",
+        "aarti_mantra_puzzle.js", "aarti_mantra_puzzle.css", "aarti_mantra_puzzle_engine.js",
         "ai_bhakti_player.js", "ai_bhakti_player.css", "mcq_test_series_engine.js",
         "version.json", "manifest.json", "service-worker.js", "mandir_3d_engine.js",
         "gallery_engine.js", "gita_engine.js", "mantra_engine.js", "sundarkand_engine.js",
@@ -164,16 +165,23 @@ def main():
         dst = android_assets / fname
         if src.exists():
             shutil.copy2(src, dst)
+            print(f"  Synced file: {fname}")
 
-    # Sync assets folder if changes were made
-    for folder in ["assets/wall_of_fame", "assets/games"]:
+    # Sync assets and data folders recursively
+    for folder in ["assets/wall_of_fame", "assets/games", "assets/symbols", "assets/ai_audio", "data"]:
         src_f = APP_DIR / folder
         dst_f = android_assets / folder
         if src_f.exists():
-            dst_f.mkdir(parents=True, exist_ok=True)
-            for item in src_f.glob("*"):
-                if item.is_file():
-                    shutil.copy2(item, dst_f / item.name)
+            shutil.copytree(src_f, dst_f, dirs_exist_ok=True)
+            print(f"  Synced folder tree: {folder}")
+
+    # Sync direct files in assets/
+    src_assets = APP_DIR / "assets"
+    dst_assets = android_assets / "assets"
+    dst_assets.mkdir(parents=True, exist_ok=True)
+    for f in src_assets.glob("*"):
+        if f.is_file():
+            shutil.copy2(f, dst_assets / f.name)
 
     # Copy version.json explicitly
     shutil.copy2(vfile, android_assets / "version.json")
@@ -284,7 +292,7 @@ def main():
     # 9. Upload APK to GitHub Release Asset
     log(f"Uploading {dest_apk.name} ({size_mb}) to GitHub Release...")
     upload_target = f"{upload_url}?name=bhakti-app.apk"
-    curl_upload = f'curl.exe -X POST -H "Authorization: token {GITHUB_TOKEN}" -H "Content-Type: application/vnd.android.package-archive" --data-binary "@{dest_apk.name}" "{upload_target}"'
+    curl_upload = f'curl.exe --silent --show-error -X POST -H "Authorization: token {GITHUB_TOKEN}" -H "Content-Type: application/vnd.android.package-archive" --data-binary "@{dest_apk.name}" "{upload_target}"'
     ok, out, err = run_cmd(curl_upload, cwd=str(APP_DIR))
     if not ok:
         print("❌ Asset upload failed:", err)

@@ -183,12 +183,12 @@ async function main() {
     window.showPage('page-sundarkand');
     if (window.renderFullSundarkandPage) window.renderFullSundarkandPage('all', '');
   })()`);
-  const skCardsCount = await evaluate(`document.querySelectorAll('#drik-sundarkand-cards-container .drik-image1-card, .sundarkand-doha-card').length`);
+  const skCardsCount = await evaluate(`document.querySelectorAll('#drik-sundarkand-cards-container [onclick*="openSundarkandDohaReader"]').length`);
   console.log('Rendered Sundarkand Cards Count in page-sundarkand:', skCardsCount);
 
   console.log('Clicking Sundarkand card or Doha item...');
   const skCardClick = await evaluate(`(() => {
-    const firstCard = document.querySelector('#drik-sundarkand-cards-container .drik-image1-card, .sundarkand-doha-card, [onclick*="openSundarkand"]');
+    const firstCard = document.querySelector('#drik-sundarkand-cards-container [onclick*="openSundarkandDohaReader"]');
     if (firstCard) {
       firstCard.click();
       return {

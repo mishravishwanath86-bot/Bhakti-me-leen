@@ -3,6 +3,7 @@
 # Connects HTTP Requests to Database Engine with JSON Responses
 # ====================================================================
 
+import os
 import json
 import urllib.parse
 from typing import Dict, Any, Tuple

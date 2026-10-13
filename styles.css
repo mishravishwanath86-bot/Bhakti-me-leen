@@ -21573,3 +21573,575 @@ body.light-mode .aarti-preview-name,
   font-weight: 800 !important;
   text-align: center !important;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   📖 SACRED READER HEADER & NAVIGATION HIGH-CONTRAST RULES
+   ══════════════════════════════════════════════════════════════════ */
+#page-reader .page-header-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  padding: 10px 14px !important;
+  min-height: 54px !important;
+  background: linear-gradient(135deg, rgba(26, 11, 46, 0.98) 0%, rgba(45, 14, 78, 0.95) 100%) !important;
+  border-bottom: 1.5px solid rgba(248, 200, 59, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+#page-reader #reader-page-title,
+#page-reader .page-header-bar h2,
+body.theme-light #page-reader #reader-page-title,
+body.light-mode #page-reader #reader-page-title,
+[data-theme="light"] #page-reader #reader-page-title {
+  color: #FFFDF8 !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  font-family: 'Tiro Devanagari Hindi', 'Inter', serif !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(248, 200, 59, 0.5) !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-align: left !important;
+}
+
+.reader-bhojpatra-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.65rem 1rem !important;
+  background: linear-gradient(135deg, rgba(26, 11, 46, 0.96) 0%, rgba(45, 14, 78, 0.92) 100%) !important;
+  border-bottom: 1.5px solid rgba(248, 200, 59, 0.35) !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35) !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.reader-flip-btn,
+button.reader-flip-btn,
+body.theme-light .reader-flip-btn,
+body.light-mode .reader-flip-btn,
+[data-theme="light"] .reader-flip-btn {
+  background: linear-gradient(135deg, #F8C83B 0%, #D97706 100%) !important;
+  color: #1A0B2E !important;
+  border: 1.2px solid #FEF3C7 !important;
+  padding: 6px 13px !important;
+  border-radius: 12px !important;
+  font-size: 0.8rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  box-shadow: 0 2px 8px rgba(248, 200, 59, 0.35) !important;
+  text-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+.reader-flip-btn span,
+body.theme-light .reader-flip-btn span,
+body.light-mode .reader-flip-btn span,
+[data-theme="light"] .reader-flip-btn span {
+  color: #1A0B2E !important;
+  font-weight: 900 !important;
+}
+
+#bhojpatra-toggle-btn {
+  background: linear-gradient(135deg, #D97706 0%, #78350F 100%) !important;
+  color: #FFFDF8 !important;
+  border: 1.2px solid #FDE68A !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  padding: 7px 13px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  white-space: nowrap !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   🏹 ULTRA-LUXURY VEDIC SUNDARKAND ENGINE & MODAL OVERHAUL
+   ══════════════════════════════════════════════════════════════════ */
+
+/* 1. Modal Overlay & Container */
+#sundarkand-options-modal.aarti-options-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 100005 !important;
+  background: radial-gradient(circle at 50% 15%, rgba(35, 10, 68, 0.98) 0%, rgba(12, 3, 25, 0.99) 60%, rgba(5, 1, 12, 1) 100%) !important;
+  backdrop-filter: blur(35px) !important;
+  -webkit-backdrop-filter: blur(35px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: max(1rem, env(safe-area-inset-top)) 1rem max(2.5rem, env(safe-area-inset-bottom)) !important;
+}
+
+#sundarkand-options-modal .aarti-modal-content {
+  width: 100% !important;
+  max-width: 520px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0 auto !important;
+  position: relative !important;
+}
+
+/* 2. Top Navigation Bar */
+.sundarkand-topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 0.8rem !important;
+  padding: 6px 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 30 !important;
+  background: linear-gradient(180deg, rgba(16, 4, 30, 0.96) 0%, rgba(16, 4, 30, 0.9) 70%, transparent 100%) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  margin-left: -0.5rem !important;
+  margin-right: -0.5rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.sundarkand-topbar-center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  padding: 0 8px !important;
+}
+
+.sundarkand-topbar-sub {
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  color: #FDE68A !important;
+  opacity: 0.9 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.sundarkand-topbar-title {
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FDE68A 50%, #F59E0B 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 0 20px rgba(248, 200, 59, 0.35) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.sundarkand-topbar-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* 3. Chapter Hero Card */
+.sundarkand-hero-card {
+  background: linear-gradient(145deg, rgba(38, 12, 70, 0.95) 0%, rgba(56, 17, 90, 0.88) 50%, rgba(20, 5, 38, 0.98) 100%) !important;
+  border: 1.5px solid rgba(248, 200, 59, 0.38) !important;
+  border-radius: 24px !important;
+  padding: 1.3rem 1.2rem 1.1rem !important;
+  margin-bottom: 1rem !important;
+  text-align: center !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(248, 200, 59, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.sundarkand-hero-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(248, 200, 59, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sundarkand-hero-avatar-wrap {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 10px;
+}
+
+.sundarkand-hero-avatar {
+  width: 82px !important;
+  height: 82px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2.5px solid #F8C83B !important;
+  box-shadow: 0 0 25px rgba(248, 200, 59, 0.45), 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+  display: block !important;
+}
+
+.sundarkand-hero-title {
+  font-size: 1.2rem !important;
+  font-weight: 900 !important;
+  color: #FFFDF8 !important;
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+.sundarkand-hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(248, 200, 59, 0.14) !important;
+  border: 1px solid rgba(248, 200, 59, 0.35) !important;
+  color: #FDE68A !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  padding: 4px 14px !important;
+  border-radius: 14px !important;
+  margin-bottom: 8px !important;
+}
+
+.sundarkand-hero-desc {
+  font-size: 0.82rem !important;
+  color: #CBD5E1 !important;
+  line-height: 1.55 !important;
+  margin-bottom: 12px !important;
+  max-width: 95% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.sundarkand-hero-audio-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(248, 200, 59, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 8px 14px !important;
+  margin-top: 6px !important;
+}
+
+.sundarkand-audio-btn {
+  background: linear-gradient(135deg, #F8C83B 0%, #D97706 100%) !important;
+  color: #1A0B2E !important;
+  border: none !important;
+  font-size: 0.8rem !important;
+  font-weight: 900 !important;
+  padding: 7px 16px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  box-shadow: 0 3px 10px rgba(248, 200, 59, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+
+.sundarkand-audio-btn:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 4px 15px rgba(248, 200, 59, 0.5) !important;
+}
+
+.sundarkand-audio-btn:active {
+  transform: scale(0.97) !important;
+}
+
+.sundarkand-audio-wave {
+  display: inline-flex !important;
+  align-items: flex-end !important;
+  gap: 3px !important;
+  height: 16px !important;
+}
+
+.sundarkand-audio-wave span {
+  width: 3px !important;
+  background: #F8C83B !important;
+  border-radius: 2px !important;
+  animation: sundarkandWaveBar 1.2s ease-in-out infinite alternate !important;
+}
+
+.sundarkand-audio-wave span:nth-child(1) { height: 6px !important; animation-delay: 0.1s !important; }
+.sundarkand-audio-wave span:nth-child(2) { height: 14px !important; animation-delay: 0.3s !important; }
+.sundarkand-audio-wave span:nth-child(3) { height: 9px !important; animation-delay: 0.2s !important; }
+.sundarkand-audio-wave span:nth-child(4) { height: 16px !important; animation-delay: 0.4s !important; }
+
+@keyframes sundarkandWaveBar {
+  0% { height: 4px; }
+  100% { height: 16px; }
+}
+
+.sundarkand-audio-narrator {
+  font-size: 0.72rem !important;
+  color: #FDE68A !important;
+  opacity: 0.85 !important;
+}
+
+/* 4. Sticky Chapter Switcher Bar (THE CRITICAL FIX FOR SQUEEZED BUTTONS) */
+.sundarkand-pills-sticky-wrap {
+  position: sticky !important;
+  top: 48px !important;
+  z-index: 25 !important;
+  background: linear-gradient(180deg, rgba(16, 4, 30, 0.98) 0%, rgba(14, 3, 26, 0.94) 85%, transparent 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  padding: 8px 0 12px !important;
+  margin: 0 -0.5rem 12px !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.sundarkand-pills-scroller {
+  display: flex !important;
+  gap: 8px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 4px 2px !important;
+  scroll-behavior: smooth !important;
+}
+
+.sundarkand-pills-scroller::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* THE GOLDEN PILL - MUST PREVENT SHRINKING! */
+.sundarkand-sopan-pill {
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 15px !important;
+  border-radius: 20px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.sundarkand-sopan-pill.active {
+  background: linear-gradient(135deg, #F8C83B 0%, #E69D00 50%, #D97706 100%) !important;
+  color: #1A0B2E !important;
+  font-weight: 900 !important;
+  border: 1.5px solid #FFFDF8 !important;
+  box-shadow: 0 4px 16px rgba(248, 200, 59, 0.45), 0 0 8px rgba(248, 200, 59, 0.3) !important;
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+.sundarkand-sopan-pill:not(.active) {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1.5px solid rgba(248, 200, 59, 0.25) !important;
+  color: #FDE68A !important;
+}
+
+.sundarkand-sopan-pill:not(.active):hover {
+  background: rgba(248, 200, 59, 0.14) !important;
+  border-color: rgba(248, 200, 59, 0.6) !important;
+  color: #FFFDF8 !important;
+  transform: translateY(-1px) !important;
+}
+
+.sopan-pill-range {
+  font-size: 0.72rem !important;
+  opacity: 0.85 !important;
+}
+
+.sundarkand-sopan-pill.active .sopan-pill-range {
+  color: #1A0B2E !important;
+  font-weight: 800 !important;
+  opacity: 0.95 !important;
+}
+
+/* 5. Doha List & Cards */
+.sundarkand-dohas-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 14px !important;
+}
+
+.sundarkand-doha-card {
+  background: linear-gradient(145deg, rgba(32, 10, 58, 0.92) 0%, rgba(18, 5, 34, 0.97) 100%) !important;
+  border: 1.5px solid rgba(248, 200, 59, 0.28) !important;
+  border-radius: 22px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: all 0.25s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.sundarkand-doha-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(248, 200, 59, 0.65) !important;
+  box-shadow: 0 10px 30px rgba(248, 200, 59, 0.2), 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.sundarkand-card-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 8px !important;
+}
+
+.sundarkand-doha-badge {
+  background: linear-gradient(135deg, #F8C83B 0%, #D97706 100%) !important;
+  color: #1A0B2E !important;
+  font-size: 0.74rem !important;
+  font-weight: 900 !important;
+  padding: 3px 10px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 6px rgba(248, 200, 59, 0.35) !important;
+  letter-spacing: 0.3px !important;
+}
+
+.sundarkand-chaupai-count {
+  font-size: 0.76rem !important;
+  color: #FDE68A !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(248, 200, 59, 0.2) !important;
+  padding: 2px 8px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+}
+
+.sundarkand-card-title {
+  color: #FFFDF8 !important;
+  font-weight: 900 !important;
+  font-size: 1.02rem !important;
+  margin-bottom: 8px !important;
+  line-height: 1.4 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Sacred Verse Quote Box */
+.sundarkand-quote-box {
+  background: rgba(248, 200, 59, 0.08) !important;
+  border-left: 3.5px solid #F59E0B !important;
+  border-right: 1px solid rgba(248, 200, 59, 0.2) !important;
+  border-top: 1px solid rgba(248, 200, 59, 0.15) !important;
+  border-bottom: 1px solid rgba(248, 200, 59, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+  margin-bottom: 10px !important;
+  font-family: 'Tiro Devanagari Hindi', 'Martel', serif !important;
+}
+
+.sundarkand-quote-lines {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.sundarkand-quote-line {
+  font-size: 0.88rem !important;
+  color: #FEF3C7 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.2px !important;
+}
+
+.sundarkand-card-meaning {
+  font-size: 0.8rem !important;
+  color: #CBD5E1 !important;
+  line-height: 1.5 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  margin-bottom: 12px !important;
+}
+
+.sundarkand-card-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: auto !important;
+}
+
+.sundarkand-card-read-btn {
+  flex: 1 !important;
+  background: linear-gradient(135deg, #F8C83B 0%, #E69D00 50%, #D97706 100%) !important;
+  color: #1A0B2E !important;
+  border: none !important;
+  padding: 10px 14px !important;
+  border-radius: 14px !important;
+  font-weight: 900 !important;
+  font-size: 0.85rem !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  box-shadow: 0 3px 12px rgba(248, 200, 59, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+
+.sundarkand-card-read-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 5px 16px rgba(248, 200, 59, 0.5) !important;
+}
+
+.sundarkand-card-read-btn:active {
+  transform: scale(0.98) !important;
+}
+
+.sundarkand-card-listen-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(248, 200, 59, 0.35) !important;
+  color: #FDE68A !important;
+  padding: 9px 12px !important;
+  border-radius: 14px !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.sundarkand-card-listen-btn:hover {
+  background: rgba(248, 200, 59, 0.18) !important;
+  border-color: #F8C83B !important;
+  color: #FFFDF8 !important;
+}
+
+/* Also ensure .drik-page-chip on page-sundarkand does NOT shrink! */
+.drik-page-chip {
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+

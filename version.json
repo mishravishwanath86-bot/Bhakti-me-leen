@@ -1,15 +1,15 @@
 {
-  "versionCode": 14,
-  "versionName": "1.13.0",
-  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.13.0/bhakti-app.apk",
-  "apkSize": "295.4 MB",
-  "releaseDate": "2026-10-12",
+  "versionCode": 15,
+  "versionName": "1.14.0",
+  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.14.0/bhakti-app.apk",
+  "apkSize": "509.3 MB",
+  "releaseDate": "2026-10-13",
   "forceUpdate": false,
-  "title": "पावन अपडेट v1.13.0 उपलब्ध है! 🚀",
+  "title": "पावन अपडेट v1.14.0 उपलब्ध है! 🚀",
   "releaseNotes": [
-    "Ultra-Modern Sleek Curved Glass Bottom Navigation Bar Overhaul",
-    "दानवीर भक्त सम्मान (Wall of Fame): पवित्र सहयोगियों के नाम व पदवी दर्शन",
-    "सनातन गेम्स हब: समस्त १८ देव स्वरूपों के साथ दिव्य पहेली व स्मृति कार्ड",
-    "पुष्प अर्पण: प्रभु चरणों में सुगंधित पुष्प व प्रसाद संकलन"
+    "Aarti & Mantra Games, 50-Level Puzzles, Sundarkand UX Overhaul",
+    "दिव्य आरती पहेली (Aarti Game): सम्पूर्ण आरती पंक्तियों का मनोरम क्रम संयोजन",
+    "वैदिक मन्त्र पहेली (Mantra Game): महामृत्युंजय व गायत्री मन्त्र का पावन संयोजन",
+    "सनातन गेम्स हब ५० स्तर: रामायण स्वाइप, ३० स्तर कार्ड मैच, ५० स्तर जिग्सॉ पहेली, फूल अर्पण"
   ]
 }

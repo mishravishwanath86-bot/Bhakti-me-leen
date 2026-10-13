@@ -469,10 +469,51 @@
     }, 850);
   }
 
+  // ── Bottom Navigation Bar Management for Epic Games ──
+  function hideBottomNavForGames() {
+    var nav = document.getElementById('curved-fluid-bottom-nav');
+    if (nav) nav.classList.add('nav-hidden');
+    var allNavs = document.querySelectorAll('.curved-fluid-bottom-nav, .app-bottom-nav, .bottom-nav');
+    allNavs.forEach(function (el) { el.classList.add('nav-hidden'); });
+  }
+
+  function restoreBottomNavIfExited() {
+    var activePage = '';
+    if (typeof window.currentPage !== 'undefined' && window.currentPage) {
+      activePage = window.currentPage;
+    } else {
+      var p = document.querySelector('.page.active');
+      if (p) activePage = p.id;
+    }
+    // If still in Epic Games page or reader or 3d mandir, keep it hidden
+    if (activePage === 'page-epic-games' || activePage === 'page-reader' || activePage === 'page-3d-mandir') {
+      return;
+    }
+    var nav = document.getElementById('curved-fluid-bottom-nav');
+    if (nav) nav.classList.remove('nav-hidden');
+    var allNavs = document.querySelectorAll('.curved-fluid-bottom-nav, .app-bottom-nav, .bottom-nav');
+    allNavs.forEach(function (el) { el.classList.remove('nav-hidden'); });
+  }
+
+  // Listen for page navigation events in the app
+  document.addEventListener('bhakti-page-change', function (e) {
+    if (e.detail === 'page-epic-games') {
+      hideBottomNavForGames();
+    } else if (e.detail !== 'page-reader' && e.detail !== 'page-3d-mandir') {
+      restoreBottomNavIfExited();
+    }
+  });
+
+  // If already on page-epic-games at load
+  if (typeof window.currentPage !== 'undefined' && window.currentPage === 'page-epic-games') {
+    hideBottomNavForGames();
+  }
+
   // ══════════════════════════════════════════════════════════════════════════════
   // 3. CHARACTER REVIEW SCREEN (frame_018_71s.jpg & frame_020_79s.jpg)
   // ══════════════════════════════════════════════════════════════════════════════
   function showCharacterReviewScreen() {
+    hideBottomNavForGames();
     var arena = document.getElementById('swipe-arena');
     if (arena) arena.style.display = 'none';
 
@@ -536,6 +577,7 @@
   // 4. RESULT / TRY AGAIN MODAL (frame_84s.jpg)
   // ══════════════════════════════════════════════════════════════════════════════
   function showSwipeResultModal() {
+    hideBottomNavForGames();
     var modal = document.getElementById('swipe-result-modal');
     if (!modal) return;
 
@@ -557,6 +599,7 @@
   function hideSwipeResultModal() {
     var modal = document.getElementById('swipe-result-modal');
     if (modal) modal.style.display = 'none';
+    restoreBottomNavIfExited();
   }
 
   // ══════════════════════════════════════════════════════════════════════════════
@@ -589,165 +632,246 @@
     { id: 'kali', name: 'माँ काली', title: 'असुर संहारिणी माँ महाकाली', img: 'assets/deity_kali.jpg' }
   ];
 
-  // ── Game 2: Bhakti Jodi Milao (Bhakti Card Match with Levels) ──
-  var allIcons = ['🕉️', '🪔', '📿', '🌸', '🔱', '🥥', '🦚', '🪷'];
-  
-  // Levels configuration
-  var levels = [
-    { level: 1, name: "Sugam", pairs: 4 },
-    { level: 2, name: "Madhyam", pairs: 6 },
-    { level: 3, name: "Kathin", pairs: 8 }
+  // ── Game 2: Bhakti Card Match - 30 Sacred Levels (16 Sacred Bhakti Symbols) ──
+  const bhaktiSymbols = [
+    { id: 'om', name: 'पावन ॐ', img: 'assets/symbols/cards/symbol_om.webp' },
+    { id: 'trishul', name: 'त्रिशूल व डमरू', img: 'assets/symbols/cards/symbol_trishul.webp' },
+    { id: 'bansuri', name: 'मोरपंख व बाँसुरी', img: 'assets/symbols/cards/symbol_bansuri.webp' },
+    { id: 'swastik_kalash', name: 'मंगल स्वास्तिक कलश', img: 'assets/symbols/cards/symbol_swastik_kalash.webp' },
+    { id: 'shrifal_kalash', name: 'श्रीफल कलश व दीप', img: 'assets/symbols/cards/symbol_shrifal_kalash.webp' },
+    { id: 'diya', name: 'पावन दीपक', img: 'assets/symbols/cards/symbol_diya.webp' },
+    { id: 'ghanti', name: 'मंदिर घंटी', img: 'assets/symbols/cards/symbol_ghanti.webp' },
+    { id: 'rudraksha', name: 'रुद्राक्ष माला', img: 'assets/symbols/cards/symbol_rudraksha.webp' },
+    { id: 'surya', name: 'भगवान सूर्य देव', img: 'assets/symbols/cards/symbol_surya.webp' },
+    { id: 'dhwaja', name: 'भगवा धर्म ध्वजा', img: 'assets/symbols/cards/symbol_dhwaja.webp' },
+    { id: 'grantha', name: 'पवित्र ग्रंथ', img: 'assets/symbols/cards/symbol_grantha.webp' },
+    { id: 'havan', name: 'हवन कुंड', img: 'assets/symbols/cards/symbol_havan.webp' },
+    { id: 'tulsi', name: 'तुलसी व बेलपत्र', img: 'assets/symbols/cards/symbol_tulsi.webp' },
+    { id: 'gaumata', name: 'कामधेनु गौ माता', img: 'assets/symbols/cards/symbol_gaumata.webp' },
+    { id: 'kamal', name: 'कमल पुष्प', img: 'assets/symbols/cards/symbol_kamal.webp' },
+    { id: 'brahmakamal', name: 'दिव्य ब्रह्मकमल', img: 'assets/symbols/cards/symbol_brahmakamal.webp' }
   ];
 
-  var currentLevelIndex = 0;
-  var flippedCards = [];
-  var matchedCount = 0;
-  var moves = 0;
-  var lockBoard = false;
-
-  function shuffle(array) {
-    return array.slice().sort(function () { return Math.random() - 0.5; });
+  // Function to generate 30 Levels with dynamic card scaling
+  function getMatchLevelConfig(lvl) {
+    if (lvl <= 5)   return { pairs: 4,  cols: 4, cardW: 75, cardH: 85 }; // 8 cards (4x2)
+    if (lvl <= 10)  return { pairs: 6,  cols: 4, cardW: 75, cardH: 85 }; // 12 cards (4x3)
+    if (lvl <= 15)  return { pairs: 8,  cols: 4, cardW: 70, cardH: 78 }; // 16 cards (4x4)
+    if (lvl <= 20)  return { pairs: 10, cols: 5, cardW: 60, cardH: 68 }; // 20 cards (5x4)
+    if (lvl <= 25)  return { pairs: 12, cols: 6, cardW: 50, cardH: 60 }; // 24 cards (6x4)
+    return                 { pairs: 14, cols: 7, cardW: 44, cardH: 54 }; // 28 cards (7x4) Level 26-30
   }
 
-  function startLevel(lvlIndex) {
-    currentLevelIndex = lvlIndex;
-    var currentLevel = levels[currentLevelIndex];
-    
-    var grid = document.getElementById('grid');
-    var levelDisplay = document.getElementById('level-display');
-    var movesText = document.getElementById('moves');
-    var matchesText = document.getElementById('matches');
-    var totalMatchesText = document.getElementById('total-matches');
-    var modal = document.getElementById('modal');
+  let currentMatchLevel = 1;
+  let savedMatchStars = JSON.parse(localStorage.getItem('match_level_stars_30') || '{}');
 
-    if (grid) grid.innerHTML = '';
-    flippedCards = [];
-    matchedCount = 0;
-    moves = 0;
-    lockBoard = false;
-    
-    if (levelDisplay) levelDisplay.innerText = currentLevel.level + " (" + currentLevel.name + ")";
-    if (movesText) movesText.innerText = moves;
-    if (matchesText) matchesText.innerText = matchedCount;
-    if (totalMatchesText) totalMatchesText.innerText = currentLevel.pairs;
-    if (modal) modal.style.display = 'none';
+  let matchFlippedCards = [];
+  let matchMatchedPairs = 0;
+  let matchLockBoard = false;
+  let matchMovesCount = 0;
 
-    // Select icons for current level
-    var selectedIcons = allIcons.slice(0, currentLevel.pairs);
-    var cardDeck = shuffle(selectedIcons.concat(selectedIcons));
+  function getMatchTotalStars() {
+    return Object.values(savedMatchStars).reduce((sum, s) => sum + s, 0);
+  }
 
-    cardDeck.forEach(function (icon) {
-      var card = document.createElement('div');
+  function isMatchLevelUnlocked(lvl) {
+    if (lvl === 1) return true;
+    const requiredStars = (lvl - 1) * 3;
+    return getMatchTotalStars() >= requiredStars;
+  }
+
+  function showMatchLockAlert(req) {
+    const toast = document.getElementById('matchLockToast');
+    const msgEl = document.getElementById('matchLockMsg');
+    if (msgEl) {
+      msgEl.innerText = `खोलने के लिए कम से कम ${req} ⭐ चाहिए!\n(आपके पास: ${getMatchTotalStars()} ⭐ हैं)`;
+    }
+    if (toast) {
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2200);
+    }
+    if (typeof playSound === 'function') playSound('wrong');
+  }
+
+  function calculateMatchStarsByMoves(moves, pairs) {
+    if (moves <= pairs + 2) return 5;
+    if (moves <= pairs + 5) return 4;
+    if (moves <= pairs + 8) return 3;
+    if (moves <= pairs + 12) return 2;
+    return 1;
+  }
+
+  function initMatchLevel(lvl) {
+    if (!isMatchLevelUnlocked(lvl)) {
+      showMatchLockAlert((lvl - 1) * 3);
+      return;
+    }
+
+    currentMatchLevel = lvl;
+    matchMatchedPairs = 0;
+    matchMovesCount = 0;
+    matchFlippedCards = [];
+    matchLockBoard = false;
+
+    const winModal = document.getElementById('matchWinModal');
+    if (winModal) winModal.style.display = 'none';
+
+    const cfg = getMatchLevelConfig(lvl);
+    const titleEl = document.getElementById('match-level-title');
+    if (titleEl) titleEl.innerText = `स्तर ${lvl} / 30`;
+    const matchesInfoEl = document.getElementById('match-matches-info');
+    if (matchesInfoEl) matchesInfoEl.innerText = `जोड़ी: 0 / ${cfg.pairs}`;
+    const movesDispEl = document.getElementById('match-moves-display');
+    if (movesDispEl) movesDispEl.innerText = matchMovesCount;
+    const starsDispEl = document.getElementById('match-total-stars-display');
+    if (starsDispEl) starsDispEl.innerText = getMatchTotalStars();
+
+    const grid = document.getElementById('match-card-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    // Responsive width calculation so cards never overflow narrow screens
+    const screenMaxW = Math.min(window.innerWidth * 0.92, 420);
+    const gap = 8;
+    const totalGaps = (cfg.cols - 1) * gap;
+    const maxCardW = Math.floor((screenMaxW - totalGaps) / cfg.cols);
+    const actualCardW = Math.min(cfg.cardW, maxCardW);
+    const actualCardH = Math.round(actualCardW * (cfg.cardH / cfg.cardW));
+
+    grid.style.gridTemplateColumns = `repeat(${cfg.cols}, ${actualCardW}px)`;
+
+    // Select and shuffle cards from the 16 sacred symbols
+    const shuffledSymbols = [...bhaktiSymbols].sort(() => Math.random() - 0.5);
+    const chosenSymbols = shuffledSymbols.slice(0, cfg.pairs);
+    const deck = [...chosenSymbols, ...chosenSymbols].sort(() => Math.random() - 0.5);
+
+    deck.forEach(symbol => {
+      const card = document.createElement('div');
       card.classList.add('card');
-      card.dataset.icon = icon;
+      card.style.width = actualCardW + 'px';
+      card.style.height = actualCardH + 'px';
+      card.dataset.icon = symbol.id;
+      card.dataset.name = symbol.name;
 
-      card.innerHTML = 
-        '<div class="card-face card-back">ॐ</div>' +
-        '<div class="card-face card-front">' + icon + '</div>';
+      card.innerHTML = `
+        <div class="card-face card-back">ॐ</div>
+        <div class="card-face card-front">
+          <img src="${symbol.img}" alt="${symbol.name}" class="match-card-img" draggable="false" />
+        </div>
+      `;
 
-      card.addEventListener('click', flipCard);
-      if (grid) grid.appendChild(card);
+      card.addEventListener('click', onMatchCardClick);
+      grid.appendChild(card);
     });
   }
 
-  function flipCard() {
-    if (lockBoard) return;
-    if (this === flippedCards[0]) return;
-    if (this.classList.contains('flipped')) return;
+  function onMatchCardClick() {
+    if (matchLockBoard) return;
+    if (this === matchFlippedCards[0]) return;
+    if (this.classList.contains('flipped') || this.classList.contains('matched')) return;
 
     if (typeof playSound === 'function') playSound('swipe');
     this.classList.add('flipped');
-    flippedCards.push(this);
+    matchFlippedCards.push(this);
 
-    if (flippedCards.length === 2) {
-      moves++;
-      var movesText = document.getElementById('moves');
-      if (movesText) movesText.innerText = moves;
-      checkMatch();
+    if (matchFlippedCards.length === 2) {
+      matchMovesCount++;
+      const movesDisp = document.getElementById('match-moves-display');
+      if (movesDisp) movesDisp.innerText = matchMovesCount;
+      checkMatchPairMatch();
     }
   }
 
-  function checkMatch() {
-    var card1 = flippedCards[0];
-    var card2 = flippedCards[1];
-    var isMatch = card1.dataset.icon === card2.dataset.icon;
+  function checkMatchPairMatch() {
+    const [c1, c2] = matchFlippedCards;
+    const isMatch = c1.dataset.icon === c2.dataset.icon;
 
     if (isMatch) {
       if (typeof playSound === 'function') playSound('correct');
-      if (typeof addCoins === 'function') addCoins(25);
-      matchedCount++;
-      var matchesText = document.getElementById('matches');
-      if (matchesText) matchesText.innerText = matchedCount;
-      flippedCards = [];
+      c1.classList.add('matched');
+      c2.classList.add('matched');
 
-      if (matchedCount === levels[currentLevelIndex].pairs) {
-        setTimeout(handleLevelComplete, 500);
+      matchMatchedPairs++;
+      const cfg = getMatchLevelConfig(currentMatchLevel);
+      const matchesInfo = document.getElementById('match-matches-info');
+      const matchedName = c1.dataset.name ? ` (${c1.dataset.name})` : '';
+      if (matchesInfo) matchesInfo.innerText = `जोड़ी: ${matchMatchedPairs} / ${cfg.pairs}${matchedName}`;
+      matchFlippedCards = [];
+
+      if (matchMatchedPairs === cfg.pairs) {
+        setTimeout(onMatchLevelWon, 600);
       }
     } else {
       if (typeof playSound === 'function') playSound('wrong');
-      lockBoard = true;
-      setTimeout(function () {
-        card1.classList.remove('flipped');
-        card2.classList.remove('flipped');
-        flippedCards = [];
-        lockBoard = false;
-      }, 750);
+      matchLockBoard = true;
+      setTimeout(() => {
+        c1.classList.remove('flipped');
+        c2.classList.remove('flipped');
+        matchFlippedCards = [];
+        matchLockBoard = false;
+      }, 850);
     }
   }
 
-  function handleLevelComplete() {
+  function onMatchLevelWon() {
     if (typeof playSound === 'function') playSound('victory');
-    if (typeof addCoins === 'function') addCoins(100);
-    var modal = document.getElementById('modal');
-    var modalTitle = document.getElementById('modal-title');
-    var modalDesc = document.getElementById('modal-desc');
-    var modalBtn = document.getElementById('modal-btn');
-
-    if (!modal) return;
-
-    if (currentLevelIndex < levels.length - 1) {
-      if (modalTitle) modalTitle.innerText = "Level Puru Thayu! 🎉";
-      if (modalDesc) modalDesc.innerText = "Tame " + moves + " moves ma aa charan puru karyu. Have aagalna level ma vadho.";
-      if (modalBtn) modalBtn.innerText = "Pachhina Level Par Jao";
-    } else {
-      if (modalTitle) modalTitle.innerText = "Sampurna Vijayi! 🏆";
-      if (modalDesc) modalDesc.innerText = "Tame badha j devotional levels safaltapurvak pura kari lidha!";
-      if (modalBtn) modalBtn.innerText = "Fari Thi Sharu Karo";
+    const cfg = getMatchLevelConfig(currentMatchLevel);
+    const stars = calculateMatchStarsByMoves(matchMovesCount, cfg.pairs);
+    const best = savedMatchStars[currentMatchLevel] || 0;
+    
+    if (stars > best) {
+      savedMatchStars[currentMatchLevel] = stars;
+      localStorage.setItem('match_level_stars_30', JSON.stringify(savedMatchStars));
     }
-    modal.style.display = 'flex';
+
+    const isBoss = (currentMatchLevel % 10 === 0 || currentMatchLevel === 30);
+    const coinsEarned = isBoss ? 200 : 100;
+    if (typeof addCoins === 'function') addCoins(coinsEarned);
+
+    const totalStarsEl = document.getElementById('match-total-stars-display');
+    if (totalStarsEl) totalStarsEl.innerText = getMatchTotalStars();
+    const starsAwardedEl = document.getElementById('match-stars-awarded');
+    if (starsAwardedEl) starsAwardedEl.innerText = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
+    const winMovesTextEl = document.getElementById('match-win-moves-text');
+    if (winMovesTextEl) winMovesTextEl.innerText = `आपने कुल ${matchMovesCount} चालों में यह स्तर पूर्ण किया!`;
+    const coinsEarnedEl = document.getElementById('match-coins-earned-text');
+    if (coinsEarnedEl) coinsEarnedEl.innerText = `+${coinsEarned} सिक्के मिले! 🪙`;
+    const winModal = document.getElementById('matchWinModal');
+    if (winModal) winModal.style.display = 'flex';
   }
 
-  function nextAction() {
-    if (currentLevelIndex < levels.length - 1) {
-      startLevel(currentLevelIndex + 1);
+  function nextMatchLevel() {
+    if (currentMatchLevel < 30) {
+      initMatchLevel(currentMatchLevel + 1);
     } else {
-      startLevel(0);
+      initMatchLevel(1);
     }
   }
 
-  window.startLevel = startLevel;
-  window.nextAction = nextAction;
-  window.initMatchGame = function () { startLevel(0); };
+  function prevMatchLevel() {
+    if (currentMatchLevel > 1) {
+      initMatchLevel(currentMatchLevel - 1);
+    }
+  }
+
+  function restartMatchLevel() {
+    initMatchLevel(currentMatchLevel);
+  }
+
+  window.initMatchLevel = initMatchLevel;
+  window.nextMatchLevel = nextMatchLevel;
+  window.prevMatchLevel = prevMatchLevel;
+  window.restartMatchLevel = restartMatchLevel;
+  window.initMatchGame = function (lvl) { initMatchLevel(lvl || 1); };
 
   // ── Game 3: JigSaw (Bhakti Jigsaw Puzzle - 50 Sacred Levels with Boss Levels) ──
-  function getLevelConfig(lvl) {
-    if (lvl === 1) return { cols: 3, rows: 2, isBoss: false }; // 6 boxes
-    if (lvl >= 2 && lvl <= 9) return { cols: 3, rows: 3, isBoss: false }; // 9 boxes
-    if (lvl === 10) return { cols: 5, rows: 3, isBoss: true }; // 15 boxes Boss
-    if (lvl >= 11 && lvl <= 19) return { cols: 4, rows: 3, isBoss: false }; // 12 boxes
-    if (lvl === 20) return { cols: 6, rows: 3, isBoss: true }; // 18 boxes Boss
-    if (lvl >= 21 && lvl <= 29) return { cols: 5, rows: 3, isBoss: false }; // 15 boxes
-    if (lvl === 30) return { cols: 7, rows: 3, isBoss: true }; // 21 boxes Boss
-    if (lvl >= 31 && lvl <= 39) return { cols: 6, rows: 3, isBoss: false }; // 18 boxes
-    if (lvl === 40) return { cols: 6, rows: 4, isBoss: true }; // 24 boxes Boss
-    if (lvl >= 41 && lvl <= 49) return { cols: 5, rows: 4, isBoss: false }; // 20 boxes
-    if (lvl === 50) return { cols: 7, rows: 4, isBoss: true }; // 28 boxes Maha Boss
-    return { cols: 3, rows: 3, isBoss: false };
-  }
+  let currentLevel = 1;
+  let totalCoins = parseInt(localStorage.getItem('bhakti_coins') || localStorage.getItem('epic_game_coins') || '0', 10);
+  let levelStars = JSON.parse(localStorage.getItem('bhakti_level_stars') || '{}'); 
 
-  var currentLevel = 1;
-  var placedPieces = 0;
-  var totalPieces = 6;
+  let timerInterval = null;
+  let secondsElapsed = 0;
+  let isSolved = false;
 
   // Bhakti images pool - 50 spiritual visuals with local deity fallbacks
   var bgImages = [
@@ -785,145 +909,189 @@
     "https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?w=600"
   ];
 
-  function getLevelImage(lvl) {
-    return bgImages[(lvl - 1) % bgImages.length];
+  // Return total stars collected across all levels
+  function getTotalStars() {
+    return Object.values(levelStars).reduce((sum, s) => sum + s, 0);
   }
 
-  function createJigsawPath(w, h, top, right, bottom, left) {
-    // Generates organic jigsaw tabs & blanks curve
-    var tabSize = Math.min(w, h) * 0.22;
-    var p = "M 0 0";
+  // Timer functionality
+  function startTimer() {
+    clearInterval(timerInterval);
+    secondsElapsed = 0;
+    updateTimerUI();
+    timerInterval = setInterval(() => {
+      secondsElapsed++;
+      updateTimerUI();
+    }, 1000);
+  }
 
-    // Top edge
+  function stopTimer() {
+    clearInterval(timerInterval);
+  }
+
+  function updateTimerUI() {
+    const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
+    const secs = String(secondsElapsed % 60).padStart(2, '0');
+    const timerEl = document.getElementById('game-timer');
+    if (timerEl) timerEl.innerText = `${mins}:${secs}`;
+  }
+
+  // Calculate stars based on speed
+  function calculateStars(timeSec) {
+    if (timeSec <= 30) return 5;
+    if (timeSec <= 60) return 4;
+    if (timeSec <= 90) return 3;
+    if (timeSec <= 120) return 2;
+    return 1;
+  }
+
+  // Check level unlock status: Required Stars = (Level - 1) * 3
+  function isLevelUnlocked(lvl) {
+    if (lvl === 1) return true;
+    const requiredStars = (lvl - 1) * 3;
+    return getTotalStars() >= requiredStars;
+  }
+
+  function showLockAlert(reqStars) {
+    const toast = document.getElementById('lockToast');
+    const reqText = document.getElementById('lock-required-text');
+    if (reqText) {
+      reqText.innerText = `खोलने के लिए कम से कम ${reqStars} स्टार चाहिए! (वर्तमान: ${getTotalStars()} ⭐)`;
+    }
+    if (toast) {
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2200);
+    }
+    if (typeof playSound === 'function') playSound('wrong');
+  }
+
+  // 50 Levels Grid Config
+  function getLevelConfig(lvl) {
+    if (lvl === 1) return { cols: 3, rows: 2, isBoss: false };
+    if (lvl >= 2 && lvl <= 9) return { cols: 3, rows: 3, isBoss: false };
+    if (lvl === 10) return { cols: 5, rows: 3, isBoss: true };
+    if (lvl >= 11 && lvl <= 19) return { cols: 4, rows: 3, isBoss: false };
+    if (lvl === 20) return { cols: 6, rows: 3, isBoss: true };
+    if (lvl >= 21 && lvl <= 29) return { cols: 5, rows: 3, isBoss: false };
+    if (lvl === 30) return { cols: 7, rows: 3, isBoss: true };
+    if (lvl >= 31 && lvl <= 39) return { cols: 6, rows: 3, isBoss: false };
+    if (lvl === 40) return { cols: 6, rows: 4, isBoss: true };
+    if (lvl >= 41 && lvl <= 49) return { cols: 5, rows: 4, isBoss: false };
+    return { cols: 7, rows: 4, isBoss: true }; // Level 50
+  }
+
+  // Curved Jigsaw path with organic interlocking tabs
+  function createJigsawPath(w, h, top, right, bottom, left) {
+    const tab = Math.min(w, h) * 0.22;
+    let p = `M 0 0`;
     if (top !== 0) {
-      p += ` L ${w * 0.38} 0`;
-      p += ` C ${w * 0.38} ${-top * tabSize}, ${w * 0.62} ${-top * tabSize}, ${w * 0.62} 0`;
+      p += ` L ${w * 0.38} 0 C ${w * 0.38} ${-top * tab}, ${w * 0.62} ${-top * tab}, ${w * 0.62} 0`;
     }
     p += ` L ${w} 0`;
-
-    // Right edge
     if (right !== 0) {
-      p += ` L ${w} ${h * 0.38}`;
-      p += ` C ${w + right * tabSize} ${h * 0.38}, ${w + right * tabSize} ${h * 0.62}, ${w} ${h * 0.62}`;
+      p += ` L ${w} ${h * 0.38} C ${w + right * tab} ${h * 0.38}, ${w + right * tab} ${h * 0.62}, ${w} ${h * 0.62}`;
     }
     p += ` L ${w} ${h}`;
-
-    // Bottom edge
     if (bottom !== 0) {
-      p += ` L ${w * 0.62} ${h}`;
-      p += ` C ${w * 0.62} ${h + bottom * tabSize}, ${w * 0.38} ${h + bottom * tabSize}, ${w * 0.38} ${h}`;
+      p += ` L ${w * 0.62} ${h} C ${w * 0.62} ${h + bottom * tab}, ${w * 0.38} ${h + bottom * tab}, ${w * 0.38} ${h}`;
     }
-    p += " L 0 " + h;
-
-    // Left edge
+    p += ` L 0 ${h}`;
     if (left !== 0) {
-      p += ` L 0 ${h * 0.62}`;
-      p += ` C ${-left * tabSize} ${h * 0.62}, ${-left * tabSize} ${h * 0.38}, 0 ${h * 0.38}`;
+      p += ` L 0 ${h * 0.62} C ${-left * tab} ${h * 0.62}, ${-left * tab} ${h * 0.38}, 0 ${h * 0.38}`;
     }
-    p += " Z";
+    p += ` Z`;
     return p;
   }
 
-  function setPiecePos(el, x, y) {
-    el.style.left = x + 'px';
-    el.style.top = y + 'px';
-  }
-
-  var peekTimer = null;
-  function togglePeek() {
-    var guideImg = document.getElementById('puzzle-guide-image');
-    if (!guideImg) return;
-    if (guideImg.style.opacity === '0.85') {
-      guideImg.style.opacity = '0.18';
-      if (peekTimer) clearTimeout(peekTimer);
-    } else {
-      guideImg.style.opacity = '0.85';
-      if (typeof showToast === 'function') showToast('👁️ दिव्य दर्शन: संकेत 3 सेकंड सक्रिय');
-      if (peekTimer) clearTimeout(peekTimer);
-      peekTimer = setTimeout(function() {
-        if (guideImg) guideImg.style.opacity = '0.18';
-      }, 3000);
-    }
-  }
+  let boardSlots = []; 
+  let currentPieces = [];
 
   function initLevel(lvl) {
-    currentLevel = lvl;
-    placedPieces = 0;
-
-    var board = document.getElementById('puzzle-board');
-    var tray = document.getElementById('puzzle-tray-area');
-    var guideImg = document.getElementById('puzzle-guide-image');
-    if (!board || !tray || !guideImg) return;
-
-    // Board clear
-    board.querySelectorAll('.jigsaw-piece').forEach(function(e) { e.remove(); });
-    tray.querySelectorAll('.jigsaw-piece').forEach(function(e) { e.remove(); });
-    tray.innerHTML = '';
-    var winModal = document.getElementById('winModal');
-    if (winModal) winModal.style.display = 'none';
-
-    var cfg = getLevelConfig(lvl);
-    totalPieces = cfg.cols * cfg.rows;
-
-    // Header updates
-    var titleEl = document.getElementById('level-title');
-    if (titleEl) titleEl.innerText = `स्तर ${lvl} / 50`;
-    var countEl = document.getElementById('pieces-count');
-    if (countEl) countEl.innerText = `खण्ड: ${totalPieces} (${cfg.cols}x${cfg.rows})`;
-    var bossEl = document.getElementById('boss-container');
-    if (bossEl) {
-      bossEl.innerHTML = cfg.isBoss 
-        ? `<span class="boss-badge">🔥 BOSS LEVEL</span>` 
-        : '';
+    if (!isLevelUnlocked(lvl)) {
+      showLockAlert((lvl - 1) * 3);
+      return;
     }
 
-    // Board Dimensions
-    var maxW = Math.min(window.innerWidth * 0.88, 360);
-    var cellW = Math.floor(maxW / cfg.cols);
-    var cellH = cellW;
-    var boardW = cellW * cfg.cols;
-    var boardH = cellH * cfg.rows;
+    currentLevel = lvl;
+    isSolved = false;
+    const winModal = document.getElementById('winModal');
+    if (winModal) winModal.style.display = 'none';
+
+    totalCoins = parseInt(localStorage.getItem('bhakti_coins') || localStorage.getItem('epic_game_coins') || '0', 10);
+    levelStars = JSON.parse(localStorage.getItem('bhakti_level_stars') || '{}');
+
+    const userCoinsEl = document.getElementById('user-coins');
+    if (userCoinsEl) userCoinsEl.innerText = totalCoins;
+    const totalStarsEl = document.getElementById('total-stars');
+    if (totalStarsEl) totalStarsEl.innerText = getTotalStars();
+
+    const cfg = getLevelConfig(lvl);
+    const totalPiecesCount = cfg.cols * cfg.rows;
+
+    const levelTitleEl = document.getElementById('level-title');
+    if (levelTitleEl) levelTitleEl.innerText = `स्तर ${lvl} / 50`;
+    const piecesCountEl = document.getElementById('pieces-count');
+    if (piecesCountEl) piecesCountEl.innerText = `खण्ड: ${totalPiecesCount} (${cfg.cols}x${cfg.rows})`;
+    const bossEl = document.getElementById('boss-container');
+    if (bossEl) {
+      bossEl.innerHTML = cfg.isBoss ? `<span class="boss-badge">🔥 BOSS LEVEL</span>` : '';
+    }
+
+    const board = document.getElementById('puzzle-board');
+    if (!board) return;
+    board.innerHTML = '';
+
+    const maxW = Math.min(window.innerWidth * 0.9, 360);
+    const cellW = Math.floor(maxW / cfg.cols);
+    const cellH = cellW;
+    const boardW = cellW * cfg.cols;
+    const boardH = cellH * cfg.rows;
 
     board.style.width = boardW + 'px';
     board.style.height = boardH + 'px';
 
-    var currentImgUrl = bgImages[(lvl - 1) % bgImages.length];
+    const currentImgUrl = bgImages[(lvl - 1) % bgImages.length];
+
+    // Hint / Peek image
+    let guideImg = document.createElement('img');
+    guideImg.id = 'puzzle-guide-image';
     guideImg.src = currentImgUrl;
-    guideImg.style.opacity = '0.18';
+    guideImg.alt = 'guide';
+    guideImg.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; opacity:0; pointer-events:none; z-index:2; transition:opacity 0.3s; border-radius:10px; object-fit:fill;';
+    board.appendChild(guideImg);
 
-    // Compute tabs
-    var hTabs = Array.from({length: cfg.rows}, function() {
-      return Array.from({length: cfg.cols - 1}, function() { return Math.random() < 0.5 ? 1 : -1; });
-    });
-    var vTabs = Array.from({length: cfg.rows - 1}, function() {
-      return Array.from({length: cfg.cols}, function() { return Math.random() < 0.5 ? 1 : -1; });
-    });
+    // Compute tabs structure
+    const hTabs = Array.from({length: cfg.rows}, () => Array.from({length: cfg.cols - 1}, () => Math.random() < 0.5 ? 1 : -1));
+    const vTabs = Array.from({length: cfg.rows - 1}, () => Array.from({length: cfg.cols}, () => Math.random() < 0.5 ? 1 : -1));
 
-    var pieces = [];
+    boardSlots = [];
+    currentPieces = [];
 
-    for (var r = 0; r < cfg.rows; r++) {
-      for (var c = 0; c < cfg.cols; c++) {
-        var top = r === 0 ? 0 : -vTabs[r - 1][c];
-        var right = c === cfg.cols - 1 ? 0 : hTabs[r][c];
-        var bottom = r === cfg.rows - 1 ? 0 : vTabs[r][c];
-        var left = c === 0 ? 0 : -hTabs[r][c - 1];
+    // 1. Generate slots and pieces
+    let index = 0;
+    for (let r = 0; r < cfg.rows; r++) {
+      for (let c = 0; c < cfg.cols; c++) {
+        const correctX = c * cellW;
+        const correctY = r * cellH;
 
-        var path = createJigsawPath(cellW, cellH, top, right, bottom, left);
-        var pad = cellW * 0.35;
-        var svgW = cellW + pad * 2;
-        var svgH = cellH + pad * 2;
+        const top = r === 0 ? 0 : -vTabs[r - 1][c];
+        const right = c === cfg.cols - 1 ? 0 : hTabs[r][c];
+        const bottom = r === cfg.rows - 1 ? 0 : vTabs[r][c];
+        const left = c === 0 ? 0 : -hTabs[r][c - 1];
 
-        var targetX = c * cellW;
-        var targetY = r * cellH;
+        const path = createJigsawPath(cellW, cellH, top, right, bottom, left);
+        const pad = cellW * 0.35;
+        const svgW = cellW + pad * 2;
+        const svgH = cellH + pad * 2;
 
-        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("class", "jigsaw-piece");
         svg.setAttribute("width", svgW);
         svg.setAttribute("height", svgH);
         svg.style.width = svgW + "px";
         svg.style.height = svgH + "px";
 
-        var clipId = `clip_${lvl}_${r}_${c}`;
+        const clipId = `clip_${lvl}_${r}_${c}_${Date.now()}`;
         svg.innerHTML = `
           <defs>
             <clipPath id="${clipId}">
@@ -931,126 +1099,179 @@
             </clipPath>
           </defs>
           <g clip-path="url(#${clipId})">
-            <image href="${currentImgUrl}" x="${-targetX + pad}" y="${-targetY + pad}" width="${boardW}" height="${boardH}" preserveAspectRatio="none"/>
+            <image href="${currentImgUrl}" x="${-correctX + pad}" y="${-correctY + pad}" width="${boardW}" height="${boardH}" preserveAspectRatio="none"/>
           </g>
-          <path d="${path}" transform="translate(${pad}, ${pad})" fill="none" stroke="rgba(255,215,0,0.85)" stroke-width="1.8" />
+          <path d="${path}" transform="translate(${pad}, ${pad})" fill="none" stroke="rgba(255,215,0,0.8)" stroke-width="1.8" />
         `;
 
-        pieces.push({ svg: svg, targetX: targetX - pad, targetY: targetY - pad, snapDist: cellW * 0.35, pad: pad, cellW: cellW, cellH: cellH });
+        boardSlots.push({ id: index, x: correctX, y: correctY, pad, cellW, cellH });
+        currentPieces.push({ id: index, originalSlot: index, currentSlot: index, el: svg, pad, cellW, cellH });
+        board.appendChild(svg);
+        index++;
       }
     }
 
-    // Shuffle pieces into bottom tray
-    pieces.sort(function() { return Math.random() - 0.5; }).forEach(function(p, idx) {
-      board.appendChild(p.svg);
-      // Initially set scattered or tray positions
-      p.svg.style.left = (idx * 25) + 'px';
-      p.svg.style.top = (boardH + 20) + 'px';
-      setupDrag(p.svg, p.targetX, p.targetY, p.snapDist);
+    // 2. Scramble pieces randomly on the board
+    shuffleBoardPositions();
+    startTimer();
+  }
+
+  // Scramble positions on the board
+  function shuffleBoardPositions() {
+    let slotIndices = boardSlots.map((_, i) => i);
+    // Shuffle array
+    for (let i = slotIndices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [slotIndices[i], slotIndices[j]] = [slotIndices[j], slotIndices[i]];
+    }
+
+    // Ensure pieces are genuinely scrambled and not already solved
+    if (slotIndices.length > 1 && slotIndices.every((val, idx) => val === idx)) {
+      [slotIndices[0], slotIndices[1]] = [slotIndices[1], slotIndices[0]];
+    }
+
+    currentPieces.forEach((piece, idx) => {
+      const assignedSlot = slotIndices[idx];
+      piece.currentSlot = assignedSlot;
+      renderPieceAtSlot(piece, assignedSlot);
+      enableSwapDrag(piece);
     });
   }
 
-  function setupDrag(el, correctX, correctY, snapDist) {
-    var startX, startY, origX, origY;
-    var isDraggingPiece = false;
+  function renderPieceAtSlot(piece, slotIndex) {
+    const slot = boardSlots[slotIndex];
+    if (!slot) return;
+    piece.el.style.left = (slot.x - piece.pad) + 'px';
+    piece.el.style.top = (slot.y - piece.pad) + 'px';
+  }
+
+  // Drag piece to swap with another piece
+  function enableSwapDrag(piece) {
+    let startX, startY, origLeft, origTop;
+    let isDragging = false;
 
     function onPointerDown(e) {
-      if (isDraggingPiece) return;
-      if (el.classList.contains('locked')) return;
-
-      isDraggingPiece = true;
-      var evt = e.touches ? e.touches[0] : e;
+      if (isSolved || isDragging) return;
+      isDragging = true;
+      const evt = e.touches ? e.touches[0] : e;
       startX = evt.clientX;
       startY = evt.clientY;
-      origX = parseFloat(el.style.left) || 0;
-      origY = parseFloat(el.style.top) || 0;
+      origLeft = parseFloat(piece.el.style.left) || 0;
+      origTop = parseFloat(piece.el.style.top) || 0;
 
-      el.style.zIndex = 100;
-      if (e.pointerId && el.setPointerCapture) {
-        try { el.setPointerCapture(e.pointerId); } catch (err) {}
-      }
+      piece.el.classList.add('dragging');
 
-      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointermove', onPointerMove, { passive: false });
       window.addEventListener('pointerup', onPointerUp);
       window.addEventListener('touchmove', onPointerMove, { passive: false });
       window.addEventListener('touchend', onPointerUp);
     }
 
     function onPointerMove(e) {
-      if (!isDraggingPiece) return;
-      if (e.preventDefault && e.cancelable) e.preventDefault();
-
-      var evt = e.touches ? e.touches[0] : e;
-      var dx = evt.clientX - startX;
-      var dy = evt.clientY - startY;
-      el.style.left = (origX + dx) + 'px';
-      el.style.top = (origY + dy) + 'px';
+      if (!isDragging) return;
+      if (e.cancelable) e.preventDefault();
+      const evt = e.touches ? e.touches[0] : e;
+      const dx = evt.clientX - startX;
+      const dy = evt.clientY - startY;
+      piece.el.style.left = (origLeft + dx) + 'px';
+      piece.el.style.top = (origTop + dy) + 'px';
     }
 
     function onPointerUp(e) {
-      if (!isDraggingPiece) return;
-      isDraggingPiece = false;
+      if (!isDragging) return;
+      isDragging = false;
 
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerup', onPointerUp);
       window.removeEventListener('touchmove', onPointerMove);
       window.removeEventListener('touchend', onPointerUp);
 
-      if (e.pointerId && el.releasePointerCapture) {
-        try { el.releasePointerCapture(e.pointerId); } catch (err) {}
-      }
+      piece.el.classList.remove('dragging');
 
-      var currX = parseFloat(el.style.left) || 0;
-      var currY = parseFloat(el.style.top) || 0;
-      var dist = Math.hypot(currX - correctX, currY - correctY);
+      // Check which slot center is closest to dropped position
+      const currentCenterX = parseFloat(piece.el.style.left) + piece.pad + (piece.cellW / 2);
+      const currentCenterY = parseFloat(piece.el.style.top) + piece.pad + (piece.cellH / 2);
 
-      // Snapping mechanism
-      if (dist < snapDist) {
-        el.style.left = correctX + 'px';
-        el.style.top = correctY + 'px';
-        el.classList.add('locked');
-        el.style.zIndex = 10;
-        if (typeof playSound === 'function') playSound('correct');
-        placedPieces++;
+      let closestSlotIdx = piece.currentSlot;
+      let minDist = 999999;
 
-        if (placedPieces === totalPieces) {
-          if (typeof playSound === 'function') playSound('victory');
-          var cfg = getLevelConfig(currentLevel);
-          var bonusCoins = cfg.isBoss ? 250 : 100;
-          if (typeof addCoins === 'function') addCoins(bonusCoins);
-          setTimeout(onLevelComplete, 400);
+      boardSlots.forEach((slot, sIdx) => {
+        const slotCenterX = slot.x + (slot.cellW / 2);
+        const slotCenterY = slot.y + (slot.cellH / 2);
+        const dist = Math.hypot(currentCenterX - slotCenterX, currentCenterY - slotCenterY);
+        if (dist < minDist) {
+          minDist = dist;
+          closestSlotIdx = sIdx;
         }
-      } else {
-        el.style.zIndex = 20;
-        if (typeof playSound === 'function') playSound('swipe');
+      });
+
+      // Swap if dropped on a different slot
+      if (closestSlotIdx !== piece.currentSlot) {
+        const targetPiece = currentPieces.find(p => p.currentSlot === closestSlotIdx);
+        if (targetPiece) {
+          const oldSlot = piece.currentSlot;
+          targetPiece.currentSlot = oldSlot;
+          renderPieceAtSlot(targetPiece, oldSlot);
+          if (typeof playSound === 'function') playSound('swipe');
+        }
+        piece.currentSlot = closestSlotIdx;
       }
+
+      renderPieceAtSlot(piece, piece.currentSlot);
+      checkBoardSolved();
     }
 
-    el.addEventListener('pointerdown', onPointerDown);
-    el.addEventListener('touchstart', onPointerDown, { passive: true });
+    piece.el.onpointerdown = onPointerDown;
+    piece.el.ontouchstart = onPointerDown;
   }
 
-  function onLevelComplete() {
-    var modal = document.getElementById('winModal');
-    var heading = document.getElementById('win-heading');
-    var desc = document.getElementById('win-desc');
-    var badge = document.getElementById('win-coins-badge');
+  // Verify if every piece is in its correct original slot
+  function checkBoardSolved() {
+    const allCorrect = currentPieces.every(p => p.currentSlot === p.originalSlot);
+    if (allCorrect) {
+      isSolved = true;
+      stopTimer();
 
-    var cfg = getLevelConfig(currentLevel);
-    var coinsEarned = cfg.isBoss ? 250 : 100;
-    if (badge) badge.innerText = `+${coinsEarned} 🪙 सिक्के अर्जित किए!`;
+      if (typeof playSound === 'function') playSound('victory');
 
-    if (currentLevel >= 50) {
-      if (heading) heading.innerText = "महा विजय! 🏆";
-      if (desc) desc.innerText = "आपने सभी 50 भक्ति स्तर सफलतापूर्वक पूर्ण कर लिए!";
-    } else {
-      if (heading) heading.innerText = cfg.isBoss ? "बॉस स्तर पराजित! 🔱" : "दिव्य दर्शन पूर्ण! 🌸";
-      if (desc) desc.innerText = `स्तर ${currentLevel} पूर्ण! अगले दिव्य स्तर के लिए आगे बढ़ें।`;
+      const starsEarned = calculateStars(secondsElapsed);
+      const prevBestStars = levelStars[currentLevel] || 0;
+      if (starsEarned > prevBestStars) {
+        levelStars[currentLevel] = starsEarned;
+        localStorage.setItem('bhakti_level_stars', JSON.stringify(levelStars));
+      }
+
+      const cfg = getLevelConfig(currentLevel);
+      const rewardCoins = cfg.isBoss ? 250 : 100;
+      totalCoins += rewardCoins;
+      localStorage.setItem('bhakti_coins', totalCoins.toString());
+      localStorage.setItem('epic_game_coins', totalCoins.toString());
+      if (typeof addCoins === 'function') {
+        try { epicGameState.coins = totalCoins; } catch (e) {}
+      }
+
+      const userCoinsEl = document.getElementById('user-coins');
+      if (userCoinsEl) userCoinsEl.innerText = totalCoins;
+      const totalStarsEl = document.getElementById('total-stars');
+      if (totalStarsEl) totalStarsEl.innerText = getTotalStars();
+
+      // Show Modal
+      const starsAwardedEl = document.getElementById('stars-awarded');
+      if (starsAwardedEl) starsAwardedEl.innerText = '⭐'.repeat(starsEarned) + '☆'.repeat(5 - starsEarned);
+      const winHeadingEl = document.getElementById('win-heading');
+      if (winHeadingEl) {
+        winHeadingEl.innerText = cfg.isBoss ? "बॉस स्तर पराजित! 🔱" : "दर्शन सफल हुआ! 🌸";
+      }
+      const winDescEl = document.getElementById('win-desc');
+      if (winDescEl) winDescEl.innerText = `समय: ${secondsElapsed} सेकंड में पूरा किया!`;
+      const coinsEarnedEl = document.getElementById('coins-earned-text');
+      if (coinsEarnedEl) coinsEarnedEl.innerText = `+${rewardCoins} सिक्के प्राप्त हुए! 🪙`;
+      const winModal = document.getElementById('winModal');
+      if (winModal) winModal.style.display = 'flex';
     }
-    if (modal) modal.style.display = 'flex';
   }
 
-  function nextLevel() {
+  function goToNextLevel() {
     if (currentLevel < 50) {
       initLevel(currentLevel + 1);
     } else {
@@ -1058,7 +1279,7 @@
     }
   }
 
-  function prevLevel() {
+  function goToPrevLevel() {
     if (currentLevel > 1) {
       initLevel(currentLevel - 1);
     } else {
@@ -1068,6 +1289,23 @@
 
   function resetCurrentLevel() {
     initLevel(currentLevel);
+  }
+
+  var peekTimer = null;
+  function togglePeek() {
+    var guideImg = document.getElementById('puzzle-guide-image');
+    if (!guideImg) return;
+    if (guideImg.style.opacity === '0.85') {
+      guideImg.style.opacity = '0';
+      if (peekTimer) clearTimeout(peekTimer);
+    } else {
+      guideImg.style.opacity = '0.85';
+      if (typeof showToast === 'function') showToast('👁️ दिव्य दर्शन: संकेत 3 सेकंड सक्रिय');
+      if (peekTimer) clearTimeout(peekTimer);
+      peekTimer = setTimeout(function() {
+        if (guideImg) guideImg.style.opacity = '0';
+      }, 3000);
+    }
   }
 
   // ── Game 4: PadaBandham (Word Grid) ──
@@ -1163,12 +1401,14 @@
     categoryKey = categoryKey || 'ayodhya_mithila';
     var arena = document.getElementById('swipe-arena');
     if (arena) arena.style.display = 'flex';
+    hideBottomNavForGames();
     initSwipeGame(categoryKey);
   };
 
   window.closeSwipeGame = function () {
     var arena = document.getElementById('swipe-arena');
     if (arena) arena.style.display = 'none';
+    restoreBottomNavIfExited();
   };
 
   window.closeSwipeReview = function () {
@@ -1177,7 +1417,7 @@
     showSwipeResultModal();
   };
 
-  window.openMatchGame = function () {
+  window.openMatchGame = function (lvlIdx) {
     var modal = document.getElementById('match-game-modal');
     if (modal) {
       modal.classList.add('active');
@@ -1187,7 +1427,9 @@
       modal.style.setProperty('pointer-events', 'auto', 'important');
       modal.style.setProperty('visibility', 'visible', 'important');
     }
-    initMatchGame();
+    hideBottomNavForGames();
+    var lvl = (typeof lvlIdx === 'number' && lvlIdx >= 1) ? lvlIdx : (currentMatchLevel || 1);
+    initMatchLevel(lvl);
   };
 
   window.closeMatchGame = function () {
@@ -1199,8 +1441,11 @@
       modal.style.setProperty('opacity', '0', 'important');
       modal.style.setProperty('pointer-events', 'none', 'important');
     }
-    var winModal = document.getElementById('modal');
+    var winModal = document.getElementById('matchWinModal');
     if (winModal) winModal.style.display = 'none';
+    var lockToast = document.getElementById('matchLockToast');
+    if (lockToast) lockToast.style.display = 'none';
+    restoreBottomNavIfExited();
   };
 
   window.openJigsawGame = function (levelIdx) {
@@ -1213,11 +1458,13 @@
       modal.style.setProperty('pointer-events', 'auto', 'important');
       modal.style.setProperty('visibility', 'visible', 'important');
     }
+    hideBottomNavForGames();
     var lvl = (typeof levelIdx === 'number' && levelIdx >= 1) ? levelIdx : (currentLevel || 1);
     initLevel(lvl);
   };
 
   window.closeJigsawGame = function () {
+    stopTimer();
     var modal = document.getElementById('jigsaw-game-modal');
     if (modal) {
       modal.classList.remove('active');
@@ -1228,17 +1475,26 @@
     }
     var winModal = document.getElementById('winModal');
     if (winModal) winModal.style.display = 'none';
+    var lockToast = document.getElementById('lockToast');
+    if (lockToast) lockToast.style.display = 'none';
     var peekModal = document.getElementById('jigsaw-peek-modal');
     if (peekModal) peekModal.style.display = 'none';
+    restoreBottomNavIfExited();
   };
 
   window.initLevel = initLevel;
-  window.nextLevel = nextLevel;
-  window.prevLevel = prevLevel;
-  window.skipToNextLevel = nextLevel;
+  window.goToNextLevel = goToNextLevel;
+  window.nextLevel = goToNextLevel;
+  window.skipToNextLevel = goToNextLevel;
+  window.goToPrevLevel = goToPrevLevel;
+  window.prevLevel = goToPrevLevel;
   window.resetCurrentLevel = resetCurrentLevel;
   window.togglePeek = togglePeek;
   window.toggleJigsawPreviewModal = togglePeek;
+  window.isLevelUnlocked = isLevelUnlocked;
+  window.getTotalStars = getTotalStars;
+  window.calculateStars = calculateStars;
+  window.showLockAlert = showLockAlert;
 
   window.openPadabandhamGame = function () {
     var modal = document.getElementById('padabandham-game-modal');
@@ -1250,6 +1506,7 @@
       modal.style.setProperty('pointer-events', 'auto', 'important');
       modal.style.setProperty('visibility', 'visible', 'important');
     }
+    hideBottomNavForGames();
     initPadabandhamGame();
   };
 
@@ -1262,6 +1519,7 @@
       modal.style.setProperty('opacity', '0', 'important');
       modal.style.setProperty('pointer-events', 'none', 'important');
     }
+    restoreBottomNavIfExited();
   };
 
     window.swipeCardManual = function (direction) {
@@ -1657,6 +1915,7 @@
     var arena = document.getElementById('phool-arpan-arena');
     if (!arena) return;
     arena.style.display = 'flex';
+    hideBottomNavForGames();
 
     initPhoolArpanDOM();
     resizeArpanCanvas();
@@ -1670,6 +1929,7 @@
     }
     var arena = document.getElementById('phool-arpan-arena');
     if (arena) arena.style.display = 'none';
+    restoreBottomNavIfExited();
   };
 
   var arpanDeityIdx = 0;
@@ -1712,5 +1972,7 @@
   window.closeEpicLockedModal = function() {};
   window.showEpicLockedToast = function() {};
   window.unlockEpicGames = function() {};
+  window.addCoins = addCoins;
+  window.loadCoins = loadCoins;
 
 })();

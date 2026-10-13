@@ -3,6 +3,34 @@
    Replicating the WhatsApp Video UI with Vedic Temple Aesthetics
    ══════════════════════════════════════════════════════════════════════════════ */
 
+/* ── Hide Bottom Navigation Dock in Epic Games & Game Arenas ── */
+body:has(#page-epic-games.active) .curved-fluid-bottom-nav,
+body:has(#page-epic-games.active) nav.curved-fluid-bottom-nav,
+body:has(#page-epic-games.active) .bottom-nav,
+body:has(#page-epic-games.active) .app-bottom-nav,
+body:has(#swipe-arena[style*="flex"]) .curved-fluid-bottom-nav,
+body:has(#swipe-arena.active) .curved-fluid-bottom-nav,
+body:has(#swipe-review-arena[style*="flex"]) .curved-fluid-bottom-nav,
+body:has(#phool-arpan-arena[style*="flex"]) .curved-fluid-bottom-nav,
+body:has(#match-game-modal.active) .curved-fluid-bottom-nav,
+body:has(#match-game-modal.is-open) .curved-fluid-bottom-nav,
+body:has(#match-game-modal[style*="flex"]) .curved-fluid-bottom-nav,
+body:has(#jigsaw-game-modal.active) .curved-fluid-bottom-nav,
+body:has(#jigsaw-game-modal.is-open) .curved-fluid-bottom-nav,
+body:has(#jigsaw-game-modal[style*="flex"]) .curved-fluid-bottom-nav,
+body:has(#padabandham-game-modal.active) .curved-fluid-bottom-nav,
+body:has(#padabandham-game-modal.is-open) .curved-fluid-bottom-nav,
+body:has(#padabandham-game-modal[style*="flex"]) .curved-fluid-bottom-nav,
+body:has(#swipe-result-modal[style*="flex"]) .curved-fluid-bottom-nav {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translate(-50%, 150%) !important;
+}
+
+
+
 /* ── Home Page Promo Banner ── */
 .home-epic-games-banner {
   margin: 0 1.2rem 1.8rem;
@@ -1234,39 +1262,36 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
     display: flex !important;
 }
 
-/* Fixed Top Status & Level Bar (Hamesha dikhega) */
+/* Fixed Top Status & Level Bar with Timer, Stars & Coins */
 .jigsaw-top-bar {
-    width: 92%;
+    width: 95%;
     max-width: 420px;
     background: rgba(255, 215, 0, 0.12);
-    border: 1.5px solid #e6b800;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1.5px solid #ffd700;
     border-radius: 14px;
     padding: 10px 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     z-index: 50;
-    margin-bottom: 12px;
 }
 
-.jigsaw-level-info {
+.stats-badge {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffd700;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
-#level-title {
-    font-size: 20px !important;
-    font-weight: 800 !important;
-    color: #ffd700 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-    display: block !important;
-}
-
-#pieces-count {
-    font-size: 13px !important;
-    color: #ffd99f !important;
-    font-weight: 600;
+/* Timer display */
+#game-timer {
+    color: #00ffcc;
+    font-size: 16px;
+    font-weight: 800;
 }
 
 /* Boss Level Animated Badge */
@@ -1310,72 +1335,54 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
     color: #000;
 }
 
-/* Main Puzzle Frame - BOX BORDER REMOVED */
+/* Jigsaw Board (Pieces iske andar hi set rahenge) */
 #puzzle-board {
     position: relative;
     border-radius: 12px;
-    border: 2px solid rgba(255, 215, 0, 0.5);
-    background: rgba(0, 0, 0, 0.45);
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 8px 24px rgba(0, 0, 0, 0.6);
-    overflow: visible;
+    border: 2px solid rgba(255, 215, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    overflow: hidden;
+    margin: 10px auto;
 }
 
-/* Background preview overlay (Transparent guide instead of square lines) */
-#puzzle-guide-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.18;
-    pointer-events: none;
-    border-radius: 10px;
-}
-
-/* Square Slots ko puri tarah transparent kar diya gaya hai (Zero boxes) */
-.puzzle-slot {
-    display: none !important; /* Kisi bhi purane square grid ko hide kar dega */
-}
-
-/* Jigsaw Interlocking Piece styling */
+/* On-Board Swap Pieces */
 .jigsaw-piece {
     position: absolute;
-    cursor: grab;
+    cursor: pointer;
     touch-action: none;
-    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.7));
-    transition: filter 0.2s;
-    z-index: 20;
-}
-
-.jigsaw-piece:active {
-    cursor: grabbing;
-    filter: drop-shadow(0 8px 16px rgba(255, 215, 0, 0.6));
-    z-index: 100;
-}
-
-.jigsaw-piece.locked {
-    cursor: default;
-    pointer-events: none;
-    filter: none;
+    transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.2s;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.6));
     z-index: 10;
 }
 
-/* Pieces Tray (Niche piece rakhne ka velvet carpet look) */
-#puzzle-tray-area {
-    width: 95%;
-    max-width: 440px;
-    height: 130px;
-    background: rgba(43, 10, 62, 0.6);
-    border: 1.5px solid rgba(255, 215, 0, 0.3);
-    border-radius: 16px;
-    margin-top: 15px;
-    padding: 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: inset 0 4px 10px rgba(0,0,0,0.7);
+.jigsaw-piece.dragging {
+    z-index: 100 !important;
+    filter: drop-shadow(0 8px 15px rgba(255, 215, 0, 0.8));
+    transform: scale(1.06);
+}
+
+.jigsaw-piece.matched {
+    border: none;
+    cursor: default;
+}
+
+/* Lock overlay popup for levels */
+.lock-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 0, 0, 0.9);
+    border: 1.5px solid #ff3333;
+    padding: 15px 25px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+    z-index: 200;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.4);
 }
 
 .jigsaw-modal-card {
@@ -1429,4 +1436,182 @@ body:not(.theme-light):not(.light-mode) .epic-card-subtitle {
   pointer-events: auto !important;
   visibility: visible !important;
   z-index: 100250 !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   🎴 BHAKTI CARD MATCH (30 SACRED LEVELS) STYLES
+   ══════════════════════════════════════════════════════════════════════════════ */
+.match-top-bar {
+  width: 95%;
+  max-width: 440px;
+  background: rgba(255, 215, 0, 0.12);
+  border: 1.5px solid #ffd700;
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 8px;
+  z-index: 50;
+}
+
+.match-badge {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#match-moves-display {
+  color: #00ffcc;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.match-controls-bar {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.match-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.match-btn:active {
+  background: #ffd700;
+  color: #000;
+}
+
+#match-card-grid {
+  display: grid;
+  gap: 8px;
+  perspective: 1000px;
+  margin: 10px auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-back {
+  background: radial-gradient(circle at 50% 40%, #990000 0%, #440000 100%);
+  color: #ffd700;
+  font-size: 26px;
+  font-weight: 800;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,215,0,0.3);
+  text-shadow: 0 0 8px rgba(255,215,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background: #120320;
+  transform: rotateY(180deg);
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  padding: 0;
+}
+
+.match-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .match-card-img {
+  transform: scale(1.05);
+}
+
+.card.matched {
+  cursor: default;
+  pointer-events: none;
+}
+
+.card.matched .card-front {
+  border: 2.5px solid #00ff88 !important;
+  box-shadow: 0 0 16px #00ff88, 0 0 25px rgba(255, 215, 0, 0.8) !important;
+  animation: matchGlow 0.9s ease-in-out infinite alternate;
+}
+
+.card.matched .match-card-img {
+  filter: brightness(1.08) drop-shadow(0 0 4px rgba(0,255,136,0.6));
+}
+
+@keyframes matchGlow {
+  from { box-shadow: 0 0 8px #00ff66, 0 0 14px #ffd700; }
+  to { box-shadow: 0 0 18px #00ff66, 0 0 28px #ffd700; }
+}
+
+.match-lock-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(30, 0, 0, 0.95);
+  border: 2px solid #ff2200;
+  padding: 16px 24px;
+  border-radius: 18px;
+  color: #fff;
+  font-weight: bold;
+  display: none;
+  z-index: 200;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 34, 0, 0.6);
+}
+
+.match-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 2, 20, 0.94);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 300;
 }

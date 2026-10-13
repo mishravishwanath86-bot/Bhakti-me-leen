@@ -378,8 +378,14 @@
       }
 
       // 1. If currently playing -> PAUSE
-      if (this.isPlaying && this.audioInstance) {
-        this.audioInstance.pause();
+      if (this.isPlaying) {
+        if (this.audioInstance) {
+          try { this.audioInstance.pause(); } catch (_) {}
+        }
+        if (window.speechSynthesis && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
+          try { window.speechSynthesis.pause(); } catch (_) {}
+        }
+        this.stopSpeechProgressTimer();
         this.stopTempleDrone();
         this.isPlaying = false;
         this.updateUI();
@@ -396,86 +402,311 @@
           if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
           return;
         } catch (e) {
-          console.warn('[AiBhaktiPlayer] Resume failed, re-fetching:', e);
+          console.warn('[AiBhaktiPlayer] Audio resume failed, attempting on-device resume or fresh play:', e);
         }
       }
 
-      // 3. Otherwise -> Fresh or Cached Fetch from Backend
+      // 2b. If paused with SpeechSynthesis -> RESUME
+      if (!this.isPlaying && window.speechSynthesis && window.speechSynthesis.paused) {
+        try {
+          window.speechSynthesis.resume();
+          this.startTempleDrone();
+          this.startSpeechProgressTimer(this.speechEstDuration || 30);
+          this.isPlaying = true;
+          this.updateUI();
+          if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
+          return;
+        } catch (e) {
+          console.warn('[AiBhaktiPlayer] SpeechSynthesis resume failed:', e);
+        }
+      }
+
+      // 3. Otherwise -> Fresh or Cached Playback via Direct URL / Backend / On-Device Synthesis
       await this.requestAndPlayAudio();
+    },
+
+    cleanDevotionalText: function(rawText) {
+      if (!rawText) return '';
+      let text = String(rawText).replace(/<[^>]+>/g, ' ');
+      text = text.replace(/\[[^\]]*\]/g, '');
+      text = text.replace(/\([^\)]*(?:chorus|verse|meaning|भावार्थ|उच्चारण|फलश्रुति)[^\)]*\)/gi, '');
+      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      const cleanLines = [];
+      for (const line of lines) {
+        let devanagariCount = 0;
+        let asciiAlphaCount = 0;
+        for (let i = 0; i < line.length; i++) {
+          const code = line.charCodeAt(i);
+          if (code >= 0x0900 && code <= 0x097F) devanagariCount++;
+          else if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) asciiAlphaCount++;
+        }
+        if (asciiAlphaCount > 15 && devanagariCount === 0) continue;
+        cleanLines.push(line.replace(/\s+/g, ' '));
+      }
+      return cleanLines.join('\n').trim();
+    },
+
+    getPreCachedAudioUrl: function() {
+      if (!this.currentContent) return null;
+      const id = String(this.currentContent.id || '').toLowerCase();
+      const title = String(this.currentContent.title || '').toLowerCase();
+
+      // 1. Sundarkand Doha 1
+      if (id.includes('sundarkand-doha-1') || (title.includes('सुन्दरकाण्ड') && (title.includes(' 1') || title.includes('१')))) {
+        return 'assets/ai_audio/bhakti_sundarkand-doha-1_male_0d83562022b5.mp3';
+      }
+      // 2. Ganesha Vakratunda Mantra
+      if (id.includes('mantra_ganesha_1') || title.includes('वक्रतुण्ड')) {
+        return 'assets/ai_audio/bhakti_mantra_ganesha_1_male_019e46dd67e0.mp3';
+      }
+      // 3. Hanuman Chalisa
+      if (id.includes('drik_chalisa_1') || id.includes('chalisa-1') || id.includes('hanuman-chalisa') || (title.includes('हनुमान') && title.includes('चालीसा'))) {
+        return 'assets/ai_audio/bhakti_drik_chalisa_1_male_126de0dc8e75.mp3';
+      }
+      // 4. Aarti Kunjbihari
+      if (id.includes('krishna_3') || id.includes('kunjbihari') || title.includes('कुंजबिहारी') || title.includes('कृष्णमुरारी')) {
+        return 'assets/ai_audio/bhakti_drik_krishna_3_male_4cb475bed36f.mp3';
+      }
+      return null;
     },
 
     requestAndPlayAudio: async function() {
       if (this.isGenerating) return;
 
-      this.isGenerating = true;
-      this.updateUI();
+      // Tier 1: Check for Direct Audio URL (Like Bhagavad Gita Architecture)
+      const directUrl = this.currentContent ? this.currentContent.audio_url : null;
+      if (directUrl && typeof directUrl === 'string' && directUrl.trim().length > 5 &&
+          !directUrl.includes('youtube.com') && !directUrl.includes('youtu.be')) {
+        try {
+          this.playDirectAudioStream(directUrl, true);
+          return;
+        } catch (err) {
+          console.warn('[AiBhaktiPlayer] Direct audio playback failed, falling back to AI synthesis:', err);
+        }
+      }
 
+      // Tier 1b: Check Known Pre-Cached High-Fidelity Devotional Audio
+      const preCachedAudio = this.getPreCachedAudioUrl();
+      if (preCachedAudio) {
+        try {
+          this.playDirectAudioStream(preCachedAudio, true);
+          return;
+        } catch (err) {
+          console.warn('[AiBhaktiPlayer] Pre-cached audio stream failed, falling back:', err);
+        }
+      }
+
+      // Tier 2: AI Neural Speech Generation via Backend API (if reachable)
       const payload = {
-        content_id: this.currentContent.id || 'current',
-        text: this.currentContent.text || '',
-        title: this.currentContent.title || 'दिव्य पाठ',
-        content_type: this.currentContent.type || 'aarti',
+        content_id: (this.currentContent && this.currentContent.id) ? this.currentContent.id : 'current',
+        text: (this.currentContent && this.currentContent.text) ? this.currentContent.text : '',
+        title: (this.currentContent && this.currentContent.title) ? this.currentContent.title : 'दिव्य पाठ',
+        content_type: (this.currentContent && this.currentContent.type) ? this.currentContent.type : 'aarti',
         voice: this.currentVoice,
         speed: this.currentSpeed
       };
 
-      try {
-        const resp = await fetch('/api/ai-audio/generate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
+      const isMobileApp = (typeof window !== 'undefined' && window.location && (
+        window.location.protocol === 'file:' ||
+        (window.location.hostname && window.location.hostname.includes('androidplatform.net')) ||
+        window.location.hostname === ''
+      ));
 
-        const data = await resp.json();
-        if (!data.success || !data.audio_url) {
-          throw new Error(data.error || 'ऑडियो प्राप्त नहीं हो सका');
+      let apiUrl = null;
+      if (typeof window !== 'undefined' && window.API_BASE_URL) {
+        apiUrl = window.API_BASE_URL.replace(/\/+$/, '') + '/api/ai-audio/generate';
+      } else if (!isMobileApp && typeof window !== 'undefined' && window.location && window.location.origin &&
+                 window.location.origin.startsWith('http') && !window.location.origin.includes('appassets.androidplatform.net')) {
+        apiUrl = '/api/ai-audio/generate';
+      }
+
+      if (apiUrl) {
+        this.isGenerating = true;
+        this.updateUI();
+
+        try {
+          const controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+          const timeoutId = controller ? setTimeout(() => controller.abort(), 4000) : null;
+
+          const resp = await fetch(apiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            signal: controller ? controller.signal : undefined
+          });
+          if (timeoutId) clearTimeout(timeoutId);
+
+          if (resp && resp.ok) {
+            const data = await resp.json();
+            if (data && data.success && data.audio_url) {
+              this.playDirectAudioStream(data.audio_url, data.cached);
+              return;
+            }
+          }
+        } catch (netErr) {
+          console.info('[AiBhaktiPlayer] Backend API unreachable, engaging on-device devotional speech engine:', netErr.message);
+        } finally {
+          this.isGenerating = false;
         }
+      }
 
-        // Clean up previous audio instance
-        if (this.audioInstance) {
+      // Tier 3: Resilient On-Device AI Devotional Synthesis (Offline / Mobile App Mode)
+      // Never crash or pop up "Failed to fetch" toast. Always provide divine recitation!
+      this.playOnDeviceAiSynthesis();
+    },
+
+    playDirectAudioStream: function(audioUrl, isCached) {
+      if (window.speechSynthesis) {
+        try { window.speechSynthesis.cancel(); } catch (_) {}
+      }
+      this.stopSpeechProgressTimer();
+
+      if (this.audioInstance) {
+        try {
           this.audioInstance.pause();
           this.audioInstance.src = '';
-          this.audioInstance = null;
-        }
+        } catch (_) {}
+        this.audioInstance = null;
+      }
 
-        // Create new Audio element
-        const audio = new Audio(data.audio_url);
-        audio.playbackRate = this.currentSpeed;
-        this.audioInstance = audio;
+      let finalUrl = audioUrl;
+      if (finalUrl.startsWith('/') && window.API_BASE_URL) {
+        finalUrl = window.API_BASE_URL.replace(/\/+$/, '') + finalUrl;
+      }
 
-        // Wire event listeners
-        audio.addEventListener('timeupdate', () => this.handleTimeUpdate());
-        audio.addEventListener('ended', () => this.handleTrackEnded());
-        audio.addEventListener('error', (e) => {
-          console.error('[AiBhaktiPlayer] Audio error:', e);
-          this.isGenerating = false;
-          this.isPlaying = false;
-          this.stopTempleDrone();
-          this.updateUI();
-          this.showToast('⚠️ ऑडियो प्लेबैक में त्रुटि आई');
-        });
+      const audio = new Audio(finalUrl);
+      audio.playbackRate = this.currentSpeed;
+      audio.loop = this.isLooping;
+      this.audioInstance = audio;
 
-        // Start playback
-        await audio.play();
+      audio.addEventListener('timeupdate', () => this.handleTimeUpdate());
+      audio.addEventListener('ended', () => this.handleTrackEnded());
+      audio.addEventListener('error', (e) => {
+        console.warn('[AiBhaktiPlayer] Audio error, falling back to on-device synthesis:', e);
+        this.playOnDeviceAiSynthesis();
+      });
+
+      audio.play().then(() => {
         this.isPlaying = true;
         this.isGenerating = false;
         this.startTempleDrone();
         this.updateUI();
 
         if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
-        if (data.cached) {
+        if (isCached) {
           this.showToast('⚡ पावन ऑडियो लोड हुआ (कैश से तुरंत)');
         } else {
-          this.showToast('✨ AI दिव्य स्वर व संगीत सृजन पूर्ण हुआ!');
+          this.showToast('✨ AI दिव्य स्वर व संगीत श्रवण प्रारंभ!');
         }
+      }).catch((playErr) => {
+        console.warn('[AiBhaktiPlayer] Audio play rejected, falling back to on-device synthesis:', playErr);
+        this.playOnDeviceAiSynthesis();
+      });
+    },
 
-      } catch (err) {
-        console.error('[AiBhaktiPlayer] Request failed:', err);
+    playOnDeviceAiSynthesis: function() {
+      if (!('speechSynthesis' in window)) {
+        this.showToast('⚠️ ऑडियो प्लेबैक डिवाइस पर उपलब्ध नहीं है');
+        this.isPlaying = false;
         this.isGenerating = false;
+        this.updateUI();
+        return;
+      }
+
+      const rawText = this.currentContent ? this.currentContent.text : '';
+      const cleanText = this.cleanDevotionalText(rawText);
+      if (!cleanText || cleanText.trim().length === 0) {
+        this.showToast('⚠️ सामग्री का पाठ रिक्त है');
+        this.isPlaying = false;
+        this.isGenerating = false;
+        this.updateUI();
+        return;
+      }
+
+      try { window.speechSynthesis.cancel(); } catch (_) {}
+      if (this.audioInstance) {
+        try { this.audioInstance.pause(); } catch (_) {}
+        this.audioInstance = null;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.lang = 'hi-IN';
+      utterance.rate = Math.max(0.7, Math.min(1.4, this.currentSpeed * 0.92));
+      utterance.pitch = this.currentVoice === 'female' ? 1.15 : 0.95;
+
+      try {
+        const voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+        if (voices && voices.length > 0) {
+          const hVoice = voices.find(v => v.lang === 'hi-IN' || v.lang === 'hi_IN' || (v.lang && v.lang.startsWith('hi')));
+          if (hVoice) utterance.voice = hVoice;
+        }
+      } catch (_) {}
+
+      this.speechUtterance = utterance;
+      this.isPlaying = true;
+      this.isGenerating = false;
+      this.startTempleDrone();
+      this.updateUI();
+
+      if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
+      this.showToast('✨ AI दिव्य पाठ व तानपुरा संगत प्रारंभ (पावन स्वर)');
+
+      const estSec = Math.max(8, Math.round((cleanText.length / 13) / this.currentSpeed));
+      this.speechEstDuration = estSec;
+      this.startSpeechProgressTimer(estSec);
+
+      utterance.onend = () => {
+        this.stopSpeechProgressTimer();
+        this.handleTrackEnded();
+      };
+
+      utterance.onerror = (e) => {
+        console.warn('[AiBhaktiPlayer] SpeechSynthesis error:', e);
+        this.stopSpeechProgressTimer();
+        this.handleTrackEnded();
+      };
+
+      try {
+        window.speechSynthesis.speak(utterance);
+      } catch (synthErr) {
+        console.error('[AiBhaktiPlayer] Speech speak() error:', synthErr);
         this.isPlaying = false;
         this.stopTempleDrone();
         this.updateUI();
-        this.showToast('⚠️ ' + (err.message || 'ऑडियो सृजन असफल'));
+      }
+    },
+
+    startSpeechProgressTimer: function(durationSeconds) {
+      this.stopSpeechProgressTimer();
+      this.speechDuration = durationSeconds;
+      this.speechElapsed = 0;
+      this.speechTimer = setInterval(() => {
+        if (!this.isPlaying) return;
+        this.speechElapsed += 0.25;
+        const pct = Math.min(100, (this.speechElapsed / this.speechDuration) * 100);
+
+        const progressEl = document.getElementById('ai-audio-progress-bar');
+        if (progressEl) progressEl.value = pct;
+
+        const timeEl = document.getElementById('ai-audio-time-label');
+        if (timeEl) {
+          timeEl.textContent = `${this.formatTime(this.speechElapsed)} / ${this.formatTime(this.speechDuration)}`;
+        }
+
+        const skProgress = document.getElementById('sundarkand-audio-progress');
+        if (skProgress) skProgress.value = pct;
+
+        const skTime = document.getElementById('sundarkand-audio-time');
+        if (skTime) {
+          skTime.textContent = `${this.formatTime(this.speechElapsed)} / ${this.formatTime(this.speechDuration)}`;
+        }
+      }, 250);
+    },
+
+    stopSpeechProgressTimer: function() {
+      if (this.speechTimer) {
+        clearInterval(this.speechTimer);
+        this.speechTimer = null;
       }
     },
 
@@ -489,6 +720,9 @@
 
       if (this.audioInstance) {
         this.audioInstance.playbackRate = this.currentSpeed;
+      }
+      if (this.isPlaying && window.speechSynthesis && window.speechSynthesis.speaking) {
+        this.playOnDeviceAiSynthesis();
       }
       this.updateUI();
       this.showToast(`⚡ गायन गति: ${this.currentSpeed}x`);
@@ -509,8 +743,7 @@
       const voiceLabel = this.currentVoice === 'male' ? 'ऋषि/पुजारी स्वर (मधुर)' : 'देवी/भक्ति स्वर (स्वरा)';
       this.showToast(`🪔 स्वर बदला गया: ${voiceLabel}`);
 
-      // If already playing, re-generate in new voice
-      if (this.isPlaying || this.audioInstance) {
+      if (this.isPlaying) {
         if (this.audioInstance) {
           this.audioInstance.pause();
           this.audioInstance = null;
@@ -524,8 +757,17 @@
     },
 
     seek: function(pct) {
+      pct = parseFloat(pct) || 0;
       if (this.audioInstance && this.audioInstance.duration) {
         this.audioInstance.currentTime = (pct / 100) * this.audioInstance.duration;
+      } else if (this.speechDuration) {
+        this.speechElapsed = (pct / 100) * this.speechDuration;
+        const progressEl = document.getElementById('ai-audio-progress-bar');
+        if (progressEl) progressEl.value = pct;
+        const timeEl = document.getElementById('ai-audio-time-label');
+        if (timeEl) {
+          timeEl.textContent = `${this.formatTime(this.speechElapsed)} / ${this.formatTime(this.speechDuration)}`;
+        }
       }
     },
 
@@ -562,12 +804,17 @@
         if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
 
         if (this.jaapCount < this.targetJaapCount) {
-          if (this.audioInstance) this.audioInstance.play();
+          if (this.audioInstance) {
+            this.audioInstance.play();
+          } else {
+            this.playOnDeviceAiSynthesis();
+          }
           return;
         }
       }
 
       this.isPlaying = false;
+      this.stopSpeechProgressTimer();
       this.stopTempleDrone();
       this.updateUI();
       this.showToast('🙏 दिव्य पाठ एवं श्रवण संपन्न हुआ');
@@ -596,9 +843,13 @@
 
       // Stop previous playback if switching content
       if (this.audioInstance) {
-        this.audioInstance.pause();
+        try { this.audioInstance.pause(); } catch (_) {}
         this.audioInstance = null;
       }
+      if (window.speechSynthesis) {
+        try { window.speechSynthesis.cancel(); } catch (_) {}
+      }
+      this.stopSpeechProgressTimer();
       this.isPlaying = false;
       this.isGenerating = false;
       this.stopTempleDrone();
@@ -653,7 +904,10 @@
         title: contentObj.title || contentObj.name || contentObj.hi_line || 'दिव्य पाठ',
         text: text,
         type: contentObj.type || contentObj.content_type || 'aarti',
-        deity: contentObj.deity || contentObj.deity_name_hi || 'सनातन'
+        deity: contentObj.deity || contentObj.deity_name_hi || 'सनातन',
+        audio_url: contentObj.audio_url || contentObj.audio_source || contentObj.audio || null,
+        video_id: contentObj.video_id || null,
+        meaning: contentObj.meaning || ''
       };
 
       window._activeDevotionalContent = this.currentContent;

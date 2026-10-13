@@ -2335,7 +2335,7 @@ window.openSundarkandChapterModal = function(chapterId) {
 
   if (titleEl) titleEl.textContent = `॥ सुन्दरकाण्ड सोपान ${chap.id} ॥`;
   if (chapTitleEl) chapTitleEl.textContent = chap.title;
-  if (rangeEl) rangeEl.textContent = `॥ ${chap.doha_range} • ${chap.count} दोहे ॥`;
+  if (rangeEl) rangeEl.textContent = `॥ ${chap.doha_range} • कुल ${chap.count} दोहे ॥`;
   if (descEl) descEl.textContent = chap.desc;
 
   if (imgEl) {
@@ -2343,14 +2343,21 @@ window.openSundarkandChapterModal = function(chapterId) {
     imgEl.onerror = function() { this.src = 'assets/gallery/bal_hanuman.jpg'; };
   }
 
-  // 10 Chapter Switch Pills
+  // 10 Chapter Switch Pills (Non-shrinking, smoothly scrollable, auto-centering)
   const switchPillsHtml = `
-    <div style="display:flex; gap:6px; overflow-x:auto; padding-bottom:8px; margin-bottom:12px; scrollbar-width:none;">
-      ${data.chapters.map(c => `
-        <button onclick="window.openSundarkandChapterModal(${c.id})" style="padding:5px 12px; border-radius:14px; border:1px solid rgba(248,200,59,0.35); font-size:0.75rem; font-weight:800; cursor:pointer; white-space:nowrap; background:${c.id === chapterId ? 'linear-gradient(135deg, #F8C83B, #D97706)' : 'rgba(255,255,255,0.06)'}; color:${c.id === chapterId ? '#1A0B2E' : '#FDE68A'};">
-          सोपान ${c.id} (${c.doha_range.replace('दोहा ', '')})
-        </button>
-      `).join('')}
+    <div class="sundarkand-pills-sticky-wrap">
+      <div class="sundarkand-pills-scroller" id="sundarkand-pills-bar">
+        ${data.chapters.map(c => `
+          <button class="sundarkand-sopan-pill ${c.id === chapterId ? 'active' : ''}" 
+                  onclick="window.openSundarkandChapterModal(${c.id})"
+                  data-chap="${c.id}"
+                  title="${c.title}">
+            <span class="sopan-pill-icon">${c.id === chapterId ? '🚩' : '•'}</span>
+            <span class="sopan-pill-label">सोपान ${c.id}</span>
+            <span class="sopan-pill-range">(${c.doha_range.replace('दोहा ', '')})</span>
+          </button>
+        `).join('')}
+      </div>
     </div>
   `;
 
@@ -2358,31 +2365,36 @@ window.openSundarkandChapterModal = function(chapterId) {
   const chapterDohas = data.dohas.filter(d => d.chapter_id === chapterId);
 
   const dohasHtml = `
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:12px;">
+    <div class="sundarkand-dohas-grid">
       ${chapterDohas.map(doha => `
-        <div style="background:rgba(255,255,255,0.04); border:1.5px solid rgba(248,200,59,0.25); border-radius:18px; padding:12px 14px; box-shadow:0 4px 15px rgba(0,0,0,0.25); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease;">
+        <div class="sundarkand-doha-card">
           <div>
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
-              <span style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; font-size:0.72rem; font-weight:900; padding:2px 8px; border-radius:10px;">
+            <div class="sundarkand-card-header">
+              <span class="sundarkand-doha-badge">
                 दोहा ${doha.doha_number}
               </span>
-              <span style="font-size:0.75rem; color:#FDE68A; opacity:0.85;">
-                ${doha.chaupais.length} चौपाइयाँ
+              <span class="sundarkand-chaupai-count">
+                📜 ${doha.chaupais.length} चौपाइयाँ
               </span>
             </div>
-            <div style="color:#FFFDF8; font-weight:800; font-size:0.95rem; margin-bottom:6px; line-height:1.4;">
+            <div class="sundarkand-card-title">
               ${doha.title}
             </div>
-            <div style="font-size:0.82rem; color:#FDE68A; font-family:'Tiro Devanagari Hindi', serif; background:rgba(248,200,59,0.08); padding:8px 10px; border-radius:10px; margin-bottom:8px; line-height:1.4; border-left:3px solid #F59E0B;">
-              ${doha.doha ? doha.doha.join(' / ') : ''}
+            <div class="sundarkand-quote-box">
+              <div class="sundarkand-quote-lines">
+                ${doha.doha ? doha.doha.map(line => `<div class="sundarkand-quote-line">${line}</div>`).join('') : ''}
+              </div>
             </div>
-            <div style="font-size:0.78rem; color:#CBD5E1; line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-bottom:10px;">
-              ${doha.meaning}
+            <div class="sundarkand-card-meaning">
+              <strong style="color:#FDE68A; font-weight:800;">भावार्थ:</strong> ${doha.meaning}
             </div>
           </div>
-          <div style="display:flex; align-items:center; gap:8px;">
-            <button onclick="window.openSundarkandDohaReader(${doha.doha_number})" style="width:100%; background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; padding:9px 12px; border-radius:12px; font-weight:900; font-size:0.82rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow:0 2px 8px rgba(248,200,59,0.3);">
+          <div class="sundarkand-card-actions">
+            <button class="sundarkand-card-read-btn" onclick="window.openSundarkandDohaReader(${doha.doha_number})">
               <span>📖</span> दोहा पाठ व भावार्थ ➔
+            </button>
+            <button class="sundarkand-card-listen-btn" onclick="window.playSundarkandDoha(${doha.doha_number})" title="दोहा ${doha.doha_number} AI पाठ सुनें">
+              <span>🔊</span> पाठ
             </button>
           </div>
         </div>
@@ -2396,6 +2408,20 @@ window.openSundarkandChapterModal = function(chapterId) {
 
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
+
+  // Smoothly scroll active pill into center view
+  setTimeout(() => {
+    if (typeof document !== 'undefined' && typeof document.querySelector === 'function') {
+      const activePill = document.querySelector('#sundarkand-pills-bar .sundarkand-sopan-pill.active');
+      if (activePill && typeof activePill.scrollIntoView === 'function') {
+        activePill.scrollIntoView({ inline: 'center', behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  }, 40);
+
+  if (typeof window.updateSundarkandAudioUI === 'function') {
+    window.updateSundarkandAudioUI();
+  }
 };
 
 window.closeSundarkandChapterModal = function() {
@@ -2463,7 +2489,8 @@ window.openSundarkandDohaReader = function(dohaNum) {
     type: 'sundarkand',
     deity: 'श्री हनुमान जी',
     source: 'sundarkand_data',
-    dohaNum: dohaNum
+    dohaNum: dohaNum,
+    audio_url: doha.audio_url || (data ? data.audio_source : null)
   };
   window._activeDevotionalContent = activeSkObj;
 
@@ -2599,9 +2626,28 @@ window.openSundarkandDohaReader = function(dohaNum) {
   document.body.style.overflow = 'hidden';
 };
 
-window.closeSundarkandDohaReader = function() {
+window.closeSundarkandDohaReader = function(returnToChapter) {
   const readerModal = document.getElementById('sundarkand-reader-modal');
   if (readerModal) readerModal.style.display = 'none';
+
+  if (returnToChapter !== false && window._sundarkandActiveChapter) {
+    const chapterModal = document.getElementById('sundarkand-options-modal');
+    if (chapterModal) {
+      chapterModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+  }
+  document.body.style.overflow = '';
+};
+
+window.exitAllSundarkandModals = function() {
+  const readerModal = document.getElementById('sundarkand-reader-modal');
+  if (readerModal) readerModal.style.display = 'none';
+  const chapterModal = document.getElementById('sundarkand-options-modal');
+  if (chapterModal) chapterModal.style.display = 'none';
+  const jumperModal = document.getElementById('sundarkand-jumper-modal');
+  if (jumperModal) jumperModal.style.display = 'none';
   document.body.style.overflow = '';
 };
 
@@ -2624,7 +2670,7 @@ window.openSundarkandJumperModal = function() {
     for (let i = 1; i <= 60; i++) {
       const isCur = i === cur;
       buttonsHtml += `
-        <button onclick="window.closeSundarkandJumperModal(); window.openSundarkandDohaReader(${i});" style="width:48px; height:48px; border-radius:12px; border:1.5px solid ${isCur ? '#F8C83B' : 'rgba(248,200,59,0.25)'}; background:${isCur ? 'linear-gradient(135deg, #F8C83B, #D97706)' : 'rgba(255,255,255,0.06)'}; color:${isCur ? '#1A0B2E' : '#FFFDF8'}; font-weight:900; font-size:0.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:${isCur ? '0 0 12px rgba(248,200,59,0.5)' : 'none'};">
+        <button onclick="window.closeSundarkandJumperModal(); window.openSundarkandDohaReader(${i});" style="width:100%; aspect-ratio:1; min-height:40px; border-radius:12px; border:1.5px solid ${isCur ? '#F8C83B' : 'rgba(248,200,59,0.25)'}; background:${isCur ? 'linear-gradient(135deg, #F8C83B, #D97706)' : 'rgba(255,255,255,0.06)'}; color:${isCur ? '#1A0B2E' : '#FFFDF8'}; font-weight:900; font-size:0.92rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:${isCur ? '0 0 14px rgba(248,200,59,0.5)' : 'none'}; transition:transform 0.15s ease;">
           ${i}
         </button>
       `;

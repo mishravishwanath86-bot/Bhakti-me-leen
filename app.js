@@ -7627,6 +7627,12 @@ function showPage(id){
     window.updateCurvedBottomNav(id);
   }
 
+  if (id === 'page-epic-games' || id === 'page-reader' || id === 'page-3d-mandir') {
+    const navEl = document.getElementById('curved-fluid-bottom-nav');
+    if (navEl) navEl.classList.add('nav-hidden');
+    document.querySelectorAll('.app-bottom-nav, .bottom-nav').forEach(el => el.classList.add('nav-hidden'));
+  }
+
   if(!$(id)) return;
   if(id === 'page-profile' && typeof window.updateProfileUI === 'function') { window.updateProfileUI(); }
   if(id === 'page-chalisa' && typeof window.renderFullDrikChalisaPage === 'function') {
@@ -19515,7 +19521,50 @@ window.showPage = function(pageId) {
   try { currentPage = pageId; } catch(e) {}
   window.currentPage = pageId;
 
-  // 2. Update Bottom Nav active state
+  // 2. Update Bottom Nav active state & Curved Fluid Dock
+  if (typeof window.updateCurvedBottomNav === 'function') {
+    window.updateCurvedBottomNav(pageId);
+  }
+
+  // Hide Bottom Navigation in Epic Games, Reader, and 3D Mandir
+  if (pageId === 'page-epic-games' || pageId === 'page-reader' || pageId === 'page-3d-mandir') {
+    document.body.classList.add('in-epic-games');
+    const navEl = document.getElementById('curved-fluid-bottom-nav');
+    if (navEl) {
+      navEl.classList.add('nav-hidden');
+      navEl.style.setProperty('display', 'none', 'important');
+      navEl.style.setProperty('opacity', '0', 'important');
+      navEl.style.setProperty('visibility', 'hidden', 'important');
+      navEl.style.setProperty('pointer-events', 'none', 'important');
+      navEl.style.setProperty('transform', 'translate(-50%, 200%)', 'important');
+    }
+    document.querySelectorAll('.curved-fluid-bottom-nav, .app-bottom-nav, .bottom-nav').forEach(el => {
+      el.classList.add('nav-hidden');
+      el.style.setProperty('display', 'none', 'important');
+      el.style.setProperty('opacity', '0', 'important');
+      el.style.setProperty('visibility', 'hidden', 'important');
+      el.style.setProperty('pointer-events', 'none', 'important');
+    });
+  } else {
+    document.body.classList.remove('in-epic-games');
+    const navEl = document.getElementById('curved-fluid-bottom-nav');
+    if (navEl) {
+      navEl.classList.remove('nav-hidden');
+      navEl.style.removeProperty('display');
+      navEl.style.removeProperty('opacity');
+      navEl.style.removeProperty('visibility');
+      navEl.style.removeProperty('pointer-events');
+      navEl.style.removeProperty('transform');
+    }
+    document.querySelectorAll('.curved-fluid-bottom-nav, .app-bottom-nav, .bottom-nav').forEach(el => {
+      el.classList.remove('nav-hidden');
+      el.style.removeProperty('display');
+      el.style.removeProperty('opacity');
+      el.style.removeProperty('visibility');
+      el.style.removeProperty('pointer-events');
+    });
+  }
+
   document.querySelectorAll('.app-bottom-nav .nav-item, .bottom-nav .nav-item, .bottom-nav-btn, .nav-item').forEach(btn => {
     const p = btn.dataset.page || btn.getAttribute('data-page');
     if (p === pageId) {
@@ -28523,7 +28572,9 @@ ${item.english_lyrics}
     deity: coll.deity || deityKey,
     source: 'aarti_collections',
     deityKey: deityKey,
-    idx: idx
+    idx: idx,
+    audio_url: item.audio_url || (coll ? coll.audio_source : null) || null,
+    video_id: item.video_id || null
   };
   window._activeDevotionalContent = activeAartiObj;
 
@@ -29906,7 +29957,9 @@ ${item.english_lyrics}
     deity: coll.deity || deityKey,
     source: 'chalisa_collections',
     deityKey: deityKey,
-    idx: idx
+    idx: idx,
+    audio_url: item.audio_url || (coll ? coll.audio_source : null) || null,
+    video_id: item.video_id || null
   };
   window._activeDevotionalContent = activeChalisaObj;
 
@@ -30051,8 +30104,8 @@ function compareAppSemver(v1, v2) {
 }
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 14,
-  currentVersionName: '1.13.0',
+  currentVersionCode: 15,
+  currentVersionName: '1.14.0',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',

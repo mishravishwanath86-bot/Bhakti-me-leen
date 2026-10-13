@@ -1613,7 +1613,8 @@ window.readMantraItemDirect = function(deityKey, idx, initialMode) {
     deity: coll.deity,
     source: 'mantra_collections',
     deityKey: deityKey,
-    idx: idx
+    idx: idx,
+    audio_url: item.audio_url || (coll ? coll.audio_source : null)
   };
   window._activeDevotionalContent = activeMantraObj;
 
