@@ -15829,13 +15829,18 @@ function submitAuth() {
 }
 
 function continueAsGuest() {
-  localStorage.setItem('bhakti_user', JSON.stringify({ name: 'अतिथि भक्त', email: 'guest@bhakti.app' }));
-  const authModal = document.getElementById('auth-modal');
-  if (authModal) {
-    authModal.classList.add('hidden');
-    setTimeout(() => { authModal.style.display = 'none'; }, 400);
+  const user = { name: 'अतिथि भक्त', email: 'guest@bhakti.app', authType: 'guest', isGuest: true, isLoggedIn: false };
+  try {
+    localStorage.setItem('bhakti_user', JSON.stringify(user));
+    localStorage.setItem('sanatan_auth_method', 'guest');
+  } catch(e) {}
+  if (typeof updateProfileUI === 'function') updateProfileUI();
+  if (typeof showToast === 'function') showToast('✨ अतिथि के रूप में स्वागत है!');
+  if (typeof window.dismissGuestLoginPrompt === 'function') {
+    window.dismissGuestLoginPrompt();
+  } else {
+    window.closeAuthModal();
   }
-  showToast('✨ अतिथि के रूप में स्वागत है!');
 }
 
 function continueWithGoogle() {
@@ -15892,8 +15897,13 @@ function updateProfileUI() {
 
 function handleLogout() {
   localStorage.removeItem('bhakti_user');
+  localStorage.removeItem('sanatan_auth_method');
+  localStorage.removeItem('sanatan_deity_selected');
   updateProfileUI();
   showToast('👋 सफलतापूर्वक लॉग आउट किया गया!');
+  if (typeof window.startGuestLoginScheduler === 'function') {
+    window.startGuestLoginScheduler(0);
+  }
   openAuthModal();
 }
 
@@ -19765,13 +19775,20 @@ window.submitAuth = function() {
 };
 
 window.continueAsGuest = function() {
-  const user = { name: 'अतिथि भक्त', email: 'guest@bhakti.app', isGuest: true };
-  try { localStorage.setItem('bhakti_user', JSON.stringify(user)); } catch(e) {}
+  const user = { name: 'अतिथि भक्त', email: 'guest@bhakti.app', authType: 'guest', isGuest: true, isLoggedIn: false };
+  try {
+    localStorage.setItem('bhakti_user', JSON.stringify(user));
+    localStorage.setItem('sanatan_auth_method', 'guest');
+  } catch(e) {}
   
   if (typeof updateProfileUI === 'function') updateProfileUI();
   if (typeof showToast === 'function') showToast('🙏 जय श्री राम! आपका स्वागत है।');
   
-  window.closeAuthModal();
+  if (typeof window.dismissGuestLoginPrompt === 'function') {
+    window.dismissGuestLoginPrompt();
+  } else {
+    window.closeAuthModal();
+  }
 };
 
 window.continueWithGoogle = function() {
@@ -21704,15 +21721,150 @@ window.setVratReminder = function() {
   if (typeof showToast === 'function') showToast('✅ एकादशी व्रत अनुस्मारक सेट हो गया!');
 };
 
-// 3. WhatsApp Suvichar Share
+// 3. WhatsApp Suvichar Share with Live App Deep Link & Direct Download
 window.shareSuvicharWhatsApp = function() {
-  const text = `🌸 आज का पावन सुविचार 🌸\n\nकर्मण्येवाधिकारस्ते मा फलेषु कदाचन।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥\n\n📖 भावार्थ: कर्म करने में ही तुम्हारा अधिकार है, फल की चिंता में नहीं। निःस्वार्थ भाव से अपना कर्तव्य करो।\n\n🙏 भक्ति में लीन ऐप: http://localhost:8000`;
-  if (navigator.share) {
-    navigator.share({ title: 'आज का दिव्य सुविचार', text: text }).catch(() => {});
-  } else {
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+  const shloka = "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥";
+  const bhavarth = "कर्म करने में ही तुम्हारा अधिकार है, फल की चिंता में नहीं। निःस्वार्थ भाव से अपना कर्तव्य करो।";
+  
+  // Universal Web App Deep Link (works in WhatsApp / Chrome / Android App)
+  const appOpenLink = "https://mishravishwanath86-bot.github.io/Bhakti-me-leen/?suvichar=1#suvichar";
+  // Direct APK download link for friends & family
+  const apkDownloadLink = "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/latest/download/bhakti-app.apk";
+
+  const message = 
+`🚩 *आज का दिव्य सुविचार — श्रीमद्भगवद्गीता (2.47)* 🚩
+
+"${shloka}"
+
+💡 *भावार्थ:* ${bhavarth}
+
+━━━━━━━━━━━━━━━━━━━━━
+📲 *इस श्लोक को ऐप में सीधे खोलें:*
+${appOpenLink}
+
+📥 *'भक्ति में लीन' संपूर्ण ऐप डाउनलोड करें:*
+${apkDownloadLink}
+━━━━━━━━━━━━━━━━━━━━━
+🙏 *जय श्री कृष्णा* 🙏`;
+
+  // 1. Android Native Bridge (Opens WhatsApp app directly with text)
+  if (window.AndroidBridge && typeof window.AndroidBridge.shareToWhatsApp === 'function') {
+    const success = window.AndroidBridge.shareToWhatsApp(message);
+    if (success) {
+      if (typeof showToast === 'function') showToast('✅ WhatsApp खुल रहा है...');
+      return;
+    }
+  }
+
+  // 2. Fallbacks for Web / WebView
+  const encodedText = encodeURIComponent(message);
+  const whatsappScheme = `whatsapp://send?text=${encodedText}`;
+  const whatsappApi = `https://api.whatsapp.com/send?text=${encodedText}`;
+
+  try {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = whatsappScheme;
+      setTimeout(() => {
+        // Fallback if protocol wasn't handled
+        window.open(whatsappApi, '_blank');
+      }, 1200);
+    } else {
+      window.open(whatsappApi, '_blank');
+    }
+  } catch (e) {
+    window.open(whatsappApi, '_blank');
   }
 };
+
+// 4. Smooth Scroll to Suvichar with Divine Aura Glow & Modal Cleanup
+window.scrollToSuvichar = function(animateGlow = true) {
+  try {
+    // Close any open modals
+    const openModals = document.querySelectorAll('.modal-overlay.active, .sheet-modal.active, #quiz-hub-modal.active, .puzzle-modal.active');
+    openModals.forEach(m => m.classList.remove('active'));
+
+    // Switch to Home tab if tab switcher exists
+    if (typeof switchTab === 'function') {
+      try { switchTab('home'); } catch(_) {}
+    }
+
+    setTimeout(() => {
+      const card = document.getElementById('daily-divine-suvichar-card');
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (animateGlow) {
+          card.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+          card.style.boxShadow = '0 0 35px rgba(248, 200, 59, 0.95), 0 0 20px rgba(16, 185, 129, 0.8)';
+          card.style.borderColor = '#F8C83B';
+          card.style.transform = 'scale(1.03)';
+          setTimeout(() => {
+            card.style.transform = 'scale(1)';
+            setTimeout(() => {
+              card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.45)';
+              card.style.borderColor = 'rgba(248,200,59,0.4)';
+            }, 1600);
+          }, 450);
+        }
+        if (typeof showToast === 'function') {
+          showToast('✨ आज का दिव्य सुविचार प्रस्तुत है!');
+        }
+      }
+    }, 350);
+  } catch (err) {
+    console.error('Error navigating to suvichar:', err);
+  }
+};
+
+// 5. Global Deep Link Handler (invoked by Android MainActivity or Web URL)
+window.handleDeepLink = function(urlOrParam) {
+  console.log('[DeepLink] Processing:', urlOrParam);
+  if (!urlOrParam) return;
+  const target = String(urlOrParam).toLowerCase();
+  if (target.includes('suvichar') || target.includes('gita') || target.includes('shloka') || target.includes('2.47')) {
+    window.scrollToSuvichar(true);
+  }
+};
+
+// 6. Web Deep Link Auto-Detection & Web Banner on Page Load
+(function setupDeepLinkListener() {
+  function checkUrlOnLaunch() {
+    const hash = window.location.hash || '';
+    const search = window.location.search || '';
+    if (hash.includes('suvichar') || search.includes('suvichar') || search.includes('gita')) {
+      setTimeout(() => window.scrollToSuvichar(true), 800);
+      
+      // If viewed on mobile web browser (outside native AndroidBridge), show a smart prompt to open/download app
+      if (!window.AndroidBridge && !document.getElementById('suvichar-web-banner')) {
+        const banner = document.createElement('div');
+        banner.id = 'suvichar-web-banner';
+        banner.style.cssText = 'position:fixed; top:0; left:0; right:0; z-index:999999; background:linear-gradient(135deg, #240C44, #150529); border-bottom:2px solid #F8C83B; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 6px 20px rgba(0,0,0,0.8); font-family:inherit;';
+        banner.innerHTML = `
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.4rem;">🔱</span>
+            <div>
+              <div style="color:#FDE68A; font-weight:800; font-size:0.85rem;">भक्ति में लीन ऐप</div>
+              <div style="color:#CBD5E1; font-size:0.7rem;">दिव्य दर्शन, आरती व सुविचार</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <a href="bhaktiapp://suvichar" style="background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; text-decoration:none; padding:5px 9px; border-radius:10px; font-size:0.75rem; font-weight:700;">📲 ऐप में खोलें</a>
+            <a href="https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/latest/download/bhakti-app.apk" style="background:linear-gradient(135deg, #10B981, #059669); color:#FFF; text-decoration:none; padding:5px 10px; border-radius:10px; font-size:0.75rem; font-weight:800; box-shadow:0 2px 8px rgba(16,185,129,0.4);">📥 डाउनलोड</a>
+            <span onclick="this.parentElement.parentElement.remove()" style="color:#94A3B8; font-size:1.1rem; cursor:pointer; padding:0 4px; font-weight:900;">✕</span>
+          </div>
+        `;
+        document.body.appendChild(banner);
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkUrlOnLaunch);
+  } else {
+    checkUrlOnLaunch();
+  }
+  window.addEventListener('hashchange', checkUrlOnLaunch);
+})();
 
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -23588,28 +23740,9 @@ window.startWhatsAppAuth = function() {
 
 // 2. Google 1-Tap Login
 window.startGoogleAuth = function() {
-  if (navigator.vibrate) navigator.vibrate([40, 30, 60]);
-  if (typeof playSoundEffect === 'function') playSoundEffect('correct');
-
-  const user = {
-    name: 'भक्त साधक (Google)',
-    email: '',
-    authType: 'google',
-    isLoggedIn: true
-  };
-  try { localStorage.setItem('bhakti_user', JSON.stringify(user)); } catch(e) {}
-  try { localStorage.setItem('sanatan_auth_method', 'google'); } catch(e) {}
-
-  if (typeof updateProfileUI === 'function') updateProfileUI();
-  if (typeof showToast === 'function') {
-    showToast('🌐 Google 1-Tap लॉगिन सफल! आपका स्वागत है 🙏');
+  if (typeof window.openGoogleAccountPickerModal === 'function') {
+    window.openGoogleAccountPickerModal();
   }
-
-  const authModal = document.getElementById('auth-modal');
-  if (authModal) authModal.style.display = 'none';
-
-  const deityModal = document.getElementById('deity-onboarding-modal');
-  if (deityModal) deityModal.style.display = 'flex';
 };
 
 // 3. Vedic Biometric Touch ID (Golden Touch ID)
@@ -23797,20 +23930,25 @@ window.continueAsGuest = function() {
   const user = {
     name: 'अतिथि भक्त',
     email: 'guest@bhakti.app',
+    phone: '',
     authType: 'guest',
-    isLoggedIn: true
+    isGuest: true,
+    isLoggedIn: false
   };
-  try { localStorage.setItem('bhakti_user', JSON.stringify(user)); } catch(e) {}
-  try { localStorage.setItem('sanatan_auth_method', 'guest'); } catch(e) {}
+  try {
+    localStorage.setItem('bhakti_user', JSON.stringify(user));
+    localStorage.setItem('sanatan_auth_method', 'guest');
+  } catch(e) {}
 
   if (typeof updateProfileUI === 'function') updateProfileUI();
   if (typeof showToast === 'function') showToast('🙏 अतिथि प्रवेश सफल! जय श्री राम');
 
-  const authModal = document.getElementById('auth-modal');
-  if (authModal) authModal.style.display = 'none';
-
-  const deityModal = document.getElementById('deity-onboarding-modal');
-  if (deityModal) deityModal.style.display = 'flex';
+  if (typeof window.dismissGuestLoginPrompt === 'function') {
+    window.dismissGuestLoginPrompt();
+  } else {
+    window.closeAuthModal();
+  }
+  if (typeof showPage === 'function') showPage('page-home');
 };
 
 // 7. Onboarding Deity Selection & Enter Mandir
@@ -23837,6 +23975,8 @@ window.finishDeityOnboardingAndEnter = function() {
   const deityKey = window.selectedOnboardingDeityKey || 'shiva';
   try {
     localStorage.setItem('sanatan_user_deity', deityKey);
+    localStorage.setItem('user_ishta_dev', deityKey);
+    localStorage.setItem('sanatan_deity_selected', 'true');
     localStorage.setItem('onboarding_completed', 'true');
   } catch(e) {}
 
@@ -23852,6 +23992,7 @@ window.finishDeityOnboardingAndEnter = function() {
   if (typeof showToast === 'function') {
     showToast('🚩 दिव्य दर्शन यात्रा आरंभ हुई! 🕉️');
   }
+  if (typeof showPage === 'function') showPage('page-home');
 };
 
 
@@ -24216,6 +24357,7 @@ window.handleAppLogout = function() {
     try {
       localStorage.removeItem('bhakti_user');
       localStorage.removeItem('sanatan_auth_method');
+      localStorage.removeItem('sanatan_deity_selected');
     } catch(e) {}
     if (typeof showToast === 'function') showToast('🚪 सफलतापूर्वक लॉग आउट किया गया');
     setTimeout(() => {
@@ -25445,32 +25587,92 @@ window.selectGoogleAccount = function(userName, userEmail, avatarUrl) {
     showToast(`🎉 स्वागत है ${user.name}! Google खाता सफलतापूर्वक जुड़ा 🙏`);
   }
 
+  // Clear guest login reminder scheduler
+  if (typeof window.clearGuestLoginScheduler === 'function') {
+    window.clearGuestLoginScheduler();
+  }
+
   // Close main auth modal
   const authModal = document.getElementById('auth-modal');
   if (authModal) authModal.style.display = 'none';
 
-  // Open Deity Onboarding Modal if not already onboarded
+  // Open Deity Onboarding Modal ONLY if not already onboarded for this login
   const deityModal = document.getElementById('deity-onboarding-modal');
-  if (deityModal) deityModal.style.display = 'flex';
+  if (deityModal && localStorage.getItem('sanatan_deity_selected') !== 'true') {
+    deityModal.style.display = 'flex';
+  } else {
+    if (deityModal) deityModal.style.display = 'none';
+    if (typeof showPage === 'function') showPage('page-home');
+  }
 };
 
 window.submitCustomGoogleAccount = function() {
   const nameInput = document.getElementById('custom-google-name-input');
   const emailInput = document.getElementById('custom-google-email-input');
+  const warningBox = document.getElementById('google-email-warning-box');
 
   const email = emailInput ? emailInput.value.trim() : '';
   let name = nameInput ? nameInput.value.trim() : '';
 
-  if (!email || !email.includes('@')) {
-    if (typeof showToast === 'function') {
-      showToast('⚠️ कृपया अपना वैध Gmail पता दर्ज करें (उदा. yourname@gmail.com)');
+  const hideWarning = () => {
+    if (warningBox) { warningBox.style.display = 'none'; warningBox.innerHTML = ''; }
+    if (emailInput) { emailInput.style.borderColor = '#D1D5DB'; emailInput.style.backgroundColor = '#FFFFFF'; }
+  };
+
+  const showWarning = (msg) => {
+    if (warningBox) {
+      warningBox.innerHTML = `⚠️ <span>${msg}</span>`;
+      warningBox.style.display = 'block';
     }
-    if (emailInput) emailInput.focus();
+    if (emailInput) {
+      emailInput.style.borderColor = '#DC2626';
+      emailInput.style.backgroundColor = '#FEF2F2';
+      emailInput.focus();
+    }
+    if (navigator.vibrate) navigator.vibrate([120, 60, 120]);
+    if (typeof playSoundEffect === 'function') playSoundEffect('wrong');
+    if (typeof showToast === 'function') showToast(msg);
+  };
+
+  hideWarning();
+
+  if (!email) {
+    showWarning('कृपया अपना Google / Gmail पता दर्ज करें!');
+    return;
+  }
+
+  if (!email.includes('@')) {
+    showWarning('गलत ईमेल फॉर्मेट! कृपया पूरा Gmail पता लिखें (उदा. yourname@gmail.com)');
+    return;
+  }
+
+  const parts = email.split('@');
+  if (parts.length !== 2 || !parts[0] || !parts[1]) {
+    showWarning('अमान्य Gmail पता! सही फॉर्मेट: yourname@gmail.com');
+    return;
+  }
+
+  const username = parts[0];
+  const domain = parts[1].toLowerCase();
+
+  if (domain !== 'gmail.com' && domain !== 'googlemail.com') {
+    showWarning(`यह Google लॉगिन है! कृपया '@gmail.com' का ईमेल दर्ज करें ('${domain}' अमान्य है)`);
+    return;
+  }
+
+  if (username.length < 3) {
+    showWarning('Gmail यूजरनेम कम से कम 3 अक्षरों का होना चाहिए!');
+    return;
+  }
+
+  const validGmailRegex = /^[a-zA-Z0-9][a-zA-Z0-9._%+-]{2,29}@(gmail|googlemail)\.com$/i;
+  if (!validGmailRegex.test(email)) {
+    showWarning('अमान्य Gmail पता! केवल अक्षर (a-z), अंक (0-9) और (.) मान्य हैं।');
     return;
   }
 
   if (!name) {
-    const rawPart = email.split('@')[0].replace(/[._]/g, ' ');
+    const rawPart = username.replace(/[._]/g, ' ');
     name = rawPart ? (rawPart.charAt(0).toUpperCase() + rawPart.slice(1)) : 'भक्त साधक';
   }
 
@@ -30553,6 +30755,11 @@ window.finalizeDevoteeLogin = function(userData) {
     localStorage.setItem('sanatan_auth_method', userData.authType);
   } catch(e) {}
 
+  // Clear guest login reminder scheduler
+  if (typeof window.clearGuestLoginScheduler === 'function') {
+    window.clearGuestLoginScheduler();
+  }
+
   if (typeof updateProfileUI === 'function') updateProfileUI();
   if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
   if (typeof playSoundEffect === 'function') playSoundEffect('victory');
@@ -30564,24 +30771,40 @@ window.finalizeDevoteeLogin = function(userData) {
   const authModal = document.getElementById('auth-modal');
   if (authModal) authModal.style.display = 'none';
 
-  // Open Deity Selection Modal if not already onboarded
+  // Open Deity Selection Modal ONLY if not already onboarded for this login
   const deityModal = document.getElementById('deity-onboarding-modal');
-  if (deityModal && !localStorage.getItem('user_ishta_dev')) {
+  if (deityModal && localStorage.getItem('sanatan_deity_selected') !== 'true') {
     deityModal.style.display = 'flex';
   } else {
+    if (deityModal) deityModal.style.display = 'none';
     if (typeof showPage === 'function') showPage('page-home');
   }
 };
 
 // Guest Mode
 window.continueAsGuest = function() {
-  window.finalizeDevoteeLogin({
+  const user = {
     name: 'अतिथि भक्त',
     email: 'guest@bhakti.app',
     phone: '',
     authType: 'guest',
-    isLoggedIn: true
-  });
+    isGuest: true,
+    isLoggedIn: false
+  };
+  try {
+    localStorage.setItem('bhakti_user', JSON.stringify(user));
+    localStorage.setItem('sanatan_auth_method', 'guest');
+  } catch(e) {}
+
+  if (typeof updateProfileUI === 'function') updateProfileUI();
+  if (typeof showToast === 'function') showToast('🙏 अतिथि प्रवेश सफल! जय श्री राम');
+
+  if (typeof window.dismissGuestLoginPrompt === 'function') {
+    window.dismissGuestLoginPrompt();
+  } else {
+    window.closeAuthModal();
+  }
+  if (typeof showPage === 'function') showPage('page-home');
 };
 
 

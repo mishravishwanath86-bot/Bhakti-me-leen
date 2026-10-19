@@ -169,10 +169,90 @@
         }, 350);
       }
 
-      // Immediately Open Smart Vedic Auth Modal
+      // Smart Vedic Navigation upon intro finish
       setTimeout(() => {
-        window.openAuthModal();
+        const authModal = document.getElementById('auth-modal');
+        if (authModal) authModal.style.display = 'none';
+
+        if (window.isUserLoggedIn && window.isUserLoggedIn()) {
+          // User is ALREADY logged in! Never show login page on app open
+          const deityModal = document.getElementById('deity-onboarding-modal');
+          if (deityModal && localStorage.getItem('sanatan_deity_selected') !== 'true') {
+            deityModal.style.display = 'flex';
+          } else {
+            if (deityModal) deityModal.style.display = 'none';
+            if (typeof window.showPage === 'function') window.showPage('page-home');
+          }
+        } else {
+          // Guest / Not logged in: allow full app usage & start 3-min reminder timer
+          if (typeof window.showPage === 'function') window.showPage('page-home');
+          if (typeof window.startGuestLoginScheduler === 'function') {
+            window.startGuestLoginScheduler(0); // 3 minutes!
+          }
+        }
       }, 50);
+    };
+
+    window.isUserLoggedIn = function() {
+      try {
+        const raw = localStorage.getItem('bhakti_user');
+        if (!raw) return false;
+        const u = JSON.parse(raw);
+        if (u && (u.isLoggedIn === true || u.isLoggedIn === 'true')) {
+          if (u.authType === 'guest' || u.isGuest === true) return false;
+          return true;
+        }
+        return false;
+      } catch(e) {
+        return false;
+      }
+    };
+
+    // ⏰ GUEST LOGIN REMINDER SCHEDULER (3 min -> 15 min -> 30 min)
+    window.guestPromptTimer = null;
+    window.currentGuestStage = 0;
+    window.guestPromptIntervals = [3 * 60 * 1000, 15 * 60 * 1000, 30 * 60 * 1000]; // 3 min, 15 min, 30 min
+
+    window.startGuestLoginScheduler = function(stage = 0) {
+      if (window.isUserLoggedIn && window.isUserLoggedIn()) {
+        window.clearGuestLoginScheduler();
+        return;
+      }
+      window.clearGuestLoginScheduler();
+      window.currentGuestStage = stage;
+      const delay = window.guestPromptIntervals[Math.min(stage, window.guestPromptIntervals.length - 1)];
+      console.log('[BhaktiAuth] Guest login reminder stage', stage, 'scheduled in', (delay / 60000), 'minutes.');
+
+      window.guestPromptTimer = setTimeout(() => {
+        if (window.isUserLoggedIn && window.isUserLoggedIn()) return;
+        window.showGuestLoginPopup();
+      }, delay);
+    };
+
+    window.clearGuestLoginScheduler = function() {
+      if (window.guestPromptTimer) {
+        clearTimeout(window.guestPromptTimer);
+        window.guestPromptTimer = null;
+      }
+    };
+
+    window.showGuestLoginPopup = function() {
+      if (window.isUserLoggedIn && window.isUserLoggedIn()) return;
+      const authModal = document.getElementById('auth-modal');
+      if (authModal) {
+        const banner = document.getElementById('auth-reminder-banner');
+        if (banner) banner.style.display = 'block';
+        window.openAuthModal();
+        if (navigator.vibrate) navigator.vibrate([40, 30, 40]);
+      }
+    };
+
+    window.dismissGuestLoginPrompt = function() {
+      window.closeAuthModal();
+      if (!window.isUserLoggedIn || !window.isUserLoggedIn()) {
+        const nextStage = Math.min((window.currentGuestStage || 0) + 1, 2);
+        window.startGuestLoginScheduler(nextStage);
+      }
     };
 
     window.openAuthModal = function() {
@@ -188,6 +268,8 @@
     window.closeAuthModal = function() {
       const modal = document.getElementById('auth-modal');
       if (modal) modal.style.display = 'none';
+      const banner = document.getElementById('auth-reminder-banner');
+      if (banner) banner.style.display = 'none';
     };
   </script>
 
@@ -727,6 +809,40 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
   z-index: 99990 !important;
 }
 </style>
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   🚫 FULLSCREEN GAME & MODAL OVERLAY: HIDE APP HEADER & BOTTOM DOCK
+   ══════════════════════════════════════════════════════════════════ */
+body.game-modal-open .app-header,
+body:has(#aarti-mantra-selection-modal[style*="flex"]) .app-header,
+body:has(#aarti-mantra-selection-modal.active) .app-header,
+body:has(#aarti-mantra-game-arena[style*="flex"]) .app-header,
+body:has(#aarti-mantra-game-arena.active) .app-header,
+body:has(#padabandham-game-modal[style*="flex"]) .app-header,
+body:has(#padabandham-game-modal.active) .app-header,
+body:has(#jigsaw-game-modal[style*="flex"]) .app-header,
+body:has(#jigsaw-game-modal.active) .app-header,
+body:has(#match-game-modal[style*="flex"]) .app-header,
+body:has(#match-game-modal.active) .app-header,
+body:has(#phool-arpan-arena[style*="flex"]) .app-header,
+body:has(#phool-arpan-arena.active) .app-header {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-120%) !important;
+}
+
+body.game-modal-open .curved-fluid-bottom-nav,
+body.game-modal-open .bottom-nav,
+body.game-modal-open .app-bottom-nav {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translate(-50%, 150%) !important;
+}
+</style>
 </head>
 
 <body>
@@ -833,8 +949,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         <span style="font-size:0.75rem; font-weight:800; color:#FDE68A; display:flex; align-items:center; gap:4px;">
           <span>✨</span> ॐ श्री गणेशाय नमः <span>✨</span>
         </span>
-        <button onclick="continueAsGuest()" style="background:rgba(248,200,59,0.18); border:1.2px solid #F8C83B; color:#FDE68A; padding:4px 10px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:4px; box-shadow:0 0 8px rgba(248,200,59,0.2);">
-          अतिथि प्रवेश (Guest) ➔
+        <button onclick="dismissGuestLoginPrompt()" style="background:rgba(248,200,59,0.18); border:1.2px solid #F8C83B; color:#FDE68A; padding:4px 12px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:4px; box-shadow:0 0 8px rgba(248,200,59,0.2);">
+          बाद में (Later) ✕
         </button>
       </div>
 
@@ -849,6 +965,11 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         <p style="font-size:0.75rem; color:#CBD5E1; margin:0; line-height:1.3;">
           सनातन धर्म, ध्यान एवं आत्मिक शांति का पावन द्वार
         </p>
+      </div>
+
+      <!-- Reminder Notification Banner (Shown when opened via scheduled prompt) -->
+      <div id="auth-reminder-banner" style="display:none; background:rgba(248,200,59,0.15); border:1.2px solid #F8C83B; border-radius:14px; padding:8px 12px; margin-bottom:12px; font-size:0.78rem; color:#FDE68A; font-weight:800; text-align:center; line-height:1.4;">
+        🔔 <strong>साधना सुरक्षा:</strong> अपनी दैनिक पूजा, स्ट्रीक व पुण्य रिकॉर्ड सुरक्षित रखने हेतु कृपया लॉगिन करें 🙏
       </div>
 
       <!-- 1. GOOGLE 1-TAP LOGIN BUTTON -->
@@ -959,8 +1080,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
 
       <!-- Bottom Secondary Guest Link -->
-      <button onclick="continueAsGuest()" style="background:none; border:none; color:#CBD5E1; font-size:0.75rem; font-weight:700; cursor:pointer; padding:4px;">
-        ✨ बिना लॉगिन अतिथि के रूप में जारी रखें (Skip) ➔
+      <button onclick="dismissGuestLoginPrompt()" style="background:none; border:none; color:#CBD5E1; font-size:0.76rem; font-weight:700; cursor:pointer; padding:6px; margin-top:4px;">
+        ✨ बाद में लॉगिन करें (Skip / Later) ➔
       </button>
 
     </div>
@@ -1245,7 +1366,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
         <div style="margin-bottom:10px;">
           <label style="font-size:0.75rem; font-weight:800; color:#374151; display:block; margin-bottom:4px;">✉️ Google ईमेल (Gmail Address):</label>
-          <input type="email" id="custom-google-email-input" placeholder="उदा. yourname@gmail.com" style="width:100%; box-sizing:border-box; border:1px solid #D1D5DB; border-radius:10px; padding:8px 12px; font-size:0.85rem; outline:none; color:#111827; background:#FFFFFF;" />
+          <input type="email" id="custom-google-email-input" placeholder="उदा. yourname@gmail.com" oninput="var wb=document.getElementById('google-email-warning-box'); if(wb) wb.style.display='none'; this.style.borderColor='#D1D5DB'; this.style.backgroundColor='#FFFFFF';" style="width:100%; box-sizing:border-box; border:1.5px solid #D1D5DB; border-radius:10px; padding:8px 12px; font-size:0.85rem; outline:none; color:#111827; background:#FFFFFF; transition:border-color 0.2s;" />
+          <div id="google-email-warning-box" style="display:none; color:#DC2626; background:#FEE2E2; border:1px solid #FCA5A5; border-radius:8px; padding:6px 10px; font-size:0.75rem; font-weight:800; margin-top:6px; text-align:left; line-height:1.3;"></div>
         </div>
 
         <!-- Avatar Choice -->
@@ -1655,7 +1777,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
 
       <!-- 🌅 DAILY DHARMIK SUVICHAR CARD WITH 1-CLICK WHATSAPP SHARE 🌅 -->
-      <div style="margin: 0 1.2rem 1.4rem; background: linear-gradient(145deg, #240C44 0%, #150529 100%); border: 1.5px solid rgba(248,200,59,0.4); border-radius: 22px; padding: 1.2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.45);">
+      <div id="daily-divine-suvichar-card" style="margin: 0 1.2rem 1.4rem; background: linear-gradient(145deg, #240C44 0%, #150529 100%); border: 1.5px solid rgba(248,200,59,0.4); border-radius: 22px; padding: 1.2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.45); transition: all 0.4s ease; position: relative;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
           <div style="font-size:0.92rem; font-weight:900; color:#FDE68A; display:flex; align-items:center; gap:6px;">
             <span>🌅</span> आज का दिव्य सुविचार
@@ -1672,8 +1794,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           </p>
         </div>
 
-        <button onclick="shareSuvicharWhatsApp()" style="width:100%; background:linear-gradient(135deg, #10B981 0%, #059669 100%); color:#FFF; border:none; font-size:0.85rem; font-weight:800; padding:9px 0; border-radius:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow:0 4px 15px rgba(16,185,129,0.35);">
-          <span>📲</span> WhatsApp पर शेयर करें
+        <button id="suvichar-share-btn" onclick="shareSuvicharWhatsApp()" style="width:100%; background:linear-gradient(135deg, #10B981 0%, #059669 100%); color:#FFF; border:none; font-size:0.85rem; font-weight:800; padding:10px 0; border-radius:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 15px rgba(16,185,129,0.35); transition:transform 0.2s ease;">
+          <span style="font-size:1.1rem;">📲</span> WhatsApp पर शेयर करें (लिंक सहित)
         </button>
       </div>
 
@@ -1830,10 +1952,10 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <span style="font-size:1.35rem; filter:drop-shadow(0 0 8px #F59E0B);">🪔</span>
             <span>नित्य पावन आरती संग्रह</span>
           </h2>
-          <button class="see-all-toggle-btn" onclick="showPage('page-aarti'); if(window.renderFullDrikAartiPage) window.renderFullDrikAartiPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें (18 देव • 118 आरतियां) ❯</button>
+          <button class="see-all-toggle-btn" onclick="showPage('page-aarti'); if(window.renderFullDrikAartiPage) window.renderFullDrikAartiPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें ❯</button>
         </div>
 
-        <!-- Compact 8-Deity Preview Grid (Matching Image 1 Vrat Style) -->
+        <!-- Compact 4-Deity Preview Grid (Matching Image 1 Vrat Style) -->
         <div class="aarti-preview-grid" id="home-nitya-aarti-grid">
           <!-- 1. Ganesha -->
           <div class="aarti-preview-card home-aarti-card" data-cat="ganesh" onclick="window.openAartiCollectionModal('ganesh')">
@@ -1867,38 +1989,6 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <div class="aarti-preview-name">श्री राम आरती</div>
             <div class="aarti-preview-badge">6 आरतियां</div>
           </div>
-          <!-- 5. Shiva -->
-          <div class="aarti-preview-card home-aarti-card" data-cat="shiva" onclick="window.openAartiCollectionModal('shiva')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/divya_shiva.jpg" onerror="this.src='assets/deity_shiv.jpg';" alt="भगवान शिव" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">भगवान शिव आरती</div>
-            <div class="aarti-preview-badge">5 आरतियां</div>
-          </div>
-          <!-- 6. Narayana -->
-          <div class="aarti-preview-card home-aarti-card" data-cat="narayana" onclick="window.openAartiCollectionModal('narayana')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_vishnu_little.jpg" onerror="this.src='assets/deity_vishnu.jpg';" alt="श्री नारायण" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">श्री नारायण आरती</div>
-            <div class="aarti-preview-badge">5 आरतियां</div>
-          </div>
-          <!-- 7. Durga -->
-          <div class="aarti-preview-card home-aarti-card" data-cat="durga" onclick="window.openAartiCollectionModal('durga')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_durga.jpg" onerror="this.src='assets/deity_durga.jpg';" alt="माँ दुर्गा" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">माँ दुर्गा आरती</div>
-            <div class="aarti-preview-badge">5 आरतियां</div>
-          </div>
-          <!-- 8. Lakshmi -->
-          <div class="aarti-preview-card home-aarti-card" data-cat="lakshmi" onclick="window.openAartiCollectionModal('lakshmi')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_lakshmi_little.jpg" onerror="this.src='assets/deity_lakshmi.jpg';" alt="माँ लक्ष्मी" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">माँ लक्ष्मी आरती</div>
-            <div class="aarti-preview-badge">4 आरतियां</div>
-          </div>
         </div>
       </div>
 
@@ -1910,59 +2000,38 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <span style="font-size:1.35rem; filter:drop-shadow(0 0 8px #F59E0B);">📜</span>
             <span>नित्य पावन चालीसा संग्रह</span>
           </h2>
-          <button class="see-all-toggle-btn" onclick="showPage('page-chalisa'); if(window.renderFullDrikChalisaPage) window.renderFullDrikChalisaPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें (17 देव • 42 चालीसा) ❯</button>
+          <button class="see-all-toggle-btn" onclick="showPage('page-chalisa'); if(window.renderFullDrikChalisaPage) window.renderFullDrikChalisaPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें ❯</button>
         </div>
 
-        <!-- 18-Deity Point-wise Preview Grid -->
+        <!-- 4-Deity Point-wise Preview Grid -->
         <div class="aarti-preview-grid" id="home-nitya-chalisa-grid">
-<div class="aarti-preview-card home-chalisa-card" data-cat="hanuman" onclick="window.openChalisaCollectionModal('hanuman')">
+          <div class="aarti-preview-card home-chalisa-card" data-cat="hanuman" onclick="window.openChalisaCollectionModal('hanuman')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_hanuman.jpg" onerror="this.src='assets/deity_hanuman.jpg';" alt="श्री हनुमान चालीसा संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">श्री हनुमान चालीसा</div>
             <div class="aarti-preview-badge">3 चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="ganesh" onclick="window.openChalisaCollectionModal('ganesh')">
+          </div>
+          <div class="aarti-preview-card home-chalisa-card" data-cat="ganesh" onclick="window.openChalisaCollectionModal('ganesh')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_ganesha_little.jpg" onerror="this.src='assets/deity_ganesh.jpg';" alt="श्री गणेश चालीसा संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">श्री गणेश चालीसा</div>
             <div class="aarti-preview-badge">१ चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="shiva" onclick="window.openChalisaCollectionModal('shiva')">
+          </div>
+          <div class="aarti-preview-card home-chalisa-card" data-cat="shiva" onclick="window.openChalisaCollectionModal('shiva')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_shiva.jpg" onerror="this.src='assets/deity_shiv.jpg';" alt="भगवान शिव चालीसा संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">भगवान शिव चालीसा</div>
             <div class="aarti-preview-badge">१ चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="krishna" onclick="window.openChalisaCollectionModal('krishna')">
+          </div>
+          <div class="aarti-preview-card home-chalisa-card" data-cat="krishna" onclick="window.openChalisaCollectionModal('krishna')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_krishna.jpg" onerror="this.src='assets/deity_krishna.jpg';" alt="श्री कृष्ण चालीसा संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">श्री कृष्ण चालीसा</div>
             <div class="aarti-preview-badge">3 चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="rama" onclick="window.openChalisaCollectionModal('rama')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_rama_little.jpg" onerror="this.src='assets/deity_ram.jpg';" alt="श्री राम चालीसा संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">श्री राम चालीसा</div>
-            <div class="aarti-preview-badge">3 चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="durga" onclick="window.openChalisaCollectionModal('durga')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_durga_little.jpg" onerror="this.src='assets/deity_durga.jpg';" alt="माँ दुर्गा चालीसा संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">माँ दुर्गा चालीसा</div>
-            <div class="aarti-preview-badge">3 चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="lakshmi" onclick="window.openChalisaCollectionModal('lakshmi')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_lakshmi_little.jpg" onerror="this.src='assets/deity_lakshmi.jpg';" alt="माँ लक्ष्मी चालीसा संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">माँ लक्ष्मी चालीसा</div>
-            <div class="aarti-preview-badge">2 चालीसा</div>
-          </div><div class="aarti-preview-card home-chalisa-card" data-cat="saraswati" onclick="window.openChalisaCollectionModal('saraswati')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_saraswati_little.jpg" onerror="this.src='assets/deity_saraswati.jpg';" alt="माँ सरस्वती चालीसा संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">माँ सरस्वती चालीसा</div>
-            <div class="aarti-preview-badge">2 चालीसा</div>
           </div>
         </div>
       </div>
@@ -1974,59 +2043,38 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <span style="font-size:1.35rem; filter:drop-shadow(0 0 8px #F59E0B);">🕉️</span>
             <span>वैदिक मन्त्र संग्रह</span>
           </h2>
-          <button class="see-all-toggle-btn" onclick="showPage('page-mantra'); if(window.renderFullDrikMantraPage) window.renderFullDrikMantraPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें (22 वर्ग • 105 मन्त्र) ❯</button>
+          <button class="see-all-toggle-btn" onclick="showPage('page-mantra'); if(window.renderFullDrikMantraPage) window.renderFullDrikMantraPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें ❯</button>
         </div>
 
-        <!-- 22 Point-view Preview Grid for Vedic Mantras matching Sanatan Panchang -->
+        <!-- 4 Point-view Preview Grid for Vedic Mantras matching Sanatan Panchang -->
         <div class="aarti-preview-grid" id="home-vedic-mantra-grid">
-<div class="aarti-preview-card home-mantra-card" data-cat="ganesha" onclick="window.openMantraCollectionModal('ganesha')">
+          <div class="aarti-preview-card home-mantra-card" data-cat="ganesha" onclick="window.openMantraCollectionModal('ganesha')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_ganesha_little.jpg" onerror="this.src='assets/deity_ganesh.jpg';" alt="भगवान गणेश वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">श्री गणेश मन्त्र</div>
             <div class="aarti-preview-badge">11 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="shiva" onclick="window.openMantraCollectionModal('shiva')">
+          </div>
+          <div class="aarti-preview-card home-mantra-card" data-cat="shiva" onclick="window.openMantraCollectionModal('shiva')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_shiva.jpg" onerror="this.src='assets/deity_shiv.jpg';" alt="भगवान शिव वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">भगवान शिव मन्त्र</div>
             <div class="aarti-preview-badge">7 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="gayatri" onclick="window.openMantraCollectionModal('gayatri')">
+          </div>
+          <div class="aarti-preview-card home-mantra-card" data-cat="gayatri" onclick="window.openMantraCollectionModal('gayatri')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_gayatri_little.jpg" onerror="this.src='assets/deity_gayatri.jpg';" alt="ऋग्वैदिक गायत्री महामन्त्र" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">गायत्री महामन्त्र</div>
             <div class="aarti-preview-badge">3 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="lakshmi" onclick="window.openMantraCollectionModal('lakshmi')">
+          </div>
+          <div class="aarti-preview-card home-mantra-card" data-cat="lakshmi" onclick="window.openMantraCollectionModal('lakshmi')">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/bal_lakshmi_little.jpg" onerror="this.src='assets/deity_lakshmi.jpg';" alt="श्री महालक्ष्मी वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">श्री महालक्ष्मी मन्त्र</div>
             <div class="aarti-preview-badge">4 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="hanuman" onclick="window.openMantraCollectionModal('hanuman')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_hanuman.jpg" onerror="this.src='assets/deity_hanuman.jpg';" alt="भगवान हनुमान वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">श्री हनुमान मन्त्र</div>
-            <div class="aarti-preview-badge">4 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="krishna" onclick="window.openMantraCollectionModal('krishna')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_krishna.jpg" onerror="this.src='assets/deity_krishna.jpg';" alt="भगवान कृष्ण वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">श्री कृष्ण मन्त्र</div>
-            <div class="aarti-preview-badge">7 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="rama" onclick="window.openMantraCollectionModal('rama')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_rama_little.jpg" onerror="this.src='assets/deity_rama.jpg';" alt="भगवान राम वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">भगवान राम मन्त्र</div>
-            <div class="aarti-preview-badge">5 मन्त्र</div>
-          </div><div class="aarti-preview-card home-mantra-card" data-cat="durga" onclick="window.openMantraCollectionModal('durga')">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/bal_durga_little.jpg" onerror="this.src='assets/deity_durga.jpg';" alt="देवी दुर्गा वैदिक मन्त्र संग्रह" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">देवी दुर्गा मन्त्र</div>
-            <div class="aarti-preview-badge">5 मन्त्र</div>
           </div>
         </div>
       </div>
@@ -2038,7 +2086,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <span style="font-size:1.35rem; filter:drop-shadow(0 0 8px #F59E0B);">🏹</span>
             <span>श्री सुन्दरकाण्ड दोहा संग्रह</span>
           </h2>
-          <button class="see-all-toggle-btn" onclick="showPage('page-sundarkand'); if(window.renderFullSundarkandPage) window.renderFullSundarkandPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें (60 दोहे • 10 सोपान) ❯</button>
+          <button class="see-all-toggle-btn" onclick="showPage('page-sundarkand'); if(window.renderFullSundarkandPage) window.renderFullSundarkandPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें ❯</button>
         </div>
 
         <!-- 10-Chapter / Sopan Point-wise Preview Grid matching Sanatan Panchang -->
@@ -2078,63 +2126,38 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <span style="font-size:1.35rem; filter:drop-shadow(0 0 8px #F59E0B);">📖</span>
             <span>श्रीमद्भगवद्गीता (१८ अध्याय)</span>
           </h2>
-          <button class="see-all-toggle-btn" onclick="showPage('page-gita'); if(window.renderFullGitaPage) window.renderFullGitaPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें (18 अध्याय • 700 श्लोक) ❯</button>
+          <button class="see-all-toggle-btn" onclick="showPage('page-gita'); if(window.renderFullGitaPage) window.renderFullGitaPage('all', '');" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:6px 14px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">सभी देखें ❯</button>
         </div>
 
-        <!-- 18-Chapter Chapter View Preview Grid matching bhagavadgita.com -->
+        <!-- 4-Chapter Chapter View Preview Grid matching bhagavadgita.com -->
         <div class="aarti-preview-grid" id="home-gita-chapters-grid">
-<div class="aarti-preview-card home-gita-card" data-chap="1" onclick="window.openGitaChapterModal(1)">
+          <div class="aarti-preview-card home-gita-card" data-chap="1" onclick="window.openGitaChapterModal(1)">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/gita_ch1_arjuna_vishada.jpg" onerror="this.src='assets/gallery/bal_krishna.jpg';" alt="अध्याय १: अर्जुनविषादयोग" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">अध्याय १: अर्जुनविषादयोग</div>
             <div class="aarti-preview-badge">४७ श्लोक</div>
-          </div><div class="aarti-preview-card home-gita-card" data-chap="2" onclick="window.openGitaChapterModal(2)">
+          </div>
+          <div class="aarti-preview-card home-gita-card" data-chap="2" onclick="window.openGitaChapterModal(2)">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/gita_ch2_sankhya_yoga.jpg" onerror="this.src='assets/gallery/bal_krishna.jpg';" alt="अध्याय २: सांख्ययोग" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">अध्याय २: सांख्ययोग</div>
             <div class="aarti-preview-badge">७२ श्लोक</div>
-          </div><div class="aarti-preview-card home-gita-card" data-chap="3" onclick="window.openGitaChapterModal(3)">
+          </div>
+          <div class="aarti-preview-card home-gita-card" data-chap="3" onclick="window.openGitaChapterModal(3)">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/gita_ch3_karma_yoga.jpg" onerror="this.src='assets/deity_krishna.jpg';" alt="अध्याय ३: कर्मयोग" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">अध्याय ३: कर्मयोग</div>
             <div class="aarti-preview-badge">४३ श्लोक</div>
-          </div><div class="aarti-preview-card home-gita-card" data-chap="4" onclick="window.openGitaChapterModal(4)">
+          </div>
+          <div class="aarti-preview-card home-gita-card" data-chap="4" onclick="window.openGitaChapterModal(4)">
             <div class="aarti-preview-img-wrap">
               <img src="assets/gallery/gita_ch4_jnana_karma_sanyasa.jpg" onerror="this.src='assets/gallery/bal_krishna.jpg';" alt="अध्याय ४: ज्ञानकर्मसंन्यासयोग" class="aarti-preview-img" />
             </div>
             <div class="aarti-preview-name">अध्याय ४: ज्ञानसंन्यासयोग</div>
             <div class="aarti-preview-badge">४२ श्लोक</div>
-          </div><div class="aarti-preview-card home-gita-card" data-chap="5" onclick="window.openGitaChapterModal(5)">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/gita_ch5_karma_sanyasa_yoga.jpg" onerror="this.src='assets/gallery/bal_krishna.jpg';" alt="अध्याय ५: कर्मसंन्यासयोग" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">अध्याय ५: कर्मसंन्यासयोग</div>
-            <div class="aarti-preview-badge">२९ श्लोक</div>
-          </div><div class="aarti-preview-card home-gita-card" data-chap="6" onclick="window.openGitaChapterModal(6)">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/gita_ch6_dhyana_yoga.jpg" onerror="this.src='assets/gallery/bal_krishna.jpg';" alt="अध्याय ६: ध्यानयोग" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">अध्याय ६: ध्यानयोग</div>
-            <div class="aarti-preview-badge">४७ श्लोक</div>
-          </div>
-          <!-- 7. Chapter 7 -->
-          <div class="aarti-preview-card home-gita-card" data-chap="7" onclick="window.openGitaChapterModal(7)">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/gita_ch7_jnana_vijnana_yoga.jpg" onerror="this.src='assets/gallery/bal_krishna.jpg';" alt="अध्याय ७: ज्ञानविज्ञानयोग" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">अध्याय ७: ज्ञानविज्ञानयोग</div>
-            <div class="aarti-preview-badge">३० श्लोक</div>
-          </div>
-          <!-- 8. Chapter 8 -->
-          <div class="aarti-preview-card home-gita-card" data-chap="8" onclick="window.openGitaChapterModal(8)">
-            <div class="aarti-preview-img-wrap">
-              <img src="assets/gallery/gita_ch8_akshara_brahma_yoga.jpg" onerror="this.src='assets/deity_krishna.jpg';" alt="अध्याय ८: अक्षरब्रह्मयोग" class="aarti-preview-img" />
-            </div>
-            <div class="aarti-preview-name">अध्याय ८: अक्षरब्रह्मयोग</div>
-            <div class="aarti-preview-badge">२८ श्लोक</div>
           </div>
         </div>
       </div>
@@ -2278,26 +2301,180 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
 
     
-      <!-- 🎮 EPIC GAMES HOME BANNER (महाकाव्य भक्ति गेम्स हब - ५ दिव्य खेल) 🎮 -->
-      <div class="home-epic-games-banner home-promo-banner-card" onclick="showPage('page-epic-games')" style="opacity:1; border:1.8px solid #F59E0B; background:linear-gradient(135deg, rgba(45, 16, 71, 0.96) 0%, rgba(26, 11, 46, 0.98) 100%); cursor:pointer; box-shadow:0 8px 25px rgba(245,158,11,0.3); border-radius:20px; padding:14px 16px; margin:14px 0;">
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-          <div style="display:flex; align-items:center; gap:14px;">
-            <div style="font-size:2.4rem; filter:drop-shadow(0 0 12px #F59E0B);">🎮</div>
-            <div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="color:#FFFDF8; font-size:1.15rem; font-weight:900;">एपिक गेम्स (Epic Games)</span>
-                <span style="background:rgba(245,158,11,0.25); border:1px solid #F59E0B; color:#FDE68A; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:10px;">५ दिव्य खेल</span>
-              </div>
-              <div style="color:#E9D5FF; font-size:0.8rem; margin-top:3px;">स्वाइप, फूल अर्पण, स्मृति मिलान, पहेली ❯</div>
+      <!-- 🎮 EPIC GAMES HOME BANNER (दिव्य भक्ति क्रीड़ा स्थल - ७ अनोखे भक्ति खेल) 🎮 -->
+      <div class="home-epic-games-banner home-promo-banner-card" onclick="triggerEpicGamesLaunchWithVideo('page-epic-games')">
+        <!-- Top Arcade Header Badge Row -->
+        <div class="home-epic-banner-top">
+          <div class="home-epic-banner-badge">
+            <span class="live-pulse-dot"></span>
+            <span>🔴 लाइव गेमिंग ज़ोन • ७ पावन खेल</span>
+          </div>
+          <div class="home-epic-banner-coins">
+            <span class="coin-bounce">🪙</span>
+            <span>1,000+ कॉइन्स • दैनिक रिवॉर्ड</span>
+          </div>
+        </div>
+
+        <!-- Hero Game Showcase Section -->
+        <div class="home-epic-banner-main">
+          <!-- 3D Mascot Avatar with Bal Ganesha Gaming Visual -->
+          <div class="home-epic-mascot-wrap">
+            <img src="assets/games/mascot_bal_ganesha.jpg" alt="Bal Ganesha Gaming Mascot" class="home-epic-mascot-img">
+            <span class="home-epic-mascot-badge">🎮 3D</span>
+          </div>
+          <div class="home-epic-banner-titles">
+            <div class="home-epic-banner-h">
+              <span class="home-epic-title-gradient">दिव्य भक्ति क्रीड़ा स्थल</span>
+            </div>
+            <div class="home-epic-banner-sub">Sanatan Epic Games • ७ अद्वितीय आध्यात्मिक खेल</div>
+            <div class="home-epic-banner-status">
+              <span class="status-star">⭐</span>
+              <span>सभी स्तर अनलॉक • १००% ऑफलाइन निःशुल्क</span>
             </div>
           </div>
-          <button style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-weight:900; font-size:0.85rem; padding:8px 18px; border-radius:16px; box-shadow:0 4px 15px rgba(248,200,59,0.4); cursor:pointer;">खेलें ❯</button>
+        </div>
+
+        <!-- 🕹️ Visual Interactive Mini-Game Showcase Rail (Shows REAL games inside!) -->
+        <div class="home-epic-games-rail-wrap">
+          <div class="home-epic-rail-header">
+            <span class="rail-header-title">🎮 उपलब्ध भक्ति खेल (चुनें व खेलें):</span>
+            <span class="rail-header-hint">स्लाइड करें ❯</span>
+          </div>
+          <div class="home-epic-games-rail" onclick="event.stopPropagation()">
+            <!-- Mini Card 1: Swipe Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openSwipeGame('cat_1_ramayana'); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/cards/ram.jpg" alt="Swipe" class="mini-card-thumb">
+                <span class="mini-card-tag tag-purple">🏹 स्वाइप</span>
+              </div>
+              <div class="mini-card-title">रामायण स्वाइप</div>
+              <div class="mini-card-sub">अयोध्या या लंका</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+
+            <!-- Mini Card 2: Jigsaw Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openJigsawGame(); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/deity_ganesh.jpg" alt="Jigsaw" class="mini-card-thumb">
+                <span class="mini-card-tag tag-cyan">🧩 जिग्सॉ</span>
+              </div>
+              <div class="mini-card-title">दिव्य जिग्सॉ</div>
+              <div class="mini-card-sub">५० पावन स्तर</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+
+            <!-- Mini Card 3: Card Match Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openMatchGame(); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/deity_krishna.jpg" alt="Match" class="mini-card-thumb">
+                <span class="mini-card-tag tag-orange">🎴 कार्ड मैच</span>
+              </div>
+              <div class="mini-card-title">स्मृति चक्र</div>
+              <div class="mini-card-sub">३० स्तर मेमोरी</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+
+            <!-- Mini Card 4: Phool Arpan Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openPhoolArpanGame(); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/games/cover_phool_arpan.jpg" alt="Arpan" class="mini-card-thumb">
+                <span class="mini-card-tag tag-amber">🌸 अर्पण</span>
+              </div>
+              <div class="mini-card-title">पुष्प अर्पण</div>
+              <div class="mini-card-sub">स्वर्ण थाली भेंट</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+
+            <!-- Mini Card 5: Aarti Puzzle Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openAartiGame(); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/aarti.jpg" alt="Aarti" class="mini-card-thumb">
+                <span class="mini-card-tag tag-gold">🪔 आरती पहेली</span>
+              </div>
+              <div class="mini-card-title">आरती पहेली</div>
+              <div class="mini-card-sub">पंक्तियाँ सजाएँ</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+
+            <!-- Mini Card 6: Mantra Puzzle Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openMantraGame(); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/deity_shiva.jpg" alt="Mantra" class="mini-card-thumb">
+                <span class="mini-card-tag tag-purple">🕉️ मन्त्र पहेली</span>
+              </div>
+              <div class="mini-card-title">मन्त्र पहेली</div>
+              <div class="mini-card-sub">वैदिक श्लोक</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+
+            <!-- Mini Card 7: PadaBandham Game -->
+            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openPadabandhamGame(); })">
+              <div class="mini-card-thumb-wrap">
+                <img src="assets/deity_hanuman.jpg" alt="Word" class="mini-card-thumb">
+                <span class="mini-card-tag tag-yellow">🔤 पदबन्धम</span>
+              </div>
+              <div class="mini-card-title">शब्द पहेली</div>
+              <div class="mini-card-sub">शास्त्र शब्द खोज</div>
+              <div class="mini-card-play-action">▶ खेलें</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner Footer Row -->
+        <div class="home-epic-banner-footer">
+          <div class="home-epic-features-text">
+            <span>⚡ १००% ऑफलाइन</span>
+            <span class="feature-dot">•</span>
+            <span>🛡️ बिना विज्ञापन</span>
+            <span class="feature-dot">•</span>
+            <span>🎁 दैनिक पुरस्कार</span>
+          </div>
+          <button class="home-epic-cta-btn" onclick="event.stopPropagation(); triggerEpicGamesLaunchWithVideo('page-epic-games');">
+            <span class="cta-sparkle">✨</span>
+            <span class="cta-text">खेलें (Play Arena)</span>
+            <span class="cta-arrow">❯</span>
+          </button>
         </div>
       </div>
-</section>
+<!-- ══════════ 🧩 DIVINE BHAKTI JIGSAW PUZZLE GAME MODULE ══════════ -->
+        <!-- ══════════ 🎮 EPIC GAMES HUB (Exact WhatsApp Video Style + All Games Unlocked) ══════════ -->
+    <!-- ══════════ 🎬 CINEMATIC EPIC GAMES INTRO VIDEO MODAL ══════════ -->
+    <div id="epic-games-video-modal" class="epic-games-video-modal" style="display:none;">
+      <div class="epic-video-overlay-backdrop"></div>
+      <div class="epic-video-shell">
+        <!-- Floating Cinematic Header -->
+        <div class="epic-video-topbar">
+          <div class="epic-video-brand">
+            <span class="epic-video-brand-icon">🎮</span>
+            <span class="epic-video-brand-text">दिव्य भक्ति क्रीड़ा स्थल</span>
+          </div>
+          <button type="button" class="epic-video-skip-pill" onclick="skipEpicGamesIntroVideo()" title="Skip Video">
+            <span>खेल शुरू करें (Skip)</span>
+            <span class="skip-arrow">❯❯</span>
+          </button>
+        </div>
 
-    <!-- ══════════ 🧩 DIVINE BHAKTI JIGSAW PUZZLE GAME MODULE ══════════ -->
-        <!-- ══════════ 🎮 EPIC GAMES HUB (Exact WhatsApp Video Style + All 4 Games Unlocked) ══════════ -->
+        <!-- Video Player Wrapper -->
+        <div class="epic-video-player-wrap">
+          <video id="epic-games-intro-video" 
+                 playsinline 
+                 webkit-playsinline 
+                 preload="auto"
+                 src="assets/games/epic_games_intro.mp4">
+          </video>
+          <div id="epic-video-loader" class="epic-video-loader" style="display:none;">
+            <div class="epic-loader-spin"></div>
+            <div class="epic-loader-text">शुभ आरंभ...</div>
+          </div>
+        </div>
+
+        <!-- Bottom Status Hint -->
+        <div class="epic-video-bottom-hint">
+          <span>✨ वीडियो समाप्त होते ही खेल प्रारंभ होगा</span>
+        </div>
+      </div>
+    </div>
+
     <section id="page-epic-games" class="page" style="display:none; padding-bottom:90px; background:#180A28; min-height:100vh; color:#FFFDF8;">
       <!-- Sticky Header -->
       <div class="epic-hub-header" style="background:rgba(26, 11, 46, 0.96); backdrop-filter:blur(14px); border-bottom:1.5px solid rgba(248, 200, 59, 0.35); padding:12px 16px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100;">
@@ -2315,17 +2492,17 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         </div>
       </div>
 
-      <!-- 2x2 Grid of 4 Games (All Unlocked & Playable) -->
-      <div class="epic-games-grid" style="padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:540px; margin:0 auto;">
+      <!-- 2x2 Grid of Devotional Games (All Unlocked & Playable - Perfectly Aligned) -->
+      <div class="epic-games-grid" style="padding:16px; display:grid; grid-template-columns:repeat(2, 1fr); gap:14px; max-width:540px; margin:0 auto;">
         <!-- 1. Swipe (WhatsApp Video Game!) -->
-        <div class="epic-game-menu-card" onclick="openSwipeGame('ayodhya_mithila')" style="cursor:pointer; border:1.8px solid #3B82F6; box-shadow:0 8px 24px rgba(59,130,246,0.2);">
+        <div class="epic-game-menu-card" onclick="openSwipeGame('cat_1_ramayana')" style="cursor:pointer; border:1.8px solid #F59E0B; box-shadow:0 8px 24px rgba(245,158,11,0.25);">
           <div class="epic-card-cover-wrap">
-            <span class="epic-card-tag epic-tag-story" style="background:#2563EB;">🏹 स्वाइप</span>
-            <img src="assets/games/cover_swipe.jpg" alt="Swipe" class="epic-card-cover-img" onerror="this.src='assets/games/char_sunaina.jpg';">
+            <span class="epic-card-tag epic-tag-story" style="background:linear-gradient(135deg, #7C3AED, #DC2626); color:#FFF; font-weight:900;">🏹 १०० पात्र स्वाइप</span>
+            <img src="assets/cards/ram.jpg" alt="Swipe" class="epic-card-cover-img" onerror="this.src='assets/games/cover_swipe.jpg';" style="object-fit:cover;">
           </div>
-          <div class="epic-card-title">रामायण स्वाइप (Swipe)</div>
-          <div class="epic-card-subtitle">अयोध्या व मिथिला के पात्र पहचानें</div>
-          <button class="epic-card-play-btn btn-blue" onclick="event.stopPropagation(); openSwipeGame('ayodhya_mithila');">🎮 खेलें (Play)</button>
+          <div class="epic-card-title">महाकाव्य स्वाइप (Swipe)</div>
+          <div class="epic-card-subtitle">अयोध्या, लंका व महाभारत • १०० दिव्य पात्र</div>
+          <button class="epic-card-play-btn btn-blue" style="background:linear-gradient(135deg, #7C3AED, #9333EA); color:#FFF; font-weight:900;" onclick="event.stopPropagation(); openSwipeGame('cat_1_ramayana');">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 2. Match (Memory Card Game - Bhakti Card Match 30 Levels) -->
@@ -2346,69 +2523,285 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <img src="assets/deity_ganesh.jpg" alt="JigSaw Puzzle" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
           <div class="epic-card-title">दिव्य पहेली (JigSaw)</div>
-          <div class="epic-card-subtitle">५० पावन स्तर • बॉस स्तर • दिव्य जिग्सॉ पहेली</div>
+          <div class="epic-card-subtitle">५० पावन स्तर • बॉस स्तर • दिव्य पहेली</div>
           <button class="epic-card-play-btn btn-cyan" onclick="event.stopPropagation(); openJigsawGame();">🎮 खेलें (Play)</button>
         </div>
 
-        <!-- 5. Phool Arpan (Flower & Prasad Offering Game) -->
-        <div class="epic-game-menu-card" onclick="openPhoolArpanGame()" style="cursor:pointer; grid-column:span 2; background:radial-gradient(circle at 50% 30%, rgba(245,158,11,0.2) 0%, rgba(30,10,50,0.95) 100%); border:1.8px solid #F59E0B; box-shadow:0 8px 24px rgba(245,158,11,0.25);">
-          <div class="epic-card-cover-wrap" style="height:120px; aspect-ratio:auto; background:linear-gradient(135deg, #FF9933 0%, #FFE680 60%, #FFF 100%); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
-            <span class="epic-card-tag" style="background:#D97706; color:#FFF; font-weight:900; position:absolute; top:8px; left:8px; z-index:2; padding:3px 10px; border-radius:8px; font-size:0.72rem;">🌸 Arpan</span>
-            <img src="assets/games/cover_phool_arpan.jpg" alt="Phool Arpan" class="epic-card-cover-img" style="object-fit:cover; opacity:0.95;">
-            <div style="position:absolute; bottom:6px; right:10px; font-size:1.6rem; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.4));">🌸🌺🥥</div>
+        <!-- 4. Phool Arpan (Flower & Prasad Offering Game) -->
+        <div class="epic-game-menu-card" onclick="openPhoolArpanGame()" style="cursor:pointer; border:1.8px solid #F59E0B; box-shadow:0 8px 24px rgba(245,158,11,0.25);">
+          <div class="epic-card-cover-wrap">
+            <span class="epic-card-tag" style="background:#D97706; color:#FFF; font-weight:900;">🌸 अर्पण</span>
+            <img src="assets/games/cover_phool_arpan.jpg" alt="Phool Arpan" class="epic-card-cover-img" onerror="this.src='assets/gallery/mandir_evening_aarti.jpg';" style="object-fit:cover;">
           </div>
-          <div style="padding:10px 4px 6px;">
-            <div class="epic-card-title" style="font-size:1.12rem; font-weight:900; color:#FFFDF8;">फूल अर्पण (Phool Arpan)</div>
-            <div class="epic-card-subtitle" style="font-size:0.78rem; color:#E9D5FF; margin:2px 0 8px;">स्वर्ण थाली में पावन पुष्प व प्रसाद संकलित करें</div>
-            <button class="epic-card-play-btn" style="width:100%; background:linear-gradient(135deg, #F59E0B 0%, #D97706 100%); color:#1A0B2E; font-weight:900; font-size:0.88rem; padding:9px 0; border-radius:14px; border:none; cursor:pointer; box-shadow:0 4px 15px rgba(245,158,11,0.4);" onclick="event.stopPropagation(); openPhoolArpanGame();">🎮 खेलें (Play Arpan)</button>
-          </div>
+          <div class="epic-card-title">फूल अर्पण (Arpan)</div>
+          <div class="epic-card-subtitle">स्वर्ण थाली में पावन पुष्प व प्रसाद संकलित करें</div>
+          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #F59E0B 0%, #D97706 100%); color:#1A0B2E; font-weight:900;" onclick="event.stopPropagation(); openPhoolArpanGame();">🎮 खेलें (Play)</button>
         </div>
 
-        <!-- 4. PadaBandham (Word Grid) -->
+        <!-- 5. PadaBandham (Word Grid) -->
         <div class="epic-game-menu-card" onclick="openPadabandhamGame()" style="cursor:pointer; border:1.8px solid #EAB308; box-shadow:0 8px 24px rgba(234,179,8,0.2);">
           <div class="epic-card-cover-wrap">
             <span class="epic-card-tag epic-tag-word" style="background:#CA8A04;">🔤 शब्द</span>
             <img src="assets/deity_hanuman.jpg" alt="PadaBandham" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
           <div class="epic-card-title">पदबन्धम (Word Grid)</div>
-          <div class="epic-card-subtitle">शास्त्रों के पावन शब्द खोजें</div>
+          <div class="epic-card-subtitle">शास्त्रों के पावन शब्द खोजें व मिलाएँ</div>
           <button class="epic-card-play-btn btn-gold" onclick="event.stopPropagation(); openPadabandhamGame();">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 6. Aarti Drag-and-Drop Puzzle (आरती पहेली) -->
-        <div class="epic-game-menu-card" onclick="openAartiMantraHub('aarti')" style="cursor:pointer; border:1.8px solid #F59E0B; box-shadow:0 8px 24px rgba(245,158,11,0.25);">
+        <div class="epic-game-menu-card" onclick="openAartiGame()" style="cursor:pointer; border:1.8px solid #F59E0B; box-shadow:0 8px 24px rgba(245,158,11,0.25);">
           <div class="epic-card-cover-wrap">
             <span class="epic-card-tag" style="background:#D97706; color:#FFF; font-weight:900;">🪔 आरती पहेली</span>
             <img src="assets/deity_ganesh.jpg" alt="Aarti Puzzle" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
           <div class="epic-card-title">आरती पहेली (Aarti Game)</div>
           <div class="epic-card-subtitle">पंक्तियाँ सही क्रम में सजाएँ • दिव्य आरती</div>
-          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #FF9933 0%, #D97706 100%); color:#FFF;" onclick="event.stopPropagation(); openAartiMantraHub('aarti');">🎮 खेलें (Play)</button>
+          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #FF9933 0%, #D97706 100%); color:#FFF;" onclick="event.stopPropagation(); openAartiGame();">🎮 खेलें (Play)</button>
         </div>
 
         <!-- 7. Mantra Drag-and-Drop Puzzle (मंत्र पहेली) -->
-        <div class="epic-game-menu-card" onclick="openAartiMantraHub('mantra')" style="cursor:pointer; border:1.8px solid #8B5CF6; box-shadow:0 8px 24px rgba(139,92,246,0.25);">
+        <div class="epic-game-menu-card" onclick="openMantraGame()" style="cursor:pointer; border:1.8px solid #8B5CF6; box-shadow:0 8px 24px rgba(139,92,246,0.25);">
           <div class="epic-card-cover-wrap">
             <span class="epic-card-tag" style="background:#7C3AED; color:#FFF; font-weight:900;">🕉️ मन्त्र पहेली</span>
             <img src="assets/deity_shiva.jpg" alt="Mantra Puzzle" class="epic-card-cover-img" style="object-fit:cover;">
           </div>
           <div class="epic-card-title">मन्त्र पहेली (Mantra Game)</div>
           <div class="epic-card-subtitle">वैदिक पद सही क्रम में रखें • पावन मन्त्र</div>
-          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); color:#FFF;" onclick="event.stopPropagation(); openAartiMantraHub('mantra');">🎮 खेलें (Play)</button>
+          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); color:#FFF;" onclick="event.stopPropagation(); openMantraGame();">🎮 खेलें (Play)</button>
+        </div>
+
+        <!-- 8. Daily Bhakti Challenge / Bonus Game -->
+        <div class="epic-game-menu-card" onclick="openDailyGameChallenge()" style="cursor:pointer; border:1.8px solid #EC4899; box-shadow:0 8px 24px rgba(236,72,153,0.25);">
+          <div class="epic-card-cover-wrap">
+            <span class="epic-card-tag" style="background:#DB2777; color:#FFF; font-weight:900;">🎁 दैनिक बोनस</span>
+            <img src="assets/gallery/mandir_evening_aarti.jpg" alt="Daily Challenge" class="epic-card-cover-img" onerror="this.src='assets/deity_ganesh.jpg';" style="object-fit:cover;">
+          </div>
+          <div class="epic-card-title">दैनिक चुनौती (Bonus)</div>
+          <div class="epic-card-subtitle">आज का विशेष पावन खेल खेलें • +२०० सिक्के</div>
+          <button class="epic-card-play-btn" style="background:linear-gradient(135deg, #EC4899, #BE185D); color:#FFF;" onclick="event.stopPropagation(); openDailyGameChallenge();">🎁 खेलें (Bonus)</button>
         </div>
       </div>
     </section>
+
+    <!-- ══════════ 🏹 SWIPE GAME LAUNCHER SCREEN (Exact Match to Image 1) ══════════ -->
+    <div id="swipe-launcher-screen" class="swipe-launcher-screen" style="display:none;">
+      <!-- Vedic Temple Background -->
+      <img src="assets/games/swipe_launcher_bg.jpg" class="swipe-launcher-bg-img" alt="Temple Background" onerror="this.src='assets/games/bg_vedic_temple.jpg';">
+      <div class="swipe-launcher-overlay"></div>
+
+      <!-- Content Container -->
+      <div class="swipe-launcher-content">
+        <!-- Top Bar -->
+        <div class="swipe-launch-topbar">
+          <button class="swipe-launch-back-btn" onclick="closeSwipeLauncher()" title="Back">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          
+          <div class="swipe-launch-coins-badge">
+            <span class="launch-coin-icon">🪙</span>
+            <span class="launch-coin-amount epic-coins-val">1K</span>
+          </div>
+        </div>
+
+        <!-- Main Title "Swipe" -->
+        <div class="swipe-launch-title-wrap">
+          <h1 class="swipe-launch-title">Swipe</h1>
+        </div>
+
+        <!-- Language Selection Section -->
+        <div class="swipe-launch-section swipe-launch-lang-section">
+          <!-- Ribbon Banner -->
+          <div class="swipe-launch-ribbon">
+            <div class="ribbon-tail-left"></div>
+            <div class="ribbon-body">
+              <span id="swipe-launch-lang-ribbon-text">Choose Game Language</span>
+            </div>
+            <div class="ribbon-tail-right"></div>
+            <div class="ribbon-gem-bottom">
+              <img src="assets/games/gem_blue.svg" alt="Gem" class="ribbon-gem-icon">
+            </div>
+          </div>
+
+          <!-- Language Cards Grid -->
+          <div class="swipe-lang-cards-grid">
+            <!-- Telugu Card -->
+            <div class="swipe-lang-card" data-lang="te" onclick="selectSwipeLanguage('te')">
+              <div class="lang-wing-wrap wing-left">
+                <img src="assets/games/wing_gold_left.svg" alt="Wing" class="lang-wing-img">
+              </div>
+              <div class="lang-card-inner">
+                <div class="lang-gem-top"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+                <div class="lang-gem-bottom"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+                <div class="lang-gem-left"><img src="assets/games/gem_green.svg" class="gem-micro"></div>
+                <div class="lang-gem-right"><img src="assets/games/gem_green.svg" class="gem-micro"></div>
+                <span class="lang-card-text font-telugu">తెలుగు</span>
+              </div>
+              <div class="lang-wing-wrap wing-right">
+                <img src="assets/games/wing_gold_right.svg" alt="Wing" class="lang-wing-img">
+              </div>
+            </div>
+
+            <!-- Hindi Card -->
+            <div class="swipe-lang-card" data-lang="hi" onclick="selectSwipeLanguage('hi')">
+              <div class="lang-wing-wrap wing-left">
+                <img src="assets/games/wing_gold_left.svg" alt="Wing" class="lang-wing-img">
+              </div>
+              <div class="lang-card-inner">
+                <div class="lang-gem-top"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+                <div class="lang-gem-bottom"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+                <div class="lang-gem-left"><img src="assets/games/gem_green.svg" class="gem-micro"></div>
+                <div class="lang-gem-right"><img src="assets/games/gem_green.svg" class="gem-micro"></div>
+                <span class="lang-card-text font-hindi">हिन्दी</span>
+              </div>
+              <div class="lang-wing-wrap wing-right">
+                <img src="assets/games/wing_gold_right.svg" alt="Wing" class="lang-wing-img">
+              </div>
+            </div>
+
+            <!-- English Card -->
+            <div class="swipe-lang-card active" data-lang="en" onclick="selectSwipeLanguage('en')">
+              <div class="lang-wing-wrap wing-left">
+                <img src="assets/games/wing_gold_left.svg" alt="Wing" class="lang-wing-img">
+              </div>
+              <div class="lang-card-inner">
+                <div class="lang-gem-top"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+                <div class="lang-gem-bottom"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+                <div class="lang-gem-left"><img src="assets/games/gem_green.svg" class="gem-micro"></div>
+                <div class="lang-gem-right"><img src="assets/games/gem_green.svg" class="gem-micro"></div>
+                <span class="lang-card-text font-english">English</span>
+              </div>
+              <div class="lang-wing-wrap wing-right">
+                <img src="assets/games/wing_gold_right.svg" alt="Wing" class="lang-wing-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Header -->
+        <div class="swipe-launch-cat-header">
+          <div class="cat-header-gem"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+          <h2 class="swipe-launch-cat-title" id="swipe-launch-cat-header-text">Choose Category</h2>
+          <div class="cat-header-gem"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+        </div>
+
+        <!-- 3D Category Carousel / Slider Stage -->
+        <div class="swipe-cat-carousel-stage" id="swipe-cat-carousel-stage">
+          <!-- Navigation Arrow Left -->
+          <button class="swipe-carousel-arrow arrow-left" onclick="prevSwipeCategory()" aria-label="Previous Category">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <!-- Cards Track -->
+          <div class="swipe-cat-carousel-track" id="swipe-cat-carousel-track">
+            <!-- Card 1: Ayodhya vs Mithila -->
+            <div class="swipe-cat-slide-card active" id="cat-card-1" onclick="selectSwipeCategory('cat_1_ramayana')">
+              <div class="cat-card-frame">
+                <!-- Gemstones -->
+                <div class="cat-gem-crown"><img src="assets/games/gem_blue.svg" class="gem-card"></div>
+                <div class="cat-gem-side left"><img src="assets/games/gem_green.svg" class="gem-card"></div>
+                <div class="cat-gem-side right"><img src="assets/games/gem_green.svg" class="gem-card"></div>
+
+                <!-- Split Image Art -->
+                <div class="cat-card-art-wrap">
+                  <img src="assets/games/cat_split_ayodhya.jpg" alt="Ayodhya vs Mithila" class="cat-card-split-img" onerror="this.src='assets/games/portal_ayodhya.jpg';">
+                  <div class="cat-card-divider-line"></div>
+                </div>
+
+                <!-- Bottom Banner Ribbon (Left vs Right) -->
+                <div class="cat-card-bottom-ribbon">
+                  <span class="cat-side-name" id="vs-cat-1-left">Ayodhya</span>
+                  <div class="cat-vs-badge">
+                    <span class="vs-text">VS</span>
+                  </div>
+                  <span class="cat-side-name" id="vs-cat-1-right">Mithila</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Lanka War (Rama vs Ravana) -->
+            <div class="swipe-cat-slide-card peek-right" id="cat-card-2" onclick="selectSwipeCategory('cat_2_lanka_war')">
+              <div class="cat-card-frame">
+                <div class="cat-gem-crown"><img src="assets/games/gem_blue.svg" class="gem-card"></div>
+                <div class="cat-gem-side left"><img src="assets/games/gem_green.svg" class="gem-card"></div>
+                <div class="cat-gem-side right"><img src="assets/games/gem_green.svg" class="gem-card"></div>
+
+                <div class="cat-card-art-wrap">
+                  <img src="assets/games/cat_split_lanka.jpg" alt="Rama vs Ravana" class="cat-card-split-img" onerror="this.src='assets/games/portal_ayodhya.jpg';">
+                  <div class="cat-card-divider-line"></div>
+                </div>
+
+                <div class="cat-card-bottom-ribbon">
+                  <span class="cat-side-name" id="vs-cat-2-left">Rama Army</span>
+                  <div class="cat-vs-badge">
+                    <span class="vs-text">VS</span>
+                  </div>
+                  <span class="cat-side-name" id="vs-cat-2-right">Ravana Army</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Mahabharata (Pandavas vs Kauravas) -->
+            <div class="swipe-cat-slide-card peek-right" id="cat-card-3" onclick="selectSwipeCategory('cat_3_mahabharat')">
+              <div class="cat-card-frame">
+                <div class="cat-gem-crown"><img src="assets/games/gem_blue.svg" class="gem-card"></div>
+                <div class="cat-gem-side left"><img src="assets/games/gem_green.svg" class="gem-card"></div>
+                <div class="cat-gem-side right"><img src="assets/games/gem_green.svg" class="gem-card"></div>
+
+                <div class="cat-card-art-wrap">
+                  <img src="assets/games/cat_split_mahabharata.jpg" alt="Pandavas vs Kauravas" class="cat-card-split-img" onerror="this.src='assets/games/portal_ayodhya.jpg';">
+                  <div class="cat-card-divider-line"></div>
+                </div>
+
+                <div class="cat-card-bottom-ribbon">
+                  <span class="cat-side-name" id="vs-cat-3-left">Pandavas</span>
+                  <div class="cat-vs-badge">
+                    <span class="vs-text">VS</span>
+                  </div>
+                  <span class="cat-side-name" id="vs-cat-3-right">Kauravas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrow Right -->
+          <button class="swipe-carousel-arrow arrow-right" onclick="nextSwipeCategory()" aria-label="Next Category">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <!-- Big Royal-Blue Play Button with Golden Wings -->
+        <div class="swipe-launch-play-container">
+          <div class="swipe-play-wing play-wing-left">
+            <img src="assets/games/wing_gold_left.svg" alt="Golden Wing" class="play-wing-img">
+          </div>
+
+          <button class="swipe-launch-play-btn" onclick="startSwipeGameFromLauncher()">
+            <!-- Top & Bottom Gold Filigree Jewels -->
+            <div class="play-btn-crown-top"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+            <div class="play-btn-crown-bottom"><img src="assets/games/gem_blue.svg" class="gem-micro"></div>
+            
+            <span class="play-triangle-icon">▶</span>
+            <span class="play-text" id="swipe-launch-play-btn-text">Play</span>
+          </button>
+
+          <div class="swipe-play-wing play-wing-right">
+            <img src="assets/games/wing_gold_right.svg" alt="Golden Wing" class="play-wing-img">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ══════════ 🏹 SWIPE GAME ARENA (The Exact Video Screen) ══════════ -->
     <div id="swipe-arena" class="swipe-game-arena">
       <!-- Top Bar -->
       <div class="swipe-top-bar">
-        <button class="swipe-close-btn" onclick="closeSwipeGame()">✕</button>
-        <div class="swipe-cat-dropdown" onclick="newSwipeGame()">
-          <span id="swipe-cat-title">श्रेणियाँ</span> <span>∨</span>
+        <button class="swipe-close-btn" onclick="openSwipeLauncher()">✕</button>
+        <div class="swipe-cat-dropdown" onclick="openSwipeLauncher()">
+          <span id="swipe-cat-title">अयोध्या या मिथिला</span> <span>▼</span>
         </div>
         <div class="swipe-header-actions">
-          <button class="swipe-lang-btn">A <span style="font-size:0.75rem;">अ</span></button>
+          <button class="swipe-lang-btn" onclick="openSwipeLauncher()">A <span style="font-size:0.75rem;">अ</span></button>
           <button class="swipe-settings-btn">⚙️</button>
         </div>
       </div>
@@ -2428,29 +2821,26 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
 
       <!-- Quick Desktop Swipe Buttons (Accessibility) -->
-      <div style="display:flex; gap:16px; margin-bottom:4px; z-index:10;">
-        <button onclick="swipeCardManual('left')" style="background:rgba(124,58,237,0.88); color:#FFF; border:1.5px solid #F59E0B; border-radius:14px; padding:6px 14px; font-weight:900; font-size:0.8rem; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.3);">⟵ बाएँ (अयोध्या)</button>
-        <button onclick="swipeCardManual('right')" style="background:rgba(220,38,38,0.88); color:#FFF; border:1.5px solid #F59E0B; border-radius:14px; padding:6px 14px; font-weight:900; font-size:0.8rem; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.3);">दाएँ (मिथिला) ⟶</button>
-      </div>
+      
 
-      <!-- Two Bottom Shrines/Portals -->
+      <!-- Two Bottom Shrines/Portals (Left Sun Portal & Right Demon Portal) -->
       <div class="swipe-portals-container">
-        <!-- Left Portal (Ayodhya) -->
+        <!-- Left Portal (Sun Portal - Image 4) -->
         <div class="swipe-portal-shrine" id="swipe-portal-left" onclick="swipeCardManual('left')">
           <div class="swipe-portal-img-wrap">
-            <img src="assets/games/portal_ayodhya.jpg" alt="अयोध्या" class="swipe-portal-bg">
+            <img src="assets/games/portal_left_sun.png" alt="द्वार" class="swipe-portal-bg" id="swipe-gate-left" onerror="this.src='assets/games/portal_ayodhya.jpg';">
             <div class="swipe-portal-score-badge score-ayodhya" id="swipe-left-score">0</div>
+            <div class="swipe-portal-label" id="swipe-left-portal-label">अयोध्या</div>
           </div>
-          <div class="swipe-portal-label" id="swipe-left-portal-label">अयोध्या</div>
         </div>
 
-        <!-- Right Portal (Mithila) -->
+        <!-- Right Portal (Demon Portal - Image 3) -->
         <div class="swipe-portal-shrine" id="swipe-portal-right" onclick="swipeCardManual('right')">
           <div class="swipe-portal-img-wrap">
-            <img src="assets/games/portal_mithila.jpg" alt="मिथिला" class="swipe-portal-bg">
+            <img src="assets/games/portal_right_demon.png" alt="द्वार" class="swipe-portal-bg" id="swipe-gate-right" onerror="this.src='assets/games/portal_mithila.jpg';">
             <div class="swipe-portal-score-badge score-mithila" id="swipe-right-score">0</div>
+            <div class="swipe-portal-label" id="swipe-right-portal-label">मिथिला</div>
           </div>
-          <div class="swipe-portal-label" id="swipe-right-portal-label">मिथिला</div>
         </div>
       </div>
     </div>
@@ -2465,7 +2855,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <span>श्रेणियाँ</span> <span>∨</span>
         </div>
         <div class="swipe-header-actions">
-          <button class="swipe-lang-btn">A <span style="font-size:0.75rem;">अ</span></button>
+          <button class="swipe-lang-btn" onclick="openSwipeLauncher()">A <span style="font-size:0.75rem;">अ</span></button>
           <button class="swipe-settings-btn">⚙️</button>
         </div>
       </div>
@@ -2493,28 +2883,212 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
     <!-- ══════════ 🏆 SWIPE RESULT / TRY AGAIN MODAL (frame_84s.jpg) ══════════ -->
     <div id="swipe-result-modal" class="swipe-result-modal-overlay">
       <div class="swipe-result-box">
-        <div class="swipe-result-ribbon" id="swipe-result-ribbon-text">शानदार विजय!</div>
-        <div class="swipe-result-stats" id="swipe-result-score-text">आपने पूरे किए 10/12 पात्र</div>
-        <div class="swipe-result-score-chip">
-          <span>🔄</span>
-          <span id="swipe-result-streak-count">10</span>
+        <!-- Image 2 Ornate Winged Frame Base -->
+        <img src="assets/games/modal_result_frame.png" alt="Result Frame Base" class="swipe-result-frame-img">
+
+        <!-- Top Red Ribbon Dynamic Header -->
+        <div class="swipe-result-ribbon-wrapper">
+          <div class="swipe-result-ribbon-dynamic" id="swipe-result-ribbon-text">बधाई हो!</div>
         </div>
-        <div class="swipe-result-heading" id="swipe-result-heading">बढ़िया प्रयास!</div>
-        <div class="swipe-result-message" id="swipe-result-message">कुछ पात्रों को एक और कोशिश चाहिए</div>
-        
-        <div class="swipe-result-btns-row">
-          <button class="btn-learn-lore" onclick="showCharacterReviewScreen(); hideSwipeResultModal();">📖 जानें</button>
-          <button class="btn-retry-round" onclick="retrySwipeRound()">🔄 फिर से</button>
+
+        <!-- Center Parchment Content Area -->
+        <div class="swipe-result-parchment-content">
+          <!-- Big Coin / Star Icon Badge -->
+          <div class="swipe-result-star-coin-badge">
+            <span class="star-coin-icon">🪙</span>
+            <div class="star-coin-label">अर्जित सिक्के</div>
+            <div class="star-coin-val" id="swipe-result-coins-earned">+500</div>
+          </div>
+
+          <!-- Victory / Result Heading -->
+          <div class="swipe-result-heading" id="swipe-result-heading">अद्भुत ज्ञान!</div>
+
+          <!-- Score Summary Line -->
+          <div class="swipe-result-score-text" id="swipe-result-score-text">आपने पूरे किए 10/12 पात्र</div>
+
+          <!-- Stat Cards Row (Image 1 Style) -->
+          <div class="swipe-result-stats-row">
+            <div class="result-stat-chip">
+              <span class="stat-chip-icon">⏱️</span>
+              <div class="stat-chip-meta">
+                <span class="stat-chip-label">समय</span>
+                <span class="stat-chip-val" id="swipe-result-time-val">00:38</span>
+              </div>
+            </div>
+            <div class="result-stat-chip">
+              <span class="stat-chip-icon">🪙</span>
+              <div class="stat-chip-meta">
+                <span class="stat-chip-label">स्कोर</span>
+                <span class="stat-chip-val" id="swipe-result-streak-count">10</span>
+              </div>
+            </div>
+            <div class="result-stat-chip">
+              <span class="stat-chip-icon">🎴</span>
+              <div class="stat-chip-meta">
+                <span class="stat-chip-label">पात्र</span>
+                <span class="stat-chip-val" id="swipe-result-total-val">10/12</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motivational Message -->
+          <div class="swipe-result-message" id="swipe-result-message">आपने सभी पात्रों को उनके सही पक्ष में पहुँचाया।</div>
         </div>
-        <button class="swipe-result-new-game-btn" onclick="newSwipeGame()">▶ नया खेल</button>
-        <a class="swipe-result-home-link" onclick="hideSwipeResultModal(); closeSwipeGame(); showPage('page-epic-games');">होम पर वापस</a>
+
+        <!-- Bottom Built-in Pill Buttons (Fitted on Image 2's blue & gold button slots) -->
+        <div class="swipe-result-pill-actions">
+          <!-- Left Blue Pill Button: New Game -->
+          <button class="result-pill-btn pill-btn-blue" onclick="newSwipeGame()" title="New Game">
+            <span class="pill-btn-icon">▶</span>
+            <span class="pill-btn-text" id="swipe-res-btn-new">नया खेल</span>
+          </button>
+
+          <!-- Right Gold Pill Button: Learn Lore / Review -->
+          <button class="result-pill-btn pill-btn-gold" onclick="showCharacterReviewScreen(); hideSwipeResultModal();" title="Learn Lore">
+            <span class="pill-btn-icon">📖</span>
+            <span class="pill-btn-text" id="swipe-res-btn-lore">जानें</span>
+          </button>
+        </div>
+
+        <!-- Footer Actions: Retry & Back to Home -->
+        <div class="swipe-result-footer-row">
+          <button class="swipe-result-retry-btn" onclick="retrySwipeRound()">
+            <span>🔄</span> <span id="swipe-res-btn-retry">दोबारा</span>
+          </button>
+          <a class="swipe-result-home-link" onclick="hideSwipeResultModal(); closeSwipeGame(); showPage('page-epic-games');">होम पर वापस जाएँ</a>
+        </div>
       </div>
     </div>
 
-    <!-- ══════════ 🎴 1. BHAKTI CARD MATCH (30 LEVELS) ══════════ -->
+    <!-- ══════════ 🏹 SWIPE CATEGORY SELECTOR MODAL ══════════ -->
+    <div id="swipe-category-modal" class="epic-game-modal-overlay" style="display:none; z-index:35000; background:rgba(18, 5, 30, 0.92); backdrop-filter:blur(10px); position:fixed; inset:0; align-items:center; justify-content:center; padding:16px;">
+      <div style="background:radial-gradient(circle at top, #2D0B40 0%, #150522 100%); border:2px solid #F59E0B; border-radius:24px; padding:20px; max-width:420px; width:100%; box-shadow:0 20px 50px rgba(0,0,0,0.6); color:#FFF;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+          <h3 style="margin:0; font-size:1.15rem; font-weight:900; color:#FDE68A; display:flex; align-items:center; gap:8px;">
+            <span>🏹</span> स्वाइप श्रेणी चुनें
+          </h3>
+          <button onclick="closeSwipeCategoryModal()" style="background:rgba(255,255,255,0.1); border:1px solid rgba(245,158,11,0.4); border-radius:50%; width:32px; height:32px; color:#FFF; font-weight:900; cursor:pointer;">✕</button>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <!-- Category 1 -->
+          <div onclick="selectSwipeCategory('cat_1_ramayana')" style="background:rgba(107,33,168,0.25); border:1.8px solid #6B21A8; border-radius:16px; padding:12px 14px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:transform 0.15s ease;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:#6B21A8; display:flex; align-items:center; justify-content:center; font-size:1.4rem; border:1.5px solid #F59E0B;">🏛️</div>
+              <div>
+                <div style="font-weight:900; font-size:0.98rem; color:#FFF;">अयोध्या या मिथिला</div>
+                <div style="font-size:0.78rem; color:#E9D5FF;">रामायण आरंभ • ४० दिव्य पात्र</div>
+              </div>
+            </div>
+            <span style="font-size:1.2rem; color:#FDE68A;">➔</span>
+          </div>
+
+          <!-- Category 2 -->
+          <div onclick="selectSwipeCategory('cat_2_lanka_war')" style="background:rgba(234,88,12,0.25); border:1.8px solid #EA580C; border-radius:16px; padding:12px 14px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:transform 0.15s ease;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:#EA580C; display:flex; align-items:center; justify-content:center; font-size:1.4rem; border:1.5px solid #F59E0B;">⚔️</div>
+              <div>
+                <div style="font-weight:900; font-size:0.98rem; color:#FFF;">राम सेना या रावण सेना</div>
+                <div style="font-size:0.78rem; color:#FED7AA;">लंका युद्ध • ३५ महाबली पात्र</div>
+              </div>
+            </div>
+            <span style="font-size:1.2rem; color:#FDE68A;">➔</span>
+          </div>
+
+          <!-- Category 3 -->
+          <div onclick="selectSwipeCategory('cat_3_mahabharat')" style="background:rgba(21,128,61,0.25); border:1.8px solid #15803D; border-radius:16px; padding:12px 14px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:transform 0.15s ease;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:#15803D; display:flex; align-items:center; justify-content:center; font-size:1.4rem; border:1.5px solid #F59E0B;">🛡️</div>
+              <div>
+                <div style="font-weight:900; font-size:0.98rem; color:#FFF;">पाण्डव या कौरव</div>
+                <div style="font-size:0.78rem; color:#BBF7D0;">कुरुक्षेत्र महाभारत • २५ महारथी</div>
+              </div>
+            </div>
+            <span style="font-size:1.2rem; color:#FDE68A;">➔</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══════════ 🎴 1. BHAKTI CARD MATCH - HOME & LEVEL SELECTION SCREEN ══════════ -->
+    <div id="match-level-hub-modal" class="epic-game-modal-overlay">
+      <!-- Fixed Sticky Header with Safe-Area Notch Padding -->
+      <div class="match-hub-header">
+        <div class="match-hub-header-left">
+          <button class="match-hub-back-btn" onclick="closeMatchLevelHub()" title="वापस जाएँ">←</button>
+          <div class="match-hub-title-block">
+            <h2 class="match-hub-title">
+              <span class="match-hub-icon">🎴</span>
+              <span>भक्ति कार्ड मिलान</span>
+            </h2>
+            <div class="match-hub-subtitle">३० पावन स्तर • १६ पावन भक्ति प्रतीक</div>
+          </div>
+        </div>
+        <div class="match-hub-header-right">
+          <div class="match-hub-star-pill">
+            <span class="star-icon">⭐</span>
+            <span id="match-hub-total-stars">0</span><span class="total-stars-max">/90</span>
+          </div>
+          <button class="match-hub-close-btn" onclick="closeMatchLevelHub()" title="बंद करें">✕</button>
+        </div>
+      </div>
+
+      <!-- Dedicated Smooth Momentum-Scrolling Body -->
+      <div class="match-hub-scroll-body" id="match-hub-scroll-body">
+        <!-- 16 Sacred Symbols Showcase Strip -->
+        <div class="match-symbols-showcase">
+          <div class="symbols-strip-header">
+            <div class="strip-header-title">
+              <span>✨</span>
+              <span>१६ पावन भक्ति प्रतीक (16 Sacred Symbols)</span>
+            </div>
+            <span class="strip-header-hint">स्लाइड करें ❯</span>
+          </div>
+          <div class="match-symbols-scroll" id="match-symbols-scroll-tray">
+            <div id="match-symbols-strip" class="match-symbols-strip">
+              <!-- Rendered dynamically by engine -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Resume / Progress Hero Banner -->
+        <div class="match-progress-hero">
+          <div class="progress-hero-info">
+            <div class="progress-hero-h">🎯 स्तर चयन करें</div>
+            <div class="progress-hero-sub">जोड़ी मिलाकर सभी ३० स्तर जीतें व सिक्के पाएँ</div>
+          </div>
+          <button class="progress-hero-btn" onclick="startMatchGameAtLevel(currentMatchLevel || 1)">
+            <span>▶</span>
+            <span>जारी रखें</span>
+          </button>
+        </div>
+
+        <!-- Tier Tabs Indicator (Level 1-10, 11-20, 21-30) -->
+        <div class="match-tier-pills-row">
+          <span class="tier-pill-chip active">🌱 प्रारंभिक (१-१०)</span>
+          <span class="tier-pill-chip">⚔️ महारथी (११-२०)</span>
+          <span class="tier-pill-chip">🔱 दिव्य (२१-३०)</span>
+        </div>
+
+        <!-- 30 Levels Grid -->
+        <div class="match-level-grid-wrap">
+          <div id="match-level-hub-grid" class="match-level-grid">
+            <!-- 30 Levels rendered dynamically with ZERO text truncation -->
+          </div>
+        </div>
+
+        <!-- Extra safe bottom spacer so Level 30 is fully reachable on all phones -->
+        <div class="match-hub-bottom-spacer"></div>
+      </div>
+    </div>
+
+    <!-- ══════════ 🎴 1. BHAKTI CARD MATCH GAMEPLAY ARENA ══════════ -->
     <div id="match-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:radial-gradient(circle at top, #240a34 0%, #0c0214 100%); color:#ffffff; position:fixed; inset:0; align-items:center; justify-content:flex-start; padding-top:10px; overflow-y:auto; overflow-x:hidden;">
+        <!-- Back Button to return to Level Selection -->
+        <button onclick="closeMatchLevelArena()" class="match-arena-back-btn" title="स्तर सूची पर वापस जाएँ" style="position:absolute; top:12px; left:12px; background:rgba(255,255,255,0.18); border:1.5px solid rgba(255,215,0,0.6); border-radius:50%; width:36px; height:36px; font-size:1.25rem; font-weight:900; color:#ffd700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.4);">←</button>
         <!-- Close Button to return to Epic Games Hub -->
-        <button onclick="closeMatchGame()" style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,215,0,0.4); border-radius:50%; width:34px; height:34px; font-size:1.15rem; font-weight:900; color:#ffd700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:100;">✕</button>
+        <button onclick="closeMatchGame()" title="खेल बंद करें" style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,215,0,0.4); border-radius:50%; width:34px; height:34px; font-size:1.15rem; font-weight:900; color:#ffd700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:100;">✕</button>
 
         <!-- Top Bar with Level, Pairs, Moves, Stars -->
         <div class="match-top-bar">
@@ -2529,6 +3103,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         <!-- Controls Bar -->
         <div class="match-controls-bar">
             <button class="match-btn" onclick="prevMatchLevel()">◀ पिछला</button>
+            <button class="match-btn" onclick="returnToMatchLevelHub()">☰ स्तर सूची</button>
             <button class="match-btn" onclick="restartMatchLevel()">🔄 पुनः मिलाएँ</button>
             <button class="match-btn" onclick="nextMatchLevel()">अगला ▶</button>
         </div>
@@ -2553,7 +3128,10 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
             <div id="match-stars-awarded" style="font-size: 32px; margin: 12px 0;">⭐⭐⭐⭐⭐</div>
             <p id="match-win-moves-text" style="color: #eee; margin-bottom: 12px; font-size: 15px;"></p>
             <p id="match-coins-earned-text" style="color: #ffd700; font-weight: bold; margin-bottom: 20px;">+100 सिक्के मिले! 🪙</p>
-            <button class="match-btn" style="padding: 12px 28px; font-size: 16px;" onclick="nextMatchLevel()">अगला स्तर ➔</button>
+            <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+              <button class="match-btn" style="padding: 12px 24px; font-size: 15px; background:rgba(255,255,255,0.15);" onclick="returnToMatchLevelHub()">स्तर सूची ☰</button>
+              <button class="match-btn" style="padding: 12px 28px; font-size: 16px; background:linear-gradient(135deg, #F59E0B, #D97706); color:#1A0B2E;" onclick="nextMatchLevel()">अगला स्तर ➔</button>
+            </div>
         </div>
     </div>
 
@@ -2603,27 +3181,6 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         </div>
     </div>
 
-    <!-- ══════════ 📖 3. PADABANDHAM WORD GRID MODAL ══════════ -->
-    <div id="padabandham-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); position:fixed; inset:0; align-items:center; justify-content:center; padding:12px; overflow-y:auto;">
-      <div style="background:radial-gradient(circle at 50% 20%, #2A0E44 0%, #130522 100%); border:2px solid #EAB308; border-radius:24px; width:100%; max-width:400px; padding:18px 16px; position:relative; box-shadow:0 15px 50px rgba(0,0,0,0.85); color:#FFFDF8; text-align:center;">
-        <button onclick="closePadabandhamGame()" style="position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.1); border:1px solid rgba(234,179,8,0.3); border-radius:50%; width:32px; height:32px; font-size:1.1rem; font-weight:900; color:#FDE68A; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
-        <div style="font-size:1.25rem; font-weight:900; color:#FFFDF8; margin-bottom:4px; display:flex; align-items:center; justify-content:center; gap:6px;">
-          <span>🔤</span> पदबन्धम (वैदिक शब्द संधान)
-        </div>
-        <div style="font-size:0.8rem; color:#FDE68A; margin-bottom:12px;">
-          पावन मंत्र व देव नामों के अक्षर खोजकर स्पर्श करें
-        </div>
-        <div id="padabandham-word-targets" style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
-          <!-- Word Badges -->
-        </div>
-        <div id="padabandham-grid" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; max-width:280px; margin:0 auto 14px;">
-          <!-- 4x4 Grid Letters -->
-        </div>
-        <div id="padabandham-status" style="font-size:0.85rem; font-weight:800; color:#4ADE80; min-height:22px; margin-bottom:12px;"></div>
-        <button onclick="initPadabandhamGame()" style="width:100%; background:linear-gradient(135deg, #EAB308, #CA8A04); color:#1A0B2E; border:none; padding:10px 0; border-radius:14px; font-weight:900; cursor:pointer;">🔄 नए शब्द (New Puzzle)</button>
-      </div>
-    </div>
-
     <!-- ══════════ 🌸 4. PHOOL ARPAN GAME ARENA (फूल अर्पण खेल) ══════════ -->
     <div id="phool-arpan-arena" class="phool-arpan-arena">
       <div class="arpan-wrapper" id="arpan-container">
@@ -2643,9 +3200,10 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           <div class="arpan-hud">
             <div class="arpan-score-pill">
               <span>🌸</span>
-              <span id="arpan-score">Prasad: 0</span>
+              <span id="arpan-score">अर्पण: 0</span>
             </div>
-            <div class="arpan-lives-pill" id="arpan-lives">Lives: ❤️❤️❤️</div>
+            <div class="arpan-speed-pill" id="arpan-speed">गति: 1.0x</div>
+            <div class="arpan-lives-pill" id="arpan-lives">❤️❤️❤️</div>
           </div>
         </div>
 
@@ -2677,190 +3235,7 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </div>
     </div>
 
-    <!-- ══════════ 🪔 AARTI & MANTRA PUZZLE GAME MODULE (आरती व मन्त्र पहेली) ══════════ -->
-
-    <!-- Particle Flower Shower Canvas -->
-    <canvas id="amp-flower-canvas"></canvas>
-
-    <!-- Selection Screen (Screen 1: आरती सूची & Screen 2: मन्त्र सूची) -->
-    <div id="aarti-mantra-selection-modal" class="amp-selection-modal">
-      <!-- Top Header -->
-      <div class="amp-selection-header">
-        <div class="amp-header-left">
-          <button class="amp-back-btn" onclick="closeAartiMantraHub()" title="वापस जाएँ">←</button>
-          <h2 class="amp-header-title" id="amp-selection-title">🪔 आरती संग्रह</h2>
-        </div>
-        <div class="amp-header-right">
-          <div class="amp-streak-pill">
-            <span>🔥</span>
-            <span>स्ट्रीक: <strong id="amp-streak-count">1</strong></span>
-          </div>
-          <button class="amp-back-btn" onclick="closeAartiMantraHub()" style="width:32px; height:32px; font-size:1rem;">✕</button>
-        </div>
-      </div>
-
-      <!-- Navigation Tabs (आरती सूची | मन्त्र सूची) -->
-      <div class="amp-nav-tabs">
-        <button id="amp-tab-aarti" class="amp-tab-btn active" onclick="switchAartiMantraTab('aarti')">
-          <span>🪔</span> आरती सूची (Aarti)
-        </button>
-        <button id="amp-tab-mantra" class="amp-tab-btn" onclick="switchAartiMantraTab('mantra')">
-          <span>🕉️</span> मन्त्र सूची (Mantra)
-        </button>
-      </div>
-
-      <!-- Search Bar -->
-      <div class="amp-search-wrap">
-        <div class="amp-search-box">
-          <span style="font-size:1rem; opacity:0.7;">🔍</span>
-          <input type="text" id="amp-search-input" oninput="handleAartiMantraSearch(this.value)" placeholder="आरती या मन्त्र खोजें (उदा. गणेश, शिव, गायत्री, हनुमान...)" />
-          <button onclick="document.getElementById('amp-search-input').value=''; handleAartiMantraSearch('');" style="background:none; border:none; color:#94A3B8; font-size:1rem; cursor:pointer;">✕</button>
-        </div>
-      </div>
-
-      <!-- Category Filter Pills / Chips -->
-      <div class="amp-categories-bar" id="amp-categories-bar">
-        <!-- Rendered dynamically -->
-      </div>
-
-      <!-- Scrollable Rounded White Cards List -->
-      <div class="amp-items-container" id="amp-items-container">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-
-    <!-- Universal Drag-and-Drop Gameplay Screen (Screen 3) -->
-    <div id="aarti-mantra-game-arena" class="amp-game-arena">
-      <!-- Top AppBar -->
-      <div class="amp-game-appbar">
-        <div class="amp-game-left">
-          <button class="amp-preview-btn" onclick="showAartiPreviewDialog()" title="मूल पंक्तियाँ 5 सेकंड देखें">
-            <span>👁️</span> <span>देखें</span>
-          </button>
-        </div>
-        <div class="amp-game-center">
-          <h2 class="amp-game-title" id="amp-game-curr-title">जय गणेश जी</h2>
-          <div class="amp-game-subtitle" id="amp-game-curr-sub">गणेश • स्तर 1</div>
-        </div>
-        <div class="amp-game-right">
-          <button id="amp-font-scale-btn" class="amp-font-scale-btn" onclick="toggleAartiFontScale()" title="फ़ॉन्ट आकार बदलें">
-            16px
-          </button>
-          <div class="amp-timer-box" id="amp-game-timer">03:00</div>
-          <button class="amp-close-game-btn" onclick="closeAartiMantraGame()" title="खेल से बाहर निकलें">✕</button>
-        </div>
-      </div>
-
-      <!-- Instructions & Hint Bar -->
-      <div class="amp-subbar">
-        <div class="amp-instruction-text">
-          <span>👆</span> <span>लाइन / पद को पकड़ें और सही क्रम में रखें।</span>
-        </div>
-        <button id="amp-hint-btn" class="amp-hint-btn" onclick="useAartiHint()" title="सही पंक्ति को अपनी जगह पर लगाएँ">
-          💡 हिंट ( 3 )
-        </button>
-      </div>
-
-      <!-- Reorderable Drag Area -->
-      <div class="amp-drag-area" id="amp-drag-area">
-        <!-- Shuffled lines rendered dynamically with drag handles and nudge buttons -->
-      </div>
-
-      <!-- Bottom Action Bar -->
-      <div class="amp-bottom-toolbar">
-        <button class="amp-reshuffle-btn" onclick="reshuffleCurrentAartiLines()" title="पंक्तियाँ पुनः मिलाएँ">
-          <span>🔀</span> पुनः क्रमबद्ध
-        </button>
-        <button class="amp-submit-btn" onclick="checkAartiOrder(true)">
-          <span>✓</span> जाँचें / Submit
-        </button>
-      </div>
-    </div>
-
-    <!-- 5-Second Preview Dialog ("देखें") -->
-    <div id="amp-preview-modal" class="amp-modal-backdrop">
-      <div class="amp-preview-card">
-        <div class="amp-preview-header">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span>👁️</span>
-            <h3 class="amp-preview-title" id="amp-preview-title">जय गणेश जी</h3>
-          </div>
-          <span class="amp-preview-timer-pill" id="amp-preview-timer-pill">समय शेष: 5s</span>
-        </div>
-        <div class="amp-preview-body" id="amp-preview-body">
-          <!-- Full correct lines -->
-        </div>
-        <button onclick="closeAartiPreviewDialog()" style="margin-top:14px; width:100%; background:#F1F5F9; border:1px solid #CBD5E1; color:#475569; padding:9px 0; border-radius:12px; font-weight:800; cursor:pointer;">
-          बंद करें (Close)
-        </button>
-      </div>
-    </div>
-
-    <!-- Win Celebration Dialog (Spinning Aarti Thali, Glowing Diya, Stars, Audio Recitation) -->
-    <div id="amp-win-dialog" class="amp-modal-backdrop">
-      <div class="amp-celebration-card">
-        <div class="amp-petals-banner">🌸 🌺 🌼 🌺 🌸</div>
-
-        <!-- Center Glowing Diya and Spinning Aarti Thali -->
-        <div class="amp-thali-container">
-          <div class="amp-spinning-thali"></div>
-          <div class="amp-glowing-diya">🪔</div>
-        </div>
-
-        <h2 class="amp-celebration-title" id="amp-win-heading">अति सुंदर! आरती पूर्ण हुई 🎉</h2>
-        <div class="amp-celebration-subtitle" id="amp-win-sub">आपने बिल्कुल सही क्रम में सजाया है।</div>
-
-        <!-- Earned Stars -->
-        <div class="amp-celebration-stars" id="amp-win-stars">
-          <span class="amp-star-item">★</span>
-          <span class="amp-star-item">★</span>
-          <span class="amp-star-item">★</span>
-        </div>
-
-        <!-- Stats Pill -->
-        <div class="amp-win-stats-pill" id="amp-win-stats">
-          <span>⏱️ समय: 45s</span>
-          <span>•</span>
-          <span>🪙 +100 सिक्के</span>
-        </div>
-
-        <!-- Full devotional text -->
-        <div class="amp-holy-lyrics-box" id="amp-win-lyrics">
-          <!-- Lines -->
-        </div>
-
-        <!-- Audio Recitation Play Button -->
-        <button id="amp-listen-btn" class="amp-listen-btn" onclick="toggleAartiSpeechRecitation()">
-          <span>🔊</span> <span>पाठ सुनें (Listen)</span>
-        </button>
-
-        <!-- Next Level Button -->
-        <button class="amp-next-level-btn" onclick="goToNextAartiLevel()">
-          अगला स्तर खेलें (Next Level) ➔
-        </button>
-      </div>
-    </div>
-
-    <!-- Game Over / Time Up Dialog -->
-    <div id="amp-gameover-dialog" class="amp-modal-backdrop">
-      <div class="amp-gameover-card">
-        <div style="font-size:3rem; margin-bottom:8px;">⏳</div>
-        <h2 style="margin:0 0 6px; font-size:1.35rem; font-weight:900; color:#DC2626;">समय समाप्त!</h2>
-        <p style="margin:0 0 16px; font-size:0.88rem; color:#475569; font-weight:600;">आपका 3 मिनट का समय पूरा हो गया है। पुनः प्रयास करें।</p>
-        <button class="amp-retry-btn" onclick="retryCurrentAartiMantraGame()">
-          🔄 फिर से खेलें (Retry)
-        </button>
-        <button onclick="closeAartiMantraGame()" style="margin-top:10px; width:100%; background:none; border:none; color:#64748B; font-weight:700; cursor:pointer; padding:6px;">
-          सूची पर वापस जाएँ
-        </button>
-      </div>
-    </div>
-
-
-
-
-
-<section id="page-aarti" class="page">
+    <section id="page-aarti" class="page">
       <div class="page-header-bar" style="position:sticky; top:0; z-index:10; background:rgba(26,11,46,0.95); backdrop-filter:blur(10px); border-bottom:1.5px solid rgba(248,200,59,0.3); padding:0.8rem 1.2rem; display:flex; align-items:center; justify-content:space-between;">
         <div style="display:flex; align-items:center; gap:10px;">
           <button class="back-btn" data-back="page-home" onclick="showPage('page-home')" style="font-size:1.2rem; cursor:pointer; background:none; border:none; color:#FDE68A;">←</button>
@@ -14152,6 +14527,12 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         <button class="gal-tab-pill" data-tab="divya" onclick="switchGalleryTab('divya')">
           🕉️ दिव्य रूप (60)
         </button>
+        <button class="gal-tab-pill" data-tab="gita" onclick="switchGalleryTab('gita')">
+          📖 भगवद्गीता (18)
+        </button>
+        <button class="gal-tab-pill" data-tab="mahakavya" onclick="switchGalleryTab('mahakavya')">
+          🏹 महाकाव्य पात्र (100)
+        </button>
         <button class="gal-tab-pill" data-tab="india" onclick="switchGalleryTab('india')">
           🇮🇳 भारत के प्रमुख मंदिर (69)
         </button>
@@ -19744,7 +20125,63 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
         if (e && typeof e.preventDefault === 'function') e.preventDefault();
         if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
 
-        // Level 1: Epic Game Arenas and Modals
+        // Level 1: Game Arenas, Dialogs, and Modals
+        // 1. Aarti & Mantra Puzzle Game Arena & Dialogs
+        var ampWin = document.getElementById('amp-win-dialog');
+        if (ampWin && (ampWin.style.display === 'flex' || ampWin.style.display === 'block')) {
+          ampWin.style.display = 'none';
+          if (typeof window.closeAartiMantraGame === 'function') window.closeAartiMantraGame();
+          return true;
+        }
+        var ampGov = document.getElementById('amp-gameover-dialog');
+        if (ampGov && (ampGov.style.display === 'flex' || ampGov.style.display === 'block')) {
+          ampGov.style.display = 'none';
+          if (typeof window.closeAartiMantraGame === 'function') window.closeAartiMantraGame();
+          return true;
+        }
+        var ampPrev = document.getElementById('amp-preview-modal');
+        if (ampPrev && (ampPrev.style.display === 'flex' || ampPrev.style.display === 'block')) {
+          if (typeof window.closeAartiPreviewDialog === 'function') window.closeAartiPreviewDialog();
+          return true;
+        }
+        var ampArena = document.getElementById('aarti-mantra-game-arena');
+        if (ampArena && (ampArena.style.display === 'flex' || ampArena.classList.contains('active'))) {
+          if (typeof window.closeAartiMantraGame === 'function') window.closeAartiMantraGame();
+          return true;
+        }
+        var ampSel = document.getElementById('aarti-mantra-selection-modal');
+        if (ampSel && (ampSel.style.display === 'flex' || ampSel.classList.contains('active'))) {
+          if (typeof window.closeAartiMantraHub === 'function') window.closeAartiMantraHub();
+          return true;
+        }
+
+        // 2. Card Match Game Arena & Level Hub Modal
+        var matchWin = document.getElementById('matchWinModal');
+        if (matchWin && (matchWin.style.display === 'flex' || matchWin.style.display === 'block')) {
+          matchWin.style.display = 'none';
+          if (typeof window.closeMatchLevelArena === 'function') {
+            window.closeMatchLevelArena();
+          } else if (typeof window.closeMatchGame === 'function') {
+            window.closeMatchGame();
+          }
+          return true;
+        }
+        var matchModal = document.getElementById('match-game-modal');
+        if (matchModal && (matchModal.style.display === 'flex' || matchModal.classList.contains('active') || matchModal.classList.contains('is-open'))) {
+          if (typeof window.closeMatchLevelArena === 'function') {
+            window.closeMatchLevelArena();
+          } else if (typeof window.closeMatchGame === 'function') {
+            window.closeMatchGame();
+          }
+          return true;
+        }
+        var matchHub = document.getElementById('match-level-hub-modal');
+        if (matchHub && (matchHub.style.display === 'flex' || matchHub.classList.contains('active'))) {
+          if (typeof window.closeMatchLevelHub === 'function') window.closeMatchLevelHub();
+          return true;
+        }
+
+        // 3. Other Epic Game Arenas
         if (document.getElementById('swipe-review-arena') && document.getElementById('swipe-review-arena').style.display === 'flex') {
           if (typeof window.closeSwipeReview === 'function') window.closeSwipeReview();
           return true;
@@ -19757,12 +20194,14 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           if (typeof window.hideSwipeResultModal === 'function') window.hideSwipeResultModal();
           return true;
         }
-        if (document.getElementById('match-game-modal') && document.getElementById('match-game-modal').style.display === 'flex') {
-          if (typeof window.closeMatchGame === 'function') window.closeMatchGame();
-          return true;
-        }
         if (document.getElementById('jigsaw-game-modal') && document.getElementById('jigsaw-game-modal').style.display === 'flex') {
           if (typeof window.closeJigsawGame === 'function') window.closeJigsawGame();
+          return true;
+        }
+        var padaWin = document.getElementById('pada-level-win-dialog');
+        if (padaWin && (padaWin.style.display === 'flex' || padaWin.style.display === 'block')) {
+          padaWin.style.display = 'none';
+          if (typeof window.closePadabandhamGame === 'function') window.closePadabandhamGame();
           return true;
         }
         if (document.getElementById('padabandham-game-modal') && document.getElementById('padabandham-game-modal').style.display === 'flex') {
@@ -19910,20 +20349,32 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       function handleHardwareBackSafely(e) {
         if (e && typeof e.preventDefault === 'function') e.preventDefault();
 
-        // If not on home page: ALWAYS step back internally!
-        if (window.currentPage && window.currentPage !== 'page-home') {
-          window.goStepBack(e);
-          // Re-push a history trap barrier so the WebView activity cannot close
+        // 1. ALWAYS try step-by-step back first! (Closes game arenas, level select, modals, dialogs)
+        const handled = window.goStepBack(e);
+        if (handled) {
           try {
-            history.pushState({ page: window.currentPage }, '', '#' + window.currentPage);
+            history.pushState({ page: window.currentPage || 'page-home' }, '', '#' + (window.currentPage || 'page-home'));
           } catch(err) {}
           return;
         }
 
-        // If we ARE on page-home: double-press back to exit gracefully
+        // 2. If nothing was closed and we are NOT on root page-home: go back to home!
+        if (window.currentPage && window.currentPage !== 'page-home') {
+          window._isNavigatingBack = true;
+          try {
+            window.showPage('page-home');
+          } finally {
+            window._isNavigatingBack = false;
+          }
+          try {
+            history.pushState({ page: 'page-home' }, '', '#page-home');
+          } catch(err) {}
+          return;
+        }
+
+        // 3. Only if on bare root page-home with ZERO modals/games open: double-press back to exit gracefully
         const now = Date.now();
         if (now - lastBackPressTime < 2200) {
-          // Double press within 2.2s -> Allow app close
           if (navigator.app && navigator.app.exitApp) {
             navigator.app.exitApp();
           } else if (navigator.device && navigator.device.exitApp) {
@@ -19931,7 +20382,6 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
           }
         } else {
           lastBackPressTime = now;
-          // Re-push state so first press doesn't close app
           try {
             history.pushState({ page: 'page-home' }, '', '#page-home');
           } catch(err) {}
@@ -20115,6 +20565,311 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
       </button>
     </div>
   </div>
+
+
+
+    <!-- ══════════ 📖 3. PADABANDHAM WORD GRID MODAL (वैदिक शब्द संधान) ══════════ -->
+    <div id="padabandham-game-modal" class="epic-game-modal-overlay" style="display:none; z-index:100250 !important; background:rgba(12,4,24,0.96); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); position:fixed; inset:0; flex-direction:column; align-items:center; justify-content:flex-start; padding:max(16px, env(safe-area-inset-top)) 12px calc(90px + env(safe-area-inset-bottom)); overflow-y:auto; -webkit-overflow-scrolling:touch; overscroll-behavior-y:contain; touch-action:pan-y; box-sizing:border-box;">
+      <div class="pada-card">
+        <!-- Close Button -->
+        <button class="pada-close-btn" onclick="closePadabandhamGame()" title="बंद करें">✕</button>
+
+        <!-- Top Title -->
+        <div class="pada-title-row">
+          <span class="pada-title-icon">🔤</span>
+          <span class="pada-title-text">पदबन्धम (वैदिक शब्द संधान)</span>
+        </div>
+        <div class="pada-subtitle">पावन मंत्र व देव नामों के अक्षर खोजकर स्पर्श करें</div>
+
+        <!-- Level Selector & Status Bar -->
+        <div class="pada-hud-bar">
+          <button class="pada-nav-btn" onclick="prevPadabandhamLevel()" title="पिछला स्तर">◀</button>
+          <div class="pada-level-chip" id="pada-level-name">स्तर १: देव दर्शन</div>
+          <button class="pada-nav-btn" onclick="nextPadabandhamLevel()" title="अगला स्तर">▶</button>
+          <div class="pada-timer-chip" id="pada-timer">⏱️ 00:00</div>
+          <div class="pada-score-chip" id="pada-score-counter">🌸 0/6</div>
+        </div>
+
+        <!-- Target Word Badges Tray -->
+        <div class="pada-targets-container" id="padabandham-word-targets">
+          <!-- Word Badges injected by engine -->
+        </div>
+
+        <!-- Live Selection Preview & Action Bar -->
+        <div class="pada-preview-bar">
+          <div class="pada-preview-text" id="padabandham-status">अक्षरों को क्रम में स्पर्श करें...</div>
+          <div class="pada-preview-actions">
+            <button class="pada-backspace-btn" onclick="backspacePadabandham()" title="अंतिम अक्षर हटाएं">⌫</button>
+            <button class="pada-clear-btn" onclick="clearPadabandhamSelection()" title="साफ करें">✕</button>
+          </div>
+        </div>
+
+        <!-- 4x4 Grid -->
+        <div class="pada-grid-wrap">
+          <div id="padabandham-grid" class="pada-grid">
+            <!-- 4x4 Grid Letters -->
+          </div>
+        </div>
+
+        <!-- Bottom Action Row: Hint & Reset -->
+        <div class="pada-actions-row">
+          <button class="pada-btn-hint" onclick="usePadabandhamHint()">
+            <span>💡</span> <span id="pada-hint-text">संकेत (Hint: 3)</span>
+          </button>
+          <button class="pada-btn-reset" onclick="initPadabandhamGame()">
+            <span>🔄</span> <span>पुनः खेलें (Reset)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Victory Celebration Dialog for Level Completion -->
+      <div id="pada-level-win-dialog" class="pada-win-dialog" style="display:none;">
+        <div class="pada-win-card">
+          <div class="pada-win-thali-wrap">
+            <div class="amp-thali-container" style="transform:scale(0.85); margin:0 auto;">
+              <div class="amp-thali-outer-ring"></div>
+              <div class="amp-thali-middle-plate"></div>
+              <div class="amp-thali-ornament">
+                <span class="thali-flower tf-1">🌸</span>
+                <span class="thali-flower tf-2">✨</span>
+                <span class="thali-flower tf-3">🌺</span>
+                <span class="thali-flower tf-4">✨</span>
+                <span class="thali-flower tf-5">🌸</span>
+                <span class="thali-flower tf-6">✨</span>
+                <span class="thali-flower tf-7">🌺</span>
+                <span class="thali-flower tf-8">✨</span>
+              </div>
+              <div class="amp-divine-diya-wrap">
+                <div class="amp-diya-aura"></div>
+                <div class="amp-diya-flame-wrap">
+                  <div class="amp-flame-outer"></div>
+                  <div class="amp-flame-inner"></div>
+                  <div class="amp-flame-core"></div>
+                </div>
+                <div class="amp-brass-diya">
+                  <span class="amp-diya-symbol">ॐ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="pada-win-title">अति सुंदर! स्तर पूर्ण हुआ 🕉️</h2>
+          <div class="pada-win-sub" id="pada-win-message">आपने सभी पावन नाम सफलतापूर्वक खोज लिए हैं!</div>
+          <div class="pada-win-stars">
+            <span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="pada-win-reward">
+            <span>🪙 +150 सिक्के अर्जित</span>
+          </div>
+          <div class="pada-win-btns">
+            <button class="pada-win-btn-next" onclick="nextPadabandhamLevel()">अगला स्तर खेलें (Next Level) ➔</button>
+            <button class="pada-win-btn-replay" onclick="replayCurrentPadabandhamLevel()">🔄 यह स्तर दोबारा खेलें</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ 🪔 AARTI & MANTRA PUZZLE GAME MODULE (आरती व मन्त्र पहेली) ══════════ -->
+
+    <!-- Particle Flower Shower Canvas -->
+    <canvas id="amp-flower-canvas"></canvas>
+
+    <!-- Selection Screen (Screen 1: आरती सूची & Screen 2: मन्त्र सूची) -->
+    <div id="aarti-mantra-selection-modal" class="amp-selection-modal" style="z-index:100240 !important;">
+      <!-- Top Header -->
+      <div class="amp-selection-header">
+        <div class="amp-header-left">
+          <button class="amp-back-btn" onclick="closeAartiMantraHub()" title="वापस जाएँ">←</button>
+          <h2 class="amp-header-title" id="amp-selection-title">🪔 आरती संग्रह</h2>
+        </div>
+        <div class="amp-header-right">
+          <div class="amp-streak-pill">
+            <span>🔥</span>
+            <span>स्ट्रीक: <strong id="amp-streak-count">1</strong></span>
+          </div>
+          <button class="amp-back-btn" onclick="closeAartiMantraHub()" style="width:32px; height:32px; font-size:1rem;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs (आरती सूची | मन्त्र सूची) -->
+      <div class="amp-nav-tabs">
+        <button id="amp-tab-aarti" class="amp-tab-btn active" onclick="switchAartiMantraTab('aarti')">
+          <span>🪔</span> आरती सूची (Aarti)
+        </button>
+        <button id="amp-tab-mantra" class="amp-tab-btn" onclick="switchAartiMantraTab('mantra')">
+          <span>🕉️</span> मन्त्र सूची (Mantra)
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="amp-search-wrap">
+        <div class="amp-search-box">
+          <span style="font-size:1rem; opacity:0.7;">🔍</span>
+          <input type="text" id="amp-search-input" oninput="handleAartiMantraSearch(this.value)" placeholder="आरती या मन्त्र खोजें (उदा. गणेश, शिव, गायत्री, हनुमान...)" />
+          <button onclick="document.getElementById('amp-search-input').value=''; handleAartiMantraSearch('');" style="background:none; border:none; color:#94A3B8; font-size:1rem; cursor:pointer;">✕</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills / Chips -->
+      <div class="amp-categories-bar" id="amp-categories-bar">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Scrollable Rounded White Cards List -->
+      <div class="amp-items-container" id="amp-items-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Universal Drag-and-Drop Gameplay Screen (Screen 3) -->
+    <div id="aarti-mantra-game-arena" class="amp-game-arena" style="z-index:100250 !important;">
+      <!-- Top AppBar -->
+      <div class="amp-game-appbar">
+        <div class="amp-game-left">
+          <button class="amp-arena-back-btn" onclick="closeAartiMantraGame()" title="वापस जाएँ">←</button>
+          <button class="amp-preview-btn" onclick="showAartiPreviewDialog()" title="मूल पंक्तियाँ 5 सेकंड देखें">
+            <span>👁️</span> <span>देखें</span>
+          </button>
+        </div>
+        <div class="amp-game-center">
+          <h2 class="amp-game-title" id="amp-game-curr-title">जय गणेश जी</h2>
+          <div class="amp-game-subtitle" id="amp-game-curr-sub">गणेश • स्तर 1</div>
+        </div>
+        <div class="amp-game-right">
+          <button id="amp-font-scale-btn" class="amp-font-scale-btn" onclick="toggleAartiFontScale()" title="फ़ॉन्ट आकार बदलें">
+            16px
+          </button>
+          <div class="amp-timer-box" id="amp-game-timer">03:00</div>
+          <button class="amp-close-game-btn" onclick="closeAartiMantraGame()" title="खेल से बाहर निकलें">✕</button>
+        </div>
+      </div>
+
+      <!-- Instructions & Hint Bar -->
+      <div class="amp-subbar">
+        <div class="amp-instruction-text">
+          <span>👆</span> <span>लाइन / पद को पकड़ें और सही क्रम में रखें।</span>
+        </div>
+        <button id="amp-hint-btn" class="amp-hint-btn" onclick="useAartiHint()" title="सही पंक्ति को अपनी जगह पर लगाएँ">
+          💡 हिंट ( 3 )
+        </button>
+      </div>
+
+      <!-- Reorderable Drag Area -->
+      <div class="amp-drag-area" id="amp-drag-area">
+        <!-- Shuffled lines rendered dynamically with drag handles and nudge buttons -->
+      </div>
+
+      <!-- Bottom Action Bar -->
+      <div class="amp-bottom-toolbar">
+        <button class="amp-reshuffle-btn" onclick="reshuffleCurrentAartiLines()" title="पंक्तियाँ पुनः मिलाएँ">
+          <span>🔀</span> पुनः क्रमबद्ध
+        </button>
+        <button class="amp-submit-btn" onclick="checkAartiOrder(true)">
+          <span>✓</span> जाँचें / Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- 5-Second Preview Dialog ("देखें") -->
+    <div id="amp-preview-modal" class="amp-modal-backdrop">
+      <div class="amp-preview-card">
+        <div class="amp-preview-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span>👁️</span>
+            <h3 class="amp-preview-title" id="amp-preview-title">जय गणेश जी</h3>
+          </div>
+          <span class="amp-preview-timer-pill" id="amp-preview-timer-pill">समय शेष: 5s</span>
+        </div>
+        <div class="amp-preview-body" id="amp-preview-body">
+          <!-- Full correct lines -->
+        </div>
+        <button onclick="closeAartiPreviewDialog()" style="margin-top:14px; width:100%; background:#F1F5F9; border:1px solid #CBD5E1; color:#475569; padding:9px 0; border-radius:12px; font-weight:800; cursor:pointer;">
+          बंद करें (Close)
+        </button>
+      </div>
+    </div>
+
+    <!-- Win Celebration Dialog (Spinning Aarti Thali, Glowing Diya, Stars, Audio Recitation) -->
+    <div id="amp-win-dialog" class="amp-modal-backdrop" style="z-index:100260 !important;">
+      <div class="amp-celebration-card">
+        <div class="amp-petals-banner">🌸 🌺 🌼 🌺 🌸</div>
+
+        <!-- Center Divine Temple Aarti Thali & Akhand Jyoti (पावन स्वर्ण थाल व अखंड दीप) -->
+        <div class="amp-thali-container">
+          <div class="amp-thali-outer-ring"></div>
+          <div class="amp-thali-middle-plate"></div>
+          <div class="amp-thali-ornament">
+            <span class="thali-flower tf-1">🌸</span>
+            <span class="thali-flower tf-2">✨</span>
+            <span class="thali-flower tf-3">🌺</span>
+            <span class="thali-flower tf-4">✨</span>
+            <span class="thali-flower tf-5">🌸</span>
+            <span class="thali-flower tf-6">✨</span>
+            <span class="thali-flower tf-7">🌺</span>
+            <span class="thali-flower tf-8">✨</span>
+          </div>
+          <!-- Divine Brass Deep with Realistic Flickering Akhand Flame -->
+          <div class="amp-divine-diya-wrap">
+            <div class="amp-diya-aura"></div>
+            <div class="amp-diya-flame-wrap">
+              <div class="amp-flame-outer"></div>
+              <div class="amp-flame-inner"></div>
+              <div class="amp-flame-core"></div>
+            </div>
+            <!-- Sacred Brass Diya Bowl -->
+            <div class="amp-brass-diya">
+              <span class="amp-diya-symbol">ॐ</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="amp-celebration-title" id="amp-win-heading">अति सुंदर! आरती पूर्ण हुई 🎉</h2>
+        <div class="amp-celebration-subtitle" id="amp-win-sub">आपने बिल्कुल सही क्रम में सजाया है।</div>
+
+        <!-- Earned Stars -->
+        <div class="amp-celebration-stars" id="amp-win-stars">
+          <span class="amp-star-item">★</span>
+          <span class="amp-star-item">★</span>
+          <span class="amp-star-item">★</span>
+        </div>
+
+        <!-- Stats Pill -->
+        <div class="amp-win-stats-pill" id="amp-win-stats">
+          <span>⏱️ समय: 45s</span>
+          <span>•</span>
+          <span>🪙 +100 सिक्के</span>
+        </div>
+
+        <!-- Full devotional text -->
+        <div class="amp-holy-lyrics-box" id="amp-win-lyrics">
+          <!-- Lines -->
+        </div>
+
+        <!-- Audio Recitation Play Button -->
+        <button id="amp-listen-btn" class="amp-listen-btn" onclick="toggleAartiSpeechRecitation()">
+          <span>🔊</span> <span>पाठ सुनें (Listen)</span>
+        </button>
+
+        <!-- Next Level Button -->
+        <button class="amp-next-level-btn" onclick="goToNextAartiLevel()">
+          अगला स्तर खेलें (Next Level) ➔
+        </button>
+      </div>
+    </div>
+
+    <!-- Game Over / Time Up Dialog -->
+    <div id="amp-gameover-dialog" class="amp-modal-backdrop">
+      <div class="amp-gameover-card">
+        <div style="font-size:3rem; margin-bottom:8px;">⏳</div>
+        <h2 style="margin:0 0 6px; font-size:1.35rem; font-weight:900; color:#DC2626;">समय समाप्त!</h2>
+        <p style="margin:0 0 16px; font-size:0.88rem; color:#475569; font-weight:600;">आपका 3 मिनट का समय पूरा हो गया है। पुनः प्रयास करें।</p>
+        <button class="amp-retry-btn" onclick="retryCurrentAartiMantraGame()">
+          🔄 फिर से खेलें (Retry)
+        </button>
+        <button onclick="closeAartiMantraGame()" style="margin-top:10px; width:100%; background:none; border:none; color:#64748B; font-weight:700; cursor:pointer; padding:6px;">
+          सूची पर वापस जाएँ
+        </button>
+      </div>
+    </div>
 
 </body>
 </html>

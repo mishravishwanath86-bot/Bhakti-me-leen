@@ -446,12 +446,15 @@
     }
   }
 
-  // ── Bottom Nav & Fullscreen Handling ──
+  // ── Bottom Nav, Header & Fullscreen Handling ──
   function hideNavs() {
+    document.body.classList.add('game-modal-open');
     var nav = document.getElementById('curved-fluid-bottom-nav');
     if (nav) nav.classList.add('nav-hidden');
     var allNavs = document.querySelectorAll('.curved-fluid-bottom-nav, .app-bottom-nav, .bottom-nav');
     allNavs.forEach(function (el) { el.classList.add('nav-hidden'); });
+    var appHeader = document.querySelector('.app-header');
+    if (appHeader) appHeader.style.setProperty('display', 'none', 'important');
   }
 
   function restoreNavsIfExited() {
@@ -461,6 +464,10 @@
     var isGameOpen = gameArena && gameArena.style.display === 'flex';
 
     if (isSelOpen || isGameOpen) return;
+
+    document.body.classList.remove('game-modal-open');
+    var appHeader = document.querySelector('.app-header');
+    if (appHeader) appHeader.style.removeProperty('display');
 
     var activePage = '';
     if (typeof window.currentPage !== 'undefined' && window.currentPage) {
@@ -479,26 +486,33 @@
   }
 
   // ══════════════════════════════════════════════════════════════════════════════
-  // SCREEN 1 & SCREEN 2: SELECTION SCREEN LOGIC
+  // SCREEN 1 & SCREEN 2: SELECTION SCREEN LOGIC (DEDICATED AARTI & MANTRA MODES)
   // ══════════════════════════════════════════════════════════════════════════════
 
   window.openAartiGame = function (itemId) {
-    window.openAartiMantraHub('aarti', itemId);
+    window.openAartiMantraHub('aarti', itemId, true);
   };
 
   window.openMantraGame = function (itemId) {
-    window.openAartiMantraHub('mantra', itemId);
+    window.openAartiMantraHub('mantra', itemId, true);
   };
 
-  window.openAartiMantraHub = function (type, specificItemId) {
+  window.openAartiMantraHub = function (type, specificItemId, dedicatedMode) {
     hideNavs();
     var modal = document.getElementById('aarti-mantra-selection-modal');
     if (!modal) return;
     modal.style.display = 'flex';
 
     state.currentType = (type === 'mantra') ? 'mantra' : 'aarti';
+    // Dedicated mode hides the other game's tabs to avoid confusion
+    state.isDedicated = (dedicatedMode !== false);
     state.selectedCategory = 'सभी';
     state.searchQuery = '';
+
+    // History state barrier: prevents hardware back from exiting the app!
+    try {
+      history.pushState({ modal: 'amp_hub', type: state.currentType }, '', '#' + state.currentType + '-puzzle');
+    } catch (e) {}
 
     var searchInput = document.getElementById('amp-search-input');
     if (searchInput) searchInput.value = '';
@@ -531,17 +545,43 @@
   };
 
   function updateSelectionUI() {
-    // Header title
-    var titleEl = document.getElementById('amp-selection-title');
-    if (titleEl) {
-      titleEl.innerHTML = state.currentType === 'aarti' ? '🪔 आरती संग्रह' : '🕉️ मन्त्र संग्रह';
+    var modal = document.getElementById('aarti-mantra-selection-modal');
+    if (modal) {
+      if (state.currentType === 'aarti') {
+        modal.classList.add('amp-theme-aarti');
+        modal.classList.remove('amp-theme-mantra');
+      } else {
+        modal.classList.add('amp-theme-mantra');
+        modal.classList.remove('amp-theme-aarti');
+      }
     }
 
-    // Tabs
+    // Header title & icon
+    var titleEl = document.getElementById('amp-selection-title');
+    if (titleEl) {
+      titleEl.innerHTML = state.currentType === 'aarti' 
+        ? '🪔 दिव्य आरती पहेली' 
+        : '🕉️ दिव्य मन्त्र पहेली';
+    }
+
+    // Dedicated Mode: Hide tabs so Aarti doesn't confusingly show Mantra and vice-versa
+    var tabsWrap = document.querySelector('.amp-nav-tabs');
+    if (tabsWrap) {
+      tabsWrap.style.display = state.isDedicated ? 'none' : 'flex';
+    }
+
     var tabAarti = document.getElementById('amp-tab-aarti');
     var tabMantra = document.getElementById('amp-tab-mantra');
     if (tabAarti) tabAarti.classList.toggle('active', state.currentType === 'aarti');
     if (tabMantra) tabMantra.classList.toggle('active', state.currentType === 'mantra');
+
+    // Dynamic search placeholder
+    var searchInput = document.getElementById('amp-search-input');
+    if (searchInput) {
+      searchInput.placeholder = state.currentType === 'aarti'
+        ? 'आरती खोजें (उदा. गणेश, शिव, हनुमान, दुर्गा, विष्णु...)'
+        : 'मन्त्र खोजें (उदा. गायत्री, महामृत्युंजय, शिव, गणेश...)';
+    }
 
     // Streak pill
     var streakEl = document.getElementById('amp-streak-count');
@@ -613,7 +653,23 @@
       return;
     }
 
-    container.innerHTML = filtered.map(function (item) {
+    var heroBanner = state.currentType === 'aarti'
+      ? `<div class="amp-hero-banner amp-hero-aarti">
+           <div class="amp-hero-icon">🪔</div>
+           <div class="amp-hero-text">
+             <div class="amp-hero-title">दिव्य आरती पहेली संग्रह</div>
+             <div class="amp-hero-desc">आरती की पावन पंक्तियों को सही क्रम में सजाएँ व प्रभु की कृपा प्राप्त करें</div>
+           </div>
+         </div>`
+      : `<div class="amp-hero-banner amp-hero-mantra">
+           <div class="amp-hero-icon">🕉️</div>
+           <div class="amp-hero-text">
+             <div class="amp-hero-title">दिव्य मन्त्र पहेली साधना</div>
+             <div class="amp-hero-desc">वैदिक मन्त्रों के पावन पदों को सही क्रम में रखकर मन्त्र साधना पूर्ण करें</div>
+           </div>
+         </div>`;
+
+    container.innerHTML = heroBanner + filtered.map(function (item) {
       var isUnlocked = item.level <= highestUnlocked;
       var starsEarned = state.starsData[item.id] || 0;
       var starsHtml = '';
@@ -621,12 +677,13 @@
         starsHtml += `<span style="color:${s <= starsEarned ? '#F59E0B' : 'rgba(148,163,184,0.4)'};">★</span>`;
       }
 
-      var thumbSrc = item.thumb || 'assets/deity_ganesh.jpg';
+      var thumbSrc = item.thumb || (state.currentType === 'aarti' ? 'assets/deity_ganesh.jpg' : 'assets/symbols/cards/symbol_om.webp');
+      var playBtnText = state.currentType === 'aarti' ? '🪔 आरती सजाएँ' : '🕉️ मन्त्र जोड़ें';
 
       return `
         <div class="amp-item-card ${isUnlocked ? '' : 'is-locked'}" onclick="${isUnlocked ? "window.startAartiMantraGameById('" + item.id + "')" : "window.showLockedToast(" + item.level + ")"}">
           <div class="amp-item-card-left">
-            <img src="${thumbSrc}" alt="${item.title}" class="amp-item-thumb" onerror="this.src='assets/deity_ganesh.jpg';">
+            <img src="${thumbSrc}" alt="${item.title}" class="amp-item-thumb" onerror="this.src='${state.currentType === 'aarti' ? 'assets/deity_ganesh.jpg' : 'assets/symbols/cards/symbol_om.webp'}';">
             <div class="amp-item-info">
               <div class="amp-item-badge-row">
                 <span class="amp-level-badge">स्तर ${item.level}</span>
@@ -634,7 +691,7 @@
               </div>
               <h3 class="amp-item-title">${item.title}</h3>
               <div class="amp-item-meta">
-                <span>📝 ${item.lines.length} पद/पंक्तियाँ</span>
+                <span>📝 ${item.lines.length} ${state.currentType === 'aarti' ? 'पंक्तियाँ' : 'वैदिक पद'}</span>
                 <span>•</span>
                 <span>⏱️ 3 मिनट</span>
               </div>
@@ -643,7 +700,7 @@
           <div class="amp-item-card-right">
             <div class="amp-stars-row">${starsHtml}</div>
             ${isUnlocked 
-              ? `<button class="amp-play-btn" onclick="event.stopPropagation(); window.startAartiMantraGameById('${item.id}');">🎮 खेलें</button>`
+              ? `<button class="amp-play-btn" onclick="event.stopPropagation(); window.startAartiMantraGameById('${item.id}');">${playBtnText}</button>`
               : `<div class="amp-lock-icon" title="स्तर ${item.level} पर अनलॉक होगा">🔒</div>`
             }
           </div>
@@ -690,10 +747,22 @@
     }
     state.currentLines = shuffled;
 
-    // Show Gameplay Arena
+    // Show Gameplay Arena with matching divine theme
     var arena = document.getElementById('aarti-mantra-game-arena');
     if (!arena) return;
+    if (state.currentType === 'aarti') {
+      arena.classList.add('amp-theme-aarti');
+      arena.classList.remove('amp-theme-mantra');
+    } else {
+      arena.classList.add('amp-theme-mantra');
+      arena.classList.remove('amp-theme-aarti');
+    }
     arena.style.display = 'flex';
+
+    // Push history state so Android hardware back button cleanly exits arena instead of closing app
+    try {
+      history.pushState({ modal: 'amp_arena', id: item.id }, '', '#amp-arena');
+    } catch (e) {}
 
     // Update Header
     var titleEl = document.getElementById('amp-game-curr-title');
@@ -909,9 +978,6 @@
     if (!container) return;
 
     container.innerHTML = state.currentLines.map(function (line, idx) {
-      var isFirst = idx === 0;
-      var isLast = idx === state.currentLines.length - 1;
-
       return `
         <div class="amp-line-card" 
              draggable="true" 
@@ -925,13 +991,9 @@
              ontouchmove="window.handleAartiTouchMove(event)"
              ontouchend="window.handleAartiTouchEnd(event)">
           <div class="amp-line-left">
-            <span class="amp-drag-handle">⠿</span>
+            <span class="amp-drag-handle" title="पकड़कर ऊपर-नीचे खींचें">⠿</span>
             <span class="amp-line-num">${idx + 1}</span>
             <span class="amp-line-text" style="font-size:${state.fontScale}px;">${line}</span>
-          </div>
-          <div class="amp-nudge-btns">
-            <button class="amp-nudge-btn" onclick="window.nudgeAartiLine(${idx}, -1)" ${isFirst ? 'disabled style="opacity:0.3; cursor:default;"' : ''} title="ऊपर करें">▲</button>
-            <button class="amp-nudge-btn" onclick="window.nudgeAartiLine(${idx}, 1)" ${isLast ? 'disabled style="opacity:0.3; cursor:default;"' : ''} title="नीचे करें">▼</button>
           </div>
         </div>
       `;
@@ -1208,52 +1270,164 @@
     }
   };
 
-  // ── Audio Recitation (Speech Synthesis + Vedic Chime) ──
+  // ── High-Reliability Audio Recitation Engine (Google Hindi TTS + SpeechSynthesis + Temple Bells) ──
+  var activeAudioPlayer = null;
+  var audioQueue = [];
+  var currentQueueIdx = 0;
+
   window.toggleAartiSpeechRecitation = function () {
     if (!state.currentItem) return;
 
+    var btn = document.getElementById('amp-listen-btn');
+
+    // If currently playing, Pause/Stop
     if (state.isSpeaking) {
       stopSpeechRecitation();
       return;
     }
 
-    var text = state.currentItem.lines.join('। ');
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      var utt = new SpeechSynthesisUtterance(text);
-      utt.lang = 'hi-IN';
-      utt.rate = 0.85; // Serene devotional tempo
-      utt.pitch = 1.0;
-
-      utt.onstart = function () {
-        state.isSpeaking = true;
-        var btn = document.getElementById('amp-listen-btn');
-        if (btn) {
-          btn.classList.add('is-playing');
-          btn.innerHTML = '<span>⏸️</span> <span>रोकें (Pause)</span>';
-        }
-      };
-
-      utt.onend = function () {
-        stopSpeechRecitation();
-      };
-
-      utt.onerror = function () {
-        stopSpeechRecitation();
-      };
-
-      state.speechUtterance = utt;
-      window.speechSynthesis.speak(utt);
-    } else {
-      playSfx('victory');
+    state.isSpeaking = true;
+    if (btn) {
+      btn.classList.add('is-playing');
+      btn.innerHTML = '<span>⏸️</span> <span>पाठ चल रहा है... (रोकें)</span>';
     }
+
+    // Immediate devotional bell chime feedback
+    playSfx('correct');
+
+    var lines = state.currentItem.lines;
+    audioQueue = [];
+    var currentChunk = '';
+    for (var i = 0; i < lines.length; i++) {
+      var l = lines[i].replace(/[।॥]/g, '').trim();
+      if (!l) continue;
+      if ((currentChunk + ' ' + l).length > 140) {
+        if (currentChunk) audioQueue.push(currentChunk);
+        currentChunk = l;
+      } else {
+        currentChunk = currentChunk ? (currentChunk + ' । ' + l) : l;
+      }
+    }
+    if (currentChunk) audioQueue.push(currentChunk);
+
+    currentQueueIdx = 0;
+    playNextAudioQueueItem();
   };
 
-  function stopSpeechRecitation() {
+  function playNextAudioQueueItem() {
+    if (!state.isSpeaking) return;
+
+    if (currentQueueIdx >= audioQueue.length) {
+      // Completed full recitation
+      stopSpeechRecitation();
+      playSfx('victory');
+      return;
+    }
+
+    var text = audioQueue[currentQueueIdx];
+    currentQueueIdx++;
+
+    // Tier 1: Real Hindi Chanting Audio Stream (Natural Pronunciation)
+    var ttsUrl = 'https://translate.google.com/translate_tts?ie=UTF-8&tl=hi&client=tw-ob&q=' + encodeURIComponent(text);
+    var audio = new Audio();
+    activeAudioPlayer = audio;
+
+    var fallbackTimeout = setTimeout(function () {
+      if (state.isSpeaking && activeAudioPlayer === audio) {
+        fallbackOfflineRecitation(text);
+      }
+    }, 4500);
+
+    audio.oncanplaythrough = function () {
+      clearTimeout(fallbackTimeout);
+      if (state.isSpeaking) {
+        audio.play().catch(function (e) {
+          console.warn("Audio play prevented, using fallback:", e);
+          fallbackOfflineRecitation(text);
+        });
+      }
+    };
+
+    audio.onended = function () {
+      if (state.isSpeaking) {
+        setTimeout(playNextAudioQueueItem, 400);
+      }
+    };
+
+    audio.onerror = function () {
+      clearTimeout(fallbackTimeout);
+      fallbackOfflineRecitation(text);
+    };
+
+    audio.src = ttsUrl;
+    audio.load();
+  }
+
+  function fallbackOfflineRecitation(text) {
+    if (!state.isSpeaking) return;
+
+    // Tier 2: Device SpeechSynthesis
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
+      try {
+        window.speechSynthesis.cancel();
+        var utt = new SpeechSynthesisUtterance(text);
+        utt.lang = 'hi-IN';
+        utt.rate = 0.82;
+
+        var voices = window.speechSynthesis.getVoices();
+        if (voices && voices.length > 0) {
+          var hiVoice = voices.find(function (v) { return v.lang.startsWith('hi') || v.lang.includes('IN'); });
+          if (hiVoice) utt.voice = hiVoice;
+        }
+
+        utt.onend = function () {
+          if (state.isSpeaking) {
+            setTimeout(playNextAudioQueueItem, 400);
+          }
+        };
+
+        utt.onerror = function (e) {
+          console.warn("SpeechSynthesis error:", e);
+          playWebAudioChantDrone();
+        };
+
+        window.speechSynthesis.speak(utt);
+        return;
+      } catch (e) {
+        console.warn("SpeechSynthesis fallback error:", e);
+      }
+    }
+
+    // Tier 3: Devotional Web Audio Chime
+    playWebAudioChantDrone();
+  }
+
+  function playWebAudioChantDrone() {
+    playSfx('correct');
+    playSfx('victory');
+    setTimeout(function () {
+      if (state.isSpeaking) {
+        playNextAudioQueueItem();
+      }
+    }, 2800);
+  }
+
+  function stopSpeechRecitation() {
+    if (activeAudioPlayer) {
+      try {
+        activeAudioPlayer.pause();
+        activeAudioPlayer.src = '';
+      } catch (e) {}
+      activeAudioPlayer = null;
+    }
+    if ('speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {}
     }
     state.isSpeaking = false;
+    audioQueue = [];
+    currentQueueIdx = 0;
     var btn = document.getElementById('amp-listen-btn');
     if (btn) {
       btn.classList.remove('is-playing');
@@ -1335,6 +1509,31 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
   }
+
+  // ── Hardware Back & Browser History Trap ──
+  window.addEventListener('popstate', function (e) {
+    var winDlg = document.getElementById('amp-win-dialog');
+    if (winDlg && winDlg.style.display === 'flex') {
+      winDlg.style.display = 'none';
+      window.closeAartiMantraGame();
+      return;
+    }
+    var prevDlg = document.getElementById('amp-preview-modal');
+    if (prevDlg && prevDlg.style.display === 'flex') {
+      window.closeAartiPreviewDialog();
+      return;
+    }
+    var arena = document.getElementById('aarti-mantra-game-arena');
+    if (arena && arena.style.display === 'flex') {
+      window.closeAartiMantraGame();
+      return;
+    }
+    var selModal = document.getElementById('aarti-mantra-selection-modal');
+    if (selModal && selModal.style.display === 'flex') {
+      window.closeAartiMantraHub();
+      return;
+    }
+  });
 
   // ── Auto Init on DOM Ready ──
   if (document.readyState === 'loading') {

@@ -21,7 +21,7 @@ body:has(#aarti-mantra-selection-modal[style*="flex"]) .curved-fluid-bottom-nav 
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 1050;
+  z-index: 100240 !important;
   background: #F7F8FA;
   flex-direction: column;
   overflow: hidden;
@@ -30,6 +30,59 @@ body:has(#aarti-mantra-selection-modal[style*="flex"]) .curved-fluid-bottom-nav 
 
 body:not(.theme-light):not(.light-mode) .amp-selection-modal {
   background: #140822;
+}
+
+/* ── Aarti Theme (Saffron / Gold / Temple Glow) ── */
+.amp-selection-modal.amp-theme-aarti .amp-selection-header,
+.amp-game-arena.amp-theme-aarti .amp-game-appbar {
+  background: linear-gradient(135deg, #FF6F00 0%, #FF8F00 50%, #FFA000 100%) !important;
+  box-shadow: 0 4px 22px rgba(255, 111, 0, 0.42) !important;
+}
+
+/* ── Mantra Theme (Royal Cosmic Purple / Vedic Indigo Aura) ── */
+.amp-selection-modal.amp-theme-mantra .amp-selection-header,
+.amp-game-arena.amp-theme-mantra .amp-game-appbar {
+  background: linear-gradient(135deg, #4C1D95 0%, #6D28D9 50%, #8B5CF6 100%) !important;
+  box-shadow: 0 4px 22px rgba(109, 40, 217, 0.45) !important;
+}
+
+.amp-selection-modal.amp-theme-mantra .amp-cat-chip.active {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%) !important;
+  border-color: #6D28D9 !important;
+  box-shadow: 0 3px 10px rgba(109, 40, 217, 0.4) !important;
+}
+
+.amp-selection-modal.amp-theme-mantra .amp-item-card:hover {
+  border-color: #8B5CF6 !important;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3) !important;
+}
+
+.amp-selection-modal.amp-theme-mantra .amp-play-btn {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%) !important;
+  box-shadow: 0 3px 10px rgba(109, 40, 217, 0.35) !important;
+}
+
+.amp-arena-back-btn {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: #FFFFFF;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.15rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-right: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.amp-arena-back-btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: scale(1.08);
 }
 
 /* Header */
@@ -411,7 +464,7 @@ body:not(.theme-light):not(.light-mode) .amp-item-meta {
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 1100;
+  z-index: 100250 !important;
   background: #FAFAFA;
   flex-direction: column;
   overflow: hidden;
@@ -422,17 +475,19 @@ body:not(.theme-light):not(.light-mode) .amp-game-arena {
   background: #140822;
 }
 
-/* Top AppBar (Saffron / Orange Gradient) */
+/* Top AppBar (Saffron / Gold / Temple Glow) */
 .amp-game-appbar {
-  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 50%, #FFB703 100%);
-  padding: 8px 14px;
+  background: linear-gradient(135deg, #2D0B40 0%, #170526 50%, #3B0E50 100%) !important;
+  border-bottom: 1.5px solid #F59E0B !important;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 18px rgba(255, 140, 0, 0.35);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
   position: relative;
   z-index: 30;
+  flex-shrink: 0;
 }
 
 .amp-game-left {
@@ -607,37 +662,57 @@ body:not(.theme-light):not(.light-mode) .amp-instruction-text {
 .amp-drag-area {
   flex: 1;
   overflow-y: auto;
-  padding: 10px 14px 20px;
+  padding: 8px 12px 85px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   max-width: 680px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* Reorderable Line Card */
+/* Reorderable Line Card (Slim, Compact, Devotional Glassmorphism) */
 .amp-line-card {
   background: #FFFFFF;
   border-radius: 12px;
-  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border: 1.2px solid rgba(226, 232, 240, 0.9);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  padding: 12px 14px;
+  padding: 8px 12px;
+  min-height: 44px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: flex-start;
+  gap: 10px;
   cursor: grab;
   user-select: none;
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.15s ease;
   position: relative;
+  box-sizing: border-box;
 }
 
 body:not(.theme-light):not(.light-mode) .amp-line-card {
-  background: #1C0A30;
-  border-color: rgba(245, 158, 11, 0.22);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(38, 16, 62, 0.92) 0%, rgba(20, 8, 34, 0.97) 100%);
+  border-color: rgba(245, 158, 11, 0.28);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.amp-game-arena.amp-theme-aarti .amp-line-card {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.amp-game-arena.amp-theme-aarti .amp-line-card:hover {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22);
+}
+
+.amp-game-arena.amp-theme-mantra .amp-line-card {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.amp-game-arena.amp-theme-mantra .amp-line-card:hover {
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
 }
 
 .amp-line-card:active {
@@ -645,16 +720,17 @@ body:not(.theme-light):not(.light-mode) .amp-line-card {
 }
 
 .amp-line-card.is-dragging {
-  opacity: 0.45;
+  opacity: 0.9;
   border-color: #F59E0B;
-  background: #FEF3C7;
-  transform: scale(0.98);
+  background: linear-gradient(135deg, rgba(65, 25, 105, 0.95) 0%, rgba(35, 14, 58, 0.98) 100%);
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.45);
 }
 
 .amp-line-card.drag-over {
   border: 2px dashed #F59E0B;
-  background: rgba(245, 158, 11, 0.12);
-  transform: translateY(3px);
+  background: rgba(245, 158, 11, 0.15);
+  transform: translateY(2px);
 }
 
 .amp-line-card.is-correct-hint {
@@ -662,8 +738,8 @@ body:not(.theme-light):not(.light-mode) .amp-line-card {
 }
 
 @keyframes hintFlash {
-  0%, 100% { border-color: rgba(245, 158, 11, 0.22); }
-  50% { border-color: #10B981; background: rgba(16, 185, 129, 0.2); }
+  0%, 100% { border-color: rgba(245, 158, 11, 0.28); }
+  50% { border-color: #10B981; background: rgba(16, 185, 129, 0.25); }
 }
 
 .amp-line-left {
@@ -675,80 +751,65 @@ body:not(.theme-light):not(.light-mode) .amp-line-card {
 }
 
 .amp-drag-handle {
-  color: #94A3B8;
-  font-size: 1.25rem;
+  color: #F59E0B;
+  font-size: 1.15rem;
   line-height: 1;
   cursor: grab;
-  padding: 2px 4px;
+  padding: 1px 2px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  user-select: none;
 }
 
 .amp-line-num {
-  background: #F1F5F9;
-  color: #64748B;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #1A0B2E;
   width: 24px;
   height: 24px;
+  min-width: 24px;
   border-radius: 50%;
-  font-size: 0.76rem;
-  font-weight: 800;
+  font-size: 0.75rem;
+  font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.35);
+}
+
+.amp-game-arena.amp-theme-mantra .amp-line-num {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(109, 40, 217, 0.4) !important;
 }
 
 body:not(.theme-light):not(.light-mode) .amp-line-num {
-  background: rgba(255, 255, 255, 0.1);
-  color: #FDE68A;
+  color: #1A0B2E;
 }
 
 .amp-line-text {
-  font-size: 1rem;
+  font-size: 0.94rem;
   font-weight: 600;
   color: #1E293B;
-  line-height: 1.45;
+  line-height: 1.35;
   word-break: break-word;
+  flex: 1;
 }
 
 body:not(.theme-light):not(.light-mode) .amp-line-text {
-  color: #F8FAFC;
+  color: #FFFDF8;
 }
 
-/* Accessibility Nudge Controls (▲ ▼) */
-.amp-nudge-btns {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex-shrink: 0;
-}
-
+/* Side Arrow Nudge Buttons Permanently Removed per User Request */
+.amp-nudge-btns,
 .amp-nudge-btn {
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  color: #B45309;
-  width: 26px;
-  height: 22px;
-  border-radius: 6px;
-  font-size: 0.7rem;
-  font-weight: 900;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s ease;
-}
-
-body:not(.theme-light):not(.light-mode) .amp-nudge-btn {
-  background: rgba(245, 158, 11, 0.2);
-  color: #FDE68A;
-}
-
-.amp-nudge-btn:hover {
-  background: #F59E0B;
-  color: #FFFFFF;
+  display: none !important;
 }
 
 /* Bottom Actions Toolbar */
 .amp-bottom-toolbar {
+  position: sticky;
+  bottom: 0;
   background: #FFFFFF;
   border-top: 1.5px solid rgba(226, 232, 240, 0.8);
   padding: 10px 16px;
@@ -757,21 +818,25 @@ body:not(.theme-light):not(.light-mode) .amp-nudge-btn {
   justify-content: space-between;
   gap: 12px;
   box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.04);
+  z-index: 25;
 }
 
 body:not(.theme-light):not(.light-mode) .amp-bottom-toolbar {
-  background: #1C0A30;
-  border-top-color: rgba(245, 158, 11, 0.25);
+  background: rgba(20, 8, 34, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1.2px solid rgba(245, 158, 11, 0.28);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .amp-reshuffle-btn {
   background: #F1F5F9;
   color: #475569;
   border: 1.5px solid #CBD5E1;
-  padding: 10px 18px;
-  border-radius: 14px;
+  padding: 9px 16px;
+  border-radius: 12px;
   font-weight: 800;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -781,12 +846,17 @@ body:not(.theme-light):not(.light-mode) .amp-bottom-toolbar {
 
 body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #E2E8F0;
+  border: 1.2px solid rgba(245, 158, 11, 0.3);
+  color: #FDE68A;
 }
 
 .amp-reshuffle-btn:hover {
-  background: #E2E8F0;
+  background: rgba(245, 158, 11, 0.18);
+  border-color: #F59E0B;
+}
+
+.amp-reshuffle-btn:active {
+  transform: scale(0.97);
 }
 
 .amp-submit-btn {
@@ -794,22 +864,26 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #FFFFFF;
   border: none;
-  padding: 11px 20px;
-  border-radius: 14px;
+  padding: 10px 20px;
+  border-radius: 12px;
   font-weight: 900;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
   transition: all 0.2s ease;
 }
 
 .amp-submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+}
+
+.amp-submit-btn:active {
+  transform: scale(0.98);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -830,9 +904,10 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 1250;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(6px);
+  z-index: 100260 !important;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   align-items: center;
   justify-content: center;
   padding: 16px;
@@ -856,6 +931,13 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   box-sizing: border-box;
 }
 
+body:not(.theme-light):not(.light-mode) .amp-celebration-card {
+  background: linear-gradient(180deg, #2A0E44 0%, #160624 50%, #300C46 100%);
+  border: 2px solid #F59E0B;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.75), 0 0 35px rgba(245, 158, 11, 0.3) inset;
+  color: #FFFDF8;
+}
+
 @keyframes celebrationPop {
   0% { transform: scale(0.7); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
@@ -865,7 +947,7 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
 .amp-petals-banner {
   font-size: 1.6rem;
   letter-spacing: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   animation: petalFloat 2s ease-in-out infinite alternate;
 }
 
@@ -874,25 +956,47 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   100% { transform: translateY(-4px); }
 }
 
-/* Spinning Aarti Thali & Glowing Diya */
+/* ── Divine Temple Aarti Thali & Akhand Jyoti (पावन स्वर्ण थाल व अखंड दीप) ── */
 .amp-thali-container {
   position: relative;
-  width: 110px;
-  height: 110px;
-  margin: 10px 0 14px;
+  width: 140px;
+  height: 140px;
+  margin: 6px auto 14px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.amp-spinning-thali {
+.amp-thali-outer-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.45) 0%, rgba(245, 158, 11, 0.2) 60%, transparent 75%);
+  animation: thaliPulseAura 3s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes thaliPulseAura {
+  0% { transform: scale(0.96); opacity: 0.7; }
+  100% { transform: scale(1.08); opacity: 1; }
+}
+
+.amp-thali-middle-plate {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 4px dashed #F59E0B;
-  background: radial-gradient(circle, rgba(254, 240, 138, 0.8) 0%, rgba(245, 158, 11, 0.3) 70%, rgba(217, 119, 6, 0.6) 100%);
-  box-shadow: 0 0 25px rgba(245, 158, 11, 0.7);
-  animation: spinThali 5s linear infinite;
+  background: radial-gradient(circle at 40% 35%, #FFFDE7 0%, #FFF59D 25%, #FFD54F 50%, #FFA000 75%, #D97706 90%, #78350F 100%);
+  border: 3px solid #FEF08A;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.65), inset 0 0 16px rgba(180, 83, 9, 0.6);
+}
+
+.amp-thali-ornament {
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(254, 240, 138, 0.85);
+  animation: spinThali 16s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes spinThali {
@@ -900,18 +1004,116 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   100% { transform: rotate(360deg); }
 }
 
-.amp-glowing-diya {
-  position: relative;
-  z-index: 2;
-  font-size: 3.2rem;
+.thali-flower {
+  position: absolute;
+  font-size: 0.95rem;
   line-height: 1;
-  filter: drop-shadow(0 0 16px rgba(255, 153, 0, 0.95)) drop-shadow(0 0 28px rgba(255, 230, 0, 0.85));
-  animation: glowDiya 1.5s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+}
+.tf-1 { top: 2px; left: 50%; transform: translateX(-50%); }
+.tf-2 { top: 12px; right: 12px; }
+.tf-3 { top: 50%; right: 2px; transform: translateY(-50%); }
+.tf-4 { bottom: 12px; right: 12px; }
+.tf-5 { bottom: 2px; left: 50%; transform: translateX(-50%); }
+.tf-6 { bottom: 12px; left: 12px; }
+.tf-7 { top: 50%; left: 2px; transform: translateY(-50%); }
+.tf-8 { top: 12px; left: 12px; }
+
+/* Divine Brass Diya & Living Flame */
+.amp-divine-diya-wrap {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
 }
 
-@keyframes glowDiya {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 14px #FF9900); }
-  50% { transform: scale(1.08); filter: drop-shadow(0 0 26px #FFE600) drop-shadow(0 0 34px #FF7700); }
+.amp-diya-aura {
+  position: absolute;
+  top: -10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 235, 59, 0.65) 0%, rgba(255, 152, 0, 0.35) 50%, transparent 70%);
+  filter: blur(4px);
+  pointer-events: none;
+  animation: auraFlicker 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes auraFlicker {
+  0% { transform: scale(0.9); opacity: 0.75; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+.amp-diya-flame-wrap {
+  width: 24px;
+  height: 38px;
+  position: relative;
+  margin-bottom: -4px;
+  z-index: 6;
+  animation: livingFlame 1.8s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes livingFlame {
+  0% { transform: scale(1) rotate(-1.5deg); }
+  50% { transform: scale(1.08, 1.15) rotate(1.5deg); }
+  100% { transform: scale(0.96, 1.05) rotate(-0.8deg); }
+}
+
+.amp-flame-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 35% 35% / 80% 80% 30% 30%;
+  background: linear-gradient(to top, rgba(255, 61, 0, 0.95) 0%, rgba(255, 145, 0, 0.95) 45%, rgba(255, 234, 0, 0.95) 80%, #FFFFFF 100%);
+  box-shadow: 0 0 16px #FF6D00, 0 0 28px #FFD600;
+}
+
+.amp-flame-inner {
+  position: absolute;
+  width: 14px;
+  height: 24px;
+  bottom: 3px;
+  left: 5px;
+  border-radius: 50% 50% 35% 35% / 80% 80% 30% 30%;
+  background: linear-gradient(to top, #FF9100 0%, #FFEE58 70%, #FFFFFF 100%);
+  opacity: 0.92;
+}
+
+.amp-flame-core {
+  position: absolute;
+  width: 7px;
+  height: 13px;
+  bottom: 4px;
+  left: 8.5px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px #FFF;
+}
+
+.amp-brass-diya {
+  width: 54px;
+  height: 24px;
+  border-radius: 4px 4px 26px 26px;
+  background: linear-gradient(180deg, #FFE082 0%, #D97706 45%, #78350F 100%);
+  border: 1.5px solid #FEF08A;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.amp-diya-symbol {
+  color: #451A03;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .amp-celebration-title {
@@ -921,11 +1123,20 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   color: #78350F;
 }
 
+body:not(.theme-light):not(.light-mode) .amp-celebration-title {
+  color: #FDE68A;
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
+}
+
 .amp-celebration-subtitle {
   font-size: 0.88rem;
   font-weight: 700;
   color: #92400E;
   margin-bottom: 12px;
+}
+
+body:not(.theme-light):not(.light-mode) .amp-celebration-subtitle {
+  color: #E9D5FF;
 }
 
 /* Earned Stars Row */
@@ -963,6 +1174,12 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   margin-bottom: 12px;
 }
 
+body:not(.theme-light):not(.light-mode) .amp-win-stats-pill {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #FDE68A;
+}
+
 /* Correct Scrollable Text Container */
 .amp-holy-lyrics-box {
   background: #FFFFFF;
@@ -982,21 +1199,34 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
+body:not(.theme-light):not(.light-mode) .amp-holy-lyrics-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #FFFDF8;
+}
+
 /* Audio Recitation Button */
 .amp-listen-btn {
   background: #FFFBEB;
   border: 1.5px solid #F59E0B;
   color: #B45309;
   border-radius: 16px;
-  padding: 7px 16px;
-  font-size: 0.86rem;
+  padding: 8px 18px;
+  font-size: 0.88rem;
   font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 14px;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
+}
+
+body:not(.theme-light):not(.light-mode) .amp-listen-btn {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #F59E0B;
+  color: #FDE68A;
 }
 
 .amp-listen-btn:hover {
@@ -1005,9 +1235,16 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
 }
 
 .amp-listen-btn.is-playing {
-  background: #10B981;
-  color: #FFFFFF;
-  border-color: #059669;
+  background: linear-gradient(135deg, #10B981, #059669) !important;
+  color: #FFFFFF !important;
+  border-color: #059669 !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.5) !important;
+  animation: listenPulse 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes listenPulse {
+  0% { transform: scale(1); box-shadow: 0 0 8px rgba(16, 185, 129, 0.4); }
+  100% { transform: scale(1.04); box-shadow: 0 0 18px rgba(16, 185, 129, 0.7); }
 }
 
 /* Next Level Action Button */
@@ -1117,4 +1354,416 @@ body:not(.theme-light):not(.light-mode) .amp-reshuffle-btn {
   cursor: pointer;
   margin-top: 16px;
   box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
+}
+
+/* Hero Banners */
+.amp-hero-banner {
+  margin: 10px 16px 4px;
+  border-radius: 18px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.amp-hero-banner.amp-hero-aarti {
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.18) 0%, rgba(217, 119, 6, 0.22) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.45);
+}
+.amp-hero-banner.amp-hero-mantra {
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.2) 0%, rgba(139, 92, 246, 0.25) 100%);
+  border: 1.5px solid rgba(139, 92, 246, 0.45);
+}
+.amp-hero-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+.amp-hero-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #1E293B;
+  margin-bottom: 2px;
+}
+body:not(.theme-light):not(.light-mode) .amp-hero-title {
+  color: #FFFDF8;
+}
+.amp-hero-desc {
+  font-size: 0.8rem;
+  color: #64748B;
+  line-height: 1.35;
+}
+body:not(.theme-light):not(.light-mode) .amp-hero-desc {
+  color: #CBD5E1;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   🌟 SUPREME DIVINE OVERHAUL: AARTI & MANTRA SELECTION HUB (UI/UX & SCROLL FIX)
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+.amp-selection-modal {
+  display: none;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  z-index: 100250 !important;
+  background: #140726 !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
+  box-sizing: border-box !important;
+}
+
+/* ── Top Header with Safe Area Notch Support ── */
+.amp-selection-header {
+  background: linear-gradient(135deg, #FF6F00 0%, #FF8F00 50%, #FFA000 100%) !important;
+  padding: max(14px, env(safe-area-inset-top)) 16px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-shadow: 0 4px 22px rgba(255, 111, 0, 0.45) !important;
+  color: #FFFFFF !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 30 !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-header-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+}
+
+.amp-header-title {
+  margin: 0 !important;
+  font-size: 1.18rem !important;
+  font-weight: 900 !important;
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.amp-header-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-back-btn {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  color: #FFFFFF !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-back-btn:active {
+  transform: scale(0.92) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.amp-streak-pill {
+  background: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 18px !important;
+  padding: 5px 12px !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  white-space: nowrap !important;
+}
+
+/* ── Sticky Sub-Header Wrappers (Search & Category Chips) ── */
+.amp-search-wrap {
+  padding: 10px 16px 6px !important;
+  background: #140726 !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-search-box {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.8px solid rgba(245, 158, 11, 0.4) !important;
+  border-radius: 24px !important;
+  padding: 9px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+.amp-search-box input {
+  flex: 1 !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  font-size: 0.94rem !important;
+  font-family: inherit !important;
+  color: #FFFDF8 !important;
+}
+
+.amp-search-box input::placeholder {
+  color: #94A3B8 !important;
+}
+
+.amp-categories-bar {
+  display: flex !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  padding: 6px 16px 12px !important;
+  gap: 8px !important;
+  background: #140726 !important;
+  touch-action: pan-x !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-categories-bar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.amp-cat-chip {
+  padding: 8px 18px !important;
+  border-radius: 20px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+  color: #FDE68A !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.amp-cat-chip.active {
+  background: linear-gradient(135deg, #FF8C00 0%, #D97706 100%) !important;
+  border-color: #FEF3C7 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.04) !important;
+}
+
+/* ── 🚀 ULTRA-SMOOTH MOMENTUM SCROLL CONTAINER ── */
+.amp-items-container {
+  flex: 1 1 0px !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior-y: contain !important;
+  touch-action: pan-y !important;
+  padding: 8px 14px 140px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  max-width: 620px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* ── Glowing Devotional Hero Marquee Banner ── */
+.amp-hero-banner {
+  border-radius: 20px !important;
+  padding: 14px 16px !important;
+  background: linear-gradient(135deg, rgba(255, 111, 0, 0.22) 0%, rgba(109, 40, 217, 0.22) 100%) !important;
+  border: 1.8px solid #F59E0B !important;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4), inset 0 0 16px rgba(245, 158, 11, 0.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-bottom: 4px !important;
+}
+
+.amp-hero-icon {
+  font-size: 2.2rem !important;
+  flex-shrink: 0 !important;
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6)) !important;
+}
+
+.amp-hero-title {
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+  color: #FFFDF8 !important;
+  margin-bottom: 3px !important;
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.5) !important;
+}
+
+.amp-hero-desc {
+  font-size: 0.82rem !important;
+  color: #FDE68A !important;
+  line-height: 1.4 !important;
+}
+
+/* ── Sacred Aarti/Mantra Item Cards ── */
+.amp-item-card {
+  background: linear-gradient(145deg, #270C42 0%, #170526 100%) !important;
+  border-radius: 20px !important;
+  border: 1.6px solid rgba(245, 158, 11, 0.35) !important;
+  padding: 12px 14px !important;
+  min-height: 78px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-item-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: #F59E0B !important;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3) !important;
+}
+
+.amp-item-card.is-locked {
+  opacity: 0.8 !important;
+  filter: grayscale(0.15) !important;
+}
+
+.amp-item-card-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+.amp-item-thumb {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid #F59E0B !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4) !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-item-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+.amp-item-badge-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-bottom: 2px !important;
+}
+
+.amp-level-badge {
+  background: rgba(245, 158, 11, 0.25) !important;
+  color: #FDE68A !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  padding: 2px 8px !important;
+  border-radius: 8px !important;
+}
+
+.amp-cat-badge {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #E2E8F0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  padding: 2px 8px !important;
+  border-radius: 8px !important;
+}
+
+.amp-item-title {
+  margin: 0 !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #FFFDF8 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.3 !important;
+}
+
+.amp-item-meta {
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  color: #FDE68A !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+.amp-item-card-right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  flex-shrink: 0 !important;
+}
+
+.amp-play-btn {
+  background: linear-gradient(135deg, #FF8C00 0%, #D97706 100%) !important;
+  color: #FFFFFF !important;
+  border: 1.2px solid #FDE68A !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45) !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  white-space: nowrap !important;
+}
+
+.amp-play-btn:active {
+  transform: scale(0.95) !important;
+}
+
+.amp-lock-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.15rem !important;
+  color: #FDE68A !important;
+  flex-shrink: 0 !important;
 }
