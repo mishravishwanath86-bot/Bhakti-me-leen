@@ -14236,8 +14236,9 @@ body.game-modal-open .app-bottom-nav {
         
         <!-- Header Tag & Custom Mantra CTA Button -->
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
-          <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(248,200,59,0.18); border:1px solid #F8C83B; padding:4px 12px; border-radius:14px; font-size:0.75rem; font-weight:900; color:#FDE68A;">
-            <span>🕉️</span> <span id="japa-target-bead-tag">108 मनका पावन साधना</span>
+          <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(248,200,59,0.18); border:1px solid #F8C83B; padding:5px 12px; border-radius:14px; font-size:0.75rem; font-weight:900; color:#FDE68A;">
+            <img src="assets/symbols/rudraksha_single_bead.png" alt="Bead" style="width:16px; height:16px; object-fit:contain; filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));">
+            <span id="japa-target-bead-tag">108 मनका पावन साधना</span>
           </div>
           <button onclick="openCustomMantraCreatorModal()" style="background:linear-gradient(135deg, #EC4899 0%, #BE185D 100%); color:#FFF; border:none; font-size:0.75rem; font-weight:900; padding:5px 12px; border-radius:12px; cursor:pointer; display:flex; align-items:center; gap:4px; box-shadow:0 3px 10px rgba(236,72,153,0.35);">
             <span>✨</span> + अपना मंत्र जोड़ें
@@ -14259,9 +14260,14 @@ body.game-modal-open .app-bottom-nav {
           </div>
         </div>
 
-        <!-- Circular 108 Progress Counter (Interactive Mala Ring) -->
-        <div class="mala-ring-container" onclick="incrementJapaMala()" style="position:relative; width:220px; height:220px; margin:0 auto 1.2rem; cursor:pointer; user-select:none; -webkit-user-select:none;">
-          <svg class="mala-bead-svg" viewBox="0 0 240 240" style="width:100%; height:100%; transform:rotate(-90deg);">
+        <!-- Circular 108 Progress Counter (Interactive Mala Ring with Image 2 & Image 3) -->
+        <div class="mala-ring-container" onclick="incrementJapaMala()" style="position:relative; width:260px; height:260px; margin:0 auto 1.2rem; cursor:pointer; user-select:none; -webkit-user-select:none; display:flex; align-items:center; justify-content:center; transition:transform 0.1s ease;">
+          
+          <!-- 📿 AUTHENTIC 108 RUDRAKSHA MALA RING (Image 2) -->
+          <img id="rudraksha-mala-ring-img" src="assets/symbols/rudraksha_mala_centered.png" alt="108 Rudraksha Mala Ring" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 10px 25px rgba(0,0,0,0.85)) drop-shadow(0 0 16px rgba(248,200,59,0.25)); pointer-events:none; transition:transform 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform:rotate(0deg);">
+
+          <!-- Luminous Golden SVG Progress Arc -->
+          <svg class="mala-bead-svg" viewBox="0 0 240 240" style="position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); pointer-events:none; z-index:1;">
             <defs>
               <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#FDE68A" />
@@ -14269,12 +14275,19 @@ body.game-modal-open .app-bottom-nav {
                 <stop offset="100%" stop-color="#D97706" />
               </linearGradient>
             </defs>
-            <circle cx="120" cy="120" r="100" stroke="rgba(255,255,255,0.1)" stroke-width="12" fill="transparent"></circle>
-            <circle id="mala-circle-bar" cx="120" cy="120" r="100" stroke="url(#goldGradient)" stroke-width="12" stroke-linecap="round" fill="transparent" stroke-dasharray="628.3" stroke-dashoffset="628.3" style="transition:stroke-dashoffset 0.15s ease;"></circle>
+            <circle cx="120" cy="120" r="74" stroke="rgba(248,200,59,0.12)" stroke-width="4" fill="transparent"></circle>
+            <circle id="mala-circle-bar" cx="120" cy="120" r="74" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round" fill="transparent" stroke-dasharray="465" stroke-dashoffset="465" style="transition:stroke-dashoffset 0.15s ease; filter:drop-shadow(0 0 8px rgba(248,200,59,0.9));"></circle>
           </svg>
-          <div class="mala-center-count" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
-            <div class="mala-num" id="mala-count-display" style="font-size:3.2rem; font-weight:900; color:#FFFDF8; line-height:1; font-family:'Tiro Devanagari Hindi', serif; text-shadow:0 0 20px rgba(248,200,59,0.6);">0</div>
-            <div class="mala-target" id="mala-target-subtext" style="font-size:0.8rem; font-weight:800; color:#FDE68A; margin-top:4px;">/ 108 मनके</div>
+
+          <!-- Center Content: 3D Single Rudraksha Bead (Image 3) + Counter -->
+          <div class="mala-center-count" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none; z-index:2;">
+            <!-- 📿 SACRED 3D SINGLE RUDRAKSHA BEAD (Image 3) -->
+            <div id="single-rudraksha-bead-wrapper" style="width:52px; height:52px; margin-bottom:2px; display:flex; align-items:center; justify-content:center; position:relative;">
+              <div style="position:absolute; inset:-4px; border-radius:50%; background:radial-gradient(circle, rgba(248,200,59,0.35) 0%, transparent 70%); filter:blur(4px); pointer-events:none;"></div>
+              <img id="single-rudraksha-bead-img" src="assets/symbols/rudraksha_single_bead.png" alt="Single Rudraksha Bead" style="width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.85)); transition:transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform:rotate(0deg) scale(1);">
+            </div>
+            <div class="mala-num" id="mala-count-display" style="font-size:2.8rem; font-weight:900; color:#FFFDF8; line-height:1; font-family:'Tiro Devanagari Hindi', serif; text-shadow:0 0 20px rgba(248,200,59,0.7);">0</div>
+            <div class="mala-target" id="mala-target-subtext" style="font-size:0.8rem; font-weight:800; color:#FDE68A; margin-top:2px;">/ 108 मनके</div>
           </div>
         </div>
 
@@ -14291,8 +14304,9 @@ body.game-modal-open .app-bottom-nav {
         </div>
 
         <!-- Giant Chanting Tap Button -->
-        <button id="japa-giant-tap-btn" onclick="incrementJapaMala()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; font-weight:900; font-size:1.15rem; padding:15px 0; border-radius:24px; border:none; cursor:pointer; box-shadow:0 6px 25px rgba(248,200,59,0.5); width:100%; max-width:330px; transition:transform 0.08s ease; display:flex; align-items:center; justify-content:center; gap:8px; margin:0 auto;" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">
-          <span style="font-size:1.35rem;">📿</span> <span>जाप करें (Tap to Chant)</span>
+        <button id="japa-giant-tap-btn" onclick="incrementJapaMala()" style="background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; font-weight:900; font-size:1.15rem; padding:15px 0; border-radius:24px; border:none; cursor:pointer; box-shadow:0 6px 25px rgba(248,200,59,0.5); width:100%; max-width:330px; transition:transform 0.08s ease; display:flex; align-items:center; justify-content:center; gap:10px; margin:0 auto;" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">
+          <img src="assets/symbols/rudraksha_single_bead.png" alt="Single Rudraksha Bead" style="width:28px; height:28px; object-fit:contain; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+          <span>जाप करें (Tap to Chant)</span>
         </button>
       </div>
       <div style="height:6rem"></div>

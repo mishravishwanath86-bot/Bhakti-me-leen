@@ -26,7 +26,7 @@ sync_folders = [
     "assets/wall_of_fame",
     "assets/games",
     "assets/videos",
-    "assets/symbols/cards",
+    "assets/symbols",
     "assets/ai_audio",
     "assets/cards",
     "assets/gates",

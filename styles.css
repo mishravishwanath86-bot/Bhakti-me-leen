@@ -14260,12 +14260,13 @@ body {
 /* 🌟 JAPA MALA & AARTI STAGE CARDS */
 .mala-ring-container {
   position: relative;
-  width: 240px;
-  height: 240px;
-  margin: 1.5rem auto;
+  width: 260px;
+  height: 260px;
+  margin: 1.2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.1s ease;
 }
 
 .mala-bead-svg {

@@ -19298,12 +19298,38 @@ window.incrementJapaMala = function() {
   const totalEl = document.getElementById('mala-total-chants');
   if (totalEl) totalEl.textContent = totalChants;
 
+  // 1. ROTATE 108 RUDRAKSHA MALA RING (Image 2) BY 1 BEAD (3.3333 deg)
+  const ringImg = document.getElementById('rudraksha-mala-ring-img');
+  if (ringImg) {
+    const angle = (window.currentMalaCount * 3.3333);
+    ringImg.style.transform = `rotate(${angle}deg)`;
+  }
+
+  // 2. ROLL SINGLE 3D RUDRAKSHA BEAD (Image 3) WITH TACTILE BUMP
+  const beadImg = document.getElementById('single-rudraksha-bead-img');
+  if (beadImg) {
+    const beadAngle = (window.currentMalaCount * 45) % 360;
+    beadImg.style.transform = `scale(1.22) rotate(${beadAngle}deg)`;
+    setTimeout(() => {
+      beadImg.style.transform = `scale(1) rotate(${beadAngle}deg)`;
+    }, 150);
+  }
+
+  // Gentle tactile spring compression on container
+  const ringContainer = document.querySelector('.mala-ring-container');
+  if (ringContainer) {
+    ringContainer.style.transform = 'scale(0.97)';
+    setTimeout(() => { ringContainer.style.transform = 'scale(1)'; }, 100);
+  }
+
   window.updateMalaCircleProgress();
 
   // Check 1 Mala Completion (108 or custom target)
   if (window.currentMalaCount >= window.currentMalaTarget) {
     window.currentMalaCount = 0;
     if (countEl) countEl.textContent = '0';
+    if (ringImg) ringImg.style.transform = 'rotate(0deg)';
+    if (beadImg) beadImg.style.transform = 'rotate(0deg) scale(1)';
     window.updateMalaCircleProgress();
 
     let completedMalas = parseInt(localStorage.getItem('sanatan_completed_malas') || '0');
@@ -19330,7 +19356,7 @@ window.incrementJapaMala = function() {
 window.updateMalaCircleProgress = function() {
   const circle = document.getElementById('mala-circle-bar');
   if (circle) {
-    const circumference = 2 * Math.PI * 100; // 628.3
+    const circumference = 2 * Math.PI * 74; // ~464.95 for radius 74
     const progress = Math.min(1, window.currentMalaCount / window.currentMalaTarget);
     const offset = circumference - (progress * circumference);
     circle.style.strokeDashoffset = offset;
@@ -19341,6 +19367,10 @@ window.resetJapaMala = function() {
   window.currentMalaCount = 0;
   const countEl = document.getElementById('mala-count-display');
   if (countEl) countEl.textContent = '0';
+  const ringImg = document.getElementById('rudraksha-mala-ring-img');
+  if (ringImg) ringImg.style.transform = 'rotate(0deg)';
+  const beadImg = document.getElementById('single-rudraksha-bead-img');
+  if (beadImg) beadImg.style.transform = 'rotate(0deg) scale(1)';
   window.updateMalaCircleProgress();
   if (typeof showToast === 'function') {
     showToast('🔄 माला मनका 0 पर रीसेट किया गया');
