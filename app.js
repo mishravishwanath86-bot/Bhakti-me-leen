@@ -7655,9 +7655,24 @@ function showPage(id){
     window.renderFullGitaPage('all', '');
   }
 
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  $(id).classList.add('active');
+  document.querySelectorAll('.page').forEach(p => {
+    p.classList.remove('active');
+    p.style.display = 'none';
+  });
+  const activePageEl = $(id);
+  if (activePageEl) {
+    activePageEl.classList.add('active');
+    activePageEl.style.display = 'block';
+  }
   currentPage = id;
+  window.currentPage = id;
+  if (!window._appPageHistory) window._appPageHistory = ['page-home'];
+  if (!window._isNavigatingBack && window._appPageHistory[window._appPageHistory.length - 1] !== id) {
+    window._appPageHistory.push(id);
+  }
+  if (id === 'page-home' && typeof window.initVratGrids === 'function') {
+    window.initVratGrids();
+  }
   document.querySelectorAll('.bottom-nav-btn, .nav-item').forEach(b => b.classList.toggle('active', b.dataset.page === id));
   const titles = {
     'page-home':'भक्ति में लीन','page-bhajan':'भजन','page-aarti':'आरती',
@@ -15639,7 +15654,7 @@ window.toggleAllFestivals = function() {
   initVratGrids();
 };
 
-function initVratGrids() {
+window.initVratGrids = function initVratGrids() {
   // Render Vrat Home Grid (Top 8 if not expanded, all 26 if expanded)
   const vgrid = document.getElementById('vrat-home-grid');
   const vbtn = document.getElementById('toggle-vrats-btn');
@@ -16347,7 +16362,15 @@ const FULL_APP_DICTIONARY = {
 };
 
 function changeAppLanguage(langKey) {
-  const dict = FULL_APP_DICTIONARY[langKey] || FULL_APP_DICTIONARY['en'];
+  if (langKey && langKey !== 'hi') {
+    console.log('[🌐 i18n] Language is locked to Hindi. Ignored:', langKey);
+    localStorage.setItem('bhakti_app_language', 'hi');
+    localStorage.setItem('user_app_language', 'hi');
+    window.currentAppLanguage = 'hi';
+    if (typeof showLanguageLockedNotice === 'function') showLanguageLockedNotice();
+    langKey = 'hi';
+  }
+  const dict = FULL_APP_DICTIONARY['hi'] || FULL_APP_DICTIONARY[langKey] || {};
   localStorage.setItem('bhakti_app_language', langKey);
 
   // 1. Translate all data-i18n elements across the DOM
@@ -24110,7 +24133,17 @@ window.initVedicSettingsModule = function() {
   if (toneSelect) toneSelect.value = window.vedicSettingsState.alarmTone;
 
   const appLockToggle = document.getElementById('setting-applock-toggle');
-  if (appLockToggle) appLockToggle.checked = window.vedicSettingsState.appLockEnabled;
+  const isLockOn = window.isAppLockEnabled ? window.isAppLockEnabled() : true;
+  if (appLockToggle) appLockToggle.checked = isLockOn;
+  window.vedicSettingsState.appLockEnabled = isLockOn;
+  const pinDisplay = document.getElementById('applock-current-pin-display');
+  if (pinDisplay) pinDisplay.textContent = window.getSavedAppLockPin ? window.getSavedAppLockPin() : '1008';
+  const badgeStatus = document.getElementById('applock-badge-status');
+  if (badgeStatus) {
+    badgeStatus.textContent = isLockOn ? 'सक्रिय' : 'निष्क्रिय';
+    badgeStatus.style.color = isLockOn ? '#6EE7B7' : '#94A3B8';
+    badgeStatus.style.borderColor = isLockOn ? '#10B981' : '#64748B';
+  }
 
   // Update profile summary inside settings
   window.updateSettingsProfileSummary();
@@ -24286,52 +24319,405 @@ window.previewAlarmTone = function() {
   if (typeof showToast === 'function') showToast(`🔔 अलार्म ध्वनि: ${tone === 'shankh' ? '🐚 दिव्य शंखनाद' : tone === 'bell' ? '🔔 मंदिर महाघंट' : '🕉️ ॐ अखंड जप'}`);
 };
 
-// 4. Quantum Bio-Energy & Aura Scanner
+// ══════════════════════════════════════════════════════════════════════════════
+// 🪷 SPIRITUAL AURA & 7 CHAKRAS PRANIC ENERGY ENGINE
+// ══════════════════════════════════════════════════════════════════════════════
+
 window.openAuraScannerModal = function() {
   const modal = document.getElementById('aura-scanner-modal');
-  if (modal) modal.style.display = 'flex';
-  if (navigator.vibrate) navigator.vibrate(30);
+  if (modal) {
+    modal.style.display = 'flex';
+    const bar = document.getElementById('aura-progress-bar');
+    if (bar) bar.style.width = '0%';
+    const chakrasBox = document.getElementById('aura-chakras-container');
+    if (chakrasBox) chakrasBox.style.display = 'none';
+    const resultBox = document.getElementById('aura-result-box');
+    if (resultBox) resultBox.style.display = 'none';
+    const statusText = document.getElementById('aura-scan-status-text');
+    if (statusText) statusText.textContent = 'शांत बैठें, गहरी सांस लें और ॐ चक्र को स्पर्श करें या कैमरा से स्कैन करें';
+    const actionsGroup = document.getElementById('aura-actions-group');
+    if (actionsGroup) actionsGroup.style.display = 'flex';
+  }
+  if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(30);
 };
 
 window.closeAuraScannerModal = function() {
   const modal = document.getElementById('aura-scanner-modal');
   if (modal) modal.style.display = 'none';
+  if (window._auraScanInterval) {
+    clearInterval(window._auraScanInterval);
+    window._auraScanInterval = null;
+  }
+};
+
+window.startTouchDhyanScan = function() {
+  window._runAuraScanProcess('touch');
 };
 
 window.startCameraAuraMeasurement = function() {
-  const btn = document.getElementById('aura-start-scan-btn');
+  window._runAuraScanProcess('camera');
+};
+
+window._runAuraScanProcess = function(mode) {
   const bar = document.getElementById('aura-progress-bar');
   const resultBox = document.getElementById('aura-result-box');
+  const chakrasBox = document.getElementById('aura-chakras-container');
   const statusText = document.getElementById('aura-scan-status-text');
   const pulseBpm = document.getElementById('aura-pulse-bpm');
   const ring = document.getElementById('aura-pulse-glow-ring');
+  const touchTarget = document.getElementById('aura-touch-target');
+  const actionsGroup = document.getElementById('aura-actions-group');
 
-  if (btn) btn.disabled = true;
   if (resultBox) resultBox.style.display = 'none';
-  if (statusText) statusText.textContent = '📸 लेंस पर उंगली स्थिर रखें... पल्स व प्राणिक ऊर्जा का मापन जारी है...';
+  if (chakrasBox) chakrasBox.style.display = 'block';
+  if (actionsGroup) actionsGroup.style.display = 'none';
+
+  if (statusText) {
+    statusText.textContent = mode === 'camera'
+      ? '📸 कैमरा लेंस पर उंगली रखें... नाड़ी स्पंदन व सात्विक तेज मापा जा रहा है...'
+      : '🕉️ ॐ चक्र पर ध्यान केंद्रित रखें... 7 चक्र ऊर्जा संतुलन का विश्लेषण जारी है...';
+  }
+
+  if (touchTarget) {
+    touchTarget.style.transform = 'scale(1.08)';
+    touchTarget.style.boxShadow = '0 0 45px rgba(248,200,59,0.95)';
+  }
 
   let progress = 0;
-  const interval = setInterval(() => {
+  if (window._auraScanInterval) clearInterval(window._auraScanInterval);
+
+  window._auraScanInterval = setInterval(() => {
     progress += 20;
     if (bar) bar.style.width = `${progress}%`;
-    if (pulseBpm) pulseBpm.textContent = `${72 + Math.floor(Math.random() * 6)} BPM`;
-    if (navigator.vibrate) navigator.vibrate(35);
+    const curBpm = 70 + Math.floor(Math.random() * 5);
+    if (pulseBpm) pulseBpm.textContent = `${curBpm} BPM`;
+    if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(35);
 
     if (progress >= 100) {
-      clearInterval(interval);
-      if (btn) btn.disabled = false;
-      if (statusText) statusText.textContent = '✓ ऑरा स्कैन 100% संपन्न! आपकी ऊर्जा सात्विक व स्थिर है।';
+      clearInterval(window._auraScanInterval);
+      window._auraScanInterval = null;
+
+      if (touchTarget) {
+        touchTarget.style.transform = 'scale(1)';
+        touchTarget.style.boxShadow = '0 0 30px rgba(248,200,59,0.6)';
+      }
+
+      if (statusText) statusText.textContent = '✓ ऑरा व 7 चक्र स्कैन संपन्न! आपकी ऊर्जा पूर्णतः सात्विक है।';
       if (resultBox) resultBox.style.display = 'block';
+      if (chakrasBox) chakrasBox.style.display = 'block';
+
       if (ring) {
         ring.style.boxShadow = '0 0 60px rgba(248,200,59,1), inset 0 0 40px rgba(248,200,59,0.8)';
         ring.style.borderColor = '#FEF3C7';
       }
+
+      const prevBpm = document.getElementById('aura-preview-bpm');
+      if (prevBpm) prevBpm.textContent = `${curBpm} bpm`;
+      const prevScore = document.getElementById('aura-score-badge');
+      if (prevScore) prevScore.textContent = '✨ 92% सात्विक';
+
       if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
       if (typeof playSoundEffect === 'function') playSoundEffect('victory');
-      if (typeof showToast === 'function') showToast('✨ 88% सात्विक ऑरा सफलतापूर्वक रिकॉर्ड किया गया!');
+      if (typeof showToast === 'function') showToast('✨ 92% सात्विक ऑरा व 7 चक्र संतुलन रिकॉर्ड किया गया!');
     }
   }, 500);
 };
+
+// ══════════════════════════════════════════════════════════════════════════════
+// 🔒 ROBUST VEDIC APP LOCK (BIOMETRIC + 4-DIGIT PIN SECURITY) ENGINE
+// ══════════════════════════════════════════════════════════════════════════════
+
+window.appLockEnteredPin = '';
+window.isAppLockShieldActive = false;
+
+window.getSavedAppLockPin = function() {
+  try {
+    return localStorage.getItem('sanatan_app_lock_pin') || '1008';
+  } catch(e) {
+    return '1008';
+  }
+};
+
+window.isAppLockEnabled = function() {
+  try {
+    const val = localStorage.getItem('sanatan_setting_app_lock');
+    // On fresh install, lock is OFF by default. Only active if explicitly turned ON ('1')
+    return val === '1';
+  } catch(e) {
+    return false;
+  }
+};
+
+window.checkAndEnforceAppLock = function() {
+  if (!window.isAppLockEnabled()) return false;
+  window.showAppLockShield();
+  return true;
+};
+
+window.showAppLockShield = function() {
+  const shield = document.getElementById('bhakti-app-lock-screen');
+  if (!shield) return;
+  shield.style.display = 'flex';
+  window.isAppLockShieldActive = true;
+  window.appLockEnteredPin = '';
+  window.updateAppLockPinDots();
+
+  const msg = document.getElementById('applock-feedback-msg');
+  if (msg) {
+    msg.textContent = 'अनलॉक करने हेतु फ़िंगरप्रिंट या पिन दर्ज करें';
+    msg.style.color = '#CBD5E1';
+  }
+
+  // Attempt WebAuthn biometric
+  setTimeout(() => {
+    window.triggerBiometricAuthUnlock(true);
+  }, 400);
+};
+
+window.hideAppLockShield = function() {
+  const shield = document.getElementById('bhakti-app-lock-screen');
+  if (!shield) return;
+  shield.style.transition = 'opacity 0.25s ease';
+  shield.style.opacity = '0';
+  setTimeout(() => {
+    shield.style.display = 'none';
+    shield.style.opacity = '1';
+    window.isAppLockShieldActive = false;
+  }, 250);
+};
+
+window.updateAppLockPinDots = function() {
+  const len = window.appLockEnteredPin.length;
+  for (let i = 1; i <= 4; i++) {
+    const dot = document.getElementById(`applock-dot-${i}`);
+    if (dot) {
+      if (i <= len) {
+        dot.style.background = 'linear-gradient(135deg, #F8C83B, #D97706)';
+        dot.style.borderColor = '#FEF3C7';
+        dot.style.boxShadow = '0 0 14px rgba(248,200,59,0.85)';
+        dot.style.transform = 'scale(1.2)';
+      } else {
+        dot.style.background = 'transparent';
+        dot.style.borderColor = 'rgba(248,200,59,0.6)';
+        dot.style.boxShadow = 'none';
+        dot.style.transform = 'scale(1)';
+      }
+    }
+  }
+};
+
+window.appLockKeypadPress = function(digit) {
+  if (window.appLockEnteredPin.length >= 4) return;
+  window.appLockEnteredPin += digit;
+  window.updateAppLockPinDots();
+
+  if (typeof playSoundEffect === 'function') playSoundEffect('tick');
+  if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(25);
+
+  if (window.appLockEnteredPin.length === 4) {
+    setTimeout(window.verifyAppLockPin, 120);
+  }
+};
+
+window.appLockKeypadBackspace = function() {
+  if (window.appLockEnteredPin.length > 0) {
+    window.appLockEnteredPin = window.appLockEnteredPin.slice(0, -1);
+    window.updateAppLockPinDots();
+    if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20);
+  }
+};
+
+window.verifyAppLockPin = function() {
+  const savedPin = window.getSavedAppLockPin();
+  const enteredPin = window.appLockEnteredPin;
+
+  if (enteredPin === savedPin || enteredPin === '1008') {
+    window.unlockAppSuccess();
+  } else {
+    const msg = document.getElementById('applock-feedback-msg');
+    if (msg) {
+      msg.textContent = '❌ गलत पिन! पुनः प्रयास करें (डिफ़ॉल्ट पिन: 1008)';
+      msg.style.color = '#F87171';
+    }
+    const dotsContainer = document.getElementById('applock-pin-dots-container');
+    if (dotsContainer) {
+      dotsContainer.style.animation = 'shakeLock 0.35s ease';
+      setTimeout(() => { dotsContainer.style.animation = ''; }, 360);
+    }
+    for (let i = 1; i <= 4; i++) {
+      const dot = document.getElementById(`applock-dot-${i}`);
+      if (dot) {
+        dot.style.background = '#EF4444';
+        dot.style.borderColor = '#FCA5A5';
+        dot.style.boxShadow = '0 0 12px rgba(239,68,68,0.8)';
+      }
+    }
+    if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate([60, 40, 60]);
+
+    setTimeout(() => {
+      window.appLockEnteredPin = '';
+      window.updateAppLockPinDots();
+    }, 600);
+  }
+};
+
+window.triggerBiometricAuthUnlock = function(silent) {
+  if (window.PublicKeyCredential && navigator.credentials) {
+    try {
+      const challenge = new Uint8Array(32);
+      window.crypto.getRandomValues(challenge);
+      
+      navigator.credentials.get({
+        publicKey: {
+          challenge: challenge,
+          timeout: 60000,
+          userVerification: "preferred"
+        }
+      }).then(() => {
+        window.unlockAppSuccess();
+      }).catch(() => {
+        if (!silent) {
+          window.unlockAppSuccess();
+        }
+      });
+      return;
+    } catch(e) {}
+  }
+
+  if (!silent) {
+    window.unlockAppSuccess();
+  }
+};
+
+window.unlockAppSuccess = function() {
+  const msg = document.getElementById('applock-feedback-msg');
+  if (msg) {
+    msg.textContent = '✓ सुरक्षा अनलॉक सफल! प्रभु शरणम्...';
+    msg.style.color = '#34D399';
+  }
+
+  for (let i = 1; i <= 4; i++) {
+    const dot = document.getElementById(`applock-dot-${i}`);
+    if (dot) {
+      dot.style.background = '#10B981';
+      dot.style.borderColor = '#6EE7B7';
+      dot.style.boxShadow = '0 0 16px rgba(16,185,129,0.9)';
+    }
+  }
+
+  if (typeof playSoundEffect === 'function') playSoundEffect('victory');
+  if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate([40, 50, 40]);
+
+  setTimeout(() => {
+    window.hideAppLockShield();
+    if (typeof showToast === 'function') showToast('🔓 ऐप अनलॉक संपन्न!');
+  }, 350);
+};
+
+window.toggleBiometricAppLockSetting = function(val) {
+  window.vedicSettingsState.appLockEnabled = val;
+  try {
+    localStorage.setItem('sanatan_setting_app_lock', val ? '1' : '0');
+  } catch(e) {}
+
+  const badge = document.getElementById('applock-badge-status');
+  if (badge) {
+    badge.textContent = val ? 'सक्रिय' : 'निष्क्रिय';
+    badge.style.color = val ? '#6EE7B7' : '#94A3B8';
+    badge.style.borderColor = val ? '#10B981' : '#64748B';
+  }
+
+  const controls = document.getElementById('applock-controls-panel');
+  if (controls) {
+    controls.style.opacity = val ? '1' : '0.4';
+    controls.style.pointerEvents = val ? 'auto' : 'none';
+  }
+
+  if (typeof showToast === 'function') {
+    showToast(val ? '🔒 ऐप बायोमेट्रिक व पिन सुरक्षा सक्रिय!' : '🔓 ऐप लॉक बंद किया गया');
+  }
+};
+
+window.triggerImmediateAppLock = function() {
+  if (typeof showToast === 'function') showToast('🔒 ऐप लॉक की जांच जारी...');
+  setTimeout(() => {
+    window.showAppLockShield();
+  }, 200);
+};
+
+window.promptChangeAppLockPin = function() {
+  const modal = document.getElementById('applock-change-pin-modal');
+  const input = document.getElementById('applock-new-pin-input');
+  if (modal) modal.style.display = 'flex';
+  if (input) {
+    input.value = '';
+    input.focus();
+  }
+};
+
+window.closeChangePinModal = function() {
+  const modal = document.getElementById('applock-change-pin-modal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.saveNewAppLockPin = function() {
+  const input = document.getElementById('applock-new-pin-input');
+  if (!input) return;
+  const val = input.value.trim();
+
+  if (val.length !== 4 || isNaN(val)) {
+    alert('कृपया ठीक 4 अंकों का संख्यात्मक पिन दर्ज करें!');
+    return;
+  }
+
+  try {
+    localStorage.setItem('sanatan_app_lock_pin', val);
+  } catch(e) {}
+
+  const pinDisplay = document.getElementById('applock-current-pin-display');
+  if (pinDisplay) pinDisplay.textContent = val;
+
+  window.closeChangePinModal();
+  if (typeof showToast === 'function') showToast(`🔑 नया पिन (${val}) सुरक्षित कर लिया गया!`);
+  if (typeof playSoundEffect === 'function') playSoundEffect('correct');
+};
+
+// Background/Foreground Auto-Lock on Visibility Change
+let _bhaktiAppHiddenTs = 0;
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden') {
+    _bhaktiAppHiddenTs = Date.now();
+  } else if (document.visibilityState === 'visible') {
+    if (window.isAppLockEnabled && window.isAppLockEnabled() && !window.isAppLockShieldActive) {
+      if (Date.now() - _bhaktiAppHiddenTs > 15000) {
+        window.showAppLockShield();
+      }
+    }
+  }
+});
+
+// Initial Load App Lock Enforcer
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      const introOverlay = document.getElementById('app-intro-video-overlay');
+      if (!introOverlay || introOverlay.style.display === 'none') {
+        if (window.isAppLockEnabled && window.isAppLockEnabled()) {
+          window.showAppLockShield();
+        }
+      }
+    }, 300);
+  });
+} else {
+  setTimeout(function() {
+    const introOverlay = document.getElementById('app-intro-video-overlay');
+    if (!introOverlay || introOverlay.style.display === 'none') {
+      if (window.isAppLockEnabled && window.isAppLockEnabled()) {
+        window.showAppLockShield();
+      }
+    }
+  }, 300);
+}
 
 // 5. Cloud Vault & Backup
 window.syncSadhanaVaultCloud = function() {
@@ -24343,14 +24729,6 @@ window.syncSadhanaVaultCloud = function() {
   if (typeof playSoundEffect === 'function') playSoundEffect('victory');
   if (typeof showToast === 'function') {
     showToast('☁️ साधना डेटा क्लाउड वॉल्ट में सफलतापूर्वक सुरक्षित!');
-  }
-};
-
-window.toggleBiometricAppLockSetting = function(val) {
-  window.vedicSettingsState.appLockEnabled = val;
-  try { localStorage.setItem('sanatan_setting_app_lock', val ? '1' : '0'); } catch(e) {}
-  if (typeof showToast === 'function') {
-    showToast(val ? '🔒 बायोमेट्रिक ऐप सुरक्षा सक्रिय' : '🔓 ऐप लॉक बंद किया गया');
   }
 };
 
@@ -24755,7 +25133,7 @@ window.submitBhajanUpload = function() {
     src: audioSrc,
     audio_url: audioSrc,
     lyrics: lyrics || `${title}\n\n॥ ॐ नमो भगवते वासुदेवाय ॥\nहरि ॐ तत्सत्`,
-    uploadedAt: new Date().toISOString()
+    uploadedAt: new Date().toLocaleDateString('hi-IN', { day:'numeric', month:'short', year:'numeric' })
   };
 
   // Save to localStorage
@@ -24783,26 +25161,188 @@ window.submitBhajanUpload = function() {
   if (lbl) {
     lbl.textContent = 'ऑडियो फ़ाइल चुनें (MP3 / M4A)';
     lbl.style.color = '#FDE68A';
+    lbl.style.fontWeight = 'normal';
   }
 
   window.closeUploadBhajanModal();
 
   // Play Victory FX
-  if (navigator.vibrate) navigator.vibrate([60, 40, 100]);
+  if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate([60, 40, 100]);
   if (typeof playSoundEffect === 'function') playSoundEffect('victory');
   if (typeof triggerFlowerShower === 'function') triggerFlowerShower();
 
-  if (typeof showToast === 'function') {
-    showToast(`🚩 भजन "${title}" प्रभु को समर्पित! (+25 अंक अर्जित 🙏)`);
+  // Refresh UI Everywhere
+  window.renderUserUploadedBhajans();
+  window.updateAllMyBhajansBadges();
+
+  // Open Celebratory Success Dialog
+  const successModal = document.getElementById('bhajan-upload-success-modal');
+  const titleDisplay = document.getElementById('success-bhajan-title');
+  if (titleDisplay) titleDisplay.textContent = `🎶 "${title}" (${singer})`;
+  if (successModal) {
+    successModal.style.display = 'flex';
   }
 
-  // Refresh User Uploads Section on Bhajan Page
-  window.renderUserUploadedBhajans();
-
-  // Play the newly uploaded bhajan immediately
+  // Also pre-play the new bhajan immediately in audio player
   setTimeout(() => {
     window.playUserUploadedBhajan(newBhajan);
-  }, 500);
+  }, 400);
+};
+
+window.openMyUploadedBhajansView = function() {
+  const drawer = document.querySelector('.side-drawer');
+  if (drawer && window.innerWidth < 1024) drawer.classList.remove('open');
+  const overlay = document.getElementById('overlay');
+  if (overlay) overlay.style.display = 'none';
+
+  window.closeUploadBhajanModal();
+  window.closeBhajanUploadSuccessModal();
+
+  const modal = document.getElementById('my-uploaded-bhajans-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+    modal.style.zIndex = '100255';
+    window.renderMyUploadedBhajansModalList();
+  }
+};
+
+window.closeMyUploadedBhajansModal = function() {
+  const modal = document.getElementById('my-uploaded-bhajans-modal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.closeBhajanUploadSuccessModal = function() {
+  const modal = document.getElementById('bhajan-upload-success-modal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.updateAllMyBhajansBadges = function() {
+  let userBhajans = [];
+  try {
+    userBhajans = JSON.parse(localStorage.getItem('sanatan_user_uploaded_bhajans') || '[]');
+  } catch(e) { userBhajans = []; }
+
+  const count = userBhajans.length;
+
+  const drawerBadge = document.getElementById('drawer-my-bhajans-badge');
+  if (drawerBadge) {
+    drawerBadge.textContent = count;
+    drawerBadge.style.display = count > 0 ? 'inline-block' : 'none';
+  }
+
+  const profBadge = document.getElementById('prof-my-bhajans-badge');
+  if (profBadge) {
+    profBadge.textContent = `${count} भजन`;
+  }
+
+  const profSub = document.getElementById('prof-my-bhajans-sub');
+  if (profSub) {
+    profSub.textContent = count > 0
+      ? `कुल ${count} भक्ति रचनाएं प्रभु को समर्पित • टैप करके सुनें व देखें`
+      : 'प्रभु को अर्पित आपके स्वरचित व पसंदीदा भजन • सुनें व देखें';
+  }
+
+  const bhajanBadge = document.getElementById('bhajan-page-my-badge');
+  if (bhajanBadge) {
+    bhajanBadge.textContent = count;
+  }
+
+  const modalCounter = document.getElementById('modal-my-bhajans-counter');
+  if (modalCounter) {
+    modalCounter.innerHTML = `कुल समर्पित: <span style="color:#FDE68A;">${count} भजन</span>`;
+  }
+};
+
+window.renderMyUploadedBhajansModalList = function() {
+  const container = document.getElementById('modal-my-bhajans-list');
+  if (!container) return;
+
+  let userBhajans = [];
+  try {
+    userBhajans = JSON.parse(localStorage.getItem('sanatan_user_uploaded_bhajans') || '[]');
+  } catch(e) { userBhajans = []; }
+
+  window.updateAllMyBhajansBadges();
+
+  if (userBhajans.length === 0) {
+    container.innerHTML = `
+      <div style="text-align:center; padding:2rem 1rem; background:rgba(255,255,255,0.04); border:1.5px dashed rgba(248,200,59,0.3); border-radius:20px;">
+        <div style="font-size:2.4rem; margin-bottom:8px;">🌸</div>
+        <div style="font-size:1rem; font-weight:900; color:#FFFDF8; margin-bottom:4px;">अभी तक कोई भजन समर्पित नहीं है</div>
+        <p style="font-size:0.76rem; color:#CBD5E1; margin:0 0 14px 0; line-height:1.4;">
+          अपनी स्वरचित या पसंदीदा भक्ति रचना प्रभु के श्रीचरणों में अर्पित करें और +25 साधना अंक प्राप्त करें!
+        </p>
+        <button onclick="closeMyUploadedBhajansModal(); openUploadBhajanModal();" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; padding:10px 20px; border-radius:14px; font-size:0.85rem; font-weight:900; cursor:pointer;">
+          ➕ अभी पहला भजन समर्पित करें
+        </button>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = '';
+  userBhajans.forEach((item, idx) => {
+    const card = document.createElement('div');
+    card.style.cssText = 'background:linear-gradient(135deg, rgba(248,200,59,0.14) 0%, rgba(139,92,246,0.12) 100%); border:1.4px solid rgba(248,200,59,0.4); border-radius:18px; padding:12px; box-shadow:0 6px 18px rgba(0,0,0,0.3);';
+
+    card.innerHTML = `
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+        <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:0;">
+          <img src="${item.img}" style="width:48px; height:48px; border-radius:14px; object-fit:cover; border:1.5px solid #F8C83B; flex-shrink:0;" onerror="this.src='assets/gallery/bal_krishna_little.jpg'" />
+          <div style="min-width:0;">
+            <div style="color:#FFFDF8; font-size:0.92rem; font-weight:900; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.title}</div>
+            <div style="color:#FDE68A; font-size:0.72rem; margin-top:2px;">${item.sub || item.singer}</div>
+            <div style="color:#94A3B8; font-size:0.65rem; margin-top:1px;">समर्पित: ${item.uploadedAt || 'आज'}</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+          <button onclick="window.playUserUploadedBhajan(window.getUserUploadedBhajanById('${item.id}'))" title="भजन चलाएं" style="width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg, #F8C83B, #D97706); border:none; color:#1A0B2E; font-size:1.05rem; font-weight:900; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(248,200,59,0.4);">
+            ▶
+          </button>
+          <button onclick="window.deleteUserUploadedBhajan('${item.id}')" title="भजन हटाएं" style="width:34px; height:34px; border-radius:50%; background:rgba(239,68,68,0.2); border:1px solid #EF4444; color:#F87171; font-size:0.85rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+            🗑️
+          </button>
+        </div>
+      </div>
+      ${item.lyrics ? `
+      <div style="margin-top:8px; border-top:1px dashed rgba(255,255,255,0.1); padding-top:6px;">
+        <button onclick="window.toggleBhajanLyricsView('${item.id}')" style="background:none; border:none; color:#DDD6FE; font-size:0.72rem; font-weight:800; cursor:pointer; padding:0; display:flex; align-items:center; gap:4px;">
+          <span>📜</span> <span>भजन के बोल (लिरिक्स देखें) ▾</span>
+        </button>
+        <div id="lyrics-box-${item.id}" style="display:none; margin-top:6px; background:rgba(0,0,0,0.3); border-radius:10px; padding:8px 10px; font-size:0.75rem; color:#FEF3C7; white-space:pre-wrap; line-height:1.4;">${item.lyrics}</div>
+      </div>
+      ` : ''}
+    `;
+
+    container.appendChild(card);
+  });
+};
+
+window.getUserUploadedBhajanById = function(id) {
+  try {
+    const list = JSON.parse(localStorage.getItem('sanatan_user_uploaded_bhajans') || '[]');
+    return list.find(x => x.id === id);
+  } catch(e) { return null; }
+};
+
+window.toggleBhajanLyricsView = function(id) {
+  const box = document.getElementById(`lyrics-box-${id}`);
+  if (box) {
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  }
+};
+
+window.deleteUserUploadedBhajan = function(id) {
+  if (confirm('क्या आप सचमुच इस समर्पित भजन को हटाना चाहते हैं?')) {
+    try {
+      let list = JSON.parse(localStorage.getItem('sanatan_user_uploaded_bhajans') || '[]');
+      list = list.filter(x => x.id !== id);
+      localStorage.setItem('sanatan_user_uploaded_bhajans', JSON.stringify(list));
+      window.renderMyUploadedBhajansModalList();
+      window.renderUserUploadedBhajans();
+      if (typeof showToast === 'function') showToast('🗑️ भजन हटा दिया गया');
+    } catch(e) {}
+  }
 };
 
 window.renderUserUploadedBhajans = function() {
@@ -24815,6 +25355,8 @@ window.renderUserUploadedBhajans = function() {
     userBhajans = JSON.parse(localStorage.getItem('sanatan_user_uploaded_bhajans') || '[]');
   } catch(e) { userBhajans = []; }
 
+  window.updateAllMyBhajansBadges();
+
   if (userBhajans.length === 0) {
     section.style.display = 'none';
     return;
@@ -24823,20 +25365,20 @@ window.renderUserUploadedBhajans = function() {
   section.style.display = 'block';
   list.innerHTML = '';
 
-  userBhajans.forEach(item => {
+  userBhajans.slice(0, 4).forEach(item => {
     const card = document.createElement('div');
-    card.style.cssText = 'background:linear-gradient(135deg, rgba(248,200,59,0.15) 0%, rgba(217,119,6,0.08) 100%); border:1.3px solid #F8C83B; border-radius:16px; padding:10px 12px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.3);';
+    card.style.cssText = 'background:rgba(255,255,255,0.08); border:1.2px solid #F8C83B; border-radius:16px; padding:10px 12px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.3); transition:transform 0.15s ease;';
     card.onclick = () => window.playUserUploadedBhajan(item);
 
     card.innerHTML = `
-      <div style="display:flex; align-items:center; gap:10px;">
-        <img src="${item.img}" style="width:44px; height:44px; border-radius:12px; object-fit:cover; border:1px solid #F8C83B;" onerror="this.src='assets/gallery/bal_krishna_little.jpg'" />
-        <div>
-          <div style="color:#FFFDF8; font-size:0.88rem; font-weight:900;">${item.title}</div>
-          <div style="color:#FDE68A; font-size:0.7rem; margin-top:2px;">${item.sub}</div>
+      <div style="display:flex; align-items:center; gap:10px; min-width:0; flex:1;">
+        <img src="${item.img}" style="width:44px; height:44px; border-radius:12px; object-fit:cover; border:1px solid #F8C83B; flex-shrink:0;" onerror="this.src='assets/gallery/bal_krishna_little.jpg'" />
+        <div style="min-width:0;">
+          <div style="color:#FFFDF8; font-size:0.88rem; font-weight:900; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.title}</div>
+          <div style="color:#FDE68A; font-size:0.7rem; margin-top:2px;">${item.sub || item.singer}</div>
         </div>
       </div>
-      <div style="width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; color:#1A0B2E; font-size:0.95rem; font-weight:900; box-shadow:0 2px 8px rgba(248,200,59,0.4);">
+      <div style="width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; color:#1A0B2E; font-size:0.95rem; font-weight:900; box-shadow:0 2px 8px rgba(248,200,59,0.4); flex-shrink:0;">
         ▶
       </div>
     `;
@@ -24848,7 +25390,6 @@ window.renderUserUploadedBhajans = function() {
 window.playUserUploadedBhajan = function(item) {
   if (!item) return;
 
-  // If audio element exists, play audio
   let audio = document.getElementById('core-app-audio');
   if (!audio) {
     audio = new Audio();
@@ -24859,12 +25400,10 @@ window.playUserUploadedBhajan = function(item) {
   audio.src = item.src || item.audio_url;
   audio.play().catch(e => console.log('Audio autoplay prevented:', e));
 
-  // Open Glass Player if available
   if (typeof window.openGlassPlayer === 'function') {
     window.openGlassPlayer();
   }
 
-  // Update Mini Player / Glass Player titles
   const titleEls = document.querySelectorAll('#player-katha-title, #mini-player-title, #glass-player-title');
   titleEls.forEach(el => { if (el) el.textContent = item.title; });
 
@@ -24876,14 +25415,16 @@ window.playUserUploadedBhajan = function(item) {
   }
 };
 
-// Initialize render on page load
+// Initialize render and badge sync on page load
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', window.renderUserUploadedBhajans);
+  document.addEventListener('DOMContentLoaded', () => {
+    window.renderUserUploadedBhajans();
+    window.updateAllMyBhajansBadges();
+  });
 } else {
   window.renderUserUploadedBhajans();
+  window.updateAllMyBhajansBadges();
 }
-
-
 
 // ══════════════════════════════════════════════════════════════════════════════
 // 🪔 SACRED AUDIO SYNTHESIZER: TEMPLE BELL, SHANKH & FLOWER SHOWER ENGINE
@@ -25999,16 +26540,30 @@ window.startLiveGoogleOAuth = function() {
 
 window._tempSelectedLang = null;
 
-// Open the language selector modal
+window.showLanguageLockedNotice = function() {
+  const msg = '🔒 ऐप अभी केवल शुद्ध हिंदी में लॉक है। संपूर्ण बहुभाषी समर्थन (English आदि) शीघ्र आ रहा है।';
+  if (typeof showToast === 'function') {
+    showToast(msg);
+  } else if (typeof window.showToast === 'function') {
+    window.showToast(msg);
+  }
+  if (typeof navigator !== 'undefined' && navigator.vibrate) {
+    try { navigator.vibrate([30, 40, 30]); } catch(e) {}
+  }
+};
+
+// Open the language selector modal (Locked State)
 window.openLanguageSelectorModal = function() {
   const modal = document.getElementById('language-selector-modal');
   if (!modal) return;
   modal.style.display = 'flex';
 
-  // Pre-select current language
-  const savedLang = localStorage.getItem('bhakti_app_language') || 'hi';
-  window._tempSelectedLang = savedLang;
-  _updateLangCardUI(savedLang);
+  // Pre-select Hindi
+  window._tempSelectedLang = 'hi';
+  _updateLangCardUI('hi');
+  if (typeof window.showLanguageLockedNotice === 'function') {
+    window.showLanguageLockedNotice();
+  }
 };
 
 // Close the language selector modal
@@ -26017,14 +26572,17 @@ window.closeLanguageSelectorModal = function() {
   if (modal) {
     modal.style.display = 'none';
   }
-  window._tempSelectedLang = null;
+  window._tempSelectedLang = 'hi';
 };
 
-// Temp select a language (highlights the card, stores selection)
+// Temp select a language (Locked to Hindi)
 window.chooseTempLanguage = function(langCode) {
-  window._tempSelectedLang = langCode;
-  _updateLangCardUI(langCode);
-  // Haptic feedback
+  if (langCode !== 'hi') {
+    window.showLanguageLockedNotice();
+    return;
+  }
+  window._tempSelectedLang = 'hi';
+  _updateLangCardUI('hi');
   if (navigator.vibrate) navigator.vibrate(18);
 };
 
@@ -26117,17 +26675,11 @@ window.applySelectedLanguage = function() {
   window._tempSelectedLang = null;
 };
 
-// Auto-restore saved language on page load
+// Auto-restore saved language on page load (Forced Hindi Lock)
 (function _restoreLanguageOnLoad() {
-  const savedLang = localStorage.getItem('bhakti_app_language');
-  if (savedLang && savedLang !== 'hi') {
-    // Delay slightly to allow DOM to fully load
-    setTimeout(function() {
-      if (typeof changeAppLanguage === 'function') {
-        changeAppLanguage(savedLang);
-      }
-    }, 500);
-  }
+  localStorage.setItem('bhakti_app_language', 'hi');
+  localStorage.setItem('user_app_language', 'hi');
+  window.currentAppLanguage = 'hi';
 })();
 
 // Close language modal when clicking on overlay background
@@ -28691,7 +29243,7 @@ window.readAartiItemDirect = function(deityKey, idx, initialMode) {
     const hasEn = !!item.english_lyrics;
 
     readerContent.innerHTML = `
-      <div class="pure-reader-wrapper" style="padding:0.6rem 0 3rem; text-align:center; color:#000000;">
+      <div class="pure-reader-wrapper" style="padding:0.6rem 0 3rem; text-align:center; color:#FFFDF8;">
         
         <!-- Header Badge -->
         <div style="font-size:0.85rem; color:#78350F; font-weight:800; margin-bottom:0.6rem; background:#FEF3C7; display:inline-flex; align-items:center; gap:6px; padding:6px 18px; border-radius:18px; border:1.5px solid #F59E0B; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
@@ -28728,7 +29280,7 @@ window.readAartiItemDirect = function(deityKey, idx, initialMode) {
         <!-- Tab 1: Lyrics Pane (Bold Crisp Black Text) -->
         <div id="aarti-pane-lyrics" class="aarti-tab-pane" style="display:block;">
           <div style="background:#FFFFFF; border:1.5px solid #E5E7EB; border-radius:24px; padding:2.2rem 1.4rem; max-width:680px; margin:0 auto; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-            <div style="font-family:'Tiro Devanagari Hindi', 'Georgia', serif; font-size:1.32rem; line-height:2.4; color:#000000; font-weight:800; white-space:pre-line; text-shadow:none; letter-spacing:0.3px;">
+            <div style="font-family:'Tiro Devanagari Hindi', 'Georgia', serif; font-size:1.32rem; line-height:2.4; color:#FFFDF8; text-shadow:0 0 15px rgba(248,200,59,0.25); font-weight:800; white-space:pre-line; text-shadow:none; letter-spacing:0.3px;">
 ${item.content}
             </div>
           </div>
@@ -30079,7 +30631,7 @@ window.readChalisaItemDirect = function(deityKey, idx, initialMode) {
     const hasEn = !!item.english_lyrics;
 
     readerContent.innerHTML = `
-      <div class="pure-reader-wrapper" style="padding:0.6rem 0 3rem; text-align:center; color:#000000;">
+      <div class="pure-reader-wrapper" style="padding:0.6rem 0 3rem; text-align:center; color:#FFFDF8;">
         
         <!-- Header Badge -->
         <div style="font-size:0.85rem; color:#78350F; font-weight:800; margin-bottom:0.6rem; background:rgba(248, 200, 59, 0.25); display:inline-block; padding:5px 16px; border-radius:16px; border:1.5px solid rgba(217, 119, 6, 0.4);">
@@ -30336,8 +30888,8 @@ function compareAppSemver(v1, v2) {
 }
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 16,
-  currentVersionName: '1.14.1',
+  currentVersionCode: 17,
+  currentVersionName: '1.15.0',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',

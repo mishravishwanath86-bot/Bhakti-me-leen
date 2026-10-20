@@ -163,7 +163,9 @@ class RangeHTTPRequestHandler(BaseHTTPRequestHandler):
 
         # Handle API Routes
         if path.startswith("/api/"):
-            status_code, ctype, res_bytes = handle_api_request("GET", path, params, None)
+            client_ip = self.client_address[0] if hasattr(self, 'client_address') and self.client_address else "127.0.0.1"
+            headers_dict = dict(self.headers) if hasattr(self, 'headers') and self.headers else {}
+            status_code, ctype, res_bytes = handle_api_request("GET", path, params, None, headers=headers_dict, client_ip=client_ip)
             self.send_response(status_code)
             self.send_header('Content-Type', ctype)
             self.send_header('Content-Length', str(len(res_bytes)))
@@ -267,7 +269,9 @@ class RangeHTTPRequestHandler(BaseHTTPRequestHandler):
     def _dispatch_mutation(self, method: str):
         path, params = self._parse_query_params(self.path)
         body = self._read_body_json()
-        status_code, ctype, res_bytes = handle_api_request(method, path, params, body)
+        client_ip = self.client_address[0] if hasattr(self, 'client_address') and self.client_address else "127.0.0.1"
+        headers_dict = dict(self.headers) if hasattr(self, 'headers') and self.headers else {}
+        status_code, ctype, res_bytes = handle_api_request(method, path, params, body, headers=headers_dict, client_ip=client_ip)
         self.send_response(status_code)
         self.send_header('Content-Type', ctype)
         self.send_header('Content-Length', str(len(res_bytes)))

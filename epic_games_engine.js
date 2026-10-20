@@ -5579,6 +5579,8 @@
 var pendingGameDestination = 'page-epic-games';
 var pendingGameCallback = null;
 
+var _epicVideoFallbackTimer = null;
+
 function triggerEpicGamesLaunchWithVideo(destination, callback) {
   pendingGameDestination = destination || 'page-epic-games';
   pendingGameCallback = (typeof callback === 'function') ? callback : null;
@@ -5600,10 +5602,21 @@ function triggerEpicGamesLaunchWithVideo(destination, callback) {
   }
 
   modal.style.display = 'flex';
-  // Trigger animation next frame
+  modal.style.zIndex = '100290';
   requestAnimationFrame(function() {
     modal.classList.add('active');
   });
+
+  // Tap anywhere on modal to immediately enter games
+  modal.onclick = function() {
+    closeVideoAndOpenGame();
+  };
+
+  // 4-second safety guard: never leave user stranded on black screen
+  if (_epicVideoFallbackTimer) clearTimeout(_epicVideoFallbackTimer);
+  _epicVideoFallbackTimer = setTimeout(function() {
+    closeVideoAndOpenGame();
+  }, 4200);
 
   // Video completion listener: automatically open game when finished
   video.onended = function() {
@@ -5630,11 +5643,17 @@ function triggerEpicGamesLaunchWithVideo(destination, callback) {
   }
 }
 
-function skipEpicGamesIntroVideo() {
+function skipEpicGamesIntroVideo(e) {
+  if (e && e.stopPropagation) e.stopPropagation();
   closeVideoAndOpenGame();
 }
 
 function closeVideoAndOpenGame() {
+  if (_epicVideoFallbackTimer) {
+    clearTimeout(_epicVideoFallbackTimer);
+    _epicVideoFallbackTimer = null;
+  }
+
   var modal = document.getElementById('epic-games-video-modal');
   var video = document.getElementById('epic-games-intro-video');
 
@@ -5648,9 +5667,7 @@ function closeVideoAndOpenGame() {
 
   if (modal) {
     modal.classList.remove('active');
-    setTimeout(function() {
-      modal.style.display = 'none';
-    }, 280);
+    modal.style.display = 'none';
   }
 
   proceedToTargetGame();
@@ -5661,12 +5678,19 @@ function proceedToTargetGame() {
     var cb = pendingGameCallback;
     pendingGameCallback = null;
     cb();
-  } else if (pendingGameDestination) {
-    var dest = pendingGameDestination;
+  } else {
+    var dest = pendingGameDestination || 'page-epic-games';
     pendingGameDestination = 'page-epic-games';
     if (typeof showPage === 'function') {
       showPage(dest);
     }
+    var page = document.getElementById(dest);
+    if (page) {
+      page.classList.add('active');
+      page.style.display = 'block';
+    }
+    // Clean up any lingering full-screen hide states
+    document.body.classList.remove('game-modal-open');
   }
 }
 

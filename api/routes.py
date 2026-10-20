@@ -1,12 +1,15 @@
 # ====================================================================
-# BHAKTI APP: REST API CONTROLLER
+# BHAKTI APP: REST API CONTROLLER (SECURITY HARDENED)
 # Connects HTTP Requests to Database Engine with JSON Responses
 # ====================================================================
 
 import os
+import re
 import json
+import time
+import traceback
 import urllib.parse
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional, List
 from db.database import BhaktiDB
 from core.validator import validate_content_data
 from bulk_import.importer import run_bulk_import
@@ -14,13 +17,95 @@ from core.ai_audio_engine import generate_ai_bhakti_audio, AI_AUDIO_DIR
 
 db = BhaktiDB()
 
-def handle_api_request(method: str, path: str, query_params: Dict[str, str], body_data: Any) -> Tuple[int, str, bytes]:
+# --------------------------------------------------------------------
+# SECURITY GUARD 1: ADMIN AUTHENTICATION
+# --------------------------------------------------------------------
+ADMIN_SECRET_KEY = os.environ.get("BHAKTI_ADMIN_KEY", "bhakti_admin_key_2026")
+
+def verify_admin_auth(headers: Optional[Dict[str, str]], query_params: Dict[str, str]) -> bool:
     """
-    Dispatches API requests and returns (status_code, content_type, response_bytes).
+    Verifies admin authorization from headers (X-Admin-Key, Authorization) or query parameters.
+    """
+    if not headers:
+        headers = {}
+    h_lower = {str(k).lower(): str(v) for k, v in headers.items()}
+
+    # 1. Header: X-Admin-Key
+    if h_lower.get('x-admin-key') == ADMIN_SECRET_KEY:
+        return True
+
+    # 2. Header: Authorization Bearer
+    auth = h_lower.get('authorization', '')
+    if auth.startswith('Bearer ') and auth[7:].strip() == ADMIN_SECRET_KEY:
+        return True
+
+    # 3. Query Param: admin_key or api_key
+    if query_params.get('admin_key') == ADMIN_SECRET_KEY or query_params.get('api_key') == ADMIN_SECRET_KEY:
+        return True
+
+    return False
+
+# --------------------------------------------------------------------
+# SECURITY GUARD 2: IN-MEMORY SLIDING WINDOW RATE LIMITER
+# --------------------------------------------------------------------
+_rate_limit_cache: Dict[str, List[float]] = {}
+
+def is_rate_limited(client_ip: str, action: str, max_calls: int = 5, window_sec: int = 60) -> Tuple[bool, int]:
+    """
+    Returns (is_limited, retry_after_seconds)
+    """
+    now = time.time()
+    key = f"{client_ip}:{action}"
+    timestamps = _rate_limit_cache.get(key, [])
+    # Keep timestamps within active window
+    timestamps = [t for t in timestamps if now - t < window_sec]
+    if len(timestamps) >= max_calls:
+        retry_after = int(window_sec - (now - timestamps[0])) + 1
+        _rate_limit_cache[key] = timestamps
+        return True, max(1, retry_after)
+    timestamps.append(now)
+    _rate_limit_cache[key] = timestamps
+    return False, 0
+
+# --------------------------------------------------------------------
+# SECURITY GUARD 3: INPUT SANITIZATION HELPER
+# --------------------------------------------------------------------
+def sanitize_input_text(text: Any) -> str:
+    """Strips executable script tags and dangerous HTML attributes."""
+    if not isinstance(text, str):
+        return ""
+    # Strip script and style tags
+    clean = re.sub(r'<script.*?>.*?</script>', '', text, flags=re.IGNORECASE | re.DOTALL)
+    clean = re.sub(r'<style.*?>.*?</style>', '', clean, flags=re.IGNORECASE | re.DOTALL)
+    clean = re.sub(r'on\w+="[^"]*"', '', clean, flags=re.IGNORECASE)
+    clean = re.sub(r"on\w+='[^']*'", '', clean, flags=re.IGNORECASE)
+    return clean.strip()
+
+# --------------------------------------------------------------------
+# MAIN API REQUEST DISPATCHER
+# --------------------------------------------------------------------
+def handle_api_request(
+    method: str, 
+    path: str, 
+    query_params: Dict[str, str], 
+    body_data: Any,
+    headers: Optional[Dict[str, str]] = None,
+    client_ip: str = "127.0.0.1"
+) -> Tuple[int, str, bytes]:
+    """
+    Dispatches API requests with Security Gates and returns (status_code, content_type, response_bytes).
     """
     headers_ct = "application/json; charset=utf-8"
 
     try:
+        # SECURITY ENFORCEMENT: Protect all Admin endpoints (/api/admin/*)
+        if path.startswith("/api/admin/"):
+            if not verify_admin_auth(headers, query_params):
+                return (401, headers_ct, json.dumps({
+                    'success': False,
+                    'error': 'अनधिकृत अनुरोध: मान्य Admin API Key आवश्यक है (Unauthorized: Valid Admin API Key required)'
+                }, ensure_ascii=False).encode('utf-8'))
+
         # 1. GET /api/masters (Deities, Content Types, Categories)
         if method == "GET" and path == "/api/masters":
             conn = db.get_connection()
@@ -74,7 +159,7 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
             # If search query provided
             q = query_params.get('q') or query_params.get('search')
             if q:
-                res = db.search_content(query=q, content_type=ctype, deity_id=deity, status=status, has_audio=has_audio, audio_source=audio_source, limit=limit, page=page)
+                res = db.search_content(query=sanitize_input_text(q), content_type=ctype, deity_id=deity, status=status, has_audio=has_audio, audio_source=audio_source, limit=limit, page=page)
             else:
                 res = db.get_content_paginated(
                     content_type=ctype,
@@ -107,7 +192,7 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
             if status in ('all', '', 'null', 'undefined'): status = None
 
             if q:
-                res = db.search_content(query=q, content_type=ctype, deity_id=deity, has_audio=True, audio_source=source, status=status, limit=limit, page=page)
+                res = db.search_content(query=sanitize_input_text(q), content_type=ctype, deity_id=deity, has_audio=True, audio_source=source, status=status, limit=limit, page=page)
             else:
                 res = db.get_content_paginated(content_type=ctype, deity_id=deity, has_audio=True, audio_source=source, status=status, limit=limit, page=page)
 
@@ -176,10 +261,18 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
             ok = db.delete_content(item_id)
             return (200 if ok else 404, headers_ct, json.dumps({'success': ok, 'id': item_id}).encode('utf-8'))
 
-        # 9. POST /api/admin/bulk-import (JSON Payload)
+        # 9. POST /api/admin/bulk-import (JSON Payload) - With Rate Limiting
         if method == "POST" and path == "/api/admin/bulk-import":
             if not body_data:
                 return (400, headers_ct, json.dumps({'error': 'Missing payload'}).encode('utf-8'))
+
+            is_limited, retry_sec = is_rate_limited(client_ip, "bulk_import", max_calls=10, window_sec=60)
+            if is_limited:
+                return (429, headers_ct, json.dumps({
+                    'success': False,
+                    'error': f'अनुरोध सीमा पार: कृपया {retry_sec} सेकंड प्रतीक्षा करें (Rate limit exceeded: wait {retry_sec}s)',
+                    'retry_after': retry_sec
+                }, ensure_ascii=False).encode('utf-8'))
             
             items = body_data if isinstance(body_data, list) else body_data.get('items', [])
             on_dup = query_params.get('on_duplicate', 'skip')
@@ -203,20 +296,32 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
             res = db.bulk_insert(items, on_duplicate=on_dup)
             return (200, headers_ct, json.dumps(res, ensure_ascii=False).encode('utf-8'))
 
-        # 10. POST /api/ai-audio/generate (On-Demand AI Bhakti Singing & Chanting Generation)
+        # 10. POST /api/ai-audio/generate - With Rate Limiting & Input Length Protection
         if method == "POST" and path == "/api/ai-audio/generate":
             if not isinstance(body_data, dict):
                 return (400, headers_ct, json.dumps({'success': False, 'error': 'Invalid JSON body'}).encode('utf-8'))
+
+            # Rate Limit: max 5 requests per minute per IP
+            is_limited, retry_sec = is_rate_limited(client_ip, "ai_audio_gen", max_calls=5, window_sec=60)
+            if is_limited:
+                return (429, headers_ct, json.dumps({
+                    'success': False,
+                    'error': f'अनुरोध सीमा पार: AI ऑडियो निर्माण हेतु कृपया {retry_sec} सेकंड प्रतीक्षा करें (Rate limit: wait {retry_sec}s)',
+                    'retry_after': retry_sec
+                }, ensure_ascii=False).encode('utf-8'))
             
             content_id = body_data.get('content_id') or body_data.get('id') or 'custom'
-            text = body_data.get('text') or body_data.get('content') or ''
-            title = body_data.get('title') or ''
+            text = sanitize_input_text(body_data.get('text') or body_data.get('content') or '')
+            title = sanitize_input_text(body_data.get('title') or '')
             content_type = body_data.get('content_type') or body_data.get('type') or 'aarti'
             voice = body_data.get('voice') or 'male'
             speed = float(body_data.get('speed', 1.0))
 
             if not text:
-                return (400, headers_ct, json.dumps({'success': False, 'error': 'टेक्स्ट रिक्त है (Text required)'}).encode('utf-8'))
+                return (400, headers_ct, json.dumps({'success': False, 'error': 'टेक्स्ट रिक्त है (Text required)'}, ensure_ascii=False).encode('utf-8'))
+
+            if len(text) > 5000:
+                return (400, headers_ct, json.dumps({'success': False, 'error': 'टेक्स्ट सीमा पार (अधिकतम 5000 वर्ण)'}, ensure_ascii=False).encode('utf-8'))
 
             result = generate_ai_bhakti_audio(
                 content_id=str(content_id),
@@ -249,5 +354,9 @@ def handle_api_request(method: str, path: str, query_params: Dict[str, str], bod
 
         return (404, headers_ct, json.dumps({'error': 'Not Found'}).encode('utf-8'))
 
+    # SECURITY GUARD 5: MASK INTERNAL SERVER TRACES IN PRODUCTION
     except Exception as e:
-        return (500, headers_ct, json.dumps({'error': str(e)}).encode('utf-8'))
+        traceback.print_exc()
+        is_debug = os.environ.get("DEBUG", "0") == "1"
+        error_msg = str(e) if is_debug else "सर्वर पर आंतरिक तकनीकी समस्या आई। कृपया कुछ समय बाद पुनः प्रयास करें। (Internal Server Error)"
+        return (500, headers_ct, json.dumps({'success': False, 'error': error_msg}, ensure_ascii=False).encode('utf-8'))

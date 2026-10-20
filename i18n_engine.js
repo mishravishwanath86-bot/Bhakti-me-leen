@@ -53,7 +53,7 @@ window.i18nLocales = {
       "title": "साधना नियंत्रण एवं सेटिंग्स",
       "haptics": "दिव्य अनुभूति एवं हैप्टिक्स",
       "brahmaMuhurta": "ब्रह्म मुहूर्त जागरण अलार्म",
-      "bioAura": "क्वांटम बायो-एनर्जी व ऑरा विज़ुअलाइज़र",
+      "bioAura": "आत्मिक तेज व ऑरा मापक",
       "vault": "साधना वॉल्ट व क्लाउड सिंक",
       "language": "ऐप की भाषा",
       "selectLanguage": "अपनी पसंदीदा भाषा चुनें",
@@ -616,21 +616,24 @@ window.t = function(keyPath, defaultText) {
   return defaultText || keyPath;
 };
 
-// Set and apply language across the entire application instantly
+// Set and apply language across the entire application instantly (Locked to Hindi)
 window.setAppLanguage = function(langCode, suppressToast) {
-  if (!window.i18nLocales[langCode]) {
-    console.warn(`Language ${langCode} not found, defaulting to 'hi'`);
-    langCode = 'hi';
+  if (langCode && langCode !== 'hi') {
+    console.log('[🌐 i18n] Language switch locked to Hindi. Blocked:', langCode);
+    if (!suppressToast && typeof window.showLanguageLockedNotice === 'function') {
+      window.showLanguageLockedNotice();
+    }
   }
+  langCode = 'hi';
   
-  window.currentAppLanguage = langCode;
-  window.selectedLanguageTemp = langCode;
+  window.currentAppLanguage = 'hi';
+  window.selectedLanguageTemp = 'hi';
   try {
-    localStorage.setItem('user_app_language', langCode);
-    localStorage.setItem('bhakti_app_language', langCode);
+    localStorage.setItem('user_app_language', 'hi');
+    localStorage.setItem('bhakti_app_language', 'hi');
   } catch(e) {}
   
-  const dict = window.i18nLocales[langCode];
+  const dict = window.i18nLocales['hi'] || {};
   
   // 1. Translate all [data-i18n] elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -772,8 +775,14 @@ window.closeLanguageSelectorModal = function() {
 };
 
 window.chooseTempLanguage = function(langCode) {
-  window.selectedLanguageTemp = langCode;
-  window.highlightSelectedLanguageCard(langCode);
+  if (langCode !== 'hi') {
+    if (typeof window.showLanguageLockedNotice === 'function') {
+      window.showLanguageLockedNotice();
+    }
+    return;
+  }
+  window.selectedLanguageTemp = 'hi';
+  window.highlightSelectedLanguageCard('hi');
   if (navigator.vibrate) navigator.vibrate(25);
   if (typeof playSoundEffect === 'function') playSoundEffect('click');
 };
@@ -816,8 +825,9 @@ window.applySelectedLanguage = function() {
 
 // Auto-initialize language on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('user_app_language') || localStorage.getItem('bhakti_app_language') || 'hi';
-  window.setAppLanguage(savedLang, true);
+  localStorage.setItem('user_app_language', 'hi');
+  localStorage.setItem('bhakti_app_language', 'hi');
+  window.setAppLanguage('hi', true);
 });
 
 

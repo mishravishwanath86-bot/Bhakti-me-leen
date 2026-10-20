@@ -15414,30 +15414,83 @@ button, .cat-card, .coverflow-card, .deity-card, .bottom-nav-btn, .nav-item,
 
 .profile-stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(248, 200, 59, 0.2);
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(248, 200, 59, 0.22);
 }
 
 .profile-stat-box {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 10px 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1.3px solid rgba(248, 200, 59, 0.28);
+  border-radius: 18px;
+  padding: 10px 12px;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+
+.profile-stat-box:hover {
+  border-color: rgba(248, 200, 59, 0.6);
+  background: linear-gradient(135deg, rgba(248, 200, 59, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(248, 200, 59, 0.15);
+}
+
+.profile-stat-box:active {
+  transform: scale(0.96);
+  border-color: #F8C83B;
+}
+
+.profile-stat-box .stat-box-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.profile-stat-box .stat-box-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  text-align: left;
+  flex: 1;
 }
 
 .profile-stat-val {
   font-size: 1.25rem;
   font-weight: 900;
   color: #F8C83B;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  letter-spacing: 0.3px;
 }
 
 .profile-stat-lbl {
   font-size: 0.72rem;
-  color: #E2E8F0;
-  font-weight: 600;
+  color: #CBD5E1;
+  font-weight: 700;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .profile-menu-section {

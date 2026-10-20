@@ -2502,7 +2502,7 @@ window.openSundarkandDohaReader = function(dohaNum) {
     deity: 'श्री हनुमान जी',
     source: 'sundarkand_data',
     dohaNum: dohaNum,
-    audio_url: doha.audio_url || (data ? data.audio_source : null)
+    audio_url: doha.audio_url || null // Do not play 30-min katha; recite actual chaupais
   };
   window._activeDevotionalContent = activeSkObj;
 
@@ -2516,7 +2516,7 @@ window.openSundarkandDohaReader = function(dohaNum) {
     <div class="sundarkand-audio-card" style="background:linear-gradient(135deg, rgba(31,7,56,0.92) 0%, rgba(59,18,89,0.85) 100%); border:1.8px solid #F8C83B; border-radius:20px; padding:14px 16px; margin-bottom:18px; box-shadow:0 8px 25px rgba(0,0,0,0.45);">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
         <div style="display:flex; align-items:center; gap:8px;">
-          <span style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; font-size:0.75rem; font-weight:900; padding:2px 8px; border-radius:8px;">AI भक्ति स्वर</span>
+          <span style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; font-size:0.75rem; font-weight:900; padding:2px 8px; border-radius:8px;">पावन पाठ स्वर</span>
           <span style="color:#FFFDF8; font-weight:900; font-size:0.9rem;">दोहा ${dohaNum} पावन पाठ</span>
         </div>
         <div id="sundarkand-audio-status" style="font-size:0.72rem; color:#FDE68A;">
@@ -2526,7 +2526,7 @@ window.openSundarkandDohaReader = function(dohaNum) {
 
       <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px; flex-wrap:wrap;">
         <button id="sundarkand-play-btn" onclick="window.AiBhaktiPlayer.togglePlay()" style="flex:2; min-width:140px; background:linear-gradient(135deg, #F8C83B, #D97706); border:none; color:#1A0B2E; padding:10px 16px; border-radius:14px; font-weight:900; font-size:0.92rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 15px rgba(248,200,59,0.35);">
-          <span>▶</span> <span id="sundarkand-play-btn-text">AI दिव्य पाठ सुनें</span>
+          <span>▶</span> <span id="sundarkand-play-btn-text">पाठ सुनें</span>
         </button>
         <button onclick="window.AiBhaktiPlayer.toggleVoice()" title="स्वर बदलें (ऋषि/देवी)" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FDE68A; padding:9px 8px; border-radius:12px; font-weight:800; font-size:0.75rem; cursor:pointer; white-space:nowrap; text-align:center;">
           🪔 स्वर

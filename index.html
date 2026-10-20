@@ -37,9 +37,9 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="assets/app_logo.png?v=1788295872" />
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1792000500" />
-  <link rel="stylesheet" href="ai_bhakti_player.css?v=1792000500" />
-  <!-- Light Mode Disabled for now: <link rel="stylesheet" href="light_theme.css?v=1" /> -->
+  <link rel="stylesheet" href="styles.css?v=1792478550" />
+  <link rel="stylesheet" href="ai_bhakti_player.css?v=1792478550" />
+  <!-- Light Mode Disabled for now: <link rel="stylesheet" href="light_theme.css?v=1792478550" /> -->
 
 <script>
   // Safe early global stubs so inline onclick handlers never throw ReferenceError
@@ -68,6 +68,35 @@
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(0.85); }
 }
+
+@keyframes shakeLock {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-12px); }
+  40%, 80% { transform: translateX(12px); }
+}
+.applock-keypad-btn {
+  width: 72px;
+  height: 54px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.2px solid rgba(248, 200, 59, 0.35);
+  color: #FFFDF8;
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.applock-keypad-btn:active {
+  background: rgba(248, 200, 59, 0.35);
+  transform: scale(0.92);
+  border-color: #F8C83B;
+}
+
 </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -171,23 +200,37 @@
 
       // Smart Vedic Navigation upon intro finish
       setTimeout(() => {
-        const authModal = document.getElementById('auth-modal');
-        if (authModal) authModal.style.display = 'none';
+        // Enforce App Lock ONLY if user explicitly enabled it in Settings
+        if (typeof window.checkAndEnforceAppLock === 'function' && window.checkAndEnforceAppLock()) {
+          return;
+        }
+
+        // Always ensure home page is ready
+        if (typeof window.showPage === 'function') window.showPage('page-home');
+        if (typeof window.initVratGrids === 'function') window.initVratGrids();
 
         if (window.isUserLoggedIn && window.isUserLoggedIn()) {
-          // User is ALREADY logged in! Never show login page on app open
+          // User is ALREADY logged in!
+          const authModal = document.getElementById('auth-modal');
+          if (authModal) authModal.style.display = 'none';
+
           const deityModal = document.getElementById('deity-onboarding-modal');
           if (deityModal && localStorage.getItem('sanatan_deity_selected') !== 'true') {
             deityModal.style.display = 'flex';
-          } else {
-            if (deityModal) deityModal.style.display = 'none';
-            if (typeof window.showPage === 'function') window.showPage('page-home');
+          } else if (deityModal) {
+            deityModal.style.display = 'none';
           }
         } else {
-          // Guest / Not logged in: allow full app usage & start 3-min reminder timer
-          if (typeof window.showPage === 'function') window.showPage('page-home');
+          // First install / Not logged in: Open Login/Onboarding screen with 'बाद में (Later)' option!
+          const hasSeenAuthOnce = localStorage.getItem('sanatan_seen_initial_auth');
+          if (!hasSeenAuthOnce) {
+            localStorage.setItem('sanatan_seen_initial_auth', 'true');
+            if (typeof window.openAuthModal === 'function') {
+              window.openAuthModal();
+            }
+          }
           if (typeof window.startGuestLoginScheduler === 'function') {
-            window.startGuestLoginScheduler(0); // 3 minutes!
+            window.startGuestLoginScheduler(0); // 3 minutes reminder
           }
         }
       }, 50);
@@ -702,8 +745,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
   </style>
 
-  <link rel="stylesheet" href="epic_games.css?v=20261013_v2">
-  <link rel="stylesheet" href="aarti_mantra_puzzle.css?v=20261013_v2">
+  <link rel="stylesheet" href="epic_games.css?v=1792478550">
+  <link rel="stylesheet" href="aarti_mantra_puzzle.css?v=1792478550">
 <style>
 /* ══════════════════════════════════════════════════════════════════
    🚀 CRITICAL MOBILE & ANDROID FIXES: HEADER, TITLE, OVERFLOW, NAV
@@ -843,7 +886,20 @@ body.game-modal-open .app-bottom-nav {
   transform: translate(-50%, 150%) !important;
 }
 </style>
+
+<style id="page-active-guarantee-style">
+  .page { display: none; }
+  .page.active { display: block !important; }
+  #page-home.active { display: block !important; }
+  #page-epic-games.active { display: block !important; }
+  #page-aarti.active { display: block !important; }
+  #page-chalisa.active { display: block !important; }
+  #page-mantra.active { display: block !important; }
+  #page-sundarkand.active { display: block !important; }
+  #page-reader.active { display: block !important; }
+</style>
 </head>
+
 
 <body>
 
@@ -1248,6 +1304,11 @@ body.game-modal-open .app-bottom-nav {
         <p style="font-size:0.75rem; color:#CBD5E1; margin:0;">
           अपनी स्वरचित या पसंदीदा भक्ति रचना प्रभु के चरणों में अर्पित करें
         </p>
+        <div style="display:flex; justify-content:center; margin-top:8px;">
+          <button onclick="closeUploadBhajanModal(); openMyUploadedBhajansView();" style="background:rgba(248,200,59,0.18); border:1px solid #F8C83B; color:#FDE68A; font-size:0.75rem; font-weight:800; padding:4px 14px; border-radius:14px; cursor:pointer; display:inline-flex; align-items:center; gap:5px;">
+            <span>📂</span> <span>मेरी पहले से समर्पित रचनाएं देखें ❯</span>
+          </button>
+        </div>
       </div>
 
       <!-- Form Inputs -->
@@ -1321,6 +1382,78 @@ body.game-modal-open .app-bottom-nav {
       <button onclick="submitBhajanUpload()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.95rem; font-weight:900; padding:12px 0; border-radius:16px; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.4); text-align:center; display:flex; align-items:center; justify-content:center; gap:6px;">
         <span>🚩</span> प्रभु को समर्पित करें (Upload & Publish) ➔
       </button>
+
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       🎶 DEDICATED MY UPLOADED BHAJANS MODAL (मेरी समर्पित रचनाएं) 🎶
+       ═════════════════════════════════════════════════════════════════ -->
+  <div id="my-uploaded-bhajans-modal" style="display:none; position:fixed; inset:0; z-index:100255; background:rgba(10,2,18,0.95); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); align-items:center; justify-content:center; padding:1.2rem; overflow-y:auto;">
+    <div style="width:100%; max-width:440px; background:linear-gradient(160deg, #2D0E49 0%, #170428 65%, #0B0114 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.5rem 1.3rem; text-align:left; box-shadow:0 25px 70px rgba(0,0,0,0.95); position:relative; animation:fadeInUp 0.3s ease; max-height:92vh; overflow-y:auto;">
+      
+      <!-- Close Button -->
+      <button onclick="closeMyUploadedBhajansModal()" style="position:absolute; top:14px; right:14px; background:rgba(255,255,255,0.1); border:none; color:#FDE68A; width:32px; height:32px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+
+      <!-- Header -->
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <div style="width:48px; height:48px; border-radius:16px; background:linear-gradient(135deg, #F8C83B, #D97706); display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0; box-shadow:0 0 15px rgba(248,200,59,0.5);">
+          🎶
+        </div>
+        <div>
+          <h3 style="font-size:1.18rem; font-weight:900; color:#FFFDF8; margin:0 0 2px 0;">मेरी समर्पित रचनाएं</h3>
+          <div style="font-size:0.72rem; color:#FDE68A;">प्रभु के चरणों में अर्पित आपके स्वरचित व पसंदीदा भजन</div>
+        </div>
+      </div>
+
+      <!-- Action Bar: Counter & Add Button -->
+      <div style="display:flex; align-items:center; justify-content:space-between; background:rgba(255,255,255,0.06); border:1px solid rgba(248,200,59,0.25); border-radius:14px; padding:8px 12px; margin-bottom:14px;">
+        <div id="modal-my-bhajans-counter" style="font-size:0.78rem; font-weight:800; color:#FFFDF8;">
+          कुल समर्पित: <span style="color:#FDE68A;">0 भजन</span>
+        </div>
+        <button onclick="closeMyUploadedBhajansModal(); openUploadBhajanModal();" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; padding:5px 12px; border-radius:10px; font-size:0.75rem; font-weight:900; cursor:pointer; display:flex; align-items:center; gap:4px;">
+          <span>➕</span> नया भजन जोड़ें
+        </button>
+      </div>
+
+      <!-- List Container -->
+      <div id="modal-my-bhajans-list" style="display:flex; flex-direction:column; gap:10px; margin-bottom:12px;">
+        <!-- Populated dynamically by window.renderMyUploadedBhajansModalList() -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       🎉 BHAJAN UPLOAD SUCCESS CELEBRATION MODAL 🎉
+       ═════════════════════════════════════════════════════════════════ -->
+  <div id="bhajan-upload-success-modal" style="display:none; position:fixed; inset:0; z-index:100260; background:rgba(10,2,18,0.95); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); align-items:center; justify-content:center; padding:1.2rem;">
+    <div style="width:100%; max-width:380px; background:radial-gradient(circle at 50% 20%, #350F56 0%, #160329 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.6rem 1.4rem; text-align:center; box-shadow:0 25px 70px rgba(0,0,0,0.95); position:relative; animation:fadeInUp 0.3s ease;">
+      
+      <div style="width:70px; height:70px; border-radius:50%; background:radial-gradient(circle, #F8C83B, #D97706); border:3px solid #FEF3C7; margin:0 auto 12px; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(248,200,59,0.7); animation:pulseGlow 1.5s infinite;">
+        🚩
+      </div>
+
+      <h3 style="color:#FFFDF8; font-size:1.3rem; font-weight:900; margin:0 0 6px 0;">प्रभु को समर्पण सफल!</h3>
+      <div id="success-bhajan-title" style="color:#FDE68A; font-size:0.95rem; font-weight:800; margin-bottom:8px;">
+        भजन सफलतापूर्वक अर्पित
+      </div>
+      <p style="color:#CBD5E1; font-size:0.78rem; line-height:1.5; margin:0 0 14px 0;">
+        आपकी भक्ति रचना प्रभु के चरणों में समर्पित हो गई है। आप इसे कभी भी <strong>"मेरी समर्पित रचनाएं"</strong> में सुन व पढ़ सकते हैं।
+      </p>
+
+      <div style="background:rgba(248,200,59,0.18); border:1px solid #F8C83B; border-radius:12px; padding:6px 12px; font-size:0.78rem; font-weight:900; color:#FDE68A; margin-bottom:16px;">
+        🎁 +25 साधना अंक आपके खाते में जुड़ गए!
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <button onclick="closeBhajanUploadSuccessModal(); openMyUploadedBhajansView();" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; padding:12px 0; border-radius:16px; font-size:0.92rem; font-weight:900; cursor:pointer; box-shadow:0 4px 15px rgba(248,200,59,0.4); display:flex; align-items:center; justify-content:center; gap:6px;">
+          <span>🎵</span> अभी अपना भजन देखें व सुनें ➔
+        </button>
+        <button onclick="closeBhajanUploadSuccessModal()" style="width:100%; background:rgba(255,255,255,0.1); color:#CBD5E1; border:1px solid rgba(255,255,255,0.2); padding:10px 0; border-radius:14px; font-size:0.82rem; font-weight:800; cursor:pointer;">
+          ✓ ठीक है (होम पर रहें)
+        </button>
+      </div>
 
     </div>
   </div>
@@ -1452,6 +1585,7 @@ body.game-modal-open .app-bottom-nav {
       <button class="drawer-item" onclick="showPage('page-jar'); const d=document.querySelector('.side-drawer'); if(d && window.innerWidth < 1024) d.classList.remove('open'); const o=document.getElementById('overlay'); if(o) o.style.display='none';"><span class="di">🏺</span><span>भक्ति अमृत कलश</span></button>
       <button class="drawer-item" id="drawer-downloads"><span class="di">⬇️</span><span>मेरे डाउनलोड</span></button>
       <button class="drawer-item" id="drawer-upload" onclick="openUploadBhajanModal()"><span class="di">➕</span><span>भजन अपलोड</span></button>
+      <button class="drawer-item" id="drawer-my-bhajans" onclick="openMyUploadedBhajansView()"><span class="di">🎶</span><span>मेरी समर्पित रचनाएं</span><span id="drawer-my-bhajans-badge" style="background:linear-gradient(135deg,#F8C83B,#D97706); color:#1A0B2E; font-size:0.68rem; padding:1px 7px; border-radius:10px; font-weight:900; margin-left:auto;">0</span></button>
       <button class="drawer-item" id="drawer-settings" onclick="showPage('page-settings'); const d=document.querySelector('.side-drawer'); if(d && window.innerWidth < 1024) d.classList.remove('open'); const o=document.getElementById('overlay'); if(o) o.style.display='none';"><span class="di">⚙️</span><span>साधना सेटिंग्स</span></button>
             <button class="drawer-item" id="drawer-check-update" onclick="checkForAppUpdates(true); const d=document.querySelector('.side-drawer'); if(d && window.innerWidth < 1024) d.classList.remove('open'); const o=document.getElementById('overlay'); if(o) o.style.display='none';"><span class="di">🔄</span><span>ऐप अपडेट जांचें</span><span id="update-badge" style="display:none; background:#EF4444; color:#FFF; font-size:0.6rem; padding:2px 6px; border-radius:8px; font-weight:900; margin-left:auto;">New</span></button>
       <button class="drawer-item" id="drawer-about"><span class="di">ℹ️</span><span>हमारे बारे में</span></button>
@@ -2475,7 +2609,7 @@ body.game-modal-open .app-bottom-nav {
       </div>
     </div>
 
-    <section id="page-epic-games" class="page" style="display:none; padding-bottom:90px; background:#180A28; min-height:100vh; color:#FFFDF8;">
+    <section id="page-epic-games" class="page" style="padding-bottom:90px; background:#180A28; min-height:100vh; color:#FFFDF8;">
       <!-- Sticky Header -->
       <div class="epic-hub-header" style="background:rgba(26, 11, 46, 0.96); backdrop-filter:blur(14px); border-bottom:1.5px solid rgba(248, 200, 59, 0.35); padding:12px 16px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100;">
         <div style="display:flex; align-items:center; gap:12px;">
@@ -3300,9 +3434,14 @@ body.game-modal-open .app-bottom-nav {
       </div>
       
       <!-- User Uploaded Dedicated Bhajans Banner Container -->
-      <div id="user-uploaded-bhajans-section" style="display:none; margin: 0 1.1rem 1rem;">
-        <div style="font-size:0.85rem; font-weight:900; color:#FDE68A; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-          <span>🎶</span> आपकी समर्पित रचनाएं (My Uploads)
+      <div id="user-uploaded-bhajans-section" style="display:none; margin: 0 1.1rem 1.2rem; background:linear-gradient(135deg, rgba(248,200,59,0.15) 0%, rgba(139,92,246,0.12) 100%); border:1.5px solid #F8C83B; border-radius:20px; padding:12px 14px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+          <div style="font-size:0.9rem; font-weight:900; color:#FFFDF8; display:flex; align-items:center; gap:6px;">
+            <span>🎶</span> <span>आपकी समर्पित रचनाएं</span> <span id="bhajan-page-my-badge" style="background:#F8C83B; color:#1A0B2E; font-size:0.68rem; padding:1px 6px; border-radius:10px; font-weight:900;">0</span>
+          </div>
+          <button onclick="openMyUploadedBhajansView()" style="background:rgba(255,255,255,0.1); border:1px solid rgba(248,200,59,0.4); color:#FDE68A; font-size:0.72rem; font-weight:800; padding:3px 10px; border-radius:10px; cursor:pointer;">
+            पूरी सूची ❯
+          </button>
         </div>
         <div id="user-uploaded-bhajans-list" style="display:flex; flex-direction:column; gap:8px;"></div>
       </div>
@@ -3553,8 +3692,8 @@ body.game-modal-open .app-bottom-nav {
     <section id="page-profile" class="page" style="padding-bottom: 120px;">
       <div class="page-header-bar" style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px;">
         <button class="back-btn" data-back="page-home" onclick="showPage('page-home')" style="background:rgba(248,200,59,0.18); border:1.2px solid #F8C83B; color:#FDE68A; border-radius:50%; width:38px; height:38px; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">←</button>
-        <h2 data-i18n="nav_profile" style="font-size:1.25rem; font-weight:900; color:#FFFDF8; margin:0; display:flex; align-items:center; gap:6px;">
-          <span>👤</span> भक्त प्रोफ़ाइल <span>🕉️</span>
+        <h2 style="font-size:1.25rem; font-weight:900; color:#FFFDF8; margin:0; display:flex; align-items:center; gap:6px;">
+          <span>👤</span> <span>भक्त प्रोफ़ाइल</span> <span>🕉️</span>
         </h2>
         <button onclick="shareDivineCard()" title="शेयर करें" style="background:rgba(248,200,59,0.18); border:1.2px solid #F8C83B; color:#FDE68A; border-radius:50%; width:38px; height:38px; font-size:1.05rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">📤</button>
       </div>
@@ -3582,22 +3721,50 @@ body.game-modal-open .app-bottom-nav {
           </button>
         </div>
 
-        <div class="profile-stats-grid" style="grid-template-columns: repeat(4, 1fr); gap:8px;">
-          <div class="profile-stat-box" onclick="showPage('page-mala')" style="cursor:pointer;">
-            <div class="profile-stat-val" id="prof-stat-jaap">108</div>
-            <div class="profile-stat-lbl">जाप संख्या</div>
+        <!-- 📿 LUXURY 2x2 VEDIC SPIRITUAL STATS GRID 📿 -->
+        <div class="profile-stats-grid">
+          <!-- 1. कुल मंत्र जाप -->
+          <div class="profile-stat-box" onclick="showPage('page-mala')" title="जाप माला खोलें">
+            <div class="stat-box-icon" style="background:linear-gradient(135deg, rgba(248,200,59,0.22) 0%, rgba(217,119,6,0.12) 100%); border:1.2px solid rgba(248,200,59,0.45); box-shadow:0 0 10px rgba(248,200,59,0.2);">
+              <span>📿</span>
+            </div>
+            <div class="stat-box-info">
+              <div class="profile-stat-val" id="prof-stat-jaap">108</div>
+              <div class="profile-stat-lbl">जाप संख्या</div>
+            </div>
           </div>
-          <div class="profile-stat-box">
-            <div class="profile-stat-val" id="prof-stat-streak">7 दिन</div>
-            <div class="profile-stat-lbl">साधना स्ट्रीक</div>
+
+          <!-- 2. नित्य साधना स्ट्रीक -->
+          <div class="profile-stat-box" onclick="if(typeof openFullSadhanaControlModal==='function'){openFullSadhanaControlModal();}else if(typeof openSankalpModal==='function'){openSankalpModal();}" title="साधना स्ट्रीक व कवच देखें">
+            <div class="stat-box-icon" style="background:linear-gradient(135deg, rgba(249,115,22,0.22) 0%, rgba(234,88,12,0.12) 100%); border:1.2px solid rgba(249,115,22,0.45); box-shadow:0 0 10px rgba(249,115,22,0.2);">
+              <span>🔥</span>
+            </div>
+            <div class="stat-box-info">
+              <div class="profile-stat-val" id="prof-stat-streak" style="color:#FB923C;">7 दिन</div>
+              <div class="profile-stat-lbl">साधना स्ट्रीक</div>
+            </div>
           </div>
-          <div class="profile-stat-box" onclick="showPage('page-aarti-stage')" style="cursor:pointer;">
-            <div class="profile-stat-val" id="prof-stat-aarti" style="color:#F59E0B;">21</div>
-            <div class="profile-stat-lbl">दीपदान/दर्शन</div>
+
+          <!-- 3. दीपदान व दर्शन -->
+          <div class="profile-stat-box" onclick="showPage('page-aarti-stage')" title="आरती दर्शन करें">
+            <div class="stat-box-icon" style="background:linear-gradient(135deg, rgba(234,179,8,0.22) 0%, rgba(202,138,4,0.12) 100%); border:1.2px solid rgba(234,179,8,0.45); box-shadow:0 0 10px rgba(234,179,8,0.2);">
+              <span>🪔</span>
+            </div>
+            <div class="stat-box-info">
+              <div class="profile-stat-val" id="prof-stat-aarti" style="color:#FBBF24;">21</div>
+              <div class="profile-stat-lbl">दीपदान/दर्शन</div>
+            </div>
           </div>
-          <div class="profile-stat-box">
-            <div class="profile-stat-val" id="prof-stat-favs" style="color:#EC4899;">12</div>
-            <div class="profile-stat-lbl">पसंदीदा</div>
+
+          <!-- 4. पसंदीदा संग्रह -->
+          <div class="profile-stat-box" onclick="if(typeof showToast==='function'){showToast('❤️ आपके सहेजे गए पसंदीदा भजन, मंत्र व आरतियां!');}" title="पसंदीदा संग्रह">
+            <div class="stat-box-icon" style="background:linear-gradient(135deg, rgba(236,72,153,0.22) 0%, rgba(219,39,119,0.12) 100%); border:1.2px solid rgba(236,72,153,0.45); box-shadow:0 0 10px rgba(236,72,153,0.2);">
+              <span>💖</span>
+            </div>
+            <div class="stat-box-info">
+              <div class="profile-stat-val" id="prof-stat-favs" style="color:#F472B6;">12</div>
+              <div class="profile-stat-lbl">पसंदीदा</div>
+            </div>
           </div>
         </div>
       </div>
@@ -3620,6 +3787,19 @@ body.game-modal-open .app-bottom-nav {
               </button>
             </div>
             <div style="color:#F8C83B; font-weight:900; font-size:1.25rem;">❯</div>
+          </div>
+        </div>
+
+        <!-- 🎶 मेरी समर्पित रचनाएं (My Uploaded Bhajans) CARD IN PROFILE -->
+        <div class="profile-menu-item" onclick="openMyUploadedBhajansView()" style="background:linear-gradient(135deg, rgba(248,200,59,0.18) 0%, rgba(217,119,6,0.08) 100%); border:1.5px solid #F8C83B; margin-bottom:12px; box-shadow:0 4px 18px rgba(0,0,0,0.35); cursor:pointer;">
+          <div class="profile-menu-icon" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; font-size:1.3rem;">🎶</div>
+          <div class="profile-menu-text">
+            <div class="profile-menu-title" style="color:#FFFDF8; font-weight:900;">मेरी समर्पित रचनाएं (My Uploaded Bhajans)</div>
+            <div class="profile-menu-sub" id="prof-my-bhajans-sub" style="color:#FDE68A;">प्रभु को अर्पित आपके स्वरचित व पसंदीदा भजन • सुनें व देखें</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span id="prof-my-bhajans-badge" style="background:#F8C83B; color:#1A0B2E; font-size:0.75rem; font-weight:900; padding:2px 8px; border-radius:12px;">0 भजन</span>
+            <div style="color:#F8C83B; font-weight:900; font-size:1.1rem;">❯</div>
           </div>
         </div>
 
@@ -3909,20 +4089,23 @@ body.game-modal-open .app-bottom-nav {
           </div>
         </div>
 
-        <!-- 🌐 MULTI-LANGUAGE (i18n) SELECTION ROW 🌐 -->
+        <!-- 🌐 MULTI-LANGUAGE (i18n) SELECTION ROW (LOCKED TO HINDI) 🌐 -->
         <div style="background:rgba(255,255,255,0.05); border:1.3px solid rgba(248,200,59,0.3); border-radius:22px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 8px 25px rgba(0,0,0,0.4);">
-          <div style="display:flex; align-items:center; justify-content:space-between;">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
             <div style="display:flex; align-items:center; gap:10px;">
               <span style="font-size:1.4rem;">🌐</span>
               <div>
-                <div style="font-size:0.95rem; font-weight:900; color:#FFFDF8;">भाषा चयन (App Language)</div>
-                <div id="settings-current-lang-label" style="font-size:0.75rem; color:#FDE68A; font-weight:700; margin-top:2px;">
-                  🟢 हिंदी (Hindi)
+                <div style="font-size:0.95rem; font-weight:900; color:#FFFDF8; display:flex; align-items:center; gap:6px;">
+                  भाषा चयन (App Language)
+                  <span style="background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; font-size:0.65rem; font-weight:900; padding:2px 7px; border-radius:8px;">🔒 लॉक</span>
+                </div>
+                <div id="settings-current-lang-label" style="font-size:0.75rem; color:#A7F3D0; font-weight:700; margin-top:2px;">
+                  🟢 हिंदी (Hindi) • प्राथमिक भाषा (डिफ़ॉल्ट सक्रिय)
                 </div>
               </div>
             </div>
-            <button onclick="openLanguageSelectorModal()" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-size:0.8rem; font-weight:900; padding:7px 14px; border-radius:12px; cursor:pointer; box-shadow:0 3px 12px rgba(248,200,59,0.35); display:flex; align-items:center; gap:4px;">
-              <span>🌐</span> भाषा बदलें ❯
+            <button onclick="showLanguageLockedNotice()" style="background:rgba(248,200,59,0.15); border:1.2px solid rgba(248,200,59,0.4); color:#FDE68A; font-size:0.8rem; font-weight:900; padding:7px 14px; border-radius:12px; cursor:pointer; box-shadow:0 2px 10px rgba(0,0,0,0.3); display:flex; align-items:center; gap:5px; white-space:nowrap; transition:all 0.15s ease;">
+              <span>🔒</span> केवल हिंदी (लॉक)
             </button>
           </div>
         </div>
@@ -4077,36 +4260,49 @@ body.game-modal-open .app-bottom-nav {
         </div>
 
 
-        <!-- 🧬 MODULE 3: क्वांटम बायो-एनर्जी व ऑरा विज़ुअलाइज़र (AURA & BIO-SADHANA) 🧬 -->
+        <!-- 🪷 MODULE 3: आत्मिक तेज व ऑरा मापक (SPIRITUAL AURA & PRANIC ENERGY) 🪷 -->
         <div style="background:linear-gradient(135deg, #2E084D 0%, #170428 100%); border:1.5px solid #A78BFA; border-radius:22px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 8px 30px rgba(0,0,0,0.6);">
           
           <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
             <div style="display:flex; align-items:center; gap:8px;">
-              <span style="font-size:1.3rem;">🧬</span>
+              <span style="font-size:1.3rem;">🪷</span>
               <div>
-                <div style="font-size:0.95rem; font-weight:900; color:#FFFDF8;">3. क्वांटम बायो-एनर्जी व ऑरा</div>
-                <div style="font-size:0.72rem; color:#DDD6FE;">PPG Pulse & 3D Aura Visualizer</div>
+                <div style="font-size:0.95rem; font-weight:900; color:#FFFDF8;">3. आत्मिक तेज व ऑरा मापक</div>
+                <div style="font-size:0.72rem; color:#DDD6FE;">साधना तेज, नाड़ी गति व चित्त शांति मापक</div>
               </div>
             </div>
             <div id="aura-score-badge" style="background:rgba(248,200,59,0.25); border:1.2px solid #F8C83B; color:#FDE68A; font-size:0.78rem; font-weight:900; padding:3px 10px; border-radius:12px;">
-              88% सात्विक
+              ✨ 88% सात्विक
             </div>
           </div>
 
+          <!-- 💡 स्पष्ट एवं सरल व्याख्या कार्ड (Devotional Explanation) -->
+          <div style="background:rgba(255,255,255,0.06); border:1px dashed rgba(248,200,59,0.4); border-radius:14px; padding:9px 12px; margin-bottom:12px; font-size:0.74rem; color:#E2E8F0; line-height:1.5;">
+            <div style="font-weight:800; color:#FDE68A; margin-bottom:3px; display:flex; align-items:center; gap:5px;">
+              <span>💡</span> <span>यह क्या है और कैसे काम करता है?</span>
+            </div>
+            शास्त्रों के अनुसार नित्य जप, ध्यान व आरती से मन शांत होता है और शरीर के चारों ओर एक <strong>'सात्विक तेज (Positive Aura)'</strong> फैलता है। यह उपकरण आपकी <strong>नाड़ी गति (Pulse)</strong> और <strong>चित्त की एकाग्रता</strong> का विश्लेषण कर आपके सात्विक तेज व 7 चक्रों की ऊर्जा स्थिति को दर्शाता है।
+          </div>
+
           <!-- Real-time Aura Status Preview -->
-          <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(167,139,250,0.3); border-radius:16px; padding:10px 12px; margin-bottom:12px; display:flex; align-items:center; justify-content:space-between;">
+          <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(167,139,250,0.35); border-radius:16px; padding:10px 12px; margin-bottom:12px; display:flex; align-items:center; justify-content:space-between;">
             <div>
               <div style="font-size:0.8rem; font-weight:800; color:#FFFDF8;">वर्तमान प्राणिक ऊर्जा स्थिति:</div>
-              <div style="font-size:0.72rem; color:#CBD5E1; margin-top:2px;">हृदय गति: <strong style="color:#34D399;">74 bpm</strong> • HRV: <strong style="color:#FDE68A;">68 ms (शांत व एकाग्र)</strong></div>
+              <div style="font-size:0.72rem; color:#CBD5E1; margin-top:3px;">
+                नाड़ी गति: <strong style="color:#34D399;" id="aura-preview-bpm">72 bpm</strong> • चित्त: <strong style="color:#FDE68A;" id="aura-preview-calm">शांत व एकाग्र</strong>
+              </div>
+              <div style="font-size:0.7rem; color:#DDD6FE; margin-top:2px;">
+                आभा: <strong style="color:#FDE68A;" id="aura-preview-glow">स्वर्णिम सात्विक तेज (Golden Aura)</strong>
+              </div>
             </div>
-            <div style="width:38px; height:38px; border-radius:50%; background:radial-gradient(circle, #F8C83B 0%, #7C3AED 100%); box-shadow:0 0 16px rgba(248,200,59,0.7); display:flex; align-items:center; justify-content:center; font-size:1.1rem; animation:pulseGlow 2s infinite;">
+            <div style="width:40px; height:40px; border-radius:50%; background:radial-gradient(circle, #F8C83B 0%, #7C3AED 100%); box-shadow:0 0 18px rgba(248,200,59,0.7); display:flex; align-items:center; justify-content:center; font-size:1.15rem; animation:pulseGlow 2s infinite; flex-shrink:0;">
               ✨
             </div>
           </div>
 
           <!-- Measure Aura Action Button -->
           <button onclick="openAuraScannerModal()" style="width:100%; background:linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); color:#FFFDF8; border:1px solid #C4B5FD; font-size:0.88rem; font-weight:900; padding:11px 0; border-radius:16px; cursor:pointer; box-shadow:0 4px 18px rgba(139,92,246,0.45); display:flex; align-items:center; justify-content:center; gap:8px;">
-            <span>📸</span> कैमरा टच से ऑरा मापें (Measure Aura) ➔
+            <span>📸✨</span> ऑरा व 7 चक्र स्कैन करें (Scan Aura) ➔
           </button>
 
         </div>
@@ -4134,16 +4330,35 @@ body.game-modal-open .app-bottom-nav {
             </button>
           </div>
 
-          <!-- 4.2 Biometric App Lock -->
-          <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.08);">
-            <div>
-              <div style="font-size:0.85rem; font-weight:800; color:#FFFDF8;">ऐप बायोमेट्रिक लॉक (App Lock)</div>
-              <div style="font-size:0.7rem; color:#CBD5E1;">फ़िंगरप्रिंट / FaceID से ऐप सुरक्षा</div>
+          <!-- 4.2 Biometric App Lock & PIN Security -->
+          <div style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.08);">
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <div>
+                <div style="font-size:0.85rem; font-weight:800; color:#FFFDF8; display:flex; align-items:center; gap:5px;">
+                  <span>ऐप बायोमेट्रिक लॉक (App Lock)</span>
+                  <span id="applock-badge-status" style="font-size:0.68rem; background:rgba(16,185,129,0.2); border:1px solid #10B981; color:#6EE7B7; padding:1px 6px; border-radius:8px;">सक्रिय</span>
+                </div>
+                <div style="font-size:0.7rem; color:#CBD5E1; margin-top:2px;">फ़िंगरप्रिंट / FaceID व 4-अंकीय पिन सुरक्षा</div>
+              </div>
+              <label class="vedic-toggle-switch">
+                <input type="checkbox" id="setting-applock-toggle" onchange="toggleBiometricAppLockSetting(this.checked)">
+                <span class="vedic-toggle-slider"></span>
+              </label>
             </div>
-            <label class="vedic-toggle-switch">
-              <input type="checkbox" id="setting-applock-toggle" checked onchange="toggleBiometricAppLockSetting(this.checked)">
-              <span class="vedic-toggle-slider"></span>
-            </label>
+            <!-- Active PIN & Quick Lock Control Bar -->
+            <div id="applock-controls-panel" style="display:flex; align-items:center; justify-content:space-between; margin-top:8px; padding:6px 10px; background:rgba(0,0,0,0.3); border-radius:12px; border:1px solid rgba(248,200,59,0.25);">
+              <div style="font-size:0.74rem; color:#FDE68A;">
+                🔑 सुरक्षा पिन: <strong id="applock-current-pin-display" style="letter-spacing:1px; color:#6EE7B7;">•••• (सुरक्षित)</strong>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button onclick="promptChangeAppLockPin()" style="background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; border-radius:8px; padding:4px 8px; font-size:0.72rem; font-weight:800; cursor:pointer;">
+                  ✏️ पिन बदलें
+                </button>
+                <button onclick="triggerImmediateAppLock()" title="ऐप लॉक की तुरंत जांच करें" style="background:linear-gradient(135deg, #EF4444, #B91C1C); border:1px solid #FCA5A5; color:#FFFDF8; border-radius:8px; padding:4px 8px; font-size:0.72rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:3px;">
+                  🔒 अभी टेस्ट लॉक करें
+                </button>
+              </div>
+            </div>
           </div>
 
           <!-- 4.3 Offline Cache & Clean -->
@@ -4173,7 +4388,7 @@ body.game-modal-open .app-bottom-nav {
             <span>🚪</span> लॉग आउट
           </button>
           <div style="font-size:0.75rem; color:#CBD5E1; font-weight:700;">
-            संस्करण: <strong style="color:#FDE68A;">v2.4.0 (Quantum Bio-Vedic)</strong>
+            संस्करण: <strong style="color:#FDE68A;">v2.5.0 (दिव्य ऑरा व सुरक्षा एडिशन)</strong>
           </div>
         </div>
 
@@ -4182,73 +4397,181 @@ body.game-modal-open .app-bottom-nav {
     </section>
 
     <!-- ═════════════════════════════════════════════════════════════════
-         📸 QUANTUM BIO-ENERGY & 3D AURA SCANNER MODAL 📸
+         🪷 SPIRITUAL AURA & 7 CHAKRAS SCANNER MODAL 🪷
          ═════════════════════════════════════════════════════════════════ -->
     <div id="aura-scanner-modal" style="display:none; position:fixed; inset:0; z-index:100200; background:rgba(10,2,18,0.96); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); align-items:center; justify-content:center; padding:1.2rem; overflow-y:auto;">
-      <div style="width:100%; max-width:420px; background:radial-gradient(circle at 50% 30%, #320A52 0%, #160326 60%, #080112 100%); border:2px solid #A78BFA; border-radius:30px; padding:1.6rem 1.3rem; text-align:center; box-shadow:0 30px 80px rgba(0,0,0,0.95), 0 0 30px rgba(167,139,250,0.3) inset; position:relative; animation:fadeInUp 0.3s ease; max-height:92vh; overflow-y:auto;">
+      <div style="width:100%; max-width:440px; background:radial-gradient(circle at 50% 25%, #340A55 0%, #170328 65%, #080112 100%); border:2px solid #F8C83B; border-radius:30px; padding:1.5rem 1.3rem; text-align:center; box-shadow:0 30px 80px rgba(0,0,0,0.95), 0 0 30px rgba(248,200,59,0.25) inset; position:relative; animation:fadeInUp 0.3s ease; max-height:92vh; overflow-y:auto;">
         
         <!-- Close Button -->
         <button onclick="closeAuraScannerModal()" style="position:absolute; top:14px; right:14px; background:rgba(255,255,255,0.1); border:none; color:#DDD6FE; width:34px; height:34px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
 
         <!-- Header -->
-        <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(139,92,246,0.25); border:1px solid #A78BFA; color:#DDD6FE; padding:4px 14px; border-radius:16px; font-size:0.75rem; font-weight:900; margin-bottom:10px;">
-          <span>🧬</span> क्वांटम बायो-एनर्जी व ऑरा स्कैन
+        <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; padding:4px 14px; border-radius:16px; font-size:0.75rem; font-weight:900; margin-bottom:8px;">
+          <span>🪷</span> आत्मिक तेज व 7 चक्र ऑरा स्कैनर
         </div>
-        <h3 style="color:#FFFDF8; font-size:1.3rem; font-weight:900; margin:0 0 4px 0;">
+        <h3 style="color:#FFFDF8; font-size:1.25rem; font-weight:900; margin:0 0 4px 0;">
           अपनी प्राणिक ऊर्जा व ऑरा मापें
         </h3>
-        <p id="aura-scan-status-text" style="color:#CBD5E1; font-size:0.78rem; margin:0 0 16px 0;">
-          कैमरा लेंस पर अपनी तर्जनी उंगली रखें या 5 सेकंड स्कैन शुरू करें
+        <p id="aura-scan-status-text" style="color:#CBD5E1; font-size:0.76rem; margin:0 0 14px 0; line-height:1.4;">
+          शांत बैठें, गहरी सांस लें और नीचे दिए गए ॐ चक्र को स्पर्श करें या कैमरा से स्कैन करें
         </p>
 
-        <!-- 3D Aura Ring Canvas / Camera Stage -->
-        <div style="position:relative; width:220px; height:220px; margin:0 auto 16px; display:flex; align-items:center; justify-content:center;">
+        <!-- 3D Aura Ring Canvas / Touch Pad -->
+        <div style="position:relative; width:220px; height:220px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center;">
           
-          <!-- 3D Three.js Aura Canvas Container -->
-          <div id="aura-3d-canvas-container" style="width:200px; height:200px; border-radius:50%; position:relative; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle, rgba(248,200,59,0.2) 0%, rgba(139,92,246,0.4) 60%, transparent 100%);">
+          <div id="aura-3d-canvas-container" style="width:210px; height:210px; border-radius:50%; position:relative; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle, rgba(248,200,59,0.25) 0%, rgba(139,92,246,0.35) 60%, transparent 100%);">
             
             <!-- Animated Pulsating Aura Ring -->
             <div id="aura-pulse-glow-ring" style="position:absolute; inset:0; border-radius:50%; border:3px solid #F8C83B; box-shadow:0 0 40px rgba(248,200,59,0.8), inset 0 0 30px rgba(139,92,246,0.6); animation:spinDisc 20s linear infinite;"></div>
 
-            <!-- Finger / ECG Pulse Center -->
-            <div style="width:110px; height:110px; border-radius:50%; background:linear-gradient(135deg, #2A0845, #170428); border:2px solid #FEF3C7; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 0 25px rgba(0,0,0,0.8); z-index:2;">
-              <div id="aura-finger-icon" style="font-size:2.2rem; filter:drop-shadow(0 0 10px #F59E0B); animation:pulseGlow 1.2s infinite;">
-                ☝️
+            <!-- Sacred Touch Center / ॐ Sri Yantra Button -->
+            <div id="aura-touch-target" onclick="startTouchDhyanScan()" style="width:120px; height:120px; border-radius:50%; background:linear-gradient(135deg, #2D084B, #160326); border:2.5px solid #FDE68A; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 0 30px rgba(248,200,59,0.6); z-index:2; cursor:pointer; transition:transform 0.2s ease;">
+              <div id="aura-finger-icon" style="font-size:2.4rem; filter:drop-shadow(0 0 12px #F59E0B); animation:pulseGlow 1.5s infinite;">
+                🕉️
               </div>
-              <div id="aura-pulse-bpm" style="font-size:0.85rem; font-weight:900; color:#34D399; margin-top:2px;">
-                74 BPM
+              <div id="aura-pulse-bpm" style="font-size:0.82rem; font-weight:900; color:#34D399; margin-top:2px;">
+                72 BPM
+              </div>
+              <div style="font-size:0.6rem; color:#FDE68A; font-weight:700;">
+                (स्पर्श करें)
               </div>
             </div>
 
           </div>
 
-          <!-- Video element for real camera PPG pulse detection (hidden) -->
           <video id="aura-camera-feed" style="display:none;" playsinline></video>
         </div>
 
         <!-- Scanning Progress Bar -->
-        <div id="aura-progress-container" style="background:rgba(255,255,255,0.08); border-radius:10px; height:8px; width:100%; margin-bottom:14px; overflow:hidden;">
+        <div id="aura-progress-container" style="background:rgba(255,255,255,0.08); border-radius:10px; height:8px; width:100%; margin-bottom:12px; overflow:hidden;">
           <div id="aura-progress-bar" style="background:linear-gradient(90deg, #8B5CF6, #F8C83B); height:100%; width:0%; transition:width 0.2s ease;"></div>
         </div>
 
-        <!-- Aura Diagnosis Result Box (shown after scan) -->
-        <div id="aura-result-box" style="display:none; background:rgba(0,0,0,0.4); border:1.5px solid #F8C83B; border-radius:18px; padding:12px; margin-bottom:14px; text-align:left;">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
-            <div style="font-size:0.92rem; font-weight:900; color:#FFFDF8;">✨ आपका तेजोमय ऑरा: <span style="color:#FDE68A;">सात्विक स्वर्ण आभा (Golden-White)</span></div>
+        <!-- 7 Chakras Breakdown (Shows during/after scan) -->
+        <div id="aura-chakras-container" style="display:none; background:rgba(0,0,0,0.35); border:1px solid rgba(248,200,59,0.3); border-radius:18px; padding:12px; margin-bottom:12px; text-align:left;">
+          <div style="font-size:0.8rem; font-weight:900; color:#FFFDF8; margin-bottom:8px; display:flex; align-items:center; justify-content:space-between;">
+            <span>🌈 7 चक्र ऊर्जा संतुलन:</span>
+            <span style="font-size:0.7rem; color:#34D399;">संतुलित व शांत</span>
           </div>
-          <p style="font-size:0.75rem; color:#CBD5E1; margin:0 0 6px 0; line-height:1.4;">
-            आपकी प्राणिक ऊर्जा <strong>88% संतुलित व शांत</strong> है। हृदय गति स्थिर और मन एकाग्र है।
-          </p>
-          <div style="font-size:0.72rem; color:#A7F3D0; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10B981; padding:4px 10px; border-radius:10px;">
-            💡 वैदिक परामर्श: 5 मिनट ॐ ध्वनि जप व प्राणायाम से यह तेज दिनभर बना रहेगा।
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; font-size:0.72rem;">
+            <div style="background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.3); border-radius:8px; padding:5px 8px; color:#FCA5A5;">🔴 मूलाधार: <strong>92%</strong></div>
+            <div style="background:rgba(249,115,22,0.15); border:1px solid rgba(249,115,22,0.3); border-radius:8px; padding:5px 8px; color:#FDBA74;">🟠 स्वाधिष्ठान: <strong>88%</strong></div>
+            <div style="background:rgba(234,179,8,0.15); border:1px solid rgba(234,179,8,0.3); border-radius:8px; padding:5px 8px; color:#FDE047;">🟡 मणिपूर: <strong>86%</strong></div>
+            <div style="background:rgba(34,197,94,0.15); border:1px solid rgba(34,197,94,0.3); border-radius:8px; padding:5px 8px; color:#86EFAC;">🟢 अनाहत: <strong>96%</strong></div>
+            <div style="background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.3); border-radius:8px; padding:5px 8px; color:#93C5FD;">🔵 विशुद्ध: <strong>90%</strong></div>
+            <div style="background:rgba(168,85,247,0.15); border:1px solid rgba(168,85,247,0.3); border-radius:8px; padding:5px 8px; color:#D8B4FE;">🟣 आज्ञा: <strong>94%</strong></div>
+          </div>
+          <div style="margin-top:6px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.3); border-radius:8px; padding:5px 8px; font-size:0.72rem; color:#FFFDF8; text-align:center;">
+            ⚪ सहस्रार चक्र (दिव्य तेज): <strong style="color:#FDE68A;">98% जाग्रत</strong>
           </div>
         </div>
 
-        <!-- Start Scan Action Button -->
-        <button id="aura-start-scan-btn" onclick="startCameraAuraMeasurement()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; font-size:0.95rem; font-weight:900; padding:12px 0; border-radius:16px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(248,200,59,0.5); display:flex; align-items:center; justify-content:center; gap:6px;">
-          <span>📸</span> स्कैन शुरू करें (Start Aura Scan)
-        </button>
+        <!-- Aura Diagnosis Result Box (shown after scan) -->
+        <div id="aura-result-box" style="display:none; background:rgba(0,0,0,0.45); border:1.5px solid #F8C83B; border-radius:18px; padding:12px; margin-bottom:14px; text-align:left;">
+          <div style="font-size:0.92rem; font-weight:900; color:#FFFDF8; margin-bottom:4px;">
+            ✨ आपका तेजोमय ऑरा: <span style="color:#FDE68A;">स्वर्णिम सात्विक आभा (Golden Radiant)</span>
+          </div>
+          <p style="font-size:0.75rem; color:#CBD5E1; margin:0 0 6px 0; line-height:1.4;">
+            आपकी नाड़ी गति <strong>72 bpm</strong> पर शांत व संतुलित है। अनाहत (हृदय) व आज्ञा चक्र में दिव्य एकाग्रता पाई गई है।
+          </p>
+          <div style="font-size:0.73rem; color:#A7F3D0; font-weight:800; background:rgba(16,185,129,0.18); border:1px solid #10B981; padding:6px 10px; border-radius:10px; line-height:1.4;">
+            💡 वैदिक परामर्श: 11 बार ॐ जप या गायत्री महामंत्र के स्मरण से यह सात्विक तेज दिनभर आपके साथ रहेगा।
+          </div>
+          <div style="margin-top:10px; display:flex; gap:8px;">
+            <button onclick="closeAuraScannerModal(); if(typeof showPage==='function') showPage('page-mala');" style="flex:1; background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; padding:8px 0; border-radius:12px; font-size:0.8rem; font-weight:900; cursor:pointer;">
+              📿 जप शुरू करें
+            </button>
+            <button onclick="startTouchDhyanScan()" style="background:rgba(255,255,255,0.12); color:#FFFDF8; border:1px solid rgba(255,255,255,0.25); padding:8px 12px; border-radius:12px; font-size:0.8rem; font-weight:800; cursor:pointer;">
+              🔄 पुनः स्कैन
+            </button>
+          </div>
+        </div>
 
+        <!-- Scan Action Buttons (Dual Mode: Touch or Camera) -->
+        <div id="aura-actions-group" style="display:flex; flex-direction:column; gap:8px;">
+          <button id="aura-start-scan-btn" onclick="startTouchDhyanScan()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; font-size:0.92rem; font-weight:900; padding:12px 0; border-radius:16px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(248,200,59,0.5); display:flex; align-items:center; justify-content:center; gap:6px;">
+            <span>🕉️</span> ॐ चक्र स्पर्श स्कैन (Touch Scan)
+          </button>
+          <button onclick="startCameraAuraMeasurement()" style="width:100%; background:rgba(255,255,255,0.08); color:#DDD6FE; border:1.2px solid rgba(167,139,250,0.5); font-size:0.8rem; font-weight:800; padding:9px 0; border-radius:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <span>📸</span> कैमरा लेंस से नाड़ी मापन (Camera Scan)
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         🔒 FULLSCREEN VEDIC APP SECURITY LOCK SHIELD 🔒
+         ═════════════════════════════════════════════════════════════════ -->
+    <div id="bhakti-app-lock-screen" style="display:none; position:fixed; inset:0; z-index:9999999; background:radial-gradient(circle at 50% 25%, #23083B 0%, #110220 55%, #07000D 100%); backdrop-filter:blur(30px); -webkit-backdrop-filter:blur(30px); flex-direction:column; align-items:center; justify-content:center; padding:1.5rem; text-align:center; user-select:none; animation:fadeIn 0.25s ease;">
+      
+      <!-- Sacred Glowing Lock Icon & Emblem -->
+      <div style="width:76px; height:76px; border-radius:50%; background:radial-gradient(circle, #F8C83B 0%, #D97706 70%, #78350F 100%); border:3px solid #FFFDF8; box-shadow:0 0 35px rgba(248,200,59,0.7); display:flex; align-items:center; justify-content:center; font-size:2.2rem; margin-bottom:12px; animation:pulseGlow 2s infinite;">
+        🔒
+      </div>
+
+      <h2 style="color:#FFFDF8; font-size:1.45rem; font-weight:900; margin:0 0 4px 0; letter-spacing:0.5px;">
+        भक्ति में लीन
+      </h2>
+      <div style="font-size:0.82rem; font-weight:800; color:#FDE68A; margin-bottom:8px;">
+        साधना वॉल्ट सुरक्षा लॉक
+      </div>
+      <div id="applock-feedback-msg" style="font-size:0.82rem; color:#CBD5E1; min-height:22px; margin-bottom:16px;">
+        अनलॉक करने हेतु फ़िंगरप्रिंट या पिन दर्ज करें
+      </div>
+
+      <!-- 4 PIN Dots -->
+      <div id="applock-pin-dots-container" style="display:flex; justify-content:center; gap:16px; margin-bottom:22px;">
+        <div id="applock-dot-1" class="applock-dot" style="width:16px; height:16px; border-radius:50%; border:2px solid rgba(248,200,59,0.6); background:transparent; transition:all 0.15s ease;"></div>
+        <div id="applock-dot-2" class="applock-dot" style="width:16px; height:16px; border-radius:50%; border:2px solid rgba(248,200,59,0.6); background:transparent; transition:all 0.15s ease;"></div>
+        <div id="applock-dot-3" class="applock-dot" style="width:16px; height:16px; border-radius:50%; border:2px solid rgba(248,200,59,0.6); background:transparent; transition:all 0.15s ease;"></div>
+        <div id="applock-dot-4" class="applock-dot" style="width:16px; height:16px; border-radius:50%; border:2px solid rgba(248,200,59,0.6); background:transparent; transition:all 0.15s ease;"></div>
+      </div>
+
+      <!-- Primary Biometric Button -->
+      <button onclick="triggerBiometricAuthUnlock()" style="width:100%; max-width:280px; background:linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); color:#FFFDF8; border:1.5px solid #C4B5FD; font-size:0.92rem; font-weight:800; padding:11px 16px; border-radius:18px; margin-bottom:20px; cursor:pointer; box-shadow:0 6px 20px rgba(139,92,246,0.45); display:flex; align-items:center; justify-content:center; gap:8px;">
+        <span style="font-size:1.2rem;">👆</span> फ़िंगरप्रिंट / FaceID से अनलॉक करें
+      </button>
+
+      <!-- 3x4 Touch Numeric Keypad -->
+      <div style="display:grid; grid-template-columns:repeat(3, 72px); gap:12px; margin-bottom:16px;">
+        <button onclick="appLockKeypadPress('1')" class="applock-keypad-btn">1</button>
+        <button onclick="appLockKeypadPress('2')" class="applock-keypad-btn">2</button>
+        <button onclick="appLockKeypadPress('3')" class="applock-keypad-btn">3</button>
+        <button onclick="appLockKeypadPress('4')" class="applock-keypad-btn">4</button>
+        <button onclick="appLockKeypadPress('5')" class="applock-keypad-btn">5</button>
+        <button onclick="appLockKeypadPress('6')" class="applock-keypad-btn">6</button>
+        <button onclick="appLockKeypadPress('7')" class="applock-keypad-btn">7</button>
+        <button onclick="appLockKeypadPress('8')" class="applock-keypad-btn">8</button>
+        <button onclick="appLockKeypadPress('9')" class="applock-keypad-btn">9</button>
+        <button onclick="triggerBiometricAuthUnlock()" class="applock-keypad-btn" style="font-size:1rem; color:#C4B5FD;">👆</button>
+        <button onclick="appLockKeypadPress('0')" class="applock-keypad-btn">0</button>
+        <button onclick="appLockKeypadBackspace()" class="applock-keypad-btn" style="font-size:1.1rem; color:#F87171;">⌫</button>
+      </div>
+
+      <div style="font-size:0.75rem; color:#94A3B8;">
+        डिफ़ॉल्ट सुरक्षा पिन: <strong style="color:#FDE68A;">1008</strong>
+      </div>
+    </div>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         ✏️ CHANGE APPLOCK PIN MODAL ✏️
+         ═════════════════════════════════════════════════════════════════ -->
+    <div id="applock-change-pin-modal" style="display:none; position:fixed; inset:0; z-index:100250; background:rgba(0,0,0,0.85); backdrop-filter:blur(15px); align-items:center; justify-content:center; padding:1.2rem;">
+      <div style="width:100%; max-width:360px; background:radial-gradient(circle at 50% 20%, #300C4E 0%, #140324 100%); border:1.8px solid #F8C83B; border-radius:24px; padding:1.4rem; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.9);">
+        <h4 style="color:#FFFDF8; font-size:1.15rem; font-weight:900; margin:0 0 6px 0;">🔑 नया 4-अंकीय पिन सेट करें</h4>
+        <p style="color:#CBD5E1; font-size:0.75rem; margin:0 0 14px 0;">अपना मनपसंद 4 अंकों का सुरक्षा कोड दर्ज करें</p>
+        
+        <input type="password" id="applock-new-pin-input" maxlength="4" pattern="[0-9]*" inputmode="numeric" placeholder="उदा. 1234" style="width:140px; text-align:center; font-size:1.5rem; letter-spacing:6px; font-weight:900; background:rgba(0,0,0,0.4); border:2px solid #F8C83B; color:#FDE68A; border-radius:14px; padding:8px 12px; margin-bottom:16px; outline:none;" />
+        
+        <div style="display:flex; gap:8px;">
+          <button onclick="closeChangePinModal()" style="flex:1; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#CBD5E1; border-radius:12px; padding:10px 0; font-size:0.82rem; font-weight:800; cursor:pointer;">
+            रद्द करें
+          </button>
+          <button onclick="saveNewAppLockPin()" style="flex:1; background:linear-gradient(135deg, #F8C83B, #D97706); border:none; color:#1A0B2E; border-radius:12px; padding:10px 0; font-size:0.82rem; font-weight:900; cursor:pointer;">
+            सुरक्षित करें
+          </button>
+        </div>
       </div>
     </div>
 
@@ -13873,79 +14196,193 @@ body.game-modal-open .app-bottom-nav {
     </section>
 
     
-  <!-- 🎙️ DEDICATED SMART AI VEDIC VOICE GUIDE MODAL 🎙️ -->
+    <!-- 🎙️ DEDICATED SMART AI VEDIC VOICE GUIDE MODAL 🎙️ -->
   <div id="vedic-ai-voice-modal" style="display:none; position:fixed; inset:0; z-index:100300; background:rgba(10,2,18,0.96); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); align-items:center; justify-content:center; padding:1.2rem; overflow-y:auto;">
-    <div style="width:100%; max-width:420px; background:radial-gradient(circle at 50% 25%, #380C5E 0%, #1A052E 60%, #0A0114 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.6rem 1.3rem; text-align:center; box-shadow:0 25px 80px rgba(0,0,0,0.95), 0 0 30px rgba(248,200,59,0.25) inset; position:relative; animation:fadeInUp 0.3s ease; max-height:92vh; overflow-y:auto;">
+    <div style="width:100%; max-width:440px; background:radial-gradient(circle at 50% 20%, #3B0D64 0%, #1A052E 60%, #0A0114 100%); border:2px solid #F8C83B; border-radius:28px; padding:1.5rem 1.25rem; text-align:center; box-shadow:0 25px 80px rgba(0,0,0,0.95), 0 0 30px rgba(248,200,59,0.25) inset; position:relative; animation:fadeInUp 0.3s ease; max-height:92vh; overflow-y:auto;">
       
       <!-- Close Button -->
-      <button onclick="closeAIVoiceModal()" style="position:absolute; top:14px; right:14px; background:rgba(255,255,255,0.1); border:none; color:#FDE68A; width:34px; height:34px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+      <button onclick="closeAIVoiceModal()" style="position:absolute; top:14px; right:14px; background:rgba(255,255,255,0.12); border:1px solid rgba(248,200,59,0.4); color:#FDE68A; width:34px; height:34px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10; transition:all 0.15s ease;">✕</button>
 
-      <!-- Header Tag -->
-      <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; padding:4px 14px; border-radius:16px; font-size:0.75rem; font-weight:900; margin-bottom:10px;">
-        <span>🤖</span> AI वैदिक वॉइस गाइड
+      <!-- ══════════════════════════════════════════════════════════════════════ -->
+      <!-- STAGE 1: ASK PRABHU (INPUT VIEW: CONTINUOUS VOICE & TEXT)           -->
+      <!-- ══════════════════════════════════════════════════════════════════════ -->
+      <div id="vedic-voice-input-stage" style="display:block;">
+        <!-- Header Tag -->
+        <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; padding:4px 14px; border-radius:16px; font-size:0.75rem; font-weight:900; margin-bottom:10px;">
+          <span>🤖</span> AI वैदिक वॉइस गाइड • श्रीमद्भगवद्गीता
+        </div>
+
+        <h3 style="color:#FFFDF8; font-size:1.35rem; font-weight:900; margin:0 0 5px 0; letter-spacing:0.3px;">
+          प्रभु से अपनी बात कहें
+        </h3>
+        <p id="vedic-voice-modal-sub" style="color:#E2E8F0; font-size:0.78rem; margin:0 0 16px 0; line-height:1.45;">
+          अपने मन का कोई भी संशय, चिंता या प्रश्न बोलें — AI श्रीमद्भगवद्गीता व सनातन ज्ञान से दिव्य सलाह देगा
+        </p>
+
+        <!-- Central Animated Glowing Mic Stage -->
+        <div style="position:relative; width:135px; height:135px; margin:0 auto 12px; display:flex; align-items:center; justify-content:center;">
+          <div id="vedic-voice-pulse-ring" style="position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle, rgba(248,200,59,0.4) 0%, rgba(217,119,6,0.1) 70%, transparent 100%); border:2px solid #F8C83B; animation:pulseGlow 1.4s infinite;"></div>
+          
+          <button id="vedic-voice-mic-main-btn" onclick="toggleSpeechRecording()" style="width:86px; height:86px; border-radius:50%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); border:3.5px solid #FEF3C7; color:#1A0B2E; font-size:2.5rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 0 35px rgba(248,200,59,0.85); z-index:2; transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
+            🎤
+          </button>
+        </div>
+
+        <div id="vedic-voice-mic-status-label" style="font-size:0.78rem; font-weight:800; color:#FDE68A; margin-bottom:12px; min-height:18px;">
+          माइक दबाएं और मन की बात कहें
+        </div>
+
+        <!-- Live Voice Status / Transcript Box -->
+        <div style="background:rgba(0,0,0,0.55); border:1.4px solid rgba(248,200,59,0.35); border-radius:18px; padding:12px 14px; margin-bottom:12px; min-height:56px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+          <div id="vedic-voice-live-transcript" style="font-size:0.86rem; font-weight:800; color:#34D399; line-height:1.45; word-break:break-word;">
+            🎙️ माइक पर स्पर्श करें और अपने मन की बात कहें — प्रभु सुन रहे हैं...
+          </div>
+          <!-- Explicit Done Button When Recording -->
+          <button id="vedic-voice-done-btn" onclick="finishSpeechAndProcess()" style="display:none; background:linear-gradient(135deg, #10B981, #059669); color:#FFFDF8; border:1px solid #6EE7B7; font-size:0.78rem; font-weight:900; padding:6px 16px; border-radius:12px; cursor:pointer; box-shadow:0 2px 12px rgba(16,185,129,0.5); align-items:center; gap:5px; animation:pulseGlow 1.2s infinite;">
+            <span>✓</span> बोलना पूरा हुआ (समाधान पाएं)
+          </button>
+        </div>
+
+        <!-- Manual Text Input Box (Alternative to Voice) -->
+        <div style="display:flex; gap:6px; margin-bottom:14px;">
+          <input type="text" id="vedic-voice-text-input" placeholder="या यहाँ प्रश्न या समस्या लिखें (उदा. क्रोध शांत कैसे करें)..." style="flex:1; background:rgba(255,255,255,0.08); border:1.2px solid rgba(248,200,59,0.35); border-radius:14px; padding:10px 14px; color:#FFFDF8; font-size:0.84rem; outline:none;" onkeypress="if(event.key==='Enter') submitManualVedicQuery()" />
+          <button onclick="submitManualVedicQuery()" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-size:0.95rem; font-weight:900; padding:0 16px; border-radius:14px; cursor:pointer; box-shadow:0 2px 10px rgba(248,200,59,0.4);">
+            ➔
+          </button>
+        </div>
+
+        <!-- Quick 1-Tap Voice Prompts Chips -->
+        <div style="text-align:left; margin-bottom:4px;">
+          <div style="font-size:0.76rem; font-weight:900; color:#FDE68A; margin-bottom:8px; display:flex; align-items:center; gap:5px;">
+            <span>✨</span> त्वरित जिज्ञासा (1-टैप में दिव्य सलाह):
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <button onclick="selectQuickVoicePrompt('मुझे भविष्य और करियर की बहुत चिंता है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer; transition:background 0.15s ease;">
+              🌪️ भविष्य की चिंता
+            </button>
+            <button onclick="selectQuickVoicePrompt('मन अशांत है शांति कैसे मिले')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              🪷 मन अशांत है
+            </button>
+            <button onclick="selectQuickVoicePrompt('क्रोध बहुत आता है शांत कैसे रहूं')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              😡 क्रोध शांत करें
+            </button>
+            <button onclick="selectQuickVoicePrompt('बहुत दुःख और अकेलापन लग रहा है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              💔 दुःख व अकेलापन
+            </button>
+            <button onclick="selectQuickVoicePrompt('अत्यंत भय लग रहा है साहस चाहिए')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              ⚔️ भय व संकट
+            </button>
+            <button onclick="selectQuickVoicePrompt('कोई निर्णय नहीं ले पा रहा हूं क्या करूं')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              ⚖️ निर्णय व भ्रम
+            </button>
+            <button onclick="selectQuickVoicePrompt('परिवार और रिश्तों में कलह व तनाव है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              👨‍👩‍👧 परिवार व रिश्ते
+            </button>
+            <button onclick="selectQuickVoicePrompt('प्रभु का आभार व आनंद व्यक्त करना है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.73rem; font-weight:700; padding:6px 11px; border-radius:12px; cursor:pointer;">
+              🌸 प्रभु का आभार
+            </button>
+          </div>
+        </div>
       </div>
 
-      <h3 style="color:#FFFDF8; font-size:1.3rem; font-weight:900; margin:0 0 4px 0;">
-        प्रभु से अपनी बात कहें
-      </h3>
-      <p id="vedic-voice-modal-sub" style="color:#CBD5E1; font-size:0.78rem; margin:0 0 16px 0;">
-        अपनी समस्या या मनोभाव बोलें — AI तुरंत श्रीमद्भगवद्गीता से समाधान खोजेगा
-      </p>
-
-      <!-- Central Animated Glowing Mic Stage -->
-      <div style="position:relative; width:130px; height:130px; margin:0 auto 16px; display:flex; align-items:center; justify-content:center;">
-        <div id="vedic-voice-pulse-ring" style="position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle, rgba(248,200,59,0.4) 0%, rgba(217,119,6,0.1) 70%, transparent 100%); border:2px solid #F8C83B; animation:pulseGlow 1.2s infinite;"></div>
+      <!-- ══════════════════════════════════════════════════════════════════════ -->
+      <!-- STAGE 2: PRABHU GUIDANCE (OUTPUT VIEW: ADVICE, SHLOKA, TTS, REMEDIES)-->
+      <!-- ══════════════════════════════════════════════════════════════════════ -->
+      <div id="vedic-voice-guidance-stage" style="display:none; text-align:left;">
         
-        <button id="vedic-voice-mic-main-btn" onclick="toggleSpeechRecording()" style="width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); border:3px solid #FEF3C7; color:#1A0B2E; font-size:2.4rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 0 30px rgba(248,200,59,0.8); z-index:2; transition:transform 0.15s ease;">
-          🎤
-        </button>
-      </div>
-
-      <!-- Live Voice Status / Transcript Box -->
-      <div style="background:rgba(0,0,0,0.45); border:1.2px solid rgba(248,200,59,0.3); border-radius:18px; padding:12px; margin-bottom:16px; min-height:48px; display:flex; align-items:center; justify-content:center;">
-        <div id="vedic-voice-live-transcript" style="font-size:0.85rem; font-weight:800; color:#34D399; line-height:1.4;">
-          🎙️ माइक पर स्पर्श करें या नीचे दिए गए भावों में से चुनें...
+        <!-- Top Stage Bar -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:8px;">
+          <button onclick="resetAIVoiceModalToInputStage()" style="background:rgba(255,255,255,0.1); border:1px solid rgba(248,200,59,0.35); color:#FDE68A; padding:5px 12px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:4px;">
+            <span>←</span> पुनः पूछें
+          </button>
+          <div style="font-size:0.85rem; font-weight:900; color:#FDE68A; display:flex; align-items:center; gap:5px;">
+            <span>🕉️</span> दिव्य मार्गदर्शन
+          </div>
+          <div style="width:34px;"></div>
         </div>
-      </div>
 
-      <!-- Manual Text Input Box (Alternative to Voice) -->
-      <div style="display:flex; gap:6px; margin-bottom:14px;">
-        <input type="text" id="vedic-voice-text-input" placeholder="या यहाँ समस्या लिखें (उदा. चिंता, दुःख, भय)..." style="flex:1; background:rgba(255,255,255,0.08); border:1.2px solid rgba(248,200,59,0.35); border-radius:14px; padding:9px 12px; color:#FFFDF8; font-size:0.82rem; outline:none;" onkeypress="if(event.key==='Enter') submitManualVedicQuery()" />
-        <button onclick="submitManualVedicQuery()" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-size:0.85rem; font-weight:900; padding:0 14px; border-radius:14px; cursor:pointer;">
-          ➔
-        </button>
-      </div>
+        <!-- Devotee Query Pill -->
+        <div id="vedic-guidance-query-pill" style="background:rgba(248,200,59,0.12); border:1px solid rgba(248,200,59,0.3); border-radius:14px; padding:7px 12px; font-size:0.78rem; font-weight:800; color:#FEF3C7; text-align:center; margin-bottom:12px;">
+          आपकी मन की बात: "..."
+        </div>
 
-      <!-- Quick 1-Tap Voice Prompts Chips -->
-      <div style="text-align:left; margin-bottom:6px;">
-        <div style="font-size:0.75rem; font-weight:800; color:#FDE68A; margin-bottom:6px;">
-          ✨ त्वरित जिज्ञासा (1-टैप में समाधान):
+        <!-- Layer 1: Divine Reassurance / Opening -->
+        <div style="background:rgba(255,255,255,0.04); border-left:3.5px solid #F8C83B; border-radius:10px; padding:10px 12px; margin-bottom:12px;">
+          <div style="font-size:0.72rem; font-weight:900; color:#FDE68A; margin-bottom:3px;">
+            ✨ प्रभु का स्नेहपूर्ण उद्बोधन:
+          </div>
+          <div id="vedic-guidance-opening" style="font-size:0.84rem; color:#FFFDF8; line-height:1.5; font-weight:700;">
+            हे प्रिय भक्त! शांत हो जाओ...
+          </div>
         </div>
-        <div style="display:flex; flex-wrap:wrap; gap:6px;">
-          <button onclick="selectQuickVoicePrompt('मुझे भविष्य की बहुत चिंता है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.72rem; font-weight:700; padding:5px 10px; border-radius:12px; cursor:pointer;">
-            🌪️ भविष्य की चिंता
-          </button>
-          <button onclick="selectQuickVoicePrompt('मन अशांत है शांति कैसे मिले')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.72rem; font-weight:700; padding:5px 10px; border-radius:12px; cursor:pointer;">
-            🪷 मन अशांत है
-          </button>
-          <button onclick="selectQuickVoicePrompt('बहुत दुःख और निराशा हो रही है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.72rem; font-weight:700; padding:5px 10px; border-radius:12px; cursor:pointer;">
-            💔 दुःख व निराशा
-          </button>
-          <button onclick="selectQuickVoicePrompt('अत्यंत भय लग रहा है साहस चाहिए')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.72rem; font-weight:700; padding:5px 10px; border-radius:12px; cursor:pointer;">
-            ⚔️ भय व साहस
-          </button>
-          <button onclick="selectQuickVoicePrompt('कोई निर्णय नहीं ले पा रहा')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.72rem; font-weight:700; padding:5px 10px; border-radius:12px; cursor:pointer;">
-            ⚖️ निर्णय व भ्रम
-          </button>
-          <button onclick="selectQuickVoicePrompt('प्रभु का आभार व आनंद व्यक्त करना है')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.3); color:#FFFDF8; font-size:0.72rem; font-weight:700; padding:5px 10px; border-radius:12px; cursor:pointer;">
-            🌸 प्रभु का आभार
+
+        <!-- Layer 2: Spiritual Advice & Psychological Solution -->
+        <div style="background:rgba(255,255,255,0.06); border:1.2px solid rgba(248,200,59,0.35); border-radius:16px; padding:12px 14px; margin-bottom:12px; box-shadow:0 4px 15px rgba(0,0,0,0.35);">
+          <div style="font-size:0.78rem; font-weight:900; color:#F8C83B; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+            <span>💡</span> प्रभु की दिव्य सलाह (Spiritual Counsel):
+          </div>
+          <div id="vedic-guidance-counsel" style="font-size:0.84rem; color:#FFFDF8; line-height:1.55;">
+            ...
+          </div>
+        </div>
+
+        <!-- Layer 3: Sacred Shloka Box with TTS Audio Button -->
+        <div style="background:linear-gradient(135deg, rgba(248,200,59,0.15) 0%, rgba(217,119,6,0.08) 100%); border:1.2px solid rgba(248,200,59,0.45); border-radius:18px; padding:14px; margin-bottom:12px; text-align:center;">
+          <div id="vedic-guidance-source" style="font-size:0.75rem; font-weight:900; color:#FDE68A; margin-bottom:6px;">
+            📜 श्रीमद्भगवद्गीता (अध्याय 2, श्लोक 47)
+          </div>
+          <div id="vedic-guidance-shloka" style="font-family:'Tiro Devanagari Hindi', serif; font-size:1.1rem; font-weight:700; color:#FFFDF8; line-height:1.6; margin-bottom:10px; text-shadow:0 0 10px rgba(248,200,59,0.35);">
+            कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
+          </div>
+          <button id="vedic-tts-toggle-btn" onclick="toggleAIVoiceSpeechRecitation()" style="background:linear-gradient(135deg, #F8C83B, #D97706); color:#1A0B2E; border:none; font-size:0.78rem; font-weight:900; padding:7px 16px; border-radius:14px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 10px rgba(248,200,59,0.4); transition:all 0.15s ease;">
+            <span>🔊</span> <span>दिव्य वाणी श्रवण करें (Audio)</span>
           </button>
         </div>
+
+        <!-- Layer 4: Saral Bhavarth -->
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:11px 13px; margin-bottom:12px;">
+          <div style="font-size:0.76rem; font-weight:900; color:#F8C83B; margin-bottom:4px;">
+            🌿 सरल व्यावहारिक भावार्थ:
+          </div>
+          <div id="vedic-guidance-meaning" style="font-size:0.83rem; color:#FFFDF8; line-height:1.5;">
+            ...
+          </div>
+        </div>
+
+        <!-- Layer 5: Actionable 3-Step Daily Remedies -->
+        <div style="background:rgba(16,185,129,0.15); border:1.2px solid #10B981; border-radius:16px; padding:12px 14px; margin-bottom:14px;">
+          <div style="font-size:0.78rem; font-weight:900; color:#34D399; margin-bottom:5px; display:flex; align-items:center; gap:6px;">
+            <span>🎯</span> आज का ३-चरणीय कर्म संकल्प:
+          </div>
+          <div id="vedic-guidance-remedies" style="font-size:0.81rem; color:#FFFDF8; line-height:1.55; white-space:pre-line;">
+            ...
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <button onclick="resetAIVoiceModalToInputStage()" style="width:100%; background:linear-gradient(135deg, #7C3AED, #5B21B6); color:#FFFDF8; border:none; font-size:0.86rem; font-weight:900; padding:10px 0; border-radius:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow:0 3px 12px rgba(124,58,237,0.4);">
+            <span>💬</span> प्रभु से और पूछें / नया प्रश्न
+          </button>
+          
+          <div style="display:flex; gap:8px;">
+            <button onclick="saveCurrentShlokaToVault()" style="flex:1; background:linear-gradient(135deg, #EC4899, #BE185D); color:#FFF; border:none; font-size:0.82rem; font-weight:900; padding:10px 0; border-radius:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:5px; box-shadow:0 3px 12px rgba(236,72,153,0.35);">
+              <span>💾</span> संग्रह में सहेजें
+            </button>
+            <button onclick="shareCurrentGuidanceWhatsApp()" style="flex:1; background:#25D366; color:#FFF; border:none; font-size:0.82rem; font-weight:900; padding:10px 0; border-radius:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:5px; box-shadow:0 3px 12px rgba(37,211,102,0.35);">
+              <span>📲</span> WhatsApp शेयर
+            </button>
+          </div>
+
+          <button onclick="showBhojpatraFromGuidance()" style="width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(248,200,59,0.35); color:#FDE68A; font-size:0.78rem; font-weight:800; padding:9px 0; border-radius:12px; cursor:pointer; text-align:center;">
+            📜 3D अमृत कलश व भोजपत्र पर देखें ➔
+          </button>
+        </div>
+
       </div>
 
     </div>
   </div>
-
     
   <!-- 📻 STAGE 2: FULL-SCREEN RADIO BROADCAST STUDIO MODAL 📻 -->
   <div id="radio-broadcast-studio-modal" style="display:none; position:fixed; inset:0; z-index:100400; background:rgba(8,2,14,0.96); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); align-items:center; justify-content:center; padding:1.2rem; overflow-y:auto;">
@@ -14120,7 +14557,7 @@ body.game-modal-open .app-bottom-nav {
 
 
     <!-- 📜 BHOJPATRA SCROLL REVEAL MODAL (भोजपत्र समाधान) 📜 -->
-    <div id="amrit-bhojpatra-modal" style="display:none; position:fixed; inset:0; z-index:100100; background:rgba(10,2,18,0.94); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); align-items:center; justify-content:center; padding:1.2rem;">
+    <div id="amrit-bhojpatra-modal" style="display:none; position:fixed; inset:0; z-index:100700; background:rgba(10,2,18,0.94); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); align-items:center; justify-content:center; padding:1.2rem;">
       <div style="width:100%; max-width:400px; background:radial-gradient(circle at 50% 30%, #351352 0%, #1B062C 60%, #0D0218 100%); border:2px solid #F59E0B; border-radius:28px; padding:1.6rem 1.3rem; text-align:left; box-shadow:0 25px 70px rgba(0,0,0,0.95); position:relative; animation:fadeInUp 0.3s ease; max-height:90vh; overflow-y:auto;">
         
         <!-- Header Tag & Close -->
@@ -19612,7 +20049,18 @@ body.game-modal-open .app-bottom-nav {
         <button onclick="closeLanguageSelectorModal()" style="background:rgba(255,255,255,0.1); border:none; color:#FDE68A; width:32px; height:32px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
       </div>
 
-      <!-- POPULAR LANGUAGES SECTION -->
+      
+      <!-- 🔒 LANGUAGE LOCK NOTICE BANNER 🔒 -->
+      <div style="background:linear-gradient(135deg, rgba(248,200,59,0.16) 0%, rgba(217,119,6,0.1) 100%); border:1.3px solid #F8C83B; border-radius:16px; padding:10px 13px; margin-bottom:14px; display:flex; align-items:flex-start; gap:10px; box-shadow:0 4px 15px rgba(0,0,0,0.35);">
+        <span style="font-size:1.4rem; line-height:1;">🔒</span>
+        <div>
+          <div style="font-size:0.82rem; font-weight:900; color:#FDE68A; margin-bottom:2px;">भाषा चयन वर्तमान में हिंदी में लॉक है</div>
+          <div style="font-size:0.72rem; color:#E2E8F0; line-height:1.4;">
+            भक्ति में लीन ऐप वर्तमान में केवल शुद्ध <strong>हिंदी (Hindi)</strong> में पूर्णतः समर्थित है। अंग्रेजी व अन्य क्षेत्रीय भाषाओं का संपूर्ण अनुवाद कार्य प्रगति पर है और शीघ्र उपलब्ध होगा।
+          </div>
+        </div>
+      </div>
+<!-- POPULAR LANGUAGES SECTION -->
       <div style="margin-bottom:12px;">
         <div style="font-size:0.75rem; font-weight:900; color:#FDE68A; margin-bottom:8px;">🌟 प्रमुख भाषाएं (Popular Languages)</div>
         
@@ -19716,9 +20164,9 @@ body.game-modal-open .app-bottom-nav {
         </div>
       </div>
 
-      <!-- Action Button: Apply Language -->
-      <button onclick="applySelectedLanguage()" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.95rem; font-weight:900; padding:12px 0; border-radius:16px; cursor:pointer; box-shadow:0 4px 18px rgba(248,200,59,0.45); display:flex; align-items:center; justify-content:center; gap:6px;">
-        <span>🚩</span> भाषा लागू करें (Apply Language) ➔
+      <!-- Action Button: Apply Language (Locked) -->
+      <button onclick="closeLanguageSelectorModal(); showLanguageLockedNotice();" style="width:100%; background:linear-gradient(135deg, #F8C83B 0%, #D97706 100%); color:#1A0B2E; border:none; font-size:0.95rem; font-weight:900; padding:12px 0; border-radius:16px; cursor:pointer; box-shadow:0 4px 18px rgba(248,200,59,0.45); display:flex; align-items:center; justify-content:center; gap:6px;">
+        <span>🔒</span> केवल हिंदी में जारी रखें (Keep Hindi) ✓
       </button>
 
     </div>
@@ -19973,17 +20421,18 @@ body.game-modal-open .app-bottom-nav {
   </div>
 
 
-  <script src="mandir_3d_engine.js?v=1788372515"></script>
-  <script src="amrit_kalash_3d_engine.js?v=1788504008"></script>
-  <script src="i18n_engine.js?v=1788376135"></script>
-  <script src="sadhana_gamification_engine.js?v=1788456689"></script>
-  <script src="app.js?v=1792000500"></script>
-  <script src="ai_bhakti_player.js?v=1792000500"></script>
-  <script src="mantra_engine.js?v=1792000500"></script>
-  <script src="sundarkand_engine.js?v=1792000500"></script>
-  <script src="gita_engine.js?v=1792000500"></script>
-<script src="drik_app_addon.js?v=1792000500"></script>
-<script src="gallery_engine.js?v=1792000500"></script>
+  <script src="mandir_3d_engine.js?v=1792478550"></script>
+  <script src="amrit_kalash_3d_engine.js?v=1792478550"></script>
+  <script src="i18n_engine.js?v=1792478550"></script>
+  <script src="sadhana_gamification_engine.js?v=1792478550"></script>
+  <script src="app.js?v=1792478550"></script>
+  <script src="ai_bhakti_player.js?v=1792478550"></script>
+  <script src="chalisa_engine.js?v=1792478550"></script>
+  <script src="mantra_engine.js?v=1792478550"></script>
+  <script src="sundarkand_engine.js?v=1792478550"></script>
+  <script src="gita_engine.js?v=1792478550"></script>
+<script src="drik_app_addon.js?v=1792478550"></script>
+<script src="gallery_engine.js?v=1792478550"></script>
 
   <!-- 🍞 UNIVERSAL ULTRA-LUXURY TOAST NOTIFICATION CONTAINER 🍞 -->
   <div id="universal-toast-container" style="position:fixed; top:24px; left:50%; transform:translateX(-50%); z-index:999999; display:flex; flex-direction:column; align-items:center; gap:8px; pointer-events:none; width:90%; max-width:380px;"></div>
@@ -20320,6 +20769,13 @@ body.game-modal-open .app-bottom-nav {
           }
         }
 
+        // Level 3.5: Epic Games Page Back
+        const curActivePage = window.currentPage || (document.querySelector('.page.active') ? document.querySelector('.page.active').id : 'page-home');
+        if (curActivePage === 'page-epic-games') {
+          if (typeof window.showPage === 'function') window.showPage('page-home');
+          return true;
+        }
+
         // Level 4: Page History Stack Pop (Step-by-Step Back)
         if (window._appPageHistory && window._appPageHistory.length > 1) {
           window._appPageHistory.pop(); // Remove current page
@@ -20333,7 +20789,7 @@ body.game-modal-open .app-bottom-nav {
           return true;
         } else {
           // At bottom of stack: return to page-home if not already there
-          if (window.currentPage && window.currentPage !== 'page-home') {
+          if (curActivePage && curActivePage !== 'page-home') {
             window._appPageHistory = ['page-home'];
             window._isNavigatingBack = true;
             try {
@@ -20360,20 +20816,21 @@ body.game-modal-open .app-bottom-nav {
 
       // 5. Mobile Hardware Back Button Protection (Never exits from sub-sub-pages!)
       let lastBackPressTime = 0;
-      function handleHardwareBackSafely(e) {
+      window.handleHardwareBackSafely = function handleHardwareBackSafely(e) {
         if (e && typeof e.preventDefault === 'function') e.preventDefault();
 
-        // 1. ALWAYS try step-by-step back first! (Closes game arenas, level select, modals, dialogs)
+        // 1. ALWAYS try step-by-step back first! (Closes game arenas, level select, modals, dialogs, readers)
         const handled = window.goStepBack(e);
         if (handled) {
           try {
             history.pushState({ page: window.currentPage || 'page-home' }, '', '#' + (window.currentPage || 'page-home'));
           } catch(err) {}
-          return;
+          return true;
         }
 
         // 2. If nothing was closed and we are NOT on root page-home: go back to home!
-        if (window.currentPage && window.currentPage !== 'page-home') {
+        const curPage = window.currentPage || (document.querySelector('.page.active') ? document.querySelector('.page.active').id : 'page-home');
+        if (curPage && curPage !== 'page-home') {
           window._isNavigatingBack = true;
           try {
             window.showPage('page-home');
@@ -20383,7 +20840,7 @@ body.game-modal-open .app-bottom-nav {
           try {
             history.pushState({ page: 'page-home' }, '', '#page-home');
           } catch(err) {}
-          return;
+          return true;
         }
 
         // 3. Only if on bare root page-home with ZERO modals/games open: double-press back to exit gracefully
@@ -20394,6 +20851,7 @@ body.game-modal-open .app-bottom-nav {
           } else if (navigator.device && navigator.device.exitApp) {
             navigator.device.exitApp();
           }
+          return false;
         } else {
           lastBackPressTime = now;
           try {
@@ -20402,8 +20860,9 @@ body.game-modal-open .app-bottom-nav {
           if (typeof window.showToast === 'function') {
             window.showToast('ऐप से बाहर निकलने के लिए एक बार और बैक दबाएं');
           }
+          return true;
         }
-      }
+      };
 
       window.addEventListener('popstate', function(e) {
         handleHardwareBackSafely(e);
@@ -20452,9 +20911,9 @@ body.game-modal-open .app-bottom-nav {
       };
     })();
   </script>
-  <script src="epic_games_engine.js?v=20261013_v2"></script>
-  <script src="aarti_mantra_puzzle_engine.js?v=20261013_v2"></script>
-  <script src="mcq_test_series_engine.js?v=1792000002"></script>
+  <script src="epic_games_engine.js?v=1792478550"></script>
+  <script src="aarti_mantra_puzzle_engine.js?v=1792478550"></script>
+  <script src="mcq_test_series_engine.js?v=1792478550"></script>
 
   <!-- ═══════════════════════════════════════════════════════════════════════════
        🚀 FLOATING IN-APP UPDATE NOTIFICATION BANNER 🚀

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>Phool Arpan Game (फूल अर्पण खेल)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        body {
+            background: #1a0826;
+            overflow: hidden;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            touch-action: none;
+        }
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 440px;
+            /* Temple Glow Gradient Background */
+            background: radial-gradient(circle at top, #ffbb33 0%, #ff8800 45%, #2b0b3a 100%);
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0,0,0,0.85);
+            touch-action: none;
+        }
+        /* Top Divine Header HUD */
+        #hud {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(43, 11, 58, 0.78);
+            border: 1.5px solid #ffd700;
+            border-radius: 14px;
+            padding: 8px 14px;
+            z-index: 20;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 0 10px rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hud-text {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        #speed-indicator {
+            font-size: 13px;
+            font-weight: 900;
+            color: #00ffcc;
+            background: rgba(0, 255, 204, 0.15);
+            padding: 3px 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 204, 0.4);
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+        }
+        #lives-box {
+            font-size: 17px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+        }
+        /* Sound Toggle Button */
+        #sound-toggle {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            outline: none;
+            padding: 0 2px;
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+        /* Canvas */
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+        /* Modal Popup */
+        #game-over-modal {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 35%, rgba(45, 14, 66, 0.95) 0%, rgba(15, 3, 25, 0.98) 100%);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 50;
+            text-align: center;
+            padding: 24px;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 2px solid #ffd700;
+            border-radius: 24px;
+            padding: 28px 22px;
+            width: 100%;
+            max-width: 340px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.85), inset 0 0 25px rgba(255, 215, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .modal-icon {
+            font-size: 52px;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 4px 15px rgba(255, 215, 0, 0.5));
+            animation: pulseIcon 1.5s infinite alternate ease-in-out;
+        }
+        @keyframes pulseIcon {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.12); }
+        }
+        #game-over-modal h1 {
+            color: #ffd700;
+            font-size: 26px;
+            margin-bottom: 6px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            font-weight: 900;
+        }
+        #game-over-modal p {
+            font-size: 15px;
+            color: #ffdfba;
+            margin-bottom: 18px;
+            line-height: 1.4;
+        }
+        .score-stat-box {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 14px;
+            padding: 10px 18px;
+            width: 100%;
+            margin-bottom: 22px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .score-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .score-col-label {
+            font-size: 12px;
+            color: #d1c4e9;
+            font-weight: 600;
+        }
+        .score-col-val {
+            font-size: 22px;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+        }
+        #restart-btn {
+            background: linear-gradient(135deg, #ff9900 0%, #ff4500 100%);
+            color: white;
+            border: none;
+            padding: 13px 34px;
+            font-size: 17px;
+            font-weight: 900;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            width: 100%;
+        }
+        #restart-btn:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 10px rgba(255, 69, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="hud">
+        <div class="hud-text" id="score-box">🌸 अर्पण: 0</div>
+        <div class="hud-text" id="speed-indicator">गति: 1.0x</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <div id="lives-box">❤️❤️❤️</div>
+            <button id="sound-toggle" onclick="toggleSound()" title="ध्वनि">🔊</button>
+        </div>
+    </div>
+    
+    <canvas id="gameCanvas"></canvas>
+    
+    <div id="game-over-modal">
+        <div class="modal-card">
+            <div class="modal-icon">🌸</div>
+            <h1>पूजा संपन्न!</h1>
+            <p>आपने भक्तिभाव से प्रभु चरणों में पुष्प व प्रसाद अर्पित किए</p>
+            <div class="score-stat-box">
+                <div class="score-col">
+                    <span class="score-col-label">कुल अर्पण</span>
+                    <span class="score-col-val" id="final-score-val">0</span>
+                </div>
+                <div class="score-col" style="border-left: 1px solid rgba(255,255,255,0.15); padding-left: 18px;">
+                    <span class="score-col-label">सर्वश्रेष्ठ</span>
+                    <span class="score-col-val" id="best-score-val">0</span>
+                </div>
+            </div>
+            <button id="restart-btn" onclick="restartGame()">पुनः अर्पण करें 🔄</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    const container = document.getElementById("game-container");
+    const scoreBox = document.getElementById("score-box");
+    const livesBox = document.getElementById("lives-box");
+    const speedIndicator = document.getElementById("speed-indicator");
+    const gameOverModal = document.getElementById("game-over-modal");
+    const finalScoreVal = document.getElementById("final-score-val");
+    const bestScoreVal = document.getElementById("best-score-val");
+    const soundToggle = document.getElementById("sound-toggle");
+
+    let width = 0, height = 0;
+    function resize() {
+        width = container.clientWidth;
+        height = container.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
+        if (thali) {
+            thali.width = Math.max(90, Math.min(125, width * 0.26));
+            thali.y = height - 85;
+            if (thali.x + thali.width > width) thali.x = width - thali.width - 10;
+        }
+    }
+
+    let score = 0;
+    let lives = 3;
+    let isGameOver = false;
+    let gameTime = 0; // Samay track karne ke liye
+    let baseSpeed = 3.2; // Shuruati raftaar
+    let soundEnabled = true;
+    let highScore = parseInt(localStorage.getItem('phool_arpan_high_score') || '0', 10);
+
+    // Audio Engine via Web Audio API (No external sound files required)
+    let audioCtx = null;
+    function getAudioCtx() {
+        if (!audioCtx) {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            if (AudioContext) audioCtx = new AudioContext();
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+        return audioCtx;
+    }
+
+    function playDevotionalSound(type) {
+        if (!soundEnabled) return;
+        try {
+            const actx = getAudioCtx();
+            if (!actx) return;
+            const now = actx.currentTime;
+
+            if (type === 'catch_flower') {
+                // Sacred Temple Bell Chime (Ghansha Tone)
+                const osc = actx.createOscillator();
+                const gain = actx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, now); // A5
+                osc.frequency.exponentialRampToValueAtTime(1320, now + 0.08);
+                osc.frequency.exponentialRampToValueAtTime(880, now + 0.35);
+
+                gain.gain.setValueAtTime(0.35, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
+
+                osc.connect(gain);
+                gain.connect(actx.destination);
+                osc.start(now);
+                osc.stop(now + 0.4);
+            } else if (type === 'catch_modak') {
+                // High Holy Double Chime for Modak/Shreefal
+                [1046.5, 1567.98].forEach((freq, idx) => {
+                    const osc = actx.createOscillator();
+                    const gain = actx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, now + idx * 0.06);
+
+                    gain.gain.setValueAtTime(0.3, now + idx * 0.06);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.06 + 0.45);
+
+                    osc.connect(gain);
+                    gain.connect(actx.destination);
+                    osc.start(now + idx * 0.06);
+                    osc.stop(now + idx * 0.06 + 0.5);
+                });
+            } else if (type === 'rock_hit' || type === 'miss') {
+                // Low thud/warning note
+                const osc = actx.createOscillator();
+                const gain = actx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(160, now);
+                osc.frequency.exponentialRampToValueAtTime(80, now + 0.25);
+
+                gain.gain.setValueAtTime(0.3, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
+
+                osc.connect(gain);
+                gain.connect(actx.destination);
+                osc.start(now);
+                osc.stop(now + 0.3);
+            } else if (type === 'game_over') {
+                // Sacred completion chord
+                [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) => {
+                    const osc = actx.createOscillator();
+                    const gain = actx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now + i * 0.09);
+
+                    gain.gain.setValueAtTime(0.28, now + i * 0.09);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.09 + 0.9);
+
+                    osc.connect(gain);
+                    gain.connect(actx.destination);
+                    osc.start(now + i * 0.09);
+                    osc.stop(now + i * 0.09 + 1.0);
+                });
+            }
+        } catch (e) {
+            console.warn("Audio play issue:", e);
+        }
+    }
+
+    function toggleSound() {
+        soundEnabled = !soundEnabled;
+        soundToggle.innerText = soundEnabled ? "🔊" : "🔇";
+        if (soundEnabled) playDevotionalSound('catch_flower');
+    }
+
+    // Swarnim Pooja Thali Config
+    const thali = {
+        width: 104,
+        height: 34,
+        x: 100,
+        y: 400
+    };
+
+    // Falling Divine Items & Obstacles
+    const fallingItems = [];
+    const itemCatalog = [
+        { char: "🌺", type: "good", points: 10, label: "गुड़हल" },
+        { char: "🌸", type: "good", points: 10, label: "पुष्प" },
+        { char: "🥥", type: "good", points: 20, label: "श्रीफल" },
+        { char: "🥮", type: "good", points: 30, label: "मोदक" },
+        { char: "🪨", type: "bad",  points: 0,  label: "पत्थर" } // Ashuddh cheez
+    ];
+
+    // Visual Sparkle Particles & Floating Score
+    const particles = [];
+    const floatTexts = [];
+
+    function addSparkles(x, y, color, count = 8) {
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: x,
+                y: y,
+                vx: (Math.random() - 0.5) * 6,
+                vy: (Math.random() - 0.5) * 6 - 2,
+                size: Math.random() * 4 + 2,
+                life: 1.0,
+                decay: Math.random() * 0.04 + 0.03,
+                color: color || '#ffd700'
+            });
+        }
+    }
+
+    function addFloatingText(x, y, text, color) {
+        floatTexts.push({
+            x: x,
+            y: y,
+            text: text,
+            color: color || '#ffd700',
+            life: 1.0,
+            vy: -1.6
+        });
+    }
+
+    let spawnTimer = 0;
+    let currentSpawnRate = 65; // Frames interval
+
+    // Touch & Pointer Drag for Pooja Thali
+    function moveThali(clientX) {
+        const rect = canvas.getBoundingClientRect();
+        const touchX = clientX - rect.left;
+        thali.x = touchX - thali.width / 2;
+
+        // Keep inside screen
+        if (thali.x < 10) thali.x = 10;
+        if (thali.x + thali.width > width - 10) thali.x = width - 10 - thali.width;
+    }
+
+    window.addEventListener("touchstart", (e) => {
+        if (!isGameOver && e.touches.length > 0) {
+            getAudioCtx();
+            moveThali(e.touches[0].clientX);
+        }
+    }, { passive: false });
+
+    window.addEventListener("touchmove", (e) => {
+        if (!isGameOver && e.touches.length > 0) {
+            moveThali(e.touches[0].clientX);
+        }
+    }, { passive: false });
+
+    window.addEventListener("mousemove", (e) => {
+        if (!isGameOver) moveThali(e.clientX);
+    });
+
+    // Keyboard support for desktop
+    window.addEventListener("keydown", (e) => {
+        if (isGameOver) return;
+        if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") {
+            thali.x = Math.max(10, thali.x - 26);
+        } else if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") {
+            thali.x = Math.min(width - 10 - thali.width, thali.x + 26);
+        }
+    });
+
+    function spawnItem() {
+        const itemData = itemCatalog[Math.floor(Math.random() * itemCatalog.length)];
+        
+        // Dynamic speed: baseSpeed + score & time multiplier
+        const dynamicSpeed = baseSpeed + (Math.random() * 1.5);
+
+        fallingItems.push({
+            x: Math.random() * (width - 60) + 30,
+            y: -25,
+            char: itemData.char,
+            type: itemData.type,
+            points: itemData.points,
+            speed: dynamicSpeed,
+            rotation: 0,
+            rotSpeed: (Math.random() - 0.5) * 0.06
+        });
+    }
+
+    function update() {
+        if (isGameOver) return;
+
+        gameTime++;
+
+        // SAMAY & SCORE KE SATH RAFTAAR TEJ KARNE KA LOGIC:
+        baseSpeed = 3.2 + Math.min(6.5, (gameTime / 350) * 0.4 + (score / 150) * 0.3);
+        
+        // Spawn frequency bhi tez hogi (items jaldi-jaldi aayenge)
+        currentSpawnRate = Math.max(28, 65 - Math.floor(gameTime / 250));
+
+        // Speed level UI indicator
+        const speedMultiplier = (baseSpeed / 3.2).toFixed(1);
+        speedIndicator.innerText = `गति: ${speedMultiplier}x`;
+
+        spawnTimer++;
+        if (spawnTimer >= currentSpawnRate) {
+            spawnItem();
+            spawnTimer = 0;
+        }
+
+        thali.y = height - 85;
+
+        // Move & Check collision for falling items
+        for (let i = fallingItems.length - 1; i >= 0; i--) {
+            const item = fallingItems[i];
+            item.y += item.speed;
+            item.rotation += item.rotSpeed;
+
+            // Collision Detection with Thali (Generous hitbox for responsive play)
+            if (
+                item.y + 16 >= thali.y &&
+                item.y - 16 <= thali.y + thali.height &&
+                item.x >= thali.x - 10 &&
+                item.x <= thali.x + thali.width + 10
+            ) {
+                if (item.type === "good") {
+                    score += item.points;
+                    scoreBox.innerText = `🌸 अर्पण: ${score}`;
+
+                    // Sound & Sparkles
+                    if (item.points >= 20) {
+                        playDevotionalSound('catch_modak');
+                        addSparkles(item.x, thali.y + 6, '#00ffcc', 12);
+                        addFloatingText(item.x, thali.y - 10, `+${item.points} 🌟`, '#00ffcc');
+                    } else {
+                        playDevotionalSound('catch_flower');
+                        addSparkles(item.x, thali.y + 6, '#ffd700', 8);
+                        addFloatingText(item.x, thali.y - 10, `+${item.points}`, '#ffd700');
+                    }
+                } else {
+                    // Ashuddh item catch hua -> Dil kata
+                    playDevotionalSound('rock_hit');
+                    if (navigator.vibrate) navigator.vibrate([60, 40, 60]);
+                    addSparkles(item.x, thali.y + 6, '#ef4444', 12);
+                    addFloatingText(item.x, thali.y - 10, "कंकड़! 💔 -1", "#ff4444");
+                    deductHeart();
+                }
+                fallingItems.splice(i, 1);
+                continue;
+            }
+
+            // Screen ke niche nikal jane par (Miss ho jane par)
+            if (item.y > height + 20) {
+                if (item.type === "good") {
+                    // Sahi phool chhoot jane par 1 dil kam hoga
+                    playDevotionalSound('miss');
+                    addFloatingText(item.x, height - 35, "चूका! 💔 -1", "#ff6b6b");
+                    deductHeart();
+                }
+                fallingItems.splice(i, 1);
+            }
+        }
+
+        // Update Sparkle Particles
+        for (let pIdx = particles.length - 1; pIdx >= 0; pIdx--) {
+            const p = particles[pIdx];
+            p.x += p.vx;
+            p.y += p.vy;
+            p.life -= p.decay;
+            if (p.life <= 0) particles.splice(pIdx, 1);
+        }
+
+        // Update Floating Texts
+        for (let fIdx = floatTexts.length - 1; fIdx >= 0; fIdx--) {
+            const ft = floatTexts[fIdx];
+            ft.y += ft.vy;
+            ft.life -= 0.024;
+            if (ft.life <= 0) floatTexts.splice(fIdx, 1);
+        }
+    }
+
+    function deductHeart() {
+        lives--;
+        renderHeartsUI();
+        if (lives <= 0) {
+            endGame();
+        }
+    }
+
+    function renderHeartsUI() {
+        let heartsStr = "";
+        for (let i = 0; i < 3; i++) {
+            heartsStr += i < lives ? "❤️" : "🖤";
+        }
+        livesBox.innerText = heartsStr;
+    }
+
+    function endGame() {
+        isGameOver = true;
+        playDevotionalSound('game_over');
+
+        if (score > highScore) {
+            highScore = score;
+            localStorage.setItem('phool_arpan_high_score', highScore);
+        }
+
+        finalScoreVal.innerText = score;
+        bestScoreVal.innerText = highScore;
+        gameOverModal.style.display = "flex";
+    }
+
+    // Helper: Cross-browser Rounded Rect
+    function drawRoundedRect(context, x, y, w, h, radii) {
+        if (typeof context.roundRect === 'function') {
+            context.roundRect(x, y, w, h, radii);
+        } else {
+            context.rect(x, y, w, h);
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+
+        // 0. Ambient Temple Ray Radiance
+        const rad = ctx.createRadialGradient(width / 2, 60, 10, width / 2, 60, width * 0.75);
+        rad.addColorStop(0, 'rgba(255, 235, 150, 0.28)');
+        rad.addColorStop(0.5, 'rgba(255, 180, 50, 0.12)');
+        rad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = rad;
+        ctx.fillRect(0, 0, width, height);
+
+        // 1. Draw Golden Pooja Thali with glowing edge
+        thali.y = height - 85;
+        ctx.save();
+        ctx.shadowColor = "#ffd700";
+        ctx.shadowBlur = 14;
+
+        // Outer Golden Dish
+        ctx.fillStyle = "#d4af37";
+        ctx.beginPath();
+        drawRoundedRect(ctx, thali.x, thali.y, thali.width, thali.height, [6, 6, 18, 18]);
+        ctx.fill();
+
+        // Inner Red/Maroon Velvet Carpet base inside Thali
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "#8b0000";
+        ctx.beginPath();
+        drawRoundedRect(ctx, thali.x + 4, thali.y + 3, thali.width - 8, thali.height - 8, [4, 4, 14, 14]);
+        ctx.fill();
+
+        // Golden Inner Trim Line
+        ctx.strokeStyle = "#ffd700";
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+
+        // Little Diya in the center of the Thali
+        ctx.font = "bold 13px -apple-system, BlinkMacSystemFont, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "#ffe082";
+        ctx.fillText("🪔 थाली", thali.x + thali.width / 2, thali.y + thali.height / 2 + 1);
+        ctx.restore();
+
+        // 2. Draw Falling Items with smooth rotation
+        for (const item of fallingItems) {
+            ctx.save();
+            ctx.translate(item.x, item.y);
+            ctx.rotate(item.rotation);
+            ctx.font = "28px sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(item.char, 0, 0);
+            ctx.restore();
+        }
+
+        // 3. Draw Sparkle Particles
+        for (const p of particles) {
+            ctx.save();
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = Math.max(0, p.life);
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+        }
+
+        // 4. Draw Floating Score & Warning Texts
+        ctx.font = "bold 15px -apple-system, BlinkMacSystemFont, sans-serif";
+        ctx.textAlign = "center";
+        for (const ft of floatTexts) {
+            ctx.save();
+            ctx.fillStyle = ft.color;
+            ctx.globalAlpha = Math.max(0, ft.life);
+            ctx.shadowColor = "rgba(0,0,0,0.8)";
+            ctx.shadowBlur = 4;
+            ctx.fillText(ft.text, ft.x, ft.y);
+            ctx.restore();
+        }
+    }
+
+    function gameLoop() {
+        update();
+        draw();
+        requestAnimationFrame(gameLoop);
+    }
+
+    function restartGame() {
+        score = 0;
+        lives = 3;
+        gameTime = 0;
+        baseSpeed = 3.2;
+        fallingItems.length = 0;
+        particles.length = 0;
+        floatTexts.length = 0;
+        isGameOver = false;
+        scoreBox.innerText = "🌸 अर्पण: 0";
+        speedIndicator.innerText = "गति: 1.0x";
+        renderHeartsUI();
+        gameOverModal.style.display = "none";
+        playDevotionalSound('catch_flower');
+    }
+
+    // Initialize Layout & Loop
+    resize();
+    window.addEventListener("resize", resize);
+    renderHeartsUI();
+    gameLoop();
+</script>
+</body>
+</html>
