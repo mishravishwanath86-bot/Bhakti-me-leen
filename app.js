@@ -7670,8 +7670,12 @@ function showPage(id){
   if (!window._isNavigatingBack && window._appPageHistory[window._appPageHistory.length - 1] !== id) {
     window._appPageHistory.push(id);
   }
-  if (id === 'page-home' && typeof window.initVratGrids === 'function') {
-    window.initVratGrids();
+  if (id === 'page-home') {
+    document.body.classList.remove('game-modal-open');
+    const nav = document.getElementById('curved-fluid-bottom-nav');
+    if (nav) nav.classList.remove('nav-hidden');
+    if (typeof window.updateCurvedBottomNav === 'function') window.updateCurvedBottomNav('page-home');
+    if (typeof window.initVratGrids === 'function') window.initVratGrids();
   }
   document.querySelectorAll('.bottom-nav-btn, .nav-item').forEach(b => b.classList.toggle('active', b.dataset.page === id));
   const titles = {
@@ -24438,13 +24442,37 @@ window.getSavedAppLockPin = function() {
   }
 };
 
+// One-time auto-reset: Force App Lock OFF unless user explicitly confirmed in Settings
+try {
+  if (localStorage.getItem('sanatan_app_lock_user_enabled') !== 'true') {
+    localStorage.setItem('sanatan_setting_app_lock', '0');
+  }
+} catch(e) {}
+
 window.isAppLockEnabled = function() {
   try {
+    // Lock is ONLY enabled if user explicitly enabled it in Settings!
+    const userConfirmed = localStorage.getItem('sanatan_app_lock_user_enabled');
     const val = localStorage.getItem('sanatan_setting_app_lock');
-    // On fresh install, lock is OFF by default. Only active if explicitly turned ON ('1')
-    return val === '1';
+    return userConfirmed === 'true' && val === '1';
   } catch(e) {
     return false;
+  }
+};
+
+window.toggleAppLockPinVisibility = function() {
+  const pinEl = document.getElementById('applock-current-pin-display');
+  const eyeBtn = document.getElementById('applock-pin-eye-btn');
+  if (!pinEl) return;
+  const actualPin = (typeof window.getSavedAppLockPin === 'function') ? window.getSavedAppLockPin() : (localStorage.getItem('sanatan_app_lock_pin') || '1008');
+  if (pinEl.getAttribute('data-revealed') === 'true') {
+    pinEl.textContent = '••••';
+    pinEl.setAttribute('data-revealed', 'false');
+    if (eyeBtn) eyeBtn.textContent = '👁️ देखें';
+  } else {
+    pinEl.textContent = actualPin;
+    pinEl.setAttribute('data-revealed', 'true');
+    if (eyeBtn) eyeBtn.textContent = '🙈 छिपाएं';
   }
 };
 
@@ -30888,8 +30916,8 @@ function compareAppSemver(v1, v2) {
 }
 
 window.APP_UPDATE_CONFIG = {
-  currentVersionCode: 17,
-  currentVersionName: '1.15.0',
+  currentVersionCode: 18,
+  currentVersionName: '1.15.1',
   manifestUrls: [
     'https://cdn.jsdelivr.net/gh/mishravishwanath86-bot/Bhakti-me-leen@main/version.json',
     'https://api.github.com/repos/mishravishwanath86-bot/Bhakti-me-leen/contents/version.json',

@@ -37,9 +37,9 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="assets/app_logo.png?v=1788295872" />
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1792478550" />
-  <link rel="stylesheet" href="ai_bhakti_player.css?v=1792478550" />
-  <!-- Light Mode Disabled for now: <link rel="stylesheet" href="light_theme.css?v=1792478550" /> -->
+  <link rel="stylesheet" href="styles.css?v=1792484355" />
+  <link rel="stylesheet" href="ai_bhakti_player.css?v=1792484355" />
+  <!-- Light Mode Disabled for now: <link rel="stylesheet" href="light_theme.css?v=1792484355" /> -->
 
 <script>
   // Safe early global stubs so inline onclick handlers never throw ReferenceError
@@ -198,19 +198,36 @@
         }, 350);
       }
 
-      // Smart Vedic Navigation upon intro finish
+      // Smart Vedic Navigation upon app launch
       setTimeout(() => {
-        // Enforce App Lock ONLY if user explicitly enabled it in Settings
-        if (typeof window.checkAndEnforceAppLock === 'function' && window.checkAndEnforceAppLock()) {
-          return;
+        // 1. Force App Lock OFF by default on install/update (only active if user explicitly turned it ON in settings)
+        try {
+          if (localStorage.getItem('sanatan_app_lock_user_enabled') !== 'true') {
+            localStorage.setItem('sanatan_setting_app_lock', '0');
+          }
+        } catch(e) {}
+
+        const lockShield = document.getElementById('bhakti-app-lock-screen');
+        if (lockShield) lockShield.style.display = 'none';
+
+        // Check lock ONLY if explicitly enabled by user
+        if (typeof window.isAppLockEnabled === 'function' && window.isAppLockEnabled()) {
+          if (typeof window.showAppLockShield === 'function') {
+            window.showAppLockShield();
+            return;
+          }
         }
 
-        // Always ensure home page is ready
+        // 2. Always ensure home page and bottom nav are ready
         if (typeof window.showPage === 'function') window.showPage('page-home');
         if (typeof window.initVratGrids === 'function') window.initVratGrids();
+        document.body.classList.remove('game-modal-open');
+        const nav = document.getElementById('curved-fluid-bottom-nav');
+        if (nav) nav.classList.remove('nav-hidden');
+        if (typeof window.updateCurvedBottomNav === 'function') window.updateCurvedBottomNav('page-home');
 
+        // 3. User Login / Onboarding presentation
         if (window.isUserLoggedIn && window.isUserLoggedIn()) {
-          // User is ALREADY logged in!
           const authModal = document.getElementById('auth-modal');
           if (authModal) authModal.style.display = 'none';
 
@@ -221,16 +238,10 @@
             deityModal.style.display = 'none';
           }
         } else {
-          // First install / Not logged in: Open Login/Onboarding screen with 'बाद में (Later)' option!
-          const hasSeenAuthOnce = localStorage.getItem('sanatan_seen_initial_auth');
-          if (!hasSeenAuthOnce) {
-            localStorage.setItem('sanatan_seen_initial_auth', 'true');
-            if (typeof window.openAuthModal === 'function') {
-              window.openAuthModal();
-            }
-          }
-          if (typeof window.startGuestLoginScheduler === 'function') {
-            window.startGuestLoginScheduler(0); // 3 minutes reminder
+          // Devotee is NOT logged in: Show the Login / Sign-in screen on app start!
+          // They can tap 'बाद में (Later)' or 'अतिथि' at any time to browse freely
+          if (typeof window.openAuthModal === 'function') {
+            window.openAuthModal();
           }
         }
       }, 50);
@@ -745,8 +756,8 @@ body:not(.theme-light):not(.light-mode) .cat-card span.cat-name {
 
   </style>
 
-  <link rel="stylesheet" href="epic_games.css?v=1792478550">
-  <link rel="stylesheet" href="aarti_mantra_puzzle.css?v=1792478550">
+  <link rel="stylesheet" href="epic_games.css?v=1792484355">
+  <link rel="stylesheet" href="aarti_mantra_puzzle.css?v=1792484355">
 <style>
 /* ══════════════════════════════════════════════════════════════════
    🚀 CRITICAL MOBILE & ANDROID FIXES: HEADER, TITLE, OVERFLOW, NAV
@@ -898,7 +909,21 @@ body.game-modal-open .app-bottom-nav {
   #page-sundarkand.active { display: block !important; }
   #page-reader.active { display: block !important; }
 </style>
+
+<style id="home-bottom-nav-guarantee-style">
+  body:has(#page-home.active) .curved-fluid-bottom-nav,
+  body:has(#page-home.active) nav.curved-fluid-bottom-nav,
+  #page-home.active ~ .curved-fluid-bottom-nav {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999 !important;
+  }
+</style>
 </head>
+
 
 
 <body>
@@ -2436,7 +2461,7 @@ body.game-modal-open .app-bottom-nav {
 
     
       <!-- 🎮 EPIC GAMES HOME BANNER (दिव्य भक्ति क्रीड़ा स्थल - ७ अनोखे भक्ति खेल) 🎮 -->
-      <div class="home-epic-games-banner home-promo-banner-card" onclick="triggerEpicGamesLaunchWithVideo('page-epic-games')">
+      <div class="home-epic-games-banner home-promo-banner-card" onclick="showPage('page-epic-games')">
         <!-- Top Arcade Header Badge Row -->
         <div class="home-epic-banner-top">
           <div class="home-epic-banner-badge">
@@ -2487,7 +2512,7 @@ body.game-modal-open .app-bottom-nav {
             </div>
 
             <!-- Mini Card 2: Jigsaw Game -->
-            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openJigsawGame(); })">
+            <div class="home-epic-mini-card" onclick="openJigsawGame()">
               <div class="mini-card-thumb-wrap">
                 <img src="assets/deity_ganesh.jpg" alt="Jigsaw" class="mini-card-thumb">
                 <span class="mini-card-tag tag-cyan">🧩 जिग्सॉ</span>
@@ -2498,7 +2523,7 @@ body.game-modal-open .app-bottom-nav {
             </div>
 
             <!-- Mini Card 3: Card Match Game -->
-            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openMatchGame(); })">
+            <div class="home-epic-mini-card" onclick="openMatchGame()">
               <div class="mini-card-thumb-wrap">
                 <img src="assets/deity_krishna.jpg" alt="Match" class="mini-card-thumb">
                 <span class="mini-card-tag tag-orange">🎴 कार्ड मैच</span>
@@ -2509,7 +2534,7 @@ body.game-modal-open .app-bottom-nav {
             </div>
 
             <!-- Mini Card 4: Phool Arpan Game -->
-            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openPhoolArpanGame(); })">
+            <div class="home-epic-mini-card" onclick="openPhoolArpanGame()">
               <div class="mini-card-thumb-wrap">
                 <img src="assets/games/cover_phool_arpan.jpg" alt="Arpan" class="mini-card-thumb">
                 <span class="mini-card-tag tag-amber">🌸 अर्पण</span>
@@ -2531,7 +2556,7 @@ body.game-modal-open .app-bottom-nav {
             </div>
 
             <!-- Mini Card 6: Mantra Puzzle Game -->
-            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openMantraGame(); })">
+            <div class="home-epic-mini-card" onclick="openMantraGame()">
               <div class="mini-card-thumb-wrap">
                 <img src="assets/deity_shiva.jpg" alt="Mantra" class="mini-card-thumb">
                 <span class="mini-card-tag tag-purple">🕉️ मन्त्र पहेली</span>
@@ -2542,7 +2567,7 @@ body.game-modal-open .app-bottom-nav {
             </div>
 
             <!-- Mini Card 7: PadaBandham Game -->
-            <div class="home-epic-mini-card" onclick="triggerEpicGamesLaunchWithVideo(null, function(){ openPadabandhamGame(); })">
+            <div class="home-epic-mini-card" onclick="openPadabandhamGame()">
               <div class="mini-card-thumb-wrap">
                 <img src="assets/deity_hanuman.jpg" alt="Word" class="mini-card-thumb">
                 <span class="mini-card-tag tag-yellow">🔤 पदबन्धम</span>
@@ -4336,7 +4361,7 @@ body.game-modal-open .app-bottom-nav {
               <div>
                 <div style="font-size:0.85rem; font-weight:800; color:#FFFDF8; display:flex; align-items:center; gap:5px;">
                   <span>ऐप बायोमेट्रिक लॉक (App Lock)</span>
-                  <span id="applock-badge-status" style="font-size:0.68rem; background:rgba(16,185,129,0.2); border:1px solid #10B981; color:#6EE7B7; padding:1px 6px; border-radius:8px;">सक्रिय</span>
+                  <span id="applock-badge-status" style="font-size:0.68rem; background:rgba(239,68,68,0.2); border:1px solid #EF4444; color:#FCA5A5; padding:1px 6px; border-radius:8px;">बंद (Disabled)</span>
                 </div>
                 <div style="font-size:0.7rem; color:#CBD5E1; margin-top:2px;">फ़िंगरप्रिंट / FaceID व 4-अंकीय पिन सुरक्षा</div>
               </div>
@@ -4346,16 +4371,17 @@ body.game-modal-open .app-bottom-nav {
               </label>
             </div>
             <!-- Active PIN & Quick Lock Control Bar -->
-            <div id="applock-controls-panel" style="display:flex; align-items:center; justify-content:space-between; margin-top:8px; padding:6px 10px; background:rgba(0,0,0,0.3); border-radius:12px; border:1px solid rgba(248,200,59,0.25);">
-              <div style="font-size:0.74rem; color:#FDE68A;">
-                🔑 सुरक्षा पिन: <strong id="applock-current-pin-display" style="letter-spacing:1px; color:#6EE7B7;">•••• (सुरक्षित)</strong>
+            <div id="applock-controls-panel" style="display:flex; align-items:center; justify-content:space-between; margin-top:8px; padding:6px 10px; background:rgba(0,0,0,0.4); border-radius:12px; border:1px solid rgba(248,200,59,0.35);">
+              <div style="font-size:0.78rem; color:#FDE68A; display:flex; align-items:center; gap:6px;">
+                <span>🔑 सुरक्षा पिन:</span>
+                <strong id="applock-current-pin-display" data-revealed="false" style="letter-spacing:2px; font-size:1.05rem; color:#FDE68A; background:rgba(0,0,0,0.5); padding:1px 8px; border-radius:6px; border:1px solid rgba(248,200,59,0.3);">••••</strong>
               </div>
               <div style="display:flex; gap:6px;">
+                <button id="applock-pin-eye-btn" onclick="toggleAppLockPinVisibility()" style="background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; border-radius:8px; padding:4px 8px; font-size:0.72rem; font-weight:800; cursor:pointer;">
+                  👁️ देखें
+                </button>
                 <button onclick="promptChangeAppLockPin()" style="background:rgba(248,200,59,0.2); border:1px solid #F8C83B; color:#FDE68A; border-radius:8px; padding:4px 8px; font-size:0.72rem; font-weight:800; cursor:pointer;">
                   ✏️ पिन बदलें
-                </button>
-                <button onclick="triggerImmediateAppLock()" title="ऐप लॉक की तुरंत जांच करें" style="background:linear-gradient(135deg, #EF4444, #B91C1C); border:1px solid #FCA5A5; color:#FFFDF8; border-radius:8px; padding:4px 8px; font-size:0.72rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:3px;">
-                  🔒 अभी टेस्ट लॉक करें
                 </button>
               </div>
             </div>
@@ -20421,18 +20447,18 @@ body.game-modal-open .app-bottom-nav {
   </div>
 
 
-  <script src="mandir_3d_engine.js?v=1792478550"></script>
-  <script src="amrit_kalash_3d_engine.js?v=1792478550"></script>
-  <script src="i18n_engine.js?v=1792478550"></script>
-  <script src="sadhana_gamification_engine.js?v=1792478550"></script>
-  <script src="app.js?v=1792478550"></script>
-  <script src="ai_bhakti_player.js?v=1792478550"></script>
-  <script src="chalisa_engine.js?v=1792478550"></script>
-  <script src="mantra_engine.js?v=1792478550"></script>
-  <script src="sundarkand_engine.js?v=1792478550"></script>
-  <script src="gita_engine.js?v=1792478550"></script>
-<script src="drik_app_addon.js?v=1792478550"></script>
-<script src="gallery_engine.js?v=1792478550"></script>
+  <script src="mandir_3d_engine.js?v=1792484355"></script>
+  <script src="amrit_kalash_3d_engine.js?v=1792484355"></script>
+  <script src="i18n_engine.js?v=1792484355"></script>
+  <script src="sadhana_gamification_engine.js?v=1792484355"></script>
+  <script src="app.js?v=1792484355"></script>
+  <script src="ai_bhakti_player.js?v=1792484355"></script>
+  <script src="chalisa_engine.js?v=1792484355"></script>
+  <script src="mantra_engine.js?v=1792484355"></script>
+  <script src="sundarkand_engine.js?v=1792484355"></script>
+  <script src="gita_engine.js?v=1792484355"></script>
+<script src="drik_app_addon.js?v=1792484355"></script>
+<script src="gallery_engine.js?v=1792484355"></script>
 
   <!-- 🍞 UNIVERSAL ULTRA-LUXURY TOAST NOTIFICATION CONTAINER 🍞 -->
   <div id="universal-toast-container" style="position:fixed; top:24px; left:50%; transform:translateX(-50%); z-index:999999; display:flex; flex-direction:column; align-items:center; gap:8px; pointer-events:none; width:90%; max-width:380px;"></div>
@@ -20911,9 +20937,9 @@ body.game-modal-open .app-bottom-nav {
       };
     })();
   </script>
-  <script src="epic_games_engine.js?v=1792478550"></script>
-  <script src="aarti_mantra_puzzle_engine.js?v=1792478550"></script>
-  <script src="mcq_test_series_engine.js?v=1792478550"></script>
+  <script src="epic_games_engine.js?v=1792484355"></script>
+  <script src="aarti_mantra_puzzle_engine.js?v=1792484355"></script>
+  <script src="mcq_test_series_engine.js?v=1792484355"></script>
 
   <!-- ═══════════════════════════════════════════════════════════════════════════
        🚀 FLOATING IN-APP UPDATE NOTIFICATION BANNER 🚀

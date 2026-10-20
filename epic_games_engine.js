@@ -5584,6 +5584,12 @@ var _epicVideoFallbackTimer = null;
 function triggerEpicGamesLaunchWithVideo(destination, callback) {
   pendingGameDestination = destination || 'page-epic-games';
   pendingGameCallback = (typeof callback === 'function') ? callback : null;
+  // Direct launch - zero delay, zero video freeze, instant access!
+  proceedToTargetGame();
+  return;
+
+  pendingGameDestination = destination || 'page-epic-games';
+  pendingGameCallback = (typeof callback === 'function') ? callback : null;
 
   var modal = document.getElementById('epic-games-video-modal');
   var video = document.getElementById('epic-games-intro-video');

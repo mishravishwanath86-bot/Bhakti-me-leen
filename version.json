@@ -1,13 +1,13 @@
 {
-  "versionCode": 17,
-  "versionName": "1.15.0",
-  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.15.0/bhakti-app.apk",
+  "versionCode": 18,
+  "versionName": "1.15.1",
+  "apkUrl": "https://github.com/mishravishwanath86-bot/Bhakti-me-leen/releases/download/v1.15.1/bhakti-app.apk",
   "apkSize": "818.2 MB",
   "releaseDate": "2026-10-20",
   "forceUpdate": false,
-  "title": "पावन अपडेट v1.15.0 उपलब्ध है! 🚀",
+  "title": "पावन अपडेट v1.15.1 उपलब्ध है! 🚀",
   "releaseNotes": [
-    "सुरक्षा लॉक, होम नेविगेशन बार व हैमबर्गर मेनू, सुंदरकांड चौपाई वाचन, आरती/मंत्र/चालीसा व एपिक गेम्स संपूर्ण सुधार",
+    "ऐप लॉक पूर्णतः बंद (डिफ़ॉल्ट), सेटिंग्स में पिन दृश्यता, लॉगिन स्क्रीन और होम नेविगेशन बार व गेम्स त्वरित लॉन्च सुधार",
     "दिव्य आरती पहेली (Aarti Game): सम्पूर्ण आरती पंक्तियों का मनोरम क्रम संयोजन",
     "वैदिक मन्त्र पहेली (Mantra Game): महामृत्युंजय व गायत्री मन्त्र का पावन संयोजन",
     "सनातन गेम्स हब ५० स्तर: रामायण स्वाइप, ३० स्तर कार्ड मैच, ५० स्तर जिग्सॉ पहेली, फूल अर्पण"
